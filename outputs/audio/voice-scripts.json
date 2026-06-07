@@ -1,0 +1,14 @@
+{
+  "a0-spell-jameel": {
+    "text": "J. A. M. E. E. L.",
+    "language": "en",
+    "speed": 0.72,
+    "voice": "teacher"
+  },
+  "a0-price-forty": {
+    "text": "The total is forty dollars.",
+    "language": "en",
+    "speed": 0.86,
+    "voice": "teacher"
+  }
+}

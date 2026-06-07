@@ -1,0 +1,4 @@
+.audio-cache/
+.env
+.DS_Store
+work/
