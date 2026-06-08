@@ -35,6 +35,7 @@ const ASSESSMENTS = {
   A0: {
     exit: "A0 End-of-Level Diagnostic",
     exitHref: "assessments/a0-exit.html",
+    ready: true,
     purpose: "Check the complete A0 foundation, identify anything that was missed, and decide whether the learner is ready to begin A1.",
     evidence: [
       "Names and spells basic personal details.",
@@ -45,6 +46,7 @@ const ASSESSMENTS = {
   A1: {
     exit: "A1 End-of-Level Diagnostic",
     exitHref: "assessments/a1-exit.html",
+    ready: false,
     purpose: "Check the complete A1 level, find any remaining gaps, and decide whether the learner is ready to begin A2.",
     evidence: [
       "Uses present simple and continuous in guided tasks.",
@@ -55,6 +57,7 @@ const ASSESSMENTS = {
   A2: {
     exit: "A2 End-of-Level Diagnostic",
     exitHref: "assessments/a2-exit.html",
+    ready: false,
     purpose: "Check the complete A2 level, identify weak areas, and decide whether the learner is ready to begin B1.",
     evidence: [
       "Talks about past and future events with support.",
@@ -65,6 +68,7 @@ const ASSESSMENTS = {
   B1: {
     exit: "B1 End-of-Level Diagnostic",
     exitHref: "assessments/b1-exit.html",
+    ready: false,
     purpose: "Check the complete B1 level across receptive and productive skills before the learner begins B2.",
     evidence: [
       "Produces connected speech on familiar topics.",
@@ -75,6 +79,7 @@ const ASSESSMENTS = {
   B2: {
     exit: "B2 End-of-Level Diagnostic",
     exitHref: "assessments/b2-exit.html",
+    ready: false,
     purpose: "Check the complete B2 level, locate any remaining gaps, and confirm readiness for advanced independent work.",
     evidence: [
       "Develops arguments with examples and nuance.",
@@ -437,7 +442,7 @@ function QuickCheckTab() {
           <span className="placement-kicker">Fast starting estimate</span>
           <h2>Find a useful starting point in ten minutes.</h2>
           <p>Use this when there is not enough time for the full diagnostic. The multiple-choice result is only an estimate, so the final two-minute speaking sample should confirm or adjust it.</p>
-          <a className="placement-cta" href="assessments/quick-level-check.html">Open quick level check</a>
+          <a className="placement-cta placement-cta--accent" href="assessments/quick-level-check.html">Open quick level check<span aria-hidden="true">→</span></a>
         </div>
         <div className="placement-stats">
           <span><b>10</b> questions</span>
@@ -487,11 +492,19 @@ function AssessmentBand({ levelCode }) {
   if (!assessment) return null;
   return (
     <section className="assessment-band" aria-label={levelCode + " end-of-level diagnostic"}>
+      {assessment.ready ?
       <a className="assessment-card assessment-card--exit" href={assessment.exitHref}>
         <span className="assessment-label">After completing the level</span>
         <h3>{assessment.exit}</h3>
         <p>{assessment.purpose}</p>
-      </a>
+      </a> :
+      <div className="assessment-card assessment-card--exit assessment-card--soon" aria-disabled="true">
+        <span className="assessment-label">After completing the level</span>
+        <h3>{assessment.exit}</h3>
+        <p>{assessment.purpose}</p>
+        <span className="assessment-soon">Coming soon</span>
+      </div>
+      }
       <div className="assessment-evidence">
         <span className="assessment-label">Ready to advance when the learner can</span>
         <ul>
@@ -657,14 +670,39 @@ function App({ tweaks }) {
   const [query, setQuery] = useState("");
   const [siteTab, setSiteTab] = useState("curriculum");
   const sectionRefs = useRef({});
+  const pendingJump = useRef(null);
+
+  // Scroll a level section to just below the sticky toolbar. The toolbar height
+  // varies when its pills/search wrap, so measure it live; use the section's
+  // document-relative top (getBoundingClientRect + scrollY) for accuracy.
+  const scrollToLevel = (code) => {
+    const el = sectionRefs.current[code];
+    if (!el) return;
+    const toolbar = document.querySelector(".toolbar");
+    const offset = (toolbar ? toolbar.offsetHeight : 0) + 16;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
 
   const jump = (code) => {
-    setActive("all");
-    requestAnimationFrame(() => {
-      const el = sectionRefs.current[code];
-      if (el) window.scrollTo({ top: el.offsetTop - 88, behavior: "smooth" });
-    });
+    // If a level filter is active, the other sections aren't mounted yet. Clear
+    // the filter first and defer the scroll until they render (see useEffect).
+    if (active !== "all") {
+      pendingJump.current = code;
+      setActive("all");
+    } else {
+      requestAnimationFrame(() => scrollToLevel(code));
+    }
   };
+
+  // Run a deferred jump once all level sections are back in the DOM.
+  useEffect(() => {
+    if (active === "all" && pendingJump.current) {
+      const code = pendingJump.current;
+      pendingJump.current = null;
+      requestAnimationFrame(() => scrollToLevel(code));
+    }
+  }, [active]);
 
   const visible = CURRICULUM.filter((l) => active === "all" || active === l.code);
 

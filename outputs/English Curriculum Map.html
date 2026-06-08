@@ -173,6 +173,14 @@ body{
   text-transform:uppercase;background:var(--ink);color:var(--paper);border:1px solid var(--ink);
   border-radius:999px;padding:12px 16px;}
 .placement-cta:hover{background:var(--accent-deep);border-color:var(--accent-deep);}
+/* Quick Level Check CTA — oxblood accent so it reads as clickable (this button only) */
+.placement-cta--accent{display:flex;width:100%;justify-content:center;align-items:center;gap:8px;
+  background:var(--accent-deep);border-color:var(--accent-deep);color:var(--paper);
+  font-size:17px;font-weight:600;letter-spacing:.08em;padding:22px 24px;margin-top:10px;
+  transition:transform .15s ease,background .15s ease,border-color .15s ease;}
+.placement-cta--accent:hover{background:color-mix(in oklab,var(--accent-deep) 82%,black);
+  border-color:color-mix(in oklab,var(--accent-deep) 82%,black);transform:translateY(-2px);}
+.placement-cta--accent span{font-size:18px;line-height:1;}
 .placement-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .placement-stats span{background:var(--accent-tint);border:1px solid var(--accent-soft);border-radius:14px;
   padding:16px;color:var(--ink-2);font-size:14px;}
@@ -224,6 +232,13 @@ body{
 .assessment-card:hover{transform:translateY(-2px);border-color:var(--accent);
   background:var(--accent-tint);box-shadow:0 12px 28px -22px var(--accent-deep);}
 .assessment-card--exit{border-color:var(--accent-soft);}
+/* level checks not built yet — shown but not clickable, never a finished-looking link */
+.assessment-card--soon{cursor:default;border-style:dashed;border-color:var(--line);background:var(--paper-2);}
+.assessment-card--soon:hover{transform:none;border-color:var(--line);background:var(--paper-2);box-shadow:none;}
+.assessment-card--soon h3,.assessment-card--soon p{color:var(--muted);}
+.assessment-soon{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:4px 11px;}
 .assessment-label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 .assessment-card h3{font-family:var(--display);font-size:26px;line-height:1.08;font-weight:500;
@@ -350,7 +365,7 @@ mark{background:var(--accent-soft);color:var(--ink);border-radius:3px;padding:0 
 
 <script src="data.js"></script>
 <script type="text/babel" src="components.jsx"></script>
-<script type="text/babel" src="app.jsx?v=phase1-1"></script>
+<script type="text/babel" src="app.jsx?v=nav-scroll-1"></script>
 
 <script type="text/babel">
 // Fixed presentation defaults. The prototype "Tweaks" editing panel
