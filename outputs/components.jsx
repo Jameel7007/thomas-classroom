@@ -47,7 +47,19 @@ function Highlight({ text, query }) {
 }
 
 // ---- A grammar/skill line that links to its lesson page ------------------
-function LessonItem({ href, text, query }) {
+// When the lesson isn't built yet (`ready` is false) the item is shown but is
+// not a link, so a tutor never clicks through to a 404 or an unfinished stub.
+function LessonItem({ href, text, query, ready }) {
+  if (!ready) {
+    return (
+      <li className="item">
+        <span className="item-link item-link--soon" aria-disabled="true" title="Lesson coming soon">
+          <span className="item-text"><Highlight text={text} query={query} /></span>
+          <span className="soon-tag">Soon</span>
+        </span>
+      </li>
+    );
+  }
   return (
     <li className="item">
       <a className="item-link" href={href}>

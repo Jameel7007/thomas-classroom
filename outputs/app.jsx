@@ -2,6 +2,20 @@
 const { useState, useEffect, useMemo, useRef } = React;
 const { THEMES, accentVars, slug, lessonHref, Highlight, LessonItem, Card } = CurriculumUI;
 
+// ---- Lesson readiness allowlist -----------------------------------------
+// Only the lessons listed here are active links in the map. Every other
+// grammar/vocabulary item renders a non-clickable "Soon" state, so a tutor
+// never clicks into a 404 or an unfinished stub during a live lesson.
+// Add a line here once a lesson page is genuinely built and reviewed.
+const READY_LESSONS = new Set([
+  "lessons/a0/the-verb-to-be.html",
+  "lessons/a0/articles-a-an.html",
+  "lessons/a0/subject-pronouns.html"
+]);
+function lessonReady(code, text) {
+  return READY_LESSONS.has(lessonHref(code, text));
+}
+
 const SKILLS = [
 { key: "listening", label: "Listening" },
 { key: "reading", label: "Reading" },
@@ -173,6 +187,14 @@ function matches(text, q) {
   return !q || text.toLowerCase().includes(q.toLowerCase());
 }
 
+// True if any grammar/vocab/can-do/skill line in this level matches the query.
+function levelHasMatches(lvl, query) {
+  if (!query) return true;
+  const has = (arr) => arr.some((t) => matches(t, query));
+  return has(lvl.grammar) || has(lvl.vocab) || has(lvl.canDo) ||
+  SKILLS.some((s) => has(lvl.skills[s.key]));
+}
+
 // ============================ Site tabs ==================================
 function SiteTabs({ active, setActive }) {
   return (
@@ -192,8 +214,9 @@ function SiteTabs({ active, setActive }) {
 
 // ============================ Header ====================================
 function Header() {
-  const lessonCount = CURRICULUM.reduce(
+  const totalLessons = CURRICULUM.reduce(
     (n, l) => n + l.grammar.length + l.vocab.length, 0);
+  const readyLessons = READY_LESSONS.size;
   return (
     <header className="masthead">
       <div className="mast-inner">
@@ -210,7 +233,7 @@ function Header() {
           <span className="stat-div" />
           <span className="stat"><b>A0–B2</b> CEFR range</span>
           <span className="stat-div" />
-          <span className="stat"><b>{lessonCount}+</b> linked lessons</span>
+          <span className="stat"><b>{readyLessons}</b> of {totalLessons} lessons ready</span>
         </div>
       </div>
     </header>);
@@ -579,8 +602,9 @@ function LevelSection({ lvl, theme, query, refCb }) {
         {!!grammar.length &&
         <Card label="Grammar" index="Aa" wide>
             <ul className="list list--two">
-              {grammar.map((g, i) =>
-            <LessonItem key={i} href={lessonHref(lvl.code, g)} text={g} query={query} />
+              {grammar.map((g) =>
+            <LessonItem key={g} href={lessonHref(lvl.code, g)} text={g} query={query}
+            ready={lessonReady(lvl.code, g)} />
             )}
             </ul>
           </Card>
@@ -588,11 +612,16 @@ function LevelSection({ lvl, theme, query, refCb }) {
         {!!vocab.length &&
         <Card label="Vocabulary & Topics" index="¶" wide>
             <div className="chips-wrap">
-              {vocab.map((v, i) =>
-            <a key={i} className="vchip" href={lessonHref(lvl.code, v)}>
+              {vocab.map((v) =>
+            lessonReady(lvl.code, v) ?
+            <a key={v} className="vchip" href={lessonHref(lvl.code, v)}>
                   <Highlight text={v} query={query} />
                   <span className="vchip-go" aria-hidden="true">→</span>
-                </a>
+                </a> :
+            <span key={v} className="vchip vchip--soon" aria-disabled="true" title="Lesson coming soon">
+                  <Highlight text={v} query={query} />
+                  <span className="soon-tag">Soon</span>
+                </span>
             )}
             </div>
           </Card>
@@ -655,6 +684,12 @@ function App({ tweaks }) {
           <LevelSection key={l.code} lvl={l} theme={theme} query={query}
           refCb={(el) => sectionRefs.current[l.code] = el} />
           )}
+          {query && !visible.some((l) => levelHasMatches(l, query)) &&
+          <div className="noresult">
+              <p>No matches for “<b>{query}</b>”.</p>
+              <button className="noresult-clear" onClick={() => setQuery("")}>Clear search</button>
+            </div>
+          }
         </main>
       </>}
       {siteTab === "placement" && <PlacementTab />}

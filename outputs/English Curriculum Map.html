@@ -282,7 +282,24 @@ body{
 .vchip:hover .vchip-go{opacity:1;}
 mark{background:var(--accent-soft);color:var(--ink);border-radius:3px;padding:0 2px;}
 
-.noresult{text-align:center;color:var(--muted);padding:60px;font-family:var(--mono);}
+.noresult{text-align:center;color:var(--muted);padding:60px 20px;font-family:var(--mono);
+  display:flex;flex-direction:column;align-items:center;gap:16px;}
+.noresult p{margin:0;font-size:14px;}
+.noresult b{color:var(--ink-2);}
+.noresult-clear{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  padding:8px 14px;cursor:pointer;transition:.15s ease;}
+.noresult-clear:hover{border-color:var(--accent);color:var(--accent-deep);background:var(--accent-tint);}
+
+/* lessons not built yet — shown but not clickable, so a tutor never hits a 404 */
+.item-link--soon{cursor:default;}
+.item-link--soon:hover{background:transparent;}
+.item-link--soon .item-text{color:var(--muted);}
+.soon-tag{flex:none;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 7px;line-height:1.6;}
+.vchip--soon{cursor:default;color:var(--muted);background:var(--paper-2);border-style:dashed;}
+.vchip--soon:hover{border-color:var(--line);color:var(--muted);background:var(--paper-2);}
+.vchip--soon .soon-tag{border:0;padding:0 0 0 2px;}
 
 /* ============ Footer ============ */
 .foot{max-width:var(--maxw);margin:0 auto;padding:40px var(--pad) 70px;
@@ -327,44 +344,24 @@ mark{background:var(--accent-soft);color:var(--ink);border-radius:3px;padding:0 
 </svg>
 </template>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
 <script src="data.js"></script>
 <script type="text/babel" src="components.jsx"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="app.jsx?v=end-level-below-1"></script>
+<script type="text/babel" src="app.jsx?v=phase1-1"></script>
 
 <script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "spectrum",
-  "display": "serif",
-  "density": "comfortable"
-}/*EDITMODE-END*/;
-
-function Root(){
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  return (
-    <>
-      <CurriculumApp tweaks={t} />
-      <TweaksPanel>
-        <TweakSection label="Theme" />
-        <TweakRadio label="Accent palette" value={t.theme}
-          options={["spectrum","ocean","ink"]}
-          onChange={(v)=>setTweak("theme",v)} />
-        <TweakRadio label="Headings" value={t.display}
-          options={["serif","sans"]}
-          onChange={(v)=>setTweak("display",v)} />
-        <TweakSection label="Layout" />
-        <TweakRadio label="Density" value={t.density}
-          options={["comfortable","compact"]}
-          onChange={(v)=>setTweak("density",v)} />
-      </TweaksPanel>
-    </>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Root/>);
+// Fixed presentation defaults. The prototype "Tweaks" editing panel
+// (tweaks-panel.jsx) is intentionally NOT loaded in the student-facing map.
+const TWEAK_DEFAULTS = {
+  theme: "spectrum",
+  display: "serif",
+  density: "comfortable"
+};
+ReactDOM.createRoot(document.getElementById("root"))
+  .render(<CurriculumApp tweaks={TWEAK_DEFAULTS} />);
 </script>
 </body>
 </html>
