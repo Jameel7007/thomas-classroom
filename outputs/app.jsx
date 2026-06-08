@@ -516,7 +516,7 @@ function AssessmentBand({ levelCode }) {
 }
 
 // ============================ Toolbar ===================================
-function Toolbar({ levels, theme, active, setActive, query, setQuery }) {
+function Toolbar({ levels, theme, active, setActive, onPick, query, setQuery }) {
   return (
     <div className="toolbar">
       <div className="toolbar-inner">
@@ -527,7 +527,7 @@ function Toolbar({ levels, theme, active, setActive, query, setQuery }) {
           <button key={l.code}
           className={"pill" + (active === l.code ? " is-active" : "")}
           style={accentVars(THEMES[theme][l.code], theme)}
-          onClick={() => setActive(active === l.code ? "all" : l.code)}>
+          onClick={() => onPick(l.code)}>
               <span className="pill-dot" />{l.code}
             </button>
           )}
@@ -695,9 +695,20 @@ function App({ tweaks }) {
     }
   };
 
-  // Run a deferred jump once all level sections are back in the DOM.
+  // Filter pills: filter to a level and scroll to it. Clicking the level that
+  // is already active clears the filter (back to all levels) without scrolling.
+  const selectLevel = (code) => {
+    if (active === code) {
+      setActive("all");
+      return;
+    }
+    pendingJump.current = code;
+    setActive(code);
+  };
+
+  // Run a deferred jump/scroll once the target section has (re)rendered.
   useEffect(() => {
-    if (active === "all" && pendingJump.current) {
+    if (pendingJump.current) {
       const code = pendingJump.current;
       pendingJump.current = null;
       requestAnimationFrame(() => scrollToLevel(code));
@@ -712,7 +723,7 @@ function App({ tweaks }) {
       <SiteTabs active={siteTab} setActive={setSiteTab} />
       {siteTab === "curriculum" && <>
         <Toolbar levels={CURRICULUM} theme={theme} active={active} setActive={setActive}
-        query={query} setQuery={setQuery} />
+        onPick={selectLevel} query={query} setQuery={setQuery} />
         <CefrExplainer />
         <Journey levels={CURRICULUM} theme={theme}
         onJump={jump} active={active === "all" ? null : active} />
