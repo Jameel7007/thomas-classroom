@@ -188,6 +188,8 @@ const DICTIONARY_ENTRIES = {
   }
 };
 
+const LANG_CODES = { Spanish: "es", Portuguese: "pt", Turkish: "tr" };
+
 function matches(text, q) {
   return !q || text.toLowerCase().includes(q.toLowerCase());
 }
@@ -202,11 +204,32 @@ function levelHasMatches(lvl, query) {
 
 // ============================ Site tabs ==================================
 function SiteTabs({ active, setActive }) {
+  const tabRefs = useRef({});
+  const onKeyDown = (e) => {
+    const keys = SITE_TABS.map((t) => t.key);
+    const i = keys.indexOf(active);
+    let j = null;
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") j = (i + 1) % keys.length;
+    else if (e.key === "ArrowLeft" || e.key === "ArrowUp") j = (i - 1 + keys.length) % keys.length;
+    else if (e.key === "Home") j = 0;
+    else if (e.key === "End") j = keys.length - 1;
+    if (j === null) return;
+    e.preventDefault();
+    setActive(keys[j]);
+    const el = tabRefs.current[keys[j]];
+    if (el) el.focus();
+  };
   return (
-    <nav className="site-tabs" aria-label="Site sections">
-      <div className="site-tabs-inner">
+    <nav className="site-tabs">
+      <div className="site-tabs-inner" role="tablist" aria-label="Site sections" onKeyDown={onKeyDown}>
         {SITE_TABS.map((tab) =>
           <button key={tab.key}
+            ref={(el) => (tabRefs.current[tab.key] = el)}
+            id={"tab-" + tab.key}
+            role="tab"
+            aria-selected={active === tab.key}
+            aria-controls="main-content"
+            tabIndex={active === tab.key ? 0 : -1}
             className={"site-tab" + (active === tab.key ? " is-active" : "")}
             onClick={() => setActive(tab.key)}>
             {tab.label}
@@ -268,7 +291,7 @@ function BioTab() {
   return (
     <main className="tab-page">
       <p className="overline">Teacher Profile</p>
-      <h1 className="tab-title">Personal Bio</h1>
+      <h2 className="tab-title">Personal Bio</h2>
       <p className="tab-lede">This tab is the future home for your teaching profile, methodology, classroom values, credentials, and a friendly introduction for new students.</p>
       <div className="tab-grid">
         <section className="info-panel">
@@ -294,7 +317,7 @@ function LanguagesTab() {
   return (
     <main className="tab-page">
       <p className="overline">L1 Transfer Library</p>
-      <h1 className="tab-title">Languages</h1>
+      <h2 className="tab-title">Languages</h2>
       <p className="tab-lede">Each language tab will collect common and uncommon transfer patterns, then link into targeted English lessons for those patterns.</p>
       <div className="language-tabs">
         {TRANSFER_LANGUAGES.map((l) =>
@@ -308,7 +331,7 @@ function LanguagesTab() {
         <div className="transfer-grid">
           {current.examples.map((item) =>
             <article className="transfer-card" key={item.source}>
-              <span className="transfer-source">{item.source}</span>
+              <span className="transfer-source" lang={LANG_CODES[current.name]}>{item.source}</span>
               <h3>{item.issue}</h3>
               <p>Lesson path: <strong>{item.lesson}</strong></p>
             </article>
@@ -344,7 +367,7 @@ function DictionaryTool({ compact }) {
         <section className="dictionary-result">
           <p className="dictionary-word">{entry.word} <span>{entry.level}</span></p>
           <p>{entry.english}</p>
-          <p><b>{language}:</b> {entry.translations[language]}</p>
+          <p><b>{language}:</b> <span lang={LANG_CODES[language]}>{entry.translations[language]}</span></p>
           <ul>
             {entry.examples.map((example) => <li key={example}>{example}</li>)}
           </ul>
@@ -363,7 +386,7 @@ function DictionaryTab() {
   return (
     <main className="tab-page">
       <p className="overline">Built-In Tool</p>
-      <h1 className="tab-title">Dictionary</h1>
+      <h2 className="tab-title">Dictionary</h2>
       <p className="tab-lede">A future lesson-side dictionary for quick bilingual definitions when a student gets stuck on a word. This first version is a local prototype of the interface and output shape.</p>
       <DictionaryTool />
     </main>
@@ -374,7 +397,7 @@ function BlogTab() {
   return (
     <main className="tab-page">
       <p className="overline">Teaching Notes</p>
-      <h1 className="tab-title">Blog</h1>
+      <h2 className="tab-title">Blog</h2>
       <p className="tab-lede">A future home for methodology posts, CEFR explanations, language-transfer notes, and lesson reflections. These starter cards define the first article lanes.</p>
       <div className="blog-grid">
         {BLOG_POSTS.map((post) =>
@@ -397,7 +420,7 @@ function PlacementTab() {
   return (
     <main className="tab-page">
       <p className="overline">CEFR-Aligned Diagnostic</p>
-      <h1 className="tab-title">Placement Exam</h1>
+      <h2 className="tab-title">Placement Exam</h2>
       <p className="tab-lede">A thorough student-facing diagnostic for estimating a learner's CEFR-aligned starting point from A0 to B2. It is not an official certificate exam. Recognition suggests a possible ceiling, while live listening, speaking, and writing help the teacher confirm the best path.</p>
       <section className="placement-hero">
         <div>
@@ -435,7 +458,7 @@ function QuickCheckTab() {
   return (
     <main className="tab-page">
       <p className="overline">10-Minute Diagnostic</p>
-      <h1 className="tab-title">Quick Level Check</h1>
+      <h2 className="tab-title">Quick Level Check</h2>
       <p className="tab-lede">A short, student-facing check for a rough placement from Pre-A1 to B2. Ten questions become gradually more difficult, followed by a teacher-scored speaking sample.</p>
       <section className="placement-hero">
         <div>
@@ -466,24 +489,6 @@ function QuickCheckTab() {
         </section>
       </div>
     </main>
-  );
-}
-
-function FloatingDictionary() {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={"floating-dict" + (open ? " is-open" : "")}>
-      {open && <div className="floating-dict-panel">
-        <div className="floating-dict-head">
-          <b>Quick Dictionary</b>
-          <button onClick={() => setOpen(false)}>Close</button>
-        </div>
-        <DictionaryTool compact />
-      </div>}
-      <button className="floating-dict-button" onClick={() => setOpen(!open)}>
-        Dictionary
-      </button>
-    </div>
   );
 }
 
@@ -521,11 +526,13 @@ function Toolbar({ levels, theme, active, setActive, onPick, query, setQuery }) 
     <div className="toolbar">
       <div className="toolbar-inner">
         <nav className="pills" aria-label="Filter by level">
-          <button className={"pill" + (active === "all" ? " is-active" : "")}
+          <button type="button" className={"pill" + (active === "all" ? " is-active" : "")}
+          aria-pressed={active === "all"}
           onClick={() => setActive("all")}>All levels</button>
           {levels.map((l) =>
-          <button key={l.code}
+          <button key={l.code} type="button"
           className={"pill" + (active === l.code ? " is-active" : "")}
+          aria-pressed={active === l.code}
           style={accentVars(THEMES[theme][l.code], theme)}
           onClick={() => onPick(l.code)}>
               <span className="pill-dot" />{l.code}
@@ -534,9 +541,9 @@ function Toolbar({ levels, theme, active, setActive, onPick, query, setQuery }) 
         </nav>
         <label className="search">
           <span className="search-ico" aria-hidden="true">⌕</span>
-          <input type="text" placeholder="Search grammar, skills, topics…"
+          <input type="text" aria-label="Search grammar, skills, topics" placeholder="Search grammar, skills, topics…"
           value={query} onChange={(e) => setQuery(e.target.value)} />
-          {query && <button className="search-clear" onClick={() => setQuery("")}>✕</button>}
+          {query && <button type="button" className="search-clear" aria-label="Clear search" onClick={() => setQuery("")}>✕</button>}
         </label>
       </div>
     </div>);
@@ -551,8 +558,9 @@ function Journey({ levels, theme, onJump, active }) {
         {levels.map((l) => {
           const vars = accentVars(THEMES[theme][l.code], theme);
           return (
-            <button key={l.code} className={"stop" + (active === l.code ? " is-active" : "")}
-            style={vars} onClick={() => onJump(l.code)}>
+            <button key={l.code} type="button" className={"stop" + (active === l.code ? " is-active" : "")}
+            style={vars} aria-label={"Jump to " + l.code + " " + l.name}
+            onClick={() => onJump(l.code)}>
               <span className="stop-rule" />
               <span className="stop-code">{l.code}</span>
               <span className="stop-name">{l.name}</span>
@@ -719,8 +727,10 @@ function App({ tweaks }) {
 
   return (
     <div className="page" data-theme={theme} data-density={density} data-display={display}>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Header />
       <SiteTabs active={siteTab} setActive={setSiteTab} />
+      <div id="main-content" role="tabpanel" aria-labelledby={"tab-" + siteTab} tabIndex={-1}>
       {siteTab === "curriculum" && <>
         <Toolbar levels={CURRICULUM} theme={theme} active={active} setActive={setActive}
         onPick={selectLevel} query={query} setQuery={setQuery} />
@@ -747,8 +757,8 @@ function App({ tweaks }) {
       {siteTab === "languages" && <LanguagesTab />}
       {siteTab === "blog" && <BlogTab />}
       {siteTab === "dictionary" && <DictionaryTab />}
+      </div>
 
-      <FloatingDictionary />
       <footer className="foot">
         <p>Aligned to the Common European Framework of Reference for Languages (CEFR).
         Hour estimates and GSE ranges are indicative guides, not guarantees.</p>
