@@ -1,20 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root{
-  --paper:oklch(0.985 0.006 85);
-  --surface:oklch(0.997 0.003 85);
-  --ink:oklch(0.24 0.012 60);
-  --ink-2:oklch(0.42 0.012 60);
-  --muted:oklch(0.56 0.012 65);
-  --line:oklch(0.885 0.008 75);
-  --accent:oklch(0.58 0.13 60);
-  --accent-deep:oklch(0.46 0.13 60);
-  --accent-tint:oklch(0.965 0.045 60);
-  --accent-soft:oklch(0.92 0.045 60);
+  --paper:#ECE8E1;
+  --surface:#F2EFE8;
+  --ink:#111111;
+  --ink-2:#55524B;
+  --muted:#837F76;
+  --line:#CDC8BC;
+  --accent:#FF3B1F;
+  --accent-deep:#D32A10;
+  --accent-tint:#FBE7E1;
+  --accent-soft:#F6D3CB;
   --good:oklch(0.48 0.12 145);
   --good-soft:oklch(0.965 0.035 145);
   --wrong:oklch(0.52 0.13 25);
   --wrong-soft:oklch(0.965 0.035 25);
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Albert Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box;}
@@ -130,3 +131,17 @@ h1{max-width:680px;margin:0 0 18px;font-size:clamp(42px,7vw,68px);line-height:.9
   .question-card,.result-view{animation:none;}
   .answer-choice,.progress-track span{transition:none;}
 }
+
+/* ===== Brand bridge: Fraunces + hard-shadow brutalism (matches the landing page). ===== */
+/* Green/red correctness colors are intentionally preserved. */
+body{font-optical-sizing:auto;}
+.quick-assessment,.reading-message,.result-score,.speaking-card,.speaking-score,.review-item,
+.answer-choice,.primary-button,.quiet-button,.back-link,.quick-facts span,.level-tag,
+.progress-track{border-radius:0;}
+.quick-assessment{border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);}
+.reading-message,.speaking-card,.review-item{border:2px solid var(--ink);}
+.answer-choice{border:2px solid var(--ink);}
+.answer-choice:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--accent);}
+.answer-choice.is-selected{box-shadow:3px 3px 0 var(--ink);}
+.primary-button,.quiet-button{border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);}
+.primary-button:hover,.quiet-button:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--accent);}

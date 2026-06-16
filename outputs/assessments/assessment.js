@@ -1,4 +1,6 @@
 (function(){
+  var idSeq = 0;
+
   function norm(value){
     return String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
   }
@@ -522,8 +524,10 @@
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     root.querySelectorAll("[data-assessment-item]").forEach(function(item){
       item.classList.remove("is-correct", "is-wrong", "is-partial", "is-missing");
-      item.querySelectorAll("[data-option]").forEach(function(option){
+      item.querySelectorAll("[data-option]").forEach(function(option, index){
         option.classList.remove("is-selected", "is-correct", "is-wrong");
+        option.setAttribute("aria-checked", "false");
+        option.tabIndex = index === 0 ? 0 : -1;
       });
       item.querySelectorAll("[data-answer]").forEach(function(input){
         input.value = "";
@@ -563,6 +567,51 @@
     updateResultRecord(root);
   }
 
+  function selectOption(item, option){
+    item.querySelectorAll("[data-option]").forEach(function(other){
+      const chosen = other === option;
+      other.classList.toggle("is-selected", chosen);
+      other.classList.remove("is-correct", "is-wrong");
+      other.setAttribute("aria-checked", chosen ? "true" : "false");
+      other.tabIndex = chosen ? 0 : -1;
+    });
+    item.classList.remove("is-correct", "is-wrong", "is-partial", "is-missing");
+  }
+
+  // Turn each question's option buttons into an accessible single-select radio
+  // group: arrow-key navigation, roving tabindex, and aria-checked state.
+  function initOptionGroups(root){
+    root.querySelectorAll("[data-assessment-item]").forEach(function(item){
+      const options = Array.from(item.querySelectorAll("[data-option]"));
+      if (!options.length) return;
+      const group = options[0].parentNode;
+      group.setAttribute("role", "radiogroup");
+      const question = item.querySelector(".question");
+      if (question) {
+        if (!question.id) question.id = "assess-q-" + (++idSeq);
+        group.setAttribute("aria-labelledby", question.id);
+      }
+      options.forEach(function(option, index){
+        option.setAttribute("role", "radio");
+        option.setAttribute("aria-checked", "false");
+        option.tabIndex = index === 0 ? 0 : -1;
+        option.addEventListener("click", function(){ selectOption(item, option); });
+        option.addEventListener("keydown", function(event){
+          const current = options.indexOf(option);
+          let next = null;
+          if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (current + 1) % options.length;
+          else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = (current - 1 + options.length) % options.length;
+          else if (event.key === "Home") next = 0;
+          else if (event.key === "End") next = options.length - 1;
+          if (next === null) return;
+          event.preventDefault();
+          selectOption(item, options[next]);
+          options[next].focus();
+        });
+      });
+    });
+  }
+
   function initAssessment(root){
     addResultRecord(root);
     if (root.dataset.placement) initTeacherMode(root);
@@ -598,16 +647,7 @@
         }
       });
     });
-    root.querySelectorAll("[data-option]").forEach(function(option){
-      option.addEventListener("click", function(){
-        const item = option.closest("[data-assessment-item]");
-        item.querySelectorAll("[data-option]").forEach(function(other){
-          other.classList.remove("is-selected", "is-correct", "is-wrong");
-        });
-        option.classList.add("is-selected");
-        item.classList.remove("is-correct", "is-wrong", "is-partial", "is-missing");
-      });
-    });
+    initOptionGroups(root);
 
     const check = root.querySelector("[data-check-assessment]");
     const reset = root.querySelector("[data-reset-assessment]");
@@ -621,6 +661,18 @@
     if (reset) reset.addEventListener("click", function(){ resetAssessment(root); });
     if (print) print.addEventListener("click", function(){ window.print(); });
     resetAssessment(root);
+
+    // Announce results to assistive tech. Set after the initial reset so the
+    // page does not announce the empty state on load.
+    const feedbackEl = root.querySelector("[data-feedback]");
+    if (feedbackEl) {
+      feedbackEl.setAttribute("role", "status");
+      feedbackEl.setAttribute("aria-live", "polite");
+    }
+    [".score-card", ".placement-result"].forEach(function(selector){
+      const region = root.querySelector(selector);
+      if (region) region.setAttribute("aria-live", "polite");
+    });
   }
 
   function initTeacherMode(root){

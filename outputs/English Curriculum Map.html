@@ -6,27 +6,27 @@
 <title>English Curriculum Map · A0 → B2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --paper:oklch(0.985 0.006 85);
-  --paper-2:oklch(0.972 0.009 82);
-  --surface:oklch(0.997 0.003 85);
-  --ink:oklch(0.24 0.012 60);
-  --ink-2:oklch(0.42 0.012 60);
-  --muted:oklch(0.56 0.012 65);
-  --line:oklch(0.885 0.008 75);
-  --line-2:oklch(0.93 0.006 80);
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --paper:#ECE8E1;
+  --paper-2:#E2DDD3;
+  --surface:#F2EFE8;
+  --ink:#111111;
+  --ink-2:#55524B;
+  --muted:#837F76;
+  --line:#CDC8BC;
+  --line-2:#DEDAD0;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Albert Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
   --display:var(--serif);
   --maxw:1120px;
   --pad:40px;
-  --accent:oklch(0.58 0.13 60);
-  --accent-deep:oklch(0.46 0.13 60);
-  --accent-tint:oklch(0.965 0.045 60);
-  --accent-soft:oklch(0.92 0.045 60);
+  --accent:#FF3B1F;
+  --accent-deep:#D32A10;
+  --accent-tint:#FBE7E1;
+  --accent-soft:#F6D3CB;
 }
 *{box-sizing:border-box;}
 html{-webkit-text-size-adjust:100%;}
@@ -343,6 +343,32 @@ mark{background:var(--accent-soft);color:var(--ink);border-radius:3px;padding:0 
   .toolbar-inner{gap:10px;}
   .search{min-width:0;flex:1;}
 }
+
+/* ===== Brand bridge with the landing page: Fraunces + hard-shadow brutalism. ===== */
+/* Per-level color is preserved: each level sets --accent inline, so the hover    */
+/* shadows pick up that level's hue inside a level section, brand red elsewhere.  */
+body{font-optical-sizing:auto;}
+.title,.tab-title{font-weight:600;}
+.masthead,.site-tabs,.toolbar{border-color:var(--ink);}
+.masthead{border-bottom-width:2px;}
+.site-tabs{border-bottom-width:2px;}
+.toolbar{border-bottom-width:2px;}
+.card,.stop,.assessment-card,.assessment-evidence,.info-panel,.language-panel,
+.transfer-card,.blog-card,.dictionary-tool,.placement-hero,.explainer-grid,.cando{
+  border:2px solid var(--ink);border-radius:0;box-shadow:4px 4px 0 var(--ink);
+}
+.card:hover,.stop:hover,.assessment-card:hover,.blog-card:hover,.transfer-card:hover{
+  transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--accent);border-color:var(--ink);
+}
+.stop.is-active{box-shadow:4px 4px 0 var(--accent);}
+.assessment-card--soon{box-shadow:4px 4px 0 var(--line);}
+.assessment-card--soon:hover{transform:none;box-shadow:4px 4px 0 var(--line);}
+.pill,.site-tab,.language-tab,.tag,.vchip,.chip,.search,.placement-cta,
+.assessment-btn,.noresult-clear,.search-clear{border-radius:0;}
+.pill,.site-tab,.language-tab,.search{border:2px solid var(--ink);}
+.pill.is-active,.site-tab.is-active,.language-tab.is-active{box-shadow:3px 3px 0 var(--accent);}
+.placement-cta{border:2px solid var(--ink);box-shadow:5px 5px 0 var(--accent);}
+.placement-cta:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--accent);}
 </style>
 </head>
 <body>

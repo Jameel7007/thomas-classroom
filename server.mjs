@@ -48,7 +48,8 @@ createServer(async (request, response) => {
     return sendJson(response, 500, { error: "The local lesson server could not complete this request." });
   }
 }).listen(port, host, () => {
-  console.log(`English curriculum: http://localhost:${port}/English%20Curriculum%20Map.html`);
+  console.log(`Thomas's Classroom: http://localhost:${port}/`);
+  console.log(`Curriculum map:     http://localhost:${port}/English%20Curriculum%20Map.html`);
   const hasVoice = Object.keys(process.env).some((name) => name.startsWith("ELEVENLABS_VOICE_"));
   if (!process.env.ELEVENLABS_API_KEY || (!process.env.ELEVENLABS_VOICE_ID && !hasVoice)) {
     console.log("ElevenLabs is not configured yet. Add the API key and voice ID to .env.");
@@ -139,7 +140,7 @@ async function serveVoiceClip(request, response, clipId) {
 
 async function serveStatic(response, pathname, headOnly) {
   let relativePath = decodeURIComponent(pathname).replace(/^\/+/, "");
-  if (!relativePath) relativePath = "English Curriculum Map.html";
+  if (!relativePath) relativePath = "index.html";
 
   const filePath = resolve(publicRoot, relativePath);
   if (filePath !== publicRoot && !filePath.startsWith(publicRoot + sep)) {

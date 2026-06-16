@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root{
-  --paper:oklch(0.985 0.006 85);
-  --surface:oklch(0.997 0.003 85);
-  --ink:oklch(0.24 0.012 60);
-  --ink-2:oklch(0.42 0.012 60);
-  --muted:oklch(0.56 0.012 65);
-  --line:oklch(0.885 0.008 75);
-  --accent:oklch(0.58 0.13 60);
-  --accent-deep:oklch(0.46 0.13 60);
-  --accent-tint:oklch(0.965 0.045 60);
-  --accent-soft:oklch(0.92 0.045 60);
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --paper:#ECE8E1;
+  --surface:#F2EFE8;
+  --ink:#111111;
+  --ink-2:#55524B;
+  --muted:#837F76;
+  --line:#CDC8BC;
+  --accent:#FF3B1F;
+  --accent-deep:#D32A10;
+  --accent-tint:#FBE7E1;
+  --accent-soft:#F6D3CB;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Albert Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box;}
@@ -192,6 +193,13 @@ h1{font-family:var(--serif);font-size:clamp(42px,7vw,76px);font-weight:500;lette
   color:oklch(0.34 0.11 145);animation:answer-pop .32s cubic-bezier(.2,.9,.2,1.4);}
 .choice-btn.is-wrong{border-color:oklch(0.57 0.13 25);background:oklch(0.96 0.04 25);
   color:oklch(0.42 0.12 25);animation:answer-wiggle .32s cubic-bezier(.36,.07,.19,.97);}
+/* Non-color-only correctness: a distinct shape (check / cross) so feedback
+   never relies on color alone. */
+.choice-btn.is-correct,.choice-btn.is-wrong{position:relative;padding-right:34px;}
+.choice-btn.is-correct::after,.choice-btn.is-wrong::after{position:absolute;right:13px;top:50%;
+  transform:translateY(-50%);font-size:15px;font-weight:700;line-height:1;}
+.choice-btn.is-correct::after{content:"\2713";}
+.choice-btn.is-wrong::after{content:"\2717";}
 .answer-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:18px;}
 .answer-input{width:110px;border:0;border-bottom:1.5px solid var(--line);background:transparent;
   font:inherit;color:var(--ink);text-align:center;outline:none;border-radius:0;padding:3px 4px;}
@@ -273,3 +281,22 @@ h1{font-family:var(--serif);font-size:clamp(42px,7vw,76px);font-weight:500;lette
   .assessment.is-error,.choice-btn.is-correct,.choice-btn.is-wrong,
   .answer-input.is-correct,.answer-input.is-wrong,.spark,.listen-btn.is-playing{animation:none;}
 }
+
+/* ===== Brand bridge: Fraunces + hard-shadow brutalism (matches the landing page). ===== */
+/* Green/red correctness colors are intentionally preserved. */
+body{font-optical-sizing:auto;}
+.panel,.assessment,.check-item,.reading-text,.long-reading,.live-listening-task,.teacher-read-box,
+.placement-level,.placement-analysis,.profile-panel,.result-tool,.result-record,.protocol-card,
+.sections li,.compact-check,.score-card,.result-score,.speaking-score,.choice-btn,.assessment-btn,
+.listen-btn,.back,.teacher-mode-toggle,.skill-score,.example-answers span,.live-task-heading>span{border-radius:0;}
+.panel,.assessment,.score-card,.placement-level,.placement-analysis,.profile-panel{
+  border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);
+}
+.check-item{border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);}
+.result-record{box-shadow:5px 5px 0 var(--accent);}
+.choice-btn{border:2px solid var(--ink);}
+.choice-btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--accent);}
+.choice-btn.is-selected{box-shadow:3px 3px 0 var(--ink);}
+.assessment-btn{border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);}
+.assessment-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--accent);}
+.assessment-btn.primary{box-shadow:3px 3px 0 var(--accent);}

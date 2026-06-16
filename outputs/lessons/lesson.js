@@ -369,6 +369,12 @@
   }
 
   document.addEventListener("DOMContentLoaded", function(){
+    // Make each drill's feedback line a polite live region so results are
+    // announced to assistive tech, not shown by color alone.
+    document.querySelectorAll("[data-feedback]").forEach(function(out){
+      out.setAttribute("role", "status");
+      out.setAttribute("aria-live", "polite");
+    });
     document.querySelectorAll("[data-answer-drill]").forEach(initAnswerDrill);
     document.querySelectorAll("[data-choice-gap-drill]").forEach(initChoiceGapDrill);
     document.querySelectorAll("[data-tile-game]").forEach(initTileGame);

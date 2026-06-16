@@ -1,19 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root{
-  --paper:oklch(0.985 0.006 85);
-  --paper-2:oklch(0.972 0.009 82);
-  --surface:oklch(0.997 0.003 85);
-  --ink:oklch(0.24 0.012 60);
-  --ink-2:oklch(0.42 0.012 60);
-  --muted:oklch(0.56 0.012 65);
-  --line:oklch(0.885 0.008 75);
-  --line-2:oklch(0.93 0.006 80);
-  --serif:"Newsreader",Georgia,serif;
-  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --paper:#ECE8E1;
+  --paper-2:#E2DDD3;
+  --surface:#F2EFE8;
+  --ink:#111111;
+  --ink-2:#55524B;
+  --muted:#837F76;
+  --line:#CDC8BC;
+  --line-2:#DEDAD0;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Albert Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
-  --accent:oklch(0.58 0.13 28);
-  --accent-deep:oklch(0.46 0.13 28);
-  --accent-tint:oklch(0.965 0.045 28);
-  --accent-soft:oklch(0.92 0.045 28);
+  --accent:#FF3B1F;
+  --accent-deep:#D32A10;
+  --accent-tint:#FBE7E1;
+  --accent-soft:#F6D3CB;
   --maxw:800px;
 }
 *{box-sizing:border-box;}
@@ -172,6 +173,13 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
   color:oklch(0.34 0.11 145);animation:answer-pop .32s cubic-bezier(.2,.9,.2,1.4);}
 .quiz-option.is-wrong{border-color:oklch(0.57 0.13 25);background:oklch(0.96 0.04 25);
   color:oklch(0.42 0.12 25);animation:answer-wiggle .32s cubic-bezier(.36,.07,.19,.97);}
+/* Non-color-only drill feedback: a shape (check / cross) so correctness never
+   relies on color alone. */
+.choice-gap.is-correct::after,.slot.is-correct::after,.error-choice.is-correct::after,.quiz-option.is-correct::after,
+.choice-gap.is-wrong::after,.slot.is-wrong::after,.error-choice.is-wrong::after,.quiz-option.is-wrong::after{
+  margin-left:7px;font-weight:700;font-size:.92em;}
+.choice-gap.is-correct::after,.slot.is-correct::after,.error-choice.is-correct::after,.quiz-option.is-correct::after{content:"\2713";}
+.choice-gap.is-wrong::after,.slot.is-wrong::after,.error-choice.is-wrong::after,.quiz-option.is-wrong::after{content:"\2717";}
 .lessons-nav{display:flex;justify-content:space-between;gap:16px;margin-top:56px;
   padding-top:28px;border-top:1px solid var(--line);}
 .lnav{text-decoration:none;color:var(--ink);max-width:46%;}
@@ -223,3 +231,20 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
   .choice-gap.is-correct,.choice-gap.is-wrong,
   .hidden-answer.is-visible,.transform-answer.is-visible,.spark{animation:none;}
 }
+
+/* ===== Brand bridge: Fraunces + hard-shadow brutalism (matches the landing page). ===== */
+/* Green/red correctness colors are intentionally preserved. */
+body{font-optical-sizing:auto;}
+.bar{border-bottom:2px solid var(--ink);}
+.practice,.tile-game,.micro-drill,.quiz,.note,.thinking-card,.flow-step,.prompt-card,.quiz-item,
+.transform-item,.choice-bank,.tag,.choice-option,.tile,.error-choice,.quiz-option,.built-tile,
+.choice-gap,.slot,.lesson-btn,.answer-input,.placeholder-note{border-radius:0;}
+.practice,.tile-game,.micro-drill,.quiz{border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);}
+.note,.thinking-card{border:2px solid var(--ink);box-shadow:4px 4px 0 var(--accent);}
+.flow-step,.prompt-card,.quiz-item,.transform-item{border:2px solid var(--ink);}
+.choice-option,.tile,.error-choice,.quiz-option,.lesson-btn{border:2px solid var(--ink);}
+.choice-option:hover,.tile:hover,.error-choice:hover,.quiz-option:hover,.lesson-btn:hover{
+  transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--accent);
+}
+.choice-option.is-selected,.tile.is-selected{box-shadow:3px 3px 0 var(--ink);}
+.lesson-btn{box-shadow:3px 3px 0 var(--ink);}
