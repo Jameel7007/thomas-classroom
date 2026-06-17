@@ -154,8 +154,8 @@ nav.scrolled{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop
 }
 .eyebrow::before{content:'';width:34px;height:1.5px;background:var(--pen);display:inline-block;}
 .hero-word{
-  font-family:'Fraunces',serif;line-height:.88;letter-spacing:-.03em;
-  font-size:clamp(3rem,11vw,9rem);margin:.5rem 0 0 -0.03em;
+  font-family:'Fraunces',serif;line-height:.9;letter-spacing:-.03em;
+  font-size:clamp(4rem,15vw,13rem);margin:.5rem 0 0 -0.03em;
   font-variation-settings:'opsz' 144,'wght' 900,'SOFT' 0,'WONK' 0;
   text-transform:uppercase;
   will-change:font-variation-settings;user-select:none;
@@ -164,7 +164,7 @@ nav.scrolled{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop
 .hero-word .dot{color:var(--pen);}
 .hero-ipa{
   font-family:'IBM Plex Mono',monospace;color:var(--teal);
-  font-size:clamp(.95rem,2vw,1.3rem);margin-top:.9rem;
+  font-size:clamp(.95rem,2vw,1.3rem);margin-top:clamp(1.8rem,4.5vh,2.8rem);
   opacity:0;animation:rise .8s var(--ease-out) 1.45s forwards;
 }
 .hero-row{
@@ -478,8 +478,8 @@ footer{
 
 <!-- ============= HERO ============= -->
 <header class="hero" id="top">
-  <div class="eyebrow">American English tutor · Conversation &amp; pronunciation</div>
-  <h1 class="hero-word" id="heroWord">Welcome to<br>Thomas's<br>Classroom<span class="dot">.</span></h1>
+  <div class="eyebrow"><span>American English tutor<br>Conversation &amp; pronunciation</span></div>
+  <h1 class="hero-word" id="heroWord">Welcome<span class="dot">.</span></h1>
   <div class="hero-ipa">/ˈklæs.ruːm/ &nbsp;·&nbsp; noun &nbsp;·&nbsp; where English finally clicks</div>
 
   <div class="hero-row">
