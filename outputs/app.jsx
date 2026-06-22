@@ -10,7 +10,27 @@ const { THEMES, accentVars, slug, lessonHref, Highlight, LessonItem, Card } = Cu
 const READY_LESSONS = new Set([
   "lessons/a0/the-verb-to-be.html",
   "lessons/a0/articles-a-an.html",
-  "lessons/a0/subject-pronouns.html"
+  "lessons/a0/subject-pronouns.html",
+  "lessons/a0/this-that-these-those.html",
+  "lessons/a0/regular-plural-nouns.html",
+  "lessons/a0/possessive-adjectives.html",
+  "lessons/a0/question-words-what-where-who-how.html",
+  "lessons/a0/cardinal-numbers-0-100.html",
+  "lessons/a0/greetings-and-introductions.html",
+  "lessons/a0/the-alphabet-and-spelling.html",
+  "lessons/a0/days-months-dates.html",
+  "lessons/a0/colours-and-basic-adjectives.html",
+  "lessons/a0/family-members.html",
+  "lessons/a0/classroom-objects.html",
+  "lessons/a0/countries-and-nationalities.html",
+  "lessons/a1/daily-routines-and-telling-the-time.html",
+  "lessons/a1/jobs-and-workplaces.html",
+  "lessons/a1/food-and-drink.html",
+  "lessons/a1/rooms-and-furniture.html",
+  "lessons/a1/hobbies-and-free-time.html",
+  "lessons/a1/clothes-and-shopping.html",
+  "lessons/a1/weather-and-seasons.html",
+  "lessons/a1/common-verbs-and-adjectives.html"
 ]);
 function lessonReady(code, text) {
   return READY_LESSONS.has(lessonHref(code, text));

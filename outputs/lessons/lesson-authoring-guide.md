@@ -2,6 +2,8 @@
 
 Use this structure for grammar and vocabulary lesson pages. It blends guided noticing from the Thinking Method with current TEFL practice: clear outcomes, minimal teacher-talk, high student response rate, form-meaning-use, retrieval, feedback, and communicative transfer.
 
+Modern lessons should include a brief cumulative retrieval section near the start: one recent item, one older item, and one common error/contrast.
+
 ## Page Flow
 
 1. Notice
@@ -44,6 +46,18 @@ Current reusable mechanics:
 Add `data-success-message="..."` to a `data-quiz` element when the lesson
 needs ability-specific success feedback. Describe what the learner can now do,
 not merely that the score is high.
+
+Optional explanatory feedback works on answer inputs, choice gaps, matching
+slots, sentence builders, quiz items, and error-spotting choices:
+
+- `data-hint="..."` gives a short cue on the first failed attempt.
+- `data-why="..."` gives a short rule or reason when no hint is supplied.
+- `data-fix="..."` supplies the expected form after a repeated failed check.
+
+Keep each message to one short sentence. Put the attribute on the individual
+item when the cue is item-specific, or on the drill root when one cue applies
+to the whole exercise. Existing exercises without these attributes receive
+safe generic feedback automatically.
 
 Interactive answer drill:
 

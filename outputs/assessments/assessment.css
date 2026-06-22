@@ -4,7 +4,7 @@
   --surface:#F2EFE8;
   --ink:#111111;
   --ink-2:#55524B;
-  --muted:#837F76;
+  --muted:#5F5A50;
   --line:#CDC8BC;
   --accent:#FF3B1F;
   --accent-deep:#D32A10;
@@ -300,3 +300,15 @@ body{font-optical-sizing:auto;}
 .assessment-btn{border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);}
 .assessment-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--accent);}
 .assessment-btn.primary{box-shadow:3px 3px 0 var(--accent);}
+
+/* ===== Clearer answer selection (placement + level checks) =====
+   The old selected state only added a faint shadow, so a click "barely highlighted".
+   A chosen-but-unchecked answer is now a solid INK fill (neutral, like the map's
+   active state) — unmistakable, never red. Green/red + check/cross still take over
+   after Check, so the :not() guards keep correctness winning. */
+.choice-btn:hover:not(.is-selected):not(.is-correct):not(.is-wrong){
+  border-color:var(--ink);box-shadow:3px 3px 0 var(--ink-2);}
+.choice-btn.is-selected:not(.is-correct):not(.is-wrong){
+  background:var(--ink);color:var(--paper);border-color:var(--ink);
+  box-shadow:4px 4px 0 var(--ink);transform:translate(-1px,-1px);}
+.choice-btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px;}

@@ -11,6 +11,58 @@
     if (state) out.classList.add("is-" + state);
   }
 
+  function itemNumber(item, items){
+    const index = items.indexOf(item);
+    return index >= 0 ? index + 1 : 1;
+  }
+
+  function feedbackValue(item, root, name){
+    if (item && item.dataset && item.dataset[name]) return item.dataset[name];
+    const container = item && item.closest
+      ? item.closest(".q, [data-quiz-item], [data-transform-item]")
+      : null;
+    if (container && container.dataset && container.dataset[name]) return container.dataset[name];
+    return root.dataset[name] || "";
+  }
+
+  function failedAttempts(item){
+    const attempts = Number(item.dataset.feedbackAttempts || 0) + 1;
+    item.dataset.feedbackAttempts = String(attempts);
+    return attempts;
+  }
+
+  function clearFailedAttempts(items){
+    items.forEach(function(item){ delete item.dataset.feedbackAttempts; });
+  }
+
+  function explanatoryCue(item, root, attempts, fallback, answer, answerLead){
+    const hint = feedbackValue(item, root, "hint");
+    const why = feedbackValue(item, root, "why");
+    const fix = feedbackValue(item, root, "fix");
+
+    if (attempts > 1 && (fix || answer)) {
+      return (answerLead || "Use") + " “" + (fix || answer) + "”, then try again.";
+    }
+    return hint || why || fallback;
+  }
+
+  function wrongFeedback(correct, total, item, items, cue){
+    return correct + " of " + total + " correct. Item " +
+      itemNumber(item, items) + ": " + cue;
+  }
+
+  function firstAnswer(item){
+    return String(item.dataset.answer || "").split("|")[0].trim();
+  }
+
+  function optionAnswerText(item, options, attribute){
+    const answers = String(item.dataset.answer || "").split("|").map(norm);
+    const option = options.find(function(candidate){
+      return answers.includes(norm(candidate.dataset[attribute]));
+    });
+    return option ? option.textContent.trim() : firstAnswer(item);
+  }
+
   function resetMotion(root){
     root.classList.remove("is-success", "is-error");
     root.querySelectorAll(".drill-burst").forEach(function(node){ node.remove(); });
@@ -48,18 +100,34 @@
 
     check.addEventListener("click", function(){
       let correct = 0;
+      let firstWrong = null;
       inputs.forEach(function(input){
         const answers = input.dataset.answer.split("|").map(norm);
         const ok = answers.includes(norm(input.value));
         input.classList.toggle("is-correct", ok);
         input.classList.toggle("is-wrong", !ok);
-        if (ok) correct += 1;
+        if (ok) {
+          correct += 1;
+          delete input.dataset.feedbackAttempts;
+        } else if (!firstWrong) firstWrong = input;
       });
+      const firstWrongAttempts = firstWrong ? failedAttempts(firstWrong) : 0;
       const allCorrect = correct === inputs.length;
       animateDrill(root, allCorrect);
+      const cue = firstWrong
+        ? explanatoryCue(
+          firstWrong,
+          root,
+          firstWrongAttempts,
+          norm(firstWrong.value)
+            ? "Check the highlighted gap and try again."
+            : "Complete this gap, then check again.",
+          firstAnswer(firstWrong)
+        )
+        : "";
       setFeedback(root, allCorrect
         ? "Perfect. Say the full sentences aloud."
-        : correct + " of " + inputs.length + " correct. Fix the highlighted gaps and try again.",
+        : wrongFeedback(correct, inputs.length, firstWrong, inputs, cue),
         allCorrect ? "success" : "error");
     });
 
@@ -69,6 +137,7 @@
           input.value = "";
           input.classList.remove("is-correct", "is-wrong");
         });
+        clearFailedAttempts(inputs);
         resetMotion(root);
         setFeedback(root, "");
       });
@@ -115,18 +184,34 @@
     if (check) {
       check.addEventListener("click", function(){
         let correct = 0;
+        let firstWrong = null;
         gaps.forEach(function(gap){
           const answers = gap.dataset.answer.split("|").map(norm);
           const ok = answers.includes(norm(gap.dataset.value));
           gap.classList.toggle("is-correct", ok);
           gap.classList.toggle("is-wrong", !ok);
-          if (ok) correct += 1;
+          if (ok) {
+            correct += 1;
+            delete gap.dataset.feedbackAttempts;
+          } else if (!firstWrong) firstWrong = gap;
         });
+        const firstWrongAttempts = firstWrong ? failedAttempts(firstWrong) : 0;
         const allCorrect = correct === gaps.length;
         animateDrill(root, allCorrect);
+        const cue = firstWrong
+          ? explanatoryCue(
+            firstWrong,
+            root,
+            firstWrongAttempts,
+            firstWrong.dataset.value
+              ? "Look at the words around the highlighted gap and try again."
+              : "Choose a word for this gap, then check again.",
+            optionAnswerText(firstWrong, options, "choiceOption")
+          )
+          : "";
         setFeedback(root, allCorrect
-          ? "Perfect. Now read the full dialogue aloud."
-          : correct + " of " + gaps.length + " correct. Tap a gap to change it.",
+          ? "Perfect. Now read the full sentences aloud."
+          : wrongFeedback(correct, gaps.length, firstWrong, gaps, cue),
           allCorrect ? "success" : "error");
       });
     }
@@ -139,6 +224,7 @@
           gap.classList.add("is-empty");
           gap.classList.remove("is-correct", "is-wrong", "is-active");
         });
+        clearFailedAttempts(gaps);
         options.forEach(function(option){ option.classList.remove("is-selected"); });
         setActive(gaps[0]);
         resetMotion(root);
@@ -182,17 +268,39 @@
     if (check) {
       check.addEventListener("click", function(){
         let correct = 0;
+        let firstWrong = null;
         slots.forEach(function(slot){
           const ok = norm(slot.dataset.value) === norm(slot.dataset.slot);
           slot.classList.toggle("is-correct", ok);
           slot.classList.toggle("is-wrong", !ok);
-          if (ok) correct += 1;
+          if (ok) {
+            correct += 1;
+            delete slot.dataset.feedbackAttempts;
+          } else if (!firstWrong) firstWrong = slot;
         });
+        const firstWrongAttempts = firstWrong ? failedAttempts(firstWrong) : 0;
         const allCorrect = correct === slots.length;
         animateDrill(root, allCorrect);
+        const matchingTile = firstWrong
+          ? tiles.find(function(tile){
+            return norm(tile.dataset.tile) === norm(firstWrong.dataset.slot);
+          })
+          : null;
+        const cue = firstWrong
+          ? explanatoryCue(
+            firstWrong,
+            root,
+            firstWrongAttempts,
+            firstWrong.dataset.value
+              ? "Check the highlighted match and try again."
+              : "Place a tile in this slot, then check again.",
+            matchingTile ? matchingTile.textContent.trim() : "",
+            "Match it with"
+          )
+          : "";
         setFeedback(root, allCorrect
           ? "Great match. Now say each pair aloud."
-          : correct + " of " + slots.length + " tiles placed correctly.",
+          : wrongFeedback(correct, slots.length, firstWrong, slots, cue),
           allCorrect ? "success" : "error");
       });
     }
@@ -208,6 +316,7 @@
           slot.dataset.value = "";
           slot.classList.remove("is-filled", "is-correct", "is-wrong");
         });
+        clearFailedAttempts(slots);
         selected = null;
         resetMotion(root);
         setFeedback(root, "");
@@ -227,6 +336,16 @@
       return Array.from(area.querySelectorAll("[data-value]")).map(function(tile){
         return tile.dataset.value;
       });
+    }
+
+    function answerDisplay(){
+      const sourceByValue = {};
+      sourceTiles.forEach(function(tile){
+        sourceByValue[norm(tile.dataset.buildTile || tile.textContent)] = tile.textContent.trim();
+      });
+      return norm(root.dataset.answer).split(" ").map(function(value){
+        return sourceByValue[value] || value;
+      }).join(" ");
     }
 
     function addTile(source){
@@ -255,10 +374,22 @@
         const ok = answer && attempt === answer;
         area.classList.toggle("is-correct", ok);
         area.classList.toggle("is-wrong", !ok);
+        const attempts = ok ? 0 : failedAttempts(area);
+        if (ok) delete area.dataset.feedbackAttempts;
         animateDrill(root, ok);
+        const cue = ok ? "" : explanatoryCue(
+          area,
+          root,
+          attempts,
+          attempt
+            ? "Check the word order and try again."
+            : "Build the sentence before you check it.",
+          answerDisplay(),
+          "Correct order is"
+        );
         setFeedback(root, ok
           ? "Correct. Now say it aloud."
-          : "Not yet. Tap a word in the build area to move it back.",
+          : cue,
           ok ? "success" : "error");
       });
     }
@@ -268,6 +399,7 @@
         sourceTiles.forEach(function(tile){ tile.disabled = false; });
         area.innerHTML = "";
         area.classList.remove("is-correct", "is-wrong");
+        clearFailedAttempts([area]);
         resetMotion(root);
         setFeedback(root, "");
       });
@@ -286,13 +418,18 @@
         const value = norm(choice.dataset.errorChoice || choice.textContent);
         const ok = choice.dataset.correct === "true" || value === answer;
         choice.classList.add(ok ? "is-correct" : "is-wrong");
+        const attempts = ok ? 0 : failedAttempts(choice);
+        if (ok) delete choice.dataset.feedbackAttempts;
         animateDrill(root, ok);
         if (feedback) {
           const fix = choice.dataset.fix || root.dataset.fix || "";
           const why = choice.dataset.why || root.dataset.why || "";
+          const hint = choice.dataset.hint || root.dataset.hint || "";
           feedback.innerHTML = ok
             ? "<strong>Fix:</strong> " + fix + (why ? "<br><strong>Why:</strong> " + why : "")
-            : "That word is not the target. Try again.";
+            : (hint || (attempts > 1
+              ? "That word works here. Compare the other words with the rule and try again."
+              : "That word works here. Look at another word and try again."));
           feedback.classList.add("is-visible");
         }
       });
@@ -335,6 +472,7 @@
 
     check.addEventListener("click", function(){
       let correct = 0;
+      let firstWrong = null;
       items.forEach(function(item){
         const answer = norm(item.dataset.answer);
         const options = Array.from(item.querySelectorAll("[data-quiz-option]"));
@@ -344,13 +482,32 @@
           option.classList.toggle("is-correct", isAnswer && selected);
           option.classList.toggle("is-wrong", selected && !isAnswer);
         });
-        if (norm(item.dataset.value) === answer) correct += 1;
+        if (norm(item.dataset.value) === answer) {
+          correct += 1;
+          delete item.dataset.feedbackAttempts;
+        } else if (!firstWrong) firstWrong = item;
       });
+      const firstWrongAttempts = firstWrong ? failedAttempts(firstWrong) : 0;
       const allCorrect = correct === items.length;
       animateDrill(root, allCorrect);
+      const cue = firstWrong
+        ? explanatoryCue(
+          firstWrong,
+          root,
+          firstWrongAttempts,
+          firstWrong.dataset.value
+            ? "Compare the highlighted choice with the question and try again."
+            : "Choose an answer for this item, then check again.",
+          optionAnswerText(
+            firstWrong,
+            Array.from(firstWrong.querySelectorAll("[data-quiz-option]")),
+            "quizOption"
+          )
+        )
+        : "";
       setFeedback(root, allCorrect
         ? root.dataset.successMessage || "Excellent. You can use the target language accurately."
-        : "Quiz score: " + correct + " of " + items.length + ". Fix the highlighted answers and try again.",
+        : wrongFeedback(correct, items.length, firstWrong, items, cue),
         allCorrect ? "success" : "error");
     });
 
@@ -362,6 +519,7 @@
             option.classList.remove("is-selected", "is-correct", "is-wrong");
           });
         });
+        clearFailedAttempts(items);
         resetMotion(root);
         setFeedback(root, "");
       });

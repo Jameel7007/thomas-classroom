@@ -14,7 +14,7 @@
   --surface:#F2EFE8;
   --ink:#111111;
   --ink-2:#55524B;
-  --muted:#837F76;
+  --muted:#5F5A50;
   --line:#CDC8BC;
   --line-2:#DEDAD0;
   --serif:"Fraunces",Georgia,"Times New Roman",serif;
@@ -43,7 +43,7 @@ body{
   radial-gradient(120% 140% at 100% 0%, var(--accent-tint) 0%, transparent 55%),
   var(--paper);}
 .mast-inner{max-width:var(--maxw);margin:0 auto;padding:40px var(--pad) 28px;}
-.overline{font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+.overline{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);margin:0 0 22px;}
 .title{font-family:var(--display);font-weight:500;
   font-size:clamp(46px,8vw,92px);line-height:0.98;letter-spacing:-0.02em;
@@ -96,12 +96,13 @@ body{
 .pill.is-active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
 .pill.is-active .pill-dot{background:var(--accent);}
 .toolbar-right{display:flex;align-items:center;gap:10px;}
-.search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);
-  background:var(--surface);border-radius:999px;padding:7px 14px;min-width:240px;}
-.search:focus-within{border-color:var(--ink-2);}
-.search-ico{color:var(--muted);font-size:16px;}
+.search{display:flex;align-items:center;gap:8px;border:1.5px solid var(--ink-2);
+  background:var(--surface);border-radius:999px;padding:8px 14px;min-width:240px;}
+.search:focus-within{border-color:var(--ink);box-shadow:0 0 0 3px var(--accent-tint);}
+.search-ico{color:var(--ink-2);font-size:16px;}
 .search input{border:0;background:transparent;outline:none;font-family:var(--sans);
-  font-size:14px;color:var(--ink);width:100%;}
+  font-size:15px;color:var(--ink);width:100%;}
+.search input::placeholder{color:var(--muted);}
 .search-clear{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:12px;padding:2px;}
 .reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);
   background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 12px;cursor:pointer;}
@@ -109,7 +110,7 @@ body{
 
 /* ============ Explainers + tabs ============ */
 .explainer{max-width:var(--maxw);margin:0 auto;padding:34px var(--pad) 10px;}
-.explainer-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+.explainer-kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--muted);margin-bottom:12px;}
 .explainer-grid{display:grid;grid-template-columns:minmax(260px,1fr) 1.2fr;gap:24px;
   background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;}
@@ -197,7 +198,7 @@ body{
 .stop:hover .stop-rule,.stop.is-active .stop-rule{width:100%;}
 .stop-code{font-family:var(--sans);font-size:25px;font-weight:700;color:var(--accent-deep);line-height:1;letter-spacing:-0.02em;font-variant-numeric:lining-nums;}
 .stop-name{font-size:13.5px;font-weight:600;margin-top:5px;}
-.stop-hours{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px;letter-spacing:.02em;}
+.stop-hours{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:3px;letter-spacing:.02em;}
 
 /* ============ Sections ============ */
 .sections{max-width:var(--maxw);margin:0 auto;padding:20px var(--pad) 40px;}
@@ -215,7 +216,7 @@ body{
 .chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink);
   background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 13px;white-space:nowrap;}
 .chip-k{flex:none;}
-.chip-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.chip-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
 .chip--prog{padding:4px 12px 4px 6px;}
 .chip--prog .ring text{font-family:var(--mono);font-size:9px;}
 
@@ -235,7 +236,7 @@ body{
 .assessment-soon{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11px;
   letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
   border:1px solid var(--line);border-radius:999px;padding:4px 11px;}
-.assessment-label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+.assessment-label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 .assessment-card h3{font-family:var(--display);font-size:26px;line-height:1.08;font-weight:500;
   margin:0 0 10px;color:var(--ink);}
@@ -264,7 +265,7 @@ body{
 .card-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;
   padding-bottom:12px;border-bottom:1px solid var(--line-2);}
 .card-index{font-family:var(--mono);font-size:12px;color:var(--accent-deep);font-weight:500;}
-.card-label{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin:0;color:var(--ink);}
+.card-label{font-size:13.5px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin:0;color:var(--ink);}
 
 /* lesson links + skill lines */
 .list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;}
@@ -306,7 +307,7 @@ mark{background:var(--accent-soft);color:var(--ink);border-radius:3px;padding:0 
 .item-link--soon{cursor:default;}
 .item-link--soon:hover{background:transparent;}
 .item-link--soon .item-text{color:var(--muted);}
-.soon-tag{flex:none;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+.soon-tag{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 7px;line-height:1.6;}
 .vchip--soon{cursor:default;color:var(--muted);background:var(--paper-2);border-style:dashed;}
 .vchip--soon:hover{border-color:var(--line);color:var(--muted);background:var(--paper-2);}
@@ -387,7 +388,7 @@ body{font-optical-sizing:auto;}
 
 <script src="data.js"></script>
 <script type="text/babel" src="components.jsx"></script>
-<script type="text/babel" src="app.jsx?v=no-floating-dict-1"></script>
+<script type="text/babel" src="app.jsx?v=a1-vocab-1"></script>
 
 <script type="text/babel">
 // Fixed presentation defaults. The prototype "Tweaks" editing panel

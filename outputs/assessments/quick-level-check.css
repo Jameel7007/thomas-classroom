@@ -4,7 +4,7 @@
   --surface:#F2EFE8;
   --ink:#111111;
   --ink-2:#55524B;
-  --muted:#837F76;
+  --muted:#5F5A50;
   --line:#CDC8BC;
   --accent:#FF3B1F;
   --accent-deep:#D32A10;
@@ -145,3 +145,12 @@ body{font-optical-sizing:auto;}
 .answer-choice.is-selected{box-shadow:3px 3px 0 var(--ink);}
 .primary-button,.quiet-button{border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);}
 .primary-button:hover,.quiet-button:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--accent);}
+
+/* ===== Accessibility: a selected answer is NEUTRAL ink, not red =====
+   Red/green correctness is shown only in the end-of-quiz review (.review-item).
+   A live selection must never look "wrong" (matches lesson.css / assessment.css). */
+.answer-choice:hover{border-color:var(--ink-2);box-shadow:2px 2px 0 var(--ink-2);}
+.answer-choice.is-selected{border-color:var(--ink);background:var(--surface);
+  box-shadow:inset 0 0 0 1px var(--ink),3px 3px 0 var(--ink);}
+.answer-choice:focus-visible,.primary-button:focus-visible,.quiet-button:focus-visible{
+  outline:3px solid var(--ink);outline-offset:2px;}

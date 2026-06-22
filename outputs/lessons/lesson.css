@@ -5,7 +5,7 @@
   --surface:#F2EFE8;
   --ink:#111111;
   --ink-2:#55524B;
-  --muted:#837F76;
+  --muted:#5F5A50;
   --line:#CDC8BC;
   --line-2:#DEDAD0;
   --serif:"Fraunces",Georgia,serif;
@@ -60,6 +60,13 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
 .note ul,.thinking-card ul{margin:0;padding-left:20px;}
 .note li,.thinking-card li{margin-bottom:7px;}
 .cross{color:var(--accent-deep);font-weight:600;}
+.note-line{font-size:14px;line-height:1.55;color:var(--ink-2);background:var(--paper-2);
+  border-left:3px solid var(--accent);padding:9px 14px;margin:4px 0 22px;}
+/* color swatches (vocabulary) */
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:12px;margin:14px 0 26px;}
+.swatch{border:2px solid var(--ink);background:var(--surface);overflow:hidden;}
+.swatch .sw{display:block;height:62px;border-bottom:2px solid var(--ink);}
+.swatch .nm{display:block;padding:8px 11px;font:600 14px/1 var(--sans);color:var(--ink);}
 .lesson-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:30px 0 0;}
 .flow-step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 13px;}
 .flow-step b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
@@ -248,3 +255,36 @@ body{font-optical-sizing:auto;}
 }
 .choice-option.is-selected,.tile.is-selected{box-shadow:3px 3px 0 var(--ink);}
 .lesson-btn{box-shadow:3px 3px 0 var(--ink);}
+
+/* ===== Accessibility & answer-state clarity (keeps the style; more readable) =====
+   RED is reserved for "wrong", GREEN for "correct". Selecting / hovering / filling an
+   answer uses a NEUTRAL ink treatment, so a chosen option never looks wrong and the word
+   "green" never turns red just because it is selected. Correct/wrong also carry a shape. */
+.choice-option:hover:not(.is-correct):not(.is-wrong),
+.tile:hover:not(.is-correct):not(.is-wrong),
+.error-choice:hover:not(.is-correct):not(.is-wrong),
+.quiz-option:hover:not(.is-correct):not(.is-wrong){
+  border-color:var(--ink);background:var(--surface);color:var(--ink);box-shadow:2px 2px 0 var(--ink-2);}
+.choice-option.is-selected:not(.is-correct):not(.is-wrong),
+.tile.is-selected:not(.is-correct):not(.is-wrong),
+.quiz-option.is-selected:not(.is-correct):not(.is-wrong){
+  border-color:var(--ink);background:var(--paper-2);color:var(--ink);box-shadow:3px 3px 0 var(--ink);transform:translate(-1px,-1px);}
+.choice-gap{border:1.5px dashed var(--ink-2);background:var(--surface);color:var(--ink);}
+.choice-gap:hover:not(.is-correct):not(.is-wrong),
+.choice-gap.is-active:not(.is-correct):not(.is-wrong){
+  border-style:solid;border-color:var(--ink);box-shadow:3px 3px 0 var(--ink);}
+.slot.is-filled:not(.is-correct):not(.is-wrong){
+  border-style:solid;border-color:var(--ink);background:var(--paper-2);color:var(--ink);}
+.built-tile{border:2px solid var(--ink);background:var(--paper-2);color:var(--ink);}
+.answer-input:focus{background:var(--surface);}
+.build-area.is-correct::after{content:"\2713";margin-left:auto;padding-left:10px;font-weight:700;color:oklch(0.43 0.12 145);}
+.build-area.is-wrong::after{content:"\2717";margin-left:auto;padding-left:10px;font-weight:700;color:oklch(0.5 0.13 25);}
+.feedback.is-error{color:oklch(0.46 0.13 25);}
+/* in-drill instructions read as plain sentences (not uppercase) and dark enough for A1 */
+.choice-hint,.tile-target{font-family:var(--sans);font-size:13.5px;letter-spacing:0;
+  text-transform:none;color:var(--ink-2);font-weight:500;}
+/* clear, NEUTRAL keyboard focus ring on every control (never red) */
+.choice-option:focus-visible,.choice-gap:focus-visible,.tile:focus-visible,.slot:focus-visible,
+.error-choice:focus-visible,.quiz-option:focus-visible,.lesson-btn:focus-visible,
+.answer-input:focus-visible,.back:focus-visible,.lnav:focus-visible{
+  outline:3px solid var(--ink);outline-offset:2px;}
