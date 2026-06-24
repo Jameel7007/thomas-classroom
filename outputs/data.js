@@ -34,6 +34,7 @@ window.CURRICULUM = [
       "Colours & basic adjectives",
       "Family members",
       "Classroom objects",
+      "Animals",
       "Countries & nationalities",
     ],
     skills: {

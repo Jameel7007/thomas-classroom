@@ -22,6 +22,7 @@ const READY_LESSONS = new Set([
   "lessons/a0/colours-and-basic-adjectives.html",
   "lessons/a0/family-members.html",
   "lessons/a0/classroom-objects.html",
+  "lessons/a0/animals.html",
   "lessons/a0/countries-and-nationalities.html",
   "lessons/a1/daily-routines-and-telling-the-time.html",
   "lessons/a1/jobs-and-workplaces.html",
@@ -139,6 +140,7 @@ const BLOG_POSTS = [
 const TRANSFER_LANGUAGES = [
   {
     name: "Spanish",
+    flag: "es",
     note: "Spanish learners often transfer useful patterns, but English needs tighter control of auxiliaries, prepositions, articles, and word order.",
     examples: [
       { source: "para / por", issue: "Overusing for in English", lesson: "for, to, by, and because" },
@@ -149,6 +151,7 @@ const TRANSFER_LANGUAGES = [
   },
   {
     name: "Portuguese",
+    flag: "pt",
     note: "Portuguese transfer work often focuses on false friends, prepositions, auxiliary choice, and deciding when English needs an explicit subject.",
     examples: [
       { source: "ficar", issue: "Choosing stay, become, get, or be", lesson: "ficar map into English" },
@@ -159,6 +162,7 @@ const TRANSFER_LANGUAGES = [
   },
   {
     name: "Turkish",
+    flag: "tr",
     note: "Turkish learners often need explicit practice with articles, be, word order in questions, and tense/aspect choices that English marks differently.",
     examples: [
       { source: "no articles", issue: "Leaving out a, an, and the", lesson: "articles as meaning signals" },
@@ -240,8 +244,7 @@ function SiteTabs({ active, setActive }) {
     if (el) el.focus();
   };
   return (
-    <nav className="site-tabs">
-      <div className="site-tabs-inner" role="tablist" aria-label="Site sections" onKeyDown={onKeyDown}>
+    <div className="site-tabs-inner" role="tablist" aria-label="Site sections" onKeyDown={onKeyDown}>
         {SITE_TABS.map((tab) =>
           <button key={tab.key}
             ref={(el) => (tabRefs.current[tab.key] = el)}
@@ -255,34 +258,17 @@ function SiteTabs({ active, setActive }) {
             {tab.label}
           </button>
         )}
-      </div>
-    </nav>
+    </div>
   );
 }
 
 // ============================ Header ====================================
 function Header() {
-  const totalLessons = CURRICULUM.reduce(
-    (n, l) => n + l.grammar.length + l.vocab.length, 0);
-  const readyLessons = READY_LESSONS.size;
   return (
     <header className="masthead">
       <div className="mast-inner">
-        <p className="overline">CEFR Framework · Reference Guide</p>
-        <h1 className="title">The English<br />Curriculum Map</h1>
+        <h1 className="title">The English Curriculum Map</h1>
         <p className="welcome">Welcome to <em style={{ fontFamily: "Newsreader" }}>Thomas’s Classroom</em></p>
-        <p className="lede">
-          From absolute beginner to confident independence — what you study, and
-          what you can actually <em>do</em>, at every level of English from
-          <strong> A0</strong> through <strong>B2</strong>.
-        </p>
-        <div className="mast-stats">
-          <span className="stat"><b>5</b> levels</span>
-          <span className="stat-div" />
-          <span className="stat"><b>A0–B2</b> CEFR range</span>
-          <span className="stat-div" />
-          <span className="stat"><b>{readyLessons}</b> of {totalLessons} lessons ready</span>
-        </div>
       </div>
     </header>);
 
@@ -342,11 +328,11 @@ function LanguagesTab() {
       <div className="language-tabs">
         {TRANSFER_LANGUAGES.map((l) =>
           <button key={l.name} className={"language-tab" + (language === l.name ? " is-active" : "")}
-            onClick={() => setLanguage(l.name)}>{l.name}</button>
+            onClick={() => setLanguage(l.name)}><img className="lang-flag" src={"img/flags/" + l.flag + ".svg"} alt="" />{l.name}</button>
         )}
       </div>
       <section className="language-panel">
-        <h2>{current.name} → English</h2>
+        <h2><img className="lang-flag lang-flag--lg" src={"img/flags/" + current.flag + ".svg"} alt="" />{current.name} → English</h2>
         <p>{current.note}</p>
         <div className="transfer-grid">
           {current.examples.map((item) =>
@@ -541,11 +527,10 @@ function AssessmentBand({ levelCode }) {
 }
 
 // ============================ Toolbar ===================================
-function Toolbar({ levels, theme, active, setActive, onPick, query, setQuery }) {
+function Toolbar({ levels, theme, active, setActive, onPick, onAbout }) {
   return (
-    <div className="toolbar">
-      <div className="toolbar-inner">
-        <nav className="pills" aria-label="Filter by level">
+    <div className="filter-group">
+      <nav className="pills" aria-label="Filter by level">
           <button type="button" className={"pill" + (active === "all" ? " is-active" : "")}
           aria-pressed={active === "all"}
           onClick={() => setActive("all")}>All levels</button>
@@ -559,15 +544,21 @@ function Toolbar({ levels, theme, active, setActive, onPick, query, setQuery }) 
             </button>
           )}
         </nav>
-        <label className="search">
-          <span className="search-ico" aria-hidden="true">⌕</span>
-          <input type="text" aria-label="Search grammar, skills, topics" placeholder="Search grammar, skills, topics…"
-          value={query} onChange={(e) => setQuery(e.target.value)} />
-          {query && <button type="button" className="search-clear" aria-label="Clear search" onClick={() => setQuery("")}>✕</button>}
-        </label>
-      </div>
+        <button type="button" className="pill-help" onClick={onAbout} aria-haspopup="dialog"
+        aria-label="What do the levels mean?" title="What do the levels mean?">?</button>
     </div>);
 
+}
+
+function SearchBox({ query, setQuery }) {
+  return (
+    <label className="search">
+      <span className="search-ico" aria-hidden="true">⌕</span>
+      <input type="text" aria-label="Search grammar, skills, topics" placeholder="Search grammar & topics"
+      value={query} onChange={(e) => setQuery(e.target.value)} />
+      {query && <button type="button" className="search-clear" aria-label="Clear search" onClick={() => setQuery("")}>✕</button>}
+    </label>
+  );
 }
 
 // ============================ Journey ===================================
@@ -697,6 +688,10 @@ function App({ tweaks }) {
   const [active, setActive] = useState("all");
   const [query, setQuery] = useState("");
   const [siteTab, setSiteTab] = useState("curriculum");
+  const [showOverview, setShowOverview] = useState(false);
+  const [navHidden, setNavHidden] = useState(false);
+  const lastScrollY = useRef(0);
+  const suppressHide = useRef(false);
   const sectionRefs = useRef({});
   const pendingJump = useRef(null);
 
@@ -706,10 +701,13 @@ function App({ tweaks }) {
   const scrollToLevel = (code) => {
     const el = sectionRefs.current[code];
     if (!el) return;
-    const toolbar = document.querySelector(".toolbar");
-    const offset = (toolbar ? toolbar.offsetHeight : 0) + 16;
+    const nav = document.querySelector(".topnav");
+    const offset = (nav ? nav.offsetHeight : 0) + 18;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    suppressHide.current = true;
+    setNavHidden(false);
     window.scrollTo({ top, behavior: "smooth" });
+    window.setTimeout(() => { suppressHide.current = false; lastScrollY.current = window.scrollY; }, 750);
   };
 
   const jump = (code) => {
@@ -743,21 +741,55 @@ function App({ tweaks }) {
     }
   }, [active]);
 
+  // Close the levels overlay with Escape.
+  useEffect(() => {
+    if (!showOverview) return;
+    const onKey = (e) => { if (e.key === "Escape") setShowOverview(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [showOverview]);
+
+  // Auto-hide the top nav when scrolling down (reading); reveal it on scroll up.
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        if (suppressHide.current) { lastScrollY.current = window.scrollY; return; }
+        const y = window.scrollY;
+        const dy = y - lastScrollY.current;
+        if (y < 90) setNavHidden(false);
+        else if (dy > 5) setNavHidden(true);
+        else if (dy < -5) setNavHidden(false);
+        lastScrollY.current = y;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const visible = CURRICULUM.filter((l) => active === "all" || active === l.code);
 
   return (
     <div className="page" data-theme={theme} data-density={density} data-display={display}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <Header />
-      <SiteTabs active={siteTab} setActive={setSiteTab} />
+      <div className={"topnav" + (navHidden ? " is-hidden" : "")}>
+        <div className="topnav-inner">
+          <SiteTabs active={siteTab} setActive={setSiteTab} />
+          {siteTab === "curriculum" && <SearchBox query={query} setQuery={setQuery} />}
+        </div>
+        {siteTab === "curriculum" &&
+        <div className="filter-row">
+          <Toolbar levels={CURRICULUM} theme={theme} active={active} setActive={setActive}
+          onPick={selectLevel} onAbout={() => setShowOverview(true)} />
+        </div>}
+      </div>
       <div id="main-content" role="tabpanel" aria-labelledby={"tab-" + siteTab} tabIndex={-1}>
       {siteTab === "curriculum" && <>
-        <Toolbar levels={CURRICULUM} theme={theme} active={active} setActive={setActive}
-        onPick={selectLevel} query={query} setQuery={setQuery} />
-        <CefrExplainer />
-        <Journey levels={CURRICULUM} theme={theme}
-        onJump={jump} active={active === "all" ? null : active} />
-
         <main className="sections">
           {visible.map((l) =>
           <LevelSection key={l.code} lvl={l} theme={theme} query={query}
@@ -770,6 +802,16 @@ function App({ tweaks }) {
             </div>
           }
         </main>
+        {showOverview &&
+        <div className="overlay" role="dialog" aria-modal="true" aria-label="What the CEFR levels mean"
+        onClick={(e) => { if (e.target === e.currentTarget) setShowOverview(false); }}>
+          <div className="overlay-panel">
+            <button type="button" className="overlay-close" aria-label="Close" onClick={() => setShowOverview(false)}>✕</button>
+            <CefrExplainer />
+            <Journey levels={CURRICULUM} theme={theme}
+            onJump={(code) => { setShowOverview(false); jump(code); }} active={active === "all" ? null : active} />
+          </div>
+        </div>}
       </>}
       {siteTab === "placement" && <PlacementTab />}
       {siteTab === "quick-check" && <QuickCheckTab />}

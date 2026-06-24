@@ -1,0 +1,2 @@
+Country flags: Flagpack (https://flagpack.xyz) via the Iconify API. License: MIT.
+es=Spain (Spanish), pt=Portugal (Portuguese), tr=Turkey (Turkish).

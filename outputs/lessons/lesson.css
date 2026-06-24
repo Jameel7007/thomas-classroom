@@ -67,6 +67,36 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
 .swatch{border:2px solid var(--ink);background:var(--surface);overflow:hidden;}
 .swatch .sw{display:block;height:62px;border-bottom:2px solid var(--ink);}
 .swatch .nm{display:block;padding:8px 11px;font:600 14px/1 var(--sans);color:var(--ink);}
+/* line-icon vocabulary figures — a sibling of the swatches, so visuals stay uniform.
+   Icons are inline SVG drawn with the page's ink color (currentColor); on hover the
+   line turns signal-red while the label stays ink. One stroke weight, one frame. */
+.figure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(116px,1fr));gap:14px;margin:18px 0 28px;}
+.figure{display:flex;flex-direction:column;align-items:stretch;border:2px solid var(--ink);
+  background:var(--surface);color:var(--ink);overflow:hidden;text-decoration:none;
+  box-shadow:3px 3px 0 var(--ink);transition:transform .14s ease,box-shadow .14s ease;}
+.figure .fig{display:flex;align-items:center;justify-content:center;aspect-ratio:5 / 4;
+  background:#FDF8F0;border-bottom:2px solid var(--ink);}
+.figure .fig svg,.figure .fig img{width:62px;height:62px;display:block;object-fit:contain;}
+.figure .fig img.flag{width:66px;height:50px;object-fit:cover;border:1px solid var(--ink);border-radius:2px;}
+.figure .nm small{display:block;margin-top:2px;font-weight:500;font-size:11.5px;color:var(--muted);text-transform:none;letter-spacing:0;}
+.figure .nm{padding:8px 10px;text-align:center;font:600 14px/1.15 var(--sans);color:var(--ink);}
+.figure:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+/* month calendar (days / months / dates lesson) */
+.calendar{max-width:430px;margin:20px 0 10px;border:2px solid var(--ink);background:#FDF8F0;
+  box-shadow:5px 5px 0 var(--ink);overflow:hidden;}
+.cal-head{margin:0;padding:12px 16px;border-bottom:2px solid var(--ink);background:var(--paper-2);
+  font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);}
+.cal-head span{color:var(--ink-2);font-weight:500;}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);padding:1px;}
+.cal-dow{padding:8px 0;text-align:center;background:#FDF8F0;font-family:var(--mono);font-size:11px;
+  font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-2);}
+.cal-dow.cal-we{color:var(--accent-deep);}
+.cal-day{display:flex;align-items:center;justify-content:center;aspect-ratio:1 / 0.84;
+  background:#FDF8F0;font:600 14.5px/1 var(--sans);color:var(--ink);}
+.cal-empty{background:var(--paper);}
+.cal-mark{color:var(--paper);font-weight:700;
+  background:radial-gradient(circle at 50% 50%,var(--accent) 0 14px,#FDF8F0 14px);}
+.cal-cap{font-size:14px;line-height:1.55;color:var(--ink-2);max-width:48ch;margin:0 0 22px;}
 .lesson-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:30px 0 0;}
 .flow-step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 13px;}
 .flow-step b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
