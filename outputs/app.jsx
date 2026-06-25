@@ -633,12 +633,19 @@ function LevelSection({ lvl, theme, query, refCb }) {
       <div className="grid">
         {!!grammar.length &&
         <Card label="Grammar" index="Aa" wide>
-            <ul className="list list--two">
+            <div className="chips-wrap">
               {grammar.map((g) =>
-            <LessonItem key={g} href={lessonHref(lvl.code, g)} text={g} query={query}
-            ready={lessonReady(lvl.code, g)} />
+            lessonReady(lvl.code, g) ?
+            <a key={g} className="vchip" href={lessonHref(lvl.code, g)}>
+                  <Highlight text={g} query={query} />
+                  <span className="vchip-go" aria-hidden="true">→</span>
+                </a> :
+            <span key={g} className="vchip vchip--soon" aria-disabled="true" title="Lesson coming soon">
+                  <Highlight text={g} query={query} />
+                  <span className="soon-tag">Soon</span>
+                </span>
             )}
-            </ul>
+            </div>
           </Card>
         }
         {!!vocab.length &&

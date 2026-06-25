@@ -293,13 +293,13 @@ body{
 .card-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;
   padding-bottom:12px;border-bottom:1px solid var(--line-2);}
 .card-index{font-family:var(--mono);font-size:12px;color:var(--accent-deep);font-weight:500;}
-.card-label{font-size:13.5px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin:0;color:var(--ink);}
+.card-label{font-size:15px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;margin:0;color:var(--ink);}
 
 /* lesson links + skill lines */
 .list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;}
 .list--two{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;}
 .list--plain{gap:9px;}
-.item{font-size:14.5px;line-height:1.4;color:var(--ink-2);}
+.item{font-size:16px;line-height:1.4;color:var(--ink-2);}
 .item-link{display:flex;gap:10px;align-items:baseline;justify-content:space-between;
   text-decoration:none;color:var(--ink);padding:6px 8px;margin:0 -8px;border-radius:8px;
   transition:.13s ease;}
@@ -314,8 +314,8 @@ body{
 .item--static .item-text{flex:1;color:var(--ink-2);}
 
 .chips-wrap{display:flex;flex-wrap:wrap;gap:8px;}
-.vchip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--ink);
-  background:#FDF8F0;border:1.5px solid var(--ink);border-radius:8px;padding:6px 11px;
+.vchip{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--ink);
+  background:#FDF8F0;border:1.5px solid var(--ink);border-radius:8px;padding:7px 13px;
   white-space:nowrap;text-decoration:none;box-shadow:2px 2px 0 var(--ink);transition:.13s ease;}
 .vchip:hover{transform:translate(-1px,-1px);border-color:var(--ink);color:var(--accent-deep);
   background:var(--accent-tint);box-shadow:3px 3px 0 var(--ink);}
@@ -334,7 +334,7 @@ mark{background:var(--accent-soft);color:var(--ink);border-radius:3px;padding:0 
 
 /* lessons not built yet — shown but not clickable, so a tutor never hits a 404 */
 .item-link--soon{cursor:default;}
-.item-link--soon:hover{background:transparent;}
+.item-link--soon:hover{background:var(--paper-2);}
 .item-link--soon .item-text{color:var(--muted);}
 .soon-tag{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
   color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 7px;line-height:1.6;}
@@ -417,7 +417,7 @@ body{font-optical-sizing:auto;}
 
 <script src="data.js"></script>
 <script type="text/babel" src="components.jsx"></script>
-<script type="text/babel" src="app.jsx?v=nav-7"></script>
+<script type="text/babel" src="app.jsx?v=grammar-chips-1"></script>
 
 <script type="text/babel">
 // Fixed presentation defaults. The prototype "Tweaks" editing panel
