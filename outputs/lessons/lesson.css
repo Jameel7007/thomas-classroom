@@ -1,21 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root{
+  /* surfaces */
   --paper:#ECE8E1;
   --paper-2:#E2DDD3;
-  --surface:#F2EFE8;
-  --ink:#111111;
-  --ink-2:#55524B;
-  --muted:#5F5A50;
-  --line:#CDC8BC;
+  --card-bg:#F2EFE8;
+  --border:#CDC8BC;
   --line-2:#DEDAD0;
+  /* text hierarchy — primary/secondary readable; muted for labels only (all AA) */
+  --text-primary:#111111;
+  --text-secondary:#4D483F;
+  --text-muted:#5C574E;
+  /* accent — bright is NON-TEXT only (fills, rings, underlines); deep is for text */
+  --accent:#FF3B1F;
+  --accent-deep:#B82912;
+  --accent-tint:#FBE7E1;
+  --accent-soft:#F6D3CB;
+  /* fonts */
   --serif:"Fraunces",Georgia,serif;
   --sans:"Albert Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
-  --accent:#FF3B1F;
-  --accent-deep:#D32A10;
-  --accent-tint:#FBE7E1;
-  --accent-soft:#F6D3CB;
   --maxw:800px;
+  /* back-compat aliases — existing rules inherit the hierarchy automatically */
+  --ink:var(--text-primary);
+  --ink-2:var(--text-secondary);
+  --muted:var(--text-muted);
+  --surface:var(--card-bg);
+  --line:var(--border);
 }
 *{box-sizing:border-box;}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
@@ -53,7 +63,7 @@ thead th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transfo
   color:var(--muted);font-weight:500;border-bottom:1.5px solid var(--line);}
 tbody td:first-child{color:var(--ink-2);}
 tbody td b{color:var(--accent-deep);font-weight:600;}
-.contraction{color:var(--muted);font-family:var(--mono);font-size:13px;}
+.contraction{color:var(--text-secondary);font-family:var(--mono);font-size:14px;}
 .note,.thinking-card{background:var(--accent-tint);border:1px solid var(--accent-soft);border-radius:14px;
   padding:20px 24px;margin:24px 0;}
 .note h3,.thinking-card h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;margin:0 0 10px;}
