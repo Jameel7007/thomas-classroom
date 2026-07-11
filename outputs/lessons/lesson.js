@@ -1,6 +1,8 @@
 (function(){
   function norm(value){
-    return String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+    return String(value || "").trim().toLowerCase()
+      .replace(/[‘’]/g, "'")   // curly apostrophes → straight, so typed answers match
+      .replace(/\s+/g, " ");
   }
 
   function setFeedback(root, message, state){
