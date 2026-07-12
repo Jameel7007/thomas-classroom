@@ -42,7 +42,26 @@ const READY_LESSONS = new Set([
   "lessons/a1/hobbies-and-free-time.html",
   "lessons/a1/clothes-and-shopping.html",
   "lessons/a1/weather-and-seasons.html",
-  "lessons/a1/common-verbs-and-adjectives.html"
+  "lessons/a1/common-verbs-and-adjectives.html",
+  "lessons/a2/past-simple.html",
+  "lessons/a2/past-continuous.html",
+  "lessons/a2/be-going-to-for-plans.html",
+  "lessons/a2/will-for-predictions-and-offers.html",
+  "lessons/a2/comparatives-and-superlatives.html",
+  "lessons/a2/present-perfect.html",
+  "lessons/a2/modals-should-must-have-to.html",
+  "lessons/a2/quantifiers-much-many-a-lot-of.html",
+  "lessons/a2/first-conditional.html",
+  "lessons/a2/adverbs-of-manner.html",
+  "lessons/a2/verb-infinitive-ing.html",
+  "lessons/a2/travel-and-transport.html",
+  "lessons/a2/health-and-the-body.html",
+  "lessons/a2/town-and-directions.html",
+  "lessons/a2/past-time-expressions.html",
+  "lessons/a2/feelings-and-personality.html",
+  "lessons/a2/technology-and-devices.html",
+  "lessons/a2/education-and-study.html",
+  "lessons/a2/phrasal-verbs.html"
 ]);
 function lessonReady(code, text) {
   return READY_LESSONS.has(lessonHref(code, text));
