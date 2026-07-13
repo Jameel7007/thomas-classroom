@@ -1,0 +1,10 @@
+---
+interface Props { prompt: string; answer: string; buttonLabel?: string }
+const { prompt, answer, buttonLabel = "Reveal after you answer" } = Astro.props;
+---
+<div class="transform-item" data-transform-item>
+  <p>{prompt}</p>
+  <button class="lesson-btn" type="button" data-reveal-transform>{buttonLabel}</button>
+  <p class="transform-answer" data-transform-answer hidden>{answer}</p>
+</div>
+

@@ -1,52 +1,59 @@
-# Thomas’s Classroom — Astro site
+# Thomas’s Classroom
 
-This directory is the active Astro migration of Thomas’s Classroom. The
-original landing page and the established curriculum/lesson design are
-preserved while routes, metadata, assets, and new content move under Astro.
+This is the active, fully native Astro 7 site for Thomas’s Classroom. The
+landing page, curriculum, print curriculum, 54 lessons, seven assessments,
+About, Languages, Blog, and Dictionary are all authored inside this project.
+There is no static-HTML compatibility layer.
 
-## Current route coverage
+## Source map
 
-- Original main landing page at `/`
-- Crawlable curriculum map at `/curriculum/`
-- 54 substantive lessons under `/lessons/{level}/{slug}/`
-- Placement, quick check, and five level-exit routes under `/assessments/`
-- About, Languages, Blog, and Dictionary sections
-- Legacy `.html` redirects
-- Generated sitemap and canonical metadata
+- `src/pages/` — homepage, curriculum, supporting sections, and route entries
+- `src/content/lessons/{level}/{slug}.astro` — 54 directly editable lessons
+- `src/content/assessments/{slug}.astro` — seven directly editable assessments
+- `src/components/lesson/` — lesson shell, navigation, exercise engine, and authoring components
+- `src/components/assessment/` — assessment shells, scoring engines, audio, and progress components
+- `src/styles/` — native shared tokens and page-family styles
+- `src/scripts/` — native client-side lesson, assessment, homepage, and quick-check behavior
+- `public/assets/` — lesson illustrations and flags
+- `private/voice-scripts.json` — server-only approved ElevenLabs text
+- `src/data/native-page-manifest.json` — migration inventory and preservation fingerprints
 
-Converted MDX lessons take priority over matching legacy lessons. This allows
-the existing corpus to remain usable while each page is progressively moved to
-the schema-validated authoring format.
+Clean routes use `/lessons/{level}/{slug}/` and `/assessments/{slug}/`.
+Historical `.html` URLs remain redirects generated from the native route
+inventory.
 
 ## Development
-
-Install once, then start the Astro authoring server:
 
 ```bash
 npm install
 npm run dev
 ```
 
-For ElevenLabs audio during development, run the existing secure proxy in a
-second terminal:
+The site opens at [http://localhost:4321/](http://localhost:4321/).
+
+For ElevenLabs audio during development, run the secure proxy separately:
 
 ```bash
 node ../server.mjs
 ```
 
-Astro proxies `/api/voice/*` to that process on port 8090.
+Astro proxies `/api/voice/*` to port 8090. The browser retains its local
+speech-synthesis fallback when ElevenLabs is unavailable.
 
-## Production verification and local serving
+## Build and validation
 
 ```bash
 npm run build
-npm run serve
 ```
 
-The production command serves `astro-pilot/dist/` and retains the existing
-server-side ElevenLabs cache and rate limiting. Set `SITE_URL` to the public
-origin before the production build.
+The build performs Astro diagnostics, static generation, sitemap creation,
+route/link/asset validation, exact learner-text fingerprint checks,
+interaction-count checks, audio-reference validation, direct-refresh output
+checks, historical redirect checks, and a scan for forbidden compatibility
+patterns.
 
-The build command runs Astro’s type/content check, creates the static site and
-sitemap, then validates every generated HTML page, canonical lesson and
-assessment count, and local link or asset reference.
+To serve the production build with the audio proxy:
+
+```bash
+npm run serve
+```

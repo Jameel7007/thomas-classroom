@@ -5,13 +5,12 @@ import { extname, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = fileURLToPath(new URL(".", import.meta.url));
-const legacyOutputRoot = resolve(projectRoot, "outputs");
 const astroOutputRoot = resolve(projectRoot, "astro-pilot", "dist");
 const publicRoot = process.env.STATIC_ROOT
   ? resolve(projectRoot, process.env.STATIC_ROOT)
-  : await directoryExists(astroOutputRoot) ? astroOutputRoot : legacyOutputRoot;
+  : astroOutputRoot;
 const cacheRoot = resolve(projectRoot, ".audio-cache");
-const clipsPath = resolve(legacyOutputRoot, "audio", "voice-scripts.json");
+const clipsPath = resolve(projectRoot, "astro-pilot", "private", "voice-scripts.json");
 
 await loadLocalEnv(resolve(projectRoot, ".env"));
 
@@ -156,7 +155,7 @@ async function serveStatic(response, pathname, headOnly) {
     const fileInfo = await stat(filePath);
     if (fileInfo.isDirectory()) filePath = resolve(filePath, "index.html");
     const content = await readFile(filePath);
-    const immutable = pathname.startsWith("/_astro/") || pathname.startsWith("/legacy-assets/");
+    const immutable = pathname.startsWith("/_astro/") || pathname.startsWith("/assets/");
     response.writeHead(200, {
       "Cache-Control": immutable ? "public, max-age=31536000, immutable" : "no-cache",
       "Content-Type": mimeTypes[extname(filePath).toLowerCase()] || "application/octet-stream",
@@ -164,14 +163,6 @@ async function serveStatic(response, pathname, headOnly) {
     return response.end(headOnly ? undefined : content);
   } catch {
     return sendJson(response, 404, { error: "File not found." });
-  }
-}
-
-async function directoryExists(directory) {
-  try {
-    return (await stat(directory)).isDirectory();
-  } catch {
-    return false;
   }
 }
 

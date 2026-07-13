@@ -1,0 +1,130 @@
+---
+import QuickCheckPage from "../../components/assessment/QuickCheckPage.astro";
+export const page = {
+  "original": "outputs/assessments/quick-level-check.html",
+  "source": "src/content/assessments/quick-level-check.astro",
+  "route": "/assessments/quick-level-check/",
+  "slug": "quick-level-check",
+  "title": "10-Minute English Diagnostic",
+  "description": "A short check that gives a rough placement from Pre-A1 to B2. It is not a full CEFR exam. Complete the language questions, then use the speaking sample to confirm the result.",
+  "engine": "quick-check",
+  "bodyClass": "",
+  "features": [
+    "AssessmentPage",
+    "AssessmentNavigation",
+    "QuickCheckEngine",
+    "ProgressIndicator",
+    "FeedbackPanel",
+    "AudioControls"
+  ],
+  "contentTextHash": "6606dd9ffac05a4f6aaccc748dba0bd3361b3a827a0bf7cb4af30bad1bdc1946",
+  "interactionCounts": {
+    "data-quick-check": 1,
+    "data-part-label": 1,
+    "data-progress-text": 1,
+    "data-progress-bar": 1,
+    "data-question-stage": 1,
+    "data-question-actions": 1,
+    "data-previous": 1,
+    "data-next": 1,
+    "data-answer-reminder": 1,
+    "data-result-view": 1,
+    "data-result-level": 1,
+    "data-result-score": 1,
+    "data-result-explanation": 1,
+    "data-speaking-level": 1,
+    "data-speaking-outcome": 1,
+    "data-answer-review": 1,
+    "data-review-list": 1,
+    "data-reset": 1
+  },
+  "audioClips": []
+};
+---
+<QuickCheckPage page={page}>
+<main class="quick-wrap">
+  <header class="quick-header">
+    <a class="back-link" href="/curriculum/">Back to curriculum</a>
+    <p class="overline">Quick Level Check</p>
+    <h1>10-Minute English Diagnostic</h1>
+    <p class="lede">A short check that gives a rough placement from Pre-A1 to B2. It is not a full CEFR exam. Complete the language questions, then use the speaking sample to confirm the result.</p>
+    <div class="quick-facts" aria-label="Assessment information">
+      <span><b>8 minutes</b> multiple choice</span>
+      <span><b>2 minutes</b> speaking</span>
+      <span><b>10</b> questions</span>
+    </div>
+  </header>
+
+  <section class="quick-assessment" data-quick-check>
+    <div class="progress-block">
+      <div class="progress-copy">
+        <span data-part-label>Part 1 · Multiple Choice</span>
+        <b data-progress-text>Question 1 of 10</b>
+      </div>
+      <div class="progress-track" aria-hidden="true"><span data-progress-bar></span></div>
+    </div>
+
+    <div class="question-stage" data-question-stage aria-live="polite"></div>
+
+    <div class="question-actions" data-question-actions>
+      <button class="quiet-button" type="button" data-previous disabled>Back</button>
+      <button class="primary-button" type="button" data-next>Next question</button>
+    </div>
+    <p class="answer-reminder" data-answer-reminder aria-live="polite"></p>
+
+    <section class="result-view" data-result-view hidden>
+      <div class="result-heading">
+        <div>
+          <p class="overline">Multiple-choice result</p>
+          <h2 data-result-level>Not estimated</h2>
+        </div>
+        <div class="result-score"><span>Total score</span><b data-result-score>0 / 10</b></div>
+      </div>
+      <p class="result-explanation" data-result-explanation></p>
+      <p class="result-warning">This is a quick estimate. Speaking ability should confirm the final level.</p>
+
+      <section class="speaking-section">
+        <div class="section-heading">
+          <div>
+            <p class="overline">Part 2 · Speaking Sample</p>
+            <h2>Two-minute confirmation</h2>
+          </div>
+          <span>Teacher scored</span>
+        </div>
+        <article class="speaking-card">
+          <p class="task-number">Speaking Task 1</p>
+          <p>Tell me about your normal day. What do you do in the morning, afternoon, and evening?</p>
+        </article>
+        <article class="speaking-card">
+          <p class="task-number">Speaking Task 2</p>
+          <p>Tell me about something you did last weekend. Give details.</p>
+        </article>
+        <p class="teacher-note"><b>Teacher note:</b> Use the speaking sample to confirm or adjust the level. Multiple choice alone is not enough.</p>
+
+        <div class="speaking-score">
+          <label for="speaking-level">Speaking level observed</label>
+          <select id="speaking-level" data-speaking-level>
+            <option value="">Not scored yet</option>
+            <option value="Pre-A1">Pre-A1</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2 range">B2 range</option>
+          </select>
+          <p data-speaking-outcome>Choose a level after listening to the student. The multiple-choice estimate remains visible for comparison.</p>
+        </div>
+      </section>
+
+      <details class="answer-review" data-answer-review>
+        <summary>Review all answers</summary>
+        <div class="review-list" data-review-list></div>
+      </details>
+
+      <div class="result-actions">
+        <button class="quiet-button" type="button" data-reset>Reset check</button>
+        <a class="text-link" href="/assessments/placement-exam/">Open full placement diagnostic</a>
+      </div>
+    </section>
+  </section>
+</main>
+</QuickCheckPage>

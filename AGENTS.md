@@ -6,7 +6,7 @@ Read this before making changes. This file is the working spec for coding agents
 
 This project is a premium web curriculum for one-on-one English tutoring, used live over screen share with adult learners.
 
-The current implementation is a static HTML curriculum map in `outputs/`, with lesson pages under `outputs/lessons/`. The long-term product direction is a larger lesson platform with a structured CEFR path, reusable interactive drills, a blog, an About page, and a word-clearing tool.
+The current implementation is a fully native Astro 7 static site in `astro-pilot/`. Lessons and assessments are directly editable `.astro` source, with reusable layouts, interaction engines, styles, and assets owned by the Astro project. Do not recreate the deleted static-HTML compatibility layer.
 
 The main map currently has top-level tabs:
 
@@ -32,24 +32,21 @@ Because this is shown on a shared screen, every page must be calm, readable at a
 ## Current File Structure
 
 ```text
-outputs/
-  English Curriculum Map.html          main curriculum map
-  English Curriculum Map-print.html    print/PDF-oriented version
-  data.js                              curriculum data
-  components.jsx                       map UI helpers
-  app.jsx                              map app
-  tweaks-panel.jsx                     prototype tweak UI
-  lessons/
-    lesson.css                         shared lesson styles
-    lesson.js                          shared lesson interactions
-    lesson-authoring-guide.md          lesson writing reference
-    _lesson-template.html              starter template for new lessons
-    a0/
-      the-verb-to-be.html
-      subject-pronouns.html
+astro-pilot/
+  src/pages/                       site and dynamic route entries
+  src/content/lessons/{level}/     54 native lesson components
+  src/content/assessments/         7 native assessment components
+  src/components/lesson/           shared lesson UI and interaction engine
+  src/components/assessment/       shared assessment UI and scoring engines
+  src/data/                        curriculum and native route inventories
+  src/styles/                      design tokens and shared styles
+  src/scripts/                     bundled client-side behavior
+  public/assets/                   lesson images and flags
+  private/voice-scripts.json       approved server-side audio text
 ```
 
-Keep user-facing deliverables in `outputs/`.
+Keep user-facing implementation in `astro-pilot/`. Generated `.astro/`,
+`dist/`, and `node_modules/` directories are ignored and must not be committed.
 
 ## Design Direction
 
@@ -83,8 +80,8 @@ Theory should be short. The student should do most of the work.
 
 Drills are the craft of this project.
 
-- Use shared styles from `outputs/lessons/lesson.css`.
-- Use shared behavior from `outputs/lessons/lesson.js` where possible.
+- Use shared styles from `astro-pilot/src/styles/lesson.css` and `drills.css`.
+- Use shared behavior from `astro-pilot/src/scripts/lesson.js` through the native lesson exercise engine.
 - Do not hardcode one-off drill colors, spacing systems, or unrelated app variables.
 - Answers should not be visible before the student attempts or chooses to reveal/check.
 - Exercises should be interactive by default. Do not leave fill-the-gap or sorting tasks as static blanks.
@@ -102,32 +99,32 @@ Reusable interactions currently available:
 - error spotting with `data-spot-error`
 - oral transforms with `data-transform`
 
-When adding new mechanics, make them reusable and document the classes/attributes in `outputs/lessons/lesson-authoring-guide.md`.
+When adding new mechanics, make them reusable Astro components or extend the shared native engine, then document the classes and attributes in the Astro README.
 
 ## Lesson Page Rules
 
 Lesson pages live at:
 
 ```text
-outputs/lessons/{level}/{slug}.html
+astro-pilot/src/content/lessons/{level}/{slug}.astro
 ```
 
 Examples:
 
 ```text
-outputs/lessons/a0/subject-pronouns.html
-outputs/lessons/a1/present-simple.html
-outputs/lessons/a2/present-perfect.html
+astro-pilot/src/content/lessons/a0/subject-pronouns.astro
+astro-pilot/src/content/lessons/a1/present-simple.astro
+astro-pilot/src/content/lessons/a2/present-perfect.astro
 ```
 
-The curriculum map links grammar and vocabulary items automatically using the slug helper in `outputs/components.jsx`.
+The curriculum map links grammar and vocabulary items automatically using the native route inventory and slug helper.
 
 Slug rule:
 
 - lowercase
 - remove parenthetical notes
 - replace non-alphanumeric runs with hyphens
-- end with `.html`
+- do not include a file extension in the public route
 
 Before creating a lesson, check the generated map link and match its filename.
 
@@ -162,17 +159,17 @@ and complete sentences so the item provides useful diagnostic evidence.
 Assessment pages live at:
 
 ```text
-outputs/assessments/{level}-entry.html
-outputs/assessments/{level}-exit.html
-outputs/assessments/assessment.css
-outputs/assessments/assessment.js
+astro-pilot/src/content/assessments/{level}-entry.astro
+astro-pilot/src/content/assessments/{level}-exit.astro
+astro-pilot/src/styles/assessment.css
+astro-pilot/src/scripts/assessment.js
 ```
 
 Examples:
 
 ```text
-outputs/assessments/a0-entry.html
-outputs/assessments/a0-exit.html
+astro-pilot/src/content/assessments/a0-entry.astro
+astro-pilot/src/content/assessments/a0-exit.astro
 ```
 
 Reusable assessment interactions currently support:
@@ -187,7 +184,7 @@ Reusable assessment interactions currently support:
 
 Listening audio is served through `server.mjs`; never place an ElevenLabs API
 key in HTML or browser JavaScript. Approved clip text lives in
-`outputs/audio/voice-scripts.json`, and generated MP3 files are cached privately
+`astro-pilot/private/voice-scripts.json`, and generated MP3 files are cached privately
 in `.audio-cache/`. Keep `data-speak` on audio buttons as an accessibility and
 local-development fallback. See `ELEVENLABS.md` for setup and authoring.
 
@@ -207,7 +204,7 @@ The Placement Exam is separate from lesson quizzes and level checks. It should b
 Placement exam pages live at:
 
 ```text
-outputs/assessments/placement-exam.html
+astro-pilot/src/content/assessments/placement-exam.astro
 ```
 
 The placement exam should:
@@ -255,20 +252,18 @@ Avoid childish examples unless explicitly requested.
 
 For A0 and other very low levels, keep the language simple but preserve adult dignity. Do not use babyish recognition tasks like isolated letter picking unless the user explicitly asks for literacy testing. Prefer forms, profiles, short messages, teacher instructions, introductions, bookings, schedules, and other real beginner contexts.
 
-## Long-Term Product Direction
+## Product Direction
 
-The current static site may later become an Astro static site with:
+The native Astro foundation now supports:
 
 - content collections for lessons and blog posts
-- MDX lesson files
+- directly editable Astro lesson files, with MDX available where it improves authoring
 - reusable Astro drill components
 - a browse page
 - a word-clearing tool
 - Cloudflare Pages hosting
 
-Do not force that architecture into the current static implementation prematurely. Preserve the current site unless the user asks for a migration.
-
-If/when migrating, the ergonomic goal is:
+The ergonomic goal remains:
 
 ```text
 adding a lesson = create one content file with metadata + body
@@ -314,7 +309,12 @@ These should become proper lessons over time, not just notes.
 
 ## Build And Verification
 
-For this static project, preview from the `outputs/` folder with a local server. Do not rely on opening the HTML file directly if scripts are involved.
+Run the project from `astro-pilot/` with `npm run dev`. Do not open generated HTML files directly when testing interactions.
+
+Before completing frontend work, run `npm run build`. This checks Astro source,
+generates every static route and redirect, validates internal links and assets,
+checks audio clip IDs, verifies direct-route output, compares learner-content
+fingerprints and interaction counts, and rejects compatibility-layer patterns.
 
 After frontend changes:
 

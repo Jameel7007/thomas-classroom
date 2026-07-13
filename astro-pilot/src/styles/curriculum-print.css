@@ -1,0 +1,120 @@
+:root{
+  --paper:#ffffff;
+  --paper-2:#E2DDD3;
+  --surface:#F2EFE8;
+  --ink:#111111;
+  --ink-2:#55524B;
+  --muted:#837F76;
+  --line:#CDC8BC;
+  --line-2:#DEDAD0;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Albert Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:#d8d8d8;color:var(--ink);font-family:var(--sans);
+  font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+
+/* paper sheets (A4 portrait) */
+.sheet{position:relative;width:210mm;min-height:297mm;margin:14px auto;background:var(--paper);
+  padding:18mm 16mm;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.16);}
+
+/* accent per sheet set via inline style */
+.sheet{--accent:#FF3B1F;--accent-deep:#D32A10;
+  --accent-tint:#FBE7E1;--accent-soft:#F6D3CB;}
+
+/* ---- Cover sheet ---- */
+.cover{display:flex;flex-direction:column;}
+.cover .overline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 20px;}
+.cover h1{font-family:var(--serif);font-weight:500;font-size:64px;line-height:0.98;
+  letter-spacing:-0.02em;margin:0 0 22px;color:var(--ink);}
+.cover .lede{font-size:17px;line-height:1.5;max-width:46ch;color:var(--ink-2);margin:0;}
+.cover .lede strong{color:var(--ink);font-weight:600;}
+.cover .lede em{font-family:var(--serif);font-style:italic;}
+.cover-stats{display:flex;gap:16px;align-items:center;margin-top:30px;padding-top:22px;
+  border-top:1px solid var(--line);flex-wrap:wrap;}
+.cstat{font-size:13px;color:var(--ink-2);}
+.cstat b{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);margin-right:5px;
+  font-variant-numeric:lining-nums;}
+.cstat-div{width:1px;height:20px;background:var(--line);}
+
+/* index table on cover */
+.index{margin-top:40px;}
+.index-row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:baseline;
+  padding:14px 0;border-bottom:1px solid var(--line-2);}
+.index-code{font-family:var(--sans);font-weight:700;font-size:30px;letter-spacing:-0.03em;
+  line-height:1;font-variant-numeric:lining-nums;}
+.index-name{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-2);}
+.index-title b{font-weight:600;font-size:14px;color:var(--ink);}
+.index-title span{display:block;font-size:12px;color:var(--muted);margin-top:2px;}
+.index-hours{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap;}
+
+.cover-foot{margin-top:auto;padding-top:24px;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  display:flex;justify-content:space-between;}
+
+/* ---- Level sheets ---- */
+.level-head{display:flex;align-items:flex-start;gap:18px;
+  padding-bottom:18px;border-bottom:2px solid var(--accent);}
+.level-code{font-family:var(--sans);font-weight:700;font-size:62px;line-height:0.85;
+  letter-spacing:-0.03em;color:var(--accent-deep);font-variant-numeric:lining-nums;}
+.level-headtext{flex:1;}
+.level-name{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ink);line-height:1;}
+.level-cefr{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin:6px 0 0;}
+.level-meta-chips{display:flex;gap:8px;margin-top:10px;}
+.lchip{font-family:var(--mono);font-size:10px;color:var(--ink-2);border:1px solid var(--line);
+  border-radius:999px;padding:4px 10px;white-space:nowrap;}
+.lchip b{color:var(--accent-deep);}
+.level-blurb{font-size:13.5px;line-height:1.5;color:var(--ink-2);margin:14px 0 0;max-width:64ch;}
+
+.cando{margin:18px 0 0;background:var(--accent-tint);border:1px solid var(--accent-soft);
+  border-radius:10px;padding:16px 18px;break-inside:avoid;}
+.cando-title{font-family:var(--serif);font-style:italic;font-weight:500;font-size:15px;margin:0 0 10px;}
+.code-inline{font-family:var(--sans);font-weight:700;font-style:normal;}
+.cando-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;}
+.cando-item{display:flex;gap:8px;font-size:12px;line-height:1.4;color:var(--ink);}
+.cando-bullet{flex:none;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:6px;}
+
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin:16px 0 8px;display:flex;align-items:center;gap:10px;}
+.section-label::after{content:"";flex:1;height:1px;background:var(--line-2);}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;}
+.gitem{display:flex;gap:8px;align-items:baseline;font-size:12.5px;line-height:1.4;
+  padding:4px 0;border-bottom:1px dotted var(--line-2);color:var(--ink);}
+.gitem .gbull{flex:none;width:5px;height:5px;border-radius:50%;border:1.5px solid var(--accent);}
+
+.chips-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+.vchip{font-size:11.5px;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);
+  border-radius:7px;padding:5px 10px;}
+
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-top:4px;}
+.skill h4{font-family:var(--sans);font-size:11.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;margin:0 0 6px;color:var(--ink);}
+.skill ul{list-style:none;margin:0;padding:0;}
+.skill li{display:flex;gap:7px;font-size:12px;line-height:1.38;color:var(--ink-2);margin-bottom:4px;}
+.skill li .t{flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent);margin-top:6px;}
+
+.sheet-foot{position:absolute;left:16mm;right:16mm;bottom:10mm;display:flex;
+  justify-content:space-between;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line-2);padding-top:8px;}
+
+@media screen{ html{padding:1px 0;} }
+
+@media print{
+  @page{ size:A4 portrait; margin:0; }
+  html,body{background:#fff;}
+  body{font-size:12.5px;}
+  .sheet{margin:0;box-shadow:none;width:auto;min-height:auto;height:297mm;
+    break-after:page;page-break-after:always;}
+  .sheet:last-child{break-after:auto;page-break-after:auto;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* ===== Brand bridge (print): Fraunces + ink + bold squared borders (no shadows). ===== */
+/* Sheets stay white for ink economy; per-level accent colors are preserved. */
+body{font-optical-sizing:auto;}
+.cando{border:2px solid var(--ink);border-radius:0;}
+.lchip,.vchip{border:1px solid var(--ink);border-radius:0;}

@@ -1,13 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import { curriculum, lessonSlug } from "../../lib/curriculum";
-import { legacyLessons } from "../../lib/legacy-pages";
+import { lessonRoutes } from "../../data/native-routes.mjs";
 
-const published = await getCollection("lessons", ({ data }) => data.status === "published");
 const lessonByKey = new Map<string, { slug: string }>();
-legacyLessons.forEach((page) => page.level && lessonByKey.set(`${page.level}/${page.slug}`, { slug: page.slug }));
-published.forEach((entry) => lessonByKey.set(`${entry.data.level}/${entry.data.slug}`, { slug: entry.data.slug }));
+lessonRoutes.forEach((page) => lessonByKey.set(`${page.level}/${page.slug}`, { slug: page.slug }));
 const hues = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305 };
 const accent = (code: keyof typeof hues) => {
   const hue = hues[code];
@@ -55,9 +52,7 @@ const skillLabels = {
         </div>
 
         <div class="assessment-band" aria-label={`${level.code} end-of-level diagnostic`}>
-          {level.code === "A0"
-            ? <a class="assessment-card" href="/assessments/a0-exit/"><span class="assessment-label">After completing the level</span><h3>A0 End-of-Level Diagnostic</h3><p>Check the complete foundation and decide whether the learner is ready to begin A1.</p></a>
-            : <div class="assessment-card soon" aria-disabled="true"><span class="assessment-label">After completing the level</span><h3>{level.code} End-of-Level Diagnostic</h3><p>The complete scored diagnostic and production rubric are still in preparation.</p></div>}
+          <a class:list={["assessment-card", level.code !== "A0" && "soon"]} href={`/assessments/${level.code.toLowerCase()}-exit/`}><span class="assessment-label">After completing the level</span><h3>{level.code} End-of-Level Diagnostic</h3><p>{level.code === "A0" ? "Check the complete foundation and decide whether the learner is ready to begin A1." : "Open the current diagnostic page and its planned assessment scope."}</p></a>
           <div class="assessment-evidence"><span class="assessment-label">Evidence of progress</span><p>The learner notices, chooses, builds, understands, and produces language across grammar, vocabulary, receptive skills, and real communication.</p></div>
         </div>
 

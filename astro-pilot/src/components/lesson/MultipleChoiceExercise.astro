@@ -1,0 +1,12 @@
+---
+interface Option { value: string; label?: string }
+interface Props { question: string; answer: string; options: Option[]; hint?: string }
+const { question, answer, options, hint } = Astro.props;
+---
+<div class="quiz-item" data-quiz-item data-answer={answer} data-hint={hint}>
+  <p class="quiz-question">{question}</p>
+  <div class="quiz-options">
+    {options.map((option) => <button class="quiz-option" type="button" data-quiz-option={option.value}>{option.label || option.value}</button>)}
+  </div>
+</div>
+

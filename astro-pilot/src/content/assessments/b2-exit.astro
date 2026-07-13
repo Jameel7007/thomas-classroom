@@ -1,0 +1,33 @@
+---
+import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+export const page = {
+  "original": "outputs/assessments/b2-exit.html",
+  "source": "src/content/assessments/b2-exit.astro",
+  "route": "/assessments/b2-exit/",
+  "slug": "b2-exit",
+  "title": "B2 End-of-Level Diagnostic",
+  "description": "Use this after all B2 lessons to identify any remaining gaps and confirm readiness for advanced independent English work.",
+  "engine": "none",
+  "bodyClass": "",
+  "features": [
+    "AssessmentPage",
+    "AssessmentNavigation"
+  ],
+  "contentTextHash": "92968923b317a5ccc4733ecc2b0310e5861bea681013624ecd87ccf164cf5361",
+  "interactionCounts": {},
+  "audioClips": []
+};
+---
+<AssessmentPage page={page}>
+<main class="wrap">
+<a class="back" href="/curriculum/#lvl-B2">Back to curriculum</a>
+<p class="overline">Complete B2 before advancing</p>
+<h1>B2 End-of-Level Diagnostic</h1>
+<p class="lede">Use this after all B2 lessons to identify any remaining gaps and confirm readiness for advanced independent English work.</p>
+<div class="grid">
+<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Language Range</b>Complex grammar, phrasal verbs, discourse markers, and collocation.</li><li><b>Skills</b>Longer listening and reading with inference and attitude questions.</li><li><b>Performance</b>Presentation, discussion, written argument, and communication repair.</li></ul></section>
+<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can argue with reasons and examples.</li><li>Can understand longer texts and speech.</li><li>Can interact naturally enough for many professional and academic situations.</li></ul></section>
+</div>
+<p class="placeholder">Next build: create a capstone benchmark with a polished progress report for the student.</p>
+</main>
+</AssessmentPage>

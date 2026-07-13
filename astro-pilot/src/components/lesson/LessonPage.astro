@@ -1,0 +1,52 @@
+---
+import "../../styles/lesson.css";
+import "../../styles/drills.css";
+import LessonNavigation from "./LessonNavigation.astro";
+import LessonExerciseEngine from "./LessonExerciseEngine.astro";
+
+interface PageMetadata {
+  title: string;
+  description: string;
+  level: string;
+  kind: string;
+  route: string;
+}
+
+interface Props { page: PageMetadata }
+const { page } = Astro.props;
+const canonical = new URL(page.route, Astro.site);
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Curriculum", item: new URL("/curriculum/", Astro.site) },
+    { "@type": "ListItem", position: 2, name: page.level, item: new URL(`/curriculum/#lvl-${page.level}`, Astro.site) },
+    { "@type": "ListItem", position: 3, name: page.title, item: canonical },
+  ],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{page.title}</title>
+    <meta name="description" content={page.description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={page.title} />
+    <meta property="og:description" content={page.description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+  </head>
+  <body>
+    <LessonNavigation level={page.level} kind={page.kind} />
+    <slot />
+    <LessonExerciseEngine />
+  </body>
+</html>
+

@@ -1,4 +1,4 @@
-@import url("../../../outputs/tokens.css");
+@import url("./tokens.css");
 
 :root{--maxw:1120px;--pad:40px}
 *{box-sizing:border-box}

@@ -1,0 +1,33 @@
+---
+import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+export const page = {
+  "original": "outputs/assessments/a1-exit.html",
+  "source": "src/content/assessments/a1-exit.astro",
+  "route": "/assessments/a1-exit/",
+  "slug": "a1-exit",
+  "title": "A1 End-of-Level Diagnostic",
+  "description": "Use this after all A1 lessons to identify anything the learner missed and confirm whether they are ready to begin A2.",
+  "engine": "none",
+  "bodyClass": "",
+  "features": [
+    "AssessmentPage",
+    "AssessmentNavigation"
+  ],
+  "contentTextHash": "621189bc78588d97a9edeb590b431a99b487b3d5551ee97bfa902db13d90267c",
+  "interactionCounts": {},
+  "audioClips": []
+};
+---
+<AssessmentPage page={page}>
+<main class="wrap">
+<a class="back" href="/curriculum/#lvl-A1">Back to curriculum</a>
+<p class="overline">Complete A1 before advancing</p>
+<h1>A1 End-of-Level Diagnostic</h1>
+<p class="lede">Use this after all A1 lessons to identify anything the learner missed and confirm whether they are ready to begin A2.</p>
+<div class="grid">
+<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Grammar</b>Present simple, present continuous, can, have got, and there is/are.</li><li><b>Functions</b>Shop, cafe, home, time, weather, and routine tasks.</li><li><b>Production</b>Describe a day, a room, a person, and a need.</li></ul></section>
+<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can ask and answer everyday questions.</li><li>Can choose forms in short controlled tasks.</li><li>Can speak for short turns with familiar language.</li></ul></section>
+</div>
+<p class="placeholder">Next build: add a comprehensive scored diagnostic and speaking rubric covering the complete A1 level.</p>
+</main>
+</AssessmentPage>

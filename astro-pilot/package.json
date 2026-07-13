@@ -4,10 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node tools/validate-build.mjs",
+    "build": "astro check && astro build && node tools/validate-build.mjs && node tools/validate-native-migration.mjs",
     "check": "astro check",
     "serve": "node ../server.mjs",
-    "validate:legacy": "node ../tools/validate-lessons.mjs"
+    "validate": "node tools/validate-build.mjs && node tools/validate-native-migration.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",

@@ -1,0 +1,9 @@
+---
+interface Props { label?: string }
+const { label = "Assessment progress" } = Astro.props;
+---
+<div class="progress" aria-label={label}>
+  <div class="progress-track"><span class="progress-fill" data-progress-bar></span></div>
+  <span data-progress-text aria-live="polite"></span>
+</div>
+

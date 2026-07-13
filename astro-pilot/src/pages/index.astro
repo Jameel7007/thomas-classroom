@@ -1,24 +1,285 @@
 ---
-import landingSource from "../../../outputs/index.html?raw";
-
-// Preserve the original landing page exactly during the migration. Only its
-// legacy curriculum-file URLs are rewritten to the new Astro route.
-const migratedSource = landingSource.replaceAll(
-  "English%20Curriculum%20Map.html",
-  "/curriculum/",
-);
-const headMatch = migratedSource.match(/<head>([\s\S]*?)<\/head>/i);
-const bodyMatch = migratedSource.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-if (!headMatch || !bodyMatch) {
-  throw new Error("The original landing page no longer has a readable head/body structure.");
-}
-
+import "../styles/home.css";
+import HomeInteractions from "../components/home/HomeInteractions.astro";
 const canonical = new URL("/", Astro.site);
-const head = headMatch[1] + `\n<link rel="canonical" href="${canonical.href}">`;
-const body = bodyMatch[1];
 ---
 <!doctype html>
 <html lang="en" data-theme="raw">
-  <head><Fragment set:html={head} /></head>
-  <body><Fragment set:html={body} /></body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Thomas's Classroom — American English Tutor</title>
+    <meta name="description" content="Conversation and pronunciation lessons with a native American English speaker. Welcome to Thomas's Classroom — clear what's blocking your English." />
+    <link rel="canonical" href={canonical} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Albert+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+<div id="loader" aria-hidden="true"><div class="word">Hello<span class="dot">.</span></div></div>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<nav id="nav">
+  <a class="logo" href="#top" data-cursor>Thomas's Classroom<span class="dot">.</span></a>
+  <div class="nav-right">
+    <a class="nav-link" href="#about" data-cursor>About</a>
+    <a class="nav-link" href="#method" data-cursor>Method</a>
+    <a class="nav-link" href="#students" data-cursor>Students</a>
+    <a class="nav-link" href="#numbers" data-cursor>Results</a>
+    <a class="nav-link" href="#faq" data-cursor>FAQ</a>
+    <button id="themeBtn" data-cursor aria-label="Invert theme: raw / blackout">◐</button>
+  </div>
+</nav>
+
+<!-- ============= HERO ============= -->
+<header class="hero" id="top">
+  <div class="eyebrow"><span>American English tutor<br>Conversation &amp; pronunciation</span></div>
+  <h1 class="hero-word" id="heroWord">Welcome<span class="dot">.</span></h1>
+  <div class="hero-ipa">/ˈklæs.ruːm/ &nbsp;·&nbsp; noun &nbsp;·&nbsp; where English finally clicks</div>
+
+  <div class="hero-row">
+    <div>
+      <div class="greeting-line"><span id="greeting">Hello —</span></div>
+      <p class="hero-copy">
+        I'm Thomas — a native speaker from the U.S., living in Mexico, teaching
+        professionals from São Paulo to Kyiv. <strong>You already know more English
+        than you can say.</strong> My job is to clear what's blocking it.
+      </p>
+      <div class="tutor-note" style="margin-top:.8rem;position:relative;">
+        real talk: most students are one level higher than they think
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn" href="/curriculum/" data-cursor>
+        <span>Enter the classroom</span><span class="price">A0 → B2</span>
+      </a>
+      <div class="stats">
+        <div><b id="statLessons">0</b> lessons</div>
+        <div><b>5.0</b> ★ rating</div>
+        <div><b>24</b> reviews</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">SCROLL ↓</div>
+</header>
+
+<!-- ============= MARQUEE ============= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Hello<i>·</i>Olá<i>·</i>Hola<i>·</i>Привіт<i>·</i>Merhaba<i>·</i>Ciao<i>·</i>Cześć<i>·</i>Ahoj<i>·</i>你好<i>·</i>こんにちは<i>·</i>Γεια σου<i>·</i></span>
+  </div>
+</div>
+
+<!-- ============= CORRECTION THEATER ============= -->
+<div class="pin-wrap" id="pinWrap">
+  <div class="pin-stage" id="pinStage">
+    <div class="stage-label"><b>01 NOTICE</b><b>02 CLEAR</b><b>03 DRILL</b></div>
+    <p class="sentence">
+      “Yesterday I <span class="err">go</span> <span class="fix">went&nbsp;</span>to my first lesson, and it
+      <span class="err">change</span> <span class="fix">changed&nbsp;</span>everything.”
+    </p>
+    <p class="annotation">
+      <span class="pen-note">past time → past form.</span> Your brain already knows this rule —
+      it just hasn't become a reflex yet. So we drill it until it is one.
+    </p>
+    <div class="drill-chips">
+      <span class="chip" data-cursor>I went →</span>
+      <span class="chip" data-cursor>She went →</span>
+      <span class="chip" data-cursor>We didn't go →</span>
+      <span class="chip" data-cursor>Did you go…?</span>
+      <span class="chip" data-cursor>your turn →</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============= METHOD ============= -->
+<section id="method">
+  <div class="section-head">
+    <span class="kicker">The Clearing Method</span>
+    <h2>Mistakes aren't failures.<br>They're the lesson plan.</h2>
+    <div class="tutor-note" style="right:4%;top:18%;">every error = a map of the student's first language</div>
+  </div>
+  <div class="method-grid">
+    <div class="method-step">
+      <div class="num">1</div>
+      <div>
+        <h3>Notice</h3>
+        <p>We talk about your real life — your job, your city, your plans. When an error
+        appears, we don't skip past it. <b>We catch the exact pattern</b>, usually something
+        your first language is quietly importing into English.</p>
+      </div>
+    </div>
+    <div class="method-step">
+      <div class="num">2</div>
+      <div>
+        <h3>Clear</h3>
+        <p>One small idea at a time, explained in seconds — not a grammar lecture.
+        You rebuild the sentence yourself, step by step, <b>so the fix comes from your
+        own thinking</b>, not from memorizing mine.</p>
+      </div>
+    </div>
+    <div class="method-step">
+      <div class="num">3</div>
+      <div>
+        <h3>Drill</h3>
+        <p>Then we make it automatic: quick, varied repetitions until the correct form
+        is faster than the old mistake. <b>You finish the lesson saying it right without
+        thinking</b> — which is the whole point of speaking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= ABOUT ============= -->
+<section id="about">
+  <div class="section-head reveal">
+    <span class="kicker">Who's teaching</span>
+    <h2>An American who explains<br>the part textbooks skip.</h2>
+    <div class="tutor-note" style="right:5%;top:22%;">drop a photo in the slot → (optional)</div>
+  </div>
+  <div class="about-grid reveal">
+    <!-- Thomas: want a photo? Replace the "TM" line with <img src="you.jpg" alt="Thomas"> -->
+    <div class="about-portrait" aria-hidden="true">TM</div>
+    <!-- Thomas: edit this bio to taste — it's written from the page persona. -->
+    <div class="about-body">
+      <p>I'm <b>Thomas</b> — born and raised in the United States, now living in Chiapas, Mexico.
+      I teach conversation and pronunciation to working adults: developers, professionals, and anyone
+      who reads English far better than they can speak it.</p>
+      <p>I'm not a textbook. Most students already know more grammar than they think — what's missing
+      is the <b>reflex</b>. So we talk about your real life, I catch the exact patterns your first
+      language quietly imports into English, and we drill them until the right form is automatic.</p>
+      <p>771 lessons in, the thing I care about most is simple: you leave every session having
+      <b>said something real</b> — and a little more sure of yourself than when you walked in.</p>
+      <div class="about-facts">
+        <span class="fact">Native U.S. speaker</span>
+        <span class="fact">Based in Chiapas, MX</span>
+        <span class="fact">771 lessons taught</span>
+        <span class="fact">5.0★ rating</span>
+        <span class="fact">Conversation + pronunciation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= STUDENTS - ANTI-GRID ============= -->
+<section class="students" id="students">
+  <div class="section-head">
+    <span class="kicker">Who I teach</span>
+    <h2>Your first language isn't a problem.<br>It's the starting point.</h2>
+  </div>
+  <div class="deck">
+    <div class="scard" data-cursor>
+      <div class="flag">🇧🇷</div>
+      <h4>Developers in Brazil</h4>
+      <p>Tech interviews, daily standups, and the meeting where you finally disagree out loud.</p>
+      <div class="transfer">fazer → it's <b>make</b> a decision, <b>do</b> the work</div>
+    </div>
+    <div class="scard" data-cursor>
+      <div class="flag">🇺🇦</div>
+      <h4>Professionals from Ukraine</h4>
+      <p>Workplace English for new careers abroad — emails, clients, and small talk that lands.</p>
+      <div class="transfer">no "to be" in Ukrainian → "I <b>am</b> ready", not "I ready"</div>
+    </div>
+    <div class="scard" data-cursor>
+      <div class="flag">🇨🇴</div>
+      <h4>Spanish speakers everywhere</h4>
+      <p>From Bogotá to Monterrey to Florida — exam prep, HR meetings, patients and clients.</p>
+      <div class="transfer">estoy de acuerdo → "I agree", not "I am agree"</div>
+    </div>
+    <div class="scard" data-cursor>
+      <div class="flag">🇹🇷</div>
+      <h4>Readers who can't speak yet</h4>
+      <p>B2 on paper, A1 out loud? We close the gap between what you know and what you say.</p>
+      <div class="transfer">SOV → SVO: the verb moves <b>up front</b> in English</div>
+    </div>
+    <div class="scard" data-cursor>
+      <div class="flag">🌍</div>
+      <h4>Anyone tired of freezing</h4>
+      <p>If you understand Netflix but panic in meetings, you're exactly who this works for.</p>
+      <div class="transfer">fluency = automaticity, and automaticity is trainable</div>
+    </div>
+    <div class="scard" data-cursor>
+      <div class="flag">🇮🇹</div>
+      <h4>Italians going global</h4>
+      <p>Strong on vocabulary, tangled in tenses — especially the simple past Italian quietly skips.</p>
+      <div class="transfer">ieri ho mangiato → "I <b>ate</b>", not "I have eaten"</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= NUMBERS ============= -->
+<section id="numbers">
+  <div class="section-head">
+    <span class="kicker">From real lesson ratings</span>
+    <h2>Students grade every lesson.<br>Here's the report card.</h2>
+    <div class="tutor-note" style="right:6%;top:30%;">reassurance first — confidence unlocks output</div>
+  </div>
+  <div class="numbers-grid">
+    <div class="ncard"><div class="big"><span data-count="4.9">0</span></div><div class="lbl">Reassurance — you'll feel safe making mistakes</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.9">0</span></div><div class="lbl">Clarity — explanations that take seconds, not lectures</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.8">0</span></div><div class="lbl">Progress — you leave each lesson saying something new</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.8">0</span></div><div class="lbl">Preparation — materials built for you, not from a book</div></div>
+  </div>
+  <p class="numbers-foot">771 lessons taught · 5.0★ overall · 24 five-star reviews</p>
+</section>
+
+<!-- ============= WHAT TO EXPECT ============= -->
+<section id="lessons">
+  <div class="section-head reveal">
+    <span class="kicker">What to expect</span>
+    <h2>What actually<br>happens in a lesson.</h2>
+  </div>
+  <div class="numbers-grid">
+    <div class="ncard"><div class="big">01</div><div class="lbl">We open in English — your week, your work, the meeting that went sideways. Real talk, not roleplay.</div></div>
+    <div class="ncard"><div class="big">02</div><div class="lbl">I listen for patterns and catch them on the spot — the exact thing tripping you up, named in seconds.</div></div>
+    <div class="ncard"><div class="big">03</div><div class="lbl">You rebuild the sentence yourself, then we drill it — fast and varied — until the right form beats the old habit.</div></div>
+    <div class="ncard"><div class="big">04</div><div class="lbl">You leave with notes and one thing to practice, built for you — not pulled from a book.</div></div>
+  </div>
+  <p class="numbers-foot">50 minutes · one-on-one · online · materials made for you.</p>
+</section>
+
+<!-- ============= FAQ ============= -->
+<section id="faq">
+  <div class="section-head reveal">
+    <span class="kicker">Before you book</span>
+    <h2>Questions I get<br>before lesson one.</h2>
+  </div>
+  <div class="faq-list reveal">
+    <details class="faq-item"><summary data-cursor>Do I need to prepare anything?</summary>
+      <p>No. Come as you are. Bring something real you'd like to talk about if you have it — work, travel, an interview — but I'll always have a plan if you don't.</p></details>
+    <details class="faq-item"><summary data-cursor>What level do I need to start?</summary>
+      <p>Anywhere from absolute beginner to advanced. If you can read this page, we can work together. Your first lesson maps where you actually are out loud — usually a level higher than people expect.</p></details>
+    <details class="faq-item"><summary data-cursor>Is it grammar lessons or conversation?</summary>
+      <p>Conversation first — but we stop and clear the grammar the moment it gets in the way. You get the rule in seconds, then we make it automatic. You can also browse the full <a href="/curriculum/">A0–B2 curriculum map</a>.</p></details>
+    <details class="faq-item"><summary data-cursor>What if I freeze up or make mistakes?</summary>
+      <p>That's the whole point — mistakes are the lesson plan. Lessons are built to feel safe, and reassurance comes first, because confidence is what unlocks speaking.</p></details>
+    <details class="faq-item"><summary data-cursor>How long are lessons, and where?</summary>
+      <p>50 minutes, one-on-one, online. I prepare materials around you and send notes after each session, so progress stays visible.</p></details>
+    <details class="faq-item"><summary data-cursor>How do we get started?</summary>
+      <p><a href="/curriculum/">Open the curriculum map</a> to see what we'd cover, or scroll down and say hello — your first lesson maps your patterns and shows exactly what we'd clear first.</p></details>
+  </div>
+</section>
+
+<!-- ============= CTA ============= -->
+<section class="cta reveal">
+  <span class="kicker">Your first lesson · 50 minutes</span>
+  <!-- Want a photo here? Add: <img class="portrait-slot" src="you.jpg" alt="Thomas"> above the heading. -->
+  <h2 class="cta-word">Say hello<span id="ctaDot" data-cursor>.</span></h2>
+  <p>One lesson is enough to map your patterns and show you exactly what we'd clear first.
+  Worst case, you practice English for an hour with a friendly American. Best case, it clicks.</p>
+  <a class="btn" href="/curriculum/" data-cursor>
+    <span>Open the curriculum</span><span class="price">→</span>
+  </a>
+</section>
+
+<footer>
+  <div>Thomas's Classroom — American English tutor · Made with patience in Chiapas, MX</div>
+  <div id="bottomSecret">You scrolled the whole page. That's B2-level persistence. ✓</div>
+</footer>
+
+<div id="toast" role="status"></div>
+    <HomeInteractions />
+  </body>
 </html>

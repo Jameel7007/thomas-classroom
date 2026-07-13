@@ -1,0 +1,33 @@
+---
+import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+export const page = {
+  "original": "outputs/assessments/b1-exit.html",
+  "source": "src/content/assessments/b1-exit.astro",
+  "route": "/assessments/b1-exit/",
+  "slug": "b1-exit",
+  "title": "B1 End-of-Level Diagnostic",
+  "description": "Use this after all B1 lessons to identify any remaining gaps and confirm whether the learner is ready to begin B2.",
+  "engine": "none",
+  "bodyClass": "",
+  "features": [
+    "AssessmentPage",
+    "AssessmentNavigation"
+  ],
+  "contentTextHash": "b3fe10f74157d942dee32cdb072676f1eb97bfca6573792158101f19a5a5c7e6",
+  "interactionCounts": {},
+  "audioClips": []
+};
+---
+<AssessmentPage page={page}>
+<main class="wrap">
+<a class="back" href="/curriculum/#lvl-B1">Back to curriculum</a>
+<p class="overline">Complete B1 before advancing</p>
+<h1>B1 End-of-Level Diagnostic</h1>
+<p class="lede">Use this after all B1 lessons to identify any remaining gaps and confirm whether the learner is ready to begin B2.</p>
+<div class="grid">
+<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Grammar</b>Present perfect continuous, past perfect, passive, conditionals, and reported speech.</li><li><b>Skills</b>Main idea reading/listening plus focused detail questions.</li><li><b>Production</b>Opinion task, travel problem, story, and short written response.</li></ul></section>
+<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can produce connected speech.</li><li>Can give reasons and explain preferences.</li><li>Can manage familiar situations with limited support.</li></ul></section>
+</div>
+<p class="placeholder">Next build: add a full B1 benchmark quiz with separate grammar, skills, and speaking scores.</p>
+</main>
+</AssessmentPage>

@@ -1,0 +1,10 @@
+---
+interface Props { sentence: string; answer: string; explanation?: string }
+const { sentence, answer, explanation } = Astro.props;
+---
+<div class="error-item" data-spot-error data-answer={answer} data-why={explanation}>
+  <p>{sentence}</p>
+  <slot />
+  <p class="error-feedback" data-error-feedback aria-live="polite"></p>
+</div>
+

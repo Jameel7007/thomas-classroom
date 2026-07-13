@@ -1,0 +1,33 @@
+---
+import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+export const page = {
+  "original": "outputs/assessments/a2-exit.html",
+  "source": "src/content/assessments/a2-exit.astro",
+  "route": "/assessments/a2-exit/",
+  "slug": "a2-exit",
+  "title": "A2 End-of-Level Diagnostic",
+  "description": "Use this after all A2 lessons to identify anything the learner missed and confirm whether they are ready to begin B1.",
+  "engine": "none",
+  "bodyClass": "",
+  "features": [
+    "AssessmentPage",
+    "AssessmentNavigation"
+  ],
+  "contentTextHash": "e4a90a843c84e9c687e5bbe28fc429e72ed4d325d782ddb894efce1fd13f8536",
+  "interactionCounts": {},
+  "audioClips": []
+};
+---
+<AssessmentPage page={page}>
+<main class="wrap">
+<a class="back" href="/curriculum/#lvl-A2">Back to curriculum</a>
+<p class="overline">Complete A2 before advancing</p>
+<h1>A2 End-of-Level Diagnostic</h1>
+<p class="lede">Use this after all A2 lessons to identify anything the learner missed and confirm whether they are ready to begin B1.</p>
+<div class="grid">
+<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Grammar</b>Past simple, future forms, comparatives, present perfect, and conditionals.</li><li><b>Tasks</b>Travel, directions, health, study, and technology situations.</li><li><b>Story</b>Tell a simple past event with sequence and reasons.</li></ul></section>
+<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can tell a simple story.</li><li>Can handle routine practical exchanges.</li><li>Can connect short sentences with simple linkers.</li></ul></section>
+</div>
+<p class="placeholder">Next build: create interactive grammar, listening, reading, writing, and speaking sections with visible score bands.</p>
+</main>
+</AssessmentPage>

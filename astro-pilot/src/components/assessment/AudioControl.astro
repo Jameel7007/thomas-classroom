@@ -1,0 +1,8 @@
+---
+interface Props { clip?: string; text: string; label?: string }
+const { clip, text, label = "Play audio" } = Astro.props;
+---
+<button class="listen-btn" type="button" data-voice-clip={clip} data-speak={text} aria-label={label}>
+  <span aria-hidden="true">▶</span> {label}
+</button>
+

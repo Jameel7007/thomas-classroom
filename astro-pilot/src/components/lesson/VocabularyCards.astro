@@ -1,0 +1,15 @@
+---
+interface Item { term: string; note?: string; image?: string }
+interface Props { items: Item[]; label?: string }
+const { items, label = "Vocabulary" } = Astro.props;
+---
+<div class="figure-grid" aria-label={label}>
+  {items.map((item) => (
+    <div class="figure">
+      {item.image && <span class="fig"><img src={item.image} alt="" loading="lazy" /></span>}
+      <span class="nm">{item.term}</span>
+      {item.note && <small>{item.note}</small>}
+    </div>
+  ))}
+</div>
+
