@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The verb “to be” · A0 Grammar · Curriculum Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:oklch(0.985 0.006 85);
+  --paper-2:oklch(0.972 0.009 82);
+  --surface:oklch(0.997 0.003 85);
+  --ink:oklch(0.24 0.012 60);
+  --ink-2:oklch(0.42 0.012 60);
+  --muted:oklch(0.56 0.012 65);
+  --line:oklch(0.885 0.008 75);
+  --line-2:oklch(0.93 0.006 80);
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  /* A0 accent (hue 28) */
+  --accent:oklch(0.58 0.13 28);
+  --accent-deep:oklch(0.46 0.13 28);
+  --accent-tint:oklch(0.965 0.045 28);
+  --accent-soft:oklch(0.92 0.045 28);
+  --maxw:760px;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--paper) 86%,transparent);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.bar-in{max-width:var(--maxw);margin:0 auto;padding:13px 28px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px;}
+.back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink-2);
+  font-size:13.5px;font-weight:500;transition:.14s;}
+.back:hover{color:var(--accent-deep);}
+.crumb{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);}
+.crumb b{color:var(--accent-deep);font-weight:500;}
+
+/* hero */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:54px 28px 90px;}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 18px;}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6vw,58px);line-height:1.02;
+  letter-spacing:-0.02em;margin:0 0 16px;text-wrap:balance;}
+h1 em{font-style:italic;}
+.standfirst{font-size:20px;line-height:1.5;color:var(--ink-2);margin:0 0 12px;max-width:54ch;}
+.meta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;}
+.tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 13px;}
+
+/* body */
+h2{font-family:var(--serif);font-weight:500;font-size:27px;letter-spacing:-0.01em;
+  margin:52px 0 14px;padding-top:10px;}
+.lead-rule{width:42px;height:3px;background:var(--accent);border-radius:999px;margin:0 0 24px;}
+p{margin:0 0 18px;}
+strong{font-weight:600;}
+.ex{font-family:var(--serif);font-style:italic;color:var(--accent-deep);}
+
+/* conjugation table */
+table{width:100%;border-collapse:collapse;margin:8px 0 24px;font-size:16px;}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);}
+thead th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;border-bottom:1.5px solid var(--line);}
+tbody td:first-child{color:var(--ink-2);}
+tbody td b{color:var(--accent-deep);font-weight:600;}
+.contraction{color:var(--muted);font-family:var(--mono);font-size:13px;}
+
+/* callout */
+.note{background:var(--accent-tint);border:1px solid var(--accent-soft);border-radius:14px;
+  padding:20px 24px;margin:24px 0;}
+.note h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;margin:0 0 10px;}
+.note ul{margin:0;padding-left:20px;}
+.note li{margin-bottom:7px;}
+.cross{color:var(--accent-deep);font-weight:600;}
+
+/* practice */
+.practice{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:26px 28px;margin:28px 0;}
+.practice h3{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 18px;}
+.q{display:flex;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line-2);font-size:16px;}
+.q:last-child{border-bottom:0;}
+.q .n{font-family:var(--mono);font-size:13px;color:var(--accent-deep);flex:none;}
+.blank{display:inline-block;min-width:52px;border-bottom:1.5px solid var(--accent);margin:0 4px;}
+
+/* footer nav */
+.lessons-nav{display:flex;justify-content:space-between;gap:16px;margin-top:56px;
+  padding-top:28px;border-top:1px solid var(--line);}
+.lnav{text-decoration:none;color:var(--ink);max-width:46%;}
+.lnav span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.lnav b{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);transition:.14s;}
+.lnav:hover b{color:var(--accent-deep);}
+.lnav.next{text-align:right;}
+@media(max-width:560px){:root{--maxw:100%;}.wrap{padding:40px 20px 70px;}.bar-in{padding:12px 20px;}.crumb{display:none;}}
+</style>
+<link rel="stylesheet" href="/legacy-assets/lessons/lesson.css" />
+<link rel="stylesheet" href="/legacy-assets/lessons/drills.css" />
+<script src="/legacy-assets/lessons/lesson.js" defer></script>
+
+<meta name="description" content="The most common verb in English. We use to be to talk about who we are, how we feel, our age, and where things are.">
+<link rel="canonical" href="http://localhost:4321/lessons/a0/the-verb-to-be/"><link rel="stylesheet" href="/_astro/_slug_.DfN3fJVG.css"></head><body>
+<div class="bar">
+  <div class="bar-in">
+    <a class="back" href="/curriculum/#lvl-A0">← Curriculum Map</a>
+    <span class="crumb"><b>A0 · Starter</b> &nbsp;/&nbsp; Grammar</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 01</p>
+  <h1>The verb <em>to be</em></h1>
+  <p class="standfirst">The most common verb in English. We use <span class="ex">to be</span> to talk about who we are, how we feel, our age, and where things are.</p>
+  <div class="meta-row">
+    <span class="tag">≈ 25 min</span>
+    <span class="tag">am / is / are</span>
+    <span class="tag">Present simple</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>See how be links two ideas.</span></div>
+    <div class="flow-step"><b>Learn</b><span>Choose am, is, or are.</span></div>
+    <div class="flow-step"><b>Practice</b><span>Build sentences and questions.</span></div>
+    <div class="flow-step"><b>Speak</b><span>Talk about yourself and your class.</span></div>
+  </div>
+
+  <div class="note">
+    <h3>By the end of this lesson, you can…</h3>
+    <ul>
+      <li>say who you are — <span class="ex">I am Ana. My name is Ana.</span></li>
+      <li>choose <span class="ex">am</span>, <span class="ex">is</span>, or <span class="ex">are</span> for any subject.</li>
+      <li>ask and answer simple questions — <span class="ex">Are you a student? — Yes, I am.</span></li>
+      <li>make a sentence negative — <span class="ex">I am not tired.</span></li>
+      <li>use short forms when you speak — <span class="ex">I’m · you’re · she’s.</span></li>
+    </ul>
+  </div>
+
+  <h2>Notice first</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Think it through</h3>
+    <p><span class="ex">I am Ana. &nbsp; My name is Ana. &nbsp; We are students.</span></p>
+    <ul>
+      <li>Which word changes after <strong>I</strong>, <strong>name</strong>, and <strong>we</strong>?</li>
+      <li>Are these sentences actions, or are they descriptions?</li>
+      <li>What is the word <strong>be</strong> connecting?</li>
+    </ul>
+  </div>
+
+  <h2>What does <em>be</em> mean?</h2>
+  <div class="lead-rule"></div>
+  <p>Most verbs are <strong>actions</strong> — <span class="ex">run, eat, study</span>. The verb <strong>to be</strong> is different. It is not an action. It tells us <strong>who</strong> or <strong>what</strong> someone is, or <strong>how</strong> they feel.</p>
+  <p>Think of <strong>be</strong> as an equals sign <strong>(=)</strong>:</p>
+  <p><span class="ex">I <strong>am</strong> Ana.</span> → I = Ana. &nbsp; <span class="ex">She <strong>is</strong> happy.</span> → she = happy. &nbsp; <span class="ex">They <strong>are</strong> at work.</span> → they = at work.</p>
+
+  <div class="note">
+    <h3>Try this</h3>
+    <ul>
+      <li>Point as you say it: <strong>I</strong> (point to yourself), <strong>you</strong> (point to the other person), <strong>they</strong> (point to two people).</li>
+      <li>Say the whole piece, not one word at a time: <span class="ex">I am</span>, <span class="ex">he is</span>, <span class="ex">we are</span>.</li>
+    </ul>
+  </div>
+
+  <h2>The forms</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>Subject</th><th>Full form</th><th>Contraction</th></tr></thead>
+    <tbody>
+      <tr><td>I</td><td><b>am</b></td><td class="contraction">I’m</td></tr>
+      <tr><td>You</td><td><b>are</b></td><td class="contraction">you’re</td></tr>
+      <tr><td>He / She / It</td><td><b>is</b></td><td class="contraction">he’s / she’s / it’s</td></tr>
+      <tr><td>We</td><td><b>are</b></td><td class="contraction">we’re</td></tr>
+      <tr><td>They</td><td><b>are</b></td><td class="contraction">they’re</td></tr>
+    </tbody>
+  </table>
+  <p>Learn these as whole pieces: <span class="ex">I am</span>, <span class="ex">you are</span>, <span class="ex">she is</span>. Don’t build them word by word — just say the whole piece.</p>
+
+  <div class="practice" data-choice-gap-drill>
+    <h3>Drill 1 — choose the form</h3>
+    <p class="choice-hint">Tap a gap, then choose the word</p>
+    <div class="choice-bank" aria-label="Answer choices">
+      <button class="choice-option" data-choice-option="am">am</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+      <button class="choice-option" data-choice-option="are">are</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Hello, my name <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> Ana.</span></div>
+    <div class="q"><span class="n">2</span><span>We <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> from Brazil.</span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> you a teacher? — Yes, I <button class="choice-gap" data-choice-gap data-answer="am" data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>He <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> not at home. He’s at work.</span></div>
+    <div class="q"><span class="n">5</span><span>They <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> my friends.</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-game>
+    <h3>Drill 2 — match the subject</h3>
+    <p>Tap a subject tile, then tap the matching be form.</p>
+    <div class="tile-bank">
+      <button class="tile" data-tile="am">I</button>
+      <button class="tile" data-tile="is">She</button>
+      <button class="tile" data-tile="are">You</button>
+      <button class="tile" data-tile="is">My name</button>
+      <button class="tile" data-tile="are">They</button>
+    </div>
+    <div class="slot-board">
+      <button class="slot" data-slot="am" data-placeholder="am">am</button>
+      <button class="slot" data-slot="is" data-placeholder="is">is</button>
+      <button class="slot" data-slot="are" data-placeholder="are">are</button>
+      <button class="slot" data-slot="is" data-placeholder="is">is</button>
+      <button class="slot" data-slot="are" data-placeholder="are">are</button>
+    </div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-tiles>Check</button>
+      <button class="lesson-btn" data-reset-tiles>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Say it short</h2>
+  <div class="lead-rule"></div>
+  <p>When we speak, we usually join the two words into one <strong>short form</strong> (also called a contraction). It sounds faster and more natural. The full form is not wrong — but short forms feel friendly.</p>
+  <table>
+    <thead><tr><th>Full form</th><th>Short form</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>I am</td><td><b>I’m</b></td><td class="ex">I’m a student.</td></tr>
+      <tr><td>you are</td><td><b>you’re</b></td><td class="ex">You’re right.</td></tr>
+      <tr><td>he is</td><td><b>he’s</b></td><td class="ex">He’s at home.</td></tr>
+      <tr><td>she is</td><td><b>she’s</b></td><td class="ex">She’s happy.</td></tr>
+      <tr><td>they are</td><td><b>they’re</b></td><td class="ex">They’re my friends.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="micro-drill" data-transform>
+    <h3>Speak — say it short</h3>
+    <p>Read the full sentence, say the short form out loud, then tap to check. Say each one quickly, like one word.</p>
+    <div class="transform-list">
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>1</b> I am from Spain. → short</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>I’m</strong> from Spain.</p>
+      </div>
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>2</b> You are very kind. → short</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>You’re</strong> very kind.</p>
+      </div>
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>3</b> He is my brother. → short</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>He’s</strong> my brother.</p>
+      </div>
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>4</b> She is a doctor. → short</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>She’s</strong> a doctor.</p>
+      </div>
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>5</b> They are at school. → short</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>They’re</strong> at school.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Negatives and questions</h2>
+  <div class="lead-rule"></div>
+  <p><strong>Negative:</strong> add <span class="ex">not</span> after <strong>be</strong>: <span class="ex">I am not</span>, <span class="ex">she is not</span>, <span class="ex">they are not</span>.</p>
+  <p><strong>Question:</strong> move <strong>be</strong> before the subject: <span class="ex">Are you a student?</span> <span class="ex">Is she from Spain?</span> <span class="ex">Am I late?</span></p>
+  <p><strong>Good news:</strong> with <strong>be</strong>, you do not need <span class="ex">do</span>. Say <span class="ex">Are you a student?</span> — never <span class="ex">Do you are…?</span></p>
+
+  <div class="note">
+    <h3>Watch out — common beginner mistakes</h3>
+    <ul>
+      <li><span class="cross">✗</span> <s>I have 20 years.</s> &nbsp;→&nbsp; <span class="ex">I am 20 (years old).</span></li>
+      <li><span class="cross">✗</span> <s>She happy.</s> &nbsp;→&nbsp; <span class="ex">She is happy.</span> (do not drop <em>be</em>)</li>
+      <li><span class="cross">✗</span> <s>Do you are a student?</s> &nbsp;→&nbsp; <span class="ex">Are you a student?</span></li>
+    </ul>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer="are you a student">
+    <h3>Drill 3 — build the question</h3>
+    <p class="tile-target">Tap the words in order. Then ask the question aloud.</p>
+    <div class="tile-bank" data-build-bank>
+      <button class="tile" data-build-tile="student">student</button>
+      <button class="tile" data-build-tile="you">you</button>
+      <button class="tile" data-build-tile="are">Are</button>
+      <button class="tile" data-build-tile="a">a</button>
+    </div>
+    <div class="build-area" data-build-area data-placeholder="Tap tiles here"></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-build>Check</button>
+      <button class="lesson-btn" data-reset-build>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="do" data-fix="Are you a student?" data-why="With the verb to be, put be before the subject. Do not use do.">
+    <h3>Drill 4 — spot the error</h3>
+    <p>Tap the word that makes this question wrong.</p>
+    <div class="spot-options">
+      <button class="error-choice" data-error-choice="do">Do</button>
+      <button class="error-choice" data-error-choice="you">you</button>
+      <button class="error-choice" data-error-choice="are">are</button>
+      <button class="error-choice" data-error-choice="student">a student?</button>
+    </div>
+    <p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-transform>
+    <h3>Drill 5 — say it, then check</h3>
+    <p>Say your answer out loud first. Then tap to check.</p>
+    <div class="transform-list">
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>1</b> You are happy. → question</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>Are you</strong> happy?</p>
+      </div>
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>2</b> She is at home. → negative</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer>She <strong>is not</strong> at home.</p>
+      </div>
+      <div class="transform-item" data-transform-item>
+        <p class="transform-cue"><b>3</b> They are friends. → question</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal</button>
+        <p class="transform-answer" data-transform-answer><strong>Are they</strong> friends?</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Speak — make it real</h2>
+  <div class="lead-rule"></div>
+  <div class="prompt-card"><b>Make it true for you:</b> finish each sentence so it is true about <strong>you</strong>. Say it out loud, then write it.
+    <br /><span class="ex">My name is ____.</span>
+    <br /><span class="ex">I am from ____.</span>
+    <br /><span class="ex">I am a ____.</span> &nbsp;<span class="contraction">(your job, or “student”)</span>
+    <br /><span class="ex">I am ____ years old.</span>
+    <br /><span class="ex">Today I am ____.</span> &nbsp;<span class="contraction">(happy · tired · fine · busy)</span>
+  </div>
+  <div class="prompt-card"><b>Mini interview:</b> ask a partner, then answer with a short form. <span class="ex">Are you from Mexico?</span> <span class="ex">Are you a teacher?</span> <span class="ex">Are you tired today?</span> Short answers: <span class="ex">Yes, I am.</span> / <span class="ex">No, I’m not.</span></div>
+
+  <div class="quiz" data-quiz data-success-message="Great. You can describe real people with am, is, and are.">
+    <h3>Meet the class — choose the correct sentence</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="She is a teacher.">
+        <p class="quiz-question">1. Sara — from Italy — a teacher</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-quiz-option="She is a teacher.">She is a teacher.</button>
+          <button class="quiz-option" data-quiz-option="She are a teacher.">She are a teacher.</button>
+          <button class="quiz-option" data-quiz-option="She am a teacher.">She am a teacher.</button>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="They are students.">
+        <p class="quiz-question">2. Tom and Lily — from the USA — students</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-quiz-option="They is students.">They is students.</button>
+          <button class="quiz-option" data-quiz-option="They are students.">They are students.</button>
+          <button class="quiz-option" data-quiz-option="They am students.">They am students.</button>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="I am a doctor.">
+        <p class="quiz-question">3. Me — my name is Leo — a doctor</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-quiz-option="I is a doctor.">I is a doctor.</button>
+          <button class="quiz-option" data-quiz-option="I are a doctor.">I are a doctor.</button>
+          <button class="quiz-option" data-quiz-option="I am a doctor.">I am a doctor.</button>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="You are very kind.">
+        <p class="quiz-question">4. You — very kind</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-quiz-option="You is very kind.">You is very kind.</button>
+          <button class="quiz-option" data-quiz-option="You am very kind.">You am very kind.</button>
+          <button class="quiz-option" data-quiz-option="You are very kind.">You are very kind.</button>
+        </div>
+      </div>
+    </div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-quiz>Check</button>
+      <button class="lesson-btn" data-reset-quiz>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="quiz" data-quiz data-success-message="Excellent. You can use be for statements, questions, and negatives.">
+    <h3>Final quiz — can you use be?</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="is">
+        <p class="quiz-question">1. My name ___ Ana.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">am</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="are">
+        <p class="quiz-question">2. ___ you from Brazil?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">Am</button><button class="quiz-option" data-quiz-option="is">Is</button><button class="quiz-option" data-quiz-option="are">Are</button></div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="not">
+        <p class="quiz-question">3. She is ___ at home.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="no">no</button><button class="quiz-option" data-quiz-option="not">not</button><button class="quiz-option" data-quiz-option="do">do</button></div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="am">
+        <p class="quiz-question">4. Yes, I ___.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">am</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="are">
+        <p class="quiz-question">5. They ___ my friends.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">am</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
+      </div>
+    </div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-quiz>Check quiz</button>
+      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="lessons-nav">
+    <a class="lnav prev" href="/curriculum/#lvl-A0">
+      <span>← Back to</span><b>A0 Starter</b>
+    </a>
+    <a class="lnav next" href="/lessons/a0/subject-pronouns/">
+      <span>Next lesson →</span><b>Subject pronouns</b>
+    </a>
+  </div>
+</main>
+</body></html>

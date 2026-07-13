@@ -1,0 +1,31 @@
+---
+interface QuizItem {
+  question: string;
+  answer: string;
+  options: string[];
+}
+interface Props {
+  title: string;
+  successMessage: string;
+  items: QuizItem[];
+}
+const { title, successMessage, items } = Astro.props;
+---
+<div class="quiz" data-quiz data-success-message={successMessage}>
+  <h3>{title}</h3>
+  <div class="quiz-list">
+    {items.map((item, index) => (
+      <div class="quiz-item" data-quiz-item data-answer={item.answer}>
+        <p class="quiz-question">{index + 1}. {item.question}</p>
+        <div class="quiz-options">
+          {item.options.map((option) => <button class="quiz-option" data-quiz-option={option}>{option}</button>)}
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="drill-actions">
+    <button class="lesson-btn" data-check-quiz>Check quiz</button>
+    <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
+  </div>
+  <p class="feedback" data-feedback></p>
+</div>

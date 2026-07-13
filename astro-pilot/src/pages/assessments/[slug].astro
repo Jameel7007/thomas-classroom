@@ -1,0 +1,11 @@
+---
+import LegacyDocument from "../../components/LegacyDocument.astro";
+import { legacyAssessments } from "../../lib/legacy-pages";
+
+export function getStaticPaths() {
+  return legacyAssessments.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+---
+<LegacyDocument source={page.source} sourcePath={page.sourcePath} />

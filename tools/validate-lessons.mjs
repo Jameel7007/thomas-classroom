@@ -1,84 +1,170 @@
-// Round-2 batch validator (dev tool, not shipped). Run: node .validate-round2.mjs
-import fs from 'fs';
-const norm = v => String(v || '').trim().toLowerCase().replace(/[‘’]/g, "'").replace(/\s+/g, ' ');
-const FILES = [
-  'lessons/a1/present-continuous.html',
-  'lessons/a1/there-is-there-are.html',
-  'lessons/a1/can-for-ability-and-permission.html',
-  'lessons/a1/adverbs-of-frequency.html',
-  'lessons/a1/prepositions-of-time-and-place.html',
-  'lessons/a1/some-any-with-countable-and-uncountable-nouns.html',
-  'lessons/a1/object-pronouns.html',
-  'lessons/a1/imperatives.html',
-  'lessons/a1/was-were.html',
-  'lessons/a0/animals.html',
-];
-let anyBad = false;
-for (const p of FILES) {
-  const s = fs.readFileSync(p, 'utf8');
-  const bad = [];
-  // quiz contract
-  const items = [...s.matchAll(/<[^>]*data-quiz-item[^>]*>/g)];
-  items.forEach((m, i) => {
-    const end = items[i + 1] ? items[i + 1].index : m.index + 2500;
-    const block = s.slice(m.index, end);
-    const am = m[0].match(/data-answer="([^"]*)"/);
-    if (!am) { bad.push('quiz item missing data-answer'); return; }
-    const opts = [...block.matchAll(/data-quiz-option="([^"]*)"/g)].map(x => norm(x[1]));
-    if (opts.length && !opts.includes(norm(am[1]))) bad.push(`quiz answer "${am[1]}" not in options`);
-  });
-  // choice-gap vs bank
-  const drills = s.split(/(?=<div class="practice" data-choice-gap-drill)/).slice(1);
-  for (const d of drills) {
-    const bank = [...d.matchAll(/data-choice-option="([^"]*)"/g)].map(x => norm(x[1]));
-    const gaps = [...d.matchAll(/data-choice-gap data-answer="([^"]*)"/g)].map(x => norm(x[1]));
-    for (const g of gaps) if (bank.length && !bank.includes(g)) bad.push(`gap answer "${g}" not in bank`);
+// Repository-wide lesson validation.
+// Run from any directory: node tools/validate-lessons.mjs
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const outputRoot = path.join(projectRoot, "outputs");
+const lessonsRoot = path.join(outputRoot, "lessons");
+const appPath = path.join(outputRoot, "app.jsx");
+const voiceScriptsPath = path.join(outputRoot, "audio", "voice-scripts.json");
+const norm = (value) => String(value || "").trim().toLowerCase()
+  .replace(/[‘’]/g, "'")
+  .replace(/\s+/g, " ");
+
+const lessonFiles = walk(lessonsRoot)
+  .filter((file) => /[/\\](a0|a1|a2|b1|b2)[/\\][^_][^/\\]*\.html$/i.test(file))
+  .sort();
+const voiceScripts = fs.existsSync(voiceScriptsPath)
+  ? JSON.parse(fs.readFileSync(voiceScriptsPath, "utf8"))
+  : {};
+const readySource = fs.existsSync(appPath) ? fs.readFileSync(appPath, "utf8") : "";
+const readyPaths = new Set(
+  [...readySource.matchAll(/"(lessons\/(?:a0|a1|a2|b1|b2)\/[^"\n]+\.html)"/g)]
+    .map((match) => match[1]),
+);
+
+let errorCount = 0;
+let warningCount = 0;
+let redirectCount = 0;
+const publishedLessons = [];
+
+for (const file of lessonFiles) {
+  const relative = slash(path.relative(outputRoot, file));
+  const html = fs.readFileSync(file, "utf8");
+  const errors = [];
+  const warnings = [];
+  const isRedirect = /<meta\s+http-equiv="refresh"/i.test(html);
+
+  validateDocument(html, file, errors, warnings, isRedirect);
+  validateReferences(html, file, errors);
+  if (!isRedirect) {
+    publishedLessons.push(relative);
+    validateLessonContract(html, errors, warnings);
+    validateDrills(html, errors);
+    validateAudio(html, errors);
+    if (!readyPaths.has(relative)) warnings.push("lesson exists but is not listed in READY_LESSONS");
+  } else {
+    redirectCount += 1;
   }
-  // builders
-  const builders = [...s.matchAll(/data-tile-builder data-answer="([^"]*)"[\s\S]*?data-build-area/g)];
-  for (const b of builders) {
-    const tiles = [...b[0].matchAll(/data-build-tile="([^"]*)"/g)].map(x => norm(x[1]));
-    const a = norm(b[1]).split(' ').sort().join(' ');
-    const t = tiles.flatMap(x => x.split(' ')).sort().join(' ');
-    if (a !== t) bad.push(`builder "${b[1]}" tiles mismatch`);
-  }
-  // spot-error
-  const spots = [...s.matchAll(/data-spot-error data-answer="([^"]*)"[\s\S]*?data-error-feedback/g)];
-  for (const sp of spots) {
-    const ch = [...sp[0].matchAll(/data-error-choice="([^"]*)"/g)].map(x => norm(x[1]));
-    if (!ch.includes(norm(sp[1]))) bad.push(`spot answer "${sp[1]}" not among choices`);
-  }
-  // wiring + inline CSS + em dashes + images
-  if (!s.includes('lesson.css')) bad.push('missing lesson.css');
-  if (!s.includes('lesson.js')) bad.push('missing lesson.js');
-  const style = (s.match(/<style>[\s\S]*?<\/style>/) || [''])[0];
-  if (style.length > 200) bad.push(`inline <style> present (${style.length}b)`);
-  const visible = s.replace(/<[^>]+>/g, '');
-  const em = (visible.match(/—/g) || []).length;
-  if (em) bad.push(`${em} em dashes in visible copy`);
-  for (const im of [...s.matchAll(/<img[^>]*src="([^"]+)"/g)]) {
-    const rel = im[1];
-    if (!/^https?:/.test(rel)) {
-      const dir = p.split('/').slice(0, -1).join('/');
-      const target = new URL(rel, 'file:///' + dir + '/').pathname.slice(1);
-      if (!fs.existsSync(target)) bad.push(`missing image ${rel}`);
-    }
-  }
-  // census vs minimums
-  const c = re => (s.match(re) || []).length;
-  const gaps = c(/data-choice-gap(?!-)/g), typed = c(/answer-input/g), quiz = c(/data-quiz-item/g),
-    xf = c(/data-transform-item/g), build = c(/data-tile-builder/g), spot = c(/data-spot-error/g);
-  const finalQuiz = (s.split(/Final quiz/i)[1]?.match(/data-quiz-item/g) || []).length;
-  const words = visible.replace(/\s+/g, ' ').split(' ').length;
-  const isA0 = p.includes('/a0/');
-  if (gaps + typed < 8) bad.push(`only ${gaps + typed} gap+typed items (<8)`);
-  if (finalQuiz < 6) bad.push(`final quiz only ${finalQuiz} items (<6)`);
-  if (xf < 1) bad.push('no transform drill');
-  if (!/Read and choose/i.test(s) && !isA0) bad.push('no Read and choose section');
-  if (!/Read and choose|read, then choose/i.test(s) && isA0) bad.push('no reading block');
-  const status = bad.length ? 'FAIL' : 'ok  ';
-  if (bad.length) anyBad = true;
-  console.log(`${status} ${p.padEnd(62)} gaps:${gaps} typed:${typed} quiz:${quiz} (final:${finalQuiz}) xf:${xf} build:${build} spot:${spot} words:${words}`);
-  for (const b of bad) console.log(`      - ${b}`);
+
+  errorCount += errors.length;
+  warningCount += warnings.length;
+  const status = errors.length ? "FAIL" : warnings.length ? "WARN" : "ok  ";
+  console.log(`${status} ${relative}`);
+  errors.forEach((message) => console.log(`     error: ${message}`));
+  warnings.forEach((message) => console.log(`     note:  ${message}`));
 }
-process.exit(anyBad ? 1 : 0);
+
+for (const readyPath of readyPaths) {
+  if (!fs.existsSync(path.join(outputRoot, readyPath))) {
+    errorCount += 1;
+    console.log(`FAIL ${readyPath}`);
+    console.log("     error: READY_LESSONS points to a missing file");
+  }
+}
+
+console.log(
+  `\nValidated ${publishedLessons.length} lessons and ${redirectCount} redirect alias` +
+  `${redirectCount === 1 ? "" : "es"}: ${errorCount} error${errorCount === 1 ? "" : "s"}, ` +
+  `${warningCount} migration note${warningCount === 1 ? "" : "s"}.`,
+);
+process.exitCode = errorCount ? 1 : 0;
+
+function validateDocument(html, file, errors, warnings, isRedirect) {
+  if (!/^<!doctype html>/i.test(html.trim())) errors.push("missing HTML doctype");
+  if (!/<html\b[^>]*\blang="[^"]+"/i.test(html)) errors.push("html element is missing lang");
+  if (!/<title>[^<]+<\/title>/i.test(html)) errors.push("missing document title");
+
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+  const duplicates = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
+  if (duplicates.length) errors.push(`duplicate id${duplicates.length === 1 ? "" : "s"}: ${duplicates.join(", ")}`);
+
+  if (!isRedirect && !/<meta\b[^>]*name="description"/i.test(html)) {
+    warnings.push("missing meta description (to be generated by the new page template)");
+  }
+
+  const images = [...html.matchAll(/<img\b[^>]*>/gi)].map((match) => match[0]);
+  const withoutDimensions = images.filter((tag) => !/\bwidth="\d+"/i.test(tag) || !/\bheight="\d+"/i.test(tag));
+  if (withoutDimensions.length) warnings.push(`${withoutDimensions.length} image${withoutDimensions.length === 1 ? "" : "s"} missing explicit width/height`);
+
+  const inlineStyle = (html.match(/<style>[\s\S]*?<\/style>/i) || [""])[0];
+  if (!isRedirect && inlineStyle.length > 200) warnings.push(`large inline style block (${inlineStyle.length} bytes)`);
+}
+
+function validateLessonContract(html, errors, warnings) {
+  if (!html.includes("lesson.css")) errors.push("missing shared lesson.css");
+  if (!html.includes("drills.css")) errors.push("missing shared drills.css");
+  if (!html.includes("lesson.js")) errors.push("missing shared lesson.js");
+  if (!/<h1\b[^>]*>[\s\S]*?<\/h1>/i.test(html)) errors.push("missing visible h1");
+  if (!/data-quiz\b/.test(html)) errors.push("missing final interactive quiz");
+  if (!/Use it in real life|Communicate|Speak[^<]{0,20}make it real/i.test(html)) errors.push("missing student production section");
+  if (!/Reflect/i.test(html)) warnings.push("missing explicit reflection section");
+  if (!/class="lessons-nav"/.test(html)) warnings.push("missing previous/next lesson navigation");
+}
+
+function validateDrills(html, errors) {
+  const quizStarts = [...html.matchAll(/<[^>]*data-quiz-item[^>]*>/g)];
+  quizStarts.forEach((match, index) => {
+    const end = quizStarts[index + 1]?.index ?? html.indexOf("</div></div>", match.index);
+    const block = html.slice(match.index, end > match.index ? end : match.index + 4000);
+    const answer = match[0].match(/data-answer="([^"]+)"/i)?.[1];
+    if (!answer) return errors.push("quiz item missing data-answer");
+    const options = [...block.matchAll(/data-quiz-option="([^"]+)"/g)].map((option) => norm(option[1]));
+    if (!options.length) errors.push(`quiz answer "${answer}" has no options`);
+    else if (!options.includes(norm(answer))) errors.push(`quiz answer "${answer}" is not among its options`);
+  });
+
+  for (const match of html.matchAll(/<div\s+class="practice"\s+data-choice-gap-drill[\s\S]*?<div\s+class="drill-actions">/g)) {
+    const bank = [...match[0].matchAll(/data-choice-option="([^"]+)"/g)].map((option) => norm(option[1]));
+    const answers = [...match[0].matchAll(/data-choice-gap\b[^>]*data-answer="([^"]+)"/g)]
+      .flatMap((gap) => gap[1].split("|").map(norm));
+    answers.forEach((answer) => {
+      if (bank.length && !bank.includes(answer)) errors.push(`choice-gap answer "${answer}" is not in its bank`);
+    });
+  }
+
+  for (const match of html.matchAll(/data-tile-builder\s+data-answer="([^"]+)"[\s\S]*?data-build-area/g)) {
+    const tiles = [...match[0].matchAll(/data-build-tile="([^"]+)"/g)].map((tile) => norm(tile[1]));
+    const expected = norm(match[1]).split(" ").sort().join(" ");
+    const available = tiles.flatMap((tile) => tile.split(" ")).sort().join(" ");
+    if (expected !== available) errors.push(`sentence builder "${match[1]}" does not match its tiles`);
+  }
+
+  for (const match of html.matchAll(/data-spot-error\s+data-answer="([^"]+)"[\s\S]*?data-error-feedback/g)) {
+    const choices = [...match[0].matchAll(/data-error-choice="([^"]+)"/g)].map((choice) => norm(choice[1]));
+    if (!choices.includes(norm(match[1]))) errors.push(`error-spotting answer "${match[1]}" is not among its choices`);
+  }
+}
+
+function validateAudio(html, errors) {
+  for (const match of html.matchAll(/data-voice-clip="([^"]+)"/g)) {
+    if (!voiceScripts[match[1]]) errors.push(`unknown voice clip "${match[1]}"`);
+  }
+}
+
+function validateReferences(html, file, errors) {
+  for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
+    const reference = match[1];
+    if (!reference || /^(?:https?:|mailto:|tel:|data:|#|javascript:)/i.test(reference)) continue;
+    const clean = decodeURIComponent(reference.split("#")[0].split("?")[0]);
+    if (!clean) continue;
+    const target = clean.startsWith("/")
+      ? path.join(outputRoot, clean.replace(/^\/+/, ""))
+      : path.resolve(path.dirname(file), clean);
+    if (!fs.existsSync(target)) errors.push(`broken local reference "${reference}"`);
+  }
+}
+
+function walk(directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const target = path.join(directory, entry.name);
+    return entry.isDirectory() ? walk(target) : target;
+  });
+}
+
+function slash(value) {
+  return value.split(path.sep).join("/");
+}

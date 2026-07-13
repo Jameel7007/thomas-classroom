@@ -1,0 +1,84 @@
+---
+import "../../../outputs/lessons/lesson.css";
+import "../../../outputs/lessons/drills.css";
+import lessonScriptUrl from "../../../outputs/lessons/lesson.js?url";
+
+interface LessonLink {
+  title: string;
+  href: string;
+}
+
+interface Props {
+  lesson: {
+    title: string;
+    description: string;
+    level: string;
+    kind: string;
+    durationMinutes: number;
+    objectives: string[];
+    skills: string[];
+    updated: Date;
+  };
+  previous?: LessonLink;
+  next?: LessonLink;
+}
+
+const { lesson, previous, next } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Curriculum", item: new URL("/curriculum/", Astro.site) },
+    { "@type": "ListItem", position: 2, name: lesson.level, item: new URL(`/curriculum/#lvl-${lesson.level}`, Astro.site) },
+    { "@type": "ListItem", position: 3, name: lesson.title, item: canonical },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{lesson.title} · {lesson.level} {lesson.kind} · Thomas's Classroom</title>
+    <meta name="description" content={lesson.description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={lesson.title} />
+    <meta property="og:description" content={lesson.description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+  </head>
+  <body>
+    <div class="bar">
+      <div class="bar-in">
+        <a class="back" href={`/curriculum/#lvl-${lesson.level}`}>← Curriculum Map</a>
+        <span class="crumb"><b>{lesson.level}</b> &nbsp;/&nbsp; {lesson.kind}</span>
+      </div>
+    </div>
+    <main class="wrap">
+      <p class="kicker"><span class="dot"></span> {lesson.kind} · {lesson.level}</p>
+      <h1>{lesson.title}</h1>
+      <p class="standfirst">{lesson.description}</p>
+      <div class="meta-row">
+        <span class="tag">≈ {lesson.durationMinutes} min</span>
+        {lesson.skills.map((skill) => <span class="tag">{skill.replace("-", " ")}</span>)}
+        <span class="tag">{lesson.objectives.length} learning objectives</span>
+      </div>
+
+      <slot />
+
+      <nav class="lessons-nav" aria-label="Lesson navigation">
+        {previous
+          ? <a class="lnav prev" href={previous.href}><span>← Previous</span><b>{previous.title}</b></a>
+          : <a class="lnav prev" href={`/curriculum/#lvl-${lesson.level}`}><span>← Back to level</span><b>{lesson.level}</b></a>}
+        {next
+          ? <a class="lnav next" href={next.href}><span>Next lesson →</span><b>{next.title}</b></a>
+          : <a class="lnav next" href={`/curriculum/#lvl-${lesson.level}`}><span>Back to level →</span><b>{lesson.level}</b></a>}
+      </nav>
+    </main>
+    <script is:inline src={lessonScriptUrl}></script>
+  </body>
+</html>

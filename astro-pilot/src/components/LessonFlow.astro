@@ -1,0 +1,8 @@
+---
+interface Step { label: string; description: string }
+interface Props { steps: Step[] }
+const { steps } = Astro.props;
+---
+<div class="lesson-flow" aria-label="Lesson flow">
+  {steps.map((step) => <div class="flow-step"><b>{step.label}</b><span>{step.description}</span></div>)}
+</div>

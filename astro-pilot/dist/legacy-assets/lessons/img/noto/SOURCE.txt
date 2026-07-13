@@ -1,0 +1,3 @@
+Vocabulary illustrations: Google Noto Emoji (https://github.com/googlefonts/noto-emoji)
+License: Apache License 2.0. Fetched as SVG via the Iconify API (api.iconify.design).
+"envelope" stands in for "eraser" in the classroom grid (no eraser exists in Unicode emoji).

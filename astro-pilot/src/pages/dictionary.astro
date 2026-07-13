@@ -1,0 +1,16 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { dictionaryEntries } from "../data/site-content";
+---
+<SiteLayout title="Learner Dictionary · Thomas’s Classroom" description="Clear useful English words with simple definitions, natural examples, and notes about meanings that often cause confusion." heading="Learner Dictionary" lede="Clear the meaning that is blocking the lesson, see it in a natural sentence, and return to the conversation." current="dictionary">
+  <section class="tab-page">
+    <p class="tab-overline">Built-in word clearing</p><h2 class="tab-title">Small definitions, useful understanding</h2>
+    <p class="tab-lede">This first local collection demonstrates the intended dictionary shape. Each word can later expand into multiple meanings, etymology, idioms, synonyms, and individually cleared senses.</p>
+    <div class="dictionary-list">{dictionaryEntries.map((entry) => <article class="dictionary-entry">
+      <div class="dictionary-word"><h2>{entry.word}</h2><span class="dictionary-level">{entry.level}</span></div>
+      <p class="dictionary-definition">{entry.definition}</p>
+      <div class="dictionary-examples">{entry.examples.map((example) => <span>{example}</span>)}</div>
+      <p class="dictionary-note">{entry.note}</p>
+    </article>)}</div>
+  </section>
+</SiteLayout>

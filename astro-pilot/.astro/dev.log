@@ -1,0 +1,11 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 0ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Syncing content","label":"content","level":"info"}
+{"message":"Astro config changed","label":"content","level":"info"}
+{"message":"Clearing content store","label":"content","level":"info"}
+{"message":"Synced content","label":"content","level":"info"}
+listen EPERM: operation not permitted ::1:4321
+  Stack trace:
+    at Server.setupListenHandle [as _listen2] (node:net:1986:21)
+    at GetAddrInfoReqWrap.callback (node:net:2274:7)

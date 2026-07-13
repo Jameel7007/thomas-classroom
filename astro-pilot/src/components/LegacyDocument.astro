@@ -1,0 +1,16 @@
+---
+import { migrateLegacyDocument } from "../lib/legacy-pages";
+
+interface Props {
+  source: string;
+  sourcePath: string;
+}
+
+const { source, sourcePath } = Astro.props;
+const document = migrateLegacyDocument(source, sourcePath, new URL(Astro.url.pathname, Astro.site));
+---
+<!doctype html>
+<html lang={document.lang}>
+  <head><Fragment set:html={document.head} /></head>
+  <body class={document.bodyClass}><Fragment set:html={document.body} /></body>
+</html>

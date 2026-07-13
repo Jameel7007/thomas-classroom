@@ -1,0 +1,24 @@
+---
+import landingSource from "../../../outputs/index.html?raw";
+
+// Preserve the original landing page exactly during the migration. Only its
+// legacy curriculum-file URLs are rewritten to the new Astro route.
+const migratedSource = landingSource.replaceAll(
+  "English%20Curriculum%20Map.html",
+  "/curriculum/",
+);
+const headMatch = migratedSource.match(/<head>([\s\S]*?)<\/head>/i);
+const bodyMatch = migratedSource.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+if (!headMatch || !bodyMatch) {
+  throw new Error("The original landing page no longer has a readable head/body structure.");
+}
+
+const canonical = new URL("/", Astro.site);
+const head = headMatch[1] + `\n<link rel="canonical" href="${canonical.href}">`;
+const body = bodyMatch[1];
+---
+<!doctype html>
+<html lang="en" data-theme="raw">
+  <head><Fragment set:html={head} /></head>
+  <body><Fragment set:html={body} /></body>
+</html>

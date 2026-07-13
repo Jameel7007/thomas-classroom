@@ -1,0 +1,16 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { transferLanguages } from "../data/site-content";
+---
+<SiteLayout title="Language Transfer · Thomas’s Classroom" description="Explore common first-language transfer patterns from Spanish, Portuguese, and Turkish into English, with targeted lesson directions." heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, and practice the exact decision." current="languages">
+  <section class="tab-page">
+    <p class="tab-overline">L1 → English</p><h2 class="tab-title">Your first language is evidence.</h2>
+    <p class="tab-lede">Transfer errors are not random failures. They often reveal a logical pattern from another language—and therefore point directly toward a useful English lesson.</p>
+    <div class="language-list">
+      {transferLanguages.map((language) => <article class="language-panel">
+        <h2>{language.name}</h2><p>{language.note}</p>
+        <div class="transfer-grid">{language.examples.map(([source, issue, lesson]) => <div class="transfer-card"><span class="transfer-source">{source}</span><h3>{issue}</h3><p class="transfer-lesson">Target: {lesson}</p></div>)}</div>
+      </article>)}
+    </div>
+  </section>
+</SiteLayout>

@@ -1,0 +1,5 @@
+---
+interface Props { label: string }
+const { label } = Astro.props;
+---
+<div class="prompt-card"><b>{label}:</b> <slot /></div>

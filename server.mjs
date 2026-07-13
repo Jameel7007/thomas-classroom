@@ -1,13 +1,17 @@
 import { createHash } from "node:crypto";
 import { createServer } from "node:http";
-import { readFile, mkdir, writeFile } from "node:fs/promises";
+import { readFile, mkdir, stat, writeFile } from "node:fs/promises";
 import { extname, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = fileURLToPath(new URL(".", import.meta.url));
-const publicRoot = resolve(projectRoot, "outputs");
+const legacyOutputRoot = resolve(projectRoot, "outputs");
+const astroOutputRoot = resolve(projectRoot, "astro-pilot", "dist");
+const publicRoot = process.env.STATIC_ROOT
+  ? resolve(projectRoot, process.env.STATIC_ROOT)
+  : await directoryExists(astroOutputRoot) ? astroOutputRoot : legacyOutputRoot;
 const cacheRoot = resolve(projectRoot, ".audio-cache");
-const clipsPath = resolve(publicRoot, "audio", "voice-scripts.json");
+const clipsPath = resolve(legacyOutputRoot, "audio", "voice-scripts.json");
 
 await loadLocalEnv(resolve(projectRoot, ".env"));
 
@@ -49,7 +53,8 @@ createServer(async (request, response) => {
   }
 }).listen(port, host, () => {
   console.log(`Thomas's Classroom: http://localhost:${port}/`);
-  console.log(`Curriculum map:     http://localhost:${port}/English%20Curriculum%20Map.html`);
+  console.log(`Curriculum map:     http://localhost:${port}/curriculum/`);
+  console.log(`Static build:       ${publicRoot}`);
   const hasVoice = Object.keys(process.env).some((name) => name.startsWith("ELEVENLABS_VOICE_"));
   if (!process.env.ELEVENLABS_API_KEY || (!process.env.ELEVENLABS_VOICE_ID && !hasVoice)) {
     console.log("ElevenLabs is not configured yet. Add the API key and voice ID to .env.");
@@ -142,20 +147,31 @@ async function serveStatic(response, pathname, headOnly) {
   let relativePath = decodeURIComponent(pathname).replace(/^\/+/, "");
   if (!relativePath) relativePath = "index.html";
 
-  const filePath = resolve(publicRoot, relativePath);
+  let filePath = resolve(publicRoot, relativePath);
   if (filePath !== publicRoot && !filePath.startsWith(publicRoot + sep)) {
     return sendJson(response, 403, { error: "Forbidden." });
   }
 
   try {
+    const fileInfo = await stat(filePath);
+    if (fileInfo.isDirectory()) filePath = resolve(filePath, "index.html");
     const content = await readFile(filePath);
+    const immutable = pathname.startsWith("/_astro/") || pathname.startsWith("/legacy-assets/");
     response.writeHead(200, {
-      "Cache-Control": "no-cache",
+      "Cache-Control": immutable ? "public, max-age=31536000, immutable" : "no-cache",
       "Content-Type": mimeTypes[extname(filePath).toLowerCase()] || "application/octet-stream",
     });
     return response.end(headOnly ? undefined : content);
   } catch {
     return sendJson(response, 404, { error: "File not found." });
+  }
+}
+
+async function directoryExists(directory) {
+  try {
+    return (await stat(directory)).isDirectory();
+  } catch {
+    return false;
   }
 }
 
