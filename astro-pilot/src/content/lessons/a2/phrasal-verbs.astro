@@ -1,63 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/phrasal-verbs.html",
-  "source": "src/content/lessons/a2/phrasal-verbs.astro",
-  "route": "/lessons/a2/phrasal-verbs/",
-  "level": "A2",
-  "slug": "phrasal-verbs",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Phrasal verbs · A2 Vocabulary · Curriculum Map",
+  "slug": "phrasal-verbs",
+  "level": "A2",
+  "topic": "Phrasal verbs (common)",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "In English, a verb plus a small word often makes a completely new meaning: wake up , turn off , find out . Learn each pair as one chunk , the way you learned get up in your daily r",
-  "kind": "vocabulary",
-  "order": 19,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "00993c264e9eb504ba258da7f9af8a7d767590a0efef6f359a04a68c4c4c0548",
-  "interactionCounts": {
-    "data-choice-gap-drill": 4,
-    "data-choice-option": 23,
-    "data-choice-gap": 20,
-    "data-answer": 41,
-    "data-placeholder": 22,
-    "data-check-choices": 4,
-    "data-reset-choices": 4,
-    "data-feedback": 9,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 12,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 13,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 19,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -455,11 +414,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/education-and-study/"><span>← Previous lesson</span><b>Education &amp; study</b></a>
-    <a class="lnav next" href="/curriculum/#lvl-A2"><span>Back to level →</span><b>A2 · Waystage</b></a>
   </div>
 </main>
 </LessonPage>

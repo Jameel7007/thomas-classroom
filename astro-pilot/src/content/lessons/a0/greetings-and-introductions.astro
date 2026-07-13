@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/greetings-and-introductions.html",
-  "source": "src/content/lessons/a0/greetings-and-introductions.astro",
-  "route": "/lessons/a0/greetings-and-introductions/",
-  "level": "A0",
-  "slug": "greetings-and-introductions",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Greetings and introductions · A0 Vocabulary · Curriculum Map",
+  "slug": "greetings-and-introductions",
+  "level": "A0",
+  "topic": "Greetings & introductions",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "The first ten seconds of every meeting. Say hello , give your name, and reply politely. Good morning. My name is Ana. Nice to meet you. A few clean chunks open almost any conversat",
-  "kind": "vocabulary",
-  "order": 9,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "51040d68531b8511433305041dc2e6e79f1f823ed42ae50f85047867c98cbf99",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 8,
-    "data-choice-gap": 8,
-    "data-answer": 24,
-    "data-placeholder": 15,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 8,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 3,
-    "data-build-bank": 3,
-    "data-build-tile": 13,
-    "data-build-area": 3,
-    "data-check-build": 3,
-    "data-reset-build": 3,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 9,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 9,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -422,11 +379,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/cardinal-numbers-0-100/"><span>← Previous lesson</span><b>Cardinal numbers 0–100</b></a>
-    <a class="lnav next" href="/lessons/a0/the-alphabet-and-spelling/"><span>Next lesson →</span><b>The alphabet and spelling</b></a>
   </div>
 </main>
 </LessonPage>

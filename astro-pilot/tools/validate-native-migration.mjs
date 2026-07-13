@@ -2,18 +2,25 @@ import { createHash } from "node:crypto";
 import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { lessonCatalog, readyLessons } from "../src/data/lesson-catalog.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const manifest = JSON.parse(await readFile(path.join(projectRoot, "src/data/native-page-manifest.json"), "utf8"));
+const fingerprints = JSON.parse(await readFile(path.join(projectRoot, "src/data/migration-fingerprints.json"), "utf8"));
 const voiceScripts = JSON.parse(await readFile(path.join(projectRoot, "private/voice-scripts.json"), "utf8"));
 const errors = [];
+const lessonPages = readyLessons.map((lesson) => ({ ...lesson, ...fingerprints.lessons[lesson.id] }));
+const assessmentPages = fingerprints.assessments;
 
 const lessonSources = await sourceFiles(path.join(projectRoot, "src/content/lessons"));
 const assessmentSources = await sourceFiles(path.join(projectRoot, "src/content/assessments"));
-if (lessonSources.length !== 54) errors.push(`Expected 54 native lesson sources; found ${lessonSources.length}.`);
+if (lessonSources.length !== lessonCatalog.length) errors.push(`Expected ${lessonCatalog.length} native lesson records; found ${lessonSources.length}.`);
 if (assessmentSources.length !== 7) errors.push(`Expected 7 native assessment sources; found ${assessmentSources.length}.`);
 
-for (const page of [...manifest.lessons, ...manifest.assessments]) {
+for (const page of [...lessonPages, ...assessmentPages]) {
+  if (!page.contentTextHash || !page.interactionCounts || !page.audioClips) {
+    errors.push(`${page.route}: preservation fingerprint is missing.`);
+    continue;
+  }
   const sourcePath = path.join(projectRoot, page.source.replace(/^src\//, "src/"));
   if (!(await exists(sourcePath))) errors.push(`${page.route}: missing native source ${page.source}.`);
   const outputPath = routeOutput(page.route);
@@ -50,7 +57,7 @@ for (const relative of ["src", "astro.config.mjs"]) {
   }
 }
 
-for (const page of [...manifest.lessons, ...manifest.assessments]) {
+for (const page of [...lessonPages, ...assessmentPages]) {
   const oldRoute = page.route.replace(/\/$/, ".html");
   const redirectPath = routeOutput(oldRoute);
   if (!(await exists(redirectPath))) errors.push(`${oldRoute}: historical redirect output is missing.`);
@@ -63,7 +70,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Native migration verified: 54 lesson sources, 7 assessment sources, ${manifest.lessons.reduce((sum, page) => sum + page.audioClips.length, 0) + manifest.assessments.reduce((sum, page) => sum + page.audioClips.length, 0)} audio references, exact content fingerprints, interaction counts, clean routes, redirects, and no compatibility layer.`);
+console.log(`Native migration verified: ${lessonCatalog.length} canonical lesson records (${readyLessons.length} ready), 7 assessment sources, ${lessonPages.reduce((sum, page) => sum + page.audioClips.length, 0) + assessmentPages.reduce((sum, page) => sum + page.audioClips.length, 0)} audio references, exact content fingerprints, interaction counts, clean routes, redirects, and no compatibility layer.`);
 
 function routeOutput(route) {
   const clean = route.replace(/^\//, "").replace(/\/$/, "");

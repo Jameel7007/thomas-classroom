@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/common-verbs-and-adjectives.html",
-  "source": "src/content/lessons/a1/common-verbs-and-adjectives.astro",
-  "route": "/lessons/a1/common-verbs-and-adjectives/",
-  "level": "A1",
-  "slug": "common-verbs-and-adjectives",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Common verbs and adjectives · A1 Vocabulary · Curriculum Map",
+  "slug": "common-verbs-and-adjectives",
+  "level": "A1",
+  "topic": "Common verbs & adjectives",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "The most useful words you own are the everyday ones. Learn high-frequency verbs as chunks — make a decision , do the dishes , take a break , have lunch — and pair common adjectives",
-  "kind": "vocabulary",
-  "order": 19,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "a40a87a169a07c4f67175e2ec55ca456d7c49717dcbd92c23020a9c8b048d39e",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 14,
-    "data-choice-gap": 16,
-    "data-answer": 31,
-    "data-placeholder": 22,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 12,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 40,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 19,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -437,11 +394,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/weather-and-seasons/"><span>← Previous lesson</span><b>Weather &amp; seasons</b></a>
-    <a class="lnav next" href="/curriculum/#lvl-A1"><span>Back to level →</span><b>A1 · Breakthrough</b></a>
   </div>
 </main>
 </LessonPage>

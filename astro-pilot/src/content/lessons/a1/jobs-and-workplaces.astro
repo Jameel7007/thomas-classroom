@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/jobs-and-workplaces.html",
-  "source": "src/content/lessons/a1/jobs-and-workplaces.astro",
-  "route": "/lessons/a1/jobs-and-workplaces/",
-  "level": "A1",
-  "slug": "jobs-and-workplaces",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Jobs and workplaces · A1 Vocabulary · Curriculum Map",
+  "slug": "jobs-and-workplaces",
+  "level": "A1",
+  "topic": "Jobs & workplaces",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Talk about work — the most common first question between adults. Name the job with I'm a… and the place with I work at a… Choose a or an by the sound, and add -s for he and she: Sh",
-  "kind": "vocabulary",
-  "order": 13,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "bbe3da2d7435cc2713ea9521ab48412f7cbf7d6f03984d539a42dc85e33fa09c",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 11,
-    "data-choice-gap": 14,
-    "data-answer": 29,
-    "data-placeholder": 21,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-tile-game": 1,
-    "data-tile": 5,
-    "data-slot": 5,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 7,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 35,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 13,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -433,11 +390,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/daily-routines-and-telling-the-time/"><span>← Previous lesson</span><b>Daily routines &amp; telling the time</b></a>
-    <a class="lnav next" href="/lessons/a1/food-and-drink/"><span>Next lesson →</span><b>Food &amp; drink</b></a>
   </div>
 </main>
 </LessonPage>

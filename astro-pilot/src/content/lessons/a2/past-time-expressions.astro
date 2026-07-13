@@ -1,63 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/past-time-expressions.html",
-  "source": "src/content/lessons/a2/past-time-expressions.astro",
-  "route": "/lessons/a2/past-time-expressions/",
-  "level": "A2",
-  "slug": "past-time-expressions",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Past-time expressions · A2 Vocabulary · Curriculum Map",
+  "slug": "past-time-expressions",
+  "level": "A2",
+  "topic": "Past-time expressions",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Put every past event on the line from now backward. Three small families do most of the work: yesterday morning , last night , two years ago . Learn how each family behaves, then a",
-  "kind": "vocabulary",
-  "order": 15,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "bcbd85ab1e1193a52280e909be1510598b5a19ca2bf3eb637222d90df0cc5198",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 18,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 11,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 10,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 15,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -471,11 +430,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/town-and-directions/"><span>← Previous lesson</span><b>Town &amp; directions</b></a>
-    <a class="lnav next" href="/lessons/a2/feelings-and-personality/"><span>Next lesson →</span><b>Feelings &amp; personality</b></a>
   </div>
 </main>
 </LessonPage>

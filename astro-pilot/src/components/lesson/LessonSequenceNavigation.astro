@@ -1,0 +1,34 @@
+---
+interface LessonLink {
+  route: string;
+  topic: string;
+}
+
+interface LessonRecord extends LessonLink {
+  level: string;
+  assessments: string[];
+}
+
+interface Props {
+  lesson: LessonRecord;
+  previous?: LessonLink;
+  next?: LessonLink;
+  isCourseEnd: boolean;
+}
+
+const { lesson, previous, next, isCourseEnd } = Astro.props;
+const assessment = lesson.assessments[0];
+const showAssessment = isCourseEnd && assessment;
+const finalRoute = showAssessment ? `/assessments/${assessment}/` : `/curriculum/#lvl-${lesson.level}`;
+const finalTitle = showAssessment ? `${lesson.level} End-of-Level Diagnostic` : `${lesson.level} Curriculum`;
+---
+<div class="lesson-sequence-shell" data-generated-lesson-navigation>
+  <nav class="lessons-nav" aria-label="Lesson sequence">
+    {previous
+      ? <a class="lnav prev" rel="prev" href={previous.route}><span>← Previous lesson</span><b>{previous.topic}</b></a>
+      : <a class="lnav prev" href={`/curriculum/#lvl-${lesson.level}`}><span>← Back to level</span><b>{lesson.level} Curriculum</b></a>}
+    {next
+      ? <a class="lnav next" rel="next" href={next.route}><span>Next lesson →</span><b>{next.topic}</b></a>
+      : <a class="lnav next" href={finalRoute}><span>{showAssessment ? `Finish ${lesson.level} →` : `Continue ${lesson.level} →`}</span><b>{finalTitle}</b></a>}
+  </nav>
+</div>

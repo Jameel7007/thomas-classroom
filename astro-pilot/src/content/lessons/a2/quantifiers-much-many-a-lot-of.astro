@@ -1,62 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/quantifiers-much-many-a-lot-of.html",
-  "source": "src/content/lessons/a2/quantifiers-much-many-a-lot-of.astro",
-  "route": "/lessons/a2/quantifiers-much-many-a-lot-of/",
-  "level": "A2",
-  "slug": "quantifiers-much-many-a-lot-of",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "much, many, a lot of · A2 Grammar · Curriculum Map",
+  "slug": "quantifiers-much-many-a-lot-of",
+  "level": "A2",
+  "topic": "Quantifiers: much / many / a lot of",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Ask and answer about quantity in real life: How many people are coming? , We don’t have much coffee left , and There are a lot of chairs.",
-  "kind": "grammar",
-  "order": 8,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "bc870f22ac91069dacdbde64777a73d94d499ec648cc94615f1a40016dfa6c37",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 12,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 11,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 10,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 8,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -426,11 +386,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/modals-should-must-have-to/"><span>← Previous</span><b>should, must, have to</b></a>
-    <a class="lnav next" href="/lessons/a2/first-conditional/"><span>Next lesson →</span><b>First conditional</b></a>
   </div>
 </main>
 </LessonPage>

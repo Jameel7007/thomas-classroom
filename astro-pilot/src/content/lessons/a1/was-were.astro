@@ -1,62 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/was-were.html",
-  "source": "src/content/lessons/a1/was-were.astro",
-  "route": "/lessons/a1/was-were/",
-  "level": "A1",
-  "slug": "was-were",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "was / were · A1 Grammar · Curriculum Map",
+  "slug": "was-were",
+  "level": "A1",
+  "topic": "was / were (past of to be)",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Use the past of be to locate and describe earlier situations: I was at home , They were tired , and Were you busy?",
-  "kind": "grammar",
-  "order": 11,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "63f1d8ac7d2b56643b80e42a050f353438d15a6b0bf8ae2635a0e79fe12efb1f",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 13,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 12,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 11,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -428,11 +388,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/imperatives/"><span>← Previous</span><b>Imperatives</b></a>
-    <a class="lnav next" href="/curriculum/#lvl-A1"><span>Back to level →</span><b>A1 · Breakthrough</b></a>
   </div>
 </main>
 </LessonPage>

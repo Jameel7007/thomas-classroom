@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getLessonNavigation, readyLessons } from "../src/data/lesson-catalog.mjs";
+import { assessmentRoutes as assessmentRouteInventory } from "../src/data/assessment-routes.mjs";
 
 const root = fileURLToPath(new URL("../dist", import.meta.url));
 const htmlFiles = walk(root).filter((file) => file.endsWith(".html"));
@@ -27,10 +29,33 @@ for (const file of htmlFiles) {
   }
 }
 
+for (const lesson of readyLessons) {
+  const output = path.join(root, lesson.route.replace(/^\//, ""), "index.html");
+  if (!existsSync(output)) {
+    errors.push(`${lesson.route}: direct-refresh output is missing`);
+    continue;
+  }
+  const html = readFileSync(output, "utf8");
+  const navigation = getLessonNavigation(lesson.id);
+  if (!/data-generated-lesson-navigation/.test(html)) errors.push(`${lesson.route}: generated sequence navigation is missing`);
+  if (navigation.previous && !html.includes(`rel="prev" href="${navigation.previous.route}"`)) {
+    errors.push(`${lesson.route}: generated previous link is incorrect`);
+  }
+  if (navigation.next && !html.includes(`rel="next" href="${navigation.next.route}"`)) {
+    errors.push(`${lesson.route}: generated next link is incorrect`);
+  }
+  if (!navigation.next && navigation.isCourseEnd && lesson.assessments[0] && !html.includes(`href="/assessments/${lesson.assessments[0]}/"`)) {
+    errors.push(`${lesson.route}: final assessment relationship is missing from navigation`);
+  }
+  if (!navigation.isCourseEnd && lesson.assessments[0] && html.includes(`href="/assessments/${lesson.assessments[0]}/"`)) {
+    errors.push(`${lesson.route}: assessment link appears before the full planned sequence ends`);
+  }
+}
+
 const lessonRoutes = htmlFiles.filter((file) => /[/\\]lessons[/\\](?:a0|a1|a2|b1|b2)[/\\][^./\\]+[/\\]index\.html$/.test(file));
-const assessmentRoutes = htmlFiles.filter((file) => /[/\\]assessments[/\\][^./\\]+[/\\]index\.html$/.test(file));
-if (lessonRoutes.length !== 54) errors.push(`expected 54 canonical lesson routes, found ${lessonRoutes.length}`);
-if (assessmentRoutes.length !== 7) errors.push(`expected 7 canonical assessment routes, found ${assessmentRoutes.length}`);
+const assessmentOutputs = htmlFiles.filter((file) => /[/\\]assessments[/\\][^./\\]+[/\\]index\.html$/.test(file));
+if (lessonRoutes.length !== readyLessons.length) errors.push(`expected ${readyLessons.length} canonical lesson routes, found ${lessonRoutes.length}`);
+if (assessmentOutputs.length !== assessmentRouteInventory.length) errors.push(`expected ${assessmentRouteInventory.length} canonical assessment routes, found ${assessmentOutputs.length}`);
 
 if (errors.length) {
   console.error(`\nAstro build validation failed with ${errors.length} error(s):`);
@@ -39,7 +64,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`\nValidated ${htmlFiles.length} HTML outputs, ${lessonRoutes.length} lessons, ${assessmentRoutes.length} assessments, and ${checkedReferences} local references.`);
+console.log(`\nValidated ${htmlFiles.length} HTML outputs, ${lessonRoutes.length} lessons, ${assessmentOutputs.length} assessments, and ${checkedReferences} local references.`);
 
 function resolveBuiltReference(fromFile, reference) {
   let candidate = reference.startsWith("/")

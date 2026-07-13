@@ -4,10 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node tools/validate-build.mjs && node tools/validate-native-migration.mjs",
-    "check": "astro check",
+    "build": "node tools/validate-lesson-catalog.mjs && astro check && astro build && node tools/validate-curriculum.mjs && node tools/validate-build.mjs && node tools/validate-native-migration.mjs",
+    "check": "node tools/validate-lesson-catalog.mjs && astro check",
     "serve": "node ../server.mjs",
-    "validate": "node tools/validate-build.mjs && node tools/validate-native-migration.mjs"
+    "validate": "node tools/validate-lesson-catalog.mjs && node tools/validate-curriculum.mjs && node tools/validate-build.mjs && node tools/validate-native-migration.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",

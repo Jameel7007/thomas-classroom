@@ -1,62 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/will-for-predictions-and-offers.html",
-  "source": "src/content/lessons/a2/will-for-predictions-and-offers.astro",
-  "route": "/lessons/a2/will-for-predictions-and-offers/",
-  "level": "A2",
-  "slug": "will-for-predictions-and-offers",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "will · A2 Grammar · Curriculum Map",
+  "slug": "will-for-predictions-and-offers",
+  "level": "A2",
+  "topic": "will for predictions & offers",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Predict, offer, promise, and decide in the moment: I think it’ll rain , I’ll carry that for you , I won’t be late , and I’ll take this one .",
-  "kind": "grammar",
-  "order": 4,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "984dd3737366780e82ede0154f7891f451d38edb62fde383a473815083020372",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 18,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 14,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 11,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 4,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -443,11 +403,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/be-going-to-for-plans/"><span>← Previous</span><b>be going to</b></a>
-    <a class="lnav next" href="/lessons/a2/comparatives-and-superlatives/"><span>Next lesson →</span><b>Comparatives &amp; superlatives</b></a>
   </div>
 </main>
 </LessonPage>

@@ -1,66 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/food-and-drink.html",
-  "source": "src/content/lessons/a1/food-and-drink.astro",
-  "route": "/lessons/a1/food-and-drink/",
-  "level": "A1",
-  "slug": "food-and-drink",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Food and drink · A1 Vocabulary · Curriculum Map",
+  "slug": "food-and-drink",
+  "level": "A1",
+  "topic": "Food & drink",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Order in a cafe, shop for groceries, talk about your meals. Learn the everyday food and drink words, then choose a / an for one thing you can count and some / any for an amount: a ",
-  "kind": "vocabulary",
-  "order": 14,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "1f256211ce6a025d13f53a6ceeb3bb0b1c2294e1f5dbdd79f0f06460f0aebeef",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 11,
-    "data-choice-gap": 14,
-    "data-answer": 29,
-    "data-placeholder": 22,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-hint": 1,
-    "data-fix": 3,
-    "data-tile-game": 1,
-    "data-tile": 6,
-    "data-slot": 6,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 8,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-why": 2,
-    "data-error-choice": 9,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 14,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -443,11 +399,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/jobs-and-workplaces/"><span>← Previous lesson</span><b>Jobs &amp; workplaces</b></a>
-    <a class="lnav next" href="/lessons/a1/rooms-and-furniture/"><span>Next lesson →</span><b>Rooms &amp; furniture</b></a>
   </div>
 </main>
 </LessonPage>

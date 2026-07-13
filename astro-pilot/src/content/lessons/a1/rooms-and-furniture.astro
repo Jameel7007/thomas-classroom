@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/rooms-and-furniture.html",
-  "source": "src/content/lessons/a1/rooms-and-furniture.astro",
-  "route": "/lessons/a1/rooms-and-furniture/",
-  "level": "A1",
-  "slug": "rooms-and-furniture",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Rooms and furniture · A1 Vocabulary · Curriculum Map",
+  "slug": "rooms-and-furniture",
+  "level": "A1",
+  "topic": "Rooms & furniture",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Walk through a home and name what you see. Learn the rooms — kitchen , bedroom , living room — and the furniture in them — sofa , bed , desk . Then say where things are with there ",
-  "kind": "vocabulary",
-  "order": 15,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "c14553011b566a5f1b08627e16f296db4c9bfbbdff305804b3a7701946e494c6",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 6,
-    "data-choice-gap": 9,
-    "data-answer": 24,
-    "data-placeholder": 15,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 7,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 14,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 15,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -417,11 +374,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/food-and-drink/"><span>← Previous lesson</span><b>Food &amp; drink</b></a>
-    <a class="lnav next" href="/lessons/a1/hobbies-and-free-time/"><span>Next lesson →</span><b>Hobbies &amp; free time</b></a>
   </div>
 </main>
 </LessonPage>

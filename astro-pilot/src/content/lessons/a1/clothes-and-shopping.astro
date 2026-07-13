@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/clothes-and-shopping.html",
-  "source": "src/content/lessons/a1/clothes-and-shopping.astro",
-  "route": "/lessons/a1/clothes-and-shopping/",
-  "level": "A1",
-  "slug": "clothes-and-shopping",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Clothes and shopping · A1 Vocabulary · Curriculum Map",
+  "slug": "clothes-and-shopping",
+  "level": "A1",
+  "topic": "Clothes & shopping",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Name the clothes you wear and shop with confidence. The key trick: one item takes is ( this shirt is… ), and items that come in a pair or as \"many\" take are ( these shoes are… ). T",
-  "kind": "vocabulary",
-  "order": 17,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "403ddacf386fbda137b2e055348d739303578a95a0b4c6d03cfd49a74b73753c",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 4,
-    "data-choice-gap": 11,
-    "data-answer": 26,
-    "data-placeholder": 17,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 7,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 10,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 29,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 17,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -397,11 +354,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/hobbies-and-free-time/"><span>← Previous lesson</span><b>Hobbies &amp; free time</b></a>
-    <a class="lnav next" href="/lessons/a1/weather-and-seasons/"><span>Next lesson →</span><b>Weather &amp; seasons</b></a>
   </div>
 </main>
 </LessonPage>

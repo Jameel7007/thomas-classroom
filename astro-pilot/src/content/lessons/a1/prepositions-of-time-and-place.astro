@@ -1,62 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/prepositions-of-time-and-place.html",
-  "source": "src/content/lessons/a1/prepositions-of-time-and-place.astro",
-  "route": "/lessons/a1/prepositions-of-time-and-place/",
-  "level": "A1",
-  "slug": "prepositions-of-time-and-place",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Prepositions of time and place · A1 Grammar · Curriculum Map",
+  "slug": "prepositions-of-time-and-place",
+  "level": "A1",
+  "topic": "Prepositions of time and place",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Place every plan and every object precisely: at 9:30 , on Monday , in July , at work , on the table , and in the kitchen .",
-  "kind": "grammar",
-  "order": 7,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "915ec56c5bcb3cda8ed0f4e1164c4ae61b936a71c237fd7e3699fb97e90cbfc1",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 12,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 14,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 7,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -416,11 +376,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/adverbs-of-frequency/"><span>← Previous</span><b>Adverbs of frequency</b></a>
-    <a class="lnav next" href="/lessons/a1/some-any-with-countable-and-uncountable-nouns/"><span>Next lesson →</span><b>some / any</b></a>
   </div>
 </main>
 </LessonPage>

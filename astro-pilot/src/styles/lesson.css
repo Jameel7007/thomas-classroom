@@ -217,6 +217,7 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
 .choice-gap.is-wrong::after,.slot.is-wrong::after,.error-choice.is-wrong::after,.quiz-option.is-wrong::after{content:"\2717";}
 .lessons-nav{display:flex;justify-content:space-between;gap:16px;margin-top:56px;
   padding-top:28px;border-top:1px solid var(--line);}
+.lesson-sequence-shell{max-width:var(--maxw);margin:-90px auto 0;padding:0 28px 90px;}
 .lnav{text-decoration:none;color:var(--ink);max-width:46%;}
 .lnav span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
@@ -228,6 +229,7 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
 @media(max-width:800px){
   :root{--maxw:100%;}
   .wrap{padding:40px 20px 70px;}
+  .lesson-sequence-shell{margin-top:-70px;padding:0 20px 70px;}
   .bar-in{padding:12px 20px;}
   .crumb{display:none;}
   .lesson-flow{grid-template-columns:1fr 1fr;}

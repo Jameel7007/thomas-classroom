@@ -1,63 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/town-and-directions.html",
-  "source": "src/content/lessons/a2/town-and-directions.astro",
-  "route": "/lessons/a2/town-and-directions/",
-  "level": "A2",
-  "slug": "town-and-directions",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Town & directions · A2 Vocabulary · Curriculum Map",
+  "slug": "town-and-directions",
+  "level": "A2",
+  "topic": "Town & directions",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Find your way around town in English. Learn the places you pass every day, then give and follow directions with chunks you can trust: turn left , go straight , go past the bank , a",
-  "kind": "vocabulary",
-  "order": 14,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "2b17d4607f40dbeedf5644ae75a29b8d48bfa81a1650fa4b55a4b66a601dce5c",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 22,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 11,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 12,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 14,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -442,11 +401,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/health-and-the-body/"><span>← Previous lesson</span><b>Health &amp; the body</b></a>
-    <a class="lnav next" href="/lessons/a2/past-time-expressions/"><span>Next lesson →</span><b>Past-time expressions</b></a>
   </div>
 </main>
 </LessonPage>

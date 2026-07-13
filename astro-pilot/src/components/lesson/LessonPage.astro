@@ -2,26 +2,31 @@
 import "../../styles/lesson.css";
 import "../../styles/drills.css";
 import LessonNavigation from "./LessonNavigation.astro";
+import LessonSequenceNavigation from "./LessonSequenceNavigation.astro";
 import LessonExerciseEngine from "./LessonExerciseEngine.astro";
+import { getLesson, getLessonNavigation, getLessonsForLevel } from "../../data/lesson-catalog.mjs";
 
 interface PageMetadata {
   title: string;
   description: string;
   level: string;
-  kind: string;
-  route: string;
+  slug: string;
 }
 
 interface Props { page: PageMetadata }
 const { page } = Astro.props;
-const canonical = new URL(page.route, Astro.site);
+const lesson = getLesson(`${page.level.toLowerCase()}/${page.slug}`);
+if (!lesson) throw new Error(`Lesson metadata is not registered for ${page.level}/${page.slug}`);
+const canonical = new URL(lesson.route, Astro.site);
+const { previous, next, isCourseEnd } = getLessonNavigation(lesson.id);
+const levelTotal = getLessonsForLevel(lesson.level).length;
 const breadcrumbData = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Curriculum", item: new URL("/curriculum/", Astro.site) },
-    { "@type": "ListItem", position: 2, name: page.level, item: new URL(`/curriculum/#lvl-${page.level}`, Astro.site) },
-    { "@type": "ListItem", position: 3, name: page.title, item: canonical },
+    { "@type": "ListItem", position: 2, name: lesson.level, item: new URL(`/curriculum/#lvl-${lesson.level}`, Astro.site) },
+    { "@type": "ListItem", position: 3, name: lesson.title, item: canonical },
   ],
 };
 ---
@@ -30,12 +35,12 @@ const breadcrumbData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{page.title}</title>
-    <meta name="description" content={page.description} />
+    <title>{lesson.title}</title>
+    <meta name="description" content={lesson.description} />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content={page.title} />
-    <meta property="og:description" content={page.description} />
+    <meta property="og:title" content={lesson.title} />
+    <meta property="og:description" content={lesson.description} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,9 +49,9 @@ const breadcrumbData = {
     <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
   </head>
   <body>
-    <LessonNavigation level={page.level} kind={page.kind} />
+    <LessonNavigation level={lesson.level} category={lesson.category} sequence={lesson.sequence} total={levelTotal} />
     <slot />
+    <LessonSequenceNavigation lesson={lesson} previous={previous} next={next} isCourseEnd={isCourseEnd} />
     <LessonExerciseEngine />
   </body>
 </html>
-

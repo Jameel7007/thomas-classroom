@@ -1,64 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/education-and-study.html",
-  "source": "src/content/lessons/a2/education-and-study.astro",
-  "route": "/lessons/a2/education-and-study/",
-  "level": "A2",
-  "slug": "education-and-study",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Education & study · A2 Vocabulary · Curriculum Map",
+  "slug": "education-and-study",
+  "level": "A2",
+  "topic": "Education & study",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Talk about your studies like an adult: the course you take, the exam you pass, the degree you want. English fixes each noun to one partner verb, so learn them as chunks : do homewo",
-  "kind": "vocabulary",
-  "order": 18,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "cbca653fae388b0851eb8c41e7a0b84ea6753aefec71f1a87797a48d731de974",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 20,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-hint": 6,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 14,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 13,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 18,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -435,11 +393,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/technology-and-devices/"><span>← Previous lesson</span><b>Technology &amp; devices</b></a>
-    <a class="lnav next" href="/lessons/a2/phrasal-verbs/"><span>Next lesson →</span><b>Phrasal verbs</b></a>
   </div>
 </main>
 </LessonPage>

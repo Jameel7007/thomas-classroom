@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/daily-routines-and-telling-the-time.html",
-  "source": "src/content/lessons/a1/daily-routines-and-telling-the-time.astro",
-  "route": "/lessons/a1/daily-routines-and-telling-the-time/",
-  "level": "A1",
-  "slug": "daily-routines-and-telling-the-time",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Daily routines and telling the time · A1 Vocabulary · Curriculum Map",
+  "slug": "daily-routines-and-telling-the-time",
+  "level": "A1",
+  "topic": "Daily routines & telling the time",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Talk about a normal day from morning to night. Learn the routine chunks — wake up , have breakfast , go to work — and put a clock time after each one: I get up at half past six. Sh",
-  "kind": "vocabulary",
-  "order": 12,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "574df21d2087b5ebd46cf1700695528dfa2e4cbf559a7ef463e69518ebda0cff",
-  "interactionCounts": {
-    "data-choice-gap-drill": 4,
-    "data-choice-option": 18,
-    "data-choice-gap": 19,
-    "data-answer": 34,
-    "data-placeholder": 26,
-    "data-check-choices": 4,
-    "data-reset-choices": 4,
-    "data-feedback": 9,
-    "data-tile-game": 1,
-    "data-tile": 5,
-    "data-slot": 5,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 9,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 36,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 12,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -454,11 +411,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/curriculum/#lvl-A1"><span>← Back to level</span><b>A1 · Breakthrough</b></a>
-    <a class="lnav next" href="/lessons/a1/jobs-and-workplaces/"><span>Next lesson →</span><b>Jobs &amp; workplaces</b></a>
   </div>
 </main>
 </LessonPage>

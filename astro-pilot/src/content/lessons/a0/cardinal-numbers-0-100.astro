@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/cardinal-numbers-0-100.html",
-  "source": "src/content/lessons/a0/cardinal-numbers-0-100.astro",
-  "route": "/lessons/a0/cardinal-numbers-0-100/",
-  "level": "A0",
-  "slug": "cardinal-numbers-0-100",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Cardinal numbers 0–100 · A0 Grammar · Curriculum Map",
+  "slug": "cardinal-numbers-0-100",
+  "level": "A0",
+  "topic": "Cardinal numbers 0–100",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Numbers run your day: your age , a price , a phone number , a house number. Learn 0–20 , the tens, and how to join them with a hyphen — twenty-one, forty-five, ninety-nine . The ha",
-  "kind": "grammar",
-  "order": 8,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "9fb0be0d04e595a66f98c56ba8989d94afa68611abf1feed86359686897e143c",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 16,
-    "data-choice-gap": 13,
-    "data-answer": 25,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 7,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 3,
-    "data-why": 2,
-    "data-error-choice": 9,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 1,
-    "data-success-message": 1,
-    "data-quiz-item": 8,
-    "data-hint": 1,
-    "data-quiz-option": 24,
-    "data-check-quiz": 1,
-    "data-reset-quiz": 1
-  },
-  "audioClips": []
-};
+  "sequence": 8,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -376,11 +333,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/question-words-what-where-who-how/"><span>← Previous lesson</span><b>Question words</b></a>
-    <a class="lnav next" href="/lessons/a0/greetings-and-introductions/"><span>Next lesson →</span><b>Greetings and introductions</b></a>
   </div>
 </main>
 </LessonPage>

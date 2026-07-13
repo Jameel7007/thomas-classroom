@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/days-months-dates.html",
-  "source": "src/content/lessons/a0/days-months-dates.astro",
-  "route": "/lessons/a0/days-months-dates/",
-  "level": "A0",
-  "slug": "days-months-dates",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Days, months, dates · A0 Vocabulary · Curriculum Map",
+  "slug": "days-months-dates",
+  "level": "A0",
+  "topic": "Days, months, dates",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Run your week and your calendar in English. Name the seven days , the twelve months , and say a date the American way: March 8th . Then book meetings, deadlines, and appointments o",
-  "kind": "vocabulary",
-  "order": 11,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "cd3d31304e9d3af72b7340dd6f75a3180ed9e7d02096df75c2764a16c5ba334c",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 6,
-    "data-choice-gap": 8,
-    "data-answer": 23,
-    "data-placeholder": 14,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 7,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 12,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 30,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 11,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -415,11 +372,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/the-alphabet-and-spelling/"><span>← Previous lesson</span><b>The alphabet and spelling</b></a>
-    <a class="lnav next" href="/lessons/a0/colours-and-basic-adjectives/"><span>Next lesson →</span><b>Colors and basic adjectives</b></a>
   </div>
 </main>
 </LessonPage>

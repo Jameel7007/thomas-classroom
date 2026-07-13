@@ -1,67 +1,28 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/present-simple.html",
-  "source": "src/content/lessons/a1/present-simple.astro",
-  "route": "/lessons/a1/present-simple/",
-  "level": "A1",
-  "slug": "present-simple",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Present simple · A1 Grammar · Curriculum Map",
+  "slug": "present-simple",
+  "level": "A1",
+  "topic": "Present simple (all forms, do / does)",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Talk about routines, habits, facts, and normal schedules. Build clear sentences like I work from home , She works in an office , Do you start early? , and He doesn’t work on Sunday",
-  "kind": "grammar",
-  "order": 1,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
+  "sequence": 1,
+  "prerequisites": [
+    "a0/subject-pronouns",
+    "a0/the-verb-to-be"
   ],
-  "contentTextHash": "826937f17bea87f1f4c03006458476f5cc9554db8fe040c23f13bf5ab02f3202",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 20,
-    "data-choice-gap": 17,
-    "data-answer": 35,
-    "data-placeholder": 23,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 10,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 1,
-    "data-success-message": 1,
-    "data-quiz-item": 8,
-    "data-quiz-option": 24,
-    "data-check-quiz": 1,
-    "data-reset-quiz": 1
-  },
-  "audioClips": []
-};
+  "related": [
+    "a1/adverbs-of-frequency",
+    "a1/present-continuous"
+  ],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -413,11 +374,5 @@ export const page = {
     </div>
     <p class="feedback" data-feedback></p>
   </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/curriculum/#lvl-A1"><span>← Back to level</span><b>A1 · Breakthrough</b></a>
-    <a class="lnav next" href="/lessons/a1/present-continuous/"><span>Next lesson →</span><b>Present continuous</b></a>
-  </div>
 </main>
 </LessonPage>
-

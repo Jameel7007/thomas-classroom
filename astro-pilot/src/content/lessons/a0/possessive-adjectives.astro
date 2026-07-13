@@ -1,64 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/possessive-adjectives.html",
-  "source": "src/content/lessons/a0/possessive-adjectives.astro",
-  "route": "/lessons/a0/possessive-adjectives/",
-  "level": "A0",
-  "slug": "possessive-adjectives",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Possessive adjectives · A0 Grammar · Curriculum Map",
+  "slug": "possessive-adjectives",
+  "level": "A0",
+  "topic": "Possessive adjectives (my, your, his…)",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "One small word shows who owns something: my phone, your email, her office, their car . Each subject pronoun has a partner — I → my , she → her , they → their — and it always sits b",
-  "kind": "grammar",
-  "order": 6,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "aa4be1608f07c61e03892a55c51cf975ba154beffc20772f77f491d352c358b6",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 8,
-    "data-choice-gap": 9,
-    "data-answer": 22,
-    "data-placeholder": 16,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 6,
-    "data-tile-game": 1,
-    "data-tile": 5,
-    "data-slot": 5,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 8,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 3,
-    "data-fix": 3,
-    "data-why": 3,
-    "data-error-choice": 13,
-    "data-error-feedback": 3,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 1,
-    "data-success-message": 1,
-    "data-quiz-item": 8,
-    "data-quiz-option": 24,
-    "data-check-quiz": 1,
-    "data-reset-quiz": 1
-  },
-  "audioClips": []
-};
+  "sequence": 6,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -352,11 +310,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/regular-plural-nouns/"><span>← Previous lesson</span><b>Regular plural nouns</b></a>
-    <a class="lnav next" href="/lessons/a0/question-words-what-where-who-how/"><span>Next lesson →</span><b>Question words</b></a>
   </div>
 </main>
 </LessonPage>

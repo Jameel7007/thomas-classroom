@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/hobbies-and-free-time.html",
-  "source": "src/content/lessons/a1/hobbies-and-free-time.astro",
-  "route": "/lessons/a1/hobbies-and-free-time/",
-  "level": "A1",
-  "slug": "hobbies-and-free-time",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Hobbies and free time · A1 Vocabulary · Curriculum Map",
+  "slug": "hobbies-and-free-time",
+  "level": "A1",
+  "topic": "Hobbies & free time",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Talk about what you do after work and on weekends. The trick is the verb: we play sports and instruments, we go with -ing activities, and we do a few others — play soccer , go swim",
-  "kind": "vocabulary",
-  "order": 16,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "5c2e9e5ec6c7ad3d9dad40b6b34772e6a142ac91057b3a37bd28d94568ddf5c6",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 15,
-    "data-choice-gap": 13,
-    "data-answer": 28,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 9,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 16,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -426,11 +383,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/rooms-and-furniture/"><span>← Previous lesson</span><b>Rooms &amp; furniture</b></a>
-    <a class="lnav next" href="/lessons/a1/clothes-and-shopping/"><span>Next lesson →</span><b>Clothes &amp; shopping</b></a>
   </div>
 </main>
 </LessonPage>

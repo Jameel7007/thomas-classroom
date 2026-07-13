@@ -1,10 +1,12 @@
 ---
 interface Props {
   level: string;
-  kind: string;
+  category: string;
+  sequence: number;
+  total: number;
 }
 
-const { level, kind } = Astro.props;
+const { level, category, sequence, total } = Astro.props;
 const names: Record<string, string> = {
   A0: "Starter",
   A1: "Breakthrough",
@@ -16,7 +18,6 @@ const names: Record<string, string> = {
 <div class="bar">
   <div class="bar-in">
     <a class="back" href={`/curriculum/#lvl-${level}`}>← Curriculum Map</a>
-    <span class="crumb"><b>{level} · {names[level] || "English"}</b> &nbsp;/&nbsp; {kind}</span>
+    <span class="crumb"><b>{level} · {names[level] || "English"}</b> &nbsp;/&nbsp; {category} &nbsp;·&nbsp; {sequence} of {total}</span>
   </div>
 </div>
-

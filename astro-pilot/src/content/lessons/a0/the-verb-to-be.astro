@@ -1,64 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/the-verb-to-be.html",
-  "source": "src/content/lessons/a0/the-verb-to-be.astro",
-  "route": "/lessons/a0/the-verb-to-be/",
-  "level": "A0",
-  "slug": "the-verb-to-be",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "The verb “to be” · A0 Grammar · Curriculum Map",
+  "slug": "the-verb-to-be",
+  "level": "A0",
+  "topic": "The verb to be (am / is / are)",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "The most common verb in English. We use to be to talk about who we are, how we feel, our age, and where things are.",
-  "kind": "grammar",
-  "order": 1,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "b1c8407eb90478d87176f8a68ff4e9e36754d1cf2584ad36719bca1ab0658f2b",
-  "interactionCounts": {
-    "data-choice-gap-drill": 1,
-    "data-choice-option": 3,
-    "data-choice-gap": 6,
-    "data-answer": 17,
-    "data-placeholder": 12,
-    "data-check-choices": 1,
-    "data-reset-choices": 1,
-    "data-feedback": 5,
-    "data-tile-game": 1,
-    "data-tile": 5,
-    "data-slot": 5,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-transform": 2,
-    "data-transform-item": 8,
-    "data-reveal-transform": 8,
-    "data-transform-answer": 8,
-    "data-tile-builder": 1,
-    "data-build-bank": 1,
-    "data-build-tile": 4,
-    "data-build-area": 1,
-    "data-check-build": 1,
-    "data-reset-build": 1,
-    "data-spot-error": 1,
-    "data-fix": 1,
-    "data-why": 1,
-    "data-error-choice": 4,
-    "data-error-feedback": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 9,
-    "data-quiz-option": 27,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 1,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -368,15 +326,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/curriculum/#lvl-A0">
-      <span>← Back to</span><b>A0 Starter</b>
-    </a>
-    <a class="lnav next" href="/lessons/a0/subject-pronouns/">
-      <span>Next lesson →</span><b>Subject pronouns</b>
-    </a>
   </div>
 </main>
 </LessonPage>

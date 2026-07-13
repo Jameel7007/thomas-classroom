@@ -1,0 +1,182 @@
+---
+import { lessonCounts } from "../../data/lesson-catalog.mjs";
+import { LESSON_LEVELS } from "../../data/lesson-schema.mjs";
+
+const counts = lessonCounts();
+---
+<section class="curriculum-finder" data-curriculum-finder hidden aria-labelledby="curriculum-finder-title">
+  <div class="finder-heading">
+    <div>
+      <p class="finder-kicker">Find your next lesson</p>
+      <h2 id="curriculum-finder-title">Search the complete path.</h2>
+    </div>
+    <p>Filter the map without losing the level context. “Open now” topics lead to complete interactive lessons.</p>
+  </div>
+
+  <form class="finder-form" data-finder-form role="search">
+    <label class="finder-field finder-search">
+      <span>Search topics</span>
+      <span class="finder-input-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.4a7.75 7.75 0 1 1-15.5 0 7.75 7.75 0 0 1 15.5 0Z" /></svg>
+        <input type="search" name="q" autocomplete="off" placeholder="Try “present perfect” or “travel”" data-finder-query />
+      </span>
+    </label>
+
+    <label class="finder-field">
+      <span>Level</span>
+      <select name="level" data-finder-level>
+        <option value="all">All levels</option>
+        <option value="A0">A0 · Starter</option>
+        <option value="A1">A1 · Beginner</option>
+        <option value="A2">A2 · Elementary</option>
+        <option value="B1">B1 · Intermediate</option>
+        <option value="B2">B2 · Upper-intermediate</option>
+      </select>
+    </label>
+
+    <label class="finder-field">
+      <span>Content</span>
+      <select name="type" data-finder-type>
+        <option value="all">Grammar + vocabulary</option>
+        <option value="grammar">Grammar</option>
+        <option value="vocabulary">Vocabulary &amp; topics</option>
+      </select>
+    </label>
+
+    <label class="finder-field">
+      <span>Availability</span>
+      <select name="availability" data-finder-availability>
+        <option value="all">Open + planned</option>
+        <option value="ready">Open now</option>
+        <option value="planned">Planned</option>
+      </select>
+    </label>
+  </form>
+
+  <div class="finder-summary">
+    <p data-finder-status aria-live="polite">{counts.total} topics across {LESSON_LEVELS.length} levels · {counts.ready} interactive lessons open now</p>
+    <button type="button" class="finder-reset" data-finder-reset disabled>Clear filters</button>
+  </div>
+</section>
+
+<script>
+  import { lessonMatchesFilters } from "../../lib/curriculum-filter.mjs";
+
+  const finder = document.querySelector<HTMLElement>("[data-curriculum-finder]");
+  const map = document.querySelector<HTMLElement>("[data-curriculum-map]");
+
+  if (finder && map) {
+    const form = finder.querySelector<HTMLFormElement>("[data-finder-form]");
+    const queryInput = finder.querySelector<HTMLInputElement>("[data-finder-query]");
+    const levelSelect = finder.querySelector<HTMLSelectElement>("[data-finder-level]");
+    const typeSelect = finder.querySelector<HTMLSelectElement>("[data-finder-type]");
+    const availabilitySelect = finder.querySelector<HTMLSelectElement>("[data-finder-availability]");
+    const status = finder.querySelector<HTMLElement>("[data-finder-status]");
+    const reset = finder.querySelector<HTMLButtonElement>("[data-finder-reset]");
+    const levels = Array.from(map.querySelectorAll<HTMLElement>("[data-curriculum-level]"));
+    const topics = Array.from(map.querySelectorAll<HTMLElement>("[data-curriculum-topic]"));
+
+    if (form && queryInput && levelSelect && typeSelect && availabilitySelect && status && reset) {
+      const validLevels = new Set(["all", "A0", "A1", "A2", "B1", "B2"]);
+      const validTypes = new Set(["all", "grammar", "vocabulary"]);
+      const validAvailability = new Set(["all", "ready", "planned"]);
+      const params = new URLSearchParams(window.location.search);
+      const requestedLevel = params.get("level") ?? "all";
+      const requestedType = params.get("type") ?? "all";
+      const requestedAvailability = params.get("availability") ?? "all";
+
+      queryInput.value = params.get("q") ?? "";
+      levelSelect.value = validLevels.has(requestedLevel) ? requestedLevel : "all";
+      typeSelect.value = validTypes.has(requestedType) ? requestedType : "all";
+      availabilitySelect.value = validAvailability.has(requestedAvailability) ? requestedAvailability : "all";
+      finder.hidden = false;
+
+      const updateUrl = () => {
+        const nextUrl = new URL(window.location.href);
+        const values = {
+          q: queryInput.value.trim(),
+          level: levelSelect.value,
+          type: typeSelect.value,
+          availability: availabilitySelect.value,
+        };
+
+        Object.entries(values).forEach(([key, value]) => {
+          if (value && value !== "all") nextUrl.searchParams.set(key, value);
+          else nextUrl.searchParams.delete(key);
+        });
+
+        window.history.replaceState({}, "", `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
+      };
+
+      const applyFilters = () => {
+        const query = queryInput.value.trim();
+        const selectedLevel = levelSelect.value;
+        const selectedType = typeSelect.value;
+        const selectedAvailability = availabilitySelect.value;
+        const topicFiltering = Boolean(query) || selectedType !== "all" || selectedAvailability !== "all";
+        let visibleCount = 0;
+        let readyCount = 0;
+        let visibleLevelCount = 0;
+
+        map.classList.toggle("is-topic-filtering", topicFiltering);
+
+        levels.forEach((level) => {
+          const levelCode = level.dataset.curriculumLevel ?? "";
+          const levelMatches = selectedLevel === "all" || selectedLevel === levelCode;
+          const levelTopics = Array.from(level.querySelectorAll<HTMLElement>("[data-curriculum-topic]"));
+          let levelMatchCount = 0;
+
+          levelTopics.forEach((topic) => {
+            const topicReady = topic.dataset.topicAvailability === "ready";
+            const visible = levelMatches && lessonMatchesFilters({
+              level: levelCode,
+              text: topic.textContent ?? "",
+              type: topic.dataset.topicType ?? "",
+              availability: topic.dataset.topicAvailability ?? "",
+            }, {
+              query,
+              level: selectedLevel,
+              type: selectedType,
+              availability: selectedAvailability,
+            });
+
+            topic.hidden = !visible;
+            if (visible) {
+              levelMatchCount += 1;
+              visibleCount += 1;
+              if (topicReady) readyCount += 1;
+            }
+          });
+
+          level.querySelectorAll<HTMLElement>("[data-curriculum-topic-group]").forEach((group) => {
+            group.hidden = !Array.from(group.querySelectorAll<HTMLElement>("[data-curriculum-topic]")).some((topic) => !topic.hidden);
+          });
+
+          const levelVisible = levelMatches && (!topicFiltering || levelMatchCount > 0);
+          level.hidden = !levelVisible;
+          if (levelVisible) visibleLevelCount += 1;
+        });
+
+        const hasFilters = Boolean(query) || selectedLevel !== "all" || selectedType !== "all" || selectedAvailability !== "all";
+        reset.disabled = !hasFilters;
+        status.textContent = hasFilters
+          ? `${visibleCount} ${visibleCount === 1 ? "topic" : "topics"} found across ${visibleLevelCount} ${visibleLevelCount === 1 ? "level" : "levels"} · ${readyCount} open now`
+          : `${topics.length} topics across ${levels.length} levels · ${topics.filter((topic) => topic.dataset.topicAvailability === "ready").length} interactive lessons open now`;
+        map.toggleAttribute("data-no-results", visibleCount === 0);
+        updateUrl();
+      };
+
+      form.addEventListener("input", applyFilters);
+      form.addEventListener("change", applyFilters);
+      form.addEventListener("submit", (event) => event.preventDefault());
+      reset.addEventListener("click", () => {
+        form.reset();
+        queryInput.value = "";
+        applyFilters();
+        queryInput.focus();
+      });
+
+      applyFilters();
+    }
+  }
+</script>

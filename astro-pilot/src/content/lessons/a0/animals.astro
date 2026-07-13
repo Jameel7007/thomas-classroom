@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/animals.html",
-  "source": "src/content/lessons/a0/animals.astro",
-  "route": "/lessons/a0/animals/",
-  "level": "A0",
-  "slug": "animals",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Animals · A0 Vocabulary · Curriculum Map",
+  "slug": "animals",
+  "level": "A0",
+  "topic": "Animals",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Name common animals with a or an : a dog , an elephant . Then talk about one or many: The cat is small. The dogs are big. Finish with real life: I have a cat. My neighbor has two d",
-  "kind": "vocabulary",
-  "order": 16,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "b9f333af4cf70fdae502266958698c0937aefe44dc3466ef95bcd00be9ca3fc8",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 12,
-    "data-choice-gap": 14,
-    "data-answer": 29,
-    "data-placeholder": 23,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 7,
-    "data-tile-game": 1,
-    "data-tile": 7,
-    "data-slot": 7,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 10,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 29,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 15,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -425,11 +382,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/classroom-objects/"><span>← Previous lesson</span><b>Classroom objects</b></a>
-    <a class="lnav next" href="/lessons/a0/countries-and-nationalities/"><span>Next lesson →</span><b>Countries &amp; nationalities</b></a>
   </div>
 </main>
 </LessonPage>

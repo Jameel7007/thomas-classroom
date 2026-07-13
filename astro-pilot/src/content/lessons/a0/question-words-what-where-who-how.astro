@@ -1,64 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/question-words-what-where-who-how.html",
-  "source": "src/content/lessons/a0/question-words-what-where-who-how.astro",
-  "route": "/lessons/a0/question-words-what-where-who-how/",
-  "level": "A0",
-  "slug": "question-words-what-where-who-how",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Question words · A0 Grammar · Curriculum Map",
+  "slug": "question-words-what-where-who-how",
+  "level": "A0",
+  "topic": "Question words: what, where, who, how",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Four small words open almost every conversation. Use what for a thing, where for a place, who for a person, and how for a feeling or a way. Then keep the order simple: question wor",
-  "kind": "grammar",
-  "order": 7,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "0ba8fbb4a4b251d26f35eb0c8511a82c25a6431f329623e89f1ecc6799898745",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 8,
-    "data-choice-gap": 10,
-    "data-answer": 23,
-    "data-placeholder": 17,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 7,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 3,
-    "data-build-bank": 3,
-    "data-build-tile": 12,
-    "data-build-area": 3,
-    "data-check-build": 3,
-    "data-reset-build": 3,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 1,
-    "data-success-message": 1,
-    "data-quiz-item": 8,
-    "data-quiz-option": 30,
-    "data-check-quiz": 1,
-    "data-reset-quiz": 1
-  },
-  "audioClips": []
-};
+  "sequence": 7,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -357,11 +315,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/possessive-adjectives/"><span>← Previous lesson</span><b>Possessive adjectives</b></a>
-    <a class="lnav next" href="/lessons/a0/cardinal-numbers-0-100/"><span>Next lesson →</span><b>Cardinal numbers 0–100</b></a>
   </div>
 </main>
 </LessonPage>

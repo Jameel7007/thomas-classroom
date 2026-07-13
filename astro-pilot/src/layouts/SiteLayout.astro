@@ -1,5 +1,6 @@
 ---
 import "../styles/site.css";
+import { lessonCounts } from "../data/lesson-catalog.mjs";
 
 interface Props {
   title: string;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const { title, description, current, heading = "The English Curriculum Map", lede = description, showLevelJumps = false } = Astro.props;
+const counts = lessonCounts();
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const levels = [
   { code: "A0", hue: 28 },
@@ -43,7 +45,7 @@ const levels = [
         <p class="lede">{lede}</p>
         <div class="mast-stats" aria-label="Curriculum overview">
           <span class="stat"><b>5</b> CEFR stages</span><span class="stat-div"></span>
-          <span class="stat"><b>92</b> planned lessons</span><span class="stat-div"></span>
+          <span class="stat"><b>{counts.total}</b> curriculum topics · {counts.ready} open</span><span class="stat-div"></span>
           <span class="stat"><b>A0–B2</b> one coherent path</span>
         </div>
       </div>

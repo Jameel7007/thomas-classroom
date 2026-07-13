@@ -1,63 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/technology-and-devices.html",
-  "source": "src/content/lessons/a2/technology-and-devices.astro",
-  "route": "/lessons/a2/technology-and-devices/",
-  "level": "A2",
-  "slug": "technology-and-devices",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Technology & devices · A2 Vocabulary · Curriculum Map",
+  "slug": "technology-and-devices",
+  "level": "A2",
+  "topic": "Technology & devices",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Name the devices on your desk and in your pocket, then learn the small verb chunks that run them: turn on , plug in , charge , download , log in . Finish with the survival lines fo",
-  "kind": "vocabulary",
-  "order": 17,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "36b254b0367c402cb1780c2bc278637e8cc5345c852d90ad1cc108afdb1b6ce7",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 20,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 13,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 17,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -437,11 +396,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/feelings-and-personality/"><span>← Previous lesson</span><b>Feelings &amp; personality</b></a>
-    <a class="lnav next" href="/lessons/a2/education-and-study/"><span>Next lesson →</span><b>Education &amp; study</b></a>
   </div>
 </main>
 </LessonPage>

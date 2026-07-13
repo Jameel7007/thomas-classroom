@@ -3,6 +3,11 @@
 Completed: 2026-07-12  
 Restore checkpoint: `94ee098` (`Checkpoint Astro compatibility migration`)
 
+Post-migration authoring update: lesson metadata now lives once in each lesson
+source file and is validated through `lesson-schema.mjs` and
+`lesson-catalog.mjs`. One dynamic static-route entry generates all ready lesson
+URLs, while metadata-only Astro files register planned B1/B2 topics.
+
 ## Completion status
 
 - 54 of 54 canonical lessons are direct, editable Astro source.
@@ -19,7 +24,7 @@ Restore checkpoint: `94ee098` (`Checkpoint Astro compatibility migration`)
 - `AssessmentPage`, `QuickCheckPage`, `AssessmentEngine`, and `QuickCheckEngine` own assessment layout, scoring, level analysis, progress, teacher evidence, result records, and reset/print/copy behavior.
 - Reusable authoring components include `MultipleChoiceExercise`, `RevealCard`, `SentenceCorrection`, `FeedbackPanel`, `VocabularyCards`, `AudioControl`, and `ProgressIndicator`.
 - Shared styles and client scripts now live entirely under `src/styles/` and `src/scripts/`; images and flags live under `public/assets/`.
-- Each public lesson/assessment has a concrete route module, preventing page-specific CSS from leaking across routes.
+- A lazy dynamic lesson route imports only the selected native lesson component; assessments retain their native route entries.
 
 ## Top-level pages
 

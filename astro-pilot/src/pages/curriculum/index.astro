@@ -1,10 +1,9 @@
 ---
 import SiteLayout from "../../layouts/SiteLayout.astro";
-import { curriculum, lessonSlug } from "../../lib/curriculum";
-import { lessonRoutes } from "../../data/native-routes.mjs";
+import CurriculumFinder from "../../components/curriculum/CurriculumFinder.astro";
+import { curriculum } from "../../lib/curriculum";
+import { getLessonsForLevel } from "../../data/lesson-catalog.mjs";
 
-const lessonByKey = new Map<string, { slug: string }>();
-lessonRoutes.forEach((page) => lessonByKey.set(`${page.level}/${page.slug}`, { slug: page.slug }));
 const hues = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305 };
 const accent = (code: keyof typeof hues) => {
   const hue = hues[code];
@@ -25,7 +24,7 @@ const skillLabels = {
   current="curriculum"
   showLevelJumps
 >
-  <div class="sections">
+  <div class="sections" data-curriculum-map>
     <section class="page-intro">
       <div class="explainer-grid">
         <div><p class="explainer-kicker">How to read the map</p><h2>Ability first. Grammar in service of real communication.</h2></div>
@@ -37,8 +36,16 @@ const skillLabels = {
       </div>
     </section>
 
+    <CurriculumFinder />
+
+    <div class="curriculum-empty" data-curriculum-empty>
+      <p class="finder-kicker">No matching topics</p>
+      <h2>Try a broader search.</h2>
+      <p>Change a filter or clear the search to return to the complete A0–B2 path.</p>
+    </div>
+
     {curriculum.map((level) => (
-      <section class="level" id={`lvl-${level.code}`} style={accent(level.code)}>
+      <section class="level" id={`lvl-${level.code}`} style={accent(level.code)} data-curriculum-level={level.code}>
         <div class="level-head">
           <div class="level-mark"><span class="level-code">{level.code}</span><span class="level-name">{level.name}</span></div>
           <div>
@@ -51,37 +58,36 @@ const skillLabels = {
           </div>
         </div>
 
-        <div class="assessment-band" aria-label={`${level.code} end-of-level diagnostic`}>
+        <div class="assessment-band" aria-label={`${level.code} end-of-level diagnostic`} data-curriculum-detail>
           <a class:list={["assessment-card", level.code !== "A0" && "soon"]} href={`/assessments/${level.code.toLowerCase()}-exit/`}><span class="assessment-label">After completing the level</span><h3>{level.code} End-of-Level Diagnostic</h3><p>{level.code === "A0" ? "Check the complete foundation and decide whether the learner is ready to begin A1." : "Open the current diagnostic page and its planned assessment scope."}</p></a>
           <div class="assessment-evidence"><span class="assessment-label">Evidence of progress</span><p>The learner notices, chooses, builds, understands, and produces language across grammar, vocabulary, receptive skills, and real communication.</p></div>
         </div>
 
-        <div class="cando">
+        <div class="cando" data-curriculum-detail>
           <h3 class="cando-title">By the end of <strong>{level.code}</strong>, a learner can…</h3>
           <ul class="cando-list">{level.canDo.map((ability) => <li class="cando-item"><span class="cando-bullet"></span>{ability}</li>)}</ul>
         </div>
 
         <div class="grid">
           {[
-            { label: "Grammar", index: "Aa", items: level.grammar },
-            { label: "Vocabulary & Topics", index: "¶", items: level.vocab },
+            { label: "Grammar", index: "Aa", contentType: "grammar" },
+            { label: "Vocabulary & Topics", index: "¶", contentType: "vocabulary" },
           ].map((group) => (
-            <article class="card card--wide">
+            <article class="card card--wide" data-curriculum-topic-group={group.contentType}>
               <header class="card-head"><span class="card-index">{group.index}</span><h3 class="card-label">{group.label}</h3></header>
               <div class="chips-wrap">
-                {group.items.map((item) => {
-                  const lesson = lessonByKey.get(`${level.code}/${lessonSlug(item)}`);
-                  return lesson
-                    ? <a class="vchip" href={`/lessons/${level.code.toLowerCase()}/${lesson.slug}/`}>{item}<span aria-hidden="true">→</span></a>
-                    : <span class="vchip vchip--soon" aria-disabled="true">{item}<span class="soon-tag">Soon</span></span>;
-                })}
+                {getLessonsForLevel(level.code)
+                  .filter((lesson) => lesson.contentType === group.contentType)
+                  .map((lesson) => lesson.status === "ready"
+                    ? <a class="vchip" href={lesson.route} data-curriculum-topic data-topic-type={lesson.contentType} data-topic-availability={lesson.status}>{lesson.topic}<span aria-hidden="true">→</span></a>
+                    : <span class="vchip vchip--soon" aria-disabled="true" data-curriculum-topic data-topic-type={lesson.contentType} data-topic-availability={lesson.status}>{lesson.topic}<span class="soon-tag">Soon</span></span>)}
               </div>
             </article>
           ))}
 
           {Object.entries(level.skills).map(([key, items]) => {
             const [index, label] = skillLabels[key as keyof typeof skillLabels];
-            return <article class="card">
+            return <article class="card" data-curriculum-detail>
               <header class="card-head"><span class="card-index">{index}</span><h3 class="card-label">{label}</h3></header>
               <ul class="list">{items.map((item) => <li class="item-static"><span class="item-tick"></span><span>{item}</span></li>)}</ul>
             </article>;

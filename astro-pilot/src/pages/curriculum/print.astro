@@ -1,6 +1,7 @@
 ---
 import "../../styles/curriculum-print.css";
 import { curriculum } from "../../lib/curriculum";
+import { getLessonsForLevel, lessonCounts } from "../../data/lesson-catalog.mjs";
 
 const hues: Record<string, number> = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305 };
 const accent = (code: string) => {
@@ -8,7 +9,7 @@ const accent = (code: string) => {
   return `--accent:oklch(0.58 0.13 ${hue});--accent-deep:oklch(0.46 0.13 ${hue});--accent-tint:oklch(0.965 0.045 ${hue});--accent-soft:oklch(0.92 0.045 ${hue});`;
 };
 const skills = [["listening", "Listening"], ["reading", "Reading"], ["speaking", "Speaking"], ["writing", "Writing"]] as const;
-const lessonCount = curriculum.reduce((total, level) => total + level.grammar.length + level.vocab.length, 0);
+const lessonCount = lessonCounts().total;
 ---
 <!doctype html>
 <html lang="en">
@@ -62,9 +63,9 @@ const lessonCount = curriculum.reduce((total, level) => total + level.grammar.le
           <ul class="cando-list">{level.canDo.map((ability) => <li class="cando-item"><span class="cando-bullet"></span>{ability}</li>)}</ul>
         </div>
         <p class="section-label">Grammar</p>
-        <div class="cols">{level.grammar.map((item) => <div class="gitem"><span class="gbull"></span>{item}</div>)}</div>
+        <div class="cols">{getLessonsForLevel(level.code).filter((lesson) => lesson.contentType === "grammar").map((lesson) => <div class="gitem"><span class="gbull"></span>{lesson.topic}</div>)}</div>
         <p class="section-label">Vocabulary &amp; Topics</p>
-        <div class="chips-wrap">{level.vocab.map((item) => <span class="vchip">{item}</span>)}</div>
+        <div class="chips-wrap">{getLessonsForLevel(level.code).filter((lesson) => lesson.contentType === "vocabulary").map((lesson) => <span class="vchip">{lesson.topic}</span>)}</div>
         <p class="section-label">The Four Skills</p>
         <div class="skills-grid">
           {skills.map(([key, label]) => <div class="skill"><h4>{label}</h4><ul>{level.skills[key].map((item) => <li><span class="t"></span>{item}</li>)}</ul></div>)}
@@ -79,4 +80,3 @@ const lessonCount = curriculum.reduce((total, level) => total + level.grammar.le
     </script>
   </body>
 </html>
-

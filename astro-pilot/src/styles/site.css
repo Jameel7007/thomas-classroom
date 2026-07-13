@@ -2,6 +2,7 @@
 
 :root{--maxw:1120px;--pad:40px}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit}
@@ -42,6 +43,34 @@ a{color:inherit}
 .explainer-points{display:grid;gap:12px}
 .explainer-points p{margin:0;padding-left:14px;border-left:2px solid var(--accent-soft);color:var(--ink-2);font-size:15.5px;line-height:1.55}
 .explainer-points b{color:var(--accent-deep)}
+
+/* Native curriculum discovery — the complete map remains visible without JS */
+.curriculum-finder{margin:26px 0 8px;padding:24px 26px 18px;border:1px solid var(--line);border-radius:16px;background:color-mix(in oklab,var(--surface) 76%,var(--accent-tint))}
+.finder-heading{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(300px,1.1fr);gap:24px;align-items:end;margin-bottom:20px}
+.finder-kicker{margin:0 0 7px;color:var(--accent-deep);font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.finder-heading h2,.curriculum-empty h2{margin:0;color:var(--ink);font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:500;letter-spacing:-.02em;line-height:1.05}
+.finder-heading>p{max-width:52ch;margin:0;color:var(--ink-2);font-size:14px;line-height:1.5}
+.finder-form{display:grid;grid-template-columns:minmax(260px,1.7fr) repeat(3,minmax(130px,.75fr));gap:10px;align-items:end}
+.finder-field{display:grid;gap:6px;min-width:0;color:var(--muted);font:500 10.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.finder-field input,.finder-field select{width:100%;height:44px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:500 13px/1.35 var(--sans);letter-spacing:0;text-transform:none;transition:border-color .13s ease,box-shadow .13s ease,background .13s ease}
+.finder-field input{padding:0 12px 0 39px}
+.finder-field select{padding:0 34px 0 12px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 16px) 18px,calc(100% - 11px) 18px;background-repeat:no-repeat;background-size:5px 5px;appearance:none}
+.finder-field input::placeholder{color:var(--muted);font-weight:400}
+.finder-input-wrap{position:relative;display:block}
+.finder-input-wrap svg{position:absolute;left:13px;top:50%;width:17px;height:17px;transform:translateY(-50%);fill:none;stroke:var(--muted);stroke-linecap:round;stroke-width:1.8;pointer-events:none}
+.finder-field input:hover,.finder-field select:hover{border-color:var(--ink-2);background-color:var(--surface)}
+.finder-field input:focus-visible,.finder-field select:focus-visible{outline:0;border-color:var(--accent-deep);box-shadow:0 0 0 3px var(--accent-soft);background-color:var(--surface)}
+.finder-summary{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:14px;padding-top:13px;border-top:1px solid var(--line)}
+.finder-summary p{margin:0;color:var(--ink-2);font:500 11.5px/1.45 var(--mono)}
+.finder-reset{padding:5px 0;border:0;border-bottom:1px solid currentColor;background:transparent;color:var(--accent-deep);font:500 11px/1.3 var(--mono);cursor:pointer}
+.finder-reset:hover{color:var(--ink)}
+.finder-reset:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px}
+.finder-reset:disabled{border-color:transparent;color:var(--muted);cursor:default;opacity:.55}
+.is-topic-filtering [data-curriculum-detail]{display:none}
+.is-topic-filtering .level{padding-top:34px}
+.curriculum-empty{display:none;margin:32px 0;padding:34px;border:1px dashed var(--line);border-radius:16px;background:var(--surface);text-align:center}
+.curriculum-empty>p:last-child{margin:12px auto 0;color:var(--ink-2)}
+[data-curriculum-map][data-no-results] .curriculum-empty{display:block}
 
 /* Level composition mirrors the original React map */
 .level{padding:48px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
@@ -129,7 +158,8 @@ a{color:inherit}
 .foot{max-width:var(--maxw);margin:0 auto;padding:40px var(--pad) 70px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:30px;align-items:end;flex-wrap:wrap}
 .foot p{max-width:58ch;margin:0;color:var(--muted);font-size:12.5px;line-height:1.5}
 .foot-mark{font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
-@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.journey-grid{grid-template-columns:repeat(3,1fr)}.content-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:720px){:root{--pad:22px}.topnav-inner{align-items:flex-start}.level-jumps{width:100%;padding-top:2px}.level-head{grid-template-columns:1fr;gap:22px}.cando-list,.explainer-grid,.bio-grid,.assessment-band{grid-template-columns:1fr}.grid,.content-grid,.blog-grid{grid-template-columns:1fr}.card--wide{grid-column:auto}.journey-grid{grid-template-columns:1fr 1fr}.bio-mark{max-width:220px}.transfer-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.finder-form{grid-template-columns:1fr 1fr}.finder-search{grid-column:1/-1}.grid{grid-template-columns:1fr 1fr}.journey-grid{grid-template-columns:repeat(3,1fr)}.content-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){:root{--pad:22px}.topnav-inner{align-items:flex-start}.level-jumps{width:100%;padding-top:2px}.finder-heading{grid-template-columns:1fr;gap:10px}.level-head{grid-template-columns:1fr;gap:22px}.cando-list,.explainer-grid,.bio-grid,.assessment-band{grid-template-columns:1fr}.grid,.content-grid,.blog-grid{grid-template-columns:1fr}.card--wide{grid-column:auto}.journey-grid{grid-template-columns:1fr 1fr}.bio-mark{max-width:220px}.transfer-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.curriculum-finder{padding:20px 18px 16px}.finder-form{grid-template-columns:1fr}.finder-search{grid-column:auto}.finder-summary{align-items:flex-start;flex-direction:column;gap:8px}}
 @media(max-width:460px){.journey-grid{grid-template-columns:1fr}.mast-stats{gap:10px}.stat-div{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stop,.vchip{transition:none}}

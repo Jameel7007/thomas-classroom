@@ -1,62 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a1/object-pronouns.html",
-  "source": "src/content/lessons/a1/object-pronouns.astro",
-  "route": "/lessons/a1/object-pronouns/",
-  "level": "A1",
-  "slug": "object-pronouns",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Object pronouns · A1 Grammar · Curriculum Map",
+  "slug": "object-pronouns",
+  "level": "A1",
+  "topic": "Object pronouns",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Avoid repeating names and things: Call me , I know her , Give it to them , and Come with us .",
-  "kind": "grammar",
-  "order": 9,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "aaeb3fdf59a34b8d67804f52de8a3715009837586c2775406137e66fa6d82771",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 19,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 12,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 8,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 9,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a1-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -430,11 +390,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a1/some-any-with-countable-and-uncountable-nouns/"><span>← Previous</span><b>some / any</b></a>
-    <a class="lnav next" href="/lessons/a1/imperatives/"><span>Next lesson →</span><b>Imperatives</b></a>
   </div>
 </main>
 </LessonPage>

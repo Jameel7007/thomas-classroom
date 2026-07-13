@@ -1,63 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/feelings-and-personality.html",
-  "source": "src/content/lessons/a2/feelings-and-personality.astro",
-  "route": "/lessons/a2/feelings-and-personality/",
-  "level": "A2",
-  "slug": "feelings-and-personality",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Feelings & personality · A2 Vocabulary · Curriculum Map",
+  "slug": "feelings-and-personality",
+  "level": "A2",
+  "topic": "Feelings & personality",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Say how you feel and describe what people are like. Learn feeling adjectives with be and feel , escape the classic bored / boring trap, and build a set of personality words for rea",
-  "kind": "vocabulary",
-  "order": 16,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "f91e049c386693d2845f8d4de5fa4551c4b58478aff4a5d72380c3fa41f598c7",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 20,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 11,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 11,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 16,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -454,11 +413,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/past-time-expressions/"><span>← Previous lesson</span><b>Past-time expressions</b></a>
-    <a class="lnav next" href="/lessons/a2/technology-and-devices/"><span>Next lesson →</span><b>Technology &amp; devices</b></a>
   </div>
 </main>
 </LessonPage>

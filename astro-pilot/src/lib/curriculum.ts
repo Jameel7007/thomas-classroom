@@ -8,18 +8,7 @@ export interface CurriculumLevel {
   gse: string;
   blurb: string;
   canDo: string[];
-  grammar: string[];
-  vocab: string[];
   skills: Record<"listening" | "reading" | "speaking" | "writing", string[]>;
 }
 
 export { curriculum };
-
-export function lessonSlug(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/\([^)]*\)/g, "")
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}

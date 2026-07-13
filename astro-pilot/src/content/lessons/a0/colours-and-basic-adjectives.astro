@@ -1,65 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a0/colours-and-basic-adjectives.html",
-  "source": "src/content/lessons/a0/colours-and-basic-adjectives.astro",
-  "route": "/lessons/a0/colours-and-basic-adjectives/",
-  "level": "A0",
-  "slug": "colours-and-basic-adjectives",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "Colors and basic adjectives · A0 Vocabulary · Curriculum Map",
+  "slug": "colours-and-basic-adjectives",
+  "level": "A0",
+  "topic": "Colours & basic adjectives",
+  "category": "Vocabulary & Topics",
+  "contentType": "vocabulary",
+  "status": "ready",
   "description": "Describe the things around you. A color or a quality word is an adjective : red , new , big . In English the adjective goes before the noun — a red car , not a car red — or after t",
-  "kind": "vocabulary",
-  "order": 12,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder",
-    "VocabularyCards"
-  ],
-  "contentTextHash": "b8f9bfb648fd6a8c43e525f423c26714168bd3199cfd016803482f0c4c263e04",
-  "interactionCounts": {
-    "data-choice-gap-drill": 2,
-    "data-choice-option": 10,
-    "data-choice-gap": 10,
-    "data-answer": 26,
-    "data-placeholder": 17,
-    "data-check-choices": 2,
-    "data-reset-choices": 2,
-    "data-feedback": 8,
-    "data-tile-game": 1,
-    "data-tile": 4,
-    "data-slot": 4,
-    "data-check-tiles": 1,
-    "data-reset-tiles": 1,
-    "data-tile-builder": 3,
-    "data-build-bank": 3,
-    "data-build-tile": 13,
-    "data-build-area": 3,
-    "data-check-build": 3,
-    "data-reset-build": 3,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 6,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 5,
-    "data-reveal-transform": 5,
-    "data-transform-answer": 5,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2
-  },
-  "audioClips": []
-};
+  "sequence": 12,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a0-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -413,11 +370,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a0/days-months-dates/"><span>← Previous lesson</span><b>Days, months, dates</b></a>
-    <a class="lnav next" href="/lessons/a0/family-members/"><span>Next lesson →</span><b>Family members</b></a>
   </div>
 </main>
 </LessonPage>

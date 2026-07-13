@@ -1,62 +1,22 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
-export const page = {
-  "original": "outputs/lessons/a2/be-going-to-for-plans.html",
-  "source": "src/content/lessons/a2/be-going-to-for-plans.astro",
-  "route": "/lessons/a2/be-going-to-for-plans/",
-  "level": "A2",
-  "slug": "be-going-to-for-plans",
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+export const page = defineLesson({
   "title": "be going to · A2 Grammar · Curriculum Map",
+  "slug": "be-going-to-for-plans",
+  "level": "A2",
+  "topic": "be going to for plans",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
   "description": "Talk about plans you have already decided and predictions you can already see coming: I’m going to visit my parents in June , She isn’t going to take the job , and Look at those cl",
-  "kind": "grammar",
-  "order": 3,
-  "features": [
-    "LessonPage",
-    "LessonNavigation",
-    "LessonExerciseEngine",
-    "MultipleChoiceExercise",
-    "RevealCard",
-    "SentenceCorrection",
-    "FeedbackPanel",
-    "SentenceBuilder"
-  ],
-  "contentTextHash": "81f19a4fe6a5b149cba7fb1de9bac69a91f2652e35be0ed028fa87f691214865",
-  "interactionCounts": {
-    "data-choice-gap-drill": 3,
-    "data-choice-option": 17,
-    "data-choice-gap": 17,
-    "data-answer": 38,
-    "data-placeholder": 19,
-    "data-check-choices": 3,
-    "data-reset-choices": 3,
-    "data-feedback": 8,
-    "data-answer-drill": 1,
-    "data-check-answers": 1,
-    "data-reset-answers": 1,
-    "data-quiz": 2,
-    "data-success-message": 2,
-    "data-quiz-item": 11,
-    "data-quiz-option": 33,
-    "data-check-quiz": 2,
-    "data-reset-quiz": 2,
-    "data-tile-builder": 2,
-    "data-build-bank": 2,
-    "data-build-tile": 15,
-    "data-build-area": 2,
-    "data-check-build": 2,
-    "data-reset-build": 2,
-    "data-spot-error": 2,
-    "data-fix": 2,
-    "data-why": 2,
-    "data-error-choice": 9,
-    "data-error-feedback": 2,
-    "data-transform": 1,
-    "data-transform-item": 6,
-    "data-reveal-transform": 6,
-    "data-transform-answer": 6
-  },
-  "audioClips": []
-};
+  "sequence": 3,
+  "prerequisites": [],
+  "related": [],
+  "assessments": [
+    "a2-exit"
+  ]
+});
 ---
 <LessonPage page={page}>
 <main class="wrap">
@@ -420,11 +380,6 @@ export const page = {
       <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
     </div>
     <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="lessons-nav">
-    <a class="lnav prev" href="/lessons/a2/past-continuous/"><span>← Previous</span><b>Past continuous</b></a>
-    <a class="lnav next" href="/lessons/a2/will-for-predictions-and-offers/"><span>Next lesson →</span><b>will</b></a>
   </div>
 </main>
 </LessonPage>
