@@ -1,56 +1,101 @@
-# ElevenLabs Voice Setup
+# Static ElevenLabs audio authoring
 
-The assessment audio uses ElevenLabs through the local lesson server. The API
-key is never placed in the HTML or sent to the student's browser.
+ElevenLabs is an authoring tool for Thomas’s Classroom, not a production
+dependency. Students play ordinary static MP3 files from `astro-pilot/public/audio/`.
+No lesson page, browser script, production server, or public environment variable
+calls ElevenLabs.
 
-## Setup
+Each generated page places the static path directly on a native `<audio src>`
+control, so recorded playback does not depend on JavaScript. JavaScript only
+coordinates active playback and reveals the optional browser-voice fallback
+when the MP3 is missing.
 
-1. Copy `.env.example` to `.env`.
-2. Add an ElevenLabs API key with Text to Speech access.
-3. Add the voice ID you want to use.
-4. Start the site with:
+If a configured MP3 is missing, the shared assessment control reveals browser
+speech synthesis as an optional fallback. This keeps a local draft teachable,
+but every production build requires all configured MP3 files to exist.
 
-   ```bash
-   node server.mjs
+## One-time local setup
+
+1. Copy `.env.example` to `.env` at the repository root.
+2. Add `ELEVENLABS_API_KEY` and either `ELEVENLABS_VOICE_ID` or the named
+   `ELEVENLABS_VOICE_TEACHER` value.
+3. Keep `.env` private. It is ignored by Git and is never needed by the
+   production website.
+
+Text, language, speed, voice alias, and stable output paths live in
+`astro-pilot/private/voice-scripts.json`. Shared model, output-format, and voice
+settings live in `astro-pilot/private/audio-settings.json`. Neither file contains
+an API key.
+
+## Generate audio
+
+From `astro-pilot/`:
+
+```bash
+npm run audio:status
+npm run audio:generate
+```
+
+`audio:status` shows missing or existing files without calling ElevenLabs.
+`audio:generate` creates missing MP3s and skips every existing file.
+The build also runs an offline authoring-workflow test with a simulated provider
+response. It verifies dry runs, skips, request settings, safe targeted
+regeneration, MP3 signatures, error reporting, stable paths, and preservation
+of an existing recording when regeneration fails.
+
+To deliberately replace one recording:
+
+```bash
+npm run audio:generate -- --clip a1-routine-message --regenerate
+```
+
+Regeneration must name at least one clip. Each run reports generated, skipped,
+planned, and failed clips. A failed run exits unsuccessfully without printing the
+API key.
+
+## Add audio to a lesson
+
+1. Choose a stable kebab-case clip ID.
+2. Add one record to `private/voice-scripts.json`:
+
+   ```json
+   {
+     "b1-meeting-opening": {
+       "text": "Thanks for joining. Let’s begin with the project update.",
+       "path": "audio/lessons/b1/meetings/meeting-opening.mp3",
+       "language": "en",
+       "speed": 0.94,
+       "voice": "teacher"
+     }
+   }
    ```
 
-5. Open:
+3. Import and render the shared control in the lesson or assessment:
 
-   `http://localhost:8090/assessments/a0-exit.html?v=elevenlabs-1`
+   ```astro
+   ---
+   import AudioControl from "../../../components/assessment/AudioControl.astro";
+   ---
+   <AudioControl
+     clip="b1-meeting-opening"
+     src="/audio/lessons/b1/meetings/meeting-opening.mp3"
+     text="Thanks for joining. Let’s begin with the project update."
+     label="Play the meeting opening"
+   />
+   ```
 
-The first play generates an MP3 and uses ElevenLabs credits. Later plays use
-the private `.audio-cache` copy and do not regenerate the same clip.
+4. Generate the new clip:
 
-For conversations, add named voices such as `ELEVENLABS_VOICE_TEACHER` and
-`ELEVENLABS_VOICE_STUDENT`. A script can select either voice with its `voice`
-field. `ELEVENLABS_VOICE_ID` remains the default.
+   ```bash
+   npm run audio:generate -- --clip b1-meeting-opening
+   ```
 
-## Adding Lesson Audio
+5. Run `npm run build`, listen to the complete clip, and commit the MP3 with the
+   source change.
 
-Add a named entry to `outputs/audio/voice-scripts.json`:
-
-```json
-{
-  "lesson-clip-name": {
-    "text": "The exact words the student should hear.",
-    "language": "en",
-    "speed": 0.9,
-    "voice": "teacher"
-  }
-}
-```
-
-Then add the clip ID and a readable fallback text to the lesson button:
-
-```html
-<button
-  class="listen-btn"
-  type="button"
-  data-voice-clip="lesson-clip-name"
-  data-speak="The exact words the student should hear.">
-  <span aria-hidden="true">▶</span> Play audio
-</button>
-```
-
-Only scripts registered in `voice-scripts.json` can use the voice endpoint.
-This prevents a public student page from generating arbitrary paid audio.
+The source path and fallback text must match the approved record exactly; build
+validation rejects mismatches, duplicate paths, runtime API calls, and secret-key
+references in public website code. It also rejects generated audio controls that
+omit the native static `src` and would therefore depend on JavaScript for normal
+playback, plus files that are large enough to exist but do not contain an MP3
+signature.

@@ -2,9 +2,9 @@
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import CurriculumFinder from "../../components/curriculum/CurriculumFinder.astro";
 import { curriculum } from "../../lib/curriculum";
-import { getLessonsForLevel } from "../../data/lesson-catalog.mjs";
+import { getLessonsForLevel, readyLessons } from "../../data/lesson-catalog.mjs";
 
-const hues = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305 };
+const hues = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305, C1: 345 };
 const accent = (code: keyof typeof hues) => {
   const hue = hues[code];
   return `--accent:oklch(.58 .13 ${hue});--accent-deep:oklch(.46 .13 ${hue});--accent-tint:oklch(.965 .045 ${hue});--accent-soft:oklch(.92 .045 ${hue})`;
@@ -15,33 +15,39 @@ const skillLabels = {
   speaking: ["03", "Speaking"],
   writing: ["04", "Writing"],
 } as const;
+const canonical = new URL("/curriculum/", Astro.site);
+const lessonListId = `${canonical.href}#lesson-list`;
+const lessonList = {
+  "@type": "ItemList",
+  "@id": lessonListId,
+  name: "Thomas’s Classroom A0–C1 lessons",
+  numberOfItems: readyLessons.length,
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  itemListElement: readyLessons.map((lesson, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: lesson.topic,
+    url: new URL(lesson.route, Astro.site).href,
+  })),
+};
 ---
 <SiteLayout
-  title="English Curriculum Map · A0–B2 · Thomas’s Classroom"
-  description="Explore the complete Thomas’s Classroom curriculum from A0 to B2, including grammar, vocabulary, practical abilities, and published interactive lessons."
+  title="English Curriculum Map · A0–C1 · Thomas’s Classroom"
+  description="Explore the Thomas’s Classroom curriculum from A0 to C1, including grammar, vocabulary, practical abilities, published interactive lessons, and planned advanced work."
   heading="The English Curriculum Map"
-  lede="A complete path from first words to confident independent communication, designed for calm, thoughtful lessons with adult learners."
+  lede="A coherent path from first words to precise, flexible advanced communication, designed for calm, thoughtful lessons with adult learners."
   current="curriculum"
-  showLevelJumps
+  pageClass="curriculum-page"
+  mainEntityId={lessonListId}
+  additionalStructuredData={[lessonList]}
 >
   <div class="sections" data-curriculum-map>
-    <section class="page-intro">
-      <div class="explainer-grid">
-        <div><p class="explainer-kicker">How to read the map</p><h2>Ability first. Grammar in service of real communication.</h2></div>
-        <div class="explainer-points">
-          <p><b>Each level is a destination.</b> The “can do” panel describes useful evidence, not boxes to tick.</p>
-          <p><b>Grammar and vocabulary provide the tools.</b> Published lessons open directly; the rest remain visible as the planned route.</p>
-          <p><b>Listening, reading, speaking, and writing stay connected.</b> Progress means using language across skills.</p>
-        </div>
-      </div>
-    </section>
-
     <CurriculumFinder />
 
     <div class="curriculum-empty" data-curriculum-empty>
       <p class="finder-kicker">No matching topics</p>
       <h2>Try a broader search.</h2>
-      <p>Change a filter or clear the search to return to the complete A0–B2 path.</p>
+      <p>Change a filter or clear the search to return to the complete A0–C1 path.</p>
     </div>
 
     {curriculum.map((level) => (
@@ -58,9 +64,49 @@ const skillLabels = {
           </div>
         </div>
 
-        <div class="assessment-band" aria-label={`${level.code} end-of-level diagnostic`} data-curriculum-detail>
-          <a class:list={["assessment-card", level.code !== "A0" && "soon"]} href={`/assessments/${level.code.toLowerCase()}-exit/`}><span class="assessment-label">After completing the level</span><h3>{level.code} End-of-Level Diagnostic</h3><p>{level.code === "A0" ? "Check the complete foundation and decide whether the learner is ready to begin A1." : "Open the current diagnostic page and its planned assessment scope."}</p></a>
-          <div class="assessment-evidence"><span class="assessment-label">Evidence of progress</span><p>The learner notices, chooses, builds, understands, and produces language across grammar, vocabulary, receptive skills, and real communication.</p></div>
+        <div class="lesson-path" data-curriculum-topic-group data-curriculum-lesson-path={level.code}>
+          <div class="lesson-path-head" data-curriculum-detail>
+            <div>
+              <p class="finder-kicker">Click through the course</p>
+              <h3>{level.code} lesson path</h3>
+            </div>
+            <p>{getLessonsForLevel(level.code).filter((lesson) => lesson.status === "ready").length} of {getLessonsForLevel(level.code).length} lessons available now</p>
+          </div>
+          <div class="lesson-path-list">
+            {getLessonsForLevel(level.code).map((lesson) => lesson.status === "ready" ? (
+              <a
+                class="lesson-step"
+                href={lesson.route}
+                data-curriculum-topic
+                data-topic-type={lesson.contentType}
+                data-topic-availability={lesson.status}
+                data-lesson-sequence={lesson.sequence}
+              >
+                <span class="lesson-step-number">{String(lesson.sequence).padStart(2, "0")}</span>
+                <span class="lesson-step-copy">
+                  <strong>{lesson.topic}</strong>
+                  <span>{lesson.contentType === "grammar" ? "Grammar" : "Vocabulary & topic"} · {lesson.description}</span>
+                </span>
+                <span class="lesson-step-action">Open lesson <span aria-hidden="true">→</span></span>
+              </a>
+            ) : (
+              <article
+                class="lesson-step lesson-step--planned"
+                aria-disabled="true"
+                data-curriculum-topic
+                data-topic-type={lesson.contentType}
+                data-topic-availability={lesson.status}
+                data-lesson-sequence={lesson.sequence}
+              >
+                <span class="lesson-step-number">{String(lesson.sequence).padStart(2, "0")}</span>
+                <span class="lesson-step-copy">
+                  <strong>{lesson.topic}</strong>
+                  <span>{lesson.contentType === "grammar" ? "Grammar" : "Vocabulary & topic"} · Planned lesson</span>
+                </span>
+                <span class="soon-tag">Soon</span>
+              </article>
+            ))}
+          </div>
         </div>
 
         <div class="cando" data-curriculum-detail>
@@ -69,22 +115,6 @@ const skillLabels = {
         </div>
 
         <div class="grid">
-          {[
-            { label: "Grammar", index: "Aa", contentType: "grammar" },
-            { label: "Vocabulary & Topics", index: "¶", contentType: "vocabulary" },
-          ].map((group) => (
-            <article class="card card--wide" data-curriculum-topic-group={group.contentType}>
-              <header class="card-head"><span class="card-index">{group.index}</span><h3 class="card-label">{group.label}</h3></header>
-              <div class="chips-wrap">
-                {getLessonsForLevel(level.code)
-                  .filter((lesson) => lesson.contentType === group.contentType)
-                  .map((lesson) => lesson.status === "ready"
-                    ? <a class="vchip" href={lesson.route} data-curriculum-topic data-topic-type={lesson.contentType} data-topic-availability={lesson.status}>{lesson.topic}<span aria-hidden="true">→</span></a>
-                    : <span class="vchip vchip--soon" aria-disabled="true" data-curriculum-topic data-topic-type={lesson.contentType} data-topic-availability={lesson.status}>{lesson.topic}<span class="soon-tag">Soon</span></span>)}
-              </div>
-            </article>
-          ))}
-
           {Object.entries(level.skills).map(([key, items]) => {
             const [index, label] = skillLabels[key as keyof typeof skillLabels];
             return <article class="card" data-curriculum-detail>
@@ -93,6 +123,11 @@ const skillLabels = {
             </article>;
           })}
         </div>
+
+        {level.code === "A0" && <aside class="curriculum-guide" aria-labelledby="curriculum-guide-title" data-curriculum-detail>
+          <div><p class="curriculum-guide-kicker">A simple path</p><h2 id="curriculum-guide-title">How this curriculum works</h2></div>
+          <p>Each level describes what learners should be able to do. Grammar and vocabulary provide the tools for practical communication across speaking, listening, reading, and writing.</p>
+        </aside>}
       </section>
     ))}
   </div>

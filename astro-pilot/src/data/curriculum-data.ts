@@ -9,14 +9,14 @@ export const curriculum = [
     "gse": "10–21",
     "blurb": "The very first contact with English. Learners build the alphabet, sounds, numbers and a handful of survival phrases — enough to say who they are and exchange a few words.",
     "canDo": [
-      "Recognise and say the alphabet and numbers 0–100.",
+      "Recognize and say the alphabet and numbers 0–100.",
       "Give basic personal details: name, age, nationality.",
       "Understand and use a small set of everyday greetings.",
       "Fill in a simple form with name, address and date of birth."
     ],
     "skills": {
       "listening": [
-        "Recognise familiar words about myself and my family when spoken slowly.",
+        "Recognize familiar words about myself and my family when spoken slowly.",
         "Understand numbers, prices and times said clearly."
       ],
       "reading": [
@@ -103,17 +103,17 @@ export const curriculum = [
     "cefr": "B1 · Intermediate",
     "hours": "200–350 hrs",
     "gse": "43–58",
-    "blurb": "The independent-user threshold. Learners deal with most situations while travelling, produce connected text on familiar topics, and explain their opinions, plans and experiences.",
+    "blurb": "The independent-user threshold. Learners deal with most situations while traveling, produce connected text on familiar topics, and explain their opinions, plans and experiences.",
     "canDo": [
       "Understand the main points of clear standard input on familiar matters.",
-      "Deal with most situations likely to arise while travelling.",
+      "Deal with most situations likely to arise while traveling.",
       "Produce simple connected text on topics of personal interest.",
       "Describe experiences, events, dreams, hopes and ambitions."
     ],
     "skills": {
       "listening": [
         "Follow the main points of clear standard speech on familiar matters.",
-        "Understand the information in many radio or TV programmes."
+        "Understand the information in many radio or TV programs."
       ],
       "reading": [
         "Understand texts with everyday or job-related language.",
@@ -158,6 +158,38 @@ export const curriculum = [
       "writing": [
         "Write clear, detailed text on a range of subjects in my field.",
         "Write essays or reports, evaluating ideas and weighing evidence."
+      ]
+    }
+  },
+  {
+    "code": "C1",
+    "name": "Effective Operational Proficiency",
+    "cefr": "C1 · Advanced",
+    "hours": "600–800 hrs",
+    "gse": "76–84",
+    "blurb": "Learners use English precisely and flexibly across demanding professional, academic and social contexts. They manage implication, stance, register and extended argument rather than simply adding harder vocabulary.",
+    "canDo": [
+      "Understand demanding, longer texts and recognize implicit meaning and stance.",
+      "Express ideas fluently and spontaneously with little obvious searching.",
+      "Use language flexibly and effectively for social, academic and professional purposes.",
+      "Produce clear, well-structured discourse on complex subjects with controlled cohesion."
+    ],
+    "skills": {
+      "listening": [
+        "Follow extended discourse even when relationships are implied rather than signaled directly.",
+        "Recognize stance, qualification, emphasis, humor and shifts in register."
+      ],
+      "reading": [
+        "Understand complex factual and literary texts while identifying style and implicit meaning.",
+        "Trace argument, reference, evaluation and information structure across long texts."
+      ],
+      "speaking": [
+        "Develop and defend complex arguments while reformulating smoothly when challenged.",
+        "Use stress, rhythm and intonation to organize discourse and convey stance."
+      ],
+      "writing": [
+        "Write clear, well-structured texts that foreground relevant issues and support a position.",
+        "Control register, information density, cohesion and lexical precision for the intended audience."
       ]
     }
   }

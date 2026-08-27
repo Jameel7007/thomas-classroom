@@ -1,19 +1,331 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Work & careers · B1 Vocabulary · Curriculum Map",
+  "title": "Work & careers · B1 Vocabulary",
   "slug": "work-and-careers",
   "level": "B1",
   "topic": "Work & careers",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
-  "status": "planned",
-  "description": "Planned B1 vocabulary lesson covering Work & careers.",
+  "status": "ready",
+  "description": "Discuss roles, employment, responsibilities, applications, skills, achievements, and career changes with precise, natural U.S. English.",
   "sequence": 12,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a1/jobs-and-workplaces", "a2/education-and-study", "b1/gerunds-vs-infinitives"],
+  "related": ["b1/collocations-and-word-families", "b1/future-review-will-going-to-present-continuous"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 58,
+    "revisionSummary": "Job-work-career distinctions, employment relationships, responsibilities, applications, skills, evidence, career changes, U.S. register and speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 12</p>
+  <h1>Work and careers: <em>name the relationship, then support the claim</em></h1>
+  <p class="standfirst">Professional English is not a list of impressive nouns. It is a network of precise relationships: a person <span class="ex">works as</span> a coordinator <span class="ex">for</span> an organization <span class="ex">in</span> client support, <span class="ex">is responsible for</span> specific duties, <span class="ex">applies for</span> an opening, and supports a skill claim with a result. The strongest language lets another person understand exactly what happened.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">role · employment · responsibility</span>
+    <span class="tag">application · evidence · career change</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Separate role, organization, field, duty, and achievement.</span></div>
+    <div class="flow-step"><b>Distinguish</b><span>Choose job, work, career, status, and application language precisely.</span></div>
+    <div class="flow-step"><b>Evidence</b><span>Turn broad claims into situation, action, and result.</span></div>
+    <div class="flow-step"><b>Use</b><span>Evaluate a fictional posting and conduct a private-safe interview.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can distinguish <span class="ex">job, work</span>, and <span class="ex">career</span>; describe an employee, employer, freelancer, self-employed person, and hybrid role without forcing false categories; present responsibilities with natural collocations; interpret required and preferred qualifications in a U.S. job posting; use <span class="ex">apply for</span> and <span class="ex">apply to</span> accurately; separate skills, qualifications, experience, and measurable achievements; distinguish voluntary and employer-initiated career changes; and give a concise, evidence-based interview answer with intelligible professional word stress.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recovered work as for a role, responsible for plus -ing for a duty, and going to plus a base verb for a prior career intention.">
+    <h3>Reactivate three useful foundations</h3>
+    <div class="choice-bank" aria-label="Work and careers foundation choices"><button class="choice-option" data-choice-option="work as">work as</button><button class="choice-option" data-choice-option="responsible for scheduling">responsible for scheduling</button><button class="choice-option" data-choice-option="am going to apply">am going to apply</button><button class="choice-option" data-choice-option="work job">work job</button></div>
+    <div class="q"><span class="n">1</span><span>Introduce a role: “I <button class="choice-gap" data-choice-gap data-answer="work as" data-hint="Use work as before a job title." data-fix="I work as an operations coordinator.">choose</button> an operations coordinator.”</span></div>
+    <div class="q"><span class="n">2</span><span>Name a regular duty: “I’m <button class="choice-gap" data-choice-gap data-answer="responsible for scheduling" data-hint="Responsible takes for, then the activity uses -ing." data-fix="I’m responsible for scheduling deliveries.">choose</button> deliveries.”</span></div>
+    <div class="q"><span class="n">3</span><span>The application intention existed before this conversation: “I <button class="choice-gap" data-choice-gap data-answer="am going to apply" data-hint="Keep am going to followed by base apply." data-fix="I am going to apply for the role.">choose</button> for the role.”</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice a role, duties, and one supported achievement</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Jordan’s fictional professional introduction</h3>
+    <p><span class="ex">“I work as a client support coordinator for Northstar Community Services. I work in the customer success team.”</span></p>
+    <p><span class="ex">“I’m responsible for running weekly onboarding sessions, tracking recurring questions, and keeping clients informed.”</span></p>
+    <p><span class="ex">“Last year, I was promoted from support assistant to coordinator after I redesigned our reply guide and reduced average response time by 18 percent.”</span></p>
+    <ul>
+      <li>Which phrase names the role, organization, and team?</li>
+      <li>Which activities are regular responsibilities?</li>
+      <li>What evidence makes the promotion claim specific?</li>
+    </ul>
+  </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated Jordan’s role, organization, regular responsibility, and measurable achievement instead of treating every professional detail as a job title.">
+    <h3>Discovery check: identify each professional relationship</h3>
+    <div class="choice-bank" aria-label="Professional relationship choices"><button class="choice-option" data-choice-option="client support coordinator">client support coordinator</button><button class="choice-option" data-choice-option="Northstar Community Services">Northstar Community Services</button><button class="choice-option" data-choice-option="running weekly onboarding sessions">running weekly onboarding sessions</button><button class="choice-option" data-choice-option="reduced average response time by 18 percent">reduced average response time by 18 percent</button></div>
+    <div class="q"><span class="n">1</span><span>Jordan’s role is <button class="choice-gap" data-choice-gap data-answer="client support coordinator" data-hint="Work as introduces the job title." data-fix="Jordan works as a client support coordinator.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Jordan’s organization is <button class="choice-gap" data-choice-gap data-answer="Northstar Community Services" data-hint="Work for introduces the organization or employer." data-fix="Jordan works for Northstar Community Services.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>One regular responsibility is <button class="choice-gap" data-choice-gap data-answer="running weekly onboarding sessions" data-hint="Responsible for introduces a recurring duty here." data-fix="Jordan is responsible for running weekly onboarding sessions.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The measurable result is <button class="choice-gap" data-choice-gap data-answer="reduced average response time by 18 percent" data-hint="Find the result with a number, not only the new job title." data-fix="Jordan reduced average response time by 18 percent.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: <span class="ex">job, work</span>, and <span class="ex">career</span> organize different scales</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>word</th><th>core meaning</th><th>natural U.S. example</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">job</span></td><td>a particular paid position; countable</td><td><span class="ex">Jordan accepted a new job. The job starts Monday.</span></td></tr>
+      <tr><td><span class="ex">work</span></td><td>tasks, activity, or employment in general; normally uncountable in these meanings</td><td><span class="ex">Jordan has a lot of work. Jordan is looking for work.</span></td></tr>
+      <tr><td><span class="ex">career</span></td><td>development across roles and years; countable</td><td><span class="ex">Jordan began a career in support and later changed careers.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Work</span> can be countable in other meanings, such as <span class="ex">a work of art</span>, but not when it means your general tasks: <span class="ex">too much work</span>, not <span class="ex">too many works</span>. In natural U.S. English, <span class="ex">change careers</span> and <span class="ex">change career paths</span> are common when someone moves into a different professional direction.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used countable job for one position, uncountable work for tasks and employment, and career for a long-term professional path.">
+    <h3>Scale check: one position, general activity, or long path?</h3>
+    <div class="choice-bank" aria-label="Job work career choices"><button class="choice-option" data-choice-option="job">job</button><button class="choice-option" data-choice-option="work">work</button><button class="choice-option" data-choice-option="career">career</button><button class="choice-option" data-choice-option="careers">careers</button></div>
+    <div class="q"><span class="n">1</span><span>Jordan accepted one specific paid position: Jordan accepted a new <button class="choice-gap" data-choice-gap data-answer="job" data-hint="A particular countable position is a job." data-fix="Jordan accepted a new job.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Jordan has many tasks today: Jordan has too much <button class="choice-gap" data-choice-gap data-answer="work" data-hint="Tasks in general use uncountable work." data-fix="Jordan has too much work today.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Jordan is currently seeking employment in general: Jordan is looking for <button class="choice-gap" data-choice-gap data-answer="work" data-hint="Employment in general is uncountable work." data-fix="Jordan is looking for work.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The biography follows twenty years of roles and development: It describes Jordan’s <button class="choice-gap" data-choice-gap data-answer="career" data-hint="A long professional path is a career." data-fix="It describes Jordan’s career in community services.">choose</button> in community services.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Describe the employment relationship without forcing false categories</h2>
+  <div class="lead-rule"></div>
+  <p>An <b>employee</b> works for an <b>employer</b>. A <b>self-employed</b> person works for their own business rather than as another organization’s employee. A <b>freelancer</b> independently completes projects for clients, often more than one. Freelancers are commonly self-employed, but the words foreground different ideas: business status versus project-based client work.</p>
+  <p><span class="ex">Full-time</span> and <span class="ex">part-time</span> describe working hours. <span class="ex">Permanent, temporary</span>, and <span class="ex">contract</span> describe the expected employment period or agreement. <span class="ex">Remote, on-site</span>, and <span class="ex">hybrid</span> describe where work happens. These dimensions can combine: <span class="ex">a full-time, temporary, hybrid role</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished employee from employer, self-employment status from freelance client work, and hybrid location from hours or contract length.">
+    <h3>Relationship check: who employs whom, and how is the work organized?</h3>
+    <div class="choice-bank" aria-label="Employment relationship choices"><button class="choice-option" data-choice-option="employee">employee</button><button class="choice-option" data-choice-option="employer">employer</button><button class="choice-option" data-choice-option="self-employed">self-employed</button><button class="choice-option" data-choice-option="freelancer">freelancer</button><button class="choice-option" data-choice-option="hybrid">hybrid</button></div>
+    <div class="q"><span class="n">1</span><span>Northstar hired Jordan and pays Jordan through its payroll. Jordan is Northstar’s <button class="choice-gap" data-choice-gap data-answer="employee" data-hint="The person hired to work for an organization is its employee." data-fix="Jordan is Northstar’s employee.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Northstar hires and pays staff. In this relationship, Northstar is the <button class="choice-gap" data-choice-gap data-answer="employer" data-hint="The organization that hires the employee is the employer." data-fix="Northstar is the employer.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Amina owns her consulting business and is not another company’s employee. She is <button class="choice-gap" data-choice-gap data-answer="self-employed" data-hint="The sentence foregrounds that Amina works for her own business." data-fix="Amina is self-employed.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Leo independently designs short projects for four different clients. The project relationship makes him a <button class="choice-gap" data-choice-gap data-answer="freelancer" data-hint="Freelancer foregrounds independent project work for clients." data-fix="Leo is a freelancer.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Jordan works at the office Tuesday through Thursday and from home Monday and Friday. The location pattern is <button class="choice-gap" data-choice-gap data-answer="hybrid" data-hint="Hybrid combines on-site and remote work." data-fix="Jordan has a hybrid work arrangement.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build responsibilities with complete professional chunks</h2>
+  <div class="lead-rule"></div>
+  <p>Learn the relationship with the words: <span class="ex">work as a coordinator, work for Northstar, work in customer success, be responsible for onboarding, report to a director, collaborate with product teams, meet a deadline</span>, and <span class="ex">take responsibility for a result</span>. <span class="ex">Be responsible for</span> names an assigned duty; <span class="ex">take responsibility for</span> can emphasize accepting ownership or accountability.</p>
+  <p><span class="ex">Manage</span> can mean direct people or organize resources and tasks. A learner should specify the object: <span class="ex">manage a team of four</span> versus <span class="ex">manage three deadlines</span>. <span class="ex">Report to</span> identifies the person above you in an organizational line; it does not mean write a report.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved responsible for, report to, collaborate with, meet a deadline, and take responsibility for as complete professional relationships.">
+    <h3>Collocation check: choose the relationship, not only a nearby verb</h3>
+    <div class="choice-bank" aria-label="Responsibility collocation choices"><button class="choice-option" data-choice-option="responsible for">responsible for</button><button class="choice-option" data-choice-option="reports to">reports to</button><button class="choice-option" data-choice-option="collaborates with">collaborates with</button><button class="choice-option" data-choice-option="meet">meet</button><button class="choice-option" data-choice-option="take responsibility for">take responsibility for</button></div>
+    <div class="q"><span class="n">1</span><span>Running weekly onboarding is an assigned duty: Jordan is <button class="choice-gap" data-choice-gap data-answer="responsible for" data-hint="Use responsible for before the noun-like -ing activity." data-fix="Jordan is responsible for running weekly onboarding.">choose</button> running weekly onboarding.</span></div>
+    <div class="q"><span class="n">2</span><span>The customer success director is Jordan’s direct manager: Jordan <button class="choice-gap" data-choice-gap data-answer="reports to" data-hint="Report to identifies the manager above someone." data-fix="Jordan reports to the customer success director.">choose</button> the customer success director.</span></div>
+    <div class="q"><span class="n">3</span><span>Jordan and the product team work together on recurring problems: Jordan <button class="choice-gap" data-choice-gap data-answer="collaborates with" data-hint="Collaborate with names the people or group working together." data-fix="Jordan collaborates with the product team.">choose</button> the product team.</span></div>
+    <div class="q"><span class="n">4</span><span>The report must be finished by Friday at five: Jordan must <button class="choice-gap" data-choice-gap data-answer="meet" data-hint="The fixed collocation is meet a deadline." data-fix="Jordan must meet the Friday deadline.">choose</button> the deadline.</span></div>
+    <div class="q"><span class="n">5</span><span>Jordan accepts ownership of correcting an inaccurate client message: Jordan will <button class="choice-gap" data-choice-gap data-answer="take responsibility for" data-hint="Use take responsibility for when the person accepts ownership of the correction." data-fix="Jordan will take responsibility for correcting the message.">choose</button> correcting the message.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Read a U.S. job posting as a hierarchy, not a wall of keywords</h2>
+  <div class="lead-rule"></div>
+  <p>In U.S. professional English, <span class="ex">job posting</span> and <span class="ex">job opening</span> are common; <span class="ex">job advertisement</span> is also clear. <span class="ex">Vacancy</span> is correct English but is less common in everyday U.S. job-search language. A posting normally separates responsibilities, required qualifications, preferred qualifications, work arrangement, and application instructions.</p>
+  <p><span class="ex">Apply for</span> names the opportunity: <span class="ex">apply for the coordinator role</span>. <span class="ex">Apply to</span> names the organization or program: <span class="ex">apply to Northstar</span>. An <b>applicant</b> has applied; <b>candidate</b> often refers more broadly to a person being considered, especially later in selection. The categories can overlap.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified a U.S. job posting, distinguished apply for from apply to, separated required from preferred qualifications, and matched résumé plus cover letter to the stated instructions.">
+    <h3>Application check: read the heading and preposition carefully</h3>
+    <div class="choice-bank" aria-label="Job application choices"><button class="choice-option" data-choice-option="job posting">job posting</button><button class="choice-option" data-choice-option="for">for</button><button class="choice-option" data-choice-option="to">to</button><button class="choice-option" data-choice-option="required">required</button><button class="choice-option" data-choice-option="a résumé and a cover letter">a résumé and a cover letter</button></div>
+    <div class="q"><span class="n">1</span><span>The Northstar page announces an open role, its duties, and how to apply. In common U.S. language, it is a <button class="choice-gap" data-choice-gap data-answer="job posting" data-hint="Job posting is a common U.S. label for the published opening." data-fix="The page is a job posting.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Name the opportunity after apply: Jordan applied <button class="choice-gap" data-choice-gap data-answer="for" data-hint="Apply for names the job or opportunity." data-fix="Jordan applied for the coordinator role.">choose</button> the coordinator role.</span></div>
+    <div class="q"><span class="n">3</span><span>Name the organization after apply: Jordan applied <button class="choice-gap" data-choice-gap data-answer="to" data-hint="Apply to names the organization receiving the application." data-fix="Jordan applied to Northstar.">choose</button> Northstar.</span></div>
+    <div class="q"><span class="n">4</span><span>The posting says two years of client support experience is essential, not optional. It is <button class="choice-gap" data-choice-gap data-answer="required" data-hint="Required means the employer presents it as necessary." data-fix="Two years of client support experience is required.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The instructions explicitly request two documents. Jordan must submit <button class="choice-gap" data-choice-gap data-answer="a résumé and a cover letter" data-hint="Use the two documents named in the application instructions." data-fix="Jordan must submit a résumé and a cover letter.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Separate a skill, qualification, experience, and achievement</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>evidence type</th><th>what it answers</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">skill</span></td><td>What can the person do?</td><td><span class="ex">facilitate an online session clearly</span></td></tr>
+      <tr><td><span class="ex">qualification</span></td><td>What formal preparation or credential do they have?</td><td><span class="ex">a project-management certificate</span></td></tr>
+      <tr><td><span class="ex">experience</span></td><td>What relevant work have they done over time?</td><td><span class="ex">three years of client support experience</span></td></tr>
+      <tr><td><span class="ex">achievement</span></td><td>What useful result did their action produce?</td><td><span class="ex">reduced response time by 18 percent</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Experience</span> is normally uncountable when it means accumulated knowledge or work history: <span class="ex">three years of experience</span>, not <span class="ex">three experiences</span>. It can be countable for individual events: <span class="ex">The conference was a useful experience.</span> A <b>transferable skill</b> can move from one role or field to another, such as organizing priorities or explaining a process clearly.</p>
+  <p>In an interview, replace unsupported labels such as <span class="ex">I’m a great communicator</span> with compact evidence: the <b>situation</b>, your <b>action</b>, and the <b>result</b>. Add the task when it helps the listener understand your responsibility. A number is useful only when it is truthful and relevant.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished skill, qualification, accumulated experience, transferable skill, and measurable achievement from the evidence supplied.">
+    <h3>Evidence check: what kind of claim can the detail support?</h3>
+    <div class="choice-bank" aria-label="Professional evidence choices"><button class="choice-option" data-choice-option="skill">skill</button><button class="choice-option" data-choice-option="qualification">qualification</button><button class="choice-option" data-choice-option="experience">experience</button><button class="choice-option" data-choice-option="transferable skill">transferable skill</button><button class="choice-option" data-choice-option="achievement">achievement</button></div>
+    <div class="q"><span class="n">1</span><span>Jordan can facilitate a clear online onboarding session. This ability is a <button class="choice-gap" data-choice-gap data-answer="skill" data-hint="A skill is an ability the person can demonstrate." data-fix="Facilitating an online session is a skill.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Jordan earned an accredited project-management certificate. The credential is a <button class="choice-gap" data-choice-gap data-answer="qualification" data-hint="A formal certificate is a qualification." data-fix="The certificate is a qualification.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Jordan has worked in client support for three years. This is three years of relevant <button class="choice-gap" data-choice-gap data-answer="experience" data-hint="Accumulated work history uses uncountable experience." data-fix="Jordan has three years of relevant experience.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Jordan learned to organize competing priorities in hospitality and can use that ability in support. It is a <button class="choice-gap" data-choice-gap data-answer="transferable skill" data-hint="The ability transfers from one field to another." data-fix="Organizing priorities is a transferable skill.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Jordan redesigned a reply guide and response time fell by 18 percent. The useful measured result is an <button class="choice-gap" data-choice-gap data-answer="achievement" data-hint="An achievement names a useful result produced by action." data-fix="Reducing response time by 18 percent is an achievement.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Name career changes without confusing cause or agency</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Resign from a position</span> and the less formal <span class="ex">quit a job</span> describe the worker’s decision to leave. <span class="ex">Be laid off</span> commonly means the employer ended the role because of restructuring, closure, or reduced work, not because of individual misconduct. <span class="ex">Be fired</span> normally means the employer ended a person’s employment for reasons connected to performance or conduct. <span class="ex">Retire</span> means leave working life, usually after a long career.</p>
+  <p><span class="ex">Be promoted from assistant to coordinator</span> names movement to a higher role. <span class="ex">Transfer to another department</span> names an internal move that is not necessarily a promotion. Real situations are more complex than one word; use the term that matches the stated facts and avoid guessing why someone left.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated a voluntary resignation, a position eliminated in a layoff, dismissal for misconduct, and retirement after a completed career.">
+    <h3>Career-change check: who decided, and what cause is stated?</h3>
+    <div class="choice-bank" aria-label="Career change choices"><button class="choice-option" data-choice-option="resigned">resigned</button><button class="choice-option" data-choice-option="was laid off">was laid off</button><button class="choice-option" data-choice-option="was fired">was fired</button><button class="choice-option" data-choice-option="retired">retired</button></div>
+    <div class="q"><span class="n">1</span><span>Amina chose to leave her position and submitted a formal notice: She <button class="choice-gap" data-choice-gap data-answer="resigned" data-hint="The worker chose to leave and used a formal notice." data-fix="Amina resigned from her position.">choose</button> from her position.</span></div>
+    <div class="q"><span class="n">2</span><span>The branch closed and every role there was eliminated. Leo <button class="choice-gap" data-choice-gap data-answer="was laid off" data-hint="The position disappeared because the branch closed; the sentence gives no performance problem." data-fix="Leo was laid off when the branch closed.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The employer ended Sam’s employment after documented repeated misconduct. Sam <button class="choice-gap" data-choice-gap data-answer="was fired" data-hint="The stated reason concerns the employee’s repeated conduct, not role elimination." data-fix="Sam was fired after documented repeated misconduct.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>After forty years of work, Priya chose to end her working life: She <button class="choice-gap" data-choice-gap data-answer="retired" data-hint="Retire means leave working life, commonly after a long career." data-fix="Priya retired after a forty-year career.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: stress the identifying word and link the relationship</h2>
+  <div class="lead-rule"></div>
+  <p>Professional compounds often stress the first identifying word: <span class="ex">JOB posting, JOB interview, CAREER path, DEADline, TEAM lead</span>. <span class="ex">Responsible</span> is commonly /rɪˈspɑnsəbəl/ in U.S. speech, with primary stress on <span class="ex">SPON</span>; <span class="ex">responsibility</span> shifts primary stress toward <span class="ex">BIL</span>: /rɪˌspɑnsəˈbɪləti/.</p>
+  <p>Common chunks link across word boundaries: <span class="ex">apply for</span> /əˈplaɪ fər/ and <span class="ex">responsible for</span> /rɪˈspɑnsəbəl fər/. The noun <span class="ex">résumé</span> is commonly /ˈrɛzəˌmeɪ/; the verb <span class="ex">resume</span>, meaning continue, is /rɪˈzum/. The accents in <span class="ex">résumé</span> are optional in U.S. writing, but they help distinguish the noun on this page.</p>
+  <section data-lesson-extension="Tutor-read role-organization-field, responsibility chunk, apply-for relationship, experience countability, and layoff-cause listening check">
+    <details class="reveal-card">
+      <summary>Open the tutor listening check</summary>
+      <div class="reveal-body">
+        <p><b>Tutor:</b> Read each line once naturally without showing the transcript. Read it again only after the learner commits to an answer.</p>
+        <ol>
+          <li><span class="ex">Jordan works AS a coORdinator FOR NORTHstar IN client SUPport.</span></li>
+          <li><span class="ex">Jordan is reSPONsible for RUNning weekly ONboarding.</span></li>
+          <li><span class="ex">Jordan apPLIED for the ROLE and apPLIED to NORTHstar.</span></li>
+          <li><span class="ex">Jordan has THREE years of client SUPport exPERience.</span></li>
+          <li><span class="ex">Leo was LAID off when the BRANCH closed. His ROLE was eliminated.</span></li>
+        </ol>
+      </div>
+    </details>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard role, organization, and field relationships; responsible for plus -ing; apply for versus apply to; uncountable experience; and the stated role-elimination cause of a layoff.">
+      <h3>Listen for the relationship and stated evidence</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="As introduces the role, for the organization, and in the field or team." data-hint="Listen to the nouns immediately after as, for, and in." data-fix="As introduces the role, for the organization, and in the field or team."><p class="quiz-question">1. How does the first line organize Jordan’s professional identity?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="As introduces the role, for the organization, and in the field or team.">As introduces the role, for the organization, and in the field or team.</button><button class="quiz-option" data-quiz-option="For introduces the role, and as introduces a deadline.">For introduces the role, and as introduces a deadline.</button><button class="quiz-option" data-quiz-option="Every preposition introduces the same employer relationship.">Every preposition introduces the same employer relationship.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Responsible for is followed by the -ing duty running weekly onboarding." data-hint="Listen for for before running." data-fix="Responsible for is followed by the -ing duty running weekly onboarding."><p class="quiz-question">2. What complete chunk names Jordan’s duty?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Responsible for is followed by the -ing duty running weekly onboarding.">Responsible for is followed by the -ing duty running weekly onboarding.</button><button class="quiz-option" data-quiz-option="Responsible to is followed by base run in this line.">Responsible to is followed by base run in this line.</button><button class="quiz-option" data-quiz-option="The word responsible names Jordan’s employer.">The word responsible names Jordan’s employer.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="For names the role; to names the organization." data-hint="The tutor contrasts applied for the role with applied to Northstar." data-fix="For names the role; to names the organization."><p class="quiz-question">3. What distinction does the third line make?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="For names the role; to names the organization.">For names the role; to names the organization.</button><button class="quiz-option" data-quiz-option="To names the role; for names Jordan’s salary.">To names the role; for names Jordan’s salary.</button><button class="quiz-option" data-quiz-option="Applied for and applied to are both rejected in U.S. English.">Applied for and applied to are both rejected in U.S. English.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Three years measures accumulated, uncountable experience." data-hint="The line says three years of experience, not three experiences." data-fix="Three years measures accumulated, uncountable experience."><p class="quiz-question">4. How is Jordan’s work history measured?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Three years measures accumulated, uncountable experience.">Three years measures accumulated, uncountable experience.</button><button class="quiz-option" data-quiz-option="Three experiences names three required certificates.">Three experiences names three required certificates.</button><button class="quiz-option" data-quiz-option="Experience is a job title in this line.">Experience is a job title in this line.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The branch closure eliminated Leo’s role; no individual performance cause is stated." data-hint="Listen for branch closed and role was eliminated." data-fix="The branch closure eliminated Leo’s role; no individual performance cause is stated."><p class="quiz-question">5. Why does the final line use <span class="ex">was laid off</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The branch closure eliminated Leo’s role; no individual performance cause is stated.">The branch closure eliminated Leo’s role; no individual performance cause is stated.</button><button class="quiz-option" data-quiz-option="Leo voluntarily retired after forty years.">Leo voluntarily retired after forty years.</button><button class="quiz-option" data-quiz-option="The line states that Leo committed repeated misconduct.">The line states that Leo committed repeated misconduct.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details class="reveal-card">
+      <summary>Reveal the listening evidence</summary>
+      <div class="reveal-body">
+        <ol>
+          <li><span class="ex">As</span> introduces role, <span class="ex">for</span> organization, and <span class="ex">in</span> team or field.</li>
+          <li>The full relationship is <span class="ex">responsible for running</span>.</li>
+          <li><span class="ex">Apply for</span> names the opportunity; <span class="ex">apply to</span> names the organization.</li>
+          <li>Accumulated work history is <span class="ex">three years of experience</span>.</li>
+          <li>The branch closure eliminated the role, so the stated term is <span class="ex">laid off</span>, not fired.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <h2>Read requirements and evidence before judging fit</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Fictional Northstar job posting</h3>
+    <p><b>Client Success Coordinator · full-time · hybrid, three office days</b></p>
+    <p><b>Responsibilities:</b> Answer client questions, run weekly online onboarding sessions, track recurring issues, collaborate with product teams, and meet weekly response deadlines.</p>
+    <p><b>Required:</b> At least two years of client-facing support experience, clear professional writing, and experience leading online sessions.</p>
+    <p><b>Preferred:</b> Experience with Northstar’s customer-management software.</p>
+    <p><b>Apply by May 14:</b> Submit a résumé, a cover letter, and one brief example of a process improvement.</p>
+    <h3>Jordan’s fictional evidence note</h3>
+    <p>Jordan has three years of client support experience, leads a weekly webinar, and writes the team’s client updates. Jordan redesigned a reply guide and reduced response time by 18 percent. Jordan has used similar customer-management software, but not Northstar’s specific system.</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the hybrid arrangement, online-session duty, three required capabilities, and Jordan’s exact preferred-qualification gap from the posting and evidence note.">
+    <h3>Reading check: required, preferred, and evidenced</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="The role is full-time and hybrid, with three office days." data-hint="The first line states hours and location separately." data-fix="The role is full-time and hybrid, with three office days."><p class="quiz-question">1. How are the role’s hours and location organized?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The role is full-time and hybrid, with three office days.">The role is full-time and hybrid, with three office days.</button><button class="quiz-option" data-quiz-option="The role is freelance and permanently remote.">The role is freelance and permanently remote.</button><button class="quiz-option" data-quiz-option="The role is part-time and has no stated location.">The role is part-time and has no stated location.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Running weekly online onboarding sessions." data-hint="Find the responsibility that requires teaching or guiding clients live." data-fix="Running weekly online onboarding sessions."><p class="quiz-question">2. Which responsibility directly involves guiding new clients?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Running weekly online onboarding sessions.">Running weekly online onboarding sessions.</button><button class="quiz-option" data-quiz-option="Closing every product team.">Closing every product team.</button><button class="quiz-option" data-quiz-option="Eliminating all response deadlines.">Eliminating all response deadlines.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Support experience, clear professional writing, and experience leading online sessions are required." data-hint="Read only the line labeled Required, not Preferred." data-fix="Support experience, clear professional writing, and experience leading online sessions are required."><p class="quiz-question">3. Which capabilities does the posting present as necessary?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Support experience, clear professional writing, and experience leading online sessions are required.">Support experience, clear professional writing, and experience leading online sessions are required.</button><button class="quiz-option" data-quiz-option="Northstar software experience is the only required capability.">Northstar software experience is the only required capability.</button><button class="quiz-option" data-quiz-option="A management degree and ten years of experience are required.">A management degree and ten years of experience are required.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Jordan lacks experience with Northstar’s specific software, which is preferred rather than required." data-hint="Compare Jordan’s similar-software experience with the line labeled Preferred." data-fix="Jordan lacks experience with Northstar’s specific software, which is preferred rather than required."><p class="quiz-question">4. What exact gap remains in Jordan’s evidence?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan lacks experience with Northstar’s specific software, which is preferred rather than required.">Jordan lacks experience with Northstar’s specific software, which is preferred rather than required.</button><button class="quiz-option" data-quiz-option="Jordan has no client support experience, which is preferred only.">Jordan has no client support experience, which is preferred only.</button><button class="quiz-option" data-quiz-option="Jordan cannot write or lead any online session.">Jordan cannot write or lead any online session.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build a responsibility and an application action</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="jordan is responsible for running weekly onboarding sessions" data-hint="Begin with Jordan is responsible for, then add running weekly onboarding sessions." data-fix="Jordan is responsible for running weekly onboarding sessions." data-success-message="Correct. Responsible for is followed by the -ing duty running weekly onboarding sessions.">
+    <h3>Build 1: name a recurring duty</h3><p class="tile-target">Describe Jordan’s weekly responsibility.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="weekly">weekly</button><button class="tile" data-build-tile="jordan">Jordan</button><button class="tile" data-build-tile="sessions">sessions</button><button class="tile" data-build-tile="responsible">responsible</button><button class="tile" data-build-tile="running">running</button><button class="tile" data-build-tile="is">is</button><button class="tile" data-build-tile="onboarding">onboarding</button><button class="tile" data-build-tile="for">for</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="jordan applied for the role and submitted a résumé" data-hint="Begin with Jordan applied for the role, then add and submitted a résumé." data-fix="Jordan applied for the role and submitted a résumé." data-success-message="Correct. Apply for names the opportunity, and submit names the application document action.">
+    <h3>Build 2: report the application</h3><p class="tile-target">Name the opportunity and one submitted document.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="submitted">submitted</button><button class="tile" data-build-tile="role">role</button><button class="tile" data-build-tile="jordan">Jordan</button><button class="tile" data-build-tile="résumé">résumé</button><button class="tile" data-build-tile="for">for</button><button class="tile" data-build-tile="a">a</button><button class="tile" data-build-tile="applied">applied</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="and">and</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the professional relationship</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="to" data-hint="The next noun names the position, not the organization." data-fix="Jordan applied for the coordinator position yesterday." data-why="Apply for names the opportunity; apply to names the organization or program." data-success-message="Correct. Applied for accurately introduces the position.">
+    <h3>Repair 1: name the opportunity</h3><p>Tap the preposition that introduces the position incorrectly.</p><div class="spot-options"><button class="error-choice" data-error-choice="jordan">Jordan</button><button class="error-choice" data-error-choice="applied">applied</button><button class="error-choice" data-error-choice="to">to</button><button class="error-choice" data-error-choice="position">the coordinator position yesterday.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="experiences" data-hint="The phrase measures accumulated work history over three years." data-fix="Jordan has three years of client support experience." data-why="Experience is uncountable when it means accumulated work history; measure it with years of experience." data-success-message="Correct. Three years of experience accurately measures accumulated work history.">
+    <h3>Repair 2: use uncountable <span class="ex">experience</span></h3><p>Tap the countable form that misrepresents accumulated work history.</p><div class="spot-options"><button class="error-choice" data-error-choice="jordan">Jordan has</button><button class="error-choice" data-error-choice="three">three</button><button class="error-choice" data-error-choice="experiences">experiences</button><button class="error-choice" data-error-choice="support">in client support.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="at" data-hint="Promotion names movement to the new higher role." data-fix="Jordan was promoted to senior coordinator last year." data-why="Use promoted to before the new role; use promoted from to name the earlier role when needed." data-success-message="Correct. Promoted to accurately introduces the new role.">
+    <h3>Repair 3: mark the destination role</h3><p>Tap the preposition that does not introduce the new role.</p><div class="spot-options"><button class="error-choice" data-error-choice="jordan">Jordan</button><button class="error-choice" data-error-choice="promoted">was promoted</button><button class="error-choice" data-error-choice="at">at</button><button class="error-choice" data-error-choice="role">senior coordinator last year.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Practice professionally without disclosing a real employment history</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to reveal a real employer, salary, contract, application, manager, coworker, performance review, dismissal, layoff, immigration status, age, family situation, health detail, disability, address, financial need, or other private employment information. Use Jordan, Northstar, and the fictional posting. A real example is optional and should never be required to practice the language.</p>
+  <div class="prompt-card"><b>Role map:</b> Introduce Jordan’s role, organization, field, manager, and three responsibilities with complete chunks.</div>
+  <div class="prompt-card"><b>Posting map:</b> Separate responsibilities, required qualifications, preferred qualifications, work arrangement, and application instructions.</div>
+  <div class="prompt-card"><b>Evidence answer:</b> Give one fictional situation, Jordan’s responsibility, the action Jordan took, and the result. Do not invent a number unless the event card supplies it.</div>
+  <div class="prompt-card"><b>Respectful interview:</b> Ask only job-relevant questions. Do not request personal details about age, family, health, disability, nationality, religion, or finances.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: run a 90-second fictional role-fit interview</h3>
+    <p>Use the Northstar posting and Jordan’s evidence card. The interviewer summarizes the role, distinguishes required from preferred qualifications, and asks one behavior-based question. The applicant gives a concise situation, responsibility, action, and result; uses at least five professional chunks; identifies one transferable skill; states one honest preferred-qualification gap; and asks one informed question about the role. Finish with a neutral evidence summary rather than a promise that Jordan will be hired.</p>
+    <p><b>Evidence check:</b> Can the listener distinguish job, work, and career; recover every role and preposition relationship; identify employment arrangement and application status; separate required from preferred; connect every skill claim to evidence; and tell whether a career change was voluntary or employer-initiated?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You distinguished one job from general work and a career path, applied for a role and to an organization, separated layoff from firing, read preferred as nonessential, and selected a measurable achievement claim.">
+    <h3>Final check: choose the most precise professional account</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Jordan accepted a job and now has a lot of work." data-hint="Use countable job for one position and uncountable work for the tasks." data-fix="Jordan accepted a job and now has a lot of work."><p class="quiz-question">1. Which sentence distinguishes one position from its tasks?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan accepted a job and now has a lot of work.">Jordan accepted a job and now has a lot of work.</button><button class="quiz-option" data-quiz-option="Jordan accepted a work and now has many works.">Jordan accepted a work and now has many works.</button><button class="quiz-option" data-quiz-option="Jordan accepted a career today and finished every employment.">Jordan accepted a career today and finished every employment.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="After ten years in retail, Jordan changed careers and entered client support." data-hint="The sentence describes a move into a different long-term professional direction." data-fix="After ten years in retail, Jordan changed careers and entered client support."><p class="quiz-question">2. Which sentence naturally describes a major U.S.-English career-path change?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="After ten years in retail, Jordan changed careers and entered client support.">After ten years in retail, Jordan changed careers and entered client support.</button><button class="quiz-option" data-quiz-option="After ten years, Jordan changed a work into one job task.">After ten years, Jordan changed a work into one job task.</button><button class="quiz-option" data-quiz-option="After ten years, Jordan careered to client support.">After ten years, Jordan careered to client support.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Jordan applied for the role and applied to Northstar." data-hint="For names the opportunity; to names the organization." data-fix="Jordan applied for the role and applied to Northstar."><p class="quiz-question">3. Which sentence names both the opportunity and organization accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan applied for the role and applied to Northstar.">Jordan applied for the role and applied to Northstar.</button><button class="quiz-option" data-quiz-option="Jordan applied to the role and applied for Northstar.">Jordan applied to the role and applied for Northstar.</button><button class="quiz-option" data-quiz-option="Jordan applied at a role and applied the company.">Jordan applied at a role and applied the company.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The branch closed and Jordan’s role was eliminated, so Jordan was laid off." data-hint="The cause is role elimination in a closure, not stated misconduct or a voluntary decision." data-fix="The branch closed and Jordan’s role was eliminated, so Jordan was laid off."><p class="quiz-question">4. Which account matches an employer-initiated role elimination?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The branch closed and Jordan’s role was eliminated, so Jordan was laid off.">The branch closed and Jordan’s role was eliminated, so Jordan was laid off.</button><button class="quiz-option" data-quiz-option="Jordan chose to submit a notice, so Jordan was fired.">Jordan chose to submit a notice, so Jordan was fired.</button><button class="quiz-option" data-quiz-option="Jordan committed repeated misconduct, so Jordan retired voluntarily.">Jordan committed repeated misconduct, so Jordan retired voluntarily.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The software experience is desirable but not presented as essential." data-hint="The posting places the software under Preferred, not Required." data-fix="The software experience is desirable but not presented as essential."><p class="quiz-question">5. What does the posting mean by listing Northstar software under <span class="ex">Preferred</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The software experience is desirable but not presented as essential.">The software experience is desirable but not presented as essential.</button><button class="quiz-option" data-quiz-option="Every applicant without it automatically lacks all required experience.">Every applicant without it automatically lacks all required experience.</button><button class="quiz-option" data-quiz-option="The software is a mandatory legal qualification.">The software is a mandatory legal qualification.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Jordan redesigned the reply guide, and average response time fell by 18 percent." data-hint="Choose the claim with a specific action and supplied measurable result." data-fix="Jordan redesigned the reply guide, and average response time fell by 18 percent."><p class="quiz-question">6. Which statement provides evidence for a process-improvement achievement?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan redesigned the reply guide, and average response time fell by 18 percent.">Jordan redesigned the reply guide, and average response time fell by 18 percent.</button><button class="quiz-option" data-quiz-option="Jordan is amazing at everything and needs no example.">Jordan is amazing at everything and needs no example.</button><button class="quiz-option" data-quiz-option="Jordan has a résumé, so every process automatically improved.">Jordan has a résumé, so every process automatically improved.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what relationship or evidence does each word encode?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">A job is...</span> <span class="ex">Work is usually uncountable when...</span> <span class="ex">A career covers...</span> <span class="ex">Apply for names...</span> <span class="ex">Apply to names...</span> <span class="ex">Required differs from preferred because...</span> <span class="ex">A skill claim becomes credible when...</span> <span class="ex">Laid off differs from fired because...</span></p>
+    <p>Take one broad fictional claim, such as <span class="ex">Jordan communicates well</span>, and rebuild it as a situation, responsibility, action, and result. Then identify which words describe a skill, experience, and achievement.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day job-work-career, application relationship, and evidence-based achievement retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Identify the scale of the noun, the relationship after <span class="ex">apply</span>, and the exact evidence supporting a professional claim.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained job-work-career scale, apply for versus apply to, and the difference between an unsupported label and an evidence-based achievement.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Jordan accepted a new job, has challenging work, and wants a long career in support." data-hint="Use job for one position, work for its tasks, and career for the long path." data-fix="Jordan accepted a new job, has challenging work, and wants a long career in support."><p class="quiz-question">1. Which sentence uses all three scales accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan accepted a new job, has challenging work, and wants a long career in support.">Jordan accepted a new job, has challenging work, and wants a long career in support.</button><button class="quiz-option" data-quiz-option="Jordan accepted a work, has many job, and wants one support works.">Jordan accepted a work, has many job, and wants one support works.</button><button class="quiz-option" data-quiz-option="Jordan careered a job and accepted too many works.">Jordan careered a job and accepted too many works.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Jordan applied for the opening and applied to Northstar." data-hint="For introduces the opportunity; to introduces the organization." data-fix="Jordan applied for the opening and applied to Northstar."><p class="quiz-question">2. Which sentence preserves both application relationships?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan applied for the opening and applied to Northstar.">Jordan applied for the opening and applied to Northstar.</button><button class="quiz-option" data-quiz-option="Jordan applied to the opening and applied for Northstar.">Jordan applied to the opening and applied for Northstar.</button><button class="quiz-option" data-quiz-option="Jordan applied the opening at Northstar for.">Jordan applied the opening at Northstar for.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Jordan redesigned a reply guide, and response time fell by 18 percent." data-hint="The supplied action and measured result support an achievement claim." data-fix="Jordan redesigned a reply guide, and response time fell by 18 percent."><p class="quiz-question">3. Which line is evidence rather than an unsupported self-description?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan redesigned a reply guide, and response time fell by 18 percent.">Jordan redesigned a reply guide, and response time fell by 18 percent.</button><button class="quiz-option" data-quiz-option="Jordan says, I am perfect at every professional skill.">Jordan says, I am perfect at every professional skill.</button><button class="quiz-option" data-quiz-option="Jordan owns a cover letter, so no result is needed.">Jordan owns a cover letter, so no result is needed.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

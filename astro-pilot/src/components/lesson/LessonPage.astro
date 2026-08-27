@@ -1,16 +1,24 @@
 ---
 import "../../styles/lesson.css";
 import "../../styles/drills.css";
+import FontStyles from "../FontStyles.astro";
+import SocialMetadata from "../SocialMetadata.astro";
+import SkipLink from "../SkipLink.astro";
+import StructuredData from "../StructuredData.astro";
 import LessonNavigation from "./LessonNavigation.astro";
 import LessonSequenceNavigation from "./LessonSequenceNavigation.astro";
 import LessonExerciseEngine from "./LessonExerciseEngine.astro";
 import { getLesson, getLessonNavigation, getLessonsForLevel } from "../../data/lesson-catalog.mjs";
+import { curriculum } from "../../lib/curriculum";
+import { formatPageTitle } from "../../lib/page-title.mjs";
+import { schemaIds, siteIdentityNodes, webPageNode } from "../../lib/structured-data.mjs";
 
 interface PageMetadata {
   title: string;
   description: string;
   level: string;
   slug: string;
+  tutorReviewRequired?: boolean;
 }
 
 interface Props { page: PageMetadata }
@@ -20,37 +28,78 @@ if (!lesson) throw new Error(`Lesson metadata is not registered for ${page.level
 const canonical = new URL(lesson.route, Astro.site);
 const { previous, next, isCourseEnd } = getLessonNavigation(lesson.id);
 const levelTotal = getLessonsForLevel(lesson.level).length;
+const level = curriculum.find((item) => item.code === lesson.level);
+if (!level) throw new Error(`Curriculum level metadata is missing for ${lesson.level}`);
+const prerequisiteTopics = lesson.prerequisites
+  .map((id: string) => getLesson(id)?.topic)
+  .filter((topic: string | undefined): topic is string => Boolean(topic));
+const ids = schemaIds(Astro.site);
+const documentTitle = formatPageTitle(lesson.title);
+const lessonSchemaId = `${canonical.href}#lesson`;
+const courseUrl = new URL(`/curriculum/#lvl-${lesson.level}`, Astro.site).href;
+const courseSchemaId = `${courseUrl}-course`;
 const breadcrumbData = {
-  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": `${canonical.href}#breadcrumb`,
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Curriculum", item: new URL("/curriculum/", Astro.site) },
-    { "@type": "ListItem", position: 2, name: lesson.level, item: new URL(`/curriculum/#lvl-${lesson.level}`, Astro.site) },
-    { "@type": "ListItem", position: 3, name: lesson.title, item: canonical },
+    { "@type": "ListItem", position: 1, name: "Curriculum", item: new URL("/curriculum/", Astro.site).href },
+    { "@type": "ListItem", position: 2, name: `${lesson.level} · ${level.name}`, item: courseUrl },
+    { "@type": "ListItem", position: 3, name: lesson.topic, item: canonical.href },
   ],
 };
+const structuredData = [
+  ...siteIdentityNodes(Astro.site),
+  webPageNode({ canonical, title: documentTitle, description: lesson.description, site: Astro.site, mainEntityId: lessonSchemaId }),
+  breadcrumbData,
+  {
+    "@type": "Course",
+    "@id": courseSchemaId,
+    url: courseUrl,
+    name: `${lesson.level} · ${level.name} English course`,
+    description: level.blurb,
+    inLanguage: "en",
+    educationalLevel: lesson.level,
+    isAccessibleForFree: true,
+    provider: { "@id": ids.tutor },
+  },
+  {
+    "@type": "LearningResource",
+    "@id": lessonSchemaId,
+    url: canonical.href,
+    name: lesson.topic,
+    headline: lesson.title,
+    description: lesson.description,
+    inLanguage: "en",
+    educationalLevel: lesson.level,
+    learningResourceType: `${lesson.category} lesson`,
+    educationalUse: ["instruction", "practice", "assessment"],
+    interactivityType: "mixed",
+    isAccessibleForFree: true,
+    teaches: lesson.topic,
+    ...(prerequisiteTopics.length ? { competencyRequired: prerequisiteTopics } : {}),
+    keywords: [lesson.level, lesson.category, lesson.topic, "English lesson"],
+    author: { "@id": ids.tutor },
+    isPartOf: { "@id": courseSchemaId },
+  },
+];
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{lesson.title}</title>
+    <FontStyles />
+    <title>{documentTitle}</title>
     <meta name="description" content={lesson.description} />
-    <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={lesson.title} />
-    <meta property="og:description" content={lesson.description} />
-    <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+    <SocialMetadata title={documentTitle} description={lesson.description} canonical={canonical} type="article" />
+    <StructuredData nodes={structuredData} />
   </head>
-  <body>
+  <body data-tutor-review-required={lesson.tutorReviewRequired ? "true" : undefined}>
+    <SkipLink target="lesson-content" />
     <LessonNavigation level={lesson.level} category={lesson.category} sequence={lesson.sequence} total={levelTotal} />
-    <slot />
+    <div id="lesson-content" tabindex="-1">
+      <slot />
+    </div>
     <LessonSequenceNavigation lesson={lesson} previous={previous} next={next} isCourseEnd={isCourseEnd} />
     <LessonExerciseEngine />
   </body>

@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { schemaIds } from "../../lib/structured-data.mjs";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const posts = (await getCollection("blog")).sort((a, b) =>
+  b.data.published.getTime() - a.data.published.getTime());
+const related = posts.filter((candidate) => candidate.id !== post.id).slice(0, 2);
+const canonical = new URL(`/blog/${post.id}/`, Astro.site);
+const ids = schemaIds(Astro.site);
+const articleId = `${canonical.href}#article`;
+const publishedTime = post.data.published.toISOString();
+const formatDate = (date: Date) => new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(date);
+const blogPosting = {
+  "@type": "BlogPosting",
+  "@id": articleId,
+  url: canonical.href,
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: publishedTime,
+  dateModified: publishedTime,
+  inLanguage: "en",
+  isAccessibleForFree: true,
+  articleSection: post.data.category,
+  author: { "@id": ids.tutor },
+  publisher: { "@id": ids.website },
+  isPartOf: { "@id": ids.website },
+  mainEntityOfPage: { "@id": `${canonical.href}#webpage` },
+};
+---
+<SiteLayout
+  title={`${post.data.title} · Thomas’s Classroom`}
+  description={post.data.description}
+  heading={post.data.title}
+  lede={post.data.description}
+  current="blog"
+  schemaType="WebPage"
+  mainEntityId={articleId}
+  additionalStructuredData={[blogPosting]}
+  socialType="article"
+  publishedTime={publishedTime}
+  pageClass="blog-post-page"
+>
+  <article class="tab-page blog-article" data-blog-post={post.id}>
+    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+      <a href="/blog/">Teaching Notes</a><span aria-hidden="true">/</span><span aria-current="page">{post.data.category}</span>
+    </nav>
+    <div class="blog-article-meta" aria-label="Article details">
+      <span>{post.data.category}</span>
+      <span>{post.data.audience}</span>
+      <time datetime={publishedTime}>{formatDate(post.data.published)}</time>
+      <span>{post.data.minutes} minute read</span>
+    </div>
+    <div class="blog-article-body">
+      <Content />
+    </div>
+    <aside class="blog-next-step" aria-labelledby="blog-next-step-title">
+      <p class="tab-overline">Put the idea to work</p>
+      <h2 id="blog-next-step-title">Continue from theory to practice.</h2>
+      <p>Choose a learner-facing lesson or open the matching tutor plan before your next session.</p>
+      <div class="home-actions">
+        <a class="home-link primary" href="/curriculum/">Browse the curriculum</a>
+        <a class="home-link" href="/tutor/">Open the tutor guide</a>
+      </div>
+    </aside>
+    <section class="blog-related" aria-labelledby="blog-related-title">
+      <p class="tab-overline">Keep reading</p>
+      <h2 id="blog-related-title">Related field notes</h2>
+      <div class="blog-related-grid">
+        {related.map((candidate) => <a href={`/blog/${candidate.id}/`}>
+          <span>{candidate.data.category} · {candidate.data.minutes} min</span>
+          <strong>{candidate.data.title}</strong>
+        </a>)}
+      </div>
+    </section>
+  </article>
+</SiteLayout>

@@ -1,19 +1,419 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Past perfect continuous · B2 Grammar · Curriculum Map",
+  "title": "Past perfect continuous · B2 Grammar",
   "slug": "past-perfect-continuous",
   "level": "B2",
   "topic": "Past perfect continuous",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B2 grammar lesson covering Past perfect continuous.",
+  "status": "ready",
+  "description": "Frame duration, repeated activity, and evidence before a past reference point using had been plus the -ing form.",
   "sequence": 2,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b2-exit"
-  ]
+  "prerequisites": ["b1/past-perfect", "b1/present-perfect-continuous", "a2/past-continuous"],
+  "related": ["b2/third-and-mixed-conditionals", "b2/future-perfect-and-future-continuous"],
+  "assessments": ["b2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 65,
+    "revisionSummary": "Past reference time, duration, process, repetition, evidence, simple-continuous contrast, state and dynamic meanings, U.S. spoken form, listening, case-file evidence, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–75 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 02</p>
+  <h1>Past perfect <em>continuous</em></h1>
+  <p class="standfirst">The form <span class="ex">had been + -ing</span> asks the listener to look backward from one past point and view an earlier activity from the inside. It can foreground duration, continuing effort, repetition, temporary background, or evidence left by a recent activity. It does not automatically say whether the activity continued after that past point.</p>
+  <div class="meta-row">
+    <span class="tag">60–75 min core</span>
+    <span class="tag">past reference point</span>
+    <span class="tag">process · duration · evidence</span>
+    <span class="tag">15–20 min extension</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Look backward from one past moment.</span></div>
+    <div class="flow-step"><b>Map</b><span>Locate the activity and reference point.</span></div>
+    <div class="flow-step"><b>Contrast</b><span>Choose process, result, or background.</span></div>
+    <div class="flow-step"><b>Use</b><span>Explain a fictional inspection record.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can form positive, negative, yes-or-no, information, and duration patterns; anchor them to a past reference point; show an activity continuing up to or stopping shortly before that point; describe repetition and temporary background; contrast past perfect continuous with past perfect simple, past continuous, and present perfect continuous; handle state and dynamic meanings; understand reduced U.S. forms; and give an evidence-based timeline explanation.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recovered a completed earlier result, an activity in progress at a past moment, a present-duration bridge, and the starting-point marker since.">
+    <h3>Recover the three time lenses</h3>
+    <p class="choice-hint">Use the explicit reference point in each sentence. Say the complete line after you check.</p>
+    <div class="choice-bank" aria-label="Earlier tense and time-marker choices">
+      <button class="choice-option" data-choice-option="had completed">had completed</button>
+      <button class="choice-option" data-choice-option="was inspecting">was inspecting</button>
+      <button class="choice-option" data-choice-option="has been preparing">has been preparing</button>
+      <button class="choice-option" data-choice-option="since">since</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>By 8:00 yesterday, Lena <button class="choice-gap" data-choice-gap data-answer="had completed" data-hint="The four reports were finished before the stated past deadline." data-fix="By 8:00 yesterday, Lena had completed four reports." data-placeholder="choose">choose</button> four reports.</span></div>
+    <div class="q"><span class="n">2</span><span>At 8:15 yesterday, Lena <button class="choice-gap" data-choice-gap data-answer="was inspecting" data-hint="The activity was in progress at one finished past moment." data-fix="At 8:15 yesterday, Lena was inspecting the final report." data-placeholder="choose">choose</button> the final report.</span></div>
+    <div class="q"><span class="n">3</span><span>It is Friday now, and the team began on Monday. The team <button class="choice-gap" data-choice-gap data-answer="has been preparing" data-hint="The preparation began earlier and continues to the present reference point now." data-fix="The team has been preparing since Monday." data-placeholder="choose">choose</button> since Monday.</span></div>
+    <div class="q"><span class="n">4</span><span>Use the marker for a starting point: They have worked here <button class="choice-gap" data-choice-gap data-answer="since" data-hint="Monday names when the period started, not its length." data-fix="They have worked here since Monday." data-placeholder="choose">choose</button> Monday.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice one inspection from two viewpoints</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Fictional Harborview workshop, Friday at 3:00</h3>
+    <p><span class="ex">The electrical crew had been replacing old wiring since Monday morning. By the time the inspector arrived at 3:00 Friday, the crew had replaced 46 of 48 circuits. Dust was still in the air because the crew had been drilling until 2:40.</span></p>
+    <ul>
+      <li>Which expression gives the later past point from which the speaker looks backward?</li>
+      <li>Which form shows the work as a process across time?</li>
+      <li>Which form counts a completed result?</li>
+      <li>Does <span class="ex">had been drilling until 2:40</span> mean the drilling continued at 3:00?</li>
+      <li>What can the dust reasonably support, and what can it not prove by itself?</li>
+    </ul>
+  </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated the past reference point, the extended process, the completed quantity, the stopped activity, and the limited evidence claim.">
+    <h3>Discovery check: recover the two viewpoints</h3>
+    <div class="choice-bank" aria-label="Inspection viewpoint choices">
+      <button class="choice-option" data-choice-option="the inspector arrived at 3:00 Friday">the inspector arrived at 3:00 Friday</button>
+      <button class="choice-option" data-choice-option="had been replacing">had been replacing</button>
+      <button class="choice-option" data-choice-option="had replaced 46 of 48 circuits">had replaced 46 of 48 circuits</button>
+      <button class="choice-option" data-choice-option="the drilling stopped at 2:40">the drilling stopped at 2:40</button>
+      <button class="choice-option" data-choice-option="recent drilling is plausible, but the dust does not prove every cause of the delay">recent drilling is plausible, but the dust does not prove every cause of the delay</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The later past reference point is <button class="choice-gap" data-choice-gap data-answer="the inspector arrived at 3:00 Friday" data-hint="Find the later event introduced by by the time." data-fix="The inspector’s arrival at 3:00 Friday is the past reference point." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The verb chain that opens the work as an extended process is <button class="choice-gap" data-choice-gap data-answer="had been replacing" data-hint="Choose had, been, and the -ing activity as one chain." data-fix="Had been replacing creates the past perfect continuous viewpoint." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The completed result before inspection is <button class="choice-gap" data-choice-gap data-answer="had replaced 46 of 48 circuits" data-hint="A precise completed count foregrounds result." data-fix="The crew had replaced 46 of 48 circuits." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The word <span class="ex">until</span> establishes that <button class="choice-gap" data-choice-gap data-answer="the drilling stopped at 2:40" data-hint="The activity endpoint is twenty minutes before the inspection." data-fix="The drilling stopped at 2:40, before the 3:00 inspection." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The careful evidence claim is that <button class="choice-gap" data-choice-gap data-answer="recent drilling is plausible, but the dust does not prove every cause of the delay" data-hint="Keep the visible clue without turning it into proof of an entire causal story." data-fix="Dust supports a recent-drilling explanation, but it does not prove every cause of the delay." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: establish the past reference point first</h2>
+  <div class="lead-rule"></div>
+  <p>The past perfect continuous is a relative tense. It does not merely mean <span class="ex">a long action in the past</span>. The speaker first establishes a past reference point, then looks farther back at an activity related to that point. The reference point may be an event, a clock time, a deadline, a discovery, or a past state.</p>
+  <table>
+    <thead><tr><th>timeline layer</th><th>question</th><th>Harborview example</th></tr></thead>
+    <tbody>
+      <tr><td>earlier start</td><td>When did the activity begin?</td><td>Monday morning</td></tr>
+      <tr><td>activity period</td><td>What process occupied the period?</td><td>the crew’s wiring replacement</td></tr>
+      <tr><td>past reference point</td><td>From which later past point are we looking back?</td><td>the Friday 3:00 inspection</td></tr>
+      <tr><td>continuation boundary</td><td>Was the activity still happening, recently stopped, or already finished?</td><td>the complete context must tell us</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <h3>The continuous form does not guarantee continuation</h3>
+    <p><span class="ex">At 3:00, they had been drilling for hours</span> leaves the endpoint open. They may have still been drilling, or they may have stopped shortly before 3:00. Add context: <span class="ex">and they were still drilling</span> or <span class="ex">but they had stopped at 2:40</span>.</p>
+  </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You located the earlier start, activity period, later past viewpoint, open continuation boundary, and explicit stopping context.">
+    <h3>Map the timeline before selecting the tense</h3>
+    <div class="choice-bank" aria-label="Past timeline choices">
+      <button class="choice-option" data-choice-option="an earlier start">an earlier start</button>
+      <button class="choice-option" data-choice-option="an activity across a period">an activity across a period</button>
+      <button class="choice-option" data-choice-option="a later past reference point">a later past reference point</button>
+      <button class="choice-option" data-choice-option="the endpoint remains open">the endpoint remains open</button>
+      <button class="choice-option" data-choice-option="but they stopped at 2:40">but they stopped at 2:40</button>
+    </div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Since Monday</span> supplies <button class="choice-gap" data-choice-gap data-answer="an earlier start" data-hint="Since introduces the point at which the activity period began." data-fix="Since Monday supplies an earlier start." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">Had been replacing wiring</span> presents <button class="choice-gap" data-choice-gap data-answer="an activity across a period" data-hint="The continuous viewpoint opens the process rather than counting its completed output." data-fix="Had been replacing wiring presents an activity across a period." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">When the inspector arrived</span> supplies <button class="choice-gap" data-choice-gap data-answer="a later past reference point" data-hint="This later past event is the viewpoint from which the earlier process is described." data-fix="The inspector’s arrival is the later past reference point." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Without more context, <span class="ex">They had been drilling for hours</span> means <button class="choice-gap" data-choice-gap data-answer="the endpoint remains open" data-hint="The grammar connects the earlier activity to a past point but does not state what happened immediately after it." data-fix="The endpoint remains open until context tells us whether the activity continued or stopped." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Add the clause that explicitly ends the activity before inspection: They had been drilling for hours, <button class="choice-gap" data-choice-gap data-answer="but they stopped at 2:40" data-hint="Choose the clause with a stated endpoint before 3:00." data-fix="They had been drilling for hours, but they stopped at 2:40." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the complete form</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>job</th><th>pattern</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>positive</td><td><span class="ex">subject + had been + -ing</span></td><td><span class="ex">They had been waiting.</span></td></tr>
+      <tr><td>negative</td><td><span class="ex">subject + had not been + -ing</span></td><td><span class="ex">They had not been waiting long.</span></td></tr>
+      <tr><td>yes-or-no question</td><td><span class="ex">Had + subject + been + -ing?</span></td><td><span class="ex">Had they been waiting?</span></td></tr>
+      <tr><td>information question</td><td><span class="ex">question word + had + subject + been + -ing?</span></td><td><span class="ex">Why had they been waiting?</span></td></tr>
+      <tr><td>duration question</td><td><span class="ex">How long + had + subject + been + -ing?</span></td><td><span class="ex">How long had they been waiting?</span></td></tr>
+    </tbody>
+  </table>
+  <p>Every subject uses <span class="ex">had</span>. After <span class="ex">been</span>, use the <span class="ex">-ing</span> form: <span class="ex">work → working, run → running, lie → lying</span>. In a question, move <span class="ex">had</span> before the subject; do not move <span class="ex">been</span> by itself.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You preserved had been plus the -ing form across positive, negative, yes-or-no, information, duration, and spelling patterns.">
+    <h3>Form control: keep every part of the chain</h3>
+    <div class="choice-bank" aria-label="Past perfect continuous form choices">
+      <button class="choice-option" data-choice-option="had been working">had been working</button>
+      <button class="choice-option" data-choice-option="had not been monitoring">had not been monitoring</button>
+      <button class="choice-option" data-choice-option="Had the crew been waiting">Had the crew been waiting</button>
+      <button class="choice-option" data-choice-option="Why had the alarm been sounding">Why had the alarm been sounding</button>
+      <button class="choice-option" data-choice-option="How long had the contractor been standing">How long had the contractor been standing</button>
+      <button class="choice-option" data-choice-option="had been running">had been running</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Positive: Before the inspection, the electricians <button class="choice-gap" data-choice-gap data-answer="had been working" data-hint="Use had, been, and the -ing activity." data-fix="The electricians had been working since Monday." data-placeholder="choose">choose</button> since Monday.</span></div>
+    <div class="q"><span class="n">2</span><span>Negative: Before the warning appeared, the system <button class="choice-gap" data-choice-gap data-answer="had not been monitoring" data-hint="Place not after had and keep been before monitoring." data-fix="The system had not been monitoring that circuit." data-placeholder="choose">choose</button> that circuit.</span></div>
+    <div class="q"><span class="n">3</span><span>Yes-or-no question: <button class="choice-gap" data-choice-gap data-answer="Had the crew been waiting" data-hint="Move had before the subject the crew; keep been waiting together." data-fix="Had the crew been waiting before the inspector arrived?" data-placeholder="choose">choose</button> before the inspector arrived?</span></div>
+    <div class="q"><span class="n">4</span><span>Information question: <button class="choice-gap" data-choice-gap data-answer="Why had the alarm been sounding" data-hint="Begin with Why, then had, the subject, and been sounding." data-fix="Why had the alarm been sounding before the inspection?" data-placeholder="choose">choose</button> before the inspection?</span></div>
+    <div class="q"><span class="n">5</span><span>Duration question: <button class="choice-gap" data-choice-gap data-answer="How long had the contractor been standing" data-hint="Begin with How long and use had plus subject plus been plus -ing." data-fix="How long had the contractor been standing outside?" data-placeholder="choose">choose</button> outside?</span></div>
+    <div class="q"><span class="n">6</span><span>Double the final consonant in <span class="ex">run</span>: The motor <button class="choice-gap" data-choice-gap data-answer="had been running" data-hint="Run doubles n before the -ing ending." data-fix="The motor had been running continuously." data-placeholder="choose">choose</button> continuously.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Five useful viewpoints before a past point</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>speaker’s concern</th><th>context</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>duration up to a past point</td><td>the activity occupied a measured period</td><td><span class="ex">They had been working since Monday when the inspector arrived.</span></td></tr>
+      <tr><td>repeated activity</td><td>the speaker views repeated attempts as one ongoing pattern</td><td><span class="ex">The electrician had been calling the supplier all morning.</span></td></tr>
+      <tr><td>temporary background</td><td>a temporary arrangement surrounded the later event</td><td><span class="ex">She had been covering the night shift that week.</span></td></tr>
+      <tr><td>recent activity with past evidence</td><td>the activity stopped, but its trace was visible then</td><td><span class="ex">His gloves were dusty because he had been drilling.</span></td></tr>
+      <tr><td>explanation for a past state</td><td>the earlier process helps explain a later past condition</td><td><span class="ex">Everyone was tired because they had been working overtime.</span></td></tr>
+    </tbody>
+  </table>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched duration, repetition, temporary background, recent evidence, and an explanatory process to their complete past contexts.">
+    <h3>Choose the viewpoint the context requires</h3>
+    <div class="choice-bank" aria-label="Past activity viewpoint choices">
+      <button class="choice-option" data-choice-option="had been repairing">had been repairing</button>
+      <button class="choice-option" data-choice-option="had been calling">had been calling</button>
+      <button class="choice-option" data-choice-option="had been covering">had been covering</button>
+      <button class="choice-option" data-choice-option="had been drilling">had been drilling</button>
+      <button class="choice-option" data-choice-option="had been working">had been working</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The repair began Monday and was still the active project at Friday’s inspection: The crew <button class="choice-gap" data-choice-gap data-answer="had been repairing" data-hint="The stated start and later inspection foreground the duration of one continuing project." data-fix="The crew had been repairing the wiring since Monday." data-placeholder="choose">choose</button> the wiring since Monday.</span></div>
+    <div class="q"><span class="n">2</span><span>The supplier log shows repeated attempts throughout Thursday morning: The electrician <button class="choice-gap" data-choice-gap data-answer="had been calling" data-hint="All morning presents repeated calls as one developing pattern." data-fix="The electrician had been calling the supplier all morning." data-placeholder="choose">choose</button> the supplier all morning.</span></div>
+    <div class="q"><span class="n">3</span><span>For one temporary week, Rosa worked a shift that was not normally hers: Rosa <button class="choice-gap" data-choice-gap data-answer="had been covering" data-hint="The context frames the night shift as a temporary background arrangement." data-fix="Rosa had been covering the night shift that week." data-placeholder="choose">choose</button> the night shift that week.</span></div>
+    <div class="q"><span class="n">4</span><span>The drilling stopped at 2:40, but dust was visible at 3:00: The crew <button class="choice-gap" data-choice-gap data-answer="had been drilling" data-hint="A very recent activity explains the visible past evidence." data-fix="The crew had been drilling, so dust was still visible at 3:00." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>At the 6:00 meeting, everyone looked exhausted after several late nights: They <button class="choice-gap" data-choice-gap data-answer="had been working" data-hint="The earlier overtime process helps explain the later past state of exhaustion." data-fix="They had been working late for several nights." data-placeholder="choose">choose</button> late for several nights.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Process and result: continuous versus simple</h2>
+  <div class="lead-rule"></div>
+  <p>Both past perfect forms connect an earlier situation to a later past point. The difference is viewpoint, not simply long versus short.</p>
+  <table>
+    <thead><tr><th>viewpoint</th><th>past perfect continuous</th><th>past perfect simple</th></tr></thead>
+    <tbody>
+      <tr><td>activity or duration</td><td><span class="ex">They had been replacing wiring since Monday.</span></td><td>not the preferred lens when the period itself is central</td></tr>
+      <tr><td>completed result or quantity</td><td>may distract from the completed count</td><td><span class="ex">They had replaced 46 circuits.</span></td></tr>
+      <tr><td>repeated activity as a pattern</td><td><span class="ex">She had been calling all morning.</span></td><td><span class="ex">She had called three times.</span> counts completed calls</td></tr>
+      <tr><td>continuing state</td><td>normally unavailable with a state meaning</td><td><span class="ex">They had known since Wednesday.</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <h3>Some contexts allow both forms</h3>
+    <p>With verbs such as <span class="ex">live, work, study</span>, both forms can be natural when the situation continued up to the reference point: <span class="ex">She had worked there for ten years</span> and <span class="ex">She had been working there for ten years</span>. The continuous form more strongly opens the ongoing activity; the simple form can present the ten-year situation as a whole. Do not mark one wrong unless the wider context creates a clear viewpoint.</p>
+  </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose the continuous for process and repetition, the simple for completed quantity and state, and recognized a genuine overlap context.">
+    <h3>Choose the intended viewpoint, not a memorized signal word</h3>
+    <div class="choice-bank" aria-label="Past perfect aspect choices">
+      <button class="choice-option" data-choice-option="had been reviewing">had been reviewing</button>
+      <button class="choice-option" data-choice-option="had approved eight applications">had approved eight applications</button>
+      <button class="choice-option" data-choice-option="had called three times">had called three times</button>
+      <button class="choice-option" data-choice-option="had known">had known</button>
+      <button class="choice-option" data-choice-option="both are possible, with a different viewpoint">both are possible, with a different viewpoint</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The manager asks what process occupied the team for the two hours before noon: They <button class="choice-gap" data-choice-gap data-answer="had been reviewing" data-hint="The question foregrounds the activity and its two-hour duration." data-fix="They had been reviewing applications for two hours." data-placeholder="choose">choose</button> applications for two hours.</span></div>
+    <div class="q"><span class="n">2</span><span>The noon report requires an exact completed output: By noon, the panel <button class="choice-gap" data-choice-gap data-answer="had approved eight applications" data-hint="A precise completed count foregrounds result, so use the simple past perfect." data-fix="By noon, the panel had approved eight applications." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The phone log requires the exact number of completed attempts before lunch: The electrician <button class="choice-gap" data-choice-gap data-answer="had called three times" data-hint="The exact number three counts completed calls rather than opening the repeated process." data-fix="The electrician had called three times before lunch." data-placeholder="choose">choose</button> before lunch.</span></div>
+    <div class="q"><span class="n">4</span><span>The permit requirement was a state in the supervisor’s mind from Wednesday to Friday: The supervisor <button class="choice-gap" data-choice-gap data-answer="had known" data-hint="Know has a state meaning here and normally uses the simple perfect." data-fix="The supervisor had known about the permit requirement since Wednesday." data-placeholder="choose">choose</button> about the permit requirement since Wednesday.</span></div>
+    <div class="q"><span class="n">5</span><span>For <span class="ex">She had worked there for ten years</span> and <span class="ex">She had been working there for ten years</span>, when the employment continued up to the past reference point, <button class="choice-gap" data-choice-gap data-answer="both are possible, with a different viewpoint" data-hint="One presents the situation as a whole; the other more strongly opens the ongoing activity." data-fix="Both are possible in this context, with a difference in viewpoint rather than a simple right-or-wrong contrast." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose the time lens before the aspect</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>form</th><th>viewpoint</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>past continuous</td><td>activity in progress at a past moment</td><td><span class="ex">At 2:30, they were drilling.</span></td></tr>
+      <tr><td>past perfect continuous</td><td>activity before or up to a later past point</td><td><span class="ex">By 3:00, they had been drilling for two hours.</span></td></tr>
+      <tr><td>present perfect continuous</td><td>activity before or up to now</td><td><span class="ex">They have been drilling since noon.</span></td></tr>
+      <tr><td>past perfect simple</td><td>completed result, quantity, or state before a past point</td><td><span class="ex">By 3:00, they had drilled six holes.</span></td></tr>
+    </tbody>
+  </table>
+  <p>Markers such as <span class="ex">for, since, all morning, before, until, by the time</span> support a timeline, but no marker chooses the tense alone. Ask: What is the reference point? Is the speaker opening an activity or presenting a result?</p>
+  <div class="quiz" data-quiz data-success-message="Correct. You chose present, past-at-a-moment, earlier-process, and completed-result lenses from the complete timeline rather than one nearby marker.">
+    <h3>Time-lens decisions</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="At 2:30 Friday, the crew was drilling near the entrance." data-hint="The sentence locates an activity in progress at one finished past time." data-fix="At 2:30 Friday, the crew was drilling near the entrance."><p class="quiz-question">1. Which sentence shows what was in progress at exactly 2:30 Friday?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="At 2:30 Friday, the crew was drilling near the entrance.">At 2:30 Friday, the crew was drilling near the entrance.</button><button class="quiz-option" data-quiz-option="By 2:30 Friday, the crew had been drilling for two hours.">By 2:30 Friday, the crew had been drilling for two hours.</button><button class="quiz-option" data-quiz-option="The crew has been drilling since noon today.">The crew has been drilling since noon today.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="By 3:00 Friday, the crew had been drilling for three hours." data-hint="Look backward from the 3:00 past point across the three-hour activity period." data-fix="By 3:00 Friday, the crew had been drilling for three hours."><p class="quiz-question">2. Which sentence measures an earlier activity up to the 3:00 Friday inspection?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="By 3:00 Friday, the crew had been drilling for three hours.">By 3:00 Friday, the crew had been drilling for three hours.</button><button class="quiz-option" data-quiz-option="At 3:00 Friday, the crew drills for three hours tomorrow.">At 3:00 Friday, the crew drills for three hours tomorrow.</button><button class="quiz-option" data-quiz-option="The crew has drilled for three hours before last Friday.">The crew has drilled for three hours before last Friday.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The crew has been working since 8:00 this morning, and it is noon now." data-hint="The activity begins earlier today and reaches the stated present reference point now." data-fix="The crew has been working since 8:00 this morning, and it is noon now."><p class="quiz-question">3. Which sentence connects an earlier start to the present reference point?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The crew has been working since 8:00 this morning, and it is noon now.">The crew has been working since 8:00 this morning, and it is noon now.</button><button class="quiz-option" data-quiz-option="The crew had been working since 8:00 tomorrow.">The crew had been working since 8:00 tomorrow.</button><button class="quiz-option" data-quiz-option="At noon yesterday, the crew has work now.">At noon yesterday, the crew has work now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="By the inspection, the crew had replaced 46 circuits." data-hint="The exact completed quantity requires a result viewpoint before the past inspection." data-fix="By the inspection, the crew had replaced 46 circuits."><p class="quiz-question">4. Which sentence reports completed output rather than the activity period?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="By the inspection, the crew had replaced 46 circuits.">By the inspection, the crew had replaced 46 circuits.</button><button class="quiz-option" data-quiz-option="By the inspection, the crew had been replacing 46 completed circuits.">By the inspection, the crew had been replacing 46 completed circuits.</button><button class="quiz-option" data-quiz-option="At the inspection, 46 circuits were replacing the crew.">At the inspection, 46 circuits were replacing the crew.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="First identify the reference point and intended viewpoint; the word for does not choose the tense by itself." data-hint="A duration marker can occur with several tenses, so the complete timeline and viewpoint must decide." data-fix="Identify the reference point and viewpoint before using for as supporting timeline information."><p class="quiz-question">5. A sentence contains <span class="ex">for three hours</span>. What should you do before choosing a tense?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="First identify the reference point and intended viewpoint; the word for does not choose the tense by itself.">First identify the reference point and intended viewpoint; the word for does not choose the tense by itself.</button><button class="quiz-option" data-quiz-option="Always choose past perfect continuous because for automatically controls the tense.">Always choose past perfect continuous because for automatically controls the tense.</button><button class="quiz-option" data-quiz-option="Ignore the reference point and choose the longest verb form.">Ignore the reference point and choose the longest verb form.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>State meanings and dynamic meanings</h2>
+  <div class="lead-rule"></div>
+  <p>Verbs do not belong permanently to a simple or continuous box. A particular meaning matters. State meanings such as possession, knowledge, and belief normally use the simple perfect: <span class="ex">had owned, had known, had believed</span>. Dynamic meanings can use the continuous: <span class="ex">had been thinking about the proposal, had been having equipment problems, had been seeing clients all morning</span>.</p>
+  <div class="note">
+    <h3>Completion verbs need a plausible process reading</h3>
+    <p>Do not force verbs such as <span class="ex">finish, decide, arrive</span> into the continuous when one completed event is intended. Use <span class="ex">had finished, had decided, had arrived</span>. A continuous form may become possible only with a special repeated or developing meaning, such as <span class="ex">People had been arriving all morning</span>.</p>
+  </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept possession and knowledge in the simple perfect while allowing genuinely dynamic thinking and equipment-problem meanings.">
+    <h3>Choose by meaning, not by the dictionary verb alone</h3>
+    <div class="choice-bank" aria-label="State and dynamic meaning choices">
+      <button class="choice-option" data-choice-option="had owned">had owned</button>
+      <button class="choice-option" data-choice-option="had known">had known</button>
+      <button class="choice-option" data-choice-option="had been thinking">had been thinking</button>
+      <button class="choice-option" data-choice-option="had been having">had been having</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The company possessed the workshop from 2008 until the sale in 2024: It <button class="choice-gap" data-choice-gap data-answer="had owned" data-hint="Own expresses possession, a state, in this context." data-fix="The company had owned the workshop since 2008." data-placeholder="choose">choose</button> the workshop since 2008.</span></div>
+    <div class="q"><span class="n">2</span><span>The supervisor was aware of the permit requirement from Wednesday onward: She <button class="choice-gap" data-choice-gap data-answer="had known" data-hint="Know expresses an established state of awareness here." data-fix="She had known about the permit requirement since Wednesday." data-placeholder="choose">choose</button> about it since Wednesday.</span></div>
+    <div class="q"><span class="n">3</span><span>Before the Friday decision, the manager repeatedly considered an alternative supplier: She <button class="choice-gap" data-choice-gap data-answer="had been thinking" data-hint="Think about describes an active mental process across the period." data-fix="She had been thinking about an alternative supplier all week." data-placeholder="choose">choose</button> about an alternative supplier all week.</span></div>
+    <div class="q"><span class="n">4</span><span>The ventilation unit developed intermittent problems throughout the week: It <button class="choice-gap" data-choice-gap data-answer="had been having" data-hint="Have means experience problems here, an unfolding dynamic situation rather than possession." data-fix="The unit had been having intermittent problems all week." data-placeholder="choose">choose</button> intermittent problems all week.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: hear <span class="ex">I’d been</span> and <span class="ex">I’d be</span></h2>
+  <div class="lead-rule"></div>
+  <p>In ordinary U.S. speech, <span class="ex">had</span> often contracts to <span class="ex">’d</span>, and unstressed <span class="ex">been</span> commonly sounds like /bɪn/: <span class="ex">I’d been testing</span> /aɪd bɪn ˈtɛstɪŋ/. Recover <span class="ex">had</span> because <span class="ex">been</span> follows. Compare <span class="ex">I’d be testing</span> /aɪd bi ˈtɛstɪŋ/, where <span class="ex">’d</span> means <span class="ex">would</span> because the base form <span class="ex">be</span> follows.</p>
+  <p>In <span class="ex">Had you been waiting?</span>, <span class="ex">had you</span> may link as /hədʒə/. Keep the full form available for careful speech. Stress the new contrast, such as <span class="ex">THREE hours</span> or <span class="ex">since MONday</span>; no single word must always carry the main stress.</p>
+  <div class="practice" data-choice-gap-drill data-lesson-extension="Tutor-read had contractions, weak been, linked had you, negative form, and information-stress listening check" data-success-message="Correct. You recovered contracted had, distinguished would plus be, heard the negative and linked question, and located the contextually important stress.">
+    <h3>Listen before opening the transcript</h3>
+    <p class="choice-hint">Ask your tutor to read the five lines naturally. Choose the meaning or exact form you hear, then open the transcript only after checking.</p>
+    <div class="choice-bank" aria-label="Spoken past perfect continuous choices">
+      <button class="choice-option" data-choice-option="had been testing">had been testing</button>
+      <button class="choice-option" data-choice-option="would be testing">would be testing</button>
+      <button class="choice-option" data-choice-option="had not been checking">had not been checking</button>
+      <button class="choice-option" data-choice-option="Had you been waiting">Had you been waiting</button>
+      <button class="choice-option" data-choice-option="three hours">three hours</button>
+    </div>
+    <div class="q"><span class="n">1</span><span><span class="contraction">Tutor line 1:</span> <span class="ex">I’d been testing the alarm.</span> The contracted verb chain means I <button class="choice-gap" data-choice-gap data-answer="had been testing" data-hint="Been after ’d identifies had, not would." data-fix="I’d been testing expands to I had been testing." data-placeholder="listen">listen</button> the alarm.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="contraction">Tutor line 2:</span> <span class="ex">I’d be testing the alarm if the room were open.</span> Here <span class="ex">’d be</span> means I <button class="choice-gap" data-choice-gap data-answer="would be testing" data-hint="The base form be after ’d identifies would." data-fix="I’d be testing expands to I would be testing." data-placeholder="listen">listen</button> the alarm.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="contraction">Tutor line 3:</span> <span class="ex">They hadn’t been checking that circuit.</span> The full negative is <button class="choice-gap" data-choice-gap data-answer="had not been checking" data-hint="Expand hadn’t to had not and retain been checking." data-fix="They had not been checking that circuit." data-placeholder="listen">listen</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="contraction">Tutor line 4:</span> Which complete opening may sound like /hədʒə bɪn ˈweɪtɪŋ/? <button class="choice-gap" data-choice-gap data-answer="Had you been waiting" data-hint="Listen for linked had you followed by weak been." data-fix="Had you been waiting? may link as /hədʒə bɪn ˈweɪtɪŋ/." data-placeholder="listen">listen</button>?</span></div>
+    <div class="q"><span class="n">5</span><span><span class="contraction">Tutor line 5:</span> In <span class="ex">They’d been waiting for THREE hours, not two</span>, the corrected information is <button class="choice-gap" data-choice-gap data-answer="three hours" data-hint="Contrastive stress corrects the duration, not the tense." data-fix="The stressed correction is three hours." data-placeholder="listen">listen</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+    <details>
+      <summary>Tutor script and transcript</summary>
+      <ol>
+        <li>I’d been testing the alarm.</li>
+        <li>I’d be testing the alarm if the room were open.</li>
+        <li>They hadn’t been checking that circuit.</li>
+        <li>Had you been waiting long?</li>
+        <li>They’d been waiting for <strong>three hours</strong>, not two.</li>
+      </ol>
+      <p>First read each line once at a natural pace. Repeat once if requested. Then contrast lines 1 and 2 and let the learner explain how <span class="ex">been</span> versus <span class="ex">be</span> identifies the hidden auxiliary.</p>
+    </details>
+  </div>
+
+  <h2>Read a past record without inventing causes</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Fictional Harborview inspection file</h3>
+    <p>The workshop’s electrical replacement began at 8:00 Monday morning. The safety inspection was scheduled for 3:00 Friday. The electrical crew worked throughout the week and stopped drilling at 2:40 Friday to begin cleanup. By 3:00, it had replaced 46 of the building’s 48 circuits.</p>
+    <p>The last two circuits required two breakers from an outside supplier. The supplier had promised delivery on Thursday, but the breakers had not arrived by inspection time. The lead electrician had called the supplier three times between Thursday afternoon and Friday noon. A ventilation contractor arrived at 11:00 Friday and was still waiting at 3:00, so that contractor had been waiting for four hours.</p>
+    <p>The site supervisor had known since Wednesday that the city needed one revised permit page. The revised page was still missing at 3:00. Dust remained in the air after drilling stopped. The inspector postponed approval because two circuits and the permit page were incomplete. The record supports statements about duration, completed quantities, and known missing items. It does not prove that continued drilling would have secured approval, and it does not assign the entire delay to one person.</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the extended process, exact completed output, four-hour wait, continuing knowledge state, and stated evidence boundary from the Harborview record.">
+    <h3>Evidence check: process, result, state, and limit</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="The crew had been replacing wiring since Monday morning." data-hint="Choose the sentence that opens the weeklong activity rather than counting its output." data-fix="The crew had been replacing wiring since Monday morning."><p class="quiz-question">1. Which sentence best foregrounds the electrical work as an extended process before inspection?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The crew had been replacing wiring since Monday morning.">The crew had been replacing wiring since Monday morning.</button><button class="quiz-option" data-quiz-option="The inspector replaced the workshop after Friday.">The inspector replaced the workshop after Friday.</button><button class="quiz-option" data-quiz-option="The supplier has delivered every breaker now.">The supplier has delivered every breaker now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The crew had replaced 46 of 48 circuits by 3:00 Friday." data-hint="Recover the exact completed quantity and past deadline." data-fix="The crew had replaced 46 of 48 circuits by 3:00 Friday."><p class="quiz-question">2. What completed result had the crew achieved by inspection time?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The crew had replaced 46 of 48 circuits by 3:00 Friday.">The crew had replaced 46 of 48 circuits by 3:00 Friday.</button><button class="quiz-option" data-quiz-option="The crew had replaced all 48 circuits by Thursday morning.">The crew had replaced all 48 circuits by Thursday morning.</button><button class="quiz-option" data-quiz-option="The inspector had ordered 46 new buildings.">The inspector had ordered 46 new buildings.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The ventilation contractor had been waiting for four hours." data-hint="Calculate from the 11:00 arrival to the 3:00 inspection." data-fix="The contractor had been waiting for four hours by 3:00."><p class="quiz-question">3. At 3:00, how long had the ventilation contractor been waiting?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The ventilation contractor had been waiting for four hours.">The ventilation contractor had been waiting for four hours.</button><button class="quiz-option" data-quiz-option="The ventilation contractor had waited for four completed weeks.">The ventilation contractor had waited for four completed weeks.</button><button class="quiz-option" data-quiz-option="The ventilation contractor began waiting at 3:00.">The ventilation contractor began waiting at 3:00.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The supervisor had known about the revised permit page since Wednesday." data-hint="Knowledge is a state and the file gives its Wednesday starting point." data-fix="The supervisor had known about the revised permit page since Wednesday."><p class="quiz-question">4. Which sentence accurately reports the supervisor’s continuing state before inspection?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The supervisor had known about the revised permit page since Wednesday.">The supervisor had known about the revised permit page since Wednesday.</button><button class="quiz-option" data-quiz-option="The supervisor had been knowing every future inspection result.">The supervisor had been knowing every future inspection result.</button><button class="quiz-option" data-quiz-option="The supervisor first learned about the page after approval.">The supervisor first learned about the page after approval.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The record explains why approval was postponed, but it does not prove that one person caused the entire delay or that more drilling would have guaranteed approval." data-hint="Keep the two documented incomplete items and the explicit limits on blame and certainty." data-fix="The record supports the stated reasons for postponement but not total individual blame or a guaranteed counterfactual result."><p class="quiz-question">5. Which conclusion stays within the evidence?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The record explains why approval was postponed, but it does not prove that one person caused the entire delay or that more drilling would have guaranteed approval.">The record explains why approval was postponed, but it does not prove that one person caused the entire delay or that more drilling would have guaranteed approval.</button><button class="quiz-option" data-quiz-option="The dust proves one electrician intentionally caused every permit and delivery problem.">The dust proves one electrician intentionally caused every permit and delivery problem.</button><button class="quiz-option" data-quiz-option="Because the crew had been drilling, approval was guaranteed before the inspection.">Because the crew had been drilling, approval was guaranteed before the inspection.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the duration question and process-result report</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="how long had the contractor been waiting when the inspector arrived" data-hint="Begin with How long, move had before the subject, and end with the later past reference event." data-fix="How long had the contractor been waiting when the inspector arrived?" data-success-message="Correct. The duration question moves had before the contractor and anchors the earlier wait to the inspector’s arrival.">
+    <h3>Builder 1: ask from the later past point</h3>
+    <p class="tile-target">Build the complete duration question.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="arrived">arrived</button><button class="tile" data-build-tile="been">been</button><button class="tile" data-build-tile="How long">How long</button><button class="tile" data-build-tile="the contractor">the contractor</button><button class="tile" data-build-tile="when">when</button><button class="tile" data-build-tile="had">had</button><button class="tile" data-build-tile="waiting">waiting</button><button class="tile" data-build-tile="the inspector">the inspector</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="the crew had been replacing wiring since monday and had completed forty-six circuits by friday" data-hint="Open the activity period first, join it with and, then report the completed quantity by the later deadline." data-fix="The crew had been replacing wiring since Monday and had completed forty-six circuits by Friday." data-success-message="Correct. The continuous clause foregrounds the weeklong process, while the simple perfect clause reports the completed quantity.">
+    <h3>Builder 2: combine process and result</h3>
+    <p class="tile-target">Build one balanced inspection update.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="by Friday">by Friday</button><button class="tile" data-build-tile="had completed">had completed</button><button class="tile" data-build-tile="wiring">wiring</button><button class="tile" data-build-tile="The crew">The crew</button><button class="tile" data-build-tile="and">and</button><button class="tile" data-build-tile="forty-six circuits">forty-six circuits</button><button class="tile" data-build-tile="since Monday">since Monday</button><button class="tile" data-build-tile="had been replacing">had been replacing</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap chunks in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the viewpoint</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="replace" data-hint="After had been, the activity needs the -ing form." data-fix="The crew had been replacing the wiring since Monday." data-why="The past perfect continuous chain is had plus been plus the -ing form replacing." data-success-message="Correct. Replacing now completes the continuous activity chain.">
+    <h3>Repair 1: restore the <span class="ex">-ing</span> activity</h3><p>Tap the word with the wrong form.</p><div class="spot-options"><button class="error-choice" data-error-choice="crew">The crew</button><button class="error-choice" data-error-choice="had">had been</button><button class="error-choice" data-error-choice="replace">replace</button><button class="error-choice" data-error-choice="wiring">the wiring</button><button class="error-choice" data-error-choice="monday">since Monday.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="been" data-hint="The exact completed quantity needs the simple past perfect: had completed." data-fix="By Friday, the crew had completed 46 circuits." data-why="A completed count is foregrounded with had plus the past participle completed; been does not belong in that result chain." data-success-message="Correct. Had completed now presents 46 circuits as finished output.">
+    <h3>Repair 2: present the completed quantity</h3><p>Tap the unnecessary word.</p><div class="spot-options"><button class="error-choice" data-error-choice="friday">By Friday,</button><button class="error-choice" data-error-choice="crew">the crew</button><button class="error-choice" data-error-choice="had">had</button><button class="error-choice" data-error-choice="been">been</button><button class="error-choice" data-error-choice="completed">completed 46 circuits.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="knowing" data-hint="Know expresses a state of awareness here, so use the simple perfect." data-fix="The supervisor had known about the permit since Wednesday." data-why="A continuing knowledge state normally uses had plus the participle known, not the continuous form had been knowing." data-success-message="Correct. Had known now reports the continuing state of awareness.">
+    <h3>Repair 3: keep the state meaning simple</h3><p>Tap the form that conflicts with the knowledge meaning.</p><div class="spot-options"><button class="error-choice" data-error-choice="supervisor">The supervisor</button><button class="error-choice" data-error-choice="had">had been</button><button class="error-choice" data-error-choice="knowing">knowing</button><button class="error-choice" data-error-choice="permit">about the permit</button><button class="error-choice" data-error-choice="wednesday">since Wednesday.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Practice analysis without disclosing a private failure</h2>
+  <div class="lead-rule"></div>
+  <p>You never need to discuss a real disciplinary issue, accident, medical event, financial loss, immigration matter, relationship, academic failure, or confidential workplace incident. Use Harborview, a public historical process with reliable facts, or a tutor-created fictional case. The target is timeline and viewpoint control, not personal disclosure.</p>
+  <div class="prompt-card"><b>Timeline map:</b> Mark the earlier start, activity period, later past reference point, and known endpoint. State which detail comes from the record and which is an inference.</div>
+  <div class="prompt-card"><b>Viewpoint pair:</b> Describe the process with past perfect continuous, then report one completed result with past perfect simple.</div>
+  <div class="prompt-card"><b>Evidence test:</b> Explain a visible past state with an earlier activity. Then add one sentence limiting what the evidence can prove.</div>
+  <div class="prompt-card"><b>Tense shift:</b> Retell the same activity from a moment inside it with past continuous, then from a later past point with past perfect continuous.</div>
+  <div class="prompt-card"><b>Live reformulation:</b> Your partner changes the reference point or asks for a completed quantity. Reformulate immediately and explain why the aspect changes.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: give a 90-second timeline briefing</h3>
+    <p>Use the Harborview file or another tutor-supplied fictional record. Name the later past reference point first. Describe two earlier activities with different purposes: one duration or temporary background, and one repeated process or recent-evidence explanation. Report two completed results with the simple past perfect. Include a negative, a duration question, one state verb, and one dynamic use of a normally flexible verb such as <span class="ex">think</span> or <span class="ex">have</span>. State whether each activity continued, stopped, or has an unknown endpoint. Finish with one evidence limit and one practical next step.</p>
+    <p><b>Success criteria:</b> Can the listener recover the reference point, earlier start, activity period, endpoint status, process-result contrast, state-dynamic contrast, completed quantities, evidence, uncertainty, and next step without a broken auxiliary chain or an unsupported causal claim?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You preserved the past reference point, complete form, open endpoint, process-result contrast, dynamic meaning, and spoken contraction evidence.">
+    <h3>Final check: choose the defensible timeline</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="When the inspector arrived at 3:00, the crew had been replacing wiring since Monday." data-hint="Use the inspector’s arrival as the later past point and look backward across the activity period." data-fix="When the inspector arrived at 3:00, the crew had been replacing wiring since Monday."><p class="quiz-question">1. Which sentence correctly anchors the extended activity to the Friday inspection?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="When the inspector arrived at 3:00, the crew had been replacing wiring since Monday.">When the inspector arrived at 3:00, the crew had been replacing wiring since Monday.</button><button class="quiz-option" data-quiz-option="When the inspector will arrive yesterday, the crew has replacing since Monday.">When the inspector will arrive yesterday, the crew has replacing since Monday.</button><button class="quiz-option" data-quiz-option="The crew had been replace wiring after tomorrow’s inspection.">The crew had been replace wiring after tomorrow’s inspection.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="By 3:00, the crew had replaced 46 of 48 circuits." data-hint="The question asks for an exact completed result before a past deadline." data-fix="By 3:00, the crew had replaced 46 of 48 circuits."><p class="quiz-question">2. Which sentence gives the completed quantity accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="By 3:00, the crew had replaced 46 of 48 circuits.">By 3:00, the crew had replaced 46 of 48 circuits.</button><button class="quiz-option" data-quiz-option="By 3:00, the crew had been replaced 46 of 48 circuits.">By 3:00, the crew had been replaced 46 of 48 circuits.</button><button class="quiz-option" data-quiz-option="At 3:00, 48 circuits had been replacing 46 crews.">At 3:00, 48 circuits had been replacing 46 crews.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The form alone leaves the endpoint open; surrounding context must say whether the activity continued or stopped." data-hint="Past perfect continuous establishes an earlier activity relative to a past point but does not guarantee its endpoint." data-fix="Use surrounding context to establish whether the activity continued, stopped shortly before, or had another endpoint."><p class="quiz-question">3. What does <span class="ex">They had been drilling for hours</span> tell us about continuation at the later past point?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The form alone leaves the endpoint open; surrounding context must say whether the activity continued or stopped.">The form alone leaves the endpoint open; surrounding context must say whether the activity continued or stopped.</button><button class="quiz-option" data-quiz-option="The form guarantees that the drilling continued forever after the reference point.">The form guarantees that the drilling continued forever after the reference point.</button><button class="quiz-option" data-quiz-option="The form guarantees that the drilling stopped exactly one hour earlier.">The form guarantees that the drilling stopped exactly one hour earlier.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="How long had the contractor been waiting when the inspector arrived?" data-hint="Begin with How long, move had before the subject, and retain been waiting." data-fix="How long had the contractor been waiting when the inspector arrived?"><p class="quiz-question">4. Which duration question has the complete auxiliary order?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="How long had the contractor been waiting when the inspector arrived?">How long had the contractor been waiting when the inspector arrived?</button><button class="quiz-option" data-quiz-option="How long the contractor had waiting been when the inspector arrived?">How long the contractor had waiting been when the inspector arrived?</button><button class="quiz-option" data-quiz-option="How long did the contractor had been wait when the inspector arrived?">How long did the contractor had been wait when the inspector arrived?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The unit had been having intermittent problems all week." data-hint="Have means experience problems here, so it has a dynamic meaning that can unfold across time." data-fix="The unit had been having intermittent problems all week."><p class="quiz-question">5. Which sentence uses <span class="ex">have</span> dynamically rather than as possession?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The unit had been having intermittent problems all week.">The unit had been having intermittent problems all week.</button><button class="quiz-option" data-quiz-option="The company had been having the building since 2008.">The company had been having the building since 2008.</button><button class="quiz-option" data-quiz-option="The supervisor had been knowing the permit rule.">The supervisor had been knowing the permit rule.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="In I’d been testing, ’d means had because it is followed by been; in I’d be testing, ’d means would because it is followed by be." data-hint="Use been versus the base form be to recover the contracted auxiliary." data-fix="I’d been expands to I had been; I’d be expands to I would be."><p class="quiz-question">6. How can a listener distinguish <span class="ex">I’d been testing</span> from <span class="ex">I’d be testing</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="In I’d been testing, ’d means had because it is followed by been; in I’d be testing, ’d means would because it is followed by be.">In I’d been testing, ’d means had because it is followed by been; in I’d be testing, ’d means would because it is followed by be.</button><button class="quiz-option" data-quiz-option="The two phrases are identical because been and be always mean the same thing.">The two phrases are identical because been and be always mean the same thing.</button><button class="quiz-option" data-quiz-option="In both phrases, ’d must mean did because an -ing form appears later.">In both phrases, ’d must mean did because an -ing form appears later.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: can you defend the viewpoint?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">My past reference point is...</span> <span class="ex">The earlier activity began...</span> <span class="ex">I chose the continuous viewpoint because...</span> <span class="ex">The simple perfect is better for...</span> <span class="ex">The endpoint is...</span> <span class="ex">The evidence supports...</span> <span class="ex">The evidence does not prove...</span> <span class="ex">Had been knowing changes to...</span> <span class="ex">I’d been differs from I’d be because...</span></p>
+    <p>Then draw one line with an earlier start, activity period, later past point, and endpoint note. Describe it once from inside the activity with past continuous and once from the later point with past perfect continuous. Add one completed quantity with past perfect simple.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the five-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day past-reference, complete-form, process-result, state-meaning, and open-endpoint retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Recover the reference point, complete chain, viewpoint contrast, state boundary, and endpoint principle from new contexts.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained past-reference mapping, complete past perfect continuous form, process-result contrast, state meaning, and the open endpoint.">
+      <h3>Five delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Identify the later past reference point, then locate the earlier activity and its relationship to that point." data-hint="The tense is relative, so begin with the past viewpoint rather than the verb formula." data-fix="First establish the later past reference point; then map the earlier activity."><p class="quiz-question">1. What should you establish before choosing past perfect continuous?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Identify the later past reference point, then locate the earlier activity and its relationship to that point.">Identify the later past reference point, then locate the earlier activity and its relationship to that point.</button><button class="quiz-option" data-quiz-option="Find any long action and choose the longest available verb form.">Find any long action and choose the longest available verb form.</button><button class="quiz-option" data-quiz-option="Use for as an automatic tense command without reading the context.">Use for as an automatic tense command without reading the context.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="How long had the residents been waiting before the bus arrived?" data-hint="Begin with How long, move had before the subject, and keep been waiting together." data-fix="How long had the residents been waiting before the bus arrived?"><p class="quiz-question">2. Which question accurately asks about the earlier wait before the bus arrived?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="How long had the residents been waiting before the bus arrived?">How long had the residents been waiting before the bus arrived?</button><button class="quiz-option" data-quiz-option="How long the residents had been wait before the bus arrived?">How long the residents had been wait before the bus arrived?</button><button class="quiz-option" data-quiz-option="How long did the residents had waiting before the bus arrived?">How long did the residents had waiting before the bus arrived?</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The team had been testing for three hours, and it had completed twelve tests by noon." data-hint="Use the continuous for the activity duration and the simple perfect for the completed quantity." data-fix="The team had been testing for three hours, and it had completed twelve tests by noon."><p class="quiz-question">3. Which update distinguishes process from completed output?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The team had been testing for three hours, and it had completed twelve tests by noon.">The team had been testing for three hours, and it had completed twelve tests by noon.</button><button class="quiz-option" data-quiz-option="The team had been completed twelve tests and had testing three hours.">The team had been completed twelve tests and had testing three hours.</button><button class="quiz-option" data-quiz-option="The team has tested yesterday and completes tomorrow by noon.">The team has tested yesterday and completes tomorrow by noon.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="She had believed the explanation for years before new evidence changed her mind." data-hint="Believe expresses a continuing state here, so use the simple past perfect." data-fix="She had believed the explanation for years before new evidence changed her mind."><p class="quiz-question">4. Which sentence handles the state meaning accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She had believed the explanation for years before new evidence changed her mind.">She had believed the explanation for years before new evidence changed her mind.</button><button class="quiz-option" data-quiz-option="She had been believing the explanation for years before new evidence changed her mind.">She had been believing the explanation for years before new evidence changed her mind.</button><button class="quiz-option" data-quiz-option="She had been believe the explanation before new evidence.">She had been believe the explanation before new evidence.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The grammar leaves the endpoint open, so the next sentence must establish whether the rain continued or stopped." data-hint="The form relates the earlier activity to the past arrival but does not settle its continuation by itself." data-fix="Add context to show whether the rain continued at arrival or had stopped shortly before it."><p class="quiz-question">5. In <span class="ex">It had been raining when we arrived</span>, what can you safely conclude about the rain’s endpoint?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The grammar leaves the endpoint open, so the next sentence must establish whether the rain continued or stopped.">The grammar leaves the endpoint open, so the next sentence must establish whether the rain continued or stopped.</button><button class="quiz-option" data-quiz-option="The grammar proves that the rain stopped exactly when the speaker arrived.">The grammar proves that the rain stopped exactly when the speaker arrived.</button><button class="quiz-option" data-quiz-option="The grammar proves that the rain continued for the rest of the year.">The grammar proves that the rain continued for the rest of the year.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

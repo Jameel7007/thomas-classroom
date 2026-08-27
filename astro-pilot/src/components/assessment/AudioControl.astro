@@ -1,8 +1,16 @@
 ---
-interface Props { clip?: string; text: string; label?: string }
-const { clip, text, label = "Play audio" } = Astro.props;
+interface Props { clip: string; src: string; text: string; label?: string; ariaLabel?: string }
+const { clip, src, text, label = "Play audio", ariaLabel = label } = Astro.props;
 ---
-<button class="listen-btn" type="button" data-voice-clip={clip} data-speak={text} aria-label={label}>
+<audio
+  class="listen-audio"
+  controls
+  preload="none"
+  src={src}
+  data-voice-clip={clip}
+  data-audio-src={src}
+  data-speak={text}
+  aria-label={ariaLabel}
+>
   <span aria-hidden="true">▶</span> {label}
-</button>
-
+</audio>

@@ -2,14 +2,14 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Present simple · A1 Grammar · Curriculum Map",
+  "title": "Present simple · A1 Grammar",
   "slug": "present-simple",
   "level": "A1",
   "topic": "Present simple (all forms, do / does)",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Talk about routines, habits, facts, and normal schedules. Build clear sentences like I work from home , She works in an office , Do you start early? , and He doesn’t work on Sunday",
+  "description": "Use the present simple to describe routines, habits, facts, and schedules in affirmative, negative, and question forms.",
   "sequence": 1,
   "prerequisites": [
     "a0/subject-pronouns",
@@ -21,11 +21,19 @@ export const page = defineLesson({
   ],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 43,
+    "revisionSummary": "Controlled items, distractors, feedback, timing, and retrieval were audited; three tutor-led learner pilots are still required."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 1</p>
   <h1>Present simple <em>do / does</em></h1>
   <p class="standfirst">Talk about routines, habits, facts, and normal schedules. Build clear sentences like <span class="ex">I work from home</span>, <span class="ex">She works in an office</span>, <span class="ex">Do you start early?</span>, and <span class="ex">He doesn’t work on Sundays.</span></p>
@@ -34,7 +42,7 @@ export const page = defineLesson({
     <span class="tag">routines and facts</span>
     <span class="tag">I work · she works</span>
     <span class="tag">do / does questions</span>
-    <span class="tag">10 interactive tasks</span>
+    <span class="tag">14 interactive tasks</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -48,7 +56,7 @@ export const page = defineLesson({
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Good retrieval. Use am with I and is with Maria; an comes before the vowel sound in engineer.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -59,9 +67,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="a">a</button>
       <button class="choice-option" data-choice-option="an">an</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="I" data-placeholder="choose">choose</button> am from Mexico. &nbsp;<span class="contraction">(subject pronoun)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Maria <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> my teacher. &nbsp;<span class="contraction">(the verb to be)</span></span></div>
-    <div class="q"><span class="n">3</span><span>He is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> engineer. &nbsp;<span class="contraction">(a or an)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="I" data-hint="The speaker is talking about themself." data-fix="Use I before am: I am from Mexico." data-placeholder="choose">choose</button> am from Mexico. &nbsp;<span class="contraction">(subject pronoun)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Maria <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Maria is one person, so choose the singular form of be." data-fix="Use is with Maria: Maria is my teacher." data-placeholder="choose">choose</button> my teacher. &nbsp;<span class="contraction">(the verb to be)</span></span></div>
+    <div class="q"><span class="n">3</span><span>He is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Engineer begins with a vowel sound." data-fix="Use an before a vowel sound: an engineer." data-placeholder="choose">choose</button> engineer. &nbsp;<span class="contraction">(a or an)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -81,7 +89,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Exactly. I and we use the base verb, he and she use the third-person form, and questions begin with do or does.">
     <h3>Discovery check: choose the pattern</h3>
     <p class="choice-hint">Use the subject to choose the verb form.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -89,15 +97,15 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="works">works</button>
       <button class="choice-option" data-choice-option="have">have</button>
       <button class="choice-option" data-choice-option="has">has</button>
-      <button class="choice-option" data-choice-option="do">do</button>
-      <button class="choice-option" data-choice-option="does">does</button>
+      <button class="choice-option" data-choice-option="Do">Do</button>
+      <button class="choice-option" data-choice-option="Does">Does</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="work" data-placeholder="choose">choose</button> in a restaurant.</span></div>
-    <div class="q"><span class="n">2</span><span>She <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> in a restaurant.</span></div>
-    <div class="q"><span class="n">3</span><span>We <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> lunch at one.</span></div>
-    <div class="q"><span class="n">4</span><span>He <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> lunch at one.</span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="Do" data-placeholder="choose">choose</button> you work on Fridays?</span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="Does" data-placeholder="choose">choose</button> she work on Fridays?</span></div>
+    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="work" data-hint="I takes the base verb." data-fix="Use work after I: I work in a restaurant." data-placeholder="choose">choose</button> in a restaurant.</span></div>
+    <div class="q"><span class="n">2</span><span>She <button class="choice-gap" data-choice-gap data-answer="works" data-hint="A positive sentence with she needs the third-person ending." data-fix="Add -s after she: She works in a restaurant." data-placeholder="choose">choose</button> in a restaurant.</span></div>
+    <div class="q"><span class="n">3</span><span>We <button class="choice-gap" data-choice-gap data-answer="have" data-hint="We takes the base verb." data-fix="Use have after we: We have lunch at one." data-placeholder="choose">choose</button> lunch at one.</span></div>
+    <div class="q"><span class="n">4</span><span>He <button class="choice-gap" data-choice-gap data-answer="has" data-hint="Have changes form in a positive sentence with he." data-fix="The third-person form of have is has: He has lunch at one." data-placeholder="choose">choose</button> lunch at one.</span></div>
+    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="Do" data-hint="Use the question helper for you." data-fix="Use Do with you: Do you work on Fridays?" data-placeholder="choose">choose</button> you work on Fridays?</span></div>
+    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="Does" data-hint="Use the question helper for she." data-fix="Use Does with she: Does she work on Fridays?" data-placeholder="choose">choose</button> she work on Fridays?</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -116,7 +124,7 @@ export const page = defineLesson({
     </tbody>
   </table>
 
-  <div class="note">
+  <div class="note" data-lesson-extension="Spelling reference for third-person forms">
     <h3>Spelling you will use a lot</h3>
     <table>
       <thead><tr><th>base verb</th><th>he / she / it form</th><th>example</th></tr></thead>
@@ -129,7 +137,21 @@ export const page = defineLesson({
     </table>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Sound natural: the third-person <em>-s</em> has three pronunciations</h3>
+    <p>The ending always carries the same grammar message for a <strong>third-person singular</strong> subject such as <span class="ex">he, she, it, Maria,</span> or <span class="ex">the store</span>, but its sound changes to fit the final sound of the verb. Listen for the ending instead of trying to pronounce every written <span class="ex">s</span> in the same way.</p>
+    <table>
+      <thead><tr><th>ending sounds like</th><th>after</th><th>examples</th></tr></thead>
+      <tbody>
+        <tr><td><b>s</b></td><td>a quiet, unvoiced sound</td><td><span class="ex">works, stops, likes</span></td></tr>
+        <tr><td><b>z</b></td><td>a vowel or voiced sound</td><td><span class="ex">lives, reads, goes</span></td></tr>
+        <tr><td><b>iz</b></td><td>a hissing or buzzing sound such as <b>s, sh, ch, z</b></td><td><span class="ex">uses, finishes, watches</span></td></tr>
+      </tbody>
+    </table>
+    <p><span class="ex">Works</span> is one syllable, but <span class="ex">watches</span> is two. The helper verb <span class="ex">does</span> sounds like it rhymes with <em>buzz</em>, not with <em>goes</em>: <span class="ex">Does she work?</span></p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. I, you, we, and they use the base verb; he, she, and it use the third-person form.">
     <h3>Drill 1: choose the positive verb</h3>
     <p class="choice-hint">Read the subject first. Then choose the present-simple verb.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -142,14 +164,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="has">has</button>
       <button class="choice-option" data-choice-option="have">have</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="work" data-placeholder="choose">choose</button> in a small office.</span></div>
-    <div class="q"><span class="n">2</span><span>My brother <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> in a hospital.</span></div>
-    <div class="q"><span class="n">3</span><span>They <button class="choice-gap" data-choice-gap data-answer="go" data-placeholder="choose">choose</button> to class on Mondays.</span></div>
-    <div class="q"><span class="n">4</span><span>She <button class="choice-gap" data-choice-gap data-answer="goes" data-placeholder="choose">choose</button> to class on Mondays.</span></div>
-    <div class="q"><span class="n">5</span><span>We <button class="choice-gap" data-choice-gap data-answer="study" data-placeholder="choose">choose</button> English after work.</span></div>
-    <div class="q"><span class="n">6</span><span>He <button class="choice-gap" data-choice-gap data-answer="studies" data-placeholder="choose">choose</button> English after work.</span></div>
-    <div class="q"><span class="n">7</span><span>Ana <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> coffee in the morning.</span></div>
-    <div class="q"><span class="n">8</span><span>You <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> coffee in the morning.</span></div>
+    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="work" data-hint="Use the base verb after I." data-fix="Use work: I work in a small office." data-placeholder="choose">choose</button> in a small office.</span></div>
+    <div class="q"><span class="n">2</span><span>My brother <button class="choice-gap" data-choice-gap data-answer="works" data-hint="My brother means he." data-fix="Add -s for he: My brother works in a hospital." data-placeholder="choose">choose</button> in a hospital.</span></div>
+    <div class="q"><span class="n">3</span><span>They <button class="choice-gap" data-choice-gap data-answer="go" data-hint="Use the base verb after they." data-fix="Use go: They go to class on Mondays." data-placeholder="choose">choose</button> to class on Mondays.</span></div>
+    <div class="q"><span class="n">4</span><span>She <button class="choice-gap" data-choice-gap data-answer="goes" data-hint="Go adds -es with she." data-fix="Use goes: She goes to class on Mondays." data-placeholder="choose">choose</button> to class on Mondays.</span></div>
+    <div class="q"><span class="n">5</span><span>We <button class="choice-gap" data-choice-gap data-answer="study" data-hint="Use the base verb after we." data-fix="Use study: We study English after work." data-placeholder="choose">choose</button> English after work.</span></div>
+    <div class="q"><span class="n">6</span><span>He <button class="choice-gap" data-choice-gap data-answer="studies" data-hint="With he, a consonant plus y changes to -ies." data-fix="Use studies: He studies English after work." data-placeholder="choose">choose</button> English after work.</span></div>
+    <div class="q"><span class="n">7</span><span>Ana <button class="choice-gap" data-choice-gap data-answer="has" data-hint="Ana means she, and have has an irregular third-person form." data-fix="Use has: Ana has coffee in the morning." data-placeholder="choose">choose</button> coffee in the morning.</span></div>
+    <div class="q"><span class="n">8</span><span>You <button class="choice-gap" data-choice-gap data-answer="have" data-hint="Use the base verb after you." data-fix="Use have: You have coffee in the morning." data-placeholder="choose">choose</button> coffee in the morning.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -170,15 +192,15 @@ export const page = defineLesson({
   </table>
   <p class="note-line">Important: say <span class="ex">Does she work?</span>, not <span class="ex">Does she works?</span>. The word <span class="ex">does</span> already carries the <span class="ex">-s</span> grammar.</p>
 
-  <div class="practice" data-answer-drill>
+  <div class="practice" data-answer-drill data-success-message="Correct. Use do or don’t with I, you, we, and they; use does or doesn’t with he, she, and it.">
     <h3>Drill 2: type do, does, don’t, or doesn’t</h3>
     <p class="choice-hint">Use <b>do</b> with I, you, we, they. Use <b>does</b> with he, she, it.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Do" aria-label="answer 1" /> you live near here?</span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Does" aria-label="answer 2" /> your sister live near here?</span></div>
-    <div class="q"><span class="n">3</span><span>I <input class="answer-input" data-answer="don’t" aria-label="answer 3" /> work on Saturdays.</span></div>
-    <div class="q"><span class="n">4</span><span>He <input class="answer-input" data-answer="doesn’t" aria-label="answer 4" /> work on Saturdays.</span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Do" aria-label="answer 5" /> they study at night?</span></div>
-    <div class="q"><span class="n">6</span><span>It <input class="answer-input" data-answer="doesn’t" aria-label="answer 6" /> open before nine.</span></div>
+    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Do" data-hint="The subject is you." data-fix="Use Do with you: Do you live near here?" aria-label="answer 1" /> you live near here?</span></div>
+    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Does" data-hint="Your sister means she." data-fix="Use Does with she: Does your sister live near here?" aria-label="answer 2" /> your sister live near here?</span></div>
+    <div class="q"><span class="n">3</span><span>I <input class="answer-input" data-answer="don’t" data-hint="This is a negative sentence with I." data-fix="Use don’t with I: I don’t work on Saturdays." aria-label="answer 3" /> work on Saturdays.</span></div>
+    <div class="q"><span class="n">4</span><span>He <input class="answer-input" data-answer="doesn’t" data-hint="This is a negative sentence with he." data-fix="Use doesn’t with he: He doesn’t work on Saturdays." aria-label="answer 4" /> work on Saturdays.</span></div>
+    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Do" data-hint="The subject is they." data-fix="Use Do with they: Do they study at night?" aria-label="answer 5" /> they study at night?</span></div>
+    <div class="q"><span class="n">6</span><span>It <input class="answer-input" data-answer="doesn’t" data-hint="This is a negative sentence with it." data-fix="Use doesn’t with it: It doesn’t open before nine." aria-label="answer 6" /> open before nine.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -198,7 +220,7 @@ export const page = defineLesson({
     </tbody>
   </table>
 
-  <div class="tile-game" data-tile-game>
+  <div class="tile-game" data-tile-game data-success-message="Correct. The time expression and type of statement signal a routine, habit, schedule, or fact.">
     <h3>Drill 3: match the sentence to the meaning</h3>
     <p class="tile-target">Tap a meaning, then tap the sentence that matches it.</p>
     <div class="tile-bank">
@@ -208,10 +230,10 @@ export const page = defineLesson({
       <button class="tile" data-tile="fact">fact</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="routine" data-placeholder="I get up at 6:30 every day.">I get up at 6:30 every day.</button>
-      <button class="slot" data-slot="habit" data-placeholder="She drinks coffee after lunch.">She drinks coffee after lunch.</button>
-      <button class="slot" data-slot="schedule" data-placeholder="The class starts at seven.">The class starts at seven.</button>
-      <button class="slot" data-slot="fact" data-placeholder="Water boils at 100°C.">Water boils at 100°C.</button>
+      <button class="slot" data-slot="routine" data-hint="Every day signals a repeated personal routine." data-fix="Match routine with: I get up at 6:30 every day." data-placeholder="I get up at 6:30 every day.">I get up at 6:30 every day.</button>
+      <button class="slot" data-slot="habit" data-hint="This is something she regularly chooses to do." data-fix="Match habit with: She drinks coffee after lunch." data-placeholder="She drinks coffee after lunch.">She drinks coffee after lunch.</button>
+      <button class="slot" data-slot="schedule" data-hint="The class has an official starting time." data-fix="Match schedule with: The class starts at seven." data-placeholder="The class starts at seven.">The class starts at seven.</button>
+      <button class="slot" data-slot="fact" data-hint="This statement is generally true, not a personal routine." data-fix="Match fact with: Water boils at 100°C." data-placeholder="Water boils at 100°C.">Water boils at 100°C.</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -220,7 +242,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she works in a bank">
+  <div class="tile-game" data-tile-builder data-answer="she works in a bank" data-hint="Start with she, then use the third-person form of work." data-fix="Build: She works in a bank." data-success-message="Correct. She needs works in a positive present-simple sentence.">
     <h3>Drill 4: build a positive sentence</h3>
     <p class="tile-target">Build the sentence. Remember the verb form for she.</p>
     <div class="tile-bank" data-build-bank>
@@ -238,7 +260,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="does he work on weekends">
+  <div class="tile-game" data-tile-builder data-answer="does he work on weekends" data-hint="Start with the question helper for he. The main verb stays in the base form." data-fix="Build: Does he work on weekends?" data-success-message="Correct. Does comes before he, and work returns to the base form.">
     <h3>Drill 5: build a question</h3>
     <p class="tile-target">Build the question. After does, use the base verb.</p>
     <div class="tile-bank" data-build-bank>
@@ -258,7 +280,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="works" data-fix="Does she work on Saturday?" data-why="After does, use the base verb. Say Does she work, not Does she works.">
+  <div class="micro-drill" data-spot-error data-answer="works" data-hint="Does already carries the third-person grammar. Check the main verb." data-fix="Does she work on Saturday?" data-why="After does, use the base verb. Say Does she work, not Does she works.">
     <h3>Drill 6: after does</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -271,7 +293,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="don’t" data-fix="He doesn’t have coffee in the morning." data-why="Use doesn’t with he, she, and it. The main verb stays in the base form: have.">
+  <div class="micro-drill" data-spot-error data-answer="don’t" data-hint="Check which negative helper agrees with he." data-fix="He doesn’t have coffee in the morning." data-why="Use doesn’t with he, she, and it. The main verb stays in the base form: have.">
     <h3>Drill 7: negative with he</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -331,40 +353,41 @@ export const page = defineLesson({
     <p>Complete this aloud: “With I, you, we, and they, I use the ______ verb. With he, she, and it, I add ______. For questions I use ______ or ______. After does, the main verb is the ______ form.”</p>
     <p>Then say one positive sentence, one negative sentence, and one question about your real week.</p>
   </div>
+  <div class="prompt-card"><b>Next use:</b> Return tomorrow without rereading the rule. Open the <a href="#next-day-retrieval">five-minute retrieval</a>, answer from memory, and finish with one true sentence about your week.</div>
 
   <div class="quiz" data-quiz data-success-message="Great. You can use the present simple for routines, facts, negatives, and do / does questions.">
     <h3>Final quiz: present simple forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="work">
-        <p class="quiz-question">1. I ___ from home on Mondays.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="work">work</button><button class="quiz-option" data-quiz-option="works">works</button><button class="quiz-option" data-quiz-option="working">working</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="work" data-hint="The subject is I, and every Monday shows a regular schedule." data-fix="Use the base verb: I work from home every Monday.">
+        <p class="quiz-question">1. This is my regular schedule: I ___ from home every Monday.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="work">work</button><button class="quiz-option" data-quiz-option="works">works</button><button class="quiz-option" data-quiz-option="am working">am working</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="works">
-        <p class="quiz-question">2. She ___ from home on Mondays.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="works">works</button><button class="quiz-option" data-quiz-option="work">work</button><button class="quiz-option" data-quiz-option="working">working</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="works" data-hint="Maya means she, so a positive present-simple verb needs the third-person ending." data-fix="Use works: Maya works at the clinic every weekday.">
+        <p class="quiz-question">2. Maya’s normal weekday job is at a clinic. She ___ there Monday through Friday.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="works">works</button><button class="quiz-option" data-quiz-option="work">work</button><button class="quiz-option" data-quiz-option="is working">is working</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Does">
-        <p class="quiz-question">3. ___ he live near here?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Does" data-hint="Carlos means he. Use the present-simple question helper for he." data-fix="Ask: Does he live near here?">
+        <p class="quiz-question">3. You want to ask about Carlos’s home address. ___ he live near here?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Does">Does</button><button class="quiz-option" data-quiz-option="Do">Do</button><button class="quiz-option" data-quiz-option="Is">Is</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="do">
-        <p class="quiz-question">4. Yes, I ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="do" data-hint="Repeat the helper from Do you in the short answer." data-fix="Answer: Yes, I do.">
+        <p class="quiz-question">4. “Do you work on Mondays?” “Yes, I ___.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="do">do</button><button class="quiz-option" data-quiz-option="does">does</button><button class="quiz-option" data-quiz-option="am">am</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="doesn’t">
-        <p class="quiz-question">5. He ___ work on Sundays.</p>
+      <div class="quiz-item" data-quiz-item data-answer="doesn’t" data-hint="The subject is he, and the sentence needs a negative helper before work." data-fix="Use doesn’t: He doesn’t work on Sundays.">
+        <p class="quiz-question">5. Leo’s regular schedule is Monday through Friday. He ___ work on Sundays.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="doesn’t">doesn’t</button><button class="quiz-option" data-quiz-option="don’t">don’t</button><button class="quiz-option" data-quiz-option="isn’t">isn’t</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="have">
-        <p class="quiz-question">6. She doesn’t ___ lunch at noon.</p>
+      <div class="quiz-item" data-quiz-item data-answer="have" data-hint="After doesn’t, return the main verb to its base form." data-fix="Use have: She doesn’t have lunch at noon.">
+        <p class="quiz-question">6. Her lunch break is at one, so she doesn’t ___ lunch at noon.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="have">have</button><button class="quiz-option" data-quiz-option="has">has</button><button class="quiz-option" data-quiz-option="having">having</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="routine">
-        <p class="quiz-question">7. “I get up at seven every day” describes a ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="routine" data-hint="Every day signals something that regularly repeats." data-fix="It describes a routine because it happens every day.">
+        <p class="quiz-question">7. “I get up at seven every day” describes what kind of meaning?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="routine">routine</button><button class="quiz-option" data-quiz-option="thing happening now">thing happening now</button><button class="quiz-option" data-quiz-option="future plan only">future plan only</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Does she work on Saturdays?">
-        <p class="quiz-question">8. Which question is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Does she work on Saturdays?" data-hint="Use does with she, then keep work in the base form." data-fix="The correct question is: Does she work on Saturdays?">
+        <p class="quiz-question">8. You are asking about Nina’s normal Saturday schedule. Which question is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Does she work on Saturdays?">Does she work on Saturdays?</button><button class="quiz-option" data-quiz-option="Does she works on Saturdays?">Does she works on Saturdays?</button><button class="quiz-option" data-quiz-option="Do she work on Saturdays?">Do she work on Saturdays?</button></div>
       </div>
     </div>
@@ -374,5 +397,54 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day retrieval">
+    <h2>Come back tomorrow: five-minute retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Do this without rereading the lesson first. The goal is to retrieve the pattern, not to recognize it on the page.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Good retrieval. She takes works, a question with he begins with Does, and a negative with I uses don’t.">
+      <h3>Three decisions from memory</h3>
+      <p class="choice-hint">Read the full situation, choose, and say the complete sentence aloud.</p>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="works">works</button>
+        <button class="choice-option" data-choice-option="Does">Does</button>
+        <button class="choice-option" data-choice-option="don’t">don’t</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Camila’s regular job is at a bank. She <button class="choice-gap" data-choice-gap data-answer="works" data-hint="Camila means she, and this is a positive routine." data-fix="Use works: She works at a bank." data-placeholder="choose">choose</button> there Monday through Friday.</span></div>
+      <div class="q"><span class="n">2</span><span>You want to ask about Ben’s normal morning. <button class="choice-gap" data-choice-gap data-answer="Does" data-hint="Ben means he. Begin with the question helper for he." data-fix="Use Does: Does he start early?" data-placeholder="choose">choose</button> he start early?</span></div>
+      <div class="q"><span class="n">3</span><span>My schedule is different. I <button class="choice-gap" data-choice-gap data-answer="don’t" data-hint="This is a negative statement with I." data-fix="Use don’t: I don’t start early." data-placeholder="choose">choose</button> start early.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="starts" data-hint="Does already carries the third-person grammar. Check the main verb." data-fix="Does Maya start at eight?" data-why="After does, use the base verb start, not starts.">
+      <h3>One repair from memory</h3>
+      <p>Tap the word that is wrong.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="does">Does</button>
+        <button class="error-choice" data-error-choice="maya">Maya</button>
+        <button class="error-choice" data-error-choice="starts">starts</button>
+        <button class="error-choice" data-error-choice="at">at</button>
+        <button class="error-choice" data-error-choice="eight">eight?</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Finish with one spoken response</h3>
+      <p>Answer aloud before you reveal the model.</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>1</b> Say one true positive sentence, one negative sentence, and one question about your normal week.</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal a model after you answer</button>
+          <p class="transform-answer" data-transform-answer><strong>I work from home on Tuesdays. I don’t start early on Fridays. Do you work on weekends?</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 </LessonPage>

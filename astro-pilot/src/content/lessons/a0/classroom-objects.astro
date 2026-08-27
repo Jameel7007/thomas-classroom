@@ -2,72 +2,110 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Classroom objects · A0 Vocabulary · Curriculum Map",
+  "title": "Classroom objects · A0 Vocabulary",
   "slug": "classroom-objects",
   "level": "A0",
   "topic": "Classroom objects",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Name the things on your desk and screen. Use a or an for one — a pen , an eraser — and add -s for more — two pens . Then follow simple instructions: Open your book. Look at the scr",
+  "description": "Name common classroom and desk objects, talk about one or more of them, and follow practical instructions during a lesson.",
   "sequence": 14,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/articles-a-an",
+    "a0/regular-plural-nouns",
+    "a0/this-that-these-those"
+  ],
+  "related": [
+    "a1/imperatives",
+    "a1/prepositions-of-time-and-place"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 45,
+    "revisionSummary": "Object vocabulary, article and number scope, paper/scissors/mouse boundaries, compounds, instructions, clarification, pronunciation, accessibility, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 14</p>
   <h1>Classroom <em>objects</em></h1>
-  <p class="standfirst">Name the things on your desk and screen. Use <span class="ex">a</span> or <span class="ex">an</span> for one — <span class="ex">a pen</span>, <span class="ex">an eraser</span> — and add <span class="ex">-s</span> for more — <span class="ex">two pens</span>. Then follow simple instructions: <span class="ex">Open your book. Look at the screen.</span></p>
+  <p class="standfirst">Identify useful objects in an in-person or online lesson. Use <span class="ex">a</span> or <span class="ex">an</span> for one countable object, regular plurals for quantities such as <span class="ex">two pens</span>, and special chunks such as <span class="ex">some paper</span> and <span class="ex">a pair of scissors</span>. Follow an instruction and ask for help when it is not clear.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">a / an</span>
-    <span class="tag">one / many</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">articles and number</span>
+    <span class="tag">instructions and clarification</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Listen to the first sound of each word.</span></div>
-    <div class="flow-step"><b>Discover</b><span>One rule: a or an, and the plural -s.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Countable objects, special nouns, and useful chunks.</span></div>
     <div class="flow-step"><b>Build</b><span>Match, choose, and build chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Name your desk and follow instructions.</span></div>
+    <div class="flow-step"><b>Use</b><span>Identify, request, locate, and clarify.</span></div>
   </div>
 
-  <p class="note-line">Most words add <span class="ex">-s</span> for "many": <span class="ex">pen → pens, book → books, desk → desks</span>. After a number, the noun is plural: <span class="ex">two pens, three books</span>.</p>
+  <p class="note-line">Regular countable object words add <span class="ex">-s</span> after zero or a number greater than one: <span class="ex">zero pens, two books, three desks</span>. After <span class="ex">one</span>, use the singular: <span class="ex">one pen</span>. Some words on this page need a different pattern.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an from the vowel sound in eraser, the plural books after two, and these for plural objects near the speaker.">
+    <h3>Bring articles, plurals, and demonstratives into the lesson</h3>
+    <p class="choice-hint">Use earlier lessons. Complete each object phrase, then read the full sentence aloud.</p>
+    <div class="choice-bank" aria-label="Earlier grammar choices">
+      <button class="choice-option" data-choice-option="a">a</button>
+      <button class="choice-option" data-choice-option="an">an</button>
+      <button class="choice-option" data-choice-option="book">book</button>
+      <button class="choice-option" data-choice-option="books">books</button>
+      <button class="choice-option" data-choice-option="this">this</button>
+      <button class="choice-option" data-choice-option="these">these</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>I need <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Eraser begins with a vowel sound, so choose an." data-fix="I need an eraser." data-placeholder="choose">choose</button> eraser.</span></div>
+    <div class="q"><span class="n">2</span><span>The learner has two <button class="choice-gap" data-choice-gap data-answer="books" data-hint="Two requires the plural noun books." data-fix="The learner has two books." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The two pens are beside me. <button class="choice-gap" data-choice-gap data-answer="these" data-hint="The noun pens is plural and the objects are near, so choose these." data-fix="These pens are blue." data-placeholder="choose">choose</button> pens are blue.</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Meet the objects</h2>
   <div class="lead-rule"></div>
-  <p>Point to each picture and say the word with <span class="ex">a</span> or <span class="ex">an</span>.</p>
+  <p>Use each written label with its representative picture. Point, describe its position, or say the label aloud. Do not rely on the picture alone when identifying an object.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pen.svg" alt="" loading="lazy" /></span><span class="nm">a pen</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/notebook.svg" alt="" loading="lazy" /></span><span class="nm">a notebook</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/laptop.svg" alt="" loading="lazy" /></span><span class="nm">a laptop</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chair.svg" alt="" loading="lazy" /></span><span class="nm">a chair</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bag.svg" alt="" loading="lazy" /></span><span class="nm">a bag</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ruler.svg" alt="" loading="lazy" /></span><span class="nm">a ruler</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/envelope.svg" alt="" loading="lazy" /></span><span class="nm">an envelope</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/phone.svg" alt="" loading="lazy" /></span><span class="nm">a phone</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/book.svg" alt="" loading="lazy" /></span><span class="nm">a book</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pencil.svg" alt="" loading="lazy" /></span><span class="nm">a pencil</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/crayon.svg" alt="" loading="lazy" /></span><span class="nm">a crayon</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/paperclip.svg" alt="" loading="lazy" /></span><span class="nm">a paperclip</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/folder.svg" alt="" loading="lazy" /></span><span class="nm">a folder</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/clock.svg" alt="" loading="lazy" /></span><span class="nm">a clock</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/globe.svg" alt="" loading="lazy" /></span><span class="nm">a globe</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/paintbrush.svg" alt="" loading="lazy" /></span><span class="nm">a paintbrush</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/scissors.svg" alt="" loading="lazy" /></span><span class="nm">scissors</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/backpack.svg" alt="" loading="lazy" /></span><span class="nm">backpack</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/paper.svg" alt="" loading="lazy" /></span><span class="nm">paper</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pushpin.svg" alt="" loading="lazy" /></span><span class="nm">pushpin</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/calendar.svg" alt="" loading="lazy" /></span><span class="nm">calendar</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mouse.svg" alt="" loading="lazy" /></span><span class="nm">mouse</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/keyboard.svg" alt="" loading="lazy" /></span><span class="nm">keyboard</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/printer.svg" alt="" loading="lazy" /></span><span class="nm">printer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/books.svg" alt="" loading="lazy" /></span><span class="nm">books</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pen.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a pen</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/notebook.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a notebook</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/laptop.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a laptop</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chair.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a chair</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bag.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a bag</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ruler.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a ruler</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/envelope.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">an envelope</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/phone.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a phone</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/book.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a book</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pencil.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a pencil</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/crayon.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a crayon</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/paperclip.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a paper clip</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/folder.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a folder</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/clock.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a clock</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/globe.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a globe</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/paintbrush.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a paintbrush</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/scissors.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">scissors</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/backpack.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a backpack</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/paper.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">paper</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pushpin.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a pushpin</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/calendar.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a calendar</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mouse.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a mouse</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/keyboard.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a keyboard</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/printer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a printer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/books.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">books</span></div>
   </div>
 
   <h2>Notice before the rule</h2>
@@ -82,17 +120,17 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the word, then choose</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Pen and notebook begin with consonant sounds, while eraser and office begin with vowel sounds.">
+    <h3>Discovery check: read the word, then choose</h3>
     <p class="choice-hint">Say the noun aloud first. Listen to its first sound.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="a">a</button>
       <button class="choice-option" data-choice-option="an">an</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> pen &nbsp;<span class="contraction">(first sound: p)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> eraser &nbsp;<span class="contraction">(first sound: e)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> notebook &nbsp;<span class="contraction">(first sound: n)</span></span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> office &nbsp;<span class="contraction">(first sound: o)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-hint="Pen begins with the consonant sound /p/." data-fix="a pen" data-placeholder="choose">choose</button> pen &nbsp;<span class="contraction">(first sound: p)</span></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-hint="Eraser begins with a vowel sound." data-fix="an eraser" data-placeholder="choose">choose</button> eraser &nbsp;<span class="contraction">(first sound: e)</span></span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-hint="Notebook begins with the consonant sound /n/." data-fix="a notebook" data-placeholder="choose">choose</button> notebook &nbsp;<span class="contraction">(first sound: n)</span></span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-hint="Office begins with a vowel sound." data-fix="an office" data-placeholder="choose">choose</button> office &nbsp;<span class="contraction">(first sound: o)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -100,14 +138,14 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: name the object, count the object</h2>
+  <h2>The system: name the object, then choose its number pattern</h2>
   <div class="lead-rule"></div>
   <p>Here are the things around a study setup. Each one is a <strong>noun</strong>:</p>
   <p><span class="ex">a book · a notebook · a pen · a pencil · an eraser · paper · a desk · a chair · a board · a bag · a laptop · a phone · a marker · a ruler · a screen</span></p>
   <p><strong>1. One thing?</strong> &nbsp;Use <span class="ex">a</span> before a consonant sound, <span class="ex">an</span> before a vowel sound: <span class="ex">a pen</span>, <span class="ex">an eraser</span>.</p>
-  <p><strong>2. More than one?</strong> &nbsp;Drop <span class="ex">a / an</span> and add <span class="ex">-s</span>: <span class="ex">two pens</span>, <span class="ex">three books</span>, <span class="ex">five chairs</span>.</p>
+  <p><strong>2. Zero or more than one regular countable object?</strong> &nbsp;Drop <span class="ex">a / an</span> and add the regular plural ending: <span class="ex">zero pens</span>, <span class="ex">two books</span>, <span class="ex">five chairs</span>. Use a singular after <span class="ex">one</span>: <span class="ex">one book</span>.</p>
   <table>
-    <thead><tr><th>one (singular)</th><th>many (plural)</th></tr></thead>
+    <thead><tr><th>one (singular)</th><th>zero or more than one (plural)</th></tr></thead>
     <tbody>
       <tr><td><b>a</b> pen &nbsp;<span class="contraction">consonant sound</span></td><td>two <b>pens</b></td></tr>
       <tr><td><b>an</b> eraser &nbsp;<span class="contraction">vowel sound</span></td><td>three <b>erasers</b></td></tr>
@@ -116,22 +154,112 @@ export const page = defineLesson({
   </table>
 
   <div class="note">
+    <h3>Three object words need a different pattern</h3>
+    <table>
+      <thead><tr><th>word</th><th>useful pattern</th><th>number boundary</th></tr></thead>
+      <tbody>
+        <tr><td><b>paper</b></td><td><span class="ex">some paper · a sheet of paper · two sheets of paper</span></td><td>For writing material, do not normally say <span class="ex">a paper</span>. Count sheets or pieces.</td></tr>
+        <tr><td><b>scissors</b></td><td><span class="ex">The scissors are here. · a pair of scissors · two pairs of scissors</span></td><td><span class="ex">Scissors</span> uses a plural verb; <span class="ex">a pair</span> uses a singular verb.</td></tr>
+        <tr><td><b>mouse</b></td><td><span class="ex">one mouse · two mice</span></td><td>The usual plural of the computer object is irregular: <span class="ex">mice</span>, not <span class="ex">mouses</span>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: make <span class="ex">a / an</span> light and the object clear</h3>
+    <p>In normal speech, <span class="ex">a</span> is a very short sound, close to “uh.” <span class="ex">An</span> links directly to a word that begins with a vowel sound. The object word carries the useful information.</p>
+    <table>
+      <thead><tr><th>chunk</th><th>natural rhythm</th><th>word stress</th></tr></thead>
+      <tbody>
+        <tr><td>a notebook</td><td><span class="contraction">a <strong>NOTE</strong>book</span></td><td>the first part of <span class="ex">notebook</span> is strong</td></tr>
+        <tr><td>an eraser</td><td><span class="contraction">an e-<strong>RAS</strong>-er</span></td><td><span class="ex">an</span> links to the vowel; the middle is strong</td></tr>
+        <tr><td>a laptop</td><td><span class="contraction">a <strong>LAP</strong>top</span></td><td>the first part is strong</td></tr>
+        <tr><td>a marker</td><td><span class="contraction">a <strong>MARK</strong>er</span></td><td>the ending is light</td></tr>
+        <tr><td>scissors</td><td><span class="contraction"><strong>SIZ</strong>-ors</span></td><td>the first part is strong; the word ends with a voiced <span class="ex">z</span> sound</td></tr>
+        <tr><td>a ruler</td><td><span class="contraction">a <strong>RUL</strong>-er</span></td><td>the first vowel sounds like the vowel in <span class="ex">blue</span></td></tr>
+      </tbody>
+    </table>
+    <p>Several object names are compound nouns. Keep the parts together and make the first part clear: <span class="ex"><strong>NOTE</strong>book · <strong>LAP</strong>top · <strong>BACK</strong>pack · <strong>PAPER</strong> clip</span>. Write <span class="ex">paper clip</span> as two words in standard U.S. English.</p>
+    <p>Listen for the object in classroom instructions: <span class="ex">Open your <strong>BOOK</strong>. · Write your <strong>NAME</strong>. · Look at the <strong>SCREEN</strong>.</span></p>
+  </div>
+
+  <div class="note">
     <h3>Meaning check</h3>
     <ul>
       <li>Can we say <span class="ex">a eraser</span>? <strong>No.</strong> <em>Eraser</em> starts with a vowel sound, so we say <span class="ex">an eraser</span>.</li>
-      <li>Can we say <span class="ex">two book</span>? <strong>No.</strong> After a number we need the plural: <span class="ex">two books</span>.</li>
-      <li>Is <span class="ex">paper</span> different? <strong>Yes.</strong> We usually say <span class="ex">paper</span> or <span class="ex">some paper</span>, not <span class="ex">a paper</span>, for the material you write on.</li>
+      <li>Can we say <span class="ex">two book</span>? <strong>No.</strong> After <span class="ex">two</span>, we need the plural: <span class="ex">two books</span>. After <span class="ex">one</span>, use <span class="ex">one book</span>.</li>
+      <li>Is <span class="ex">paper</span> different? <strong>Yes.</strong> For writing material, we usually say <span class="ex">paper</span>, <span class="ex">some paper</span>, or <span class="ex">a sheet of paper</span>, not <span class="ex">a paper</span>.</li>
+      <li>Can we say <span class="ex">a scissors</span>? <strong>No.</strong> Say <span class="ex">scissors</span> or <span class="ex">a pair of scissors</span>.</li>
+      <li>Is the plural of a computer <span class="ex">mouse</span> regular? <strong>No.</strong> Say <span class="ex">two mice</span>.</li>
     </ul>
   </div>
 
-  <h2>a / an in real instructions</h2>
+  <section data-lesson-extension="Tutor-read classroom object and instruction listening check">
+    <h2>Hear the object and instruction</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the script closed while you listen. Your teacher reads each line once, then once more. Choose the exact object or help word you hear.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished notebook, screen, pen, paper, scissors, and repeat inside six practical classroom messages.">
+      <h3>Listening check: complete the message</h3>
+      <div class="choice-bank" aria-label="Listening classroom choices">
+        <button class="choice-option" data-choice-option="notebook">notebook</button>
+        <button class="choice-option" data-choice-option="book">book</button>
+        <button class="choice-option" data-choice-option="screen">screen</button>
+        <button class="choice-option" data-choice-option="board">board</button>
+        <button class="choice-option" data-choice-option="pen">pen</button>
+        <button class="choice-option" data-choice-option="pencil">pencil</button>
+        <button class="choice-option" data-choice-option="paper">paper</button>
+        <button class="choice-option" data-choice-option="folder">folder</button>
+        <button class="choice-option" data-choice-option="scissors">scissors</button>
+        <button class="choice-option" data-choice-option="mouse">mouse</button>
+        <button class="choice-option" data-choice-option="repeat">repeat</button>
+        <button class="choice-option" data-choice-option="spell">spell</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Open your <button class="choice-gap" data-choice-gap data-answer="notebook" data-hint="Listen for NOTE-book, the place for your notes." data-fix="Open your notebook." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Look at the <button class="choice-gap" data-choice-gap data-answer="screen" data-hint="Listen for screen, not board." data-fix="Look at the screen." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Put the <button class="choice-gap" data-choice-gap data-answer="pen" data-hint="Listen for the short word pen, not pencil." data-fix="Put the pen in the bag." data-placeholder="listen">listen</button> in the bag.</span></div>
+      <div class="q"><span class="n">4</span><span>Take out a sheet of <button class="choice-gap" data-choice-gap data-answer="paper" data-hint="Listen for the chunk a sheet of paper." data-fix="Take out a sheet of paper." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Use a pair of <button class="choice-gap" data-choice-gap data-answer="scissors" data-hint="Listen for SIZ-ors after a pair of." data-fix="Use a pair of scissors." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Can you <button class="choice-gap" data-choice-gap data-answer="repeat" data-hint="Listen for repeat, the request to say the message again." data-fix="Can you repeat that, please?" data-placeholder="listen">listen</button> that, please?</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol>
+        <li>Open your notebook.</li>
+        <li>Look at the screen.</li>
+        <li>Put the pen in the bag.</li>
+        <li>Take out a sheet of paper.</li>
+        <li>Use a pair of scissors.</li>
+        <li>Can you repeat that, please?</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Objects in real classroom instructions</h2>
   <div class="lead-rule"></div>
   <p>In a lesson you will hear short instructions. Keep these chunks together:</p>
   <p><span class="ex">Open your book. &nbsp; · &nbsp; Write your name. &nbsp; · &nbsp; Listen and repeat.</span><br /><span class="ex">Look at the screen. &nbsp; · &nbsp; Close the door.</span></p>
-  <p>And small location chunks: <span class="ex">It's on the desk. &nbsp; · &nbsp; in the bag. &nbsp; · &nbsp; under the chair.</span></p>
+  <p>And small location chunks: <span class="ex">It's on the desk. &nbsp; · &nbsp; It's in the bag. &nbsp; · &nbsp; It's under the chair.</span></p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose the object from the clue</h3>
+  <div class="note">
+    <h3>Ask for the object or for help</h3>
+    <p>You do not need to pretend that an instruction is clear. Use one complete classroom chunk:</p>
+    <ul>
+      <li><span class="ex">Can you repeat that, please?</span> means “Please say it again.”</li>
+      <li><span class="ex">What does “ruler” mean?</span> asks for the meaning of a word.</li>
+      <li><span class="ex">How do you spell “eraser”?</span> asks for the letters.</li>
+      <li><span class="ex">Which book? Which page?</span> asks for a more exact instruction.</li>
+      <li><span class="ex">I don't have an eraser.</span> reports a missing object.</li>
+      <li><span class="ex">Can I borrow a pen, please?</span> politely asks to use a pen and return it.</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each clue identifies one object by a specific use: writing, sitting, video lessons, carrying, erasing, or displaying information.">
+    <h3>Drill 1: choose the object from the clue</h3>
     <p class="choice-hint">Read the clue, then choose the object that fits</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="laptop">laptop</button>
@@ -141,12 +269,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="board">board</button>
       <button class="choice-option" data-choice-option="bag">bag</button>
     </div>
-    <div class="q"><span class="n">1</span><span>You write with it. It uses ink. → a <button class="choice-gap" data-choice-gap data-answer="pen" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">2</span><span>You sit on it at your desk. → a <button class="choice-gap" data-choice-gap data-answer="chair" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">3</span><span>You open it to type and join a video lesson. → a <button class="choice-gap" data-choice-gap data-answer="laptop" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">4</span><span>You carry your books and laptop in it. → a <button class="choice-gap" data-choice-gap data-answer="bag" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">5</span><span>You use it to remove pencil marks. → an <button class="choice-gap" data-choice-gap data-answer="eraser" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">6</span><span>The teacher writes on it for everyone to see. → a <button class="choice-gap" data-choice-gap data-answer="board" data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">1</span><span>You write with it, and it uses ink rather than graphite. → a <button class="choice-gap" data-choice-gap data-answer="pen" data-hint="The clue says ink; a pen uses ink, while a pencil uses graphite." data-fix="You write in ink with a pen." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">2</span><span>You sit on it at your desk. → a <button class="choice-gap" data-choice-gap data-answer="chair" data-hint="Choose the classroom object made for sitting." data-fix="You sit on a chair." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">3</span><span>You open its screen and keyboard to type and join a video lesson. → a <button class="choice-gap" data-choice-gap data-answer="laptop" data-hint="The portable computer with a screen and keyboard is a laptop." data-fix="You can join a video lesson on a laptop." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">4</span><span>You put your books and laptop inside it to carry them. → a <button class="choice-gap" data-choice-gap data-answer="bag" data-hint="Choose the container that carries several classroom objects." data-fix="You carry the objects in a bag." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">5</span><span>You rub it on paper to remove pencil marks. → an <button class="choice-gap" data-choice-gap data-answer="eraser" data-hint="The object that removes pencil marks is an eraser." data-fix="You remove pencil marks with an eraser." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">6</span><span>The teacher writes large information on it so the whole class can see. → a <button class="choice-gap" data-choice-gap data-answer="board" data-hint="Choose the large classroom surface the teacher writes on." data-fix="The teacher writes on a board." data-placeholder="choose">choose</button></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -157,8 +285,8 @@ export const page = defineLesson({
   <h2>Build the meaning, then the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each object to its use</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each match connects an object with its most specific use in the study context.">
+    <h3>Drill 2: match each object to its use</h3>
     <p class="tile-target">Tap an object, then tap what you do with it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="notebook">a notebook</button>
@@ -168,11 +296,11 @@ export const page = defineLesson({
       <button class="tile" data-tile="phone">a phone</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="notebook" data-placeholder="you write your notes in it">you write your notes in it</button>
-      <button class="slot" data-slot="marker" data-placeholder="you write on the board with it">you write on the board with it</button>
-      <button class="slot" data-slot="ruler" data-placeholder="you draw a straight line with it">you draw a straight line with it</button>
-      <button class="slot" data-slot="screen" data-placeholder="you look at your teacher on it">you look at your teacher on it</button>
-      <button class="slot" data-slot="phone" data-placeholder="you call or message a friend with it">you call or message a friend with it</button>
+      <button class="slot" data-slot="notebook" data-hint="Notes go inside the pages of a notebook." data-fix="notebook → you write your notes in it" data-placeholder="you write your notes in it">you write your notes in it</button>
+      <button class="slot" data-slot="marker" data-hint="A marker makes a thick line and can write on a classroom board." data-fix="marker → you write on the board with it" data-placeholder="you write on the board with it">you write on the board with it</button>
+      <button class="slot" data-slot="ruler" data-hint="A ruler gives you a straight edge for a line." data-fix="ruler → you draw a straight line with it" data-placeholder="you draw a straight line with it">you draw a straight line with it</button>
+      <button class="slot" data-slot="screen" data-hint="In an online lesson, the teacher's video appears on the screen." data-fix="screen → you look at your teacher on it" data-placeholder="you look at your teacher on it">you look at your teacher on it</button>
+      <button class="slot" data-slot="phone" data-hint="A phone is used to call or send a message." data-fix="phone → you call or message a friend with it" data-placeholder="you call or message a friend with it">you call or message a friend with it</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -181,9 +309,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="open your book">
-    <h3>Drill 3 — build the instruction</h3>
-    <p class="tile-target">The teacher asks you to start. Build the instruction, then say it.</p>
+  <div class="tile-game" data-tile-builder data-answer="open your book" data-hint="Begin with the action Open, then keep your before the object book." data-fix="Open your book." data-success-message="Correct. The classroom instruction begins with Open and keeps your directly before book.">
+    <h3>Drill 3: build the instruction</h3>
+    <p class="tile-target">Your teacher tells you to start reading. Build the instruction you hear, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="book">book</button>
       <button class="tile" data-build-tile="open">Open</button>
@@ -197,8 +325,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="it is on the desk">
-    <h3>Drill 4 — say where it is</h3>
+  <div class="tile-game" data-tile-builder data-answer="it is on the desk" data-hint="Begin with It is, then use on before the location the desk." data-fix="It is on the desk." data-success-message="Correct. It is identifies the pen, and on the desk gives its location.">
+    <h3>Drill 4: say where it is</h3>
     <p class="tile-target">Your pen is on the desk. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="desk">desk</button>
@@ -215,10 +343,28 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
+  <div class="tile-game" data-tile-builder data-answer="can you repeat that please" data-hint="Begin with Can you, place repeat that next, and finish with please." data-fix="Can you repeat that, please?" data-success-message="Correct. Can you repeat that, please? is a complete, polite request for the speaker to say the message again.">
+    <h3>Drill 5: build a clarification request</h3>
+    <p class="tile-target">The instruction was not clear. Build the polite request, then ask it with a rising voice.</p>
+    <div class="tile-bank" data-build-bank>
+      <button class="tile" data-build-tile="repeat">repeat</button>
+      <button class="tile" data-build-tile="please">please</button>
+      <button class="tile" data-build-tile="can">Can</button>
+      <button class="tile" data-build-tile="that">that</button>
+      <button class="tile" data-build-tile="you">you</button>
+    </div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-build>Check</button>
+      <button class="lesson-btn" data-reset-build>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="a" data-fix="I have an eraser." data-why="Eraser starts with a vowel sound, so we use an, not a.">
-    <h3>Drill 5 — fix the article</h3>
+  <div class="micro-drill" data-spot-error data-answer="a" data-hint="Say eraser aloud and listen to its first vowel sound." data-fix="I have an eraser." data-why="Eraser starts with a vowel sound, so we use an, not a.">
+    <h3>Drill 6: fix the article</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
@@ -229,8 +375,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="book" data-fix="I have two books." data-why="After a number we use the plural, so book becomes books.">
-    <h3>Drill 6 — one or many?</h3>
+  <div class="micro-drill" data-spot-error data-answer="book" data-hint="The number is two, so the regular countable noun needs a plural ending." data-fix="I have two books." data-why="After two, use the plural, so book becomes books.">
+    <h3>Drill 7: one or more?</h3>
     <p>Tap the word that does not match the number.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
@@ -242,7 +388,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — name it, then count it</h3>
+    <h3>Drill 8: name it, then count it</h3>
     <p>Say the new phrase aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -279,18 +425,18 @@ export const page = defineLesson({
     <h3>A note from the teacher</h3>
     <p><span class="ex">“Welcome to the class! On your desk there is a notebook, a pen, and a pencil. The books are on the shelf. Please close your laptop and take out your notebook.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real classroom note.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the three desk objects, the books on the shelf, and the instruction to close the laptop.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="a notebook, a pen, and a pencil">
+      <div class="quiz-item" data-quiz-item data-answer="a notebook, a pen, and a pencil" data-hint="The second sentence lists exactly three objects on the desk." data-fix="A notebook, a pen, and a pencil are on the desk.">
         <p class="quiz-question">1. What is on the desk?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a notebook, a pen, and a pencil">a notebook, a pen, and a pencil</button><button class="quiz-option" data-quiz-option="a book and a laptop">a book and a laptop</button><button class="quiz-option" data-quiz-option="a phone and a ruler">a phone and a ruler</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on the shelf">
+      <div class="quiz-item" data-quiz-item data-answer="on the shelf" data-hint="The third sentence gives the books' location after are." data-fix="The books are on the shelf.">
         <p class="quiz-question">2. Where are the books?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on the shelf">on the shelf</button><button class="quiz-option" data-quiz-option="on the desk">on the desk</button><button class="quiz-option" data-quiz-option="in the bag">in the bag</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the laptop">
+      <div class="quiz-item" data-quiz-item data-answer="the laptop" data-hint="The final instruction says close one object and take out another." data-fix="The learner closes the laptop.">
         <p class="quiz-question">3. What do you close?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the laptop">the laptop</button><button class="quiz-option" data-quiz-option="the notebook">the notebook</button><button class="quiz-option" data-quiz-option="the door">the door</button></div>
       </div>
@@ -304,52 +450,59 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Name your desk:</b> Look at your real desk now. Name five objects with <span class="ex">a</span> or <span class="ex">an</span>: <span class="ex">a pen, a notebook, an eraser, a phone, a laptop.</span></div>
-  <div class="prompt-card"><b>Count them:</b> Now count. Say how many of each you have. <span class="ex">I have two pens. I have one notebook. I have three books.</span></div>
-  <div class="prompt-card"><b>Where is it?:</b> Hold up an object and say where it is. <span class="ex">It's on the desk. It's in my bag. It's under the chair.</span></div>
-  <div class="prompt-card"><b>Follow the teacher:</b> Listen and do it. <span class="ex">Open your book. Write your name. Look at the screen. Close the door.</span> Then give the teacher an instruction.</div>
-  <div class="prompt-card"><b>Information gap:</b> The teacher names an object and you point to it on your desk or screen — or you describe one and the teacher guesses: <span class="ex">You write with it. It's on the desk.</span></div>
+  <div class="note"><strong>Choice and access:</strong> you do not need to show your real desk, room, camera, belongings, or written name. Use the labeled pictures, an invented desk, or a public classroom image. For an instruction, you may move an object, point digitally, say the object, or choose its written label.</div>
+  <div class="prompt-card"><b>Name a study setup:</b> Choose five real, pictured, or invented objects and name each one with its useful chunk: <span class="ex">a pen, a notebook, an eraser, some paper, a pair of scissors.</span></div>
+  <div class="prompt-card"><b>Count accurately:</b> Use a singular, a regular plural, and a special number phrase. <span class="ex">one notebook · two pens · two sheets of paper · two pairs of scissors · two mice</span></div>
+  <div class="prompt-card"><b>Give a location:</b> Identify the object by name, not only by pointing. <span class="ex">The blue pen is on the desk. The folder labeled “Work” is in the bag.</span></div>
+  <div class="prompt-card"><b>Follow or report the instruction:</b> Respond by acting, pointing, speaking, or selecting a label. <span class="ex">Open your book. Write a fictional name. Look at the screen. Close the door.</span> Then give your teacher one instruction.</div>
+  <div class="prompt-card"><b>Clarify and borrow:</b> Ask for repetition once, ask about one unknown word, and request one missing object. <span class="ex">Can you repeat that, please? What does “ruler” mean? Can I borrow a pen, please?</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: prepare a fictional learner for class</h3>
+    <p>Your partner has an empty desk and cannot see your object list. Explain six objects to prepare, where to put two of them, and what to do first. Include one object the learner does not have, so the learner must ask to borrow it or ask for clarification.</p>
+    <p><strong>Success criteria:</strong> use <span class="ex">a</span> and <span class="ex">an</span> from sound; use one regular plural and one special pattern for <span class="ex">paper, scissors</span>, or <span class="ex">mouse</span>; give two clear locations; give one classroom instruction; and respond naturally to one clarification request.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Explain the choice</h3>
-    <p>Complete this aloud: “I use <strong>a</strong> before a ______ sound and <strong>an</strong> before a ______ sound. For more than one, I drop <strong>a / an</strong> and add ______.”</p>
-    <p>Then say one true sentence about an object near you and one about an object far from you right now.</p>
+    <p>Complete this aloud: “I use <strong>a</strong> before a ______ sound and <strong>an</strong> before a ______ sound. After <strong>one</strong>, I use a ______ noun. After <strong>two</strong>, a regular countable noun is ______. The plural of <strong>mouse</strong> is ______.”</p>
+    <p>Then explain how to count <span class="ex">paper</span> and <span class="ex">scissors</span>, and say one polite sentence you can use when an instruction is not clear.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can name your desk objects, choose a or an, and make plurals.">
-    <h3>Final quiz — name it, choose a or an, count it</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You can identify common study objects, choose articles from sound, match number and noun form, locate an object, and follow an instruction.">
+    <h3>Final quiz: name it, choose a or an, count it</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="a">
+      <div class="quiz-item" data-quiz-item data-answer="a" data-hint="Pencil begins with the consonant sound /p/." data-fix="I have a pencil.">
         <p class="quiz-question">1. I have ___ pencil.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="an">
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="Eraser begins with a vowel sound." data-fix="There is an eraser on the desk.">
         <p class="quiz-question">2. There is ___ eraser on the desk.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="markers">
-        <p class="quiz-question">3. The teacher has three ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="marker">marker</button><button class="quiz-option" data-quiz-option="markers">markers</button><button class="quiz-option" data-quiz-option="a marker">a marker</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="mice" data-hint="Mouse has an irregular plural, including for the usual computer object." data-fix="The classroom computers have two mice.">
+        <p class="quiz-question">3. The classroom has two computers, and each has a mouse. Together, the computers have two ___.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="mouse">mouse</button><button class="quiz-option" data-quiz-option="mice">mice</button><button class="quiz-option" data-quiz-option="mouses">mouses</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="laptop">
+      <div class="quiz-item" data-quiz-item data-answer="laptop" data-hint="Choose the portable computer that opens to show a screen and keyboard." data-fix="The object is a laptop.">
         <p class="quiz-question">4. You open it to join the video lesson. It is a ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="laptop">laptop</button><button class="quiz-option" data-quiz-option="ruler">ruler</button><button class="quiz-option" data-quiz-option="chair">chair</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="screen">
+      <div class="quiz-item" data-quiz-item data-answer="screen" data-hint="In the sentence, the teacher's video is visible on this part of the device." data-fix="You look at the teacher on the screen.">
         <p class="quiz-question">5. You look at your teacher on it during an online lesson. It is a ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="bag">bag</button><button class="quiz-option" data-quiz-option="screen">screen</button><button class="quiz-option" data-quiz-option="board">board</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I have two pens.">
-        <p class="quiz-question">6. Which sentence is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="I have two pens." data-hint="After two, remove a and use the regular plural pens." data-fix="I have two pens.">
+        <p class="quiz-question">6. A learner counts exactly two pens. Which sentence reports the number correctly?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="I have two pens.">I have two pens.</button><button class="quiz-option" data-quiz-option="I have two pen.">I have two pen.</button><button class="quiz-option" data-quiz-option="I have a two pens.">I have a two pens.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">7. The pen is ___ the desk.</p>
+      <div class="quiz-item" data-quiz-item data-answer="on" data-hint="An object touching and supported by the top surface is on it." data-fix="The pen is on the desk.">
+        <p class="quiz-question">7. The pen is resting on top of the desk. It is ___ the desk.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="of">of</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Open your book.">
+      <div class="quiz-item" data-quiz-item data-answer="Open your book." data-hint="To start reading, the learner needs the instruction with Open and book." data-fix="Open your book.">
         <p class="quiz-question">8. The teacher wants you to start reading. Which instruction fits?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Open your book.">Open your book.</button><button class="quiz-option" data-quiz-option="Close the door.">Close the door.</button><button class="quiz-option" data-quiz-option="Write your name.">Write your name.</button></div>
       </div>
@@ -360,6 +513,57 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the object chunks, number patterns, or clarification language that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day classroom-object retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve one article, two special object forms, and one clarification request.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You recalled an eraser, the irregular plural mice, a pair of scissors, and repeat for an unclear instruction.">
+      <h3>Choose the exact classroom chunk from memory</h3>
+      <div class="choice-bank" aria-label="Next-day classroom choices">
+        <button class="choice-option" data-choice-option="a">a</button>
+        <button class="choice-option" data-choice-option="an">an</button>
+        <button class="choice-option" data-choice-option="mice">mice</button>
+        <button class="choice-option" data-choice-option="mouses">mouses</button>
+        <button class="choice-option" data-choice-option="pair">pair</button>
+        <button class="choice-option" data-choice-option="piece">piece</button>
+        <button class="choice-option" data-choice-option="repeat">repeat</button>
+        <button class="choice-option" data-choice-option="spell">spell</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>I need <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Eraser begins with a vowel sound." data-fix="I need an eraser." data-placeholder="choose">choose</button> eraser.</span></div>
+      <div class="q"><span class="n">2</span><span>The two computers have two <button class="choice-gap" data-choice-gap data-answer="mice" data-hint="Mouse has the irregular plural mice." data-fix="The two computers have two mice." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Use a <button class="choice-gap" data-choice-gap data-answer="pair" data-hint="Count scissors with the chunk a pair of scissors." data-fix="Use a pair of scissors." data-placeholder="choose">choose</button> of scissors.</span></div>
+      <div class="q"><span class="n">4</span><span>The instruction was not clear. Can you <button class="choice-gap" data-choice-gap data-answer="repeat" data-hint="Repeat asks the speaker to say the whole message again; spell asks for letters." data-fix="Can you repeat that, please?" data-placeholder="choose">choose</button> that, please?</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="is" data-hint="Scissors has a plural form, so check the form of be." data-fix="The scissors are on the desk." data-why="Use are with scissors. When pair is the subject, use is: The pair of scissors is on the desk.">
+      <h3>Repair the special agreement</h3>
+      <p>The scissors is on the desk. Tap the form of <em>be</em> that does not agree.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="scissors">scissors</button>
+        <button class="error-choice" data-error-choice="is">is</button>
+        <button class="error-choice" data-error-choice="desk">desk</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Name three common objects with their article. Make two regular nouns plural. Then say one sheet of paper, one pair of scissors, and one mouse as quantities of two.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Invent one unclear classroom instruction. Ask for repetition or meaning, listen to the repair, and report the object plus its location in a full sentence.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

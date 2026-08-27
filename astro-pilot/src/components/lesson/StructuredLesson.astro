@@ -1,0 +1,294 @@
+---
+import MultipleChoiceExercise from "./MultipleChoiceExercise.astro";
+import RevealCard from "./RevealCard.astro";
+
+interface QuizOption { value: string; label?: string }
+interface QuizItem {
+  question: string;
+  answer: string;
+  options: QuizOption[];
+  hint?: string;
+}
+interface FormRow { label: string; form: string; example: string }
+interface MeaningRow { choice: string; use: string; example: string }
+interface ErrorPattern { wrong: string; correct: string; why: string }
+interface ReferenceGroup { heading: string; items: string[] }
+interface RepairItem {
+  title: string;
+  sentence: string;
+  answer: string;
+  fix: string;
+  why: string;
+  tokens: Array<{ value: string; label: string }>;
+}
+interface LessonContent {
+  duration: string;
+  outcome: string;
+  focus: string;
+  tags: string[];
+  retrieval: Array<{ prompt: string; answer: string }>;
+  notice: {
+    title: string;
+    setup: string;
+    samples: string[];
+    questions: string[];
+    check: QuizItem;
+  };
+  discover: {
+    principle: string;
+    formRows: FormRow[];
+    meaningRows: MeaningRow[];
+    pronunciation?: string;
+    errors: ErrorPattern[];
+  };
+  reference?: { title: string; intro: string; groups: ReferenceGroup[] };
+  build: QuizItem[];
+  context: {
+    title: string;
+    intro: string;
+    lines: string[];
+    questions: QuizItem[];
+  };
+  builder: { title: string; prompt: string; answer: string; tiles: string[] };
+  repairs: RepairItem[];
+  fluency: Array<{ prompt: string; answer: string }>;
+  communicate: {
+    title: string;
+    setup: string;
+    roles: string[];
+    prompts: string[];
+    success: string[];
+  };
+  reflect: { canDo: string[]; nextUse: string };
+}
+
+interface Props {
+  page: { topic: string; category: string; level: string; sequence: number };
+  lesson: LessonContent;
+}
+
+const { page, lesson } = Astro.props;
+
+const qualityErrors: string[] = [];
+const minimums: Array<[string, unknown[], number]> = [
+  ["retrieval prompts", lesson.retrieval, 3],
+  ["noticing samples", lesson.notice.samples, 2],
+  ["noticing questions", lesson.notice.questions, 3],
+  ["form rows", lesson.discover.formRows, 3],
+  ["meaning rows", lesson.discover.meaningRows, 3],
+  ["error explanations", lesson.discover.errors, 3],
+  ["controlled build items", lesson.build, 5],
+  ["context lines", lesson.context.lines, 3],
+  ["context questions", lesson.context.questions, 3],
+  ["repair items", lesson.repairs, 3],
+  ["fluency transforms", lesson.fluency, 3],
+  ["communication roles", lesson.communicate.roles, 2],
+  ["communication prompts", lesson.communicate.prompts, 3],
+  ["communication success criteria", lesson.communicate.success, 3],
+  ["reflection checks", lesson.reflect.canDo, 3],
+];
+for (const [label, items, minimum] of minimums) {
+  if (items.length < minimum) qualityErrors.push(`${label}: expected at least ${minimum}, found ${items.length}`);
+}
+
+for (const [index, item] of [lesson.notice.check, ...lesson.build, ...lesson.context.questions].entries()) {
+  const values = item.options.map((option) => option.value);
+  if (values.length !== 3) qualityErrors.push(`choice item ${index + 1}: expected exactly three options`);
+  if (new Set(values).size !== values.length) qualityErrors.push(`choice item ${index + 1}: option values must be unique`);
+  if (!values.includes(item.answer)) qualityErrors.push(`choice item ${index + 1}: answer is not present in its options`);
+}
+
+const normalizeBuilderToken = (value: string) => value.toLocaleLowerCase().replace(/[‘’]/g, "'").replace(/[^\p{L}\p{N}']+/gu, "");
+const answerTokens = lesson.builder.answer.split(/\s+/).map(normalizeBuilderToken).filter(Boolean).sort();
+const tileTokens = lesson.builder.tiles.map(normalizeBuilderToken).filter(Boolean).sort();
+if (answerTokens.join("|") !== tileTokens.join("|")) qualityErrors.push("sentence-builder answer and tile inventory do not match");
+
+if (qualityErrors.length) {
+  throw new Error(`${page.level} lesson ${page.sequence} (${page.topic}) does not meet the structured lesson contract:\n- ${qualityErrors.join("\n- ")}`);
+}
+---
+<main class="wrap">
+  <p class="kicker"><span class="dot"></span>{page.category} · Lesson {page.sequence}</p>
+  <h1>{page.topic}</h1>
+  <p class="standfirst">{lesson.outcome}</p>
+  <div class="meta-row">
+    <span class="tag">≈ {lesson.duration}</span>
+    <span class="tag">{lesson.focus}</span>
+    {lesson.tags.map((tag) => <span class="tag">{tag}</span>)}
+    <span class="tag">10+ interactive moments</span>
+  </div>
+
+  <div class="lesson-flow structured-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Observe meaning in context.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Connect form, meaning, and use.</span></div>
+    <div class="flow-step"><b>Build</b><span>Choose and assemble accurate language.</span></div>
+    <div class="flow-step"><b>Drill</b><span>Repair errors and retrieve fluently.</span></div>
+    <div class="flow-step"><b>Communicate</b><span>Use it for a real purpose.</span></div>
+    <div class="flow-step"><b>Reflect</b><span>Check control and plan the next use.</span></div>
+  </div>
+
+  <p class="note-line">Today’s central idea: {lesson.discover.principle}</p>
+
+  <h2>Retrieval bridge</h2>
+  <div class="lead-rule"></div>
+  <p>Say each answer before revealing it. The goal is to reactivate language that today’s lesson will extend.</p>
+  <div class="practice" data-transform>
+    <h3>Connect to what you already know</h3>
+    <div class="transform-list">
+      {lesson.retrieval.map((item) => <RevealCard prompt={item.prompt} answer={item.answer} />)}
+    </div>
+  </div>
+
+  <h2>Notice before the rule</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>{lesson.notice.title}</h3>
+    <p>{lesson.notice.setup}</p>
+    {lesson.notice.samples.map((sample) => <p class="ex">{sample}</p>)}
+    <ul>
+      {lesson.notice.questions.map((question) => <li>{question}</li>)}
+    </ul>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Good noticing. You found the meaning before memorizing the rule.">
+    <h3>Noticing check</h3>
+    <div class="quiz-list"><MultipleChoiceExercise {...lesson.notice.check} /></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" type="button" data-check-quiz>Check</button>
+      <button class="lesson-btn" type="button" data-reset-quiz>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Discover the system</h2>
+  <div class="lead-rule"></div>
+  <p>{lesson.discover.principle}</p>
+  <table>
+    <thead><tr><th>Pattern</th><th>Form</th><th>Example</th></tr></thead>
+    <tbody>
+      {lesson.discover.formRows.map((row) => <tr><td><b>{row.label}</b></td><td>{row.form}</td><td>{row.example}</td></tr>)}
+    </tbody>
+  </table>
+  <h3>Meaning and choice</h3>
+  <table>
+    <thead><tr><th>Speaker’s choice</th><th>Use it when…</th><th>Example</th></tr></thead>
+    <tbody>
+      {lesson.discover.meaningRows.map((row) => <tr><td><b>{row.choice}</b></td><td>{row.use}</td><td>{row.example}</td></tr>)}
+    </tbody>
+  </table>
+  {lesson.discover.pronunciation && <p class="note-line">Sound natural: {lesson.discover.pronunciation}</p>}
+
+  <div class="note">
+    <h3>High-value repairs</h3>
+    <table>
+      <thead><tr><th>Avoid</th><th>Use</th><th>Why</th></tr></thead>
+      <tbody>
+        {lesson.discover.errors.map((error) => <tr><td class="cross">{error.wrong}</td><td>{error.correct}</td><td>{error.why}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+
+  {lesson.reference && (
+    <>
+      <h2>{lesson.reference.title}</h2>
+      <div class="lead-rule"></div>
+      <p>{lesson.reference.intro}</p>
+      {lesson.reference.groups.map((group) => (
+        <div class="wordlist">
+          <p class="wl-head">{group.heading}</p>
+          <div class="wl-items">{group.items.map((item) => <span>{item}</span>)}</div>
+        </div>
+      ))}
+    </>
+  )}
+
+  <h2>Build controlled accuracy</h2>
+  <div class="lead-rule"></div>
+  <div class="quiz" data-quiz data-success-message="Accurate work. Explain one answer in your own words before moving on.">
+    <h3>Choose the form that fits the meaning</h3>
+    <div class="quiz-list">
+      {lesson.build.map((item) => <MultipleChoiceExercise {...item} />)}
+    </div>
+    <div class="drill-actions">
+      <button class="lesson-btn" type="button" data-check-quiz>Check</button>
+      <button class="lesson-btn" type="button" data-reset-quiz>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Read language doing real work</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>{lesson.context.title}</h3>
+    <p>{lesson.context.intro}</p>
+    {lesson.context.lines.map((line) => <p class="ex">{line}</p>)}
+  </div>
+  <div class="quiz" data-quiz data-success-message="Strong reading. You followed both the message and the target language.">
+    <h3>Meaning in context</h3>
+    <div class="quiz-list">
+      {lesson.context.questions.map((item) => <MultipleChoiceExercise {...item} />)}
+    </div>
+    <div class="drill-actions">
+      <button class="lesson-btn" type="button" data-check-quiz>Check</button>
+      <button class="lesson-btn" type="button" data-reset-quiz>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer={lesson.builder.answer}>
+    <h3>{lesson.builder.title}</h3>
+    <p class="tile-target">{lesson.builder.prompt}</p>
+    <div class="tile-bank" data-build-bank>
+      {lesson.builder.tiles.map((tile) => <button class="tile" type="button" data-build-tile={tile.toLowerCase()}>{tile}</button>)}
+    </div>
+    <div class="build-area" data-build-area data-placeholder="Choose the words in order"></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" type="button" data-check-build>Check</button>
+      <button class="lesson-btn" type="button" data-reset-build>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Diagnose and repair</h2>
+  <div class="lead-rule"></div>
+  <p>Find the precise problem. A useful correction includes the reason, not only the repaired sentence.</p>
+  {lesson.repairs.map((repair) => (
+    <div class="micro-drill" data-spot-error data-answer={repair.answer} data-fix={repair.fix} data-why={repair.why}>
+      <h3>{repair.title}</h3>
+      <p class="ex">{repair.sentence}</p>
+      <div class="spot-options">
+        {repair.tokens.map((token) => <button class="error-choice" type="button" data-error-choice={token.value}>{token.label}</button>)}
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+  ))}
+
+  <h2>Fluency drill</h2>
+  <div class="lead-rule"></div>
+  <p>Respond aloud first. Reveal the model only after you have committed to an answer; your wording can differ if the meaning and form are right.</p>
+  <div class="practice" data-transform>
+    <h3>Transform and expand</h3>
+    <div class="transform-list">
+      {lesson.fluency.map((item) => <RevealCard prompt={item.prompt} answer={item.answer} />)}
+    </div>
+  </div>
+
+  <h2>Communicate</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>{lesson.communicate.title}</h3>
+    <p>{lesson.communicate.setup}</p>
+    {lesson.communicate.roles.map((role, index) => <p class="prompt-card"><b>Role {index + 1}</b><br />{role}</p>)}
+    <p class="wl-head">Useful prompts</p>
+    <ul>{lesson.communicate.prompts.map((prompt) => <li>{prompt}</li>)}</ul>
+    <p class="wl-head">Success looks like</p>
+    <ul>{lesson.communicate.success.map((item) => <li>{item}</li>)}</ul>
+  </div>
+
+  <h2>Reflect and transfer</h2>
+  <div class="lead-rule"></div>
+  <div class="note">
+    <h3>Can you do this without the page?</h3>
+    <ul>{lesson.reflect.canDo.map((item) => <li>{item}</li>)}</ul>
+    <p class="note-line"><strong>Your next use:</strong> {lesson.reflect.nextUse}</p>
+  </div>
+</main>

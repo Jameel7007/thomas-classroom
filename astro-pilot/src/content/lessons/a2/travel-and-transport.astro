@@ -1,394 +1,299 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Travel & transport · A2 Vocabulary · Curriculum Map",
+  "title": "Travel & transport · A2 Vocabulary",
   "slug": "travel-and-transport",
   "level": "A2",
   "topic": "Travel & transport",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Say how you get to work, plan a trip, and handle the airport with calm. Learn the everyday transport words, then use by + transport for how you travel and verb chunks for what you ",
+  "description": "Choose accurate travel chunks, distinguish a mode from a specific vehicle, follow stations and airports, understand schedules and announcements, and solve common journey problems.",
   "sequence": 12,
-  "prerequisites": [],
+  "prerequisites": ["a2/past-simple", "a1/prepositions-of-time-and-place"],
   "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Travel modes and vehicle location, trip vocabulary, station and airport wayfinding, schedule language, U.S. usage, announcements, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 12</p>
-  <h1>Travel &amp; <em>transport</em></h1>
-  <p class="standfirst">Say how you get to work, plan a trip, and handle the airport with calm. Learn the everyday transport words, then use <strong>by + transport</strong> for how you travel and <strong>verb chunks</strong> for what you do: <span class="ex">by train</span>, <span class="ex">on foot</span>, <span class="ex">take a taxi</span>, <span class="ex">catch the bus</span>, <span class="ex">check in</span>, <span class="ex">board at the gate</span>.</p>
+  <h1>Travel &amp; transport: <em>move, navigate, and solve problems</em></h1>
+  <p class="standfirst">Follow one fictional trip from a city bus to an airport gate. Choose whether you mean a travel mode or a specific vehicle, read times and signs, and respond when a train, bus, or flight changes.</p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">by + transport</span>
-    <span class="tag">travel verb chunks</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">by · on · in · on foot</span>
+    <span class="tag">station and airport chunks</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read a traveler’s morning message.</span></div>
-    <div class="flow-step"><b>Discover</b><span>by + transport, and verbs that come in chunks.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, and build travel sentences.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about real trips and dream trips.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Follow a traveler from home to a departure gate.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Separate the mode, the specific vehicle, and the journey.</span></div>
+    <div class="flow-step"><b>Build</b><span>Use wayfinding, schedule, and problem-solving chunks.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional travel briefing and handle one change.</span></div>
   </div>
 
-  <p class="note-line">Getting around: <span class="ex">by bus</span>, <span class="ex">by train</span>, <span class="ex">by car</span>, <span class="ex">by plane</span>, or <span class="ex">on foot</span>. At the airport, the order never changes: <span class="ex">check in</span>, <span class="ex">go through security</span>, <span class="ex">find your gate</span>, <span class="ex">board</span>.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can say how someone travels; say where someone is in relation to a vehicle; distinguish <span class="ex">travel, trip</span>, and <span class="ex">journey</span>; navigate a station or airport; understand a short travel announcement; and explain a delay or missed connection.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="at">at</button>
-      <button class="choice-option" data-choice-option="in">in</button>
-      <button class="choice-option" data-choice-option="went">went</button>
-      <button class="choice-option" data-choice-option="go">go</button>
-      <button class="choice-option" data-choice-option="am">am</button>
-      <button class="choice-option" data-choice-option="is">is</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>The bus leaves <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> 7:30 in the morning. &nbsp;<span class="contraction">(A1 lesson · prepositions of time and place)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Last summer we <button class="choice-gap" data-choice-gap data-answer="went" data-placeholder="choose">choose</button> to Italy by train. &nbsp;<span class="contraction">(A2 lesson · past simple)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Next month I <button class="choice-gap" data-choice-gap data-answer="am" data-placeholder="choose">choose</button> going to visit my sister. &nbsp;<span class="contraction">(A2 lesson · be going to)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a departure time, a finished trip, and a prior travel plan.">
+    <h3>Three checks from earlier lessons</h3>
+    <p class="choice-hint">Use the exact clock time, finished past event, and plan formed before now.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices"><button class="choice-option" data-choice-option="at">at</button><button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="went">went</button><button class="choice-option" data-choice-option="go">go</button><button class="choice-option" data-choice-option="is going to">is going to</button><button class="choice-option" data-choice-option="going to">going to</button></div>
+    <div class="q"><span class="n">1</span><span>The timetable gives one exact departure time: The bus leaves <button class="choice-gap" data-choice-gap data-answer="at" data-hint="Use at before an exact clock time." data-fix="The bus leaves at 7:30." data-placeholder="choose">choose</button> 7:30.</span></div>
+    <div class="q"><span class="n">2</span><span>The trip finished last summer: Nia <button class="choice-gap" data-choice-gap data-answer="went" data-hint="The finished past form of go is went." data-fix="Nia went to Chicago by train last summer." data-placeholder="choose">choose</button> to Chicago by train last summer.</span></div>
+    <div class="q"><span class="n">3</span><span>Omar made this plan yesterday and still intends it: He <button class="choice-gap" data-choice-gap data-answer="is going to" data-hint="A prior plan with he uses is going to plus a base verb." data-fix="He is going to visit Denver next month." data-placeholder="choose">choose</button> visit Denver next month.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Meet the transport</h2>
-  <div class="lead-rule"></div>
-  <p>Ways to travel and useful trip words. Say each kind of transport aloud with <span class="ex">by</span>: <span class="ex">by bus</span>, <span class="ex">by train</span>, <span class="ex">by plane</span>. For the trip words, try <span class="ex">I packed…</span> or <span class="ex">We booked…</span></p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/airplane.svg" alt="" loading="lazy" /></span><span class="nm">plane</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/train.svg" alt="" loading="lazy" /></span><span class="nm">train</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bus.svg" alt="" loading="lazy" /></span><span class="nm">bus</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/car.svg" alt="" loading="lazy" /></span><span class="nm">car</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/taxi.svg" alt="" loading="lazy" /></span><span class="nm">taxi</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ship.svg" alt="" loading="lazy" /></span><span class="nm">ship</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/motorcycle.svg" alt="" loading="lazy" /></span><span class="nm">motorcycle</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/metro.svg" alt="" loading="lazy" /></span><span class="nm">metro</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/helicopter.svg" alt="" loading="lazy" /></span><span class="nm">helicopter</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bicycle.svg" alt="" loading="lazy" /></span><span class="nm">bicycle</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/luggage.svg" alt="" loading="lazy" /></span><span class="nm">luggage</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ticket.svg" alt="" loading="lazy" /></span><span class="nm">ticket</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/world-map.svg" alt="" loading="lazy" /></span><span class="nm">map</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tent.svg" alt="" loading="lazy" /></span><span class="nm">camping</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/beach.svg" alt="" loading="lazy" /></span><span class="nm">beach</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mountain.svg" alt="" loading="lazy" /></span><span class="nm">mountain</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/compass.svg" alt="" loading="lazy" /></span><span class="nm">compass</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hotel.svg" alt="" loading="lazy" /></span><span class="nm">hotel</span></div>
-  </div>
-
-  <h2>Notice before the rule</h2>
+  <h2>Notice one complete travel path</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read the traveler’s message</h3>
-    <p><span class="ex">“I usually go to work <strong>by train</strong>, but today I’m <strong>taking a taxi</strong> because I have a big suitcase. My flight leaves at 9:40. I’ll <strong>check in</strong> at 7:30, <strong>go through security</strong>, and <strong>board at the gate</strong>. I really hope I don’t <strong>miss it</strong>!”</span></p>
+    <h3>Northstar Conference trip</h3>
+    <p><span class="ex">Nia usually travels <strong>by bus</strong>. At 6:40 on Friday, she is <strong>on the airport bus</strong> with one suitcase. She gets <strong>off the bus</strong> at Terminal 2, checks in online, and goes through security. Her flight is delayed, so boarding begins at Gate 18 at 9:25. In Denver, she gets <strong>in a taxi</strong> and gets <strong>out of it</strong> at the conference hotel.</span></p>
     <ul>
-      <li>Look at <span class="ex">by train</span>. There is no <span class="ex">a</span> and no <span class="ex">the</span>. Which little word comes before the transport?</li>
-      <li>Now compare: <span class="ex">taking <strong>a</strong> taxi</span>, <span class="ex">miss <strong>it</strong></span>. Verbs like <span class="ex">take</span>, <span class="ex">catch</span>, and <span class="ex">miss</span> need <span class="ex">a</span> or <span class="ex">the</span>. So when do we use plain <span class="ex">by + transport</span>?</li>
-      <li>Find the airport steps in the message. What does the traveler do first, next, and last?</li>
+      <li>Which phrase names Nia’s general travel mode?</li>
+      <li>Which phrases locate her in a specific bus and taxi?</li>
+      <li>What changed, and which gate and time matter now?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check · read the cue, then choose</h3>
-    <p class="choice-hint">For how you travel, use <b>by</b> + transport with no article. Walking is <b>on foot</b>. Inside a big vehicle you are <b>on</b> it; inside a car or taxi you are <b>in</b> it.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="by">by</button>
-      <button class="choice-option" data-choice-option="on">on</button>
-      <button class="choice-option" data-choice-option="in">in</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I go to work <button class="choice-gap" data-choice-gap data-answer="by" data-placeholder="choose">choose</button> bus. &nbsp;<span class="contraction">(how you travel · no article)</span></span></div>
-    <div class="q"><span class="n">2</span><span>She travels to Chicago <button class="choice-gap" data-choice-gap data-answer="by" data-placeholder="choose">choose</button> train. &nbsp;<span class="contraction">(how you travel · no article)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The office is close, so I go <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> foot. &nbsp;<span class="contraction">(walking · a special chunk)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Quiet, please. I’m <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> the bus. &nbsp;<span class="contraction">(a big vehicle · you can walk inside it)</span></span></div>
-    <div class="q"><span class="n">5</span><span>They’re <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> a taxi on the way to the airport. &nbsp;<span class="contraction">(a car · you sit inside it)</span></span></div>
-    <div class="q"><span class="n">6</span><span>We never travel <button class="choice-gap" data-choice-gap data-answer="by" data-placeholder="choose">choose</button> car at night. &nbsp;<span class="contraction">(how you travel · no article)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated a mode, vehicle location, vehicle movement, schedule change, and destination.">
+    <h3>Discovery check: identify each phrase’s job</h3>
+    <div class="choice-bank" aria-label="Travel phrase job choices"><button class="choice-option" data-choice-option="general travel mode">general travel mode</button><button class="choice-option" data-choice-option="location on a specific vehicle">location on a specific vehicle</button><button class="choice-option" data-choice-option="leaving a bus">leaving a bus</button><button class="choice-option" data-choice-option="schedule change">schedule change</button><button class="choice-option" data-choice-option="location in a specific vehicle">location in a specific vehicle</button><button class="choice-option" data-choice-option="leaving a taxi">leaving a taxi</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">travels by bus</span>, <span class="ex">by bus</span> names the <button class="choice-gap" data-choice-gap data-answer="general travel mode" data-hint="By plus transport answers How does she travel?" data-fix="By bus names Nia’s general travel mode." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">is on the airport bus</span>, <span class="ex">on the bus</span> gives her <button class="choice-gap" data-choice-gap data-answer="location on a specific vehicle" data-hint="The names one particular bus, and on says where she is." data-fix="On the airport bus gives Nia’s location on a specific vehicle." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">gets off the bus</span>, <span class="ex">off</span> presents the action of <button class="choice-gap" data-choice-gap data-answer="leaving a bus" data-hint="Get off is the conventional chunk for exiting a bus." data-fix="Gets off the bus describes leaving a bus." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>In <span class="ex">the flight is delayed</span>, <span class="ex">delayed</span> reports a <button class="choice-gap" data-choice-gap data-answer="schedule change" data-hint="Delayed means the event will happen later than scheduled." data-fix="The flight is delayed reports a schedule change." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>In <span class="ex">gets in a taxi</span>, <span class="ex">in a taxi</span> gives her <button class="choice-gap" data-choice-gap data-answer="location in a specific vehicle" data-hint="In is the conventional location word for a car or taxi." data-fix="In a taxi gives Nia’s location in a specific vehicle." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>In <span class="ex">gets out of it at the hotel</span>, <span class="ex">out of</span> presents the action of <button class="choice-gap" data-choice-gap data-answer="leaving a taxi" data-hint="Get out of is the conventional chunk for exiting a taxi or car." data-fix="Gets out of the taxi describes leaving a taxi." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: by + transport, or on foot</h2>
+  <h2>Get to the root: choose the travel viewpoint</h2>
   <div class="lead-rule"></div>
-  <p>To say <strong>how you travel in general</strong>, use <span class="ex">by</span> + transport with <strong>no article</strong>: <span class="ex">by bus, by train, by car, by plane, by metro</span>. Walking has its own chunk: <span class="ex">on foot</span>, never <span class="ex">by foot</span>.</p>
-  <p>To say <strong>where you are</strong>, the vehicle matters. You are <span class="ex">on</span> big transport you can walk inside: <span class="ex">on the bus, on the train, on the plane, on the ship</span>. You are <span class="ex">in</span> a car or taxi, because you sit inside: <span class="ex">in the car, in a taxi</span>.</p>
+  <p>Do not choose a preposition only from the object’s size. First decide what you mean: the <strong>mode in general</strong>, your <strong>location on or in a particular vehicle</strong>, or your <strong>movement onto or out of it</strong>.</p>
   <table>
-    <thead><tr><th>by + transport <span class="contraction">no a, no the</span></th><th>watch out</th></tr></thead>
+    <thead><tr><th>viewpoint</th><th>useful pattern</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>by bus, by train, by metro</b> &nbsp;<span class="contraction">not by a bus</span></td><td><b>on foot</b> &nbsp;<span class="contraction">= walking, not by foot</span></td></tr>
-      <tr><td><b>by plane, by ship</b> &nbsp;<span class="contraction">how you travel</span></td><td><b>on the bus, on the train, on the plane</b> &nbsp;<span class="contraction">where you are</span></td></tr>
-      <tr><td><b>by car, by taxi</b> &nbsp;<span class="contraction">how you travel</span></td><td><b>in the car, in a taxi</b> &nbsp;<span class="contraction">you sit inside</span></td></tr>
+      <tr><td>how someone travels</td><td><span class="ex">by + mode</span>, no <span class="ex">a</span> or <span class="ex">the</span></td><td><span class="ex">by bus, by train, by plane, by car, by bike</span></td></tr>
+      <tr><td>walking as the mode</td><td>stored phrase <span class="ex">on foot</span></td><td><span class="ex">The hotel is close, so we went on foot.</span></td></tr>
+      <tr><td>specific shared or ride-on vehicle</td><td><span class="ex">on · get on · get off</span></td><td><span class="ex">on the train, on a plane, on my bike</span></td></tr>
+      <tr><td>specific car or taxi</td><td><span class="ex">in · get in · get out of</span></td><td><span class="ex">in the car, get in a taxi, get out of it</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line">The pattern is conventional, not a perfect physical rule. Bicycles and motorcycles use <span class="ex">on, get on</span>, and <span class="ex">get off</span> even though you cannot walk inside them. Learn the complete phrase.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose general mode, walking, specific-vehicle location, and vehicle movement from the intended viewpoint.">
+    <h3>Drill 1: mode, location, or movement?</h3>
+    <div class="choice-bank" aria-label="Mode and vehicle choices"><button class="choice-option" data-choice-option="by train">by train</button><button class="choice-option" data-choice-option="on the train">on the train</button><button class="choice-option" data-choice-option="on foot">on foot</button><button class="choice-option" data-choice-option="in a taxi">in a taxi</button><button class="choice-option" data-choice-option="get off">get off</button><button class="choice-option" data-choice-option="get out of">get out of</button></div>
+    <div class="q"><span class="n">1</span><span>The question asks for the general mode, not a particular vehicle: Nia usually travels <button class="choice-gap" data-choice-gap data-answer="by train" data-hint="Use by plus transport with no article to name the general mode." data-fix="Nia usually travels by train." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Nia is calling from one specific train now: She is <button class="choice-gap" data-choice-gap data-answer="on the train" data-hint="Use on the train for location on one specific train." data-fix="She is on the train now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="q"><span class="n">3</span><span>The hotel is only two blocks away, and they will walk: They can go <button class="choice-gap" data-choice-gap data-answer="on foot" data-hint="Walking as a travel mode uses the stored phrase on foot." data-fix="They can go on foot." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Omar is calling from one specific cab: He is <button class="choice-gap" data-choice-gap data-answer="in a taxi" data-hint="Use in for location inside a specific taxi." data-fix="He is in a taxi near the terminal." data-placeholder="choose">choose</button> near the terminal.</span></div>
+    <div class="q"><span class="n">5</span><span>The bus has reached Nia’s stop, so she needs to leave it: She should <button class="choice-gap" data-choice-gap data-answer="get off" data-hint="Use get off for leaving a bus." data-fix="She should get off the bus at Pine Street." data-placeholder="choose">choose</button> the bus at Pine Street.</span></div>
+    <div class="q"><span class="n">6</span><span>The taxi has reached the hotel, so Omar needs to leave it: He should <button class="choice-gap" data-choice-gap data-answer="get out of" data-hint="Use get out of for leaving a taxi or car." data-fix="He should get out of the taxi at the hotel." data-placeholder="choose">choose</button> the taxi at the hotel.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Name the trip, route, and place precisely</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>word</th><th>core meaning</th><th>natural U.S. example</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">travel</span></td><td>verb or usually uncountable noun for the activity in general</td><td><span class="ex">I travel for work. Air travel can be tiring. I love traveling.</span></td></tr>
+      <tr><td><span class="ex">trip</span></td><td>one countable occasion when someone goes somewhere</td><td><span class="ex">a business trip · a weekend trip to Denver</span></td></tr>
+      <tr><td><span class="ex">journey</span></td><td>the movement or experience from one place to another</td><td><span class="ex">The train journey took six hours.</span></td></tr>
+      <tr><td><span class="ex">luggage</span></td><td>an uncountable group of bags and suitcases</td><td><span class="ex">one suitcase · two bags · one piece of luggage</span></td></tr>
+    </tbody>
+  </table>
+  <p>For local public travel, U.S. English commonly uses <span class="ex">public transportation</span> or <span class="ex">transit</span>. City systems have a <span class="ex">bus stop</span> or <span class="ex">subway station</span>. Intercity trains leave from a <span class="ex">station</span>, often from a numbered <span class="ex">platform</span>. Flights use an airport <span class="ex">terminal</span> and <span class="ex">gate</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished travel, trip, journey, luggage, and the exact departure place for a bus or train.">
+    <h3>Drill 2: choose the precise travel word</h3>
+    <div class="choice-bank" aria-label="Trip and place choices"><button class="choice-option" data-choice-option="travel">travel</button><button class="choice-option" data-choice-option="trip">trip</button><button class="choice-option" data-choice-option="journey">journey</button><button class="choice-option" data-choice-option="luggage">luggage</button><button class="choice-option" data-choice-option="stop">stop</button><button class="choice-option" data-choice-option="platform">platform</button></div>
+    <div class="q"><span class="n">1</span><span>The sentence describes the activity in general, not one countable occasion: International <button class="choice-gap" data-choice-gap data-answer="travel" data-hint="Travel is usually uncountable when it names the activity in general." data-fix="International travel requires careful planning." data-placeholder="choose">choose</button> requires careful planning.</span></div>
+    <div class="q"><span class="n">2</span><span>Nia will attend one conference and return home Sunday: She is taking a three-day <button class="choice-gap" data-choice-gap data-answer="trip" data-hint="Trip is a countable occasion when someone goes somewhere." data-fix="She is taking a three-day trip to Denver." data-placeholder="choose">choose</button> to Denver.</span></div>
+    <div class="q"><span class="n">3</span><span>The speaker focuses on the six hours spent moving between cities: The train <button class="choice-gap" data-choice-gap data-answer="journey" data-hint="Journey can focus on movement or experience from one place to another." data-fix="The train journey took six hours." data-placeholder="choose">choose</button> took six hours.</span></div>
+    <div class="q"><span class="n">4</span><span>Nia has one suitcase and one small bag: Her <button class="choice-gap" data-choice-gap data-answer="luggage" data-hint="Luggage is an uncountable group word for bags and suitcases." data-fix="Her luggage is light." data-placeholder="choose">choose</button> is light.</span></div>
+    <div class="q"><span class="n">5</span><span>Route 6 is a city bus, and Nia waits beside the street: She is at the bus <button class="choice-gap" data-choice-gap data-answer="stop" data-hint="A local bus picks passengers up at a bus stop." data-fix="She is at the bus stop on Pine Street." data-placeholder="choose">choose</button> on Pine Street.</span></div>
+    <div class="q"><span class="n">6</span><span>The station board says the intercity train leaves beside track 4: The train leaves from <button class="choice-gap" data-choice-gap data-answer="platform" data-hint="A numbered platform is the station area beside a train." data-fix="The train leaves from platform 4." data-placeholder="choose">choose</button> 4.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the journey from action chunks</h2>
+  <div class="lead-rule"></div>
+  <p>Store the verb with its partner. The verb tells you what the traveler does, while the noun or particle completes the travel action.</p>
+  <table>
+    <thead><tr><th>before departure</th><th>moving</th><th>problems and changes</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">book a ticket · pack a suitcase · check in for a flight</span></td><td><span class="ex">take a bus · catch a train · board the plane</span></td><td><span class="ex">miss the bus · be delayed · be canceled</span></td></tr>
+      <tr><td><span class="ex">check a bag · go through security · find the gate</span></td><td><span class="ex">depart from · arrive at/in · get to</span></td><td><span class="ex">change trains · miss a connection · take a later flight</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Take a train</span> presents the train as your transportation. <span class="ex">Catch the 7:15 train</span> presents reaching and boarding that scheduled train in time. <span class="ex">Miss the 7:15 train</span> means you did not catch it. A service <span class="ex">leaves or departs at 7:15</span> and <span class="ex">arrives at 9:00</span>.</p>
+  <p>Use <span class="ex">arrive in</span> with a city or country and <span class="ex">arrive at</span> with a specific place: <span class="ex">arrive in Denver, arrive at the hotel</span>. <span class="ex">Get to</span> works with most destinations: <span class="ex">get to Denver, get to the hotel</span>. Say <span class="ex">get home</span>, without <span class="ex">to</span>.</p>
+  <p class="note-line">An airport path is useful, but it is not universal. A traveler may check in online, check a bag at the airport, go through security, find the gate, and board. The exact steps depend on the airport, airline, luggage, and trip.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose catch, miss, check in, board, arrive in, and arrive at from the schedule and place context.">
+    <h3>Drill 3: complete the scheduled journey</h3>
+    <div class="choice-bank" aria-label="Journey action choices"><button class="choice-option" data-choice-option="catch">catch</button><button class="choice-option" data-choice-option="miss">miss</button><button class="choice-option" data-choice-option="check in">check in</button><button class="choice-option" data-choice-option="board">board</button><button class="choice-option" data-choice-option="arrive in">arrive in</button><button class="choice-option" data-choice-option="arrive at">arrive at</button></div>
+    <div class="q"><span class="n">1</span><span>Nia is at the stop before the 6:40 bus leaves, so she can <button class="choice-gap" data-choice-gap data-answer="catch" data-hint="Catch a scheduled service means reach and board it in time." data-fix="Nia can catch the 6:40 bus." data-placeholder="choose">choose</button> the 6:40 bus.</span></div>
+    <div class="q"><span class="n">2</span><span>If Omar reaches the station after the 7:15 train leaves, he will <button class="choice-gap" data-choice-gap data-answer="miss" data-hint="Miss means fail to catch the scheduled service." data-fix="Omar will miss the 7:15 train." data-placeholder="choose">choose</button> the 7:15 train.</span></div>
+    <div class="q"><span class="n">3</span><span>Nia opens the airline app before going to the airport to confirm her flight and receive a boarding pass: She can <button class="choice-gap" data-choice-gap data-answer="check in" data-hint="Check in for a flight confirms the traveler and can provide a boarding pass." data-fix="She can check in online before leaving home." data-placeholder="choose">choose</button> online before leaving home.</span></div>
+    <div class="q"><span class="n">4</span><span>At Gate 18, the airline invites passengers to enter the plane: They can <button class="choice-gap" data-choice-gap data-answer="board" data-hint="Board means enter a plane, train, ship, or bus for a trip." data-fix="They can board the plane at Gate 18." data-placeholder="choose">choose</button> the plane.</span></div>
+    <div class="q"><span class="n">5</span><span>Denver is the destination city, so the message says the passengers will <button class="choice-gap" data-choice-gap data-answer="arrive in" data-hint="Use arrive in with a city or country." data-fix="The passengers will arrive in Denver at 11:10." data-placeholder="choose">choose</button> Denver at 11:10.</span></div>
+    <div class="q"><span class="n">6</span><span>The conference hotel is one specific place, so the message says Nia will <button class="choice-gap" data-choice-gap data-answer="arrive at" data-hint="Use arrive at with a specific place such as a hotel or station." data-fix="Nia will arrive at the hotel before noon." data-placeholder="choose">choose</button> the hotel before noon.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
 
   <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li><span class="ex">by</span> + transport has no article: <span class="ex">by bus</span>, not <span class="ex">by a bus</span>. But with verbs like <span class="ex">take</span>, <span class="ex">catch</span>, and <span class="ex">miss</span>, you need one: <span class="ex">take a taxi, catch the 7:15 train, miss the bus</span>.</li>
-      <li>Big transport takes <span class="ex">get on / get off</span>: <span class="ex">get on the bus, get off the train</span>. Cars and taxis take <span class="ex">get in / get out of</span>: <span class="ex">get in the car, get out of the taxi</span>.</li>
-      <li><span class="ex">trip</span>, <span class="ex">travel</span>, <span class="ex">journey</span>: a <span class="ex">trip</span> is one visit, there and back (<span class="ex">a business trip, a trip to Rome</span>). <span class="ex">travel</span> is the activity in general (<span class="ex">I love travel</span>, not <span class="ex">a travel</span>). A <span class="ex">journey</span> is the time you spend moving (<span class="ex">a long train journey</span>). Keep it simple: for most stories, say <span class="ex">trip</span>.</li>
-    </ul>
+    <h3>Sound natural: hear the content words in fast travel messages</h3>
+    <p>Travel messages make destinations, numbers, and changes strong: <span class="ex">Flight two eighty-four to <strong>DEN</strong>ver is de<strong>LAYED</strong>.</span> Small words such as <span class="ex">to</span> and <span class="ex">at</span> are often lighter. Listen for the strong information instead of trying to catch every word.</p>
+    <p>Keep the consonant group at the start of <span class="ex">flight /flaɪt/</span>. Stress the first syllable in <span class="ex"><strong>AIR</strong>port</span> and <span class="ex"><strong>LUG</strong>gage</span>, but the second syllable in <span class="ex">se<strong>CUR</strong>ity, ar<strong>RIV</strong>al</span>, and <span class="ex">de<strong>PAR</strong>ture</span>.</p>
+    <p>Teen numbers usually stress the final part, while tens stress the first: <span class="ex">gate eigh<strong>TEEN</strong></span>, but <span class="ex"><strong>EIGHT</strong>y minutes</span>. Ask for confirmation when a number matters: <span class="ex">Did you say gate eighteen?</span></p>
+    <p>In connected U.S. speech, <span class="ex">get on</span> links as one group, and <span class="ex">get out of</span> often sounds like /ɡɛt ˈaʊɾəv/. Keep the standard words and spelling even when the middle consonant is light.</p>
   </div>
 
-  <h2>Travel verbs come in chunks</h2>
+  <section data-lesson-extension="Tutor-read destination, departure time, platform, gate change, delay, and replacement-service listening check">
+    <h2>Listen for the information that changes the trip</h2>
+    <div class="lead-rule"></div>
+    <p class="note-line"><b>Tutor-read listening:</b> Keep the transcript closed. Read each message once naturally and once more after the learner chooses. Keep function words light, but do not exaggerate the answer word.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a destination, departure time, platform, gate change, delay, and replacement service.">
+      <h3>Six travel-message decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Denver" data-hint="Listen for the city after to in the flight message." data-fix="Flight 284 is going to Denver."><p class="quiz-question">1. What is the flight’s destination?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Denver">Denver</button><button class="quiz-option" data-quiz-option="Dallas">Dallas</button><button class="quiz-option" data-quiz-option="Detroit">Detroit</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="7:15" data-hint="Listen for the time after leaves at." data-fix="The express bus leaves at 7:15."><p class="quiz-question">2. What time does the express bus leave?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="7:15">7:15</button><button class="quiz-option" data-quiz-option="7:50">7:50</button><button class="quiz-option" data-quiz-option="8:15">8:15</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="platform 4" data-hint="Listen for the number after platform." data-fix="The train to Chicago leaves from platform 4."><p class="quiz-question">3. Where does the Chicago train leave from?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="platform 4">platform 4</button><button class="quiz-option" data-quiz-option="platform 14">platform 14</button><button class="quiz-option" data-quiz-option="gate 4">gate 4</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The gate changed from 16 to 18." data-hint="Listen for both the old gate and the new gate." data-fix="The gate changed from 16 to 18."><p class="quiz-question">4. What changed in the fourth message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The gate changed from 16 to 18.">The gate changed from 16 to 18.</button><button class="quiz-option" data-quiz-option="The flight changed from 18 to 16.">The flight changed from 18 to 16.</button><button class="quiz-option" data-quiz-option="The departure time changed to 6:18.">The departure time changed to 6:18.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The flight will leave 45 minutes late." data-hint="Delayed by 45 minutes means departure is 45 minutes later than scheduled." data-fix="The flight will leave 45 minutes late."><p class="quiz-question">5. What does the delay mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The flight will leave 45 minutes late.">The flight will leave 45 minutes late.</button><button class="quiz-option" data-quiz-option="The flight will arrive 45 minutes early.">The flight will arrive 45 minutes early.</button><button class="quiz-option" data-quiz-option="Boarding begins at gate 45.">Boarding begins at gate 45.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Take Route 6 from stop B." data-hint="The first bus is canceled, so listen for the replacement route and stop." data-fix="Take Route 6 from stop B."><p class="quiz-question">6. What should the passenger do after the cancellation?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Take Route 6 from stop B.">Take Route 6 from stop B.</button><button class="quiz-option" data-quiz-option="Wait for Route 8 at stop C.">Wait for Route 8 at stop C.</button><button class="quiz-option" data-quiz-option="Walk to platform 6.">Walk to platform 6.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">Flight two eighty-four to Denver is now boarding.</span> Evidence target: destination after <span class="ex">to</span>.</li>
+        <li><span class="ex">The express bus leaves at seven fifteen, not seven fifty.</span> Evidence target: contrast between two similar times.</li>
+        <li><span class="ex">The train to Chicago will depart from platform four.</span> Evidence target: transport location and number.</li>
+        <li><span class="ex">Attention, please. Flight 284 will now board at gate eighteen, not gate sixteen.</span> Evidence target: changed gate and teen-number stress.</li>
+        <li><span class="ex">Your flight is delayed by forty-five minutes.</span> Evidence target: later departure, not early arrival or gate number.</li>
+        <li><span class="ex">Route 8 is canceled. Please take Route 6 from stop B.</span> Evidence target: replacement service and departure point.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read the fictional trip update</h2>
   <div class="lead-rule"></div>
-  <p>Learn the verb and its partner together, as one chunk: <span class="ex"><strong>catch</strong> a train</span> (arrive in time for it), <span class="ex"><strong>miss</strong> a train</span> (arrive too late), <span class="ex"><strong>take</strong> a taxi</span>, <span class="ex"><strong>book</strong> a flight</span> or <span class="ex">a hotel</span>, <span class="ex"><strong>check in</strong></span>, <span class="ex"><strong>pack</strong> a suitcase</span>, <span class="ex"><strong>get on / get off</strong> the bus</span>, <span class="ex"><strong>get in / get out of</strong> a car</span>.</p>
-  <p>At the airport or the station, the sequence is always the same: <span class="ex">check in</span> → <span class="ex">go through security</span> → <span class="ex">find your gate</span> → <span class="ex">board</span>. Say the four steps aloud, in order, before you start the drill.</p>
-
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 · choose the travel chunk</h3>
-    <p class="choice-hint">Read the cue in parentheses first. Each chunk fits exactly one sentence.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="catch">catch</button>
-      <button class="choice-option" data-choice-option="miss">miss</button>
-      <button class="choice-option" data-choice-option="take">take</button>
-      <button class="choice-option" data-choice-option="book">book</button>
-      <button class="choice-option" data-choice-option="check">check</button>
-      <button class="choice-option" data-choice-option="pack">pack</button>
-      <button class="choice-option" data-choice-option="get on">get on</button>
-      <button class="choice-option" data-choice-option="get off">get off</button>
+  <div class="thinking-card">
+    <h3>Nia’s message at 8:50 Friday morning</h3>
+    <p><span class="ex">I checked in online last night, so I only needed to go through security this morning. My flight to Denver was scheduled to leave at 9:10 from Gate 16. It is delayed by 45 minutes, and the gate has changed to 18. Boarding now begins at 9:25. I sent the hotel a message because I will arrive later than planned. I still have enough time to reach the 1:00 conference session.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the completed step, original schedule, two changes, and effect on Nia’s plan.">
+    <h3>Reading check: use only Nia’s update</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="She checked in online the night before." data-hint="The first sentence states when and how she completed check-in." data-fix="She checked in online the night before."><p class="quiz-question">1. Which step did Nia complete before Friday morning?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She checked in online the night before.">She checked in online the night before.</button><button class="quiz-option" data-quiz-option="She went through security the night before.">She went through security the night before.</button><button class="quiz-option" data-quiz-option="She boarded at Gate 18 the night before.">She boarded at Gate 18 the night before.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="9:10 from Gate 16" data-hint="Look for the original scheduled time and gate before the changes." data-fix="The original departure was 9:10 from Gate 16."><p class="quiz-question">2. What was the original departure information?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="9:10 from Gate 16">9:10 from Gate 16</button><button class="quiz-option" data-quiz-option="9:25 from Gate 18">9:25 from Gate 18</button><button class="quiz-option" data-quiz-option="1:00 from Gate 16">1:00 from Gate 16</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The flight is 45 minutes late, and the gate is now 18." data-hint="The message reports one time change and one location change." data-fix="The flight is 45 minutes late, and the gate is now 18."><p class="quiz-question">3. Which two details changed?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The flight is 45 minutes late, and the gate is now 18.">The flight is 45 minutes late, and the gate is now 18.</button><button class="quiz-option" data-quiz-option="The destination is different, and the flight is early.">The destination is different, and the flight is early.</button><button class="quiz-option" data-quiz-option="The conference is canceled, and the hotel changed.">The conference is canceled, and the hotel changed.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="She expects to reach it on time." data-hint="The final sentence says she still has enough time." data-fix="She expects to reach the 1:00 session on time."><p class="quiz-question">4. What does Nia expect about the 1:00 conference session?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She expects to reach it on time.">She expects to reach it on time.</button><button class="quiz-option" data-quiz-option="She has already missed it.">She has already missed it.</button><button class="quiz-option" data-quiz-option="She expects it to be canceled.">She expects it to be canceled.</button></div></div>
     </div>
-    <div class="q"><span class="n">1</span><span>Hurry up! We can still <button class="choice-gap" data-choice-gap data-answer="catch" data-placeholder="choose">choose</button> the 7:15 train. &nbsp;<span class="contraction">(= arrive in time for it)</span></span></div>
-    <div class="q"><span class="n">2</span><span>If we don’t leave now, we’ll <button class="choice-gap" data-choice-gap data-answer="miss" data-placeholder="choose">choose</button> our flight. &nbsp;<span class="contraction">(= arrive too late for it)</span></span></div>
-    <div class="q"><span class="n">3</span><span>It’s late. Let’s <button class="choice-gap" data-choice-gap data-answer="take" data-placeholder="choose">choose</button> a taxi home. &nbsp;<span class="contraction">(= ride in it)</span></span></div>
-    <div class="q"><span class="n">4</span><span>I want to <button class="choice-gap" data-choice-gap data-answer="book" data-placeholder="choose">choose</button> a flight to Denver for August. &nbsp;<span class="contraction">(= reserve it online)</span></span></div>
-    <div class="q"><span class="n">5</span><span>We can <button class="choice-gap" data-choice-gap data-answer="check" data-placeholder="choose">choose</button> in online 24 hours before the flight. &nbsp;<span class="contraction">(the first airport step)</span></span></div>
-    <div class="q"><span class="n">6</span><span>I need to <button class="choice-gap" data-choice-gap data-answer="pack" data-placeholder="choose">choose</button> my suitcase tonight. &nbsp;<span class="contraction">(= put your clothes inside)</span></span></div>
-    <div class="q"><span class="n">7</span><span>It’s cold out here. Let’s <button class="choice-gap" data-choice-gap data-answer="get on" data-placeholder="choose">choose</button> the bus and find two seats. &nbsp;<span class="contraction">(= enter it)</span></span></div>
-    <div class="q"><span class="n">8</span><span>This is our stop. We need to <button class="choice-gap" data-choice-gap data-answer="get off" data-placeholder="choose">choose</button> the bus now. &nbsp;<span class="contraction">(= leave it)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2 · type the missing word</h3>
-    <p>One word per gap. Read the cue in parentheses, then say the full sentence aloud.</p>
-    <div class="q"><span class="n">1</span><span>I was late this morning, so I <input class="answer-input" data-answer="missed" data-hint="You arrived too late for it. Use the past simple." data-fix="missed" /> the bus. &nbsp;<span class="contraction">(opposite of caught · past simple)</span></span></div>
-    <div class="q"><span class="n">2</span><span>We should <input class="answer-input" data-answer="book" data-hint="Reserve it online, like a hotel room." data-fix="book" /> a flight soon; July tickets are getting expensive. &nbsp;<span class="contraction">(= reserve)</span></span></div>
-    <div class="q"><span class="n">3</span><span>At the airport, first you <input class="answer-input" data-answer="check" data-hint="It is the first airport step, before security." data-fix="check" /> in at the desk or online. &nbsp;<span class="contraction">(the first airport step)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Don’t forget to <input class="answer-input" data-answer="pack" data-hint="Put your clothes inside it." data-fix="pack" /> your suitcase tonight. &nbsp;<span class="contraction">(clothes go inside)</span></span></div>
-    <div class="q"><span class="n">5</span><span>You <input class="answer-input" data-answer="get" data-hint="It pairs with on: the chunk for entering big transport." data-fix="get" /> on the bus at the front and get off at the back. &nbsp;<span class="contraction">(enter big transport)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Last night we <input class="answer-input" data-answer="took" data-hint="Use the past simple of take." data-fix="took" /> a taxi from the station to the hotel. &nbsp;<span class="contraction">(take · past simple)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Build the meaning, then the sentence</h2>
+  <h2>Build two useful travel messages</h2>
   <div class="lead-rule"></div>
-
-  <div class="tile-game" data-tile-builder data-answer="she took a taxi to the airport">
-    <h3>Drill 3 · build the trip report</h3>
-    <p class="tile-target">She had a big suitcase and an early flight. Build the past simple sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="airport">airport</button>
-      <button class="tile" data-build-tile="she">She</button>
-      <button class="tile" data-build-tile="taxi">taxi</button>
-      <button class="tile" data-build-tile="took">took</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="a">a</button>
-      <button class="tile" data-build-tile="to">to</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="nia is on the airport bus now" data-hint="Use on the airport bus for Nia’s location on one specific bus." data-fix="Nia is on the airport bus now." data-success-message="Correct. On the airport bus locates Nia on one specific vehicle.">
+    <h3>Drill 4: report a specific vehicle location</h3><p class="tile-target">A caller asks where Nia is at this moment. Build the complete answer.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="airport">airport</button><button class="tile" data-build-tile="nia">Nia</button><button class="tile" data-build-tile="now">now</button><button class="tile" data-build-tile="on">on</button><button class="tile" data-build-tile="bus">bus</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="is">is</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="we are going to book a flight">
-    <h3>Drill 4 · build the plan</h3>
-    <p class="tile-target">You and a friend have a summer plan. Build the sentence with <span class="ex">be going to</span>, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="flight">flight</button>
-      <button class="tile" data-build-tile="going">going</button>
-      <button class="tile" data-build-tile="we">We</button>
-      <button class="tile" data-build-tile="book">book</button>
-      <button class="tile" data-build-tile="are">are</button>
-      <button class="tile" data-build-tile="a">a</button>
-      <button class="tile" data-build-tile="to">to</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="the flight is delayed by forty-five minutes" data-hint="Use is delayed by plus the amount of delay." data-fix="The flight is delayed by forty-five minutes." data-success-message="Correct. Delayed by forty-five minutes reports the amount of schedule change.">
+    <h3>Drill 5: report a delay</h3><p class="tile-target">The new departure will be 45 minutes later than scheduled. Build the update.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="minutes">minutes</button><button class="tile" data-build-tile="flight">flight</button><button class="tile" data-build-tile="by">by</button><button class="tile" data-build-tile="forty-five">forty-five</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="delayed">delayed</button><button class="tile" data-build-tile="is">is</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice and repair errors</h2>
+  <h2>Notice and repair three different errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="with" data-fix="I go to work by bus." data-why="Use by + transport with no article: by bus, by train, by car.">
-    <h3>Drill 5 · how do you travel?</h3>
-    <p>Tap the word that is wrong. Think about the little word that goes with transport.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="i">I</button>
-      <button class="error-choice" data-error-choice="go">go</button>
-      <button class="error-choice" data-error-choice="to">to</button>
-      <button class="error-choice" data-error-choice="work">work</button>
-      <button class="error-choice" data-error-choice="with">with</button>
-      <button class="error-choice" data-error-choice="bus">bus.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="micro-drill" data-spot-error data-answer="by the bus" data-hint="The sentence names a general mode, so use by plus transport with no article." data-fix="Nia usually travels by bus." data-why="By bus names the general mode; by the bus would normally mean beside the bus." data-success-message="Correct. The general travel mode is by bus, with no article.">
+    <h3>Drill 6: repair the mode</h3><p>The sentence describes Nia’s usual method, not her position beside a specific vehicle: <span class="ex">Nia usually travels by the bus.</span> Tap the phrase that creates the wrong viewpoint.</p><div class="spot-options"><button class="error-choice" data-error-choice="nia">Nia</button><button class="error-choice" data-error-choice="usually">usually</button><button class="error-choice" data-error-choice="travels">travels</button><button class="error-choice" data-error-choice="by the bus">by the bus</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="off" data-fix="We got out of the taxi at the hotel." data-why="A taxi is a car you sit inside, so use get in and get out of: we got out of the taxi.">
-    <h3>Drill 6 · big transport or car?</h3>
-    <p>Tap the word that is wrong. A taxi is small; you sit inside it.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="we">We</button>
-      <button class="error-choice" data-error-choice="got">got</button>
-      <button class="error-choice" data-error-choice="off">off</button>
-      <button class="error-choice" data-error-choice="the">the</button>
-      <button class="error-choice" data-error-choice="taxi">taxi</button>
-      <button class="error-choice" data-error-choice="at">at</button>
-      <button class="error-choice" data-error-choice="the2">the</button>
-      <button class="error-choice" data-error-choice="hotel">hotel.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="micro-drill" data-spot-error data-answer="off" data-hint="A taxi conventionally uses get out of, not get off." data-fix="Omar got out of the taxi at the hotel." data-why="Use get out of for leaving a car or taxi; use get off for a bus, train, plane, bike, or motorcycle." data-success-message="Correct. A traveler gets out of a taxi.">
+    <h3>Drill 7: repair the vehicle movement</h3><p>Omar left a taxi when it reached the hotel: <span class="ex">Omar got off the taxi at the hotel.</span> Tap the particle that belongs to a different vehicle pattern.</p><div class="spot-options"><button class="error-choice" data-error-choice="omar">Omar</button><button class="error-choice" data-error-choice="got">got</button><button class="error-choice" data-error-choice="off">off</button><button class="error-choice" data-error-choice="taxi">the taxi</button><button class="error-choice" data-error-choice="hotel">at the hotel</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="a luggage" data-hint="Luggage is uncountable; name one suitcase or one piece of luggage." data-fix="Nia has one piece of luggage." data-why="Do not use a directly before the uncountable noun luggage; count a bag, a suitcase, or a piece of luggage." data-success-message="Correct. One piece of luggage is a countable expression.">
+    <h3>Drill 8: repair the uncountable travel noun</h3><p>The message counts one item in Nia’s hands: <span class="ex">Nia has a luggage.</span> Tap the phrase that cannot count the uncountable noun directly.</p><div class="spot-options"><button class="error-choice" data-error-choice="nia">Nia</button><button class="error-choice" data-error-choice="has">has</button><button class="error-choice" data-error-choice="a luggage">a luggage</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 · say the travel chunk, then check</h3>
-    <p>Say the full chunk or sentence aloud first. Reveal only after you answer.</p>
+    <h3>Oral transforms: preserve the travel viewpoint</h3>
+    <p>Say each complete sentence before revealing it. Use the exact meaning in the cue.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> a taxi &nbsp;→&nbsp; ride in it (verb + a taxi)</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>take a taxi</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> a flight &nbsp;→&nbsp; reserve it online (verb + a flight)</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>book a flight</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> the bus &nbsp;→&nbsp; enter it</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>get on the bus</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> the car &nbsp;→&nbsp; leave it</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>get out of the car</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> a suitcase &nbsp;→&nbsp; fill it with clothes (verb + a suitcase)</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>pack a suitcase</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> We catch the 7:15 train. &nbsp;→&nbsp; yesterday (past simple)</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>We caught the 7:15 train.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> Nia’s usual travel mode is the bus. Use <span class="ex">by</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Nia usually travels by bus.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> Nia is inside one specific bus now. Use the conventional vehicle location.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Nia is on the bus now.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> Omar reached the stop after Route 8 left. Use <span class="ex">miss</span> in the past.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Omar missed the Route 8 bus.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Nia reached the destination city at 11:10. Use <span class="ex">arrive</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Nia arrived in Denver at 11:10.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> Nia reached one specific hotel before noon. Use <span class="ex">arrive</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Nia arrived at the hotel before noon.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> Nia has one suitcase. Report the item with <span class="ex">luggage</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Nia has one piece of luggage.</strong></p></div>
     </div>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Communicate: brief a fictional traveler</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real home, location, route, schedule, workplace, school, travel plans, documents, finances, health, family, safety concerns, or booking details. Use the Northstar trip, invent a neutral journey, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Prepare the route:</b> Choose a fictional origin, destination, traveler, mode, departure point, scheduled time, and one piece of luggage. Add one transfer at a station or airport.</div>
+  <div class="prompt-card"><b>Final production: give a 45–60 second fictional travel briefing.</b> State the general mode, location on or in one specific vehicle, departure and arrival information, one station or airport step, and one delay, cancellation, missed service, or changed gate. Explain the traveler’s response.</div>
+  <div class="prompt-card"><b>Clarify important information:</b> The listener asks one confirmation question about a time, platform, gate, or route. Repeat the key number with clear contrastive stress and reformulate one instruction if needed.</div>
+
+  <h2>Final check</h2>
+  <div class="lead-rule"></div>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled travel mode, specific-vehicle movement, city arrival, and a delayed departure response.">
+    <h3>Four decisions with one defensible target</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Nia usually travels by train." data-hint="The sentence names a general mode, so use by train with no article." data-fix="Nia usually travels by train."><p class="quiz-question">1. Which sentence names Nia’s usual mode rather than her current location?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Nia usually travels by train.">Nia usually travels by train.</button><button class="quiz-option" data-quiz-option="Nia usually travels on the train.">Nia usually travels on the train.</button><button class="quiz-option" data-quiz-option="Nia usually travels by the train.">Nia usually travels by the train.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Omar got out of the taxi at the hotel." data-hint="Use get out of for leaving a taxi or car." data-fix="Omar got out of the taxi at the hotel."><p class="quiz-question">2. Omar left one specific taxi when it reached the hotel. Which sentence uses the conventional vehicle pattern?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Omar got out of the taxi at the hotel.">Omar got out of the taxi at the hotel.</button><button class="quiz-option" data-quiz-option="Omar got off the taxi at the hotel.">Omar got off the taxi at the hotel.</button><button class="quiz-option" data-quiz-option="Omar got out the taxi at the hotel.">Omar got out the taxi at the hotel.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The passengers will arrive in Denver at 11:10." data-hint="Use arrive in before a destination city." data-fix="The passengers will arrive in Denver at 11:10."><p class="quiz-question">3. Denver is the destination city. Which arrival message is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The passengers will arrive in Denver at 11:10.">The passengers will arrive in Denver at 11:10.</button><button class="quiz-option" data-quiz-option="The passengers will arrive at Denver at 11:10.">The passengers will arrive at Denver at 11:10.</button><button class="quiz-option" data-quiz-option="The passengers will arrive to Denver at 11:10.">The passengers will arrive to Denver at 11:10.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Check the new departure time and gate." data-hint="A delay can change the time, and the gate may also change; verify both current details." data-fix="Check the new departure time and gate."><p class="quiz-question">4. An airport screen says Nia’s flight is delayed. What is the most useful next action from these choices?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Check the new departure time and gate.">Check the new departure time and gate.</button><button class="quiz-option" data-quiz-option="Assume the flight is canceled and leave the airport.">Assume the flight is canceled and leave the airport.</button><button class="quiz-option" data-quiz-option="Go directly to baggage claim before the flight.">Go directly to baggage claim before the flight.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect and retrieve</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A trip plan</h3>
-    <p><span class="ex">“Hi Marco! Here’s the plan for Friday. Our flight to Boston leaves at 9:40, so let’s take a taxi to the airport at 6:30. We check in at 7:00, go through security, and board at the gate at 9:10. In Boston we’ll take the metro to the hotel; it’s faster than the bus. Pack light, one small suitcase each!”</span></p>
+    <h3>Explain the decision path without looking back</h3>
+    <p>Am I naming the mode, locating someone in relation to a specific vehicle, or describing movement? Is this one countable trip, travel in general, or the journey between places? Which exact stop, station, platform, terminal, gate, time, destination, or change does the traveler need?</p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real trip plan.">
-    <h3>Read, then choose</h3>
-    <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="by taxi">
-        <p class="quiz-question">1. How are they going to the airport?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="by taxi">by taxi</button><button class="quiz-option" data-quiz-option="by metro">by metro</button><button class="quiz-option" data-quiz-option="by bus">by bus</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="9:10">
-        <p class="quiz-question">2. What time do they board the plane?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="9:40">9:40</button><button class="quiz-option" data-quiz-option="7:00">7:00</button><button class="quiz-option" data-quiz-option="9:10">9:10</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="by metro">
-        <p class="quiz-question">3. How are they getting to the hotel in Boston?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="by bus">by bus</button><button class="quiz-option" data-quiz-option="by metro">by metro</button><button class="quiz-option" data-quiz-option="by taxi">by taxi</button></div>
-      </div>
-    </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the viewpoint, travel noun, or schedule response that still feels slow.</p>
 
-  <h2>Use it in real life</h2>
-  <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your daily route:</b> Say how you get to work or school, how long it takes, and what you do when the weather is bad. <span class="ex">I go to work by metro. It takes about thirty minutes. When it rains, I take a taxi.</span></div>
-  <div class="prompt-card"><b>Your last trip:</b> Tell the story in the past simple: where, how, and one problem or surprise. <span class="ex">Last May I took a trip to the mountains. We went by bus, and the journey took five hours. We almost missed the bus home!</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Interview the teacher about travel, then report one answer. <span class="ex">How do you get to work? Do you ever travel by train? When was your last trip, and where did you go?</span></div>
-  <div class="prompt-card"><b>Dream trip:</b> Plan a future trip with <span class="ex">be going to</span>: the place, the transport, and two things you will do there. <span class="ex">Next year I’m going to visit Japan. I’m going to book the flights in January and travel between cities by train.</span></div>
-  <div class="prompt-card"><b>Compare two kinds of transport:</b> Choose two ways to travel in your city and compare them. Which one do you take, and why? <span class="ex">The metro is faster than the bus, but the bus goes everywhere. I usually take the metro because I hate traffic.</span></div>
-
-  <h2>Reflect</h2>
-  <div class="lead-rule"></div>
-  <div class="thinking-card">
-    <h3>Explain the system</h3>
-    <p>Complete this aloud: “To say how I travel in general, I use ______ + transport, with no article: <strong>by bus, by train</strong>. Walking is <strong>on</strong> ______. For a bus, a train, or a plane, I get on and get ______. For a car or a taxi, I get in and get ______ of.”</p>
-    <p>Then say one true sentence about how you get to work and one about your next trip.</p>
-  </div>
-
-  <div class="quiz" data-quiz data-success-message="Excellent. You can name everyday transport, say how you travel with by and on foot, and use travel chunks like catch a train, book a flight, check in, and get off the bus.">
-    <h3>Final quiz · choose the right word</h3>
-    <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="by">
-        <p class="quiz-question">1. I usually go to work ___ train.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="by">by</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">2. The office is only ten minutes away, so I go ___ foot.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="by">by</button><button class="quiz-option" data-quiz-option="in">in</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="miss">
-        <p class="quiz-question">3. Hurry, or we’ll ___ the last bus!</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="miss">miss</button><button class="quiz-option" data-quiz-option="catch">catch</button><button class="quiz-option" data-quiz-option="take">take</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="book">
-        <p class="quiz-question">4. I want to ___ a flight and a hotel for our trip in May.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="book">book</button><button class="quiz-option" data-quiz-option="pack">pack</button><button class="quiz-option" data-quiz-option="board">board</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="check in">
-        <p class="quiz-question">5. At the airport, first you ___, then you go through security.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="check in">check in</button><button class="quiz-option" data-quiz-option="board">board</button><button class="quiz-option" data-quiz-option="take off">take off</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="got off">
-        <p class="quiz-question">6. We ___ the bus at the last stop and walked to the beach.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="got off">got off</button><button class="quiz-option" data-quiz-option="got out of">got out of</button><button class="quiz-option" data-quiz-option="got on">got on</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="got out of">
-        <p class="quiz-question">7. She ___ the taxi in front of the hotel and paid the driver.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="got out of">got out of</button><button class="quiz-option" data-quiz-option="got off">got off</button><button class="quiz-option" data-quiz-option="got on">got on</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="trip">
-        <p class="quiz-question">8. You go somewhere, stay a few days, and come back. One word for this visit is a ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="trip">trip</button><button class="quiz-option" data-quiz-option="travel">travel</button><button class="quiz-option" data-quiz-option="journey">journey</button></div>
-      </div>
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day travel mode, vehicle movement, and delay-response retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a general mode, taxi movement, and the key response to a delayed flight.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day travel choices"><button class="choice-option" data-choice-option="by bus">by bus</button><button class="choice-option" data-choice-option="on the bus">on the bus</button><button class="choice-option" data-choice-option="out of">out of</button><button class="choice-option" data-choice-option="off">off</button><button class="choice-option" data-choice-option="departure time and gate">departure time and gate</button><button class="choice-option" data-choice-option="baggage claim and parking">baggage claim and parking</button></div>
+      <div class="q"><span class="n">1</span><span>The question asks for Nia’s usual travel mode: Nia usually travels <button class="choice-gap" data-choice-gap data-answer="by bus" data-hint="General mode uses by plus transport with no article." data-fix="Nia usually travels by bus." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>The taxi has reached the hotel, so Omar gets <button class="choice-gap" data-choice-gap data-answer="out of" data-hint="A traveler gets out of a taxi or car." data-fix="Omar gets out of the taxi at the hotel." data-placeholder="choose">choose</button> the taxi.</span></div>
+      <div class="q"><span class="n">3</span><span>The airport screen says the flight is delayed, so Nia checks the current <button class="choice-gap" data-choice-gap data-answer="departure time and gate" data-hint="A delay changes timing, and a gate can also change; verify the current departure details." data-fix="Nia checks the current departure time and gate." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+  </section>
 </main>
 </LessonPage>
-

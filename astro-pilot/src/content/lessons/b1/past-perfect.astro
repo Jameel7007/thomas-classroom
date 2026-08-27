@@ -1,19 +1,349 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Past perfect · B1 Grammar · Curriculum Map",
+  "title": "Past perfect · B1 Grammar",
   "slug": "past-perfect",
   "level": "B1",
   "topic": "Past perfect",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Past perfect.",
+  "status": "ready",
+  "description": "Look back from a past reference point, clarify earlier events and causes, and move between a main story and a flashback without overusing the form.",
   "sequence": 2,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a2/past-simple", "a2/past-continuous", "a2/present-perfect"],
+  "related": ["b1/present-perfect-continuous", "b1/reported-speech"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 56,
+    "revisionSummary": "Past reference time, flashback order, form, participles, optionality, aspect contrast, U.S. spoken form, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 2</p>
+  <h1>Past perfect: <em>look back from a past moment</em></h1>
+  <p class="standfirst">The past perfect does not simply mean “a very old action.” It asks the listener to stand at one past reference point and look farther back. Use it when that earlier layer helps the listener recover the order, cause, experience, or background of a past situation.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">past reference · earlier layer · narrative control</span>
+    <span class="tag">had left · hadn’t seen · Had you checked?</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Stand at one past moment and locate what happened earlier.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Build the form and connect it to a reference point.</span></div>
+    <div class="flow-step"><b>Contrast</b><span>Choose Past Simple, Past Perfect, or Past Perfect Continuous.</span></div>
+    <div class="flow-step"><b>Use</b><span>Reconstruct a fictional event and control its timeline.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can form positive, negative, yes-or-no, and information questions; distinguish a past event from an earlier layer; explain a cause, prior experience, completed result, or continuing state; choose when Past Simple is sufficient; use <span class="ex">already, just, never, yet, before</span>, and <span class="ex">by the time</span> accurately; contrast Past Perfect Simple with Past Perfect Continuous; hear common U.S. contractions and linking; and tell a clear story with one purposeful flashback.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a finished past event, an activity in progress at a past time, and the irregular participle gone.">
+    <h3>Three foundations for a second past layer</h3>
+    <p class="choice-hint">First recover Past Simple, Past Continuous, and an irregular past participle. Past Perfect will reuse the participle after <span class="ex">had</span>.</p>
+    <div class="choice-bank" aria-label="Past perfect foundation choices"><button class="choice-option" data-choice-option="called">called</button><button class="choice-option" data-choice-option="was checking">was checking</button><button class="choice-option" data-choice-option="gone">gone</button><button class="choice-option" data-choice-option="has called">has called</button><button class="choice-option" data-choice-option="checked tomorrow">checked tomorrow</button><button class="choice-option" data-choice-option="went">went</button></div>
+    <div class="q"><span class="n">1</span><span>The call happened and finished yesterday: Maya <button class="choice-gap" data-choice-gap data-answer="called" data-hint="Use Past Simple for one finished event at the stated finished time yesterday." data-fix="Maya called the venue yesterday.">choose</button> the venue yesterday.</span></div>
+    <div class="q"><span class="n">2</span><span>At 8:15 last night, the checking activity was in progress: Maya <button class="choice-gap" data-choice-gap data-answer="was checking" data-hint="Use Past Continuous for an activity in progress at the exact past reference point." data-fix="At 8:15 last night, Maya was checking the delivery list.">choose</button> the delivery list.</span></div>
+    <div class="q"><span class="n">3</span><span>After <span class="ex">had</span>, the verb <span class="ex">go</span> needs the participle <button class="choice-gap" data-choice-gap data-answer="gone" data-hint="Went is the Past Simple form; retrieve the third form used after have or had." data-fix="The three forms are go, went, gone, so Past Perfect uses had gone.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice a main past moment and an earlier layer</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Harbor forum debrief</h3>
+    <p><span class="ex">When Maya reached the venue at 8:15, the delivery had already arrived. Someone had put the boxes in the wrong room, so she called Leo. She opened the supply room, checked the receipt, and moved the boxes.</span></p>
+    <ul>
+      <li>Which event gives us the main past reference point?</li>
+      <li>Which two events happened before that point?</li>
+      <li>Which three actions move the main story forward in chronological order?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You located the 8:15 reference point, two earlier events, the had plus participle chain, and the chronological main story.">
+    <h3>Discovery check: reconstruct the two layers</h3>
+    <div class="choice-bank" aria-label="Past perfect discovery choices"><button class="choice-option" data-choice-option="Maya reached the venue at 8:15">Maya reached the venue at 8:15</button><button class="choice-option" data-choice-option="the delivery had arrived">the delivery had arrived</button><button class="choice-option" data-choice-option="someone had put the boxes in the wrong room">someone had put the boxes in the wrong room</button><button class="choice-option" data-choice-option="had + past participle">had + past participle</button><button class="choice-option" data-choice-option="opened, checked, and moved">opened, checked, and moved</button></div>
+    <div class="q"><span class="n">1</span><span>The point from which the speaker looks back is <button class="choice-gap" data-choice-gap data-answer="Maya reached the venue at 8:15" data-hint="Find the event with the exact time that anchors the listener inside the past." data-fix="Maya reached the venue at 8:15 is the main past reference point.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The earlier completed delivery event is <button class="choice-gap" data-choice-gap data-answer="the delivery had arrived" data-hint="Choose the event that was complete before Maya reached the venue." data-fix="The delivery had arrived before Maya reached the venue.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The earlier action that explains the location problem is <button class="choice-gap" data-choice-gap data-answer="someone had put the boxes in the wrong room" data-hint="Look for the action before 8:15 that caused Maya’s problem." data-fix="Someone had put the boxes in the wrong room, so Maya had a problem at 8:15.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Both earlier verb phrases use the pattern <button class="choice-gap" data-choice-gap data-answer="had + past participle" data-hint="Separate the auxiliary had from the participles arrived and put." data-fix="Had + past participle forms the Past Perfect.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The sequence that advances after the phone call is <button class="choice-gap" data-choice-gap data-answer="opened, checked, and moved" data-hint="Choose the Past Simple actions told in the order they happened." data-fix="Opened, checked, and moved advance the main past story chronologically.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: reference time, not “long ago”</h2>
+  <div class="lead-rule"></div>
+  <p>Past Perfect is a relative tense. It does not locate an event by itself. It places that event before a past reference point supplied by the sentence or the surrounding story.</p>
+  <div class="thinking-card">
+    <p><span class="ex">earlier layer: the delivery had arrived</span> → <span class="ex">past reference: Maya reached the venue</span> → <span class="ex">now: the speaker tells the story</span></p>
+  </div>
+  <p>The earlier situation may be a completed event, but it can also be a state, experience, or repeated result up to the past point. In <span class="ex">By 2024, she had known Leo for six years</span>, the relationship continued to the 2024 reference point. The central idea is <b>before a past reference</b>, not automatically “finished forever.”</p>
+
+  <table>
+    <thead><tr><th>job</th><th>form</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>positive</td><td><span class="ex">subject + had + past participle</span></td><td><span class="ex">They had checked the room.</span></td></tr>
+      <tr><td>negative</td><td><span class="ex">subject + had not + past participle</span></td><td><span class="ex">They hadn’t checked the sound.</span></td></tr>
+      <tr><td>yes-or-no question</td><td><span class="ex">Had + subject + past participle?</span></td><td><span class="ex">Had they tested it?</span></td></tr>
+      <tr><td>information question</td><td><span class="ex">question word + had + subject + past participle?</span></td><td><span class="ex">Why had the driver left?</span></td></tr>
+      <tr><td>short answer</td><td><span class="ex">Yes, subject had. / No, subject hadn’t.</span></td><td><span class="ex">Yes, they had.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Had</span> stays the same with every subject. The lexical verb uses a past participle, not a Past Simple form. Regular participles usually end in <span class="ex">-ed</span>; irregular participles must be learned as part of the verb family.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You built positive, negative, yes-or-no, information-question, and short-answer patterns with one unchanged auxiliary had.">
+    <h3>Form check: keep the earlier layer complete</h3>
+    <div class="choice-bank" aria-label="Past perfect form choices"><button class="choice-option" data-choice-option="had checked">had checked</button><button class="choice-option" data-choice-option="hadn’t noticed">hadn’t noticed</button><button class="choice-option" data-choice-option="Had the team tested">Had the team tested</button><button class="choice-option" data-choice-option="Why had the driver left">Why had the driver left</button><button class="choice-option" data-choice-option="they had">they had</button></div>
+    <div class="q"><span class="n">1</span><span>Before the doors opened at 9:00, Maya <button class="choice-gap" data-choice-gap data-answer="had checked" data-hint="Use had plus the regular participle checked for the earlier completed inspection." data-fix="Before the doors opened at 9:00, Maya had checked every box.">choose</button> every box.</span></div>
+    <div class="q"><span class="n">2</span><span>At 8:20, the team discovered a problem they <button class="choice-gap" data-choice-gap data-answer="hadn’t noticed" data-hint="Put not inside the auxiliary and keep the participle noticed after hadn’t." data-fix="At 8:20, the team discovered a problem they hadn’t noticed earlier.">choose</button> earlier.</span></div>
+    <div class="q"><span class="n">3</span><span>Ask whether testing happened before the 9:00 opening: <button class="choice-gap" data-choice-gap data-answer="Had the team tested" data-hint="Move Had before the subject the team, then use the participle tested." data-fix="Had the team tested the microphones before the doors opened?">choose</button> the microphones before the doors opened?</span></div>
+    <div class="q"><span class="n">4</span><span>Ask for the earlier reason for the driver’s departure: <button class="choice-gap" data-choice-gap data-answer="Why had the driver left" data-hint="Begin with Why, then had, the subject, and the participle left." data-fix="Why had the driver left before Maya called?">choose</button> before Maya called?</span></div>
+    <div class="q"><span class="n">5</span><span>The coordinator asks, “Had the boxes arrived before 8:15?” Give the positive short answer: “Yes, <button class="choice-gap" data-choice-gap data-answer="they had" data-hint="A short answer repeats the subject and had, not the lexical verb." data-fix="Yes, they had.">choose</button>.”</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Past participles carry the lexical meaning</h2>
+  <div class="lead-rule"></div>
+  <p>The auxiliary <span class="ex">had</span> creates the earlier viewpoint. The participle tells us what happened. Learn irregular verbs in useful families: <span class="ex">go, went, gone</span>; <span class="ex">write, wrote, written</span>; <span class="ex">bring, brought, brought</span>; <span class="ex">forget, forgot, forgotten</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected gone, written, brought, and forgotten as the participles required after had.">
+    <h3>Participle check: choose the third form</h3>
+    <div class="choice-bank" aria-label="Irregular past participle choices"><button class="choice-option" data-choice-option="gone">gone</button><button class="choice-option" data-choice-option="written">written</button><button class="choice-option" data-choice-option="brought">brought</button><button class="choice-option" data-choice-option="forgotten">forgotten</button><button class="choice-option" data-choice-option="went">went</button><button class="choice-option" data-choice-option="wrote">wrote</button></div>
+    <div class="q"><span class="n">1</span><span>When Maya called at 8:20, the driver had already <button class="choice-gap" data-choice-gap data-answer="gone" data-hint="After had, use the participle gone, not the Past Simple form went." data-fix="When Maya called at 8:20, the driver had already gone.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Before the meeting, Leo had <button class="choice-gap" data-choice-gap data-answer="written" data-hint="The participle in the family write, wrote, written follows had." data-fix="Before the meeting, Leo had written a new delivery note.">choose</button> a new delivery note.</span></div>
+    <div class="q"><span class="n">3</span><span>The team had <button class="choice-gap" data-choice-gap data-answer="brought" data-hint="Bring has the same form, brought, in Past Simple and as a past participle." data-fix="The team had brought two spare cables before the sound check began.">choose</button> two spare cables before the sound check began.</span></div>
+    <div class="q"><span class="n">4</span><span>Maya could not open the file at 8:30 because she had <button class="choice-gap" data-choice-gap data-answer="forgotten" data-hint="After had, use forgotten, the participle of forget." data-fix="Maya could not open the file because she had forgotten the password.">choose</button> the password.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Five useful meanings before a past reference</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>speaker’s purpose</th><th>earlier situation</th><th>past reference</th></tr></thead>
+    <tbody>
+      <tr><td>completed event</td><td><span class="ex">The delivery had arrived.</span></td><td>Maya reached the venue.</td></tr>
+      <tr><td>cause or explanation</td><td><span class="ex">She had forgotten the code.</span></td><td>She could not enter.</td></tr>
+      <tr><td>experience before a milestone</td><td><span class="ex">She had never led a forum.</span></td><td>She accepted this role.</td></tr>
+      <tr><td>state continuing to a past point</td><td><span class="ex">She had known Leo for six years.</span></td><td>They started this project.</td></tr>
+      <tr><td>completed number before a deadline</td><td><span class="ex">They had tested three microphones.</span></td><td>The doors opened.</td></tr>
+    </tbody>
+  </table>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched completed event, earlier cause, prior experience, continuing state, and completed quantity to a stated past reference point.">
+    <h3>Meaning check: identify the earlier job</h3>
+    <div class="choice-bank" aria-label="Past perfect meaning choices"><button class="choice-option" data-choice-option="had already arrived">had already arrived</button><button class="choice-option" data-choice-option="had forgotten">had forgotten</button><button class="choice-option" data-choice-option="had never led">had never led</button><button class="choice-option" data-choice-option="had known">had known</button><button class="choice-option" data-choice-option="had tested three">had tested three</button></div>
+    <div class="q"><span class="n">1</span><span>Maya reached the venue at 8:15, after the delivery <button class="choice-gap" data-choice-gap data-answer="had already arrived" data-hint="Choose the completed delivery event before the 8:15 arrival." data-fix="The delivery had already arrived before Maya reached the venue at 8:15.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>At 8:30, Maya could not open the schedule because she <button class="choice-gap" data-choice-gap data-answer="had forgotten" data-hint="Choose the earlier event that explains the later inability to open the schedule." data-fix="Maya could not open the schedule because she had forgotten the password.">choose</button> the password.</span></div>
+    <div class="q"><span class="n">3</span><span>Before Maya accepted the 2025 coordinator role, she <button class="choice-gap" data-choice-gap data-answer="had never led" data-hint="Choose the form that reports no prior leadership experience before the stated milestone." data-fix="Before Maya accepted the 2025 role, she had never led a forum.">choose</button> a forum.</span></div>
+    <div class="q"><span class="n">4</span><span>When the project began in 2024, Maya <button class="choice-gap" data-choice-gap data-answer="had known" data-hint="Know is a state that extended for six years up to the 2024 past reference point." data-fix="When the project began in 2024, Maya had known Leo for six years.">choose</button> Leo for six years.</span></div>
+    <div class="q"><span class="n">5</span><span>When the doors opened at 9:00, the technicians <button class="choice-gap" data-choice-gap data-answer="had tested three" data-hint="The number three presents a completed quantity before the opening deadline." data-fix="When the doors opened at 9:00, the technicians had tested three microphones.">choose</button> microphones.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Past Simple moves the story; Past Perfect looks back</h2>
+  <div class="lead-rule"></div>
+  <p>Use Past Simple for the main story and for events told in their natural order: <span class="ex">Maya entered, checked the list, and called Leo.</span> Use Past Perfect when you interrupt that main line to look back: <span class="ex">She called Leo because someone had moved the boxes.</span></p>
+  <p>Past Perfect is not automatically required for the first event in real time. If <span class="ex">before</span> or <span class="ex">after</span> already makes the order clear, both tenses may be possible: <span class="ex">After Maya checked the list, she called Leo</span> and <span class="ex">After Maya had checked the list, she called Leo</span>. The second version more deliberately views the check as complete from the later call. Choose the tense that serves the viewpoint; do not pretend one grammatical alternative is an error.</p>
+  <p>Once a flashback is clear, a writer may return to Past Simple inside a longer earlier sequence. At B1, the safest narrative strategy is simple: establish the main past, mark the first necessary flashback with Past Perfect, and return to Past Simple when the main story resumes.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used Past Simple for a chronological main line and Past Perfect for a reversed order, earlier cause, deliberate completed viewpoint, and clear return from a flashback.">
+    <h3>Narrative choice: follow the requested viewpoint</h3>
+    <div class="choice-bank" aria-label="Past simple and past perfect contrast choices"><button class="choice-option" data-choice-option="entered, checked, and called">entered, checked, and called</button><button class="choice-option" data-choice-option="had left">had left</button><button class="choice-option" data-choice-option="had moved">had moved</button><button class="choice-option" data-choice-option="had checked">had checked</button><button class="choice-option" data-choice-option="opened">opened</button></div>
+    <div class="q"><span class="n">1</span><span>Tell these main-story actions in the order they happened, with no flashback: Maya <button class="choice-gap" data-choice-gap data-answer="entered, checked, and called" data-hint="A chronological list on the main past line uses Past Simple." data-fix="Maya entered, checked the list, and called Leo.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The narration mentions Maya’s 8:20 call first, then looks back to the driver’s 8:10 departure: When Maya called, the driver <button class="choice-gap" data-choice-gap data-answer="had left" data-hint="The wording reverses the real order, so mark the 8:10 departure as the earlier layer." data-fix="When Maya called at 8:20, the driver had left at 8:10.">choose</button> ten minutes earlier.</span></div>
+    <div class="q"><span class="n">3</span><span>Explain the earlier cause of the problem Maya discovered at 8:15: The boxes were missing because someone <button class="choice-gap" data-choice-gap data-answer="had moved" data-hint="Use Past Perfect for the earlier action that caused the later missing-box problem." data-fix="The boxes were missing because someone had moved them to Hall A.">choose</button> them to Hall A.</span></div>
+    <div class="q"><span class="n">4</span><span>The speaker deliberately views the inspection as complete from the later phone call. After Maya <button class="choice-gap" data-choice-gap data-answer="had checked" data-hint="The prompt requests a completed backward viewpoint, although Past Simple could be natural in a neutral chronological telling." data-fix="After Maya had checked every box, she called Leo.">choose</button> every box, she called Leo.</span></div>
+    <div class="q"><span class="n">5</span><span>The flashback ends with <span class="ex">had moved</span>. Resume the main 8:15 story: Maya found the correct key and <button class="choice-gap" data-choice-gap data-answer="opened" data-hint="Return to Past Simple when the main story moves forward again." data-fix="Maya found the correct key and opened Hall A.">choose</button> Hall A.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Time expressions support the viewpoint; they do not choose it alone</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>expression</th><th>information it adds</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">already</span></td><td>earlier than expected or before the reference point</td><td><span class="ex">The driver had already left.</span></td></tr>
+      <tr><td><span class="ex">just</span></td><td>only a short time before the reference point</td><td><span class="ex">The doors had just opened.</span></td></tr>
+      <tr><td><span class="ex">never / ever</span></td><td>experience up to the reference point</td><td><span class="ex">She had never led a forum.</span></td></tr>
+      <tr><td><span class="ex">yet</span></td><td>an expected event remained incomplete by that point</td><td><span class="ex">They hadn’t tested it yet.</span></td></tr>
+      <tr><td><span class="ex">by the time</span></td><td>a deadline or later reference point</td><td><span class="ex">By the time guests arrived, the team had finished.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Already, just, never</span>, and <span class="ex">ever</span> usually sit between <span class="ex">had</span> and the participle. <span class="ex">Yet</span> commonly comes at the end of a negative clause or question. A marker supports meaning, but the wider context must still provide a past reference.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You placed already, just, never, yet, and by the time according to the exact expectation, experience, and deadline in each past context.">
+    <h3>Time-marker check: add the information requested</h3>
+    <div class="choice-bank" aria-label="Past perfect time expression choices"><button class="choice-option" data-choice-option="already">already</button><button class="choice-option" data-choice-option="just">just</button><button class="choice-option" data-choice-option="never">never</button><button class="choice-option" data-choice-option="yet">yet</button><button class="choice-option" data-choice-option="By the time">By the time</button></div>
+    <div class="q"><span class="n">1</span><span>Maya expected the delivery later, but it was there when she arrived: It had <button class="choice-gap" data-choice-gap data-answer="already" data-hint="Choose the adverb that means earlier than Maya expected." data-fix="The delivery had already arrived when Maya reached the venue.">choose</button> arrived.</span></div>
+    <div class="q"><span class="n">2</span><span>The driver left only one minute before Maya called: The driver had <button class="choice-gap" data-choice-gap data-answer="just" data-hint="Choose the adverb for a very short interval before the call." data-fix="The driver had just left when Maya called.">choose</button> left.</span></div>
+    <div class="q"><span class="n">3</span><span>Before this project, Maya had zero forum-leadership experience: She had <button class="choice-gap" data-choice-gap data-answer="never" data-hint="Choose the frequency adverb that means at no time before the role." data-fix="Before this project, Maya had never led a forum.">choose</button> led a forum.</span></div>
+    <div class="q"><span class="n">4</span><span>At 8:45, microphone three was still waiting for its expected test: They hadn’t tested microphone three <button class="choice-gap" data-choice-gap data-answer="yet" data-hint="Use yet at the end to show an expected test was incomplete at 8:45." data-fix="At 8:45, they hadn’t tested microphone three yet.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="By the time" data-hint="Choose the expression that introduces the 9:00 deadline for the earlier completion." data-fix="By the time the doors opened at 9:00, the team had moved every box.">choose</button> the doors opened at 9:00, the team had moved every box.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Past Perfect Simple or Past Perfect Continuous?</h2>
+  <div class="lead-rule"></div>
+  <p>Both forms look back from a past reference point. The simple form foregrounds a completed result, number, experience, or state. The continuous form foregrounds an activity, duration, repetition, or recent evidence before that past point.</p>
+  <table>
+    <thead><tr><th>viewpoint at 5:00</th><th>form</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>completed quantity</td><td>Past Perfect Simple</td><td><span class="ex">They had arranged 60 chairs.</span></td></tr>
+      <tr><td>activity and duration</td><td>Past Perfect Continuous</td><td><span class="ex">They had been arranging chairs for two hours.</span></td></tr>
+      <tr><td>continuing possession state</td><td>Past Perfect Simple</td><td><span class="ex">Ava had owned the equipment for five years.</span></td></tr>
+      <tr><td>recent process explaining evidence</td><td>Past Perfect Continuous</td><td><span class="ex">The floor was wet because they had been mopping.</span></td></tr>
+    </tbody>
+  </table>
+  <p>As with the present form, the continuous does not prove the activity was still happening at the reference point. <span class="ex">They had been mopping, but they stopped at 4:55</span> is accurate if the wet floor at 5:00 is the relevant evidence.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished a completed quantity, unfolding duration, continuing state, and recent process viewed from a past reference point.">
+    <h3>Aspect check: decide what the 5:00 report foregrounds</h3>
+    <div class="choice-bank" aria-label="Past perfect simple and continuous choices"><button class="choice-option" data-choice-option="had arranged">had arranged</button><button class="choice-option" data-choice-option="had been arranging">had been arranging</button><button class="choice-option" data-choice-option="had owned">had owned</button><button class="choice-option" data-choice-option="had been mopping">had been mopping</button></div>
+    <div class="q"><span class="n">1</span><span>The 5:00 inventory needs the completed number 60: The team <button class="choice-gap" data-choice-gap data-answer="had arranged" data-hint="A completed quantity calls for Past Perfect Simple." data-fix="By 5:00, the team had arranged 60 chairs.">choose</button> 60 chairs.</span></div>
+    <div class="q"><span class="n">2</span><span>The 5:00 update asks what activity occupied the team for two hours: They <button class="choice-gap" data-choice-gap data-answer="had been arranging" data-hint="Foreground the activity and its duration before 5:00." data-fix="At 5:00, they had been arranging chairs for two hours.">choose</button> chairs for two hours.</span></div>
+    <div class="q"><span class="n">3</span><span>At the 2024 event, Ava’s five-year possession was a continuing state: Ava <button class="choice-gap" data-choice-gap data-answer="had owned" data-hint="Own presents possession as a state, so use the simple perfect form." data-fix="At the 2024 event, Ava had owned the equipment for five years.">choose</button> the equipment for five years.</span></div>
+    <div class="q"><span class="n">4</span><span>At 5:00, the floor was wet because of a process that stopped at 4:55: Maintenance <button class="choice-gap" data-choice-gap data-answer="had been mopping" data-hint="Use the continuous form for the recent process that explains the wet floor; the context states that it stopped." data-fix="At 5:00, the floor was wet because maintenance had been mopping; they had stopped at 4:55.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: contractions, linking, and information stress</h2>
+  <div class="lead-rule"></div>
+  <div class="two-col">
+    <div>
+      <h3>Reduce <span class="ex">had</span>, not the important message</h3>
+      <p>After pronouns, <span class="ex">had</span> commonly contracts to <span class="ex">’d</span>: <span class="ex">I’d /aɪd/, you’d /jud/, she’d /ʃid/, we’d /wid/, they’d /ðeɪd/</span>. In <span class="ex">They’d already LEFT</span>, the contraction is weak and the new event carries the strongest beat.</p>
+      <p>After <span class="ex">’d</span>, a past participle points to <span class="ex">had</span>: <span class="ex">I’d finished</span> means <span class="ex">I had finished</span>. A base verb can point to <span class="ex">would</span>: <span class="ex">I’d finish if I had time</span>. The following verb and context resolve the meaning.</p>
+    </div>
+    <div>
+      <h3>Hear connected questions and contrast</h3>
+      <p>In quick U.S. speech, <span class="ex">Had you seen it?</span> may link as /hædʒə ˈsin ɪt/. This is a listening target, not a requirement to erase every sound. A careful full form remains natural.</p>
+      <p>Stress moves when a speaker corrects information: <span class="ex">They’d moved the boxes to Hall A, not Hall B</span>. Negative <span class="ex">hadn’t</span> is often clearer and more prominent when the missing action matters: <span class="ex">They HADN’T tested microphone three.</span></p>
+    </div>
+  </div>
+
+  <section data-lesson-extension="Tutor-read contractions, linked questions, reference time, negative contrast, and simple-continuous listening check">
+    <h2>Listen for the timeline before opening the transcript</h2>
+    <div class="lead-rule"></div>
+    <p>Your tutor reads each line once naturally and once in short thought groups. Identify the earlier situation and the past reference point. Do not decide from one contracted sound alone.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard an earlier departure, a negative missing test, prior experience, completed versus pending actions, and a completed quantity in connected U.S. speech.">
+      <h3>Listening check: recover the earlier layer</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The departure happened before the arrival." data-hint="Listen for by the time, arrived, and the contracted earlier action they’d left." data-fix="The departure happened before the arrival."><p class="quiz-question">1. What order does the first line communicate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The departure happened before the arrival.">The departure happened before the arrival.</button><button class="quiz-option" data-quiz-option="The arrival happened before the departure.">The arrival happened before the departure.</button><button class="quiz-option" data-quiz-option="Both events are future plans.">Both events are future plans.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Microphone three was still untested at the reference point." data-hint="Listen for the prominent negative hadn’t and the object microphone three." data-fix="Microphone three was still untested at the reference point."><p class="quiz-question">2. What problem does the second line emphasize?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Microphone three was still untested at the reference point.">Microphone three was still untested at the reference point.</button><button class="quiz-option" data-quiz-option="Three microphones had passed every test.">Three microphones had passed every test.</button><button class="quiz-option" data-quiz-option="Testing will begin next year.">Testing will begin next year.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="whether the listener had seen the plan before the briefing" data-hint="Listen for the linked Had you, the participle seen, and the later reference point before the briefing." data-fix="The question asks whether the listener had seen the plan before the briefing."><p class="quiz-question">3. What information does the linked question request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="whether the listener had seen the plan before the briefing">whether the listener had seen the plan before the briefing</button><button class="quiz-option" data-quiz-option="whether the briefing is happening tomorrow">whether the briefing is happening tomorrow</button><button class="quiz-option" data-quiz-option="how long the plan will be">how long the plan will be</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The signs were complete, but hanging them was still pending." data-hint="Separate I’d finished from I hadn’t hung them yet." data-fix="The signs were complete, but hanging them was still pending."><p class="quiz-question">4. Which result was complete, and which action was pending?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The signs were complete, but hanging them was still pending.">The signs were complete, but hanging them was still pending.</button><button class="quiz-option" data-quiz-option="The signs were unfinished, but all were already hanging.">The signs were unfinished, but all were already hanging.</button><button class="quiz-option" data-quiz-option="Both actions are present habits.">Both actions are present habits.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="a completed quantity of twelve chairs" data-hint="Listen for repaired followed by the exact number twelve, not a duration." data-fix="The speaker reports a completed quantity of twelve chairs."><p class="quiz-question">5. What does the final line foreground?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a completed quantity of twelve chairs">a completed quantity of twelve chairs</button><button class="quiz-option" data-quiz-option="twelve hours of unfinished activity">twelve hours of unfinished activity</button><button class="quiz-option" data-quiz-option="a plan to buy chairs tomorrow">a plan to buy chairs tomorrow</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">By the time we ARRIVED, they’d already LEFT.</span> Evidence: the departure precedes the arrival.</li>
+        <li><span class="ex">They HADN’T tested microphone THREE.</span> Evidence: negative auxiliary and contrastive object stress.</li>
+        <li><span class="ex">Had you SEEN the revised plan before the BRIEFing?</span> Evidence: linked <span class="ex">Had you</span> plus experience before a later past event.</li>
+        <li><span class="ex">I’d FINISHED the signs, but I hadn’t HUNG them yet.</span> Evidence: one completed result and one expected action still pending.</li>
+        <li><span class="ex">By FIVE, I’d repaired TWELVE chairs.</span> Evidence: a completed quantity, not activity duration.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read one complete event reconstruction</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Harbor forum setup, 4:45 to 5:55 p.m.</h3>
+    <p><span class="ex">At 4:45, Maya unlocked Hall B and found it empty. The venue team had moved the tables to Hall A after an earlier event, but nobody had updated the schedule. Maya called the building manager. By the time Leo arrived at 5:05, she had confirmed the mistake and arranged for two carts. The team moved the tables, tested the equipment, and opened the doors at 5:55. Maya was tired because she had been solving the problem for more than an hour, but every table was in place.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the empty hall, outdated schedule, completed response before 5:05, and chronological main-story sequence from the event report.">
+    <h3>Reading check: use only the setup report</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Hall B was empty." data-hint="Read the first sentence for what Maya found at 4:45." data-fix="Hall B was empty when Maya unlocked it at 4:45."><p class="quiz-question">1. What did Maya discover at 4:45?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Hall B was empty.">Hall B was empty.</button><button class="quiz-option" data-quiz-option="The forum had already ended.">The forum had already ended.</button><button class="quiz-option" data-quiz-option="Leo was moving the tables alone.">Leo was moving the tables alone.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Nobody had updated it after the tables moved." data-hint="The second sentence identifies why the written location was no longer accurate." data-fix="The schedule was wrong because nobody had updated it after the tables moved."><p class="quiz-question">2. Why did the schedule still show the wrong hall?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Nobody had updated it after the tables moved.">Nobody had updated it after the tables moved.</button><button class="quiz-option" data-quiz-option="Maya had canceled the forum.">Maya had canceled the forum.</button><button class="quiz-option" data-quiz-option="The building manager had closed both halls.">The building manager had closed both halls.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="She had confirmed the mistake and arranged for two carts." data-hint="Find the two actions complete by Leo’s 5:05 arrival." data-fix="By 5:05, Maya had confirmed the mistake and arranged for two carts."><p class="quiz-question">3. What had Maya completed before Leo arrived at 5:05?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She had confirmed the mistake and arranged for two carts.">She had confirmed the mistake and arranged for two carts.</button><button class="quiz-option" data-quiz-option="She had opened the doors to guests.">She had opened the doors to guests.</button><button class="quiz-option" data-quiz-option="She had moved every table alone.">She had moved every table alone.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="moved the tables, tested the equipment, and opened the doors" data-hint="The sentence after Leo’s arrival lists three actions in chronological Past Simple." data-fix="The main story resumes: the team moved the tables, tested the equipment, and opened the doors."><p class="quiz-question">4. Which sequence advances the main story after 5:05?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="moved the tables, tested the equipment, and opened the doors">moved the tables, tested the equipment, and opened the doors</button><button class="quiz-option" data-quiz-option="had moved, had tested, and had opened every future door">had moved, had tested, and had opened every future door</button><button class="quiz-option" data-quiz-option="will move, will test, and will open yesterday">will move, will test, and will open yesterday</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build an earlier statement and question</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="the venue team had moved the tables before Maya arrived" data-hint="Start with the earlier-event subject, place had before moved, and end with the Past Simple reference clause." data-fix="The venue team had moved the tables before Maya arrived." data-success-message="Correct. Had moved marks the earlier event, and Maya arrived supplies the later past reference point.">
+    <h3>Build 1: state the earlier event</h3><p class="tile-target">The tables moved first. Maya arrived later. Make the earlier layer explicit.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="before">before</button><button class="tile" data-build-tile="tables">tables</button><button class="tile" data-build-tile="had">had</button><button class="tile" data-build-tile="arrived">arrived</button><button class="tile" data-build-tile="team">team</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="moved">moved</button><button class="tile" data-build-tile="venue">venue</button><button class="tile" data-build-tile="maya">Maya</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="had anyone updated the schedule before Maya arrived" data-hint="Begin with Had, place the subject anyone before updated, and end with the Past Simple reference clause." data-fix="Had anyone updated the schedule before Maya arrived?" data-success-message="Correct. Had moves before anyone to ask about an update earlier than Maya’s arrival.">
+    <h3>Build 2: ask about the missing update</h3><p class="tile-target">Ask whether a schedule update happened before Maya arrived.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="schedule">schedule</button><button class="tile" data-build-tile="anyone">anyone</button><button class="tile" data-build-tile="maya">Maya</button><button class="tile" data-build-tile="updated">updated</button><button class="tile" data-build-tile="had">Had</button><button class="tile" data-build-tile="before">before</button><button class="tile" data-build-tile="arrived">arrived</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair form or narrative viewpoint</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="went" data-hint="Had requires the participle of go, not its Past Simple form." data-fix="When Maya called at 8:20, the driver had gone." data-why="Gone is the past participle in go, went, gone. The 8:20 call supplies the later past reference point." data-success-message="Correct. Gone is the participle required after had for the earlier departure.">
+    <h3>Repair 1: use the participle</h3><p>Tap the verb form that breaks <span class="ex">had + past participle</span>.</p><div class="spot-options"><button class="error-choice" data-error-choice="when">When</button><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="called">called at 8:20,</button><button class="error-choice" data-error-choice="driver">the driver</button><button class="error-choice" data-error-choice="had">had</button><button class="error-choice" data-error-choice="went">went.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="didn’t had" data-hint="The sentence asks for an earlier lack of time before the 9:00 opening, so put the negative on had and keep had as the participle of have." data-fix="Before the doors opened at 9:00, I hadn’t had time to test microphone three." data-why="Past Perfect negative is hadn’t + past participle. The lexical verb have also has the participle had, producing hadn’t had." data-success-message="Correct. Hadn’t had accurately marks the earlier lack of time before the 9:00 opening.">
+    <h3>Repair 2: build the negative earlier layer</h3><p>Tap the two-word form that cannot follow the stated earlier-time context.</p><div class="spot-options"><button class="error-choice" data-error-choice="before">Before</button><button class="error-choice" data-error-choice="doors">the doors opened at 9:00,</button><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="didn’t had">didn’t had</button><button class="error-choice" data-error-choice="time">time</button><button class="error-choice" data-error-choice="test">to test microphone three.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="had opened" data-hint="These three main-story events are explicitly told in the order they happened; no backward layer is needed." data-fix="At 5:50, Maya unlocked the doors, opened them, and welcomed the guests." data-why="Past Simple moves a chronological main story forward. Past Perfect is not a general marker for every event that happened in the past." data-success-message="Correct. Opened belongs on the chronological Past Simple story line, so the unnecessary had must go.">
+    <h3>Repair 3: remove unnecessary backshifting</h3><p>Tap the verb phrase that incorrectly turns one chronological action into a flashback.</p><div class="spot-options"><button class="error-choice" data-error-choice="time">At 5:50,</button><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="unlocked">unlocked the doors,</button><button class="error-choice" data-error-choice="had opened">had opened them,</button><button class="error-choice" data-error-choice="welcomed">and welcomed the guests.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing private history</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose a real employer, client, mistake, password, travel problem, family event, relationship, health issue, financial detail, address, schedule, or personal history. Use the fictional Harbor forum. Real details are optional.</p>
+  <div class="prompt-card"><b>Delivery problem:</b> Maya arrived at 8:15. The driver left at 8:10, and someone moved the boxes earlier. Explain what Maya discovered and why.</div>
+  <div class="prompt-card"><b>Schedule problem:</b> At 4:45, Hall B was empty because nobody updated the schedule after the tables moved. Move from the main discovery to the earlier cause.</div>
+  <div class="prompt-card"><b>Successful recovery:</b> By 5:05, Maya confirmed the mistake and arranged carts. Then the team moved, tested, and opened. Mark the deadline, then return to the main story.</div>
+  <div class="prompt-card"><b>Prior experience:</b> Invent a coordinator who had never led a forum before 2025 but had organized three smaller meetings. Contrast no experience in one area with completed experience in another.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: reconstruct a 75–90 second fictional event</h3>
+    <p>Use one Harbor scenario. Establish the main past scene, add one completed earlier event, one earlier cause, and either prior experience or a state up to that past point. Include one negative or question. Return clearly to the main Past Simple story and finish with the result.</p>
+    <p><b>Evidence check:</b> Can the listener identify the main past reference point, every earlier layer, the reason for each Past Perfect choice, and the exact moment when the story returns to Past Simple?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You protected the past reference point, used Past Perfect only for a meaningful earlier layer, and returned to Past Simple for the main narrative.">
+    <h3>Final check: defend the timeline</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="When Maya arrived at 8:15, the driver had already left at 8:10." data-hint="The later arrival is mentioned first, so use Past Perfect for the earlier 8:10 departure." data-fix="When Maya arrived at 8:15, the driver had already left at 8:10."><p class="quiz-question">1. Which sentence makes the reversed order explicit?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="When Maya arrived at 8:15, the driver had already left at 8:10.">When Maya arrived at 8:15, the driver had already left at 8:10.</button><button class="quiz-option" data-quiz-option="When Maya will arrive, the driver leaves yesterday.">When Maya will arrive, the driver leaves yesterday.</button><button class="quiz-option" data-quiz-option="When Maya had arrive, the driver had lefts.">When Maya had arrive, the driver had lefts.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The boxes were missing because someone had moved them to Hall A." data-hint="Use Past Perfect for the movement that caused the later missing-box problem." data-fix="The boxes were missing because someone had moved them to Hall A."><p class="quiz-question">2. Which sentence gives an earlier cause for a later past result?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The boxes were missing because someone had moved them to Hall A.">The boxes were missing because someone had moved them to Hall A.</button><button class="quiz-option" data-quiz-option="The boxes are missing because someone will moved them.">The boxes are missing because someone will moved them.</button><button class="quiz-option" data-quiz-option="The boxes had missing because someone moves them now.">The boxes had missing because someone moves them now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Maya found the carts, moved the tables, and opened the doors." data-hint="Choose the chronological Past Simple sequence that advances the main story." data-fix="Maya found the carts, moved the tables, and opened the doors."><p class="quiz-question">3. After the flashback ends, which sentence returns cleanly to the main story?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya found the carts, moved the tables, and opened the doors.">Maya found the carts, moved the tables, and opened the doors.</button><button class="quiz-option" data-quiz-option="Maya had found, had moved, and had opened every event in the story.">Maya had found, had moved, and had opened every event in the story.</button><button class="quiz-option" data-quiz-option="Maya finds yesterday and will opened the doors.">Maya finds yesterday and will opened the doors.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what is the reference point?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">My main past reference is...</span> <span class="ex">I look farther back to...</span> <span class="ex">Past Simple is enough when...</span> <span class="ex">Before and after can make Past Perfect optional because...</span> <span class="ex">I choose Past Perfect Continuous when...</span></p>
+    <p>Create two accurate versions of one sequence: a chronological version with Past Simple, then a version that mentions the later event first and uses Past Perfect to look back.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day reference point, optionality, and simple-continuous retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. State the past reference point before choosing a form.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the reversed-order flashback, recognized genuine optionality after before, and separated completed quantity from earlier activity duration.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="When Maya called at 8:20, the driver had left at 8:10." data-hint="The sentence mentions the later call first, then looks back to the earlier departure." data-fix="When Maya called at 8:20, the driver had left at 8:10."><p class="quiz-question">1. Which sentence explicitly marks the 8:10 departure as earlier than the 8:20 call?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="When Maya called at 8:20, the driver had left at 8:10.">When Maya called at 8:20, the driver had left at 8:10.</button><button class="quiz-option" data-quiz-option="When Maya calls tomorrow, the driver left at 8:10 yesterday.">When Maya calls tomorrow, the driver left at 8:10 yesterday.</button><button class="quiz-option" data-quiz-option="When Maya had called, the driver had leave.">When Maya had called, the driver had leave.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Both are possible; had checked more deliberately views the check as complete from the later call." data-hint="Before already makes the order clear, so compare viewpoint rather than labeling one grammatical version wrong." data-fix="Both are possible; had checked more deliberately views the check as complete from the later call."><p class="quiz-question">2. Compare <span class="ex">Maya checked the list before she called</span> and <span class="ex">Maya had checked the list before she called</span>. Which explanation is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Both are possible; had checked more deliberately views the check as complete from the later call.">Both are possible; had checked more deliberately views the check as complete from the later call.</button><button class="quiz-option" data-quiz-option="Only Past Perfect is ever grammatical with before.">Only Past Perfect is ever grammatical with before.</button><button class="quiz-option" data-quiz-option="Both sentences describe future events.">Both sentences describe future events.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="By 5:00, they had arranged 60 chairs." data-hint="The number 60 is a completed quantity by the past deadline, not the duration of an activity." data-fix="By 5:00, they had arranged 60 chairs."><p class="quiz-question">3. The inventory needs the completed number at 5:00. Which report matches that viewpoint?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="By 5:00, they had arranged 60 chairs.">By 5:00, they had arranged 60 chairs.</button><button class="quiz-option" data-quiz-option="By 5:00, they had been arranging 60 hours.">By 5:00, they had been arranging 60 hours.</button><button class="quiz-option" data-quiz-option="At 5:00 tomorrow, they arranged yesterday.">At 5:00 tomorrow, they arranged yesterday.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

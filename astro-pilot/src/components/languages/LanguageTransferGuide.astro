@@ -1,0 +1,105 @@
+---
+interface LessonLink { id: string; topic: string; level: string; route: string }
+interface TransferPattern {
+  id: string;
+  level: string;
+  category: string;
+  sourcePattern: string;
+  title: string;
+  listenFor: string;
+  rebuild: string;
+  explanation: string;
+  examples: string[];
+  tutorMove: string;
+  lessons: LessonLink[];
+}
+interface TransferLanguage {
+  slug: string;
+  name: string;
+  note: string;
+  principle: string;
+  patterns: TransferPattern[];
+}
+interface Counts { languages: number; patterns: number; lessons: number }
+interface Props { languages: TransferLanguage[]; counts: Counts }
+const { languages, counts } = Astro.props;
+---
+<section class="transfer-guide" aria-labelledby="transfer-guide-title">
+  <header class="transfer-guide-intro">
+    <div>
+      <p class="tab-overline">Contrastive guide</p>
+      <h2 id="transfer-guide-title">Test a pattern. Do not label a learner.</h2>
+      <p>These are productive hypotheses from cross-linguistic influence—not rules about every speaker. Listen for repeated evidence, ask what the learner intended, and teach only the contrast that is actually useful.</p>
+    </div>
+    <dl class="transfer-guide-counts" aria-label="Language transfer guide coverage">
+      <div><dt>Languages</dt><dd>{counts.languages}</dd></div>
+      <div><dt>Patterns</dt><dd>{counts.patterns}</dd></div>
+      <div><dt>Linked lessons</dt><dd>{counts.lessons}</dd></div>
+    </dl>
+  </header>
+
+  <nav class="transfer-language-nav" aria-label="Jump to a first-language guide">
+    {languages.map((language) => <a href={`#transfer-${language.slug}`}>
+      <span>{language.name}</span>
+      <b>{language.patterns.length} patterns</b>
+    </a>)}
+  </nav>
+
+  <section class="transfer-method" aria-labelledby="transfer-method-title">
+    <div><p class="tab-overline">A four-move response</p><h2 id="transfer-method-title">Use the contrast while the meaning is still alive.</h2></div>
+    <ol>
+      <li><b>Notice</b><span>Capture the learner’s intended message before correcting the form.</span></li>
+      <li><b>Compare</b><span>Show why the first-language choice was logical and where English divides the job differently.</span></li>
+      <li><b>Rebuild</b><span>Let the learner produce the repaired sentence, then change one meaningful detail.</span></li>
+      <li><b>Transfer</b><span>Open the linked lesson only when the pattern needs controlled practice and wider production.</span></li>
+    </ol>
+  </section>
+
+  <div class="language-list">
+    {languages.map((language) => <section class="language-panel" id={`transfer-${language.slug}`} data-transfer-language={language.slug} aria-labelledby={`${language.slug}-title`}>
+      <header class="language-panel-header">
+        <div><p class="transfer-language-label">First language</p><h2 id={`${language.slug}-title`}>{language.name}</h2></div>
+        <p>{language.note}</p>
+      </header>
+      <aside class="transfer-principle"><b>Working principle</b><p>{language.principle}</p></aside>
+
+      <div class="transfer-patterns">
+        {language.patterns.map((pattern, patternIndex) => <details class="transfer-pattern" data-transfer-pattern={`${language.slug}/${pattern.id}`} open={patternIndex === 0}>
+          <summary>
+            <div class="transfer-pattern-heading">
+              <p class="transfer-pattern-meta"><span>{pattern.level}</span><span>{pattern.category}</span><code>{pattern.sourcePattern}</code></p>
+              <h3>{pattern.title}</h3>
+              <div class="transfer-preview" aria-label={`Possible transfer: ${pattern.listenFor}. Rebuild: ${pattern.rebuild}`}>
+                <span><b>Possible transfer</b><q>{pattern.listenFor}</q></span>
+                <i aria-hidden="true">→</i>
+                <span><b>Rebuild</b><q>{pattern.rebuild}</q></span>
+              </div>
+            </div>
+            <span class="transfer-disclosure" aria-hidden="true"></span>
+          </summary>
+          <div class="transfer-pattern-body">
+            <section class="transfer-theory" aria-labelledby={`${language.slug}-${pattern.id}-why`}>
+              <p class="transfer-body-label">Why the transfer is logical</p>
+              <h4 id={`${language.slug}-${pattern.id}-why`}>The useful contrast</h4>
+              <p>{pattern.explanation}</p>
+            </section>
+            <section class="transfer-examples" aria-labelledby={`${language.slug}-${pattern.id}-examples`}>
+              <p class="transfer-body-label">Natural English</p>
+              <h4 id={`${language.slug}-${pattern.id}-examples`}>Keep the meaning; vary the detail</h4>
+              <ul>{pattern.examples.map((example) => <li>{example}</li>)}</ul>
+            </section>
+            <aside class="transfer-tutor-move">
+              <p class="transfer-body-label">Tutor move</p>
+              <p>{pattern.tutorMove}</p>
+            </aside>
+            <nav class="transfer-practice-links" aria-label={`Practice lessons for ${pattern.title}`}>
+              <span>Practice the decision</span>
+              {pattern.lessons.map((lesson) => <a href={lesson.route}><small>{lesson.level}</small>{lesson.topic}<b aria-hidden="true">→</b></a>)}
+            </nav>
+          </div>
+        </details>)}
+      </div>
+      <a class="transfer-back-link" href="#transfer-guide-title">Back to guide <span aria-hidden="true">↑</span></a>
+    </section>)}
+  </div>
+</section>

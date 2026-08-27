@@ -1,4 +1,6 @@
 ---
+import { getAssessment } from "../../data/assessment-routes.mjs";
+
 interface LessonLink {
   route: string;
   topic: string;
@@ -17,9 +19,9 @@ interface Props {
 }
 
 const { lesson, previous, next, isCourseEnd } = Astro.props;
-const assessment = lesson.assessments[0];
-const showAssessment = isCourseEnd && assessment;
-const finalRoute = showAssessment ? `/assessments/${assessment}/` : `/curriculum/#lvl-${lesson.level}`;
+const assessment = getAssessment(lesson.assessments[0]);
+const showAssessment = isCourseEnd && assessment?.status === "ready";
+const finalRoute = showAssessment ? assessment.route : `/curriculum/#lvl-${lesson.level}`;
 const finalTitle = showAssessment ? `${lesson.level} End-of-Level Diagnostic` : `${lesson.level} Curriculum`;
 ---
 <div class="lesson-sequence-shell" data-generated-lesson-navigation>

@@ -2,29 +2,42 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Subject pronouns · A0 Grammar · Curriculum Map",
+  "title": "Subject pronouns · A0 Grammar",
   "slug": "subject-pronouns",
   "level": "A0",
   "topic": "Subject pronouns (I, you, he, she, it, we, they)",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Pronouns let us speak quickly without repeating names. Learners notice who is speaking, who is listening, and who we are talking about.",
+  "description": "Choose I, you, he, she, it, we, or they to show who a sentence is about without repeating a person’s or thing’s name.",
   "sequence": 2,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be"
+  ],
+  "related": [
+    "a0/possessive-adjectives",
+    "a1/object-pronouns"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 34,
+    "revisionSummary": "Reference clarity, gender context, singular they, capitalization, hints, corrective feedback, timing, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="35–45 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 02</p>
   <h1>Subject pronouns</h1>
-  <p class="standfirst">Pronouns let us speak quickly without repeating names. Learners notice who is speaking, who is listening, and who we are talking about.</p>
+  <p class="standfirst">Pronouns let us speak quickly without repeating names. Notice who is speaking, who is listening, and who we are talking about.</p>
   <div class="meta-row">
-    <span class="tag">≈ 30 min</span>
+    <span class="tag">≈ 35–45 min</span>
     <span class="tag">I / you / he / she / it</span>
     <span class="tag">noticing + tile drill</span>
   </div>
@@ -45,8 +58,8 @@ export const page = defineLesson({
   <div class="note">
     <h3>Before and after</h3>
     <ul>
-      <li><span class="ex">Maria is a student. Maria is from Mexico.</span><br /><span class="ex">Maria is a student. <strong>She</strong> is from Mexico.</span> &nbsp;<span class="contraction">(She = Maria)</span></li>
-      <li><span class="ex">Tom is my friend. Tom is happy.</span><br /><span class="ex">Tom is my friend. <strong>He</strong> is happy.</span> &nbsp;<span class="contraction">(He = Tom)</span></li>
+      <li><span class="ex">Maria is my sister. Maria is from Mexico.</span><br /><span class="ex">Maria is my sister. <strong>She</strong> is from Mexico.</span> &nbsp;<span class="contraction">(She = my sister Maria)</span></li>
+      <li><span class="ex">Tom is my brother. Tom is happy.</span><br /><span class="ex">Tom is my brother. <strong>He</strong> is happy.</span> &nbsp;<span class="contraction">(He = my brother Tom)</span></li>
       <li><span class="ex">The book is blue. The book is new.</span><br /><span class="ex">The book is blue. <strong>It</strong> is new.</span> &nbsp;<span class="contraction">(It = the book)</span></li>
     </ul>
   </div>
@@ -55,27 +68,27 @@ export const page = defineLesson({
   <table>
     <thead><tr><th>Name or noun</th><th>Pronoun</th></tr></thead>
     <tbody>
-      <tr><td>Maria</td><td><b>she</b></td></tr>
-      <tr><td>Tom</td><td><b>he</b></td></tr>
-      <tr><td>Maria and Tom</td><td><b>they</b></td></tr>
+      <tr><td>my sister, Maria</td><td><b>she</b></td></tr>
+      <tr><td>my brother, Tom</td><td><b>he</b></td></tr>
+      <tr><td>my sister and brother</td><td><b>they</b></td></tr>
       <tr><td>the book</td><td><b>it</b></td></tr>
       <tr><td>you and I</td><td><b>we</b></td></tr>
     </tbody>
   </table>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Quick practice — replace the name</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Use She for my sister Maria, He for my brother Tom, It for one book, and They for two people.">
+    <h3>Quick practice: replace the name</h3>
     <p class="choice-hint">Tap the gap, then choose the pronoun that replaces the name</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="she">she</button>
-      <button class="choice-option" data-choice-option="he">he</button>
-      <button class="choice-option" data-choice-option="it">it</button>
-      <button class="choice-option" data-choice-option="they">they</button>
+      <button class="choice-option" data-choice-option="She">She</button>
+      <button class="choice-option" data-choice-option="He">He</button>
+      <button class="choice-option" data-choice-option="It">It</button>
+      <button class="choice-option" data-choice-option="They">They</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Maria is a student. <button class="choice-gap" data-choice-gap data-answer="she" data-placeholder="choose">choose</button> is from Mexico.</span></div>
-    <div class="q"><span class="n">2</span><span>Tom is my friend. <button class="choice-gap" data-choice-gap data-answer="he" data-placeholder="choose">choose</button> is happy.</span></div>
-    <div class="q"><span class="n">3</span><span>The book is blue. <button class="choice-gap" data-choice-gap data-answer="it" data-placeholder="choose">choose</button> is new.</span></div>
-    <div class="q"><span class="n">4</span><span>Maria and Tom are here. <button class="choice-gap" data-choice-gap data-answer="they" data-placeholder="choose">choose</button> are my friends.</span></div>
+    <div class="q"><span class="n">1</span><span>Maria is my sister and a student. <button class="choice-gap" data-choice-gap data-answer="She" data-hint="The first sentence identifies Maria as my sister." data-fix="Use She for my sister Maria: She is from Mexico." data-placeholder="choose">choose</button> is from Mexico.</span></div>
+    <div class="q"><span class="n">2</span><span>Tom is my brother and my friend. <button class="choice-gap" data-choice-gap data-answer="He" data-hint="The first sentence identifies Tom as my brother." data-fix="Use He for my brother Tom: He is happy." data-placeholder="choose">choose</button> is happy.</span></div>
+    <div class="q"><span class="n">3</span><span>The book is blue. <button class="choice-gap" data-choice-gap data-answer="It" data-hint="The book is one thing." data-fix="Use It for one book: It is new." data-placeholder="choose">choose</button> is new.</span></div>
+    <div class="q"><span class="n">4</span><span>Maria and Tom are here. <button class="choice-gap" data-choice-gap data-answer="They" data-hint="Maria and Tom are two people we are talking about." data-fix="Use They for Maria and Tom: They are my friends." data-placeholder="choose">choose</button> are my friends.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -88,7 +101,7 @@ export const page = defineLesson({
   <p>Read the mini-dialogue. Before explaining anything, point to the speaker, the listener, and the people being talked about.</p>
   <div class="thinking-card">
     <h3>Guided noticing</h3>
-    <p><span class="ex">Ana: I am Ana. You are Leo. She is Maria. He is Tom. We are students.</span></p>
+    <p><span class="ex">Ana: I’m Ana. You’re Leo. Maria is my coworker. She’s from Mexico. Tom is our manager. He’s in a meeting. We’re new employees.</span></p>
     <ul>
       <li>Who says <strong>I</strong>?</li>
       <li>Who is <strong>you</strong>?</li>
@@ -102,30 +115,45 @@ export const page = defineLesson({
     <thead><tr><th>Pronoun</th><th>Meaning</th><th>Quick example</th></tr></thead>
     <tbody>
       <tr><td><b>I</b></td><td>me, the speaker</td><td class="ex">I am a student.</td></tr>
-      <tr><td><b>you</b></td><td>the listener — one or many people</td><td class="ex">You are my teacher.</td></tr>
-      <tr><td><b>he</b></td><td>one male person</td><td class="ex">He is Tom.</td></tr>
-      <tr><td><b>she</b></td><td>one female person</td><td class="ex">She is Ana.</td></tr>
-      <tr><td><b>it</b></td><td>one thing, animal, or idea</td><td class="ex">It is a book.</td></tr>
+      <tr><td><b>you</b></td><td>the listener, one or many people</td><td class="ex">You are my teacher.</td></tr>
+      <tr><td><b>he</b></td><td>one person who uses he</td><td class="ex">Tom is my brother. He is a chef.</td></tr>
+      <tr><td><b>she</b></td><td>one person who uses she</td><td class="ex">Ana is my sister. She is a doctor.</td></tr>
+      <tr><td><b>it</b></td><td>one thing, place, situation, or animal when no personal pronoun is known</td><td class="ex">The phone is new. It is fast.</td></tr>
       <tr><td><b>we</b></td><td>me + one or more people</td><td class="ex">We are classmates.</td></tr>
-      <tr><td><b>they</b></td><td>two or more people, animals, or things</td><td class="ex">They are friends.</td></tr>
+      <tr><td><b>they</b></td><td>two or more; also one person when we do not know or need to say gender, or when the person uses they</td><td class="ex">My friends are here. They are early. · Someone called. They want a callback.</td></tr>
     </tbody>
   </table>
+  <p class="note-line"><span class="ex">They</span> can mean more than one person or one person. We still say <span class="ex">they are</span> and <span class="ex">they want</span>: <span class="ex">A new client is here. They are waiting.</span></p>
 
   <div class="note">
-    <h3>Teaching move</h3>
+    <h3>Sound natural: say the pronoun and verb as one piece</h3>
+    <p>In a normal sentence, the pronoun is short and the new information is clear.</p>
+    <table>
+      <thead><tr><th>sentence</th><th>natural rhythm</th></tr></thead>
+      <tbody>
+        <tr><td>She is a doctor.</td><td>She’s a <b>DOC</b>tor.</td></tr>
+        <tr><td>He is at work.</td><td>He’s at <b>WORK</b>.</td></tr>
+        <tr><td>They are from Brazil.</td><td>They’re from Bra<b>ZIL</b>.</td></tr>
+      </tbody>
+    </table>
+    <p>Make the pronoun strong when you correct who: <span class="ex"><strong>SHE</strong> is the doctor, not <strong>HE</strong>.</span> Remember that <span class="ex">you</span> can mean one listener or many listeners; the situation tells us which meaning it has.</p>
+  </div>
+
+  <div class="note">
+    <h3>Memory move</h3>
     <ul>
-      <li>Use gestures first: point to yourself, the learner, one person, two people.</li>
-      <li>Name the grammar after the learner has already felt the pattern.</li>
-      <li>Contrast <span class="ex">he / she / they</span> with real classroom names.</li>
+      <li>Point to yourself for <span class="ex">I</span>, to your listener for <span class="ex">you</span>, and to other people for <span class="ex">he, she,</span> or <span class="ex">they</span>.</li>
+      <li>Notice the meaning first. Then name the pronoun.</li>
+      <li>Practice <span class="ex">he / she / they</span> with the names of real people you know.</li>
     </ul>
   </div>
 
-  <div class="practice" data-answer-drill>
-    <h3>Quick practice — choose the pronoun</h3>
-    <div class="q"><span class="n">1</span><span>Ana → <input class="answer-input" data-answer="she"> is from Mexico.</span></div>
-    <div class="q"><span class="n">2</span><span>Tom → <input class="answer-input" data-answer="he"> is a student.</span></div>
-    <div class="q"><span class="n">3</span><span>A book → <input class="answer-input" data-answer="it"> is blue.</span></div>
-    <div class="q"><span class="n">4</span><span>Ana and Tom → <input class="answer-input" data-answer="they"> are friends.</span></div>
+  <div class="practice" data-answer-drill data-lesson-extension="Optional typed pronoun recall" data-success-message="Correct. Use she for a sister, he for a brother, it for one book, and they for two people.">
+    <h3>Quick practice: choose the pronoun</h3>
+    <div class="q"><span class="n">1</span><span>Ana, my sister → <input class="answer-input" data-answer="she" data-hint="Ana is identified as my sister." data-fix="Type she: She is from Mexico." aria-label="Pronoun for my sister Ana"> is from Mexico.</span></div>
+    <div class="q"><span class="n">2</span><span>Tom, my brother → <input class="answer-input" data-answer="he" data-hint="Tom is identified as my brother." data-fix="Type he: He is a student." aria-label="Pronoun for my brother Tom"> is a student.</span></div>
+    <div class="q"><span class="n">3</span><span>A book → <input class="answer-input" data-answer="it" data-hint="A book is one thing." data-fix="Type it: It is blue." aria-label="Pronoun for a book"> is blue.</span></div>
+    <div class="q"><span class="n">4</span><span>Ana and Tom → <input class="answer-input" data-answer="they" data-hint="Ana and Tom are two people." data-fix="Type they: They are friends." aria-label="Pronoun for Ana and Tom"> are friends.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -133,8 +161,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Tile game — match the meaning</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. I names the speaker, you names the listener, we includes the speaker, they refers to others, and it refers to one thing.">
+    <h3>Tile game: match the meaning</h3>
     <p>Click a pronoun tile, then click the matching meaning slot.</p>
     <div class="tile-bank">
       <button class="tile" data-tile="i">I</button>
@@ -144,11 +172,11 @@ export const page = defineLesson({
       <button class="tile" data-tile="it">it</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="i" data-placeholder="speaker">speaker</button>
-      <button class="slot" data-slot="you" data-placeholder="listener">listener</button>
-      <button class="slot" data-slot="we" data-placeholder="me + others">me + others</button>
-      <button class="slot" data-slot="they" data-placeholder="two or more">two or more</button>
-      <button class="slot" data-slot="it" data-placeholder="one thing">one thing</button>
+      <button class="slot" data-slot="i" data-hint="The person speaking says this pronoun." data-fix="Match I with speaker." data-placeholder="speaker">speaker</button>
+      <button class="slot" data-slot="you" data-hint="The speaker says this pronoun to the listener." data-fix="Match you with listener." data-placeholder="listener">listener</button>
+      <button class="slot" data-slot="we" data-hint="This pronoun includes the speaker and other people." data-fix="Match we with me + others." data-placeholder="me + others">me + others</button>
+      <button class="slot" data-slot="they" data-hint="This pronoun can point to two or more people or things." data-fix="Match they with two or more." data-placeholder="two or more">two or more</button>
+      <button class="slot" data-slot="it" data-hint="This pronoun can point to one thing." data-fix="Match it with one thing." data-placeholder="one thing">one thing</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -161,23 +189,24 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <p>Now use the pronouns in real, everyday sentences. Each task gives quick feedback.</p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill — choose the right pronoun</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The context identifies she, he, it, we, and you; they can refer to parents or to one client whose gender is not known.">
+    <h3>Drill: choose the right pronoun</h3>
     <p class="choice-hint">Tap a gap, then choose the pronoun that fits the people or thing</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="you">you</button>
-      <button class="choice-option" data-choice-option="he">he</button>
-      <button class="choice-option" data-choice-option="she">she</button>
-      <button class="choice-option" data-choice-option="it">it</button>
-      <button class="choice-option" data-choice-option="we">we</button>
-      <button class="choice-option" data-choice-option="they">they</button>
+      <button class="choice-option" data-choice-option="You">You</button>
+      <button class="choice-option" data-choice-option="He">He</button>
+      <button class="choice-option" data-choice-option="She">She</button>
+      <button class="choice-option" data-choice-option="It">It</button>
+      <button class="choice-option" data-choice-option="We">We</button>
+      <button class="choice-option" data-choice-option="They">They</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Sara works in Berlin. <button class="choice-gap" data-choice-gap data-answer="she" data-placeholder="choose">choose</button> is an engineer.</span></div>
-    <div class="q"><span class="n">2</span><span>Mr. Diaz is my manager. <button class="choice-gap" data-choice-gap data-answer="he" data-placeholder="choose">choose</button> is in a meeting.</span></div>
-    <div class="q"><span class="n">3</span><span>This is my new phone. <button class="choice-gap" data-choice-gap data-answer="it" data-placeholder="choose">choose</button> is very fast.</span></div>
-    <div class="q"><span class="n">4</span><span>My parents live in Italy. <button class="choice-gap" data-choice-gap data-answer="they" data-placeholder="choose">choose</button> are retired.</span></div>
-    <div class="q"><span class="n">5</span><span>My wife and I cook together. <button class="choice-gap" data-choice-gap data-answer="we" data-placeholder="choose">choose</button> make dinner at seven.</span></div>
-    <div class="q"><span class="n">6</span><span>Daniel, <button class="choice-gap" data-choice-gap data-answer="you" data-placeholder="choose">choose</button> are a great teacher.</span></div>
+    <div class="q"><span class="n">1</span><span>Sara is my sister and works in Berlin. <button class="choice-gap" data-choice-gap data-answer="She" data-hint="Sara is identified as my sister." data-fix="Use She for my sister Sara: She is an engineer." data-placeholder="choose">choose</button> is an engineer.</span></div>
+    <div class="q"><span class="n">2</span><span>Mr. Diaz is my manager. <button class="choice-gap" data-choice-gap data-answer="He" data-hint="The title Mr. identifies the manager as a man." data-fix="Use He for Mr. Diaz: He is in a meeting." data-placeholder="choose">choose</button> is in a meeting.</span></div>
+    <div class="q"><span class="n">3</span><span>This is my new phone. <button class="choice-gap" data-choice-gap data-answer="It" data-hint="The phone is one thing." data-fix="Use It for the phone: It is very fast." data-placeholder="choose">choose</button> is very fast.</span></div>
+    <div class="q"><span class="n">4</span><span>My parents live in Italy. <button class="choice-gap" data-choice-gap data-answer="They" data-hint="My parents means two people I am talking about." data-fix="Use They for my parents: They are retired." data-placeholder="choose">choose</button> are retired.</span></div>
+    <div class="q"><span class="n">5</span><span>My wife and I cook together. <button class="choice-gap" data-choice-gap data-answer="We" data-hint="My wife and I includes the speaker and one other person." data-fix="Use We because the group includes the speaker: We make dinner at seven." data-placeholder="choose">choose</button> make dinner at seven.</span></div>
+    <div class="q"><span class="n">6</span><span>I am speaking to Daniel. <button class="choice-gap" data-choice-gap data-answer="You" data-hint="Use the listener pronoun when speaking directly to Daniel." data-fix="Use You for the listener: You are a great teacher." data-placeholder="choose">choose</button> are a great teacher.</span></div>
+    <div class="q"><span class="n">7</span><span>A new client is here, but I do not know the person’s name or gender. <button class="choice-gap" data-choice-gap data-answer="They" data-hint="Use they for one person when gender is not known or relevant." data-fix="Use They for the new client: They are waiting in reception." data-placeholder="choose">choose</button> are waiting in reception.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -185,8 +214,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she is a doctor">
-    <h3>Sentence builder — put the words in order</h3>
+  <div class="tile-game" data-tile-builder data-answer="she is a doctor" data-hint="Start with the subject pronoun She, then add is and the job." data-fix="Build: She is a doctor." data-success-message="Correct. She is the subject, so it comes before is a doctor.">
+    <h3>Sentence builder: put the words in order</h3>
     <p class="tile-target">Tap the words in order to make a correct sentence</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="a">a</button>
@@ -202,8 +231,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="they are from brazil">
-    <h3>Sentence builder — one more</h3>
+  <div class="tile-game" data-tile-builder data-answer="they are from brazil" data-hint="Start with the plural subject pronoun They, then add are and the place." data-fix="Build: They are from Brazil." data-success-message="Correct. The word They is the subject, so it comes before are from Brazil.">
+    <h3>Sentence builder: one more</h3>
     <p class="tile-target">Tap the words in order to make a correct sentence</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="from">from</button>
@@ -223,7 +252,7 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <p>Each sentence has one wrong word. Tap the word that is wrong.</p>
 
-  <div class="micro-drill" data-spot-error data-answer="she" data-fix="My sister is a nurse." data-why="“My sister” is already the subject, so we do not add “she”.">
+  <div class="micro-drill" data-spot-error data-answer="she" data-hint="The sentence already has the subject My sister. Look for an unnecessary second subject." data-fix="My sister is a nurse." data-why="“My sister” is already the subject, so we do not add “she”.">
     <h3>Sentence 1</h3>
     <p class="ex">My sister she is a nurse.</p>
     <div class="spot-options">
@@ -234,7 +263,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="he" data-fix="It is old." data-why="A book is a thing, so we use “it”, not “he”.">
+  <div class="micro-drill" data-spot-error data-answer="he" data-hint="The second sentence points back to one thing: the book." data-fix="The book is heavy. It is old." data-why="A book is a thing, so we use “it”, not “he”.">
     <h3>Sentence 2</h3>
     <p class="ex">The book is heavy. He is old.</p>
     <div class="spot-options">
@@ -245,7 +274,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="we" data-fix="They are my friends." data-why="Maria and Tom are other people, so we use “they”, not “we”.">
+  <div class="micro-drill" data-spot-error data-answer="we" data-hint="The speaker is talking about Maria and Tom, not a group that includes the speaker." data-fix="They are my friends." data-why="Maria and Tom are other people, so we use “they”, not “we”.">
     <h3>Sentence 3</h3>
     <p class="ex">Maria and Tom are here. We are my friends.</p>
     <div class="spot-options">
@@ -264,7 +293,7 @@ export const page = defineLesson({
     <p class="tile-target">Say your sentence first, then tap reveal</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
-        <div class="transform-cue"><b>Carlos</b><span>→ ___ is a chef.</span></div>
+        <div class="transform-cue"><b>Carlos, my uncle</b><span>→ ___ is a chef.</span></div>
         <button class="lesson-btn" data-reveal-transform>Reveal</button>
         <div class="transform-answer" data-transform-answer><strong>He</strong> is a chef.</div>
       </div>
@@ -288,39 +317,47 @@ export const page = defineLesson({
 
   <h2>Quick check</h2>
   <div class="lead-rule"></div>
-  <div class="quiz" data-quiz data-success-message="Excellent. You can choose the right subject pronoun.">
+  <div class="quiz" data-quiz data-success-message="Excellent. You used the stated person or thing to choose she, it, we, and they, including they for one caller whose gender is unknown.">
     <h3>Choose the correct pronoun</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="she">
-        <p class="quiz-question">1. Anna is my friend. ___ is from Spain.</p>
+      <div class="quiz-item" data-quiz-item data-answer="she" data-hint="Anna is identified as my sister." data-fix="Use She for my sister Anna: She is from Spain.">
+        <p class="quiz-question">1. Anna is my sister and my friend. ___ is from Spain.</p>
         <div class="quiz-options">
-          <button class="quiz-option" data-quiz-option="he">He</button>
-          <button class="quiz-option" data-quiz-option="she">She</button>
-          <button class="quiz-option" data-quiz-option="it">It</button>
+          <button class="quiz-option" data-quiz-option="he" data-value-label-variant="case">He</button>
+          <button class="quiz-option" data-quiz-option="she" data-value-label-variant="case">She</button>
+          <button class="quiz-option" data-quiz-option="it" data-value-label-variant="case">It</button>
         </div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="it">
+      <div class="quiz-item" data-quiz-item data-answer="it" data-hint="The car is one thing." data-fix="Use It for one car: It is fast.">
         <p class="quiz-question">2. Look at the car. ___ is fast.</p>
         <div class="quiz-options">
-          <button class="quiz-option" data-quiz-option="he">He</button>
-          <button class="quiz-option" data-quiz-option="it">It</button>
-          <button class="quiz-option" data-quiz-option="they">They</button>
+          <button class="quiz-option" data-quiz-option="he" data-value-label-variant="case">He</button>
+          <button class="quiz-option" data-quiz-option="it" data-value-label-variant="case">It</button>
+          <button class="quiz-option" data-quiz-option="they" data-value-label-variant="case">They</button>
         </div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="we">
+      <div class="quiz-item" data-quiz-item data-answer="we" data-hint="My brother and I includes the speaker." data-fix="Use We for a group that includes the speaker: We play basketball.">
         <p class="quiz-question">3. My brother and I are tall. ___ play basketball.</p>
         <div class="quiz-options">
-          <button class="quiz-option" data-quiz-option="we">We</button>
-          <button class="quiz-option" data-quiz-option="they">They</button>
-          <button class="quiz-option" data-quiz-option="you">You</button>
+          <button class="quiz-option" data-quiz-option="we" data-value-label-variant="case">We</button>
+          <button class="quiz-option" data-quiz-option="they" data-value-label-variant="case">They</button>
+          <button class="quiz-option" data-quiz-option="you" data-value-label-variant="case">You</button>
         </div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="they">
+      <div class="quiz-item" data-quiz-item data-answer="they" data-hint="Keys means more than one thing." data-fix="Use They for the keys: They are on the table.">
         <p class="quiz-question">4. These are my keys. ___ are on the table.</p>
         <div class="quiz-options">
-          <button class="quiz-option" data-quiz-option="it">It</button>
-          <button class="quiz-option" data-quiz-option="they">They</button>
-          <button class="quiz-option" data-quiz-option="he">He</button>
+          <button class="quiz-option" data-quiz-option="it" data-value-label-variant="case">It</button>
+          <button class="quiz-option" data-quiz-option="they" data-value-label-variant="case">They</button>
+          <button class="quiz-option" data-quiz-option="he" data-value-label-variant="case">He</button>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="They want a callback." data-hint="The caller is a person, but the person’s gender is not known." data-fix="Use singular they without guessing gender: They want a callback.">
+        <p class="quiz-question">5. A caller left a message, but you do not know the caller’s name or gender. Which sentence is best?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-quiz-option="They want a callback.">They want a callback.</button>
+          <button class="quiz-option" data-quiz-option="It wants a callback.">It wants a callback.</button>
+          <button class="quiz-option" data-quiz-option="He wants a callback.">He wants a callback.</button>
         </div>
       </div>
     </div>
@@ -334,7 +371,7 @@ export const page = defineLesson({
   <h2>Communicate</h2>
   <div class="lead-rule"></div>
   <div class="prompt-card"><b>Pair drill:</b> point to people or objects in the room. Partner answers with a full sentence: <span class="ex">She is Maria. It is a pencil. We are students.</span></div>
-  <div class="prompt-card"><b>Personalization:</b> learners write three true sentences using <span class="ex">I, you, we</span>, then read them aloud.</div>
+  <div class="prompt-card"><b>Personalization:</b> Write three true sentences using <span class="ex">I, you, we</span>, then read them aloud.</div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -347,7 +384,60 @@ export const page = defineLesson({
       <li>Do you use <span class="ex">it</span> for a thing, not <span class="ex">he</span> or <span class="ex">she</span>?</li>
     </ul>
   </div>
-  <div class="prompt-card"><b>Next use:</b> in your next class, introduce three people you know using <span class="ex">he</span>, <span class="ex">she</span>, and <span class="ex">they</span>.</div>
+  <div class="prompt-card"><b>Next use:</b> in your next class, introduce three people you know using <span class="ex">he</span>, <span class="ex">she</span>, and <span class="ex">they</span>. Then return to the <a href="#next-day-retrieval">five-minute retrieval check</a> without reviewing your notes first.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day pronoun retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Come back tomorrow. Try this short check before you look at the lesson again.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved He for a known brother, It for one laptop, and singular They for a visitor whose gender is not known.">
+      <h3>Choose from memory</h3>
+      <p class="choice-hint">Tap each gap, then choose the pronoun that fits the context</p>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="He">He</button>
+        <button class="choice-option" data-choice-option="It">It</button>
+        <button class="choice-option" data-choice-option="They">They</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Luis is my brother. <button class="choice-gap" data-choice-gap data-answer="He" data-hint="The first sentence identifies Luis as my brother." data-fix="Use He for my brother Luis: He is a chef." data-placeholder="choose">choose</button> is a chef.</span></div>
+      <div class="q"><span class="n">2</span><span>This laptop is new. <button class="choice-gap" data-choice-gap data-answer="It" data-hint="A laptop is one thing." data-fix="Use It for one laptop: It is fast." data-placeholder="choose">choose</button> is fast.</span></div>
+      <div class="q"><span class="n">3</span><span>A visitor called, but I do not know the visitor’s gender. <button class="choice-gap" data-choice-gap data-answer="They" data-hint="The visitor is one person whose gender is not known." data-fix="Use singular They for the visitor: They want to speak with you." data-placeholder="choose">choose</button> want to speak with you.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="we" data-hint="The speaker is talking about the parents, not a group that includes the speaker." data-fix="My parents are here. They are waiting outside." data-why="My parents are other people, so use they, not we.">
+      <h3>Repair from memory</h3>
+      <p class="ex">My parents are here. We are waiting outside.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="parents">parents</button>
+        <button class="error-choice" data-error-choice="we" data-correct="true">We</button>
+        <button class="error-choice" data-error-choice="outside">outside</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without notes</h3>
+      <p class="tile-target">Answer aloud, then reveal</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <div class="transform-cue"><b>Who is who?</b><span>I = the speaker. You = ___ . We = ___ .</span></div>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <div class="transform-answer" data-transform-answer><strong>You</strong> = the listener. <strong>We</strong> = the speaker plus one or more people.</div>
+        </div>
+        <div class="transform-item" data-transform-item>
+          <div class="transform-cue"><b>Replace the words</b><span>My sister and brother are at work. ___ are busy.</span></div>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <div class="transform-answer" data-transform-answer><strong>They</strong> are busy.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-card"><b>Thirty-second response:</b> identify yourself, your listener, one person whose pronoun you know, and one unknown caller. Use <span class="ex">I</span>, <span class="ex">you</span>, <span class="ex">he, she,</span> or <span class="ex">they</span>, and singular <span class="ex">they</span>.</div>
+  </section>
 </main>
 </LessonPage>
-

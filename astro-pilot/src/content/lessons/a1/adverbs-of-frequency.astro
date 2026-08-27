@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Adverbs of frequency · A1 Grammar · Curriculum Map",
+  "title": "Adverbs of frequency · A1 Grammar",
   "slug": "adverbs-of-frequency",
   "level": "A1",
   "topic": "Adverbs of frequency",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Show how often something happens: I usually cook , She is always early , and We never drive .",
+  "description": "Choose and position always, usually, often, sometimes, rarely, and never to describe repeated patterns and answer how-often questions.",
   "sequence": 6,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a1/present-simple"],
+  "related": ["a1/can-for-ability-and-permission", "a1/daily-routines-and-telling-the-time", "a2/past-time-expressions"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Frequency meaning, ordinary-verb, be, helper, negative, and question placement, flexible sometimes, U.S. spoken form, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 6</p>
   <h1>Adverbs of <em>frequency</em></h1>
-  <p class="standfirst">Show how often something happens: <span class="ex">I usually cook</span>, <span class="ex">She is always early</span>, and <span class="ex">We never drive</span>.</p>
+  <p class="standfirst">Describe a pattern across repeated occasions, not one isolated event: <span class="ex">I usually cook</span>, <span class="ex">She is always early</span>, and <span class="ex">We never drive</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">always → never</span>
-    <span class="tag">word order</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">always to never</span>
+    <span class="tag">meaning and word order</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Read three sentences about a routine.</span></div>
     <div class="flow-step"><b>Discover</b><span>Find where the adverb sits.</span></div>
     <div class="flow-step"><b>Build</b><span>Place, type, and build the pattern.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe your real week.</span></div>
+    <div class="flow-step"><b>Use</b><span>Report a fictional weekly pattern.</span></div>
   </div>
 
-  <p class="note-line">One small word, <span class="ex">always</span>, <span class="ex">usually</span>, <span class="ex">sometimes</span>, or <span class="ex">never</span>, tells the listener how often something happens. The only trick is where to put it.</p>
+  <p class="note-line">A word such as <span class="ex">always</span>, <span class="ex">usually</span>, <span class="ex">sometimes</span>, or <span class="ex">never</span> summarizes a pattern across many occasions. You need to choose a meaning that the evidence supports and place the word where the listener expects it.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved third-person checks, modal can with a base verb, and the plural be form are.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -51,9 +59,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="am">am</button>
       <button class="choice-option" data-choice-option="are">are</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Daniel <button class="choice-gap" data-choice-gap data-answer="checks" data-placeholder="choose">choose</button> his email every morning. &nbsp;<span class="contraction">(present simple)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> speak Spanish and English. &nbsp;<span class="contraction">(can)</span></span></div>
-    <div class="q"><span class="n">3</span><span>We <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> busy on Mondays. &nbsp;<span class="contraction">(the verb to be)</span></span></div>
+    <div class="q"><span class="n">1</span><span>Daniel’s routine log records the same action every morning. Daniel <button class="choice-gap" data-choice-gap data-answer="checks" data-hint="The singular subject Daniel takes the third-person form checks." data-fix="Daniel checks his email every morning." data-placeholder="choose">choose</button> his email every morning. &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The fictional language profile lists two positive abilities. I <button class="choice-gap" data-choice-gap data-answer="can" data-hint="A positive ability uses can before the unchanged base verb speak." data-fix="I can speak Spanish and English." data-placeholder="choose">choose</button> speak Spanish and English. &nbsp;<span class="contraction">(can)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The schedule marks every Monday as busy for the whole team. We <button class="choice-gap" data-choice-gap data-answer="are" data-hint="The plural subject we takes the be form are." data-fix="We are busy on Mondays." data-placeholder="choose">choose</button> busy on Mondays. &nbsp;<span class="contraction">(the verb to be)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -73,7 +81,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Every occasion supports always, most supports usually, some supports sometimes, and zero occasions supports never.">
     <h3>Discovery check: match the meaning</h3>
     <p class="choice-hint">Read the situation first. Then choose the adverb that describes it.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -82,12 +90,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="sometimes">sometimes</button>
       <button class="choice-option" data-choice-option="never">never</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The 8:15 train leaves on time every single day. It <button class="choice-gap" data-choice-gap data-answer="always" data-placeholder="choose">choose</button> leaves on time.</span></div>
-    <div class="q"><span class="n">2</span><span>I drink coffee most mornings, but not every morning. I <button class="choice-gap" data-choice-gap data-answer="usually" data-placeholder="choose">choose</button> drink coffee.</span></div>
-    <div class="q"><span class="n">3</span><span>He eats out two or three times a month. He <button class="choice-gap" data-choice-gap data-answer="sometimes" data-placeholder="choose">choose</button> eats out.</span></div>
-    <div class="q"><span class="n">4</span><span>She does not watch television at all. She <button class="choice-gap" data-choice-gap data-answer="never" data-placeholder="choose">choose</button> watches television.</span></div>
-    <div class="q"><span class="n">5</span><span>We are on time for every meeting, with no exceptions. We are <button class="choice-gap" data-choice-gap data-answer="always" data-placeholder="choose">choose</button> on time.</span></div>
-    <div class="q"><span class="n">6</span><span>I have not worked on a Sunday once this year. I <button class="choice-gap" data-choice-gap data-answer="never" data-placeholder="choose">choose</button> work on Sundays.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional train log shows an on-time departure on every recorded day. It <button class="choice-gap" data-choice-gap data-answer="always" data-hint="Every recorded occasion, with no exception, supports always." data-fix="The 8:15 train always leaves on time in this fictional log." data-placeholder="choose">choose</button> leaves on time.</span></div>
+    <div class="q"><span class="n">2</span><span>The breakfast log shows coffee on most mornings, but not all of them. I <button class="choice-gap" data-choice-gap data-answer="usually" data-hint="Most mornings, but not every morning, supports usually." data-fix="The fictional speaker usually drinks coffee with breakfast." data-placeholder="choose">choose</button> drink coffee.</span></div>
+    <div class="q"><span class="n">3</span><span>The monthly calendar shows two restaurant meals and many meals at home. He <button class="choice-gap" data-choice-gap data-answer="sometimes" data-hint="A few occasions among many supports sometimes." data-fix="He sometimes eats out." data-placeholder="choose">choose</button> eats out.</span></div>
+    <div class="q"><span class="n">4</span><span>The fictional media log records zero television viewing. She <button class="choice-gap" data-choice-gap data-answer="never" data-hint="Zero occasions supports never, which already carries negative meaning." data-fix="She never watches television." data-placeholder="choose">choose</button> watches television.</span></div>
+    <div class="q"><span class="n">5</span><span>The attendance record shows the group on time for every meeting, with no exceptions. We are <button class="choice-gap" data-choice-gap data-answer="always" data-hint="Every meeting supports always, and the adverb follows are." data-fix="We are always on time in this fictional record." data-placeholder="choose">choose</button> on time.</span></div>
+    <div class="q"><span class="n">6</span><span>The yearly work log shows zero Sunday shifts. I <button class="choice-gap" data-choice-gap data-answer="never" data-hint="Zero Sunday shifts supports never before the ordinary verb work." data-fix="The fictional employee never works on Sundays." data-placeholder="choose">choose</button> work on Sundays.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -111,26 +119,47 @@ export const page = defineLesson({
   </table>
   <p class="note-line">The percentages are memory aids, not measurements. <span class="ex">Usually</span> is not a mathematical 80%, and two speakers may choose different words for the same real pattern.</p>
 
-  <h2>Get to the root: one rule, two positions</h2>
+  <h2>Get to the root: the adverb stays near the verb</h2>
   <div class="lead-rule"></div>
-  <p>The heart of this lesson is position. A frequency adverb sits <strong>before a normal verb</strong> but <strong>after the verb be</strong>. Say <span class="ex">I always start at nine</span> and <span class="ex">She is always on time</span>.</p>
+  <p>The usual home for a frequency adverb is the <strong>middle position</strong>, close to the verb. Its exact place depends on the verb pattern. It comes before an ordinary main verb, after <span class="ex">be</span>, and after a modal such as <span class="ex">can</span>.</p>
   <table>
-    <thead><tr><th>main verb</th><th>position</th><th>example</th></tr></thead>
+    <thead><tr><th>verb pattern</th><th>position</th><th>example</th></tr></thead>
     <tbody>
       <tr><td><b>a normal verb</b> (check, take, work)</td><td>adverb before the verb</td><td>I always start at nine.</td></tr>
       <tr><td><b>the verb be</b> (am, is, are)</td><td>adverb after be</td><td>She is always on time.</td></tr>
+      <tr><td><b>a modal</b> (can)</td><td>adverb after the modal</td><td>She can always help.</td></tr>
+      <tr><td><b>negative do</b> (don’t, doesn’t)</td><td>adverb after the negative helper</td><td>I don’t usually work Sundays.</td></tr>
     </tbody>
   </table>
-  <p class="note-line"><span class="ex">Sometimes</span> is the flexible one: it can also move to the front. <span class="ex">Sometimes I work late</span> means the same as <span class="ex">I sometimes work late</span>.</p>
+  <p class="note-line"><span class="ex">Sometimes</span> is especially flexible in everyday English. Front, middle, and end positions are natural: <span class="ex">Sometimes I work late</span>, <span class="ex">I sometimes work late</span>, and <span class="ex">I work late sometimes</span>. Middle position is a reliable default.</p>
 
   <h3>Why the order changes with <em>be</em></h3>
-  <p>With most verbs, the adverb stands in front of the action: <span class="ex">I usually cook</span>. With <span class="ex">be</span>, the verb is short and structurally central, so the adverb follows it: <span class="ex">I am usually tired</span>. In longer verb phrases, it normally follows the first helper verb: <span class="ex">She can always help</span>.</p>
+  <p>With most verbs, the adverb stands in front of the action: <span class="ex">I usually cook</span>. With <span class="ex">be</span>, the verb is short and structurally central, so the adverb follows it: <span class="ex">I am usually tired</span>. A modal already occupies the first verb position, so the adverb follows the modal and precedes the main action: <span class="ex">She can always help</span>.</p>
   <div class="thinking-card">
     <h3>Already negative</h3>
     <p><span class="ex">Never</span> and <span class="ex">rarely</span> carry a negative meaning by themselves: <span class="ex">I never drink coffee</span> already means “not on any occasion.” English uses one negative per idea, so say <span class="ex">I never drink coffee</span>, not <span class="ex">I don’t never drink coffee</span>. If the sentence already has <span class="ex">don’t</span>, it does not need <span class="ex">never</span> too.</p>
   </div>
+  <div class="note">
+    <h3><em>Not always</em> is not <em>never</em></h3>
+    <p><span class="ex">I don’t always drive</span> means that driving is not the pattern on every occasion. The speaker drives on some occasions. <span class="ex">I never drive</span> means zero occasions. Keep this meaning difference when you place the adverb after <span class="ex">don’t</span> or <span class="ex">doesn’t</span>.</p>
+  </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Sound natural: stress the message, not every word</h3>
+    <p>In a neutral sentence, the frequency adverb is usually part of the rhythm rather than the loudest word. The strongest beat often falls on the action or the important information after <span class="ex">be</span>.</p>
+    <table>
+      <thead><tr><th>neutral rhythm</th><th>strongest message</th><th>what the listener hears</th></tr></thead>
+      <tbody>
+        <tr><td>I usually <b>START</b> at nine.</td><td>the routine action</td><td>Starting at nine is normal for me.</td></tr>
+        <tr><td>She is always on <b>TIME</b>.</td><td>the important description</td><td>Being punctual is her consistent pattern.</td></tr>
+        <tr><td>We rarely eat <b>OUT</b>.</td><td>the activity being limited</td><td>Eating at restaurants is unusual for us.</td></tr>
+      </tbody>
+    </table>
+    <p>Stress the adverb itself when you are correcting or contrasting: <span class="ex">I <strong>ALWAYS</strong> lock the door. I never forget.</span> In American English, <span class="ex">often</span> is commonly heard both with and without the <em>t</em>; both pronunciations are standard.</p>
+    <p>The first syllable carries the main stress in <span class="ex">usually</span> and <span class="ex">rarely</span>. In natural speech, <span class="ex">usually</span> may sound compact, approximately <span class="ex">YOO-zhuh-lee</span>, while <span class="ex">rarely</span> is approximately <span class="ex">RARE-lee</span>. Keep the important action or description clear even when the adverb becomes quick.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each adverb appears before an ordinary verb or after be, while the stated routine supports its frequency meaning.">
     <h3>Drill 1: choose the chunk in the right position</h3>
     <p class="choice-hint">Find the verb first. Is it <b>be</b> or a normal verb? Then choose the chunk that puts the adverb in the natural place.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -145,14 +174,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="sometimes takes">sometimes takes</button>
       <button class="choice-option" data-choice-option="takes sometimes">takes sometimes</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Rosa <button class="choice-gap" data-choice-gap data-answer="is never" data-placeholder="choose">choose</button> late. You can set your watch by her.</span></div>
-    <div class="q"><span class="n">2</span><span>I <button class="choice-gap" data-choice-gap data-answer="usually work" data-placeholder="choose">choose</button> from home on Fridays.</span></div>
-    <div class="q"><span class="n">3</span><span>My manager <button class="choice-gap" data-choice-gap data-answer="always checks" data-placeholder="choose">choose</button> the numbers before a meeting.</span></div>
-    <div class="q"><span class="n">4</span><span>He <button class="choice-gap" data-choice-gap data-answer="is often" data-placeholder="choose">choose</button> tired after the night shift, so he sleeps until noon.</span></div>
-    <div class="q"><span class="n">5</span><span>Elena <button class="choice-gap" data-choice-gap data-answer="sometimes takes" data-placeholder="choose">choose</button> the early train when she has a morning meeting.</span></div>
-    <div class="q"><span class="n">6</span><span>My coworkers <button class="choice-gap" data-choice-gap data-answer="usually work" data-placeholder="choose">choose</button> late on Thursdays because of the weekly report.</span></div>
-    <div class="q"><span class="n">7</span><span>The break room <button class="choice-gap" data-choice-gap data-answer="is often" data-placeholder="choose">choose</button> noisy at lunchtime, so I eat at my desk.</span></div>
-    <div class="q"><span class="n">8</span><span>Sam <button class="choice-gap" data-choice-gap data-answer="sometimes takes" data-placeholder="choose">choose</button> the bus when it rains.</span></div>
+    <div class="q"><span class="n">1</span><span>Rosa’s attendance record contains no late arrivals. Rosa <button class="choice-gap" data-choice-gap data-answer="is never" data-hint="With is, place never after the be form; zero late arrivals supports never." data-fix="Rosa is never late in this attendance record." data-placeholder="choose">choose</button> late.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional work log shows home as my Friday location on most weeks. I <button class="choice-gap" data-choice-gap data-answer="usually work" data-hint="Place usually before the ordinary verb work; most Fridays supports usually." data-fix="I usually work from home on Fridays." data-placeholder="choose">choose</button> from home on Fridays.</span></div>
+    <div class="q"><span class="n">3</span><span>Every meeting checklist shows a completed number review. My manager <button class="choice-gap" data-choice-gap data-answer="always checks" data-hint="Place always before the ordinary verb checks; every checklist supports always." data-fix="My manager always checks the numbers before a meeting." data-placeholder="choose">choose</button> the numbers before a meeting.</span></div>
+    <div class="q"><span class="n">4</span><span>The fictional night-shift journal reports tiredness on many mornings. He <button class="choice-gap" data-choice-gap data-answer="is often" data-hint="With is, place often after the be form; many mornings supports often." data-fix="He is often tired after the night shift." data-placeholder="choose">choose</button> tired after the night shift.</span></div>
+    <div class="q"><span class="n">5</span><span>Elena’s calendar shows the early train before a few morning meetings. Elena <button class="choice-gap" data-choice-gap data-answer="sometimes takes" data-hint="Place sometimes before the ordinary verb takes; a few occasions supports sometimes." data-fix="Elena sometimes takes the early train when she has a morning meeting." data-placeholder="choose">choose</button> the early train when she has a morning meeting.</span></div>
+    <div class="q"><span class="n">6</span><span>The weekly report causes late work on most Thursdays. My coworkers <button class="choice-gap" data-choice-gap data-answer="usually work" data-hint="Place usually before the ordinary verb work; most Thursdays supports usually." data-fix="My coworkers usually work late on Thursdays because of the weekly report." data-placeholder="choose">choose</button> late on Thursdays.</span></div>
+    <div class="q"><span class="n">7</span><span>The noise log records a loud break room on many lunch periods. The break room <button class="choice-gap" data-choice-gap data-answer="is often" data-hint="With is, place often after the be form; many lunch periods supports often." data-fix="The break room is often noisy at lunchtime." data-placeholder="choose">choose</button> noisy at lunchtime.</span></div>
+    <div class="q"><span class="n">8</span><span>Sam’s travel log shows bus trips on some rainy days. Sam <button class="choice-gap" data-choice-gap data-answer="sometimes takes" data-hint="Place sometimes before the ordinary verb takes; some rainy days supports sometimes." data-fix="Sam sometimes takes the bus when it rains." data-placeholder="choose">choose</button> the bus when it rains.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -175,20 +204,55 @@ export const page = defineLesson({
 
   <h3>Ask with <em>How often…?</em></h3>
   <p>Use <span class="ex">How often + do/does + subject + base verb?</span>: <span class="ex">How often do you cook?</span> With <span class="ex">be</span>, move <span class="ex">be</span> directly: <span class="ex">How often are you late?</span> Answers can be general (<span class="ex">Rarely</span>) or exact (<span class="ex">About once a month</span>).</p>
+  <p class="note-line">In a yes-or-no question, the subject comes before the frequency adverb: <span class="ex">Do you usually cook?</span>, <span class="ex">Is she often late?</span>, and <span class="ex">Can they always come on Friday?</span> The adverb still stays close to the main message.</p>
   <div class="note">
     <h3>A meaning trap</h3>
     <p><span class="ex">Hardly ever</span> means the same as <span class="ex">rarely</span>: almost never. Do not confuse it with <span class="ex">hard</span>, which describes effort. <span class="ex">He works hard</span> is about effort; <span class="ex">He hardly ever works late</span> is about frequency.</p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <section data-lesson-extension="Tutor-read frequency placement and spoken-rhythm listening check">
+    <h2>Listen: find the pattern in the rhythm</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional routine once at a natural speed and once more slowly. Listen for the frequency word, the verb pattern around it, and the strongest message word. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard middle position with ordinary verbs, be, a modal, and negative do, plus flexible front position and the single negative never.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Frequency listening chunks">
+        <button class="choice-option" data-choice-option="usually starts">usually starts</button><button class="choice-option" data-choice-option="is always">is always</button>
+        <button class="choice-option" data-choice-option="can often">can often</button><button class="choice-option" data-choice-option="doesn’t usually">doesn’t usually</button>
+        <button class="choice-option" data-choice-option="Sometimes">Sometimes</button><button class="choice-option" data-choice-option="never">never</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 says Lena <button class="choice-gap" data-choice-gap data-answer="usually starts" data-hint="Listen for usually immediately before the ordinary verb starts." data-fix="Lena usually starts at nine." data-placeholder="listen">listen</button> at nine.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 says the station <button class="choice-gap" data-choice-gap data-answer="is always" data-hint="Listen for always immediately after the be form is." data-fix="The station is always busy at five." data-placeholder="listen">listen</button> busy at five.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 says Sam <button class="choice-gap" data-choice-gap data-answer="can often" data-hint="Listen for often after the modal can and before the base verb help." data-fix="Sam can often help after lunch." data-placeholder="listen">listen</button> help after lunch.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 says Noor <button class="choice-gap" data-choice-gap data-answer="doesn’t usually" data-hint="Listen for usually after the negative helper doesn’t and before the base verb work." data-fix="Noor doesn’t usually work on Sundays." data-placeholder="listen">listen</button> work on Sundays.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 places <button class="choice-gap" data-choice-gap data-answer="Sometimes" data-hint="The flexible adverb appears before the subject at the start of the sentence." data-fix="Sometimes the team eats outside." data-placeholder="listen">listen</button> at the front of the sentence.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 says the fictional clinic <button class="choice-gap" data-choice-gap data-answer="never" data-hint="Listen for the single negative frequency word before the ordinary verb closes." data-fix="The fictional clinic never closes early." data-placeholder="listen">listen</button> closes early.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">Lena usually <strong>STARTS</strong> at nine, but today she is starting at ten.</span></li>
+        <li><span class="ex">The station is always <strong>BUSY</strong> at five.</span></li>
+        <li><span class="ex">Sam can often <strong>HELP</strong> after lunch.</span></li>
+        <li><span class="ex">Noor doesn’t usually <strong>WORK</strong> on Sundays.</span></li>
+        <li><span class="ex">Sometimes the team eats <strong>OUTSIDE</strong>.</span></li>
+        <li><span class="ex">The fictional clinic never closes <strong>EARLY</strong>.</span></li>
+      </ol>
+      <p>Keep a neutral adverb lighter than the main message word. On a second reading, stress the adverb to create a correction or contrast.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-answer-drill data-success-message="Correct. Each evidence label supports one frequency adverb, placed before the ordinary verb in its sentence.">
     <h3>Drill 2: type the adverb</h3>
     <p class="choice-hint">Read the cue, then type one adverb from the ladder: <b>always</b>, <b>usually</b>, <b>often</b>, <b>sometimes</b>, <b>rarely</b>, or <b>never</b>.</p>
-    <div class="q"><span class="n">1</span><span>100%, every time: I <input class="answer-input" data-answer="always" aria-label="answer 1" /> lock the door when I leave.</span></div>
-    <div class="q"><span class="n">2</span><span>0%, at no time: I <input class="answer-input" data-answer="never" aria-label="answer 2" /> eat meat. I’m vegetarian.</span></div>
-    <div class="q"><span class="n">3</span><span>Almost every time: I <input class="answer-input" data-answer="usually" aria-label="answer 3" /> have coffee with breakfast.</span></div>
-    <div class="q"><span class="n">4</span><span>Some of the time: I <input class="answer-input" data-answer="sometimes" aria-label="answer 4" /> walk to work.</span></div>
-    <div class="q"><span class="n">5</span><span>Many times: she <input class="answer-input" data-answer="often" aria-label="answer 5" /> travels for work.</span></div>
-    <div class="q"><span class="n">6</span><span>Almost never: he <input class="answer-input" data-answer="rarely" aria-label="answer 6" /> takes a taxi.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional exit log shows the door locked every time: I <input class="answer-input" data-answer="always" data-hint="Every recorded occasion, with no exception, supports always." data-fix="I always lock the door when I leave." aria-label="Frequency adverb before lock for every recorded exit" /> lock the door when I leave.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional meal log contains zero meat: I <input class="answer-input" data-answer="never" data-hint="Zero occasions supports never, which already carries negative meaning." data-fix="I never eat meat in this fictional meal log." aria-label="Frequency adverb before eat for zero meat occasions" /> eat meat.</span></div>
+    <div class="q"><span class="n">3</span><span>The breakfast log shows coffee on almost every day: I <input class="answer-input" data-answer="usually" data-hint="Almost every occasion, but not all, supports usually." data-fix="I usually have coffee with breakfast." aria-label="Frequency adverb before have for almost every breakfast" /> have coffee with breakfast.</span></div>
+    <div class="q"><span class="n">4</span><span>The travel log shows walking on some workdays: I <input class="answer-input" data-answer="sometimes" data-hint="Some occasions among many supports sometimes." data-fix="I sometimes walk to work." aria-label="Frequency adverb before walk for some workdays" /> walk to work.</span></div>
+    <div class="q"><span class="n">5</span><span>The fictional calendar records many work trips: She <input class="answer-input" data-answer="often" data-hint="Many repeated occasions supports often." data-fix="She often travels for work." aria-label="Frequency adverb before travels for many work trips" /> travels for work.</span></div>
+    <div class="q"><span class="n">6</span><span>The transport log records only one taxi ride all year: He <input class="answer-input" data-answer="rarely" data-hint="One occasion in a whole year supports rarely, or almost never." data-fix="He rarely takes a taxi." aria-label="Frequency adverb before takes for one yearly taxi ride" /> takes a taxi.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -202,18 +266,18 @@ export const page = defineLesson({
     <h3>A coworker’s routine</h3>
     <p><span class="ex">"My coworker Elena usually opens the office. She always makes the first pot of coffee, and she is never late, even in bad weather. On Fridays she sometimes leaves early to pick up her son from school. She rarely takes the elevator because she likes the stairs."</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed the frequency words in a real description.">
+  <div class="quiz" data-quiz data-success-message="Correct. You followed who performs the routine, the zero-frequency late pattern, and the rarely used elevator in the fictional description.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Elena">
+      <div class="quiz-item" data-quiz-item data-answer="Elena" data-hint="The first sentence names the person immediately before usually opens." data-fix="Elena usually opens the office.">
         <p class="quiz-question">1. Who usually opens the office?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Elena">Elena</button><button class="quiz-option" data-quiz-option="her son">her son</button><button class="quiz-option" data-quiz-option="the writer">the writer</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="never">
+      <div class="quiz-item" data-quiz-item data-answer="never" data-hint="The description places never after is to report zero late occasions." data-fix="Elena is never late in this fictional routine.">
         <p class="quiz-question">2. How often is Elena late?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="never">never</button><button class="quiz-option" data-quiz-option="sometimes">sometimes</button><button class="quiz-option" data-quiz-option="often">often</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the elevator">
+      <div class="quiz-item" data-quiz-item data-answer="the elevator" data-hint="The last sentence places rarely immediately before takes and names the object after it." data-fix="Elena rarely takes the elevator.">
         <p class="quiz-question">3. What does she rarely take?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the elevator">the elevator</button><button class="quiz-option" data-quiz-option="the stairs">the stairs</button><button class="quiz-option" data-quiz-option="the early train">the early train</button></div>
       </div>
@@ -225,7 +289,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she is always on time">
+  <div class="tile-game" data-tile-builder data-answer="she is always on time" data-hint="Begin with She is, place always after the be form, and finish on time." data-fix="She is always on time." data-success-message="Correct. With the be form is, the frequency adverb always appears immediately after it.">
     <h3>Drill 4: build the sentence with be</h3>
     <p class="tile-target">Build the sentence. Remember: the adverb comes after is.</p>
     <div class="tile-bank" data-build-bank>
@@ -243,7 +307,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="i usually walk to work">
+  <div class="tile-game" data-tile-builder data-answer="i usually walk to work" data-hint="Begin with I, place usually before the ordinary verb walk, and finish to work." data-fix="I usually walk to work." data-success-message="Correct. With the ordinary verb walk, the frequency adverb usually appears immediately before it.">
     <h3>Drill 5: build the sentence with a normal verb</h3>
     <p class="tile-target">Build the sentence. The adverb comes before a normal verb.</p>
     <div class="tile-bank" data-build-bank>
@@ -263,7 +327,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="always" data-fix="I always go to the gym after work." data-why="Put the frequency adverb before a normal verb like go.">
+  <div class="micro-drill" data-spot-error data-answer="always" data-hint="The ordinary verb is go, so its frequency adverb belongs immediately before it." data-fix="I always go to the gym after work." data-why="Put the frequency adverb before an ordinary verb like go.">
     <h3>Drill 6: repair the normal-verb sentence</h3>
     <p>Tap the word that is in the wrong place.</p>
     <div class="spot-options">
@@ -276,7 +340,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="always" data-fix="She is always tired on Monday mornings." data-why="With be, the frequency adverb comes after am, is, or are.">
+  <div class="micro-drill" data-spot-error data-answer="always" data-hint="The sentence uses the be form is, so its frequency adverb belongs immediately after is." data-fix="She is always tired on Monday mornings." data-why="With be, the frequency adverb comes after am, is, or are.">
     <h3>Drill 7: repair the be sentence</h3>
     <p>Tap the word that is in the wrong place.</p>
     <div class="spot-options">
@@ -328,53 +392,67 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your mornings:</b> Say five true sentences about your morning with <span class="ex">always</span> and <span class="ex">usually</span>. <span class="ex">I always make coffee first. I usually leave at eight.</span></div>
-  <div class="prompt-card"><b>Your never list:</b> Say three things you never do on a workday. <span class="ex">I never skip breakfast. I never answer email after ten.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five <span class="ex">How often…?</span> questions and listen for the adverb in the answer. <span class="ex">How often do you cook? How often are you late?</span></div>
-  <div class="prompt-card"><b>Someone you know:</b> Describe a coworker or family member with three frequency adverbs. <span class="ex">My brother is always calm. He rarely complains.</span></div>
-  <div class="prompt-card"><b>Weekday and weekend:</b> Compare a normal weekday with a Saturday. <span class="ex">On weekdays I always get up at seven. On Saturdays I usually sleep late.</span></div>
+  <p class="note-line">You never need to disclose your real routine, family, workplace, schedule, diet, health, religion, finances, or location. Use a fictional profile, a public schedule, or a teacher-provided weekly log whenever you prefer.</p>
+  <div class="prompt-card"><b>Fictional morning log:</b> Create five entries for a café worker, traveler, student, or new employee. Summarize the evidence with <span class="ex">always</span>, <span class="ex">usually</span>, and <span class="ex">never</span>.</div>
+  <div class="prompt-card"><b>Pattern and exception:</b> Give a character one usual routine and one exception. <span class="ex">Mina usually starts at nine, but today she is starting at ten.</span></div>
+  <div class="prompt-card"><b>Information interview:</b> Ask the teacher or a fictional character four <span class="ex">How often...?</span> questions. Request both one general answer and one exact frequency phrase.</div>
+  <div class="prompt-card"><b>Meaning contrast:</b> Explain the difference between <span class="ex">The driver doesn’t always arrive early</span> and <span class="ex">The driver never arrives early</span>. Add a simple weekly record that supports each sentence.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: present a fictional weekly service report</h3>
+    <p>Give a 45–60 second report about a library, café, clinic, transit stop, or community center. Include all six pieces of evidence:</p>
+    <ol>
+      <li>one frequency adverb before an ordinary verb;</li>
+      <li>one frequency adverb after <span class="ex">be</span>;</li>
+      <li>one adverb after <span class="ex">can</span> or after <span class="ex">don’t / doesn’t</span>;</li>
+      <li>one exact frequency phrase such as <span class="ex">twice a week</span>;</li>
+      <li>one <span class="ex">How often...?</span> question and answer;</li>
+      <li>one spoken contrast that stresses the frequency word to correct an earlier claim.</li>
+    </ol>
+    <p>The listener checks whether each adverb matches the report’s evidence and whether its position matches the verb pattern. Revise any claim that the evidence does not support.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
     <p>Complete this aloud: “With a normal verb, the frequency adverb comes ______ the verb. With am, is, and are, it comes ______ the verb. The flexible word that can also start a sentence is ______. The word that means 0% is ______.”</p>
-    <p>Then say one true sentence with <span class="ex">always</span>, one with <span class="ex">never</span>, and one with <span class="ex">is usually</span> about your real week.</p>
+    <p>Then use a real or fictional weekly log to say one sentence with <span class="ex">always</span>, one with <span class="ex">never</span>, one with <span class="ex">is usually</span>, and one with <span class="ex">can often</span>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can say how often, and put the adverb in the right place.">
+  <div class="quiz" data-quiz data-success-message="Correct. You matched frequency meaning to evidence and placed adverbs with ordinary verbs, be, negatives, and flexible front position.">
     <h3>Final quiz: position and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="I usually walk to work">
-        <p class="quiz-question">1. Choose the natural order.</p>
+      <div class="quiz-item" data-quiz-item data-answer="I usually walk to work" data-hint="With the ordinary verb walk, place usually immediately before the verb." data-fix="The natural middle position is: I usually walk to work.">
+        <p class="quiz-question">1. A fictional travel log shows walking on most workdays. Choose the natural order.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="I usually walk to work">I usually walk to work</button><button class="quiz-option" data-quiz-option="I walk usually to work">I walk usually to work</button><button class="quiz-option" data-quiz-option="I usually am walk to work">I usually am walk to work</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="is never">
-        <p class="quiz-question">2. She ___ late.</p>
+      <div class="quiz-item" data-quiz-item data-answer="is never" data-hint="With the be form is, place never immediately after it." data-fix="The attendance record says she is never late.">
+        <p class="quiz-question">2. The attendance record shows zero late arrivals: She ___ late.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="is never">is never</button><button class="quiz-option" data-quiz-option="never is">never is</button><button class="quiz-option" data-quiz-option="never be">never be</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="never">
-        <p class="quiz-question">3. Which word means 0% of the time?</p>
+      <div class="quiz-item" data-quiz-item data-answer="never" data-hint="Zero recorded occasions corresponds to the bottom of the frequency ladder." data-fix="Never means zero occasions, or 0% of the time.">
+        <p class="quiz-question">3. A log records zero occasions. Which word reports that pattern?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="never">never</button><button class="quiz-option" data-quiz-option="rarely">rarely</button><button class="quiz-option" data-quiz-option="sometimes">sometimes</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="always">
-        <p class="quiz-question">4. Which word means 100% of the time?</p>
+      <div class="quiz-item" data-quiz-item data-answer="always" data-hint="Every recorded occasion, with no exception, corresponds to the top of the frequency ladder." data-fix="Always reports every occasion in the stated pattern.">
+        <p class="quiz-question">4. A log records the action on every occasion, with no exceptions. Which word reports that pattern?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="always">always</button><button class="quiz-option" data-quiz-option="usually">usually</button><button class="quiz-option" data-quiz-option="often">often</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I never drink coffee.">
-        <p class="quiz-question">5. Which sentence is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="I never drink coffee." data-hint="Never already has negative meaning, so do not add don’t; place it before drink." data-fix="The single-negative sentence is: I never drink coffee.">
+        <p class="quiz-question">5. A fictional drink log records zero coffee. Which sentence uses one negative and natural word order?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="I never drink coffee.">I never drink coffee.</button><button class="quiz-option" data-quiz-option="I don’t never drink coffee.">I don’t never drink coffee.</button><button class="quiz-option" data-quiz-option="I drink never coffee.">I drink never coffee.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="usually works">
-        <p class="quiz-question">6. He ___ from home on Fridays.</p>
+      <div class="quiz-item" data-quiz-item data-answer="usually works" data-hint="Place usually before the ordinary verb, and keep the third-person -s on works." data-fix="The schedule says he usually works from home on Fridays.">
+        <p class="quiz-question">6. The fictional schedule shows home on most Fridays: He ___ from home on Fridays.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="usually works">usually works</button><button class="quiz-option" data-quiz-option="works usually">works usually</button><button class="quiz-option" data-quiz-option="is usually works">is usually works</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Sometimes">
-        <p class="quiz-question">7. Which adverb can move to the front, as in “___ I work late”?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Sometimes" data-hint="Among these choices, sometimes naturally appears before the subject in an ordinary statement." data-fix="Sometimes I work late is natural front position.">
+        <p class="quiz-question">7. Among these choices, which adverb naturally completes the ordinary statement “___ I work late”?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Sometimes">Sometimes</button><button class="quiz-option" data-quiz-option="Never">Never</button><button class="quiz-option" data-quiz-option="Always">Always</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="rarely">
-        <p class="quiz-question">8. Which word means almost never?</p>
+      <div class="quiz-item" data-quiz-item data-answer="rarely" data-hint="The word just above never on the ladder reports very few occasions." data-fix="Rarely means almost never, or very infrequently.">
+        <p class="quiz-question">8. A yearly log records only one taxi ride. Which word best summarizes that very low frequency?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="rarely">rarely</button><button class="quiz-option" data-quiz-option="often">often</button><button class="quiz-option" data-quiz-option="usually">usually</button></div>
       </div>
     </div>
@@ -384,6 +462,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the frequency meaning, verb pattern, question frame, or spoken contrast that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day frequency retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved middle position with an ordinary verb, be, a modal, and negative do from explicit weekly evidence.">
+      <h3>Choose the frequency chunk and position</h3>
+      <div class="choice-bank" aria-label="Next-day frequency chunks">
+        <button class="choice-option" data-choice-option="always checks">always checks</button><button class="choice-option" data-choice-option="is usually">is usually</button>
+        <button class="choice-option" data-choice-option="can often">can often</button><button class="choice-option" data-choice-option="don’t always">don’t always</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Every closing report includes a door check. The manager <button class="choice-gap" data-choice-gap data-answer="always checks" data-hint="Every report supports always before the ordinary verb checks." data-fix="The manager always checks the door." data-placeholder="choose">choose</button> the door.</span></div>
+      <div class="q"><span class="n">2</span><span>Most entries in the noise log describe a quiet room. The room <button class="choice-gap" data-choice-gap data-answer="is usually" data-hint="Most occasions supports usually after the be form is." data-fix="The room is usually quiet." data-placeholder="choose">choose</button> quiet.</span></div>
+      <div class="q"><span class="n">3</span><span>On many afternoons, Sam is available to help. Sam <button class="choice-gap" data-choice-gap data-answer="can often" data-hint="Many occasions supports often after the modal can." data-fix="Sam can often help in the afternoon." data-placeholder="choose">choose</button> help in the afternoon.</span></div>
+      <div class="q"><span class="n">4</span><span>The travel log shows some car trips and some bus trips. We <button class="choice-gap" data-choice-gap data-answer="don’t always" data-hint="Some, but not every, trip is by car, so use don’t always rather than never." data-fix="We don’t always drive." data-placeholder="choose">choose</button> drive.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="don’t" data-hint="The instruction requires never, which already carries the negative meaning, so the negative helper is extra." data-fix="They never arrive late." data-why="Use one negative for this idea. Never appears before the ordinary verb arrive without don’t.">
+      <h3>Repair the double negative</h3>
+      <p>The attendance summary must use <span class="ex">never</span>: “They don’t never arrive late.” Tap the one extra word.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="they">They</button><button class="error-choice" data-error-choice="don’t">don’t</button><button class="error-choice" data-error-choice="never">never</button><button class="error-choice" data-error-choice="arrive">arrive</button><button class="error-choice" data-error-choice="late">late.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, use one fictional weekly log to make an ordinary-verb sentence, a be sentence, a can sentence, and a How often question.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Mina usually starts at nine. She is never late. She can often help after lunch. How often does she work on Saturdays?</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

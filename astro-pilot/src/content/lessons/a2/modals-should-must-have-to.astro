@@ -1,391 +1,325 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "should, must, have to · A2 Grammar · Curriculum Map",
+  "title": "Should, must, have to · A2 Grammar",
   "slug": "modals-should-must-have-to",
   "level": "A2",
   "topic": "Modals: should, must, have to",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Give advice, talk about rules, and say what is necessary: You should rest , I have to renew my visa , Visitors must sign in , and You don’t have to pay now.",
+  "description": "Choose advice, ordinary requirements, firm rules, prohibition, and lack of necessity with should, must, and have to.",
   "sequence": 7,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "prerequisites": ["a1/can-for-ability-and-permission", "a1/imperatives"],
+  "related": ["b1/modals-of-deduction-might-could-must", "b2/modals-of-past-speculation"],
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Meaning choice, overlapping obligation forms, register, negatives, time reference, U.S. usage, connected speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 7</p>
   <h1>Advice and obligation with <em>should</em>, <em>must</em>, and <em>have to</em></h1>
-  <p class="standfirst">Give advice, talk about rules, and say what is necessary: <span class="ex">You should rest</span>, <span class="ex">I have to renew my visa</span>, <span class="ex">Visitors must sign in</span>, and <span class="ex">You don’t have to pay now.</span></p>
+  <p class="standfirst">Decide whether an action is recommended, required, prohibited, or optional. Then choose the form and register that fit: <span class="ex">You should label the boxes. Staff have to arrive by 8:30. Visitors must wear badges. You don’t have to print a ticket.</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">advice and obligation</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">recommendation · requirement · prohibition · choice</span>
     <span class="tag">should · must · have to</span>
-    <span class="tag">mustn’t vs don’t have to</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Watch should, must, and have to on a first day at work.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Find the base verb and the one verb that changes.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose forms, read a clinic message, build questions.</span></div>
-    <div class="flow-step"><b>Use</b><span>Give real advice and describe your real rules.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Compare a suggestion, schedule, official notice, and optional task.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose the meaning first, then notice overlap and register.</span></div>
+    <div class="flow-step"><b>Build</b><span>Control modal form, have-to form, negatives, and time.</span></div>
+    <div class="flow-step"><b>Use</b><span>Brief a fictional event team and answer rule questions.</span></div>
   </div>
 
-  <p class="note-line">These three verbs all put pressure on an action. The difference is not only grammar; it is who says so and how strong the pressure is: friendly advice, an outside rule, or a firm prohibition.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can recommend an action, state an ordinary or firm requirement, prohibit an action, show that an action is optional, ask about a rule, and move an obligation into past or future time.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="can">can</button>
-      <button class="choice-option" data-choice-option="can’t">can’t</button>
-      <button class="choice-option" data-choice-option="Close">Close</button>
-      <button class="choice-option" data-choice-option="Don’t close">Don’t close</button>
-      <button class="choice-option" data-choice-option="works">works</button>
-      <button class="choice-option" data-choice-option="work">work</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>Marco <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> speak three languages, so he translates for the team. &nbsp;<span class="contraction">(A1: can)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Close" data-placeholder="choose">choose</button> the door, please. It’s noisy outside. &nbsp;<span class="contraction">(A1: imperatives)</span></span></div>
-    <div class="q"><span class="n">3</span><span>She <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> at a clinic downtown. &nbsp;<span class="contraction">(A1: present simple)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a modal base verb, third-person have, and a direct instruction.">
+    <h3>Three checks from earlier lessons</h3>
+    <p class="choice-hint">Use the form clue and the stated purpose in each sentence.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices"><button class="choice-option" data-choice-option="can">can</button><button class="choice-option" data-choice-option="cans">cans</button><button class="choice-option" data-choice-option="has">has</button><button class="choice-option" data-choice-option="have">have</button><button class="choice-option" data-choice-option="Close">Close</button><button class="choice-option" data-choice-option="Closes">Closes</button></div>
+    <div class="q"><span class="n">1</span><span>The modal takes a base verb after every subject: Marco <button class="choice-gap" data-choice-gap data-answer="can" data-hint="A modal does not add third-person s." data-fix="Marco can translate the welcome message." data-placeholder="choose">choose</button> translate the welcome message.</span></div>
+    <div class="q"><span class="n">2</span><span>The singular subject Rina takes third-person present have: Rina <button class="choice-gap" data-choice-gap data-answer="has" data-hint="The present form of have with Rina is has." data-fix="Rina has the event key." data-placeholder="choose">choose</button> the event key.</span></div>
+    <div class="q"><span class="n">3</span><span>Give one direct instruction to stop the outside noise: <button class="choice-gap" data-choice-gap data-answer="Close" data-hint="A positive imperative begins with the base verb." data-fix="Close the side door, please." data-placeholder="choose">choose</button> the side door, please.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice before the rule</h2>
+  <h2>Notice four messages for one fictional event</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A new job, day one</h3>
-    <p><span class="ex">"Welcome! You have to sign in every morning at the front desk. Everyone must wear an ID badge in the building. You don’t have to work late; we finish at five. And you should ask questions. Really, ask anything."</span></p>
+    <h3>Westbridge Community Center open house</h3>
+    <p><b>Teammate’s suggestion:</b> <span class="ex">You should label the boxes by room. It will make setup easier.</span></p>
+    <p><b>Coordinator’s schedule email:</b> <span class="ex">Staff have to arrive by 8:30 because setup begins at 8:45.</span></p>
+    <p><b>Official entrance notice:</b> <span class="ex">All visitors must wear an event badge.</span></p>
+    <p><b>Task list:</b> <span class="ex">Volunteers don’t have to stay after 4:00. The late team can finish cleanup.</span></p>
+    <p><b>Restricted-room notice:</b> <span class="ex">Visitors must not enter the equipment room.</span></p>
     <ul>
-      <li>Which sentences state rules, and which one is friendly advice?</li>
-      <li>Look at the verbs after <span class="ex">should</span>, <span class="ex">must</span>, and <span class="ex">have to</span>: <span class="ex">sign</span>, <span class="ex">wear</span>, <span class="ex">work</span>, <span class="ex">ask</span>. What form are they in?</li>
-      <li>Does <span class="ex">You don’t have to work late</span> prohibit late work, or say it is not necessary?</li>
+      <li>Which action is recommended but not required?</li>
+      <li>Which two actions are required, and why might one notice sound firmer or more official?</li>
+      <li>Which action is optional? Which action is prohibited?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: choose the pattern</h3>
-    <p class="choice-hint">After <b>should</b> and <b>must</b>, look for the base verb. Watch what <b>have to</b> does with the subject.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="leave">leave</button>
-      <button class="choice-option" data-choice-option="leaves">leaves</button>
-      <button class="choice-option" data-choice-option="to leave">to leave</button>
-      <button class="choice-option" data-choice-option="pay">pay</button>
-      <button class="choice-option" data-choice-option="pays">pays</button>
-      <button class="choice-option" data-choice-option="have">have</button>
-      <button class="choice-option" data-choice-option="has">has</button>
-      <button class="choice-option" data-choice-option="Do">Do</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>He must <button class="choice-gap" data-choice-gap data-answer="leave" data-placeholder="choose">choose</button> before six.</span></div>
-    <div class="q"><span class="n">2</span><span>You should <button class="choice-gap" data-choice-gap data-answer="pay" data-placeholder="choose">choose</button> by card. It’s faster.</span></div>
-    <div class="q"><span class="n">3</span><span>She <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> to catch the early train.</span></div>
-    <div class="q"><span class="n">4</span><span>They <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> to catch the early train.</span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="Do" data-placeholder="choose">choose</button> you have to work on Saturdays?</span></div>
-    <div class="q"><span class="n">6</span><span>Does he <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> to sign the form?</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated recommendation, ordinary requirement, formal firm requirement, prohibition, optional action, and register framing.">
+    <h3>Discovery check: identify meaning and framing</h3>
+    <div class="choice-bank" aria-label="Meaning and framing choices"><button class="choice-option" data-choice-option="recommendation">recommendation</button><button class="choice-option" data-choice-option="ordinary requirement">ordinary requirement</button><button class="choice-option" data-choice-option="formal firm requirement">formal firm requirement</button><button class="choice-option" data-choice-option="prohibited">prohibited</button><button class="choice-option" data-choice-option="optional">optional</button><button class="choice-option" data-choice-option="the same requirement with different framing">the same requirement with different framing</button></div>
+    <div class="q"><span class="n">1</span><span>The teammate presents labeling as a useful idea, not a rule: <span class="ex">You should label the boxes</span> gives a <button class="choice-gap" data-choice-gap data-answer="recommendation" data-hint="Should presents the action as a good idea in this message." data-fix="You should label the boxes gives a recommendation." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The schedule makes 8:30 necessary in a neutral email: <span class="ex">Staff have to arrive by 8:30</span> states an <button class="choice-gap" data-choice-gap data-answer="ordinary requirement" data-hint="Have to is the neutral everyday choice for this schedule requirement." data-fix="Staff have to arrive by 8:30 states an ordinary requirement." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The entrance sign presents badge use as official and firm: <span class="ex">Visitors must wear badges</span> states a <button class="choice-gap" data-choice-gap data-answer="formal firm requirement" data-hint="Must fits the official, firm voice chosen for the posted notice." data-fix="Visitors must wear badges states a formal firm requirement." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The restricted-room notice says visitors cannot enter: the action is <button class="choice-gap" data-choice-gap data-answer="prohibited" data-hint="Must not means there is a rule against the action." data-fix="Entering the equipment room is prohibited for visitors." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The late team can handle cleanup, so staying after 4:00 is <button class="choice-gap" data-choice-gap data-answer="optional" data-hint="Don’t have to removes necessity; it does not ban the action." data-fix="Staying after 4:00 is optional for volunteers." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span><span class="ex">We have to lock the doors at 6:00</span> in conversation and <span class="ex">Staff must lock all doors at 6:00</span> on a notice can express <button class="choice-gap" data-choice-gap data-answer="the same requirement with different framing" data-hint="Must and have to overlap; the notice chooses a firmer, more official register." data-fix="The two sentences can express the same requirement with different framing." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: two families of forms</h2>
+  <h2>Get to the root: choose the meaning before the form</h2>
   <div class="lead-rule"></div>
-  <p><span class="ex">Should</span> and <span class="ex">must</span> are modals: one form for every subject, followed by the base verb. <span class="ex">Have to</span> is different: it conjugates like a normal verb.</p>
+  <p>Do not treat these forms as three fixed steps on one strength ladder. First decide the status of the action. Is it recommended, required, prohibited, or optional? If it is required, choose how the speaker wants to frame that requirement.</p>
   <table>
-    <thead><tr><th></th><th>should / must (modal)</th><th>have to (normal verb)</th></tr></thead>
+    <thead><tr><th>intended meaning</th><th>useful A2 choice</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>positive</b></td><td>She should call back. He must sign here.</td><td>I have to leave at six. She has to leave at six.</td></tr>
-      <tr><td><b>he / she / it</b></td><td>No -s, ever: she should, he must.</td><td>Adds -s: she has to, he has to.</td></tr>
-      <tr><td><b>negative</b></td><td>shouldn’t, mustn’t. No do.</td><td>don’t have to, doesn’t have to.</td></tr>
-      <tr><td><b>question</b></td><td>Should I call? No do.</td><td>Do I have to call? Does she have to call?</td></tr>
+      <tr><td>recommendation</td><td><b>should</b></td><td><span class="ex">You should label the boxes.</span></td></tr>
+      <tr><td>advice against an action</td><td><b>shouldn’t</b></td><td><span class="ex">You shouldn’t block the exit.</span></td></tr>
+      <tr><td>ordinary requirement in conversation</td><td><b>have to</b></td><td><span class="ex">We have to finish by six.</span></td></tr>
+      <tr><td>firm instruction or formal requirement</td><td><b>must</b></td><td><span class="ex">Visitors must wear badges.</span></td></tr>
+      <tr><td>prohibition</td><td><b>must not / mustn’t</b></td><td><span class="ex">Visitors must not enter.</span></td></tr>
+      <tr><td>no necessity; the person has a choice</td><td><b>don’t / doesn’t have to</b></td><td><span class="ex">You don’t have to print a ticket.</span></td></tr>
     </tbody>
   </table>
-  <p class="note-line">Important: say <span class="ex">She should call</span>, never <span class="ex">She shoulds call</span> or <span class="ex">Does she should call?</span> Modals refuse -s and refuse do. <span class="ex">Have to</span> is the opposite: it needs <span class="ex">does</span> and <span class="ex">doesn’t</span> like any normal verb.</p>
+  <p class="note-line"><span class="ex">Must</span> and <span class="ex">have to</span> overlap. Either can describe a real obligation. In everyday U.S. conversation, <span class="ex">have to</span> is common for ordinary requirements. <span class="ex">Must</span> often sounds firmer, more formal, or more emphatic, so it is common in notices and careful instructions. Context and register matter more than a memorized “inside versus outside authority” rule.</p>
+  <p>This lesson uses <span class="ex">should</span> for recommendations. <span class="ex">Should</span> has other meanings, including expectation, but those belong to a later lesson.</p>
 
-  <h2>Get to the root: who says so?</h2>
+  <h2>Build two form systems</h2>
   <div class="lead-rule"></div>
-  <p>All three verbs press on the same action, but the pressure has a source and a strength. Climb the ladder from a friendly idea to a firm rule.</p>
+  <p><span class="ex">Should</span> and <span class="ex">must</span> are modal verbs. They keep one form for every subject and take a base verb without <span class="ex">to</span>. <span class="ex">Have to</span> uses ordinary present and past grammar.</p>
   <table>
-    <thead><tr><th>verb</th><th>strength</th><th>who says so</th><th>example</th></tr></thead>
+    <thead><tr><th>purpose</th><th>should / must</th><th>have to</th></tr></thead>
     <tbody>
-      <tr><td><b>should</b></td><td>advice, a good idea</td><td>the speaker’s opinion</td><td><span class="contraction">You should back up your files.</span></td></tr>
-      <tr><td><b>have to</b></td><td>obligation</td><td>outside pressure: laws, schedules, bosses, contracts</td><td><span class="contraction">I have to renew my visa in June.</span></td></tr>
-      <tr><td><b>must</b></td><td>strong obligation</td><td>the speaker’s own authority, or official rules and signs</td><td><span class="contraction">You must wear a helmet on site.</span></td></tr>
+      <tr><td>positive</td><td><span class="ex">She should call. He must sign.</span></td><td><span class="ex">I have to leave. She has to leave.</span></td></tr>
+      <tr><td>negative</td><td><span class="ex">She shouldn’t wait. He must not enter.</span></td><td><span class="ex">I don’t have to leave. She doesn’t have to leave.</span></td></tr>
+      <tr><td>question</td><td><span class="ex">Should I call?</span></td><td><span class="ex">Do I have to leave? Does she have to leave?</span></td></tr>
+      <tr><td>short answer</td><td><span class="ex">Yes, you should. No, you shouldn’t.</span></td><td><span class="ex">Yes, you do. No, she doesn’t.</span></td></tr>
     </tbody>
   </table>
-  <p class="note-line">You can ignore <span class="ex">should</span> and stay polite. You cannot ignore <span class="ex">have to</span> or <span class="ex">must</span> without a consequence.</p>
+  <p class="note-line">Say <span class="ex">She should call</span>, not <span class="ex">she shoulds call</span>, <span class="ex">she should to call</span>, or <span class="ex">does she should call</span>. Say <span class="ex">Does she have to call?</span>, not <span class="ex">does she has to call?</span>. The word <span class="ex">does</span> already carries present-tense agreement, so the main verb returns to <span class="ex">have</span>.</p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: choose the right pressure</h3>
-    <p class="choice-hint">Think about who says so: the speaker’s advice, an outside rule, or a firm prohibition. Check the subject too.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="should">should</button>
-      <button class="choice-option" data-choice-option="shouldn’t">shouldn’t</button>
-      <button class="choice-option" data-choice-option="must">must</button>
-      <button class="choice-option" data-choice-option="mustn’t">mustn’t</button>
-      <button class="choice-option" data-choice-option="have to">have to</button>
-      <button class="choice-option" data-choice-option="has to">has to</button>
-      <button class="choice-option" data-choice-option="don’t have to">don’t have to</button>
-      <button class="choice-option" data-choice-option="doesn’t have to">doesn’t have to</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>You look really tired. You <button class="choice-gap" data-choice-gap data-answer="should" data-placeholder="choose">choose</button> see a doctor. &nbsp;<span class="contraction">(advice)</span></span></div>
-    <div class="q"><span class="n">2</span><span>You <button class="choice-gap" data-choice-gap data-answer="shouldn’t" data-placeholder="choose">choose</button> answer work email at midnight. &nbsp;<span class="contraction">(advice against a habit)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I <button class="choice-gap" data-choice-gap data-answer="have to" data-placeholder="choose">choose</button> renew my visa before June. &nbsp;<span class="contraction">(the law says so)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Ana <button class="choice-gap" data-choice-gap data-answer="has to" data-placeholder="choose">choose</button> start at seven. &nbsp;<span class="contraction">(her schedule says so)</span></span></div>
-    <div class="q"><span class="n">5</span><span>Visitors <button class="choice-gap" data-choice-gap data-answer="must" data-placeholder="choose">choose</button> sign in at the front desk. &nbsp;<span class="contraction">(sign at the entrance)</span></span></div>
-    <div class="q"><span class="n">6</span><span>You <button class="choice-gap" data-choice-gap data-answer="mustn’t" data-placeholder="choose">choose</button> share this password with anyone. &nbsp;<span class="contraction">(prohibited)</span></span></div>
-    <div class="q"><span class="n">7</span><span>We <button class="choice-gap" data-choice-gap data-answer="don’t have to" data-placeholder="choose">choose</button> come to the office on Fridays. &nbsp;<span class="contraction">(it is optional)</span></span></div>
-    <div class="q"><span class="n">8</span><span>He <button class="choice-gap" data-choice-gap data-answer="doesn’t have to" data-placeholder="choose">choose</button> wear a suit. &nbsp;<span class="contraction">(his office is casual)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You controlled invariant modal form, base verbs, have-to agreement, negatives, and question order.">
+    <h3>Drill 1: complete the form system</h3>
+    <div class="choice-bank" aria-label="Modal and have-to form choices"><button class="choice-option" data-choice-option="call">call</button><button class="choice-option" data-choice-option="to call">to call</button><button class="choice-option" data-choice-option="must">must</button><button class="choice-option" data-choice-option="musts">musts</button><button class="choice-option" data-choice-option="has">has</button><button class="choice-option" data-choice-option="have">have</button><button class="choice-option" data-choice-option="Do">Do</button><button class="choice-option" data-choice-option="Does">Does</button><button class="choice-option" data-choice-option="doesn’t">doesn’t</button><button class="choice-option" data-choice-option="don’t">don’t</button><button class="choice-option" data-choice-option="Should">Should</button><button class="choice-option" data-choice-option="Does should">Does should</button></div>
+    <div class="q"><span class="n">1</span><span>The modal takes the base verb without <span class="ex">to</span>: You should <button class="choice-gap" data-choice-gap data-answer="call" data-hint="Should is followed directly by the base verb call." data-fix="You should call the coordinator." data-placeholder="choose">choose</button> the coordinator.</span></div>
+    <div class="q"><span class="n">2</span><span>The modal does not add third-person <span class="ex">s</span>: Every visitor <button class="choice-gap" data-choice-gap data-answer="must" data-hint="Must keeps the same form after every subject." data-fix="Every visitor must wear a badge." data-placeholder="choose">choose</button> wear a badge.</span></div>
+    <div class="q"><span class="n">3</span><span>The singular subject Maya takes third-person <span class="ex">has to</span>: Maya <button class="choice-gap" data-choice-gap data-answer="has" data-hint="Have changes to has with singular Maya in the present." data-fix="Maya has to arrive by 8:30." data-placeholder="choose">choose</button> to arrive by 8:30.</span></div>
+    <div class="q"><span class="n">4</span><span>Ask several volunteers about the rule: <button class="choice-gap" data-choice-gap data-answer="Do" data-hint="A present question with plural volunteers begins Do." data-fix="Do the volunteers have to stay after 4:00?" data-placeholder="choose">choose</button> the volunteers have to stay after 4:00?</span></div>
+    <div class="q"><span class="n">5</span><span>The badge is optional for the singular subject Lee: Lee <button class="choice-gap" data-choice-gap data-answer="doesn’t" data-hint="A negative present statement with Lee uses doesn’t have to." data-fix="Lee doesn’t have to wear a staff badge." data-placeholder="choose">choose</button> have to wear a staff badge.</span></div>
+    <div class="q"><span class="n">6</span><span>Ask the coordinator for a recommendation, not a rule: <button class="choice-gap" data-choice-gap data-answer="Should" data-hint="A should question moves the modal before the subject without do." data-fix="Should I label the boxes now?" data-placeholder="choose">choose</button> I label the boxes now?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The trap: <em>mustn’t</em> and <em>don’t have to</em></h2>
+  <h2>Keep recommendation, prohibition, and choice apart</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Same grammar slot, opposite worlds</h3>
-    <p><span class="ex">"You mustn’t open that email."</span><br /><span class="ex">"You don’t have to open that email."</span></p>
-    <ul>
-      <li><strong>mustn’t</strong> = prohibited. Do not do it. There is a rule against it.</li>
-      <li><strong>don’t have to</strong> = not necessary. You can do it or skip it. Your choice.</li>
-      <li>Test yourself: which sentence comes from a security warning? Which one comes from a relaxed coworker?</li>
-    </ul>
+    <h3>Three negatives, three different consequences</h3>
+    <p><span class="ex">You shouldn’t use the narrow hallway.</span> The speaker recommends another route.</p>
+    <p><span class="ex">You must not use the emergency exit.</span> A rule prohibits that route.</p>
+    <p><span class="ex">You don’t have to use the main entrance.</span> The main entrance is optional; another entrance is available.</p>
   </div>
-  <p class="note-line">The positives feel similar, but the negatives split apart. <span class="ex">Mustn’t</span> closes a door. <span class="ex">Don’t have to</span> opens one.</p>
+  <p class="note-line"><span class="ex">Must not</span> and its contraction <span class="ex">mustn’t</span> mean “do not do it.” <span class="ex">Don’t have to</span> means “it is not necessary,” so the action remains possible. <span class="ex">Shouldn’t</span> normally gives advice against an action in this lesson; it does not automatically create a rule.</p>
 
-  <h3>Questions: Should I…? and Do I have to…?</h3>
-  <p>Choose the question by what you want to know.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose recommendation, advice against, ordinary requirement, formal requirement, prohibition, and lack of necessity from context.">
+    <h3>Drill 2: choose the intended meaning and register</h3>
+    <div class="choice-bank" aria-label="Advice and obligation choices"><button class="choice-option" data-choice-option="should">should</button><button class="choice-option" data-choice-option="shouldn’t">shouldn’t</button><button class="choice-option" data-choice-option="have to">have to</button><button class="choice-option" data-choice-option="must">must</button><button class="choice-option" data-choice-option="must not">must not</button><button class="choice-option" data-choice-option="don’t have to">don’t have to</button></div>
+    <div class="q"><span class="n">1</span><span>A teammate offers a useful idea, not a requirement: You <button class="choice-gap" data-choice-gap data-answer="should" data-hint="The action is presented as a helpful recommendation." data-fix="You should put the map beside the entrance." data-placeholder="choose">choose</button> put the map beside the entrance.</span></div>
+    <div class="q"><span class="n">2</span><span>A teammate advises against blocking the view, but no rule forbids it: You <button class="choice-gap" data-choice-gap data-answer="shouldn’t" data-hint="The speaker recommends avoiding the action; this is not a formal ban." data-fix="You shouldn’t put the tall sign in front of the map." data-placeholder="choose">choose</button> put the tall sign in front of the map.</span></div>
+    <div class="q"><span class="n">3</span><span>In an ordinary team update, the event schedule requires everyone to finish by six: We <button class="choice-gap" data-choice-gap data-answer="have to" data-hint="Have to is the neutral conversational choice requested for this schedule requirement." data-fix="We have to finish cleanup by six." data-placeholder="choose">choose</button> finish cleanup by six.</span></div>
+    <div class="q"><span class="n">4</span><span>An official entrance notice uses a firm formal voice: All visitors <button class="choice-gap" data-choice-gap data-answer="must" data-hint="Must fits the firm official register requested for the notice." data-fix="All visitors must wear an event badge." data-placeholder="choose">choose</button> wear an event badge.</span></div>
+    <div class="q"><span class="n">5</span><span>A posted safety rule prohibits the action: Staff <button class="choice-gap" data-choice-gap data-answer="must not" data-hint="Must not marks a firm prohibition, not an optional action." data-fix="Staff must not block the emergency exit." data-placeholder="choose">choose</button> block the emergency exit.</span></div>
+    <div class="q"><span class="n">6</span><span>Digital tickets are accepted, so printing is optional: You <button class="choice-gap" data-choice-gap data-answer="don’t have to" data-hint="No necessity means the person may print the ticket or skip it." data-fix="You don’t have to print your ticket." data-placeholder="choose">choose</button> print your ticket.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Move requirements through time with <em>have to</em></h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Must</span> can point to the present or future when context supplies the time: <span class="ex">You must sign now. You must submit the form tomorrow.</span> However, English normally uses the <span class="ex">have to</span> family when an obligation needs ordinary past, future, or other verb forms.</p>
   <table>
-    <thead><tr><th>you want</th><th>ask</th><th>example</th></tr></thead>
+    <thead><tr><th>time</th><th>required</th><th>not required</th></tr></thead>
     <tbody>
-      <tr><td><b>advice</b></td><td>Should I…?</td><td><span class="contraction">Should I take the earlier train?</span></td></tr>
-      <tr><td><b>to know the rule</b></td><td>Do I have to…? / Does she have to…?</td><td><span class="contraction">Do I have to pay in advance?</span></td></tr>
+      <tr><td>present</td><td><span class="ex">Maya has to arrive early.</span></td><td><span class="ex">Maya doesn’t have to stay late.</span></td></tr>
+      <tr><td>finished past</td><td><span class="ex">Maya had to arrive early yesterday.</span></td><td><span class="ex">Maya didn’t have to stay late.</span></td></tr>
+      <tr><td>future</td><td><span class="ex">Maya will have to arrive early tomorrow.</span></td><td><span class="ex">Maya won’t have to stay late.</span></td></tr>
     </tbody>
   </table>
-  <p class="note-line"><span class="ex">Must I…?</span> exists, but it sounds formal and is rare in American English. To ask about a rule, people normally say <span class="ex">Do I have to…?</span></p>
+  <p class="note-line">Do not say <span class="ex">musted</span> or <span class="ex">will must</span>. Use <span class="ex">had to</span> for a finished past requirement and <span class="ex">will have to</span> for a future requirement. <span class="ex">Didn’t have to</span> says an action was unnecessary; by itself, it does not tell us whether the person did the action anyway.</p>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type the missing word</h3>
-    <p class="choice-hint">Type one word in each gap. <b>Have to</b> builds questions with <b>do</b> and <b>does</b>. Remember: <b>mustn’t</b> prohibits; <b>don’t have to</b> means it is not necessary.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Should" aria-label="answer 1" /> I see a doctor about this cough? &nbsp;<span class="contraction">(asking for advice)</span></span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Do" aria-label="answer 2" /> we have to pay in advance? &nbsp;<span class="contraction">(asking about the rule)</span></span></div>
-    <div class="q"><span class="n">3</span><span><input class="answer-input" data-answer="Does" aria-label="answer 3" /> she have to work this weekend?</span></div>
-    <div class="q"><span class="n">4</span><span>You <input class="answer-input" data-answer="don’t" aria-label="answer 4" /> have to print the ticket. The email is enough.</span></div>
-    <div class="q"><span class="n">5</span><span>You <input class="answer-input" data-answer="mustn’t" aria-label="answer 5" /> smoke in the building. It is prohibited.</span></div>
-    <div class="q"><span class="n">6</span><span>Do I have to sign here? Yes, you <input class="answer-input" data-answer="do" aria-label="answer 6" />.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You moved neutral requirements and lack of necessity through present, past, questions, and future time.">
+    <h3>Drill 3: let the time frame choose the have-to form</h3>
+    <div class="choice-bank" aria-label="Time and obligation choices"><button class="choice-option" data-choice-option="has to">has to</button><button class="choice-option" data-choice-option="had to">had to</button><button class="choice-option" data-choice-option="Did">Did</button><button class="choice-option" data-choice-option="will have to">will have to</button><button class="choice-option" data-choice-option="won’t have to">won’t have to</button><button class="choice-option" data-choice-option="musted">musted</button><button class="choice-option" data-choice-option="will must">will must</button></div>
+    <div class="q"><span class="n">1</span><span>The schedule requires the singular coordinator to open the center every Saturday: The coordinator <button class="choice-gap" data-choice-gap data-answer="has to" data-hint="A present requirement with singular coordinator uses has to." data-fix="The coordinator has to open the center every Saturday." data-placeholder="choose">choose</button> open the center every Saturday.</span></div>
+    <div class="q"><span class="n">2</span><span>Yesterday’s power inspection created a finished past requirement: We <button class="choice-gap" data-choice-gap data-answer="had to" data-hint="A finished past obligation uses had to, not musted." data-fix="We had to move the information table yesterday." data-placeholder="choose">choose</button> move the information table yesterday.</span></div>
+    <div class="q"><span class="n">3</span><span>Ask whether the finished inspection required Lee to wait: <button class="choice-gap" data-choice-gap data-answer="Did" data-hint="A past have-to question begins Did and keeps have in its base form." data-fix="Did Lee have to wait for the inspector?" data-placeholder="choose">choose</button> Lee have to wait for the inspector?</span></div>
+    <div class="q"><span class="n">4</span><span>A new city rule begins next month, so the future requirement is not active yet: Events <button class="choice-gap" data-choice-gap data-answer="will have to" data-hint="A future obligation uses will have to, not will must." data-fix="Events will have to provide two recycling stations next month." data-placeholder="choose">choose</button> provide two recycling stations next month.</span></div>
+    <div class="q"><span class="n">5</span><span>The late team is scheduled next Saturday, so Maya’s early team will have no cleanup requirement: Maya <button class="choice-gap" data-choice-gap data-answer="won’t have to" data-hint="Future lack of necessity uses won’t have to." data-fix="Maya won’t have to stay for cleanup next Saturday." data-placeholder="choose">choose</button> stay for cleanup next Saturday.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Ask for advice or ask about a rule</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>information you want</th><th>natural question</th><th>answer</th></tr></thead>
+    <tbody>
+      <tr><td>a recommendation</td><td><span class="ex">Should I move this table?</span></td><td><span class="ex">Yes, you should. It blocks the map.</span></td></tr>
+      <tr><td>an ordinary requirement</td><td><span class="ex">Do I have to move this table?</span></td><td><span class="ex">No, you don’t. That is only a suggestion.</span></td></tr>
+      <tr><td>a past requirement</td><td><span class="ex">Did Lee have to move it?</span></td><td><span class="ex">Yes, he did. The inspector needed the space.</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line"><span class="ex">Must I...?</span> is grammatical, but it sounds formal and is uncommon in ordinary U.S. conversation. People usually ask <span class="ex">Do I have to...?</span> about a rule. In everyday U.S. speech, <span class="ex">can’t</span> and <span class="ex">not allowed to</span> are also common ways to express prohibition: <span class="ex">Visitors can’t enter. Visitors aren’t allowed to enter.</span> Formal notices often use <span class="ex">must not</span>.</p>
+
+  <h2>Sound natural: reduce the frame and stress the action</h2>
+  <div class="lead-rule"></div>
+  <p>In neutral speech, the important action usually carries the strongest beat. Friendly <span class="ex">should</span> is often weak /ʃəd/: <span class="ex">You should <strong>MOVE</strong> it.</span> The connected forms <span class="ex">have to</span> and <span class="ex">has to</span> commonly sound like /ˈhæftə/ and /ˈhæstə/: <span class="ex">We have to <strong>LEAVE</strong>. She has to <strong>START</strong>.</span></p>
+  <p>Strong stress can change the stance, not the grammar. <span class="ex">You <strong>SHOULD</strong> move it</span> sounds corrective or more insistent. <span class="ex">You <strong>MUST</strong> leave now</span> foregrounds firm necessity. In <span class="ex">must not</span>, keep the negative meaning clear. The contraction <span class="ex">mustn’t</span> is possible, but full <span class="ex">must not</span> is common in formal U.S. notices.</p>
+
+  <section data-lesson-extension="Tutor-read recommendation, ordinary requirement, prohibition, optional action, past requirement, and rule-question listening check">
+    <h2>Listen: what is the action’s status?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional event message once naturally and once more slowly. Decide whether the action is recommended, required, prohibited, or optional, and listen for its time. Open the script only after checking.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard recommendation, ordinary requirement, prohibition, lack of necessity, past obligation, and a natural rule question.">
+      <h3>Tutor-read listening check</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="a recommendation" data-hint="Weak should plus the useful action presents a suggestion." data-fix="You should put the blue signs near the elevator gives a recommendation."><p class="quiz-question">1. What does Clip 1 give?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a recommendation">a recommendation</button><button class="quiz-option" data-quiz-option="a formal prohibition">a formal prohibition</button><button class="quiz-option" data-quiz-option="a past requirement">a past requirement</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the side-door arrangement requires it" data-hint="Have to presents an ordinary requirement caused by the entrance arrangement." data-fix="Staff have to use the side door because the main door is closed."><p class="quiz-question">2. Why do staff use the side door in Clip 2?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the side-door arrangement requires it">the side-door arrangement requires it</button><button class="quiz-option" data-quiz-option="a teammate casually recommends it">a teammate casually recommends it</button><button class="quiz-option" data-quiz-option="using it is optional">using it is optional</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="entering is prohibited" data-hint="Must not marks a rule against entering the room." data-fix="Visitors must not enter the equipment room, so entering is prohibited."><p class="quiz-question">3. What is the status of entering the equipment room in Clip 3?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="entering is prohibited">entering is prohibited</button><button class="quiz-option" data-quiz-option="entering is recommended">entering is recommended</button><button class="quiz-option" data-quiz-option="entering is required">entering is required</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="bringing a printed ticket is optional" data-hint="Don’t have to removes the necessity to bring a printout." data-fix="You don’t have to bring a printed ticket, so a printout is optional."><p class="quiz-question">4. What is optional in Clip 4?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="bringing a printed ticket is optional">bringing a printed ticket is optional</button><button class="quiz-option" data-quiz-option="showing any ticket is prohibited">showing any ticket is prohibited</button><button class="quiz-option" data-quiz-option="buying a second ticket is required">buying a second ticket is required</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="a finished requirement yesterday" data-hint="Had to places the requirement in a completed past frame." data-fix="We had to move the tables yesterday describes a finished requirement yesterday."><p class="quiz-question">5. What time and meaning does <span class="ex">had to</span> express in Clip 5?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a finished requirement yesterday">a finished requirement yesterday</button><button class="quiz-option" data-quiz-option="an optional action tomorrow">an optional action tomorrow</button><button class="quiz-option" data-quiz-option="a recommendation now">a recommendation now</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="an ordinary question about a rule" data-hint="Do I have to asks whether an ordinary requirement exists." data-fix="Do I have to arrive by eight? is an ordinary question about a rule."><p class="quiz-question">6. What kind of question is Clip 6?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="an ordinary question about a rule">an ordinary question about a rule</button><button class="quiz-option" data-quiz-option="a question about past experience">a question about past experience</button><button class="quiz-option" data-quiz-option="a request for ability">a request for ability</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">You should put the blue signs near the elevator.</span></li>
+        <li><span class="ex">Staff have to use the side door because the main door is closed.</span></li>
+        <li><span class="ex">Visitors must not enter the equipment room.</span></li>
+        <li><span class="ex">You don’t have to bring a printed ticket.</span></li>
+        <li><span class="ex">We had to move the tables yesterday because of the power inspection.</span></li>
+        <li><span class="ex">Do I have to arrive by eight?</span></li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read the final event guide</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message from the clinic</h3>
-    <p><span class="ex">"Hello Mr. Reyes. Here is your plan for the week after your surgery. You should rest this week and sleep at least eight hours. You mustn’t lift anything heavy for two weeks; that is very important. You don’t have to stay home, but you should keep your walks short. You have to come back on Friday so the nurse can check the stitches. Message me if the pain gets worse."</span></p>
+    <h3>Saturday open-house guide</h3>
+    <p><span class="ex">Staff have to enter through the side door by 8:30. At the entrance, all visitors must show a ticket, but they don’t have to bring a printed copy because a phone screen is fine. Volunteers should send large groups to the east hall first; it usually has more space. Nobody must block the emergency exit. Yesterday, the setup team had to move one information table after the power inspection. Next month, events will have to add a second recycling station.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You separated the advice, the rules, and the things that are optional.">
-    <h3>Drill 3: read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You separated the current requirement, optional format, recommendation, and past requirement in the event guide.">
+    <h3>Reading check: use only the guide</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="lifting anything heavy">
-        <p class="quiz-question">1. What is prohibited for two weeks?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="lifting anything heavy">lifting anything heavy</button><button class="quiz-option" data-quiz-option="staying home">staying home</button><button class="quiz-option" data-quiz-option="short walks">short walks</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="staying home is not necessary">
-        <p class="quiz-question">2. “You don’t have to stay home” means ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="staying home is not necessary">staying home is not necessary</button><button class="quiz-option" data-quiz-option="staying home is prohibited">staying home is prohibited</button><button class="quiz-option" data-quiz-option="he must stay home">he must stay home</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="return to the clinic">
-        <p class="quiz-question">3. What does Mr. Reyes have to do on Friday?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="return to the clinic">return to the clinic</button><button class="quiz-option" data-quiz-option="stay in bed all day">stay in bed all day</button><button class="quiz-option" data-quiz-option="take a long walk">take a long walk</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="enter through the side door by 8:30" data-hint="The first sentence gives the staff requirement and deadline." data-fix="Staff have to enter through the side door by 8:30."><p class="quiz-question">1. What are staff required to do?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="enter through the side door by 8:30">enter through the side door by 8:30</button><button class="quiz-option" data-quiz-option="use the east hall after 8:30">use the east hall after 8:30</button><button class="quiz-option" data-quiz-option="bring two printed tickets">bring two printed tickets</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the ticket can be printed or shown on a phone" data-hint="Don’t have to bring a printed copy removes the print requirement, but visitors still need a ticket." data-fix="The ticket can be printed or shown on a phone."><p class="quiz-question">2. What choice do visitors have?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the ticket can be printed or shown on a phone">the ticket can be printed or shown on a phone</button><button class="quiz-option" data-quiz-option="they can enter without any ticket">they can enter without any ticket</button><button class="quiz-option" data-quiz-option="they must buy a ticket at the door">they must buy a ticket at the door</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="send large groups to the east hall first" data-hint="Should introduces the guide’s recommendation for volunteers." data-fix="Volunteers should send large groups to the east hall first."><p class="quiz-question">3. What does the guide recommend?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="send large groups to the east hall first">send large groups to the east hall first</button><button class="quiz-option" data-quiz-option="close the east hall to every group">close the east hall to every group</button><button class="quiz-option" data-quiz-option="move all tables next month">move all tables next month</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the power inspection required the move" data-hint="Had to plus yesterday describes a completed past requirement." data-fix="The setup team moved the table because the power inspection required it."><p class="quiz-question">4. Why did the setup team move a table yesterday?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the power inspection required the move">the power inspection required the move</button><button class="quiz-option" data-quiz-option="a visitor recommended the move">a visitor recommended the move</button><button class="quiz-option" data-quiz-option="the team will need the table next month">the team will need the table next month</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="you should see a doctor">
-    <h3>Drill 4: build the advice</h3>
-    <p class="tile-target">Build the sentence. After should, use the base verb with no to.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="doctor">doctor</button>
-      <button class="tile" data-build-tile="should">should</button>
-      <button class="tile" data-build-tile="you">You</button>
-      <button class="tile" data-build-tile="a">a</button>
-      <button class="tile" data-build-tile="see">see</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="do i have to sign the form">
-    <h3>Drill 5: build the question</h3>
-    <p class="tile-target">Ask about the rule. Have to needs do at the front.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="sign">sign</button>
-      <button class="tile" data-build-tile="have">have</button>
-      <button class="tile" data-build-tile="do">Do</button>
-      <button class="tile" data-build-tile="form">form</button>
-      <button class="tile" data-build-tile="i">I</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="to">to</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
+  <h2>Build a recommendation and a rule question</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="to" data-fix="She must finish the report today." data-why="After must and should, use the base verb without to. Say She must finish, not She must to finish.">
-    <h3>Drill 6: after must</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="she">She</button>
-      <button class="error-choice" data-error-choice="must">must</button>
-      <button class="error-choice" data-error-choice="to">to</button>
-      <button class="error-choice" data-error-choice="finish">finish</button>
-      <button class="error-choice" data-error-choice="report">the report today.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="you should move the map" data-hint="Begin with You, add modal should, then the base verb move and its object." data-fix="You should move the map." data-success-message="Correct. Should plus the base verb gives a clear recommendation.">
+    <h3>Drill 4: build the recommendation</h3><p class="tile-target">A teammate thinks the map would be easier to see in another place.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="map">map</button><button class="tile" data-build-tile="should">should</button><button class="tile" data-build-tile="you">You</button><button class="tile" data-build-tile="move">move</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="don’t" data-fix="He doesn’t have to work on Fridays." data-why="Have to changes with the subject like a normal verb. With he, she, and it, use doesn’t have to.">
-    <h3>Drill 7: have to changes with the subject</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="he">He</button>
-      <button class="error-choice" data-error-choice="don’t">don’t</button>
-      <button class="error-choice" data-error-choice="have to">have to</button>
-      <button class="error-choice" data-error-choice="work">work</button>
-      <button class="error-choice" data-error-choice="fridays">on Fridays.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="do i have to wear a badge" data-hint="Begin with Do, then subject I and the have-to phrase." data-fix="Do I have to wear a badge?" data-success-message="Correct. Do I have to asks whether the badge requirement applies to the speaker.">
+    <h3>Drill 5: build the ordinary rule question</h3><p class="tile-target">Ask whether the badge rule applies to you.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="badge">badge</button><button class="tile" data-build-tile="wear">wear</button><button class="tile" data-build-tile="have">have</button><button class="tile" data-build-tile="do">Do</button><button class="tile" data-build-tile="a">a</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="to">to</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair three different errors</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="to" data-hint="A modal connects directly to the base verb." data-fix="Visitors must show a ticket." data-why="Must takes the base verb without to." data-success-message="Correct. Must connects directly to the base verb show.">
+    <h3>Drill 6: modal plus base verb</h3><p>The notice says: <span class="ex">Visitors must to show a ticket.</span> Tap the one word that must be removed.</p><div class="spot-options"><button class="error-choice" data-error-choice="visitors">Visitors</button><button class="error-choice" data-error-choice="must">must</button><button class="error-choice" data-error-choice="to">to</button><button class="error-choice" data-error-choice="show">show</button><button class="error-choice" data-error-choice="ticket">a ticket</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="has" data-hint="After does, the main verb returns to its base form." data-fix="Does Maya have to arrive by 8:30?" data-why="Does carries present agreement, so use base have, not has." data-success-message="Correct. Does carries the tense and agreement; have returns to its base form.">
+    <h3>Drill 7: question agreement</h3><p>The coordinator asks: <span class="ex">Does Maya has to arrive by 8:30?</span> Tap the word with the wrong form.</p><div class="spot-options"><button class="error-choice" data-error-choice="does">Does</button><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="has">has</button><button class="error-choice" data-error-choice="to">to</button><button class="error-choice" data-error-choice="arrive">arrive by 8:30</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="mustn’t" data-hint="The sentence says a printed copy is optional, not prohibited." data-fix="You don’t have to print the ticket because a phone screen is fine." data-why="Don’t have to removes necessity. Mustn’t would prohibit printing." data-success-message="Correct. The available phone option makes printing unnecessary, not prohibited.">
+    <h3>Drill 8: prohibition or no necessity</h3><p>The guide says: <span class="ex">You mustn’t print the ticket because a phone screen is fine.</span> Tap the phrase with the wrong meaning.</p><div class="spot-options"><button class="error-choice" data-error-choice="you">You</button><button class="error-choice" data-error-choice="mustn’t">mustn’t</button><button class="error-choice" data-error-choice="print">print</button><button class="error-choice" data-error-choice="ticket">the ticket</button><button class="error-choice" data-error-choice="reason">because a phone screen is fine</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 8: say it, then reveal</h3>
-    <p>Read the cue, say the full sentence aloud, then reveal only after you answer.</p>
+    <h3>Oral transforms: change meaning or time</h3>
+    <p>Say each complete sentence before revealing it. Keep the stated meaning exactly.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> I should call the bank. Change to he.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>He should call the bank.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> She has to work tonight. Make a yes / no question.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Does she have to work tonight?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> You have to wear a tie. Make it negative: the tie is optional.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>You don’t have to wear a tie.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> Parking here is prohibited. Say the rule with mustn’t.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>You mustn’t park here.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> He has to travel for work. Make it negative.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>He doesn’t have to travel for work.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> We have to be there at nine. Change to she.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>She has to be there at nine.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> <span class="ex">I should move the map.</span> Change the subject to <span class="ex">she</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>She should move the map.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> <span class="ex">Maya has to arrive early.</span> Ask an ordinary rule question.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Does Maya have to arrive early?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> <span class="ex">Printing is optional.</span> Use <span class="ex">don’t have to</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>You don’t have to print the ticket.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> <span class="ex">Entering is prohibited.</span> Use formal <span class="ex">must not</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Visitors must not enter.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> <span class="ex">We have to move the table today.</span> Change the time to yesterday.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>We had to move the table yesterday.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> <span class="ex">A new rule begins next month.</span> Use future <span class="ex">have to</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Events will have to add a second recycling station next month.</strong></p></div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Communicate: brief the fictional event team</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Advice corner:</b> Your teacher says: “I can’t sleep at night.” Give three pieces of advice with <span class="ex">should</span> or <span class="ex">shouldn’t</span>. <span class="ex">You should stop drinking coffee after lunch.</span></div>
-  <div class="prompt-card"><b>Your real rules:</b> Say three things you have to do for work or study, and one thing you don’t have to do. <span class="ex">I have to answer emails every day. I don’t have to go to the office on Fridays.</span></div>
-  <div class="prompt-card"><b>Signs in your city:</b> Think of two real signs near your home. Say the rules with <span class="ex">must</span> or <span class="ex">mustn’t</span>. <span class="ex">You mustn’t park on this street. Drivers must stop for the tram.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask two <span class="ex">Do you have to…?</span> questions about the teacher’s job, then one <span class="ex">Should I…?</span> question about your English. <span class="ex">Do you have to plan every lesson? Should I read more in English?</span></div>
-  <div class="prompt-card"><b>Same and different:</b> Compare your rules with a friend’s or a family member’s. <span class="ex">I have to start at eight, but she doesn’t have to start until ten.</span></div>
+  <p class="note-line">You never need to disclose your real work, school, home, location, schedule, travel, family, relationships, finances, health, legal status, rules, passwords, or future plans. Use Westbridge Community Center, invent a neutral public event, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Ask before briefing:</b> Ask the coordinator one advice question with <span class="ex">Should I...?</span> and two ordinary rule questions with <span class="ex">Do I have to...?</span>. Answer each with a reason.</div>
+  <div class="prompt-card"><b>Final production: give a 45–60 second fictional event-team briefing.</b> Include one recommendation, two ordinary requirements, one formal firm requirement, one prohibition, one optional action, one finished past requirement, and one future requirement. Your partner identifies the status and time of each action, then asks one follow-up question.</div>
+  <div class="prompt-card"><b>Register switch:</b> Say one requirement first as an ordinary spoken team update with <span class="ex">have to</span>, then rewrite the same requirement as a firm official notice with <span class="ex">must</span>. Explain what changed in presentation and what did not change in the underlying rule.</div>
 
-  <h2>Reflect</h2>
+  <h2>Final check</h2>
+  <div class="lead-rule"></div>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled recommendation, rule questions, prohibition, time, and the overlap between must and have to.">
+    <h3>Five decisions with one defensible target</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="You should move the map." data-hint="The teammate gives a helpful idea, not a requirement." data-fix="You should move the map."><p class="quiz-question">1. Which sentence presents moving the map only as a recommendation?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="You should move the map.">You should move the map.</button><button class="quiz-option" data-quiz-option="You must move the map.">You must move the map.</button><button class="quiz-option" data-quiz-option="You have to move the map.">You have to move the map.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Do I have to wear a badge?" data-hint="Ask about an ordinary requirement with do plus have to." data-fix="Do I have to wear a badge?"><p class="quiz-question">2. Which question naturally asks in ordinary U.S. conversation whether the badge rule applies to you?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Do I have to wear a badge?">Do I have to wear a badge?</button><button class="quiz-option" data-quiz-option="Should I wear a badge?">Should I wear a badge?</button><button class="quiz-option" data-quiz-option="Do I must wear a badge?">Do I must wear a badge?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="printing is optional" data-hint="Don’t have to removes necessity without prohibiting the action." data-fix="You don’t have to print the ticket means printing is optional."><p class="quiz-question">3. The center accepts a phone screen. What does <span class="ex">You don’t have to print the ticket</span> mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="printing is optional">printing is optional</button><button class="quiz-option" data-quiz-option="printing is prohibited">printing is prohibited</button><button class="quiz-option" data-quiz-option="printing is strongly recommended">printing is strongly recommended</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="We had to move the table yesterday." data-hint="A finished past requirement uses had to." data-fix="We had to move the table yesterday."><p class="quiz-question">4. Which sentence accurately reports yesterday’s inspection requirement?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We had to move the table yesterday.">We had to move the table yesterday.</button><button class="quiz-option" data-quiz-option="We musted move the table yesterday.">We musted move the table yesterday.</button><button class="quiz-option" data-quiz-option="We will have to move the table yesterday.">We will have to move the table yesterday.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="They can express the same rule with different framing." data-hint="Must and have to overlap; the firm notice changes register, not necessarily the underlying obligation." data-fix="They can express the same rule with different framing."><p class="quiz-question">5. A coordinator says <span class="ex">We have to lock the doors at six</span>. A posted notice says <span class="ex">Staff must lock all doors at six</span>. What is the best analysis?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="They can express the same rule with different framing.">They can express the same rule with different framing.</button><button class="quiz-option" data-quiz-option="Only the first sentence expresses a real requirement.">Only the first sentence expresses a real requirement.</button><button class="quiz-option" data-quiz-option="Must always means the speaker invented the rule.">Must always means the speaker invented the rule.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect and retrieve</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Say the system back</h3>
-    <p>Complete this aloud: “After should and must, I use the ______ verb for every subject. Have to changes with the subject: he ______ to. Mustn’t means it is ______. Don’t have to means it is not ______.”</p>
-    <p>Then give one piece of real advice, say one real rule from your life, and name one thing you don’t have to do tomorrow.</p>
+    <h3>Explain the decision path without looking back</h3>
+    <p>How do you distinguish a recommendation, ordinary requirement, firm formal requirement, prohibition, and lack of necessity? Why can <span class="ex">must</span> and <span class="ex">have to</span> describe the same rule? What forms replace <span class="ex">must</span> for a finished past and an explicit future obligation?</p>
   </div>
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the meaning, form, time, negative, register, or spoken pattern that still feels slow.</p>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can give advice with should, state rules with must and have to, and keep mustn’t and don’t have to apart.">
-    <h3>Final quiz: advice, obligation, and the negatives</h3>
-    <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="doesn’t have to">
-        <p class="quiz-question">1. She ___ come to the meeting. It is optional.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="doesn’t have to">doesn’t have to</button><button class="quiz-option" data-quiz-option="mustn’t">mustn’t</button><button class="quiz-option" data-quiz-option="must">must</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="mustn’t">
-        <p class="quiz-question">2. The sign says “No smoking.” You ___ smoke here.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="mustn’t">mustn’t</button><button class="quiz-option" data-quiz-option="don’t have to">don’t have to</button><button class="quiz-option" data-quiz-option="shouldn’t">shouldn’t</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="drink">
-        <p class="quiz-question">3. He should ___ more water.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="drink">drink</button><button class="quiz-option" data-quiz-option="drinks">drinks</button><button class="quiz-option" data-quiz-option="to drink">to drink</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Do">
-        <p class="quiz-question">4. ___ I have to book a seat in advance?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Do">Do</button><button class="quiz-option" data-quiz-option="Should">Should</button><button class="quiz-option" data-quiz-option="Must">Must</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="has">
-        <p class="quiz-question">5. Ana ___ to renew her passport. It expires next month.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="has">has</button><button class="quiz-option" data-quiz-option="have">have</button><button class="quiz-option" data-quiz-option="must">must</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="You should take the earlier train.">
-        <p class="quiz-question">6. Which sentence gives advice?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="You should take the earlier train.">You should take the earlier train.</button><button class="quiz-option" data-quiz-option="Visitors must sign in at the desk.">Visitors must sign in at the desk.</button><button class="quiz-option" data-quiz-option="I have to renew my visa.">I have to renew my visa.</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="paying now is not necessary">
-        <p class="quiz-question">7. “You don’t have to pay now” means ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="paying now is not necessary">paying now is not necessary</button><button class="quiz-option" data-quiz-option="paying now is prohibited">paying now is prohibited</button><button class="quiz-option" data-quiz-option="you should never pay">you should never pay</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Do I have to check in online?">
-        <p class="quiz-question">8. Which question asks about a rule?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Do I have to check in online?">Do I have to check in online?</button><button class="quiz-option" data-quiz-option="Should I check in online?">Should I check in online?</button><button class="quiz-option" data-quiz-option="Have I to check in online?">Have I to check in online?</button></div>
-      </div>
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day meaning, negative, and past-obligation retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a recommendation, lack of necessity, and a finished past requirement.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day advice and obligation choices"><button class="choice-option" data-choice-option="should move">should move</button><button class="choice-option" data-choice-option="must to move">must to move</button><button class="choice-option" data-choice-option="don’t have to print">don’t have to print</button><button class="choice-option" data-choice-option="mustn’t print">mustn’t print</button><button class="choice-option" data-choice-option="had to wait">had to wait</button><button class="choice-option" data-choice-option="musted wait">musted wait</button></div>
+      <div class="q"><span class="n">1</span><span>A teammate gives a useful idea, not a rule: You <button class="choice-gap" data-choice-gap data-answer="should move" data-hint="The recommendation uses should plus the base verb move." data-fix="You should move the map beside the entrance." data-placeholder="choose">choose</button> the map beside the entrance.</span></div>
+      <div class="q"><span class="n">2</span><span>A phone ticket is accepted, so a paper copy is optional: You <button class="choice-gap" data-choice-gap data-answer="don’t have to print" data-hint="Lack of necessity uses don’t have to, not the prohibition mustn’t." data-fix="You don’t have to print the ticket." data-placeholder="choose">choose</button> the ticket.</span></div>
+      <div class="q"><span class="n">3</span><span>Yesterday’s inspection created a finished past requirement: Lee <button class="choice-gap" data-choice-gap data-answer="had to wait" data-hint="A finished past obligation uses had to." data-fix="Lee had to wait for the inspector yesterday." data-placeholder="choose">choose</button> for the inspector yesterday.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+  </section>
 </main>
 </LessonPage>
-

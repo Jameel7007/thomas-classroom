@@ -1,19 +1,346 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "used to / would for past habits · B1 Grammar · Curriculum Map",
+  "title": "Used to / would for past habits · B1 Grammar",
   "slug": "used-to-would-for-past-habits",
   "level": "B1",
   "topic": "used to / would for past habits",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering used to / would for past habits.",
+  "status": "ready",
+  "description": "Build clear then-and-now accounts with used to, habitual would, and Past Simple while separating old routines from familiarity with be or get used to.",
   "sequence": 4,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a2/past-simple", "a2/past-time-expressions"],
+  "related": ["b1/past-perfect", "b1/relationships"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 55,
+    "revisionSummary": "Past states, repeated actions, discourse framing, Past Simple contrast, negative and question forms, be/get used to, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 4</p>
+  <h1><span class="ex">Used to</span> and <span class="ex">would</span>: <em>build a past world, then enter its routines</em></h1>
+  <p class="standfirst"><span class="ex">Used to</span> can establish an old state or repeated habit and normally invites a contrast with now. Habitual <span class="ex">would</span> lets a speaker revisit repeated actions once the past world is clear. Past Simple remains available for routines and moves the story to one finished event.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">past state · repeated action · one event</span>
+    <span class="tag">used to + base · would + base</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Separate background states, repeated scenes, and one event.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose a form from its discourse job, not one signal word.</span></div>
+    <div class="flow-step"><b>Contrast</b><span>Keep old routines separate from being or becoming familiar.</span></div>
+    <div class="flow-step"><b>Use</b><span>Create a fictional oral history with a clear then-and-now arc.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can form positive, negative, question, and <span class="ex">there used to be</span> patterns; use <span class="ex">used to</span> for past states or habits that contrast with now; use habitual <span class="ex">would</span> for repeated actions inside a recoverable past frame; use Past Simple for a neutral routine or one event; distinguish possession states from repeated event meanings; separate <span class="ex">used to + base verb</span> from <span class="ex">be/get used to + noun or -ing</span>; hear connected U.S. forms; and tell a coherent then-and-now story.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a repeated Past Simple routine, a continuing state, and one dated finished event.">
+    <h3>Three foundations from A2</h3>
+    <p class="choice-hint">Use the stated frequency, verb meaning, and event boundary.</p>
+    <div class="choice-bank" aria-label="Past habit foundation choices"><button class="choice-option" data-choice-option="opened">opened</button><button class="choice-option" data-choice-option="owned">owned</button><button class="choice-option" data-choice-option="closed">closed</button><button class="choice-option" data-choice-option="was opening tomorrow">was opening tomorrow</button><button class="choice-option" data-choice-option="bought each year">bought each year</button><button class="choice-option" data-choice-option="closes">closes</button></div>
+    <div class="q"><span class="n">1</span><span>The old bakery followed this routine every weekday in 2008: It <button class="choice-gap" data-choice-gap data-answer="opened" data-hint="Past Simple can describe a repeated past routine when every weekday supplies the frequency." data-fix="The bakery opened at 6:00 every weekday in 2008.">choose</button> at 6:00 every weekday.</span></div>
+    <div class="q"><span class="n">2</span><span>From 2002 to 2014, Lena possessed the bakery: She <button class="choice-gap" data-choice-gap data-answer="owned" data-hint="Own presents a continuing possession state across the stated finished period." data-fix="Lena owned the bakery from 2002 to 2014.">choose</button> the bakery.</span></div>
+    <div class="q"><span class="n">3</span><span>One storm ended the business on September 14, 2014: The bakery <button class="choice-gap" data-choice-gap data-answer="closed" data-hint="Use Past Simple for the single finished event on the exact date." data-fix="The bakery closed on September 14, 2014.">choose</button> on that date.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice the background, repeated scene, and one event</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Riverside neighborhood audio archive</h3>
+    <p><span class="ex">There used to be a bakery beside the station. Lena used to own it, and the front room used to be bright yellow.</span></p>
+    <p><span class="ex">Every weekday, she would unlock the door at six. She would put two chairs outside and greet the first commuters.</span></p>
+    <p><span class="ex">One Saturday in 2014, a storm damaged the roof. The bakery closed that month. A language center occupies the building now.</span></p>
+    <ul>
+      <li>Which forms establish past states that are different now?</li>
+      <li>Which repeated actions happen inside the established weekday frame?</li>
+      <li>Which verbs move the account to one finished event?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recovered the former bakery, possession state, repeated weekday actions, one storm event, and present-day contrast.">
+    <h3>Discovery check: identify each form’s job</h3>
+    <div class="choice-bank" aria-label="Used to and would discovery choices"><button class="choice-option" data-choice-option="a bakery beside the station">a bakery beside the station</button><button class="choice-option" data-choice-option="Lena owned it">Lena owned it</button><button class="choice-option" data-choice-option="unlock and greet">unlock and greet</button><button class="choice-option" data-choice-option="a storm damaged the roof">a storm damaged the roof</button><button class="choice-option" data-choice-option="a language center occupies it now">a language center occupies it now</button></div>
+    <div class="q"><span class="n">1</span><span>The former place introduced by <span class="ex">There used to be</span> is <button class="choice-gap" data-choice-gap data-answer="a bakery beside the station" data-hint="Read the first clause for the place that existed there before the language center." data-fix="There used to be a bakery beside the station.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The continuing possession state in the old period is that <button class="choice-gap" data-choice-gap data-answer="Lena owned it" data-hint="Find the used to clause with the possession verb own." data-fix="Lena used to own the bakery.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Two repeated weekday actions expressed with habitual <span class="ex">would</span> are <button class="choice-gap" data-choice-gap data-answer="unlock and greet" data-hint="Use the actions that recurred every weekday, not the single storm event." data-fix="Every weekday, Lena would unlock the door and greet commuters.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The single event that changes the story is that <button class="choice-gap" data-choice-gap data-answer="a storm damaged the roof" data-hint="Look for the event attached to one Saturday in 2014." data-fix="One Saturday in 2014, a storm damaged the roof.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The explicit present contrast is that <button class="choice-gap" data-choice-gap data-answer="a language center occupies it now" data-hint="Choose the final sentence with the time marker now." data-fix="A language center occupies the building now.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: choose a discourse job</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Used to</span> presents a past state or repeated habit and normally invites the listener to understand that the situation is different now. The contrast may be stated, as in <span class="ex">It used to be a bakery, but it is a language center now</span>, or strongly implied by context.</p>
+  <p>Habitual <span class="ex">would</span> revisits repeated actions inside a recoverable past frame. The frame can come earlier in the story or in the same sentence: <span class="ex">Back in 2008, Lena would unlock the door at six</span>. It often makes a memory feel like a sequence of recurring scenes. It does not by itself emphasize a contrast with now.</p>
+  <p>Past Simple is not merely the “one-event form.” It can also describe a state or routine when time and frequency are clear: <span class="ex">The bakery opened at six every weekday</span>. Choose it for neutral reporting or for the specific finished events that advance a story.</p>
+
+  <table>
+    <thead><tr><th>job</th><th>form</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>positive past state or habit</td><td><span class="ex">subject + used to + base verb</span></td><td><span class="ex">Lena used to own the bakery.</span></td></tr>
+      <tr><td>negative past state or habit</td><td><span class="ex">subject + didn’t use to + base verb</span></td><td><span class="ex">The shop didn’t use to open Sundays.</span></td></tr>
+      <tr><td>question</td><td><span class="ex">Did + subject + use to + base verb?</span></td><td><span class="ex">Did it use to open early?</span></td></tr>
+      <tr><td>former existence</td><td><span class="ex">There used to be + noun phrase</span></td><td><span class="ex">There used to be a bakery here.</span></td></tr>
+      <tr><td>repeated action in a past frame</td><td><span class="ex">subject + would + base verb</span></td><td><span class="ex">Every morning, Lena would greet commuters.</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You built positive, negative, question, former-existence, and habitual-would forms with the correct base verb.">
+    <h3>Form check: keep the verb chain accurate</h3>
+    <div class="choice-bank" aria-label="Used to and would form choices"><button class="choice-option" data-choice-option="used to own">used to own</button><button class="choice-option" data-choice-option="didn’t use to open">didn’t use to open</button><button class="choice-option" data-choice-option="Did the bakery use to sell">Did the bakery use to sell</button><button class="choice-option" data-choice-option="There used to be">There used to be</button><button class="choice-option" data-choice-option="would greet">would greet</button></div>
+    <div class="q"><span class="n">1</span><span>Possession was true from 2002 to 2014 and is not true now: Lena <button class="choice-gap" data-choice-gap data-answer="used to own" data-hint="Use used to plus the base verb own for the former possession state." data-fix="Lena used to own the bakery.">choose</button> the bakery.</span></div>
+    <div class="q"><span class="n">2</span><span>Sunday opening was not part of the old routine: The bakery <button class="choice-gap" data-choice-gap data-answer="didn’t use to open" data-hint="Didn’t carries the past marking, so use stays in its base form before to open." data-fix="The bakery didn’t use to open on Sundays.">choose</button> on Sundays.</span></div>
+    <div class="q"><span class="n">3</span><span>Ask about a former product that may be different now: <button class="choice-gap" data-choice-gap data-answer="Did the bakery use to sell" data-hint="Begin with Did, keep the subject bakery before use to, and use sell as the base verb." data-fix="Did the bakery use to sell bread after noon?">choose</button> bread after noon?</span></div>
+    <div class="q"><span class="n">4</span><span>State that a small market formerly existed beside the bakery: <button class="choice-gap" data-choice-gap data-answer="There used to be" data-hint="Use There used to be before the noun phrase a small market." data-fix="There used to be a small market beside the bakery.">choose</button> a small market beside the bakery.</span></div>
+    <div class="q"><span class="n">5</span><span>The frame <span class="ex">Every weekday in 2008</span> makes the repeated action clear: Lena <button class="choice-gap" data-choice-gap data-answer="would greet" data-hint="Use would plus the base verb greet for the repeated action inside the stated past frame." data-fix="Every weekday in 2008, Lena would greet the first commuters.">choose</button> the first commuters.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose <span class="ex">used to</span>, habitual <span class="ex">would</span>, or Past Simple</h2>
+  <div class="lead-rule"></div>
+  <p>Sometimes more than one form is grammatical. A strong exercise must therefore state the discourse goal. Compare:</p>
+  <table>
+    <thead><tr><th>speaker’s goal</th><th>choice</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>establish a former state and now-contrast</td><td><span class="ex">used to</span></td><td><span class="ex">The front room used to be yellow.</span></td></tr>
+      <tr><td>evoke a repeated scene after the frame is clear</td><td>habitual <span class="ex">would</span></td><td><span class="ex">Each morning, Lena would arrange the bread.</span></td></tr>
+      <tr><td>report a neutral routine</td><td>Past Simple</td><td><span class="ex">The bakery opened at six every weekday.</span></td></tr>
+      <tr><td>advance to one event</td><td>Past Simple</td><td><span class="ex">A storm damaged the roof in 2014.</span></td></tr>
+    </tbody>
+  </table>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used used to for explicit change, would for recurring scenes, and Past Simple for neutral routine and one event according to the requested discourse goal.">
+    <h3>Choice check: follow the requested storytelling job</h3>
+    <div class="choice-bank" aria-label="Used to would and past simple choices"><button class="choice-option" data-choice-option="used to be">used to be</button><button class="choice-option" data-choice-option="would arrange">would arrange</button><button class="choice-option" data-choice-option="opened">opened</button><button class="choice-option" data-choice-option="damaged">damaged</button><button class="choice-option" data-choice-option="used to hold">used to hold</button></div>
+    <div class="q"><span class="n">1</span><span>Establish a former color and contrast it with the white room now: The front room <button class="choice-gap" data-choice-gap data-answer="used to be" data-hint="The prompt requests a former state with an explicit now-contrast." data-fix="The front room used to be yellow, but it is white now.">choose</button> yellow, but it is white now.</span></div>
+    <div class="q"><span class="n">2</span><span>The 2008 weekday frame is already clear. Evoke one recurring scene: Each morning, Lena <button class="choice-gap" data-choice-gap data-answer="would arrange" data-hint="Use habitual would to revisit a repeated action inside the established past frame." data-fix="Each morning, Lena would arrange the bread near the window.">choose</button> the bread near the window.</span></div>
+    <div class="q"><span class="n">3</span><span>The archive label needs a neutral factual routine, not a then-and-now contrast: The bakery <button class="choice-gap" data-choice-gap data-answer="opened" data-hint="Past Simple can report this routine neutrally because every weekday supplies repetition." data-fix="The bakery opened at 6:00 every weekday.">choose</button> at 6:00 every weekday.</span></div>
+    <div class="q"><span class="n">4</span><span>Move the story from routine to one dated event: On September 14, 2014, a storm <button class="choice-gap" data-choice-gap data-answer="damaged" data-hint="Use Past Simple for the one finished event on the exact date." data-fix="On September 14, 2014, a storm damaged the roof.">choose</button> the roof.</span></div>
+    <div class="q"><span class="n">5</span><span>Explicitly contrast the former monthly classes with the absence of classes now: The bakery <button class="choice-gap" data-choice-gap data-answer="used to hold" data-hint="The prompt asks for a repeated habit presented as different from now." data-fix="The bakery used to hold a bread-making class each month, but no classes happen there now.">choose</button> a bread-making class each month.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>State or repeated event? Meaning comes first</h2>
+  <div class="lead-rule"></div>
+  <p>For a simple continuing past state, <span class="ex">used to</span> is the safest B1 choice: <span class="ex">She used to own the bakery. She used to know every customer. The room used to be yellow.</span> Habitual <span class="ex">would</span> normally foregrounds repeated events rather than a plain continuing state.</p>
+  <p>Do not classify a written verb forever. Meaning can change. <span class="ex">She used to have a delivery van</span> presents possession, a state. <span class="ex">Every Friday, she would have lunch with the suppliers</span> presents a repeated event. Likewise, <span class="ex">She used to think the station was noisy</span> presents an opinion state, while <span class="ex">After closing, she would think about new recipes</span> presents a repeated mental activity.</p>
+  <p>Literary and expressive English sometimes uses <span class="ex">would</span> with a characteristic situation, as in <span class="ex">On winter mornings, the room would be freezing</span>. This lesson does not label that use impossible. For a neutral, continuous state with a clear then-and-now contrast, <span class="ex">used to</span> remains the more dependable learner choice.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished possession and opinion states from repeated travel and meal events by meaning rather than by memorizing a permanent verb list.">
+    <h3>Meaning check: state or recurring event?</h3>
+    <div class="choice-bank" aria-label="Past state and repeated event choices"><button class="choice-option" data-choice-option="used to own">used to own</button><button class="choice-option" data-choice-option="used to think">used to think</button><button class="choice-option" data-choice-option="would drive">would drive</button><button class="choice-option" data-choice-option="would have">would have</button></div>
+    <div class="q"><span class="n">1</span><span>Possession continued across the old period and is different now: Lena <button class="choice-gap" data-choice-gap data-answer="used to own" data-hint="Own presents possession as a continuing state in this sentence." data-fix="Lena used to own the bakery.">choose</button> the bakery.</span></div>
+    <div class="q"><span class="n">2</span><span>The sentence presents one continuing opinion that later changed: Lena <button class="choice-gap" data-choice-gap data-answer="used to think" data-hint="Think presents an opinion state here, not repeated acts of considering." data-fix="Lena used to think the station was too noisy.">choose</button> the station was too noisy.</span></div>
+    <div class="q"><span class="n">3</span><span>The Friday frame turns <span class="ex">drive</span> into a recurring delivery event: Every Friday, Lena <button class="choice-gap" data-choice-gap data-answer="would drive" data-hint="Use habitual would for the repeated action inside the clear Friday frame." data-fix="Every Friday, Lena would drive to the wholesale market.">choose</button> to the wholesale market.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">Have lunch</span> names a recurring event, not possession: After the market trip, she <button class="choice-gap" data-choice-gap data-answer="would have" data-hint="The established Friday routine makes have lunch a repeated event." data-fix="After the market trip, she would have lunch with the suppliers.">choose</button> lunch with the suppliers.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Do not confuse an old routine with familiarity</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>meaning</th><th>form</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>old state or habit, normally different now</td><td><span class="ex">used to + base verb</span></td><td><span class="ex">Maya used to work afternoons.</span></td></tr>
+      <tr><td>familiar or accustomed now</td><td><span class="ex">be used to + noun or -ing</span></td><td><span class="ex">Maya is used to working early.</span></td></tr>
+      <tr><td>become familiar over time</td><td><span class="ex">get used to + noun or -ing</span></td><td><span class="ex">Maya got used to the early schedule.</span></td></tr>
+      <tr><td>purpose of an object</td><td><span class="ex">be used for + noun or -ing</span></td><td><span class="ex">This room is used for recording.</span></td></tr>
+    </tbody>
+  </table>
+  <p>In the old-habit form, <span class="ex">to</span> belongs to the infinitive and is followed by a base verb: <span class="ex">used to work</span>. In <span class="ex">be/get used to</span>, <span class="ex">to</span> is a preposition and is followed by a noun or <span class="ex">-ing</span> form: <span class="ex">used to the schedule, used to working early</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated a former work schedule, present familiarity, the process of becoming familiar, and the room’s purpose.">
+    <h3>Boundary check: old habit, familiarity, adjustment, or purpose?</h3>
+    <div class="choice-bank" aria-label="Used to and familiarity choices"><button class="choice-option" data-choice-option="used to work">used to work</button><button class="choice-option" data-choice-option="is used to working">is used to working</button><button class="choice-option" data-choice-option="got used to working">got used to working</button><button class="choice-option" data-choice-option="is used for recording">is used for recording</button></div>
+    <div class="q"><span class="n">1</span><span>Maya worked afternoons in her old role, but she does not now: Maya <button class="choice-gap" data-choice-gap data-answer="used to work" data-hint="Use used to plus the base verb work for the former schedule." data-fix="Maya used to work afternoons.">choose</button> afternoons.</span></div>
+    <div class="q"><span class="n">2</span><span>Early work feels normal to Maya now: She <button class="choice-gap" data-choice-gap data-answer="is used to working" data-hint="Use be used to plus working for present familiarity with the activity." data-fix="Maya is used to working early now.">choose</button> early now.</span></div>
+    <div class="q"><span class="n">3</span><span>During her first month, the early schedule gradually became familiar: She <button class="choice-gap" data-choice-gap data-answer="got used to working" data-hint="Use got used to plus working for the completed adjustment process." data-fix="During her first month, Maya got used to working early.">choose</button> early.</span></div>
+    <div class="q"><span class="n">4</span><span>The sentence explains the current function of the audio room: It <button class="choice-gap" data-choice-gap data-answer="is used for recording" data-hint="Use is used for plus recording to state the room’s purpose." data-fix="The audio room is used for recording interviews.">choose</button> interviews.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Questions, negatives, and the meaning of <span class="ex">wouldn’t</span></h2>
+  <div class="lead-rule"></div>
+  <p>In standard edited English, <span class="ex">did</span> carries past marking, so write <span class="ex">Did you use to...?</span> and <span class="ex">didn’t use to...</span>. The positive form remains <span class="ex">used to</span>. Speech often makes <span class="ex">used to</span> and <span class="ex">use to</span> sound alike, so use the auxiliary to guide the spelling.</p>
+  <p>For a neutral absence of an old habit, <span class="ex">didn’t use to</span> is usually clearest: <span class="ex">The bakery didn’t use to open Sundays.</span> Habitual <span class="ex">wouldn’t</span> often suggests refusal or unwillingness: <span class="ex">Even when customers asked, Lena wouldn’t sell the display cake.</span> Context decides whether the negative describes simple non-occurrence or repeated refusal.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed the standard edited negative, question, and short answer, and used wouldn’t only for the stated repeated refusal.">
+    <h3>Form and meaning check: let <span class="ex">did</span> carry past time</h3>
+    <div class="choice-bank" aria-label="Used to question and negative choices"><button class="choice-option" data-choice-option="didn’t use to open">didn’t use to open</button><button class="choice-option" data-choice-option="Did Lena use to sell">Did Lena use to sell</button><button class="choice-option" data-choice-option="she did">she did</button><button class="choice-option" data-choice-option="wouldn’t sell">wouldn’t sell</button></div>
+    <div class="q"><span class="n">1</span><span>Sunday opening was simply absent from the old schedule: The bakery <button class="choice-gap" data-choice-gap data-answer="didn’t use to open" data-hint="Use didn’t use to for a neutral absent habit, then keep open in the base form." data-fix="The bakery didn’t use to open on Sundays.">choose</button> on Sundays.</span></div>
+    <div class="q"><span class="n">2</span><span>Ask about a former product: <button class="choice-gap" data-choice-gap data-answer="Did Lena use to sell" data-hint="Begin with Did and use the base spelling use after the subject Lena." data-fix="Did Lena use to sell soup at lunchtime?">choose</button> soup at lunchtime?</span></div>
+    <div class="q"><span class="n">3</span><span>The archive confirms the positive answer to that question: “Yes, <button class="choice-gap" data-choice-gap data-answer="she did" data-hint="A short answer repeats the subject and auxiliary did." data-fix="Yes, she did.">choose</button>.”</span></div>
+    <div class="q"><span class="n">4</span><span>Customers repeatedly requested the display cake, but Lena refused every time: She <button class="choice-gap" data-choice-gap data-answer="wouldn’t sell" data-hint="The context explicitly describes repeated refusal, so wouldn’t is meaningful here." data-fix="Even when customers asked, Lena wouldn’t sell the display cake.">choose</button> the display cake.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the past world, revisit routines, then move the story</h2>
+  <div class="lead-rule"></div>
+  <p>A coherent memory is more than a list of forms. Establish the period and background, enter its repeated scenes, move to a specific event, and close with the present contrast.</p>
+  <table>
+    <thead><tr><th>discourse step</th><th>useful choice</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>establish the past world</td><td><span class="ex">used to</span></td><td><span class="ex">There used to be a bakery here.</span></td></tr>
+      <tr><td>add recurring scenes</td><td>habitual <span class="ex">would</span></td><td><span class="ex">Each morning, Lena would unlock the door.</span></td></tr>
+      <tr><td>advance to one event</td><td>Past Simple</td><td><span class="ex">In 2014, a storm damaged the roof.</span></td></tr>
+      <tr><td>close the contrast</td><td>present form</td><td><span class="ex">A language center occupies the building now.</span></td></tr>
+    </tbody>
+  </table>
+  <p>The modal <span class="ex">would</span> has other meanings. In <span class="ex">If the bakery reopened, people would return</span>, it is a hypothetical result. In <span class="ex">Every morning in 2008, people would stop for coffee</span>, it is a past habit. The condition or past-time frame tells the listener which meaning is active.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You established a past state, entered two recurring scenes, advanced to one event, and closed with the present contrast.">
+    <h3>Discourse check: complete the four-stage oral history</h3>
+    <div class="choice-bank" aria-label="Past habit discourse choices"><button class="choice-option" data-choice-option="used to be">used to be</button><button class="choice-option" data-choice-option="would unlock">would unlock</button><button class="choice-option" data-choice-option="would greet">would greet</button><button class="choice-option" data-choice-option="damaged">damaged</button><button class="choice-option" data-choice-option="occupies">occupies</button></div>
+    <div class="q"><span class="n">1</span><span>Establish the old background and implied change: In 2008, the building <button class="choice-gap" data-choice-gap data-answer="used to be" data-hint="Use used to be to establish the former bakery state before the routine begins." data-fix="In 2008, the building used to be a bakery.">choose</button> a bakery.</span></div>
+    <div class="q"><span class="n">2</span><span>Enter the established weekday routine: Every morning, Lena <button class="choice-gap" data-choice-gap data-answer="would unlock" data-hint="The past world is established, and every morning supplies repeated action." data-fix="Every morning, Lena would unlock the door at six.">choose</button> the door at six.</span></div>
+    <div class="q"><span class="n">3</span><span>Add a second recurring scene in that routine: She <button class="choice-gap" data-choice-gap data-answer="would greet" data-hint="Use habitual would for another repeated action in the same clear morning frame." data-fix="She would greet the first commuters by name.">choose</button> the first commuters by name.</span></div>
+    <div class="q"><span class="n">4</span><span>Move to one event on September 14, 2014: A storm <button class="choice-gap" data-choice-gap data-answer="damaged" data-hint="Use Past Simple for the single dated event that changes the story." data-fix="On September 14, 2014, a storm damaged the roof.">choose</button> the roof.</span></div>
+    <div class="q"><span class="n">5</span><span>Close with the situation now: A language center <button class="choice-gap" data-choice-gap data-answer="occupies" data-hint="Use Present Simple for the current state marked by now." data-fix="A language center occupies the building now.">choose</button> the building now.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: <span class="ex">used to</span>, linked questions, and weak <span class="ex">would</span></h2>
+  <div class="lead-rule"></div>
+  <div class="two-col">
+    <div>
+      <h3>Hear the whole chunk</h3>
+      <p>Habitual <span class="ex">used to</span> is commonly /ˈjuːstə/ in connected U.S. speech. The written <span class="ex">d</span> is not pronounced as a separate strong sound before <span class="ex">to</span>. Positive <span class="ex">used to</span> and <span class="ex">use to</span> after <span class="ex">did</span> can sound alike.</p>
+      <p><span class="ex">Did you use to...?</span> may link as /ˈdɪdʒə ˈjuːstə/. Use the auxiliary <span class="ex">did</span>, not sound alone, to recover the written question form.</p>
+    </div>
+    <div>
+      <h3>Reduce the modal, stress the memory</h3>
+      <p>Habitual <span class="ex">would</span> is often weak /wəd/ or contracts to <span class="ex">’d</span>: <span class="ex">She’d UNLOCK the DOOR at SIX.</span> The repeated action and new detail carry the stronger beats.</p>
+      <p>After <span class="ex">’d</span>, a base verb can signal <span class="ex">would</span>: <span class="ex">she’d unlock</span>. A participle can signal <span class="ex">had</span>: <span class="ex">she’d unlocked the door before six</span>. Context and the following verb form resolve the contraction.</p>
+    </div>
+  </div>
+
+  <section data-lesson-extension="Tutor-read former state, framed repeated action, used-to question, familiarity, and would-versus-had contraction listening check">
+    <h2>Listen for the grammar around the reduced form</h2>
+    <div class="lead-rule"></div>
+    <p>Your tutor reads each line once naturally and once in short thought groups. Use the time frame, auxiliary, and following verb form rather than trying to hear one isolated letter.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a former state, repeated framed action, used-to question, present familiarity, and would-versus-had contraction contrast.">
+      <h3>Listening check: recover form and discourse job</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The building was a bakery before, but it is not now." data-hint="Listen for used to be and the stated language center now." data-fix="The building was a bakery before, but it is not now."><p class="quiz-question">1. What contrast does the first line establish?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The building was a bakery before, but it is not now.">The building was a bakery before, but it is not now.</button><button class="quiz-option" data-quiz-option="The bakery will open tomorrow for the first time.">The bakery will open tomorrow for the first time.</button><button class="quiz-option" data-quiz-option="The building has always been a language center.">The building has always been a language center.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Lena repeatedly unlocked the door at six in 2008." data-hint="Listen for the 2008 morning frame, contracted she’d, and base verb unlock." data-fix="Lena repeatedly unlocked the door at six in 2008."><p class="quiz-question">2. What does contracted <span class="ex">she’d unlock</span> communicate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lena repeatedly unlocked the door at six in 2008.">Lena repeatedly unlocked the door at six in 2008.</button><button class="quiz-option" data-quiz-option="Lena had completed one unlock before a later event.">Lena had completed one unlock before a later event.</button><button class="quiz-option" data-quiz-option="Lena is refusing to unlock the door now.">Lena is refusing to unlock the door now.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="whether the bakery formerly opened on Sundays" data-hint="Listen for linked Did you use to and the former Sunday routine being questioned." data-fix="The question asks whether the bakery formerly opened on Sundays."><p class="quiz-question">3. What information does the linked question request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="whether the bakery formerly opened on Sundays">whether the bakery formerly opened on Sundays</button><button class="quiz-option" data-quiz-option="whether the bakery will open next Sunday">whether the bakery will open next Sunday</button><button class="quiz-option" data-quiz-option="why Sunday no longer exists">why Sunday no longer exists</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Early work feels normal to Maya now." data-hint="Listen for is used to working, which describes present familiarity rather than an old habit." data-fix="Early work feels normal to Maya now."><p class="quiz-question">4. What does <span class="ex">Maya is used to working early</span> mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Early work feels normal to Maya now.">Early work feels normal to Maya now.</button><button class="quiz-option" data-quiz-option="Maya worked early before but never does now.">Maya worked early before but never does now.</button><button class="quiz-option" data-quiz-option="The room’s purpose is to employ Maya.">The room’s purpose is to employ Maya.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The first ’d means would; the second ’d means had." data-hint="Listen to the form after each contraction: base call versus participle owned." data-fix="In she’d call, ’d means would; in she’d owned, ’d means had."><p class="quiz-question">5. What does <span class="ex">’d</span> mean in the two final phrases?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The first ’d means would; the second ’d means had.">The first ’d means would; the second ’d means had.</button><button class="quiz-option" data-quiz-option="Both contractions mean did.">Both contractions mean did.</button><button class="quiz-option" data-quiz-option="Both contractions express future certainty.">Both contractions express future certainty.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">This building used to BE a bakery, but it is a language center NOW.</span> Evidence: former state plus explicit present contrast.</li>
+        <li><span class="ex">Back in 2008, she’d UNLOCK the door at SIX every morning.</span> Evidence: recoverable past frame plus base verb, so <span class="ex">’d</span> means habitual <span class="ex">would</span>.</li>
+        <li><span class="ex">Did you use to OPEN on SUNdays?</span> Evidence: linked question with <span class="ex">did</span> carrying past marking.</li>
+        <li><span class="ex">Maya is USED to working EARly now.</span> Evidence: <span class="ex">be used to + -ing</span> means present familiarity.</li>
+        <li><span class="ex">On Fridays, she’d CALL the suppliers. By 2010, she’d OWNED the bakery for eight years.</span> Evidence: base <span class="ex">call</span> resolves <span class="ex">’d</span> as <span class="ex">would</span>; participle <span class="ex">owned</span> resolves it as <span class="ex">had</span>.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read one complete neighborhood archive entry</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>17 Station Street: then and now</h3>
+    <p><span class="ex">There used to be a small bakery at 17 Station Street. Lena used to own it, and she used to know many commuters by name. Every weekday in 2008, she would unlock the door at 6:00, put two chairs outside, and greet the first customers. One Saturday in 2014, a storm damaged the roof, and the bakery closed later that month. A language center occupies the building now. Its coordinator, Maya, is used to working early, but the schedule felt difficult at first. She got used to it during her first month.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the former bakery state, repeated weekday scene, single storm event, and Maya’s completed adjustment from the archive entry.">
+    <h3>Reading check: use only the archive entry</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Lena formerly owned the bakery." data-hint="The second sentence uses used to with the possession verb own." data-fix="Lena formerly owned the bakery."><p class="quiz-question">1. Which former possession state does the entry report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lena formerly owned the bakery.">Lena formerly owned the bakery.</button><button class="quiz-option" data-quiz-option="Maya currently owns every building on the street.">Maya currently owns every building on the street.</button><button class="quiz-option" data-quiz-option="The commuters owned Lena’s chairs.">The commuters owned Lena’s chairs.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="She unlocked the door, put out chairs, and greeted customers." data-hint="The 2008 weekday sentence lists three recurring actions." data-fix="Every weekday, Lena unlocked the door, put out two chairs, and greeted customers."><p class="quiz-question">2. Which actions formed Lena’s weekday routine?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She unlocked the door, put out chairs, and greeted customers.">She unlocked the door, put out chairs, and greeted customers.</button><button class="quiz-option" data-quiz-option="She repaired the roof during every commute.">She repaired the roof during every commute.</button><button class="quiz-option" data-quiz-option="She taught language classes after the bakery closed.">She taught language classes after the bakery closed.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="A storm damaged the roof in 2014." data-hint="Find the one Saturday event that interrupts the routine." data-fix="A storm damaged the roof in 2014."><p class="quiz-question">3. Which single event changed the account?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="A storm damaged the roof in 2014.">A storm damaged the roof in 2014.</button><button class="quiz-option" data-quiz-option="The bakery opened at six every weekday.">The bakery opened at six every weekday.</button><button class="quiz-option" data-quiz-option="Maya works early now.">Maya works early now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The early schedule became familiar during her first month." data-hint="The final two sentences contrast initial difficulty with a completed adjustment." data-fix="The early schedule became familiar to Maya during her first month."><p class="quiz-question">4. What does the entry say about Maya’s adjustment?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The early schedule became familiar during her first month.">The early schedule became familiar during her first month.</button><button class="quiz-option" data-quiz-option="Maya stopped working after one month.">Maya stopped working after one month.</button><button class="quiz-option" data-quiz-option="The building is used for baking now.">The building is used for baking now.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build an old-routine question and one recurring scene</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="did the bakery use to open at six" data-hint="Begin with Did, place the subject bakery before use to, and keep open in its base form." data-fix="Did the bakery use to open at six?" data-success-message="Correct. Did carries the past marking, so use and open both remain in their base forms.">
+    <h3>Build 1: ask about the former schedule</h3><p class="tile-target">Ask whether 6:00 was part of the bakery’s old opening routine.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="six">six</button><button class="tile" data-build-tile="bakery">bakery</button><button class="tile" data-build-tile="use">use</button><button class="tile" data-build-tile="at">at</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="open">open</button><button class="tile" data-build-tile="did">Did</button><button class="tile" data-build-tile="to">to</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="every morning Lena would put two chairs outside" data-hint="Begin with the repeated morning frame, then use Lena would plus the base verb put." data-fix="Every morning, Lena would put two chairs outside." data-success-message="Correct. Every morning supplies the past-habit frame, and would put presents the recurring action.">
+    <h3>Build 2: enter a repeated morning scene</h3><p class="tile-target">The bakery’s old period is already established. Add one action that happened every morning.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="outside">outside</button><button class="tile" data-build-tile="would">would</button><button class="tile" data-build-tile="morning">morning</button><button class="tile" data-build-tile="chairs">chairs</button><button class="tile" data-build-tile="lena">Lena</button><button class="tile" data-build-tile="two">two</button><button class="tile" data-build-tile="every">Every</button><button class="tile" data-build-tile="put">put</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair form or meaning</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="used" data-hint="Did already carries past marking in the question." data-fix="Did the bakery use to open at six?" data-why="After did, write the base form use. The positive form without did is used to." data-success-message="Correct. Use is the base form required after Did in the past-habit question.">
+    <h3>Repair 1: let <span class="ex">did</span> carry past time</h3><p>Tap the form that incorrectly keeps a second past marking.</p><div class="spot-options"><button class="error-choice" data-error-choice="did">Did</button><button class="error-choice" data-error-choice="bakery">the bakery</button><button class="error-choice" data-error-choice="used">used to</button><button class="error-choice" data-error-choice="open">open</button><button class="error-choice" data-error-choice="six">at six?</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="would own" data-hint="Own presents one continuing possession state from 2002 to 2014, not a recurring event." data-fix="Lena used to own the bakery, but she does not own it now." data-why="Used to is the dependable choice for a former possession state with an explicit present contrast." data-success-message="Correct. Used to own presents the former possession state and its contrast with now.">
+    <h3>Repair 2: preserve the possession state</h3><p>Tap the form that incorrectly treats continuous possession as the target recurring action.</p><div class="spot-options"><button class="error-choice" data-error-choice="lena">Lena</button><button class="error-choice" data-error-choice="would own">would own</button><button class="error-choice" data-error-choice="bakery">the bakery,</button><button class="error-choice" data-error-choice="but">but she does not</button><button class="error-choice" data-error-choice="now">own it now.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="wake" data-hint="In be used to, to is a preposition, so the activity takes an -ing form." data-fix="Maya is used to waking up early now." data-why="Be used to plus waking means the activity feels familiar. Used to wake would instead describe a former habit." data-success-message="Correct. Waking is the -ing form required after be used to for present familiarity.">
+    <h3>Repair 3: distinguish familiarity from an old habit</h3><p>Tap the verb that incorrectly follows the preposition <span class="ex">to</span>.</p><div class="spot-options"><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="used">used to</button><button class="error-choice" data-error-choice="wake">wake</button><button class="error-choice" data-error-choice="early">up early now.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing personal history</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real childhood, family, former home, neighborhood, workplace, employer, routine, finances, health, relationships, religion, political views, immigration history, regrets, or current location. Use the fictional Riverside archive. Real details are optional.</p>
+  <div class="prompt-card"><b>Background:</b> In 2008, 17 Station Street was a bakery. Establish two former states with <span class="ex">used to</span>.</div>
+  <div class="prompt-card"><b>Recurring scene:</b> The bakery opened every weekday. Add three repeated actions with habitual <span class="ex">would</span> after the frame is clear.</div>
+  <div class="prompt-card"><b>Turning point:</b> One storm damaged the roof in 2014. Use Past Simple to move from routine to the one event and its result.</div>
+  <div class="prompt-card"><b>Now and adjustment:</b> A language center occupies the building. Explain one current familiarity and the earlier adjustment process with <span class="ex">be/get used to</span>.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: record a 75–90 second fictional oral history</h3>
+    <p>Use 17 Station Street. Establish the old period with one former state and one former habit using <span class="ex">used to</span>. Add two recurring actions with habitual <span class="ex">would</span>. Move to one dated Past Simple event, close with the present contrast, and explain one current familiarity or completed adjustment with <span class="ex">be/get used to</span>.</p>
+    <p><b>Evidence check:</b> Can the listener recover the past frame, identify every state and repeated event, hear where one event advances the story, and distinguish old habit from current familiarity?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You preserved the former state, framed recurring action, and present familiarity instead of choosing one past form mechanically.">
+    <h3>Final check: defend each discourse choice</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Lena used to own the bakery, but she does not own it now." data-hint="The sentence needs a former possession state with an explicit present contrast." data-fix="Lena used to own the bakery, but she does not own it now."><p class="quiz-question">1. Which sentence presents possession as a former state?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lena used to own the bakery, but she does not own it now.">Lena used to own the bakery, but she does not own it now.</button><button class="quiz-option" data-quiz-option="Lena would own the bakery once on September 14.">Lena would own the bakery once on September 14.</button><button class="quiz-option" data-quiz-option="Lena is used to own the bakery now.">Lena is used to own the bakery now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Every morning in 2008, Lena would unlock the door at six." data-hint="The sentence needs a recoverable past frame and a recurring dynamic action." data-fix="Every morning in 2008, Lena would unlock the door at six."><p class="quiz-question">2. Which sentence uses habitual <span class="ex">would</span> with enough context?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Every morning in 2008, Lena would unlock the door at six.">Every morning in 2008, Lena would unlock the door at six.</button><button class="quiz-option" data-quiz-option="Lena would know every customer as one continuing state.">Lena would know every customer as one continuing state.</button><button class="quiz-option" data-quiz-option="Tomorrow Lena would unlocked the door yesterday.">Tomorrow Lena would unlocked the door yesterday.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Maya is used to working early now." data-hint="The context asks for present familiarity, so use be used to plus an -ing activity." data-fix="Maya is used to working early now."><p class="quiz-question">3. Which sentence says that early work feels familiar now?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya is used to working early now.">Maya is used to working early now.</button><button class="quiz-option" data-quiz-option="Maya used to working early now.">Maya used to working early now.</button><button class="quiz-option" data-quiz-option="Maya would be working early once in 2008.">Maya would be working early once in 2008.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what job does the form perform?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">I choose used to when...</span> <span class="ex">Habitual would needs...</span> <span class="ex">Past Simple can describe both...</span> <span class="ex">A state differs from a repeated event because...</span> <span class="ex">Be used to means...</span> <span class="ex">Get used to means...</span></p>
+    <p>Create two accurate versions of one routine: a neutral Past Simple report and a memory-style <span class="ex">would</span> version with a clear past frame. Then explain the discourse difference.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day edited negative, habitual-would frame, and familiarity retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Name the state, repeated event, or familiarity meaning before selecting a form.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the standard edited negative, the framing requirement for habitual would, and be used to plus an -ing familiarity activity.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The bakery didn’t use to open on Sundays." data-hint="Didn’t carries the past marking, so write the base form use before to open." data-fix="The bakery didn’t use to open on Sundays."><p class="quiz-question">1. Which sentence uses the standard edited negative for an absent old routine?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The bakery didn’t use to open on Sundays.">The bakery didn’t use to open on Sundays.</button><button class="quiz-option" data-quiz-option="The bakery didn’t used to opened on Sundays.">The bakery didn’t used to opened on Sundays.</button><button class="quiz-option" data-quiz-option="The bakery wouldn’t opened every Sunday.">The bakery wouldn’t opened every Sunday.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Habitual would needs a recoverable past frame and normally foregrounds repeated actions." data-hint="Think about what lets the listener interpret would as a recurring memory rather than a conditional result." data-fix="Habitual would needs a recoverable past frame and normally foregrounds repeated actions."><p class="quiz-question">2. Which explanation accurately describes habitual <span class="ex">would</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Habitual would needs a recoverable past frame and normally foregrounds repeated actions.">Habitual would needs a recoverable past frame and normally foregrounds repeated actions.</button><button class="quiz-option" data-quiz-option="Habitual would is the only grammatical form for every past state.">Habitual would is the only grammatical form for every past state.</button><button class="quiz-option" data-quiz-option="Habitual would always proves that the action continues now.">Habitual would always proves that the action continues now.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Maya is used to working early." data-hint="Present familiarity uses be used to, and the activity after prepositional to takes an -ing form." data-fix="Maya is used to working early."><p class="quiz-question">3. Which sentence means that early work feels familiar to Maya now?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya is used to working early.">Maya is used to working early.</button><button class="quiz-option" data-quiz-option="Maya used to working early.">Maya used to working early.</button><button class="quiz-option" data-quiz-option="Maya is used to work early yesterday.">Maya is used to work early yesterday.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

@@ -2,29 +2,43 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Articles a / an · A0 Grammar · Curriculum Map",
+  "title": "Articles a / an · A0 Grammar",
   "slug": "articles-a-an",
   "level": "A0",
   "topic": "Articles a / an",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Use a or an when you mean one person or thing. Listen to the first sound of the next word to choose the article.",
+  "description": "Use a or an for one person or thing, and choose the correct article by listening to the first sound of the next word.",
   "sequence": 3,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/subject-pronouns"
+  ],
+  "related": [
+    "a0/regular-plural-nouns",
+    "a0/this-that-these-those"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 24,
+    "revisionSummary": "Meaning, countability boundaries, sound-based choice, listening guidance, contextual feedback, timing, production criteria, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="35–45 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 03</p>
   <h1>Articles <em>a / an</em></h1>
   <p class="standfirst">Use <span class="ex">a</span> or <span class="ex">an</span> when you mean one person or thing. Listen to the first sound of the next word to choose the article.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
+    <span class="tag">≈ 35–45 min</span>
     <span class="tag">one thing</span>
     <span class="tag">first sound</span>
     <span class="tag">8 interactive tasks</span>
@@ -49,17 +63,17 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — what sounds natural?</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Phone and student begin with consonant sounds, while office and address begin with vowel sounds.">
+    <h3>Discovery check: what sounds natural?</h3>
     <p class="choice-hint">Tap each gap, then choose a or an</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="a">a</button>
       <button class="choice-option" data-choice-option="an">an</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> phone</span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> office</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> student</span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> address</span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-hint="Listen to the /f/ sound at the start of phone." data-fix="a phone" data-placeholder="choose">choose</button> phone</span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-hint="Office begins with an open vowel sound." data-fix="an office" data-placeholder="choose">choose</button> office</span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="a" data-hint="Student begins with the consonant sound /s/." data-fix="a student" data-placeholder="choose">choose</button> student</span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="an" data-hint="Address begins with a vowel sound." data-fix="an address" data-placeholder="choose">choose</button> address</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -69,14 +83,14 @@ export const page = defineLesson({
 
   <h2>The core meaning</h2>
   <div class="lead-rule"></div>
-  <p><strong>A</strong> and <strong>an</strong> mean the same thing. They introduce <strong>one countable person or thing</strong> that is not yet specific.</p>
+  <p><strong>A</strong> and <strong>an</strong> mean the same thing. Use them with <strong>one countable person or thing</strong>. Countable means you can say <span class="ex">one pen, two pens</span> or <span class="ex">one doctor, two doctors</span>.</p>
   <table>
     <thead><tr><th>Meaning</th><th>Example</th><th>Why?</th></tr></thead>
     <tbody>
-      <tr><td>one object</td><td><b>a</b> pen</td><td>one pen</td></tr>
-      <tr><td>one person</td><td><b>a</b> doctor</td><td>one doctor</td></tr>
-      <tr><td>one object</td><td><b>an</b> umbrella</td><td>one umbrella</td></tr>
-      <tr><td>one role</td><td>She is <b>an</b> engineer.</td><td>one engineer</td></tr>
+      <tr><td>introduce one thing</td><td>I need <b>a</b> pen.</td><td>any one pen</td></tr>
+      <tr><td>introduce one person</td><td><b>A</b> client is here.</td><td>one client, first mention</td></tr>
+      <tr><td>say what it is</td><td>This is <b>an</b> umbrella.</td><td>classify the object</td></tr>
+      <tr><td>say someone’s role</td><td>She is <b>an</b> engineer.</td><td>classify her job</td></tr>
     </tbody>
   </table>
 
@@ -85,7 +99,8 @@ export const page = defineLesson({
     <ul>
       <li>Can we say <span class="ex">a books</span>? <strong>No.</strong> <em>A / an</em> means one, so the noun is singular.</li>
       <li>Can we say <span class="ex">I am teacher</span>? In standard English, <strong>no.</strong> A singular job normally needs <em>a / an</em>: <span class="ex">I am a teacher.</span></li>
-      <li>Does <span class="ex">a phone</span> identify one particular phone? <strong>Not yet.</strong> It introduces any one phone.</li>
+      <li>Does <span class="ex">I need a phone</span> identify one particular phone? <strong>Not yet.</strong> It introduces any one phone.</li>
+      <li>Do we say <span class="ex">a water</span> when we mean water in general? Normally, <strong>no.</strong> This lesson focuses on people and things we can count. In a cafe, <span class="ex">a water</span> can mean one glass or bottle, but that special countable meaning comes later.</li>
     </ul>
   </div>
 
@@ -98,25 +113,50 @@ export const page = defineLesson({
   <div class="note">
     <h3>Sound can be different from spelling</h3>
     <ul>
-      <li><span class="ex">an hour</span> — the <strong>h</strong> is silent, so the first sound is /aʊ/.</li>
-      <li><span class="ex">a university</span> — the word begins with a /y/ sound: “you-niversity.”</li>
+      <li><span class="ex">an hour</span>: the <strong>h</strong> is silent, so the first sound is /aʊ/.</li>
+      <li><span class="ex">a university</span>: the word begins with the consonant “y” sound in <span class="ex">you</span>, “you-niversity.”</li>
       <li>At A0, master the common pattern first. These examples show why listening is more reliable than looking.</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — hear the first sound</h3>
+  <div class="note">
+    <h3>Sound natural: connect the article to the noun</h3>
+    <p><span class="ex">A</span> and <span class="ex">an</span> are small words. Do not pause after them. Say the complete noun chunk together.</p>
+    <table>
+      <thead><tr><th>phrase</th><th>say it as one chunk</th></tr></thead>
+      <tbody>
+        <tr><td>a meeting</td><td>a-<b>MEET</b>ing</td></tr>
+        <tr><td>an office</td><td>an-<b>OFF</b>ice</td></tr>
+        <tr><td>an old computer</td><td>an-old com<b>PU</b>ter</td></tr>
+      </tbody>
+    </table>
+    <p>In ordinary speech, <span class="ex">a</span> is very short, like “uh.” The <span class="ex">n</span> in <span class="ex">an</span> helps connect to the next vowel sound: <span class="ex">an-apple</span>. Stress the article only when “one” is the important contrast: <span class="ex">I need <strong>A</strong> ticket, not two.</span></p>
+  </div>
+
+  <div class="thinking-card" data-lesson-extension="Optional tutor-read sound discrimination">
+    <h3>Tutor-read listening check</h3>
+    <p>Look away from the script. Your tutor says one word or noun phrase. Say the complete chunk with <span class="ex">a</span> or <span class="ex">an</span>, then repeat it without a pause.</p>
+    <details>
+      <summary>Tutor script and answers</summary>
+      <p><b>Read:</b> hotel · email · useful tool · old office · honest manager · university</p>
+      <p><b>Answers:</b> <span class="ex">a hotel · an email · a useful tool · an old office · an honest manager · a university</span></p>
+      <p>Ask after each answer: “What first sound did you hear?”</p>
+    </details>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each article matches the first sound of accountant, new, important, meeting, honest, or university.">
+    <h3>Drill 1: hear the first sound</h3>
     <p class="choice-hint">Choose by sound, then read every phrase aloud</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="a">a</button>
       <button class="choice-option" data-choice-option="an">an</button>
     </div>
-    <div class="q"><span class="n">1</span><span>She is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> accountant.</span></div>
-    <div class="q"><span class="n">2</span><span>I need <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> new password.</span></div>
-    <div class="q"><span class="n">3</span><span>It is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> important email.</span></div>
-    <div class="q"><span class="n">4</span><span>We have <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> meeting today.</span></div>
-    <div class="q"><span class="n">5</span><span>He is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> honest person.</span></div>
-    <div class="q"><span class="n">6</span><span>She studies at <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> university.</span></div>
+    <div class="q"><span class="n">1</span><span>She is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Accountant begins with a vowel sound." data-fix="an accountant" data-placeholder="choose">choose</button> accountant.</span></div>
+    <div class="q"><span class="n">2</span><span>I need <button class="choice-gap" data-choice-gap data-answer="a" data-hint="The article listens to new, which begins with /n/." data-fix="a new password" data-placeholder="choose">choose</button> new password.</span></div>
+    <div class="q"><span class="n">3</span><span>It is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="The article listens to important, not email." data-fix="an important email" data-placeholder="choose">choose</button> important email.</span></div>
+    <div class="q"><span class="n">4</span><span>We have <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Meeting begins with the consonant sound /m/." data-fix="a meeting" data-placeholder="choose">choose</button> meeting today.</span></div>
+    <div class="q"><span class="n">5</span><span>He is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="The h in honest is silent, so listen to the vowel sound after it." data-fix="an honest person" data-placeholder="choose">choose</button> honest person.</span></div>
+    <div class="q"><span class="n">6</span><span>She studies at <button class="choice-gap" data-choice-gap data-answer="a" data-hint="University begins with the consonant “y” sound, like you." data-fix="a university" data-placeholder="choose">choose</button> university.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -130,9 +170,9 @@ export const page = defineLesson({
   <p><span class="ex">a job &nbsp; → &nbsp; a new job</span><br /><span class="ex">an apartment &nbsp; → &nbsp; an expensive apartment</span></p>
   <p>The article listens to the word immediately after it. Compare <span class="ex">a car</span> with <span class="ex">an old car</span>.</p>
 
-  <div class="tile-game" data-tile-builder data-answer="she is an engineer">
-    <h3>Drill 2 — build the sentence</h3>
-    <p class="tile-target">Build a sentence about Sofia's job</p>
+  <div class="tile-game" data-tile-builder data-answer="she is an engineer" data-hint="Begin with She is, then add the article and job." data-fix="She is an engineer." data-success-message="Correct. A singular job needs an article, and engineer begins with a vowel sound, so use an.">
+    <h3>Drill 2: build the sentence</h3>
+    <p class="tile-target">Sofia is an engineer. Build the sentence about her job.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="engineer">engineer</button>
       <button class="tile" data-build-tile="she">She</button>
@@ -147,8 +187,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="i have a new job">
-    <h3>Drill 3 — add a description</h3>
+  <div class="tile-game" data-tile-builder data-answer="i have a new job" data-hint="Begin with I have, then build one complete noun chunk." data-fix="I have a new job." data-success-message="Correct. The noun chunk is a new job because new begins with the consonant sound /n/.">
+    <h3>Drill 3: add a description</h3>
     <p class="tile-target">Build the complete noun chunk</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="job">job</button>
@@ -167,9 +207,9 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="engineer" data-fix="He is an engineer." data-why="A singular job needs an article. Engineer begins with a vowel sound, so use an.">
-    <h3>Drill 4 — find the incomplete chunk</h3>
-    <p>Tap the word after which an article is missing.</p>
+  <div class="micro-drill" data-spot-error data-answer="engineer" data-hint="He is already correct. Check whether the singular job has a complete noun chunk." data-fix="He is an engineer." data-why="A singular job needs an article. Engineer begins with a vowel sound, so use an.">
+    <h3>Drill 4: find the incomplete chunk</h3>
+    <p>Tap the noun that needs an article before it.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="he">He</button>
       <button class="error-choice" data-error-choice="is">is</button>
@@ -178,8 +218,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="an" data-fix="I have a car." data-why="Car begins with a consonant sound, so use a, not an.">
-    <h3>Drill 5 — choose the wrong word</h3>
+  <div class="micro-drill" data-spot-error data-answer="an" data-hint="Listen to the first sound in car and check the word immediately before it." data-fix="I have a car." data-why="Car begins with a consonant sound, so use a, not an.">
+    <h3>Drill 5: choose the wrong word</h3>
     <p>Tap the word that needs to change.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
@@ -190,28 +230,28 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 6 — retrieval without choices</h3>
-    <p>Say the full phrase first. Reveal only after the student answers.</p>
+  <div class="micro-drill" data-transform data-lesson-extension="Optional no-choice article retrieval">
+    <h3>Drill 6: retrieval without choices</h3>
+    <p>Say the full phrase first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>1</b> one + orange</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after student answers</button>
+        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>an orange</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>2</b> one + useful app</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after student answers</button>
-        <p class="transform-answer" data-transform-answer><strong>a useful app</strong> — useful begins with a /y/ sound.</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+        <p class="transform-answer" data-transform-answer><strong>a useful app</strong>: <em>useful</em> begins with the consonant “y” sound.</p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>3</b> one + old computer</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after student answers</button>
-        <p class="transform-answer" data-transform-answer><strong>an old computer</strong> — the article listens to old.</p>
+        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+        <p class="transform-answer" data-transform-answer><strong>an old computer</strong>: the article listens to <em>old</em>.</p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>4</b> job: architect</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after student answers</button>
+        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>I am an architect.</strong></p>
       </div>
     </div>
@@ -221,8 +261,17 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <div class="prompt-card"><b>Desk scan:</b> Find five singular objects near you. Say a full phrase for each: <span class="ex">a phone, an old notebook, a cup</span>.</div>
   <div class="prompt-card"><b>Work and people:</b> Complete true or invented sentences: <span class="ex">I am a/an...</span>, <span class="ex">My friend is a/an...</span>, <span class="ex">I need a/an...</span>.</div>
-  <div class="prompt-card"><b>Information gap:</b> The teacher silently chooses an object. The student asks, <span class="ex">Is it a phone? Is it an eraser?</span> Continue until the student identifies it.</div>
-  <div class="prompt-card"><b>Fast fluency round:</b> Teacher says a noun. Student immediately says the complete chunk. Use: <span class="ex">email, client, office, meeting, hour, university, idea, problem</span>.</div>
+  <div class="prompt-card"><b>Information gap:</b> Your teacher silently chooses an object. Ask, <span class="ex">Is it a phone? Is it an eraser?</span> Continue until you identify it.</div>
+  <div class="prompt-card"><b>Fast fluency round:</b> Your teacher says a noun. Immediately say the complete chunk. Use: <span class="ex">email, client, office, meeting, hour, university, idea, problem</span>.</div>
+  <div class="thinking-card">
+    <h3>Success check</h3>
+    <ul>
+      <li>Name at least three singular people or things with a complete <span class="ex">a / an + noun</span> chunk.</li>
+      <li>Choose the article from the first sound of the next word, including before an adjective.</li>
+      <li>Connect the article to the next word without a long pause.</li>
+      <li>Ask and answer at least one <span class="ex">Is it a/an...?</span> question.</li>
+    </ul>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -232,32 +281,32 @@ export const page = defineLesson({
     <p>Then give one example that is true about your life.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can choose a or an by meaning and sound.">
-    <h3>Final quiz — can you choose by sound?</h3>
+  <div class="quiz" data-quiz data-success-message="Excellent. You used a or an with one countable person or thing and chose each article from the first sound of the next word.">
+    <h3>Final quiz: can you choose by sound?</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="a">
+      <div class="quiz-item" data-quiz-item data-answer="a" data-hint="Meeting is one countable event and begins with /m/." data-fix="a meeting">
         <p class="quiz-question">1. I have ___ meeting at 2:00.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="an">
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="A singular job needs an article. Listen to the first sound in English." data-fix="an English teacher">
         <p class="quiz-question">2. She is ___ English teacher.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="an">
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="The h in hour is silent, so the first sound is a vowel sound." data-fix="an hour">
         <p class="quiz-question">3. We waited for ___ hour.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a">
+      <div class="quiz-item" data-quiz-item data-answer="a" data-hint="University starts with the consonant “y” sound, like you." data-fix="a university">
         <p class="quiz-question">4. He works at ___ university.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="an">
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="The article listens to interesting, the word immediately after it." data-fix="an interesting idea">
         <p class="quiz-question">5. That is ___ interesting idea.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a">
+      <div class="quiz-item" data-quiz-item data-answer="a" data-hint="The phrase needs an article for one computer. Listen to the /n/ sound in new." data-fix="a new computer">
         <p class="quiz-question">6. Which phrase means one new computer?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a new computer</button><button class="quiz-option" data-quiz-option="an">an new computer</button><button class="quiz-option" data-quiz-option="no article">new computer</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a" data-value-label-variant="token">a new computer</button><button class="quiz-option" data-quiz-option="an" data-value-label-variant="token">an new computer</button><button class="quiz-option" data-quiz-option="no article" data-value-label-variant="token">new computer</button></div>
       </div>
     </div>
     <div class="drill-actions">
@@ -266,6 +315,60 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <div class="prompt-card"><b>Next use:</b> tomorrow, return to the <a href="#next-day-retrieval">five-minute retrieval check</a> before you reread the rule.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day article retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Come back tomorrow. Choose from memory, then say every complete noun chunk aloud.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. Urgent begins with a vowel sound, useful begins with the consonant “y” sound, and meeting begins with /m/.">
+      <h3>Choose from memory</h3>
+      <p class="choice-hint">Tap each gap, then choose a or an</p>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="a">a</button>
+        <button class="choice-option" data-choice-option="an">an</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>I received <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Urgent begins with a vowel sound." data-fix="an urgent message" data-placeholder="choose">choose</button> urgent message.</span></div>
+      <div class="q"><span class="n">2</span><span>This is <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Useful begins with the consonant “y” sound, like you." data-fix="a useful tool" data-placeholder="choose">choose</button> useful tool.</span></div>
+      <div class="q"><span class="n">3</span><span>We have <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Meeting begins with the consonant sound /m/." data-fix="a meeting" data-placeholder="choose">choose</button> meeting at ten.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="engineer" data-hint="The sentence names one job. Check whether the noun chunk is complete." data-fix="My sister is an engineer." data-why="A singular job needs an article, and engineer begins with a vowel sound.">
+      <h3>Repair from memory</h3>
+      <p class="ex">My sister is engineer.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="sister">sister</button>
+        <button class="error-choice" data-error-choice="is">is</button>
+        <button class="error-choice" data-error-choice="engineer">engineer</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without notes</h3>
+      <p>Say each answer before you reveal it.</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>1</b> one + old laptop</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>an old laptop</strong>: the article listens to <em>old</em>.</p>
+        </div>
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>2</b> one + new apartment</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>a new apartment</strong>: the article listens to <em>new</em>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-card"><b>Thirty-second response:</b> describe one person and two things in your life. Use at least one <span class="ex">a</span> phrase and one <span class="ex">an</span> phrase, then explain one choice by first sound.</div>
+  </section>
 </main>
 </LessonPage>
-

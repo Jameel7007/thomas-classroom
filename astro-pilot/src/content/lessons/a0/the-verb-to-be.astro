@@ -2,29 +2,37 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "The verb “to be” · A0 Grammar · Curriculum Map",
+  "title": "The verb “to be” · A0 Grammar",
   "slug": "the-verb-to-be",
   "level": "A0",
   "topic": "The verb to be (am / is / are)",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "The most common verb in English. We use to be to talk about who we are, how we feel, our age, and where things are.",
+  "description": "Use the verb be to identify people and things, describe feelings and age, and say where someone or something is.",
   "sequence": 1,
   "prerequisites": [],
   "related": [],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 26,
+    "revisionSummary": "Agreement, question form, negative form, hints, corrective feedback, timing, and later retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="35–45 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 01</p>
   <h1>The verb <em>to be</em></h1>
   <p class="standfirst">The most common verb in English. We use <span class="ex">to be</span> to talk about who we are, how we feel, our age, and where things are.</p>
   <div class="meta-row">
-    <span class="tag">≈ 25 min</span>
+    <span class="tag">≈ 35–45 min</span>
     <span class="tag">am / is / are</span>
     <span class="tag">Present simple</span>
   </div>
@@ -37,13 +45,13 @@ export const page = defineLesson({
   </div>
 
   <div class="note">
-    <h3>By the end of this lesson, you can…</h3>
+    <h2>By the end of this lesson, you can…</h2>
     <ul>
-      <li>say who you are — <span class="ex">I am Ana. My name is Ana.</span></li>
+      <li>say who you are: <span class="ex">I am Ana. My name is Ana.</span></li>
       <li>choose <span class="ex">am</span>, <span class="ex">is</span>, or <span class="ex">are</span> for any subject.</li>
-      <li>ask and answer simple questions — <span class="ex">Are you a student? — Yes, I am.</span></li>
-      <li>make a sentence negative — <span class="ex">I am not tired.</span></li>
-      <li>use short forms when you speak — <span class="ex">I’m · you’re · she’s.</span></li>
+      <li>ask and answer simple questions: <span class="ex">Are you a student? Yes, I am.</span></li>
+      <li>make a sentence negative: <span class="ex">I am not tired.</span></li>
+      <li>use short forms when you speak: <span class="ex">I’m · you’re · she’s.</span></li>
     </ul>
   </div>
 
@@ -61,7 +69,7 @@ export const page = defineLesson({
 
   <h2>What does <em>be</em> mean?</h2>
   <div class="lead-rule"></div>
-  <p>Most verbs are <strong>actions</strong> — <span class="ex">run, eat, study</span>. The verb <strong>to be</strong> is different. It is not an action. It tells us <strong>who</strong> or <strong>what</strong> someone is, or <strong>how</strong> they feel.</p>
+  <p>Many common verbs describe <strong>actions</strong>, such as <span class="ex">run, eat, study</span>. The verb <strong>to be</strong> is different. It connects a person or thing to information about identity, description, feeling, age, or location.</p>
   <p>Think of <strong>be</strong> as an equals sign <strong>(=)</strong>:</p>
   <p><span class="ex">I <strong>am</strong> Ana.</span> → I = Ana. &nbsp; <span class="ex">She <strong>is</strong> happy.</span> → she = happy. &nbsp; <span class="ex">They <strong>are</strong> at work.</span> → they = at work.</p>
 
@@ -85,21 +93,20 @@ export const page = defineLesson({
       <tr><td>They</td><td><b>are</b></td><td class="contraction">they’re</td></tr>
     </tbody>
   </table>
-  <p>Learn these as whole pieces: <span class="ex">I am</span>, <span class="ex">you are</span>, <span class="ex">she is</span>. Don’t build them word by word — just say the whole piece.</p>
+  <p>Learn these as whole pieces: <span class="ex">I am</span>, <span class="ex">you are</span>, <span class="ex">she is</span>. Don’t build them word by word. Say the whole piece.</p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose the form</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. My name and he use is; we and they use are.">
+    <h3>Drill 1: choose the form</h3>
     <p class="choice-hint">Tap a gap, then choose the word</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="am">am</button>
       <button class="choice-option" data-choice-option="is">is</button>
       <button class="choice-option" data-choice-option="are">are</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Hello, my name <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> Ana.</span></div>
-    <div class="q"><span class="n">2</span><span>We <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> from Brazil.</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> you a teacher? — Yes, I <button class="choice-gap" data-choice-gap data-answer="am" data-placeholder="choose">choose</button>.</span></div>
-    <div class="q"><span class="n">4</span><span>He <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> not at home. He’s at work.</span></div>
-    <div class="q"><span class="n">5</span><span>They <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> my friends.</span></div>
+    <div class="q"><span class="n">1</span><span>Hello, my name <button class="choice-gap" data-choice-gap data-answer="is" data-hint="My name refers to one name, so use is." data-fix="Use is: My name is Ana." data-placeholder="choose">choose</button> Ana.</span></div>
+    <div class="q"><span class="n">2</span><span>We <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Use are after we." data-fix="Use are: We are from Brazil." data-placeholder="choose">choose</button> from Brazil.</span></div>
+    <div class="q"><span class="n">3</span><span>He <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Use is after he." data-fix="Use is: He is not at home." data-placeholder="choose">choose</button> not at home. He’s at work.</span></div>
+    <div class="q"><span class="n">4</span><span>They <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Use are after they." data-fix="Use are: They are my friends." data-placeholder="choose">choose</button> my friends.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -107,8 +114,25 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match the subject</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. A question with you begins with Are, and the positive short answer is Yes, I am.">
+    <h3>Drill 1B: ask and answer</h3>
+    <p class="choice-hint">Choose the complete question and short-answer forms.</p>
+    <div class="choice-bank" aria-label="Answer choices">
+      <button class="choice-option" data-choice-option="Are">Are</button>
+      <button class="choice-option" data-choice-option="Is">Is</button>
+      <button class="choice-option" data-choice-option="am">am</button>
+    </div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Are" data-hint="The subject is you. Put the matching form of be before it." data-fix="Ask: Are you a teacher?" data-placeholder="choose">choose</button> you a teacher?</span></div>
+    <div class="q"><span class="n">2</span><span>Yes, I <button class="choice-gap" data-choice-gap data-answer="am" data-hint="The subject in the answer is I." data-fix="Answer: Yes, I am." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-game data-success-message="Correct. Use am with I, is with she and my name, and are with you and they.">
+    <h3>Drill 2: match the subject</h3>
     <p>Tap a subject tile, then tap the matching be form.</p>
     <div class="tile-bank">
       <button class="tile" data-tile="am">I</button>
@@ -118,11 +142,11 @@ export const page = defineLesson({
       <button class="tile" data-tile="are">They</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="am" data-placeholder="am">am</button>
-      <button class="slot" data-slot="is" data-placeholder="is">is</button>
-      <button class="slot" data-slot="are" data-placeholder="are">are</button>
-      <button class="slot" data-slot="is" data-placeholder="is">is</button>
-      <button class="slot" data-slot="are" data-placeholder="are">are</button>
+      <button class="slot" data-slot="am" data-hint="Use am only with I." data-fix="Match I with am." data-placeholder="am">am</button>
+      <button class="slot" data-slot="is" data-hint="Choose a singular subject that uses is." data-fix="Match an is subject: She or My name." data-placeholder="is">is</button>
+      <button class="slot" data-slot="are" data-hint="Choose a subject that uses are." data-fix="Match an are subject: You or They." data-placeholder="are">are</button>
+      <button class="slot" data-slot="is" data-hint="Choose the other singular subject that uses is." data-fix="Match the remaining is subject: She or My name." data-placeholder="is">is</button>
+      <button class="slot" data-slot="are" data-hint="Choose the other subject that uses are." data-fix="Match the remaining are subject: You or They." data-placeholder="are">are</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -133,7 +157,7 @@ export const page = defineLesson({
 
   <h2>Say it short</h2>
   <div class="lead-rule"></div>
-  <p>When we speak, we usually join the two words into one <strong>short form</strong> (also called a contraction). It sounds faster and more natural. The full form is not wrong — but short forms feel friendly.</p>
+  <p>In everyday speech, we often join the subject and <strong>be</strong> in a <strong>short form</strong>, also called a contraction. Contractions are neutral and very common. Full forms are also correct and are useful when you want to speak clearly or add emphasis.</p>
   <table>
     <thead><tr><th>Full form</th><th>Short form</th><th>Example</th></tr></thead>
     <tbody>
@@ -145,8 +169,22 @@ export const page = defineLesson({
     </tbody>
   </table>
 
+  <div class="note">
+    <h3>Sound natural: make <em>be</em> small and the new information clear</h3>
+    <p>Say the subject and short form together. Then give the strongest beat to the important new word.</p>
+    <table>
+      <thead><tr><th>sentence</th><th>natural rhythm</th></tr></thead>
+      <tbody>
+        <tr><td>I’m a student.</td><td>I’m a <b>STU</b>dent.</td></tr>
+        <tr><td>She’s happy.</td><td>She’s <b>HAP</b>py.</td></tr>
+        <tr><td>They’re at work.</td><td>They’re at <b>WORK</b>.</td></tr>
+      </tbody>
+    </table>
+    <p>In speech, the words can link in <span class="ex">Are you ready?</span> and <span class="ex">Is she at home?</span>, but they remain separate words in writing. In a positive short answer, keep the full verb: <span class="ex">Yes, I am</span> and <span class="ex">Yes, she is</span>, not <span class="ex">Yes, I’m</span> or <span class="ex">Yes, she’s</span>.</p>
+  </div>
+
   <div class="micro-drill" data-transform>
-    <h3>Speak — say it short</h3>
+    <h3>Speak: say it short</h3>
     <p>Read the full sentence, say the short form out loud, then tap to check. Say each one quickly, like one word.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -180,11 +218,12 @@ export const page = defineLesson({
   <h2>Negatives and questions</h2>
   <div class="lead-rule"></div>
   <p><strong>Negative:</strong> add <span class="ex">not</span> after <strong>be</strong>: <span class="ex">I am not</span>, <span class="ex">she is not</span>, <span class="ex">they are not</span>.</p>
+  <p>Common negative contractions are <span class="ex">isn’t</span> and <span class="ex">aren’t</span>. With <span class="ex">I</span>, say <span class="ex">I’m not</span>, not <span class="ex">I amn’t</span>.</p>
   <p><strong>Question:</strong> move <strong>be</strong> before the subject: <span class="ex">Are you a student?</span> <span class="ex">Is she from Spain?</span> <span class="ex">Am I late?</span></p>
-  <p><strong>Good news:</strong> with <strong>be</strong>, you do not need <span class="ex">do</span>. Say <span class="ex">Are you a student?</span> — never <span class="ex">Do you are…?</span></p>
+  <p><strong>Good news:</strong> with <strong>be</strong>, you do not need <span class="ex">do</span>. Say <span class="ex">Are you a student?</span>, never <span class="ex">Do you are…?</span></p>
 
   <div class="note">
-    <h3>Watch out — common beginner mistakes</h3>
+    <h3>Watch out: common beginner mistakes</h3>
     <ul>
       <li><span class="cross">✗</span> <s>I have 20 years.</s> &nbsp;→&nbsp; <span class="ex">I am 20 (years old).</span></li>
       <li><span class="cross">✗</span> <s>She happy.</s> &nbsp;→&nbsp; <span class="ex">She is happy.</span> (do not drop <em>be</em>)</li>
@@ -192,8 +231,8 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="are you a student">
-    <h3>Drill 3 — build the question</h3>
+  <div class="tile-game" data-tile-builder data-answer="are you a student" data-hint="A question with be begins with Are, followed by the subject you." data-fix="Build: Are you a student?" data-success-message="Correct. In a question with be, Are comes before the subject you.">
+    <h3>Drill 3: build the question</h3>
     <p class="tile-target">Tap the words in order. Then ask the question aloud.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="student">student</button>
@@ -209,8 +248,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="do" data-fix="Are you a student?" data-why="With the verb to be, put be before the subject. Do not use do.">
-    <h3>Drill 4 — spot the error</h3>
+  <div class="micro-drill" data-spot-error data-answer="do" data-hint="A question with be does not need an extra helper verb." data-fix="Are you a student?" data-why="With the verb to be, put be before the subject. Do not use do.">
+    <h3>Drill 4: spot the error</h3>
     <p>Tap the word that makes this question wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="do">Do</button>
@@ -222,7 +261,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 5 — say it, then check</h3>
+    <h3>Drill 5: say it, then check</h3>
     <p>Say your answer out loud first. Then tap to check.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -243,7 +282,7 @@ export const page = defineLesson({
     </div>
   </div>
 
-  <h2>Speak — make it real</h2>
+  <h2>Speak: make it real</h2>
   <div class="lead-rule"></div>
   <div class="prompt-card"><b>Make it true for you:</b> finish each sentence so it is true about <strong>you</strong>. Say it out loud, then write it.
     <br /><span class="ex">My name is ____.</span>
@@ -254,35 +293,35 @@ export const page = defineLesson({
   </div>
   <div class="prompt-card"><b>Mini interview:</b> ask a partner, then answer with a short form. <span class="ex">Are you from Mexico?</span> <span class="ex">Are you a teacher?</span> <span class="ex">Are you tired today?</span> Short answers: <span class="ex">Yes, I am.</span> / <span class="ex">No, I’m not.</span></div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can describe real people with am, is, and are.">
-    <h3>Meet the class — choose the correct sentence</h3>
+  <div class="quiz" data-quiz data-lesson-extension="Extra class-profile agreement practice" data-success-message="Great. Use is with Sara and she, are with Tom and Lily and they, am with I, and are with you.">
+    <h3>Meet the class: choose the correct sentence</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="She is a teacher.">
-        <p class="quiz-question">1. Sara — from Italy — a teacher</p>
+      <div class="quiz-item" data-quiz-item data-answer="She is a teacher." data-hint="Sara is one woman, so the subject is she." data-fix="Use is with she: She is a teacher.">
+        <p class="quiz-question">1. Sara: from Italy; a teacher</p>
         <div class="quiz-options">
           <button class="quiz-option" data-quiz-option="She is a teacher.">She is a teacher.</button>
           <button class="quiz-option" data-quiz-option="She are a teacher.">She are a teacher.</button>
           <button class="quiz-option" data-quiz-option="She am a teacher.">She am a teacher.</button>
         </div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="They are students.">
-        <p class="quiz-question">2. Tom and Lily — from the USA — students</p>
+      <div class="quiz-item" data-quiz-item data-answer="They are students." data-hint="Tom and Lily are two people, so the subject is they." data-fix="Use are with they: They are students.">
+        <p class="quiz-question">2. Tom and Lily: from the USA; students</p>
         <div class="quiz-options">
           <button class="quiz-option" data-quiz-option="They is students.">They is students.</button>
           <button class="quiz-option" data-quiz-option="They are students.">They are students.</button>
           <button class="quiz-option" data-quiz-option="They am students.">They am students.</button>
         </div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I am a doctor.">
-        <p class="quiz-question">3. Me — my name is Leo — a doctor</p>
+      <div class="quiz-item" data-quiz-item data-answer="I am a doctor." data-hint="The profile says Me, so speak with I." data-fix="Use am with I: I am a doctor.">
+        <p class="quiz-question">3. Me: my name is Leo; a doctor</p>
         <div class="quiz-options">
           <button class="quiz-option" data-quiz-option="I is a doctor.">I is a doctor.</button>
           <button class="quiz-option" data-quiz-option="I are a doctor.">I are a doctor.</button>
           <button class="quiz-option" data-quiz-option="I am a doctor.">I am a doctor.</button>
         </div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="You are very kind.">
-        <p class="quiz-question">4. You — very kind</p>
+      <div class="quiz-item" data-quiz-item data-answer="You are very kind." data-hint="Use are with the subject you." data-fix="The correct sentence is: You are very kind.">
+        <p class="quiz-question">4. You: very kind</p>
         <div class="quiz-options">
           <button class="quiz-option" data-quiz-option="You is very kind.">You is very kind.</button>
           <button class="quiz-option" data-quiz-option="You am very kind.">You am very kind.</button>
@@ -297,26 +336,26 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can use be for statements, questions, and negatives.">
-    <h3>Final quiz — can you use be?</h3>
+  <div class="quiz" data-quiz data-success-message="Excellent. The subject chooses am, is, or are; questions move be first, and negatives put not after be.">
+    <h3>Final quiz: can you use <em>be</em>?</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="is">
+      <div class="quiz-item" data-quiz-item data-answer="is" data-hint="My name refers to one name, so use is." data-fix="Use is: My name is Ana.">
         <p class="quiz-question">1. My name ___ Ana.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">am</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="are">
+      <div class="quiz-item" data-quiz-item data-answer="are" data-hint="The subject is you. Put the matching form of be before it." data-fix="Ask: Are you from Brazil?">
         <p class="quiz-question">2. ___ you from Brazil?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">Am</button><button class="quiz-option" data-quiz-option="is">Is</button><button class="quiz-option" data-quiz-option="are">Are</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="am" data-value-label-variant="case">Am</button><button class="quiz-option" data-quiz-option="is" data-value-label-variant="case">Is</button><button class="quiz-option" data-quiz-option="are" data-value-label-variant="case">Are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="not">
-        <p class="quiz-question">3. She is ___ at home.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="no">no</button><button class="quiz-option" data-quiz-option="not">not</button><button class="quiz-option" data-quiz-option="do">do</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="She is not at home." data-hint="With be, put not after is. Do not add do." data-fix="The correct negative is: She is not at home.">
+        <p class="quiz-question">3. Sara is at work now. Which negative sentence about home is correct?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="She is not at home.">She is not at home.</button><button class="quiz-option" data-quiz-option="She not is at home.">She not is at home.</button><button class="quiz-option" data-quiz-option="She does not at home.">She does not at home.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="am">
-        <p class="quiz-question">4. Yes, I ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="am" data-hint="The short answer has the subject I." data-fix="Answer: Yes, I am.">
+        <p class="quiz-question">4. Are you ready? Yes, I ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">am</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="are">
+      <div class="quiz-item" data-quiz-item data-answer="are" data-hint="Use are after they." data-fix="Use are: They are my friends.">
         <p class="quiz-question">5. They ___ my friends.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="am">am</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
       </div>
@@ -327,6 +366,73 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <h2>Reflect</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Choose the form by meaning</h3>
+    <ul>
+      <li>Say one true sentence about yourself with <span class="ex">I am</span>.</li>
+      <li>Say one true sentence about another person with <span class="ex">he is</span> or <span class="ex">she is</span>.</li>
+      <li>Say one true sentence about two people with <span class="ex">they are</span>.</li>
+      <li>Turn one of your statements into a question.</li>
+    </ul>
+  </div>
+  <div class="prompt-card"><b>Next use:</b> At the start of the next lesson, open the <a href="#next-day-retrieval">five-minute retrieval</a>. Then introduce yourself and one person you know in three sentences and ask your teacher one <span class="ex">Are you…?</span> question.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day retrieval">
+    <h2>Come back tomorrow: five-minute retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Do not read the forms table first. Answer from memory, check, and then say each complete sentence aloud.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Good retrieval. Use am with I, is with my teacher, and Are before you in a question.">
+      <h3>Three choices from memory</h3>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="am">am</button>
+        <button class="choice-option" data-choice-option="is">is</button>
+        <button class="choice-option" data-choice-option="Are">Are</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="am" data-hint="Use am with I." data-fix="Say: I am from Mexico." data-placeholder="choose">choose</button> from Mexico.</span></div>
+      <div class="q"><span class="n">2</span><span>My teacher <button class="choice-gap" data-choice-gap data-answer="is" data-hint="My teacher is one person, like he or she." data-fix="Say: My teacher is from the United States." data-placeholder="choose">choose</button> from the United States.</span></div>
+      <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Are" data-hint="Put the form of be for you before the subject." data-fix="Ask: Are you tired today?" data-placeholder="choose">choose</button> you tired today?</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="do" data-hint="A question with be does not use do." data-fix="Are you at home?" data-why="Put Are before you. Do not use do with the verb be.">
+      <h3>One repair from memory</h3>
+      <p>Tap the extra word in this question.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="do">Do</button>
+        <button class="error-choice" data-error-choice="you">you</button>
+        <button class="error-choice" data-error-choice="are">are</button>
+        <button class="error-choice" data-error-choice="home">at home?</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Two no-notes recall prompts</h3>
+      <p>Say the complete answer before you reveal it.</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>1</b> Complete the three pairs: I ___; she ___; we ___.</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+          <p class="transform-answer" data-transform-answer><strong>I am; she is; we are.</strong></p>
+        </div>
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>2</b> Change “You are ready” to a question.</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+          <p class="transform-answer" data-transform-answer><strong>Are you ready?</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-card"><b>Speak for 30 seconds:</b> Say your name, where you are from, and how you feel today. Then ask one <span class="ex">Are you…?</span> question.</div>
+  </section>
 </main>
 </LessonPage>
 <style is:global>
@@ -398,7 +504,7 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
 /* callout */
 .note{background:var(--accent-tint);border:1px solid var(--accent-soft);border-radius:14px;
   padding:20px 24px;margin:24px 0;}
-.note h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;margin:0 0 10px;}
+.note h2,.note h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;margin:0 0 10px;}
 .note ul{margin:0;padding-left:20px;}
 .note li{margin-bottom:7px;}
 .cross{color:var(--accent-deep);font-weight:600;}

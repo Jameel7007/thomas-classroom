@@ -2,65 +2,101 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Countries and nationalities · A0 Vocabulary · Curriculum Map",
+  "title": "Countries and nationalities · A0 Vocabulary",
   "slug": "countries-and-nationalities",
   "level": "A0",
   "topic": "Countries & nationalities",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "On a video call, someone asks: Where are you from? You answer with a country — I'm from Brazil — or with a nationality — I'm Brazilian . This is the last lesson of A0, so you will ",
+  "description": "Ask where someone is from and answer with accurate country and nationality words in introductions and everyday conversations.",
   "sequence": 16,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/subject-pronouns",
+    "a0/question-words-what-where-who-how",
+    "a0/articles-a-an",
+    "a0/the-alphabet-and-spelling"
+  ],
+  "related": [
+    "a0/greetings-and-introductions",
+    "a1/jobs-and-workplaces",
+    "a2/travel-and-transport"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 47,
+    "revisionSummary": "Country, nationality adjective, language, person-word, article, capitalization, identity, pronunciation, listening, accessibility, privacy, feedback, production, and retrieval boundaries were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
-  <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 15</p>
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 16</p>
   <h1>Countries &amp; <em>nationalities</em></h1>
-  <p class="standfirst">On a video call, someone asks: <span class="ex">Where are you from?</span> You answer with a <strong>country</strong> — <span class="ex">I'm from Brazil</span> — or with a <strong>nationality</strong> — <span class="ex">I'm Brazilian</span>. This is the last lesson of A0, so you will use language you already know to talk about real people: you, your coworkers, your clients, your friends.</p>
+  <p class="standfirst">In a voluntary introduction, someone may ask <span class="ex">Where are you from?</span> You can answer with a <strong>country</strong>, <span class="ex">I'm from Brazil</span>, or use a <strong>nationality adjective</strong>, <span class="ex">I'm Brazilian</span>. Keep country, nationality, language, and current home separate, and use only information that a real person chooses to provide.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">from + country</span>
-    <span class="tag">be + nationality</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">country · nationality · language</span>
+    <span class="tag">from + country · be + adjective</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Country versus nationality.</span></div>
     <div class="flow-step"><b>Discover</b><span>Group nationalities by ending.</span></div>
     <div class="flow-step"><b>Build</b><span>Match, choose, and build sentences.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about where people are from.</span></div>
+    <div class="flow-step"><b>Use</b><span>Share or ask only when the context is comfortable.</span></div>
   </div>
 
-  <p class="note-line">We always use a <strong>capital letter</strong> for countries <em>and</em> nationalities: <span class="ex">Spain → Spanish, Japan → Japanese</span> — never <span class="ex">spain</span> or <span class="ex">spanish</span>.</p>
+  <p class="note-line">Use a <strong>capital letter</strong> for country names, nationality words, and language names: <span class="ex">Spain · Spanish · Japan · Japanese · Portuguese</span>, never <span class="ex">spain</span>, <span class="ex">spanish</span>, or <span class="ex">portuguese</span>.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved question order with are, a country after from, and a nationality adjective after am.">
+    <h3>Bring earlier grammar into an introduction</h3>
+    <p class="choice-hint">Use the complete context. Read each finished sentence aloud.</p>
+    <div class="choice-bank" aria-label="Earlier grammar choices">
+      <button class="choice-option" data-choice-option="are">are</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+      <button class="choice-option" data-choice-option="Brazil">Brazil</button>
+      <button class="choice-option" data-choice-option="Brazilian">Brazilian</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Where <button class="choice-gap" data-choice-gap data-answer="are" data-hint="With you, place are before the subject in this question." data-fix="Where are you from?" data-placeholder="choose">choose</button> you from?</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional profile says, “I'm from <button class="choice-gap" data-choice-gap data-answer="Brazil" data-hint="After from, choose the country name Brazil." data-fix="I'm from Brazil." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="q"><span class="n">3</span><span>The same profile says, “I'm <button class="choice-gap" data-choice-gap data-answer="Brazilian" data-hint="After am, choose the nationality adjective Brazilian." data-fix="I'm Brazilian." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Meet the countries</h2>
   <div class="lead-rule"></div>
-  <p>Each flag is a <strong>country</strong>. The word for a person or thing from that country is the <strong>nationality</strong>.</p>
+  <p>Each flag represents the listed <strong>country</strong>. Use the visible written label rather than identifying a country from color or symbol alone. The second word is a <strong>nationality adjective</strong> used in a sentence such as <span class="ex">She's Mexican</span>. A flag does not prove a person's nationality, language, birthplace, or identity.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/mx.svg" alt="" loading="lazy" /></span><span class="nm">Mexico<small>Mexican</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/jp.svg" alt="" loading="lazy" /></span><span class="nm">Japan<small>Japanese</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/br.svg" alt="" loading="lazy" /></span><span class="nm">Brazil<small>Brazilian</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/es.svg" alt="" loading="lazy" /></span><span class="nm">Spain<small>Spanish</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/it.svg" alt="" loading="lazy" /></span><span class="nm">Italy<small>Italian</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/fr.svg" alt="" loading="lazy" /></span><span class="nm">France<small>French</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/tr.svg" alt="" loading="lazy" /></span><span class="nm">Turkey<small>Turkish</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/de.svg" alt="" loading="lazy" /></span><span class="nm">Germany<small>German</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/us.svg" alt="" loading="lazy" /></span><span class="nm">United States<small>American</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/gb.svg" alt="" loading="lazy" /></span><span class="nm">United Kingdom<small>British</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/ca.svg" alt="" loading="lazy" /></span><span class="nm">Canada<small>Canadian</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/cn.svg" alt="" loading="lazy" /></span><span class="nm">China<small>Chinese</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/in.svg" alt="" loading="lazy" /></span><span class="nm">India<small>Indian</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/kr.svg" alt="" loading="lazy" /></span><span class="nm">South Korea<small>Korean</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/ru.svg" alt="" loading="lazy" /></span><span class="nm">Russia<small>Russian</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/pl.svg" alt="" loading="lazy" /></span><span class="nm">Poland<small>Polish</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/eg.svg" alt="" loading="lazy" /></span><span class="nm">Egypt<small>Egyptian</small></span></div>
-    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/pt.svg" alt="" loading="lazy" /></span><span class="nm">Portugal<small>Portuguese</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/mx.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Mexico<small>Mexican</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/jp.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Japan<small>Japanese</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/br.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Brazil<small>Brazilian</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/es.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Spain<small>Spanish</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/it.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Italy<small>Italian</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/fr.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">France<small>French</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/tr.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Türkiye<small>Turkish</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/de.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Germany<small>German</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/us.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">United States<small>American</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/gb.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">United Kingdom<small>British</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/ca.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Canada<small>Canadian</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/cn.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">China<small>Chinese</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/in.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">India<small>Indian</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/kr.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">South Korea<small>Korean</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/ru.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Russia<small>Russian</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/pl.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Poland<small>Polish</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/eg.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Egypt<small>Egyptian</small></span></div>
+    <div class="figure"><span class="fig"><img class="flag" src="/assets/flags/pt.svg" alt="" width="66" height="50" loading="lazy" decoding="async" /></span><span class="nm">Portugal<small>Portuguese</small></span></div>
   </div>
 
   <h2>Notice before the rule</h2>
@@ -69,14 +105,14 @@ export const page = defineLesson({
     <h3>Two ways to answer one question</h3>
     <p><span class="ex">I'm from Brazil. &nbsp;→&nbsp; I'm Brazilian.</span><br /><span class="ex">I'm from Japan. &nbsp;→&nbsp; I'm Japanese.</span></p>
     <ul>
-      <li>Which word names the <strong>country</strong> (the place)? Which word is the <strong>nationality</strong> (the person)?</li>
+      <li>Which word names the <strong>country</strong>, the place? Which nationality word describes where the person is from?</li>
       <li>After <span class="ex">from</span>, do we use the country or the nationality? And after <span class="ex">am / is / are</span>?</li>
       <li>Look at the endings: <span class="ex">Brazil → Brazil<strong>ian</strong></span>, <span class="ex">Japan → Japan<strong>ese</strong></span>. The nationality is built <strong>from</strong> the country. What changed?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — from or be?</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. From introduces the country Mexico or Italy, while am and is introduce the nationality adjectives Mexican or Italian.">
+    <h3>Discovery check: from or be?</h3>
     <p class="choice-hint">After <b>from</b> use the country. After <b>am / is / are</b> use the nationality.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="Mexico">Mexico</button>
@@ -84,10 +120,10 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Italy">Italy</button>
       <button class="choice-option" data-choice-option="Italian">Italian</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I'm from <button class="choice-gap" data-choice-gap data-answer="Mexico" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(after <b>from</b> → country)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I'm <button class="choice-gap" data-choice-gap data-answer="Mexican" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(after <b>am</b> → nationality)</span></span></div>
-    <div class="q"><span class="n">3</span><span>She's <button class="choice-gap" data-choice-gap data-answer="Italian" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(after <b>is</b> → nationality)</span></span></div>
-    <div class="q"><span class="n">4</span><span>They're from <button class="choice-gap" data-choice-gap data-answer="Italy" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(after <b>from</b> → country)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The fictional speaker says, “I'm from <button class="choice-gap" data-choice-gap data-answer="Mexico" data-hint="After from, use the country name Mexico." data-fix="I'm from Mexico." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="q"><span class="n">2</span><span>The same speaker says, “I'm <button class="choice-gap" data-choice-gap data-answer="Mexican" data-hint="After am, use the nationality adjective Mexican." data-fix="I'm Mexican." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="q"><span class="n">3</span><span>The profile states that Lena uses <span class="ex">she</span> and is from Italy. She's <button class="choice-gap" data-choice-gap data-answer="Italian" data-hint="After is, use the nationality adjective Italian." data-fix="She's Italian." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Lena and Amir both state that they are from Italy. They're from <button class="choice-gap" data-choice-gap data-answer="Italy" data-hint="After from, use the country name Italy." data-fix="They're from Italy." data-placeholder="choose">choose</button>.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -98,19 +134,77 @@ export const page = defineLesson({
   <h2>The system: from a country, be a nationality</h2>
   <div class="lead-rule"></div>
   <p>There are two simple patterns. Keep these chunks together:</p>
-  <p><strong>1. from + country.</strong> &nbsp;<span class="ex">Where are you from? &nbsp;→&nbsp; I'm from Spain.</span></p>
-  <p><strong>2. be + nationality.</strong> &nbsp;<span class="ex">I'm Spanish. &nbsp;She's Spanish. &nbsp;They're Spanish.</span></p>
-  <p>The nationality is an <strong>adjective</strong>, built from the country with a common ending. Group them and the spelling gets easy:</p>
+  <p><strong>1. from + country.</strong> &nbsp;<span class="ex">Where are you from? &nbsp;→&nbsp; I'm from Spain.</span> This answer gives a place connected to the speaker.</p>
+  <p><strong>2. be + nationality adjective.</strong> &nbsp;<span class="ex">I'm Spanish. &nbsp;She's Spanish. &nbsp;They're Spanish.</span> The adjective describes nationality and does not change for gender or number.</p>
+  <p>Do not add <span class="ex">a</span> or <span class="ex">an</span> before the adjective in this pattern: <span class="ex">I'm Brazilian</span>. Some nationality words can also be person nouns, as in <span class="ex">a Brazilian</span>, but those noun patterns vary. The dependable A0 pattern is <span class="ex">a Brazilian person</span> or <span class="ex">two Brazilian people</span>.</p>
+  <p>Many nationality adjectives use common endings, but an ending is only a memory aid. It is not a rule that can generate every word. Learn each country and nationality adjective as a pair:</p>
   <table>
     <thead><tr><th>ending</th><th>country</th><th>nationality</th></tr></thead>
     <tbody>
-      <tr><td><b>-ian</b></td><td>Brazil · Italy · Ukraine</td><td>Brazil<b>ian</b> · Ital<b>ian</b> · Ukrain<b>ian</b></td></tr>
-      <tr><td><b>-an</b></td><td>Mexico · Germany · the United States</td><td>Mexic<b>an</b> · Germ<b>an</b> · Americ<b>an</b></td></tr>
-      <tr><td><b>-ish</b></td><td>Turkey · Spain · Poland</td><td>Turk<b>ish</b> · Span<b>ish</b> · Pol<b>ish</b></td></tr>
-      <tr><td><b>-ese</b></td><td>Japan · China</td><td>Japan<b>ese</b> · Chin<b>ese</b></td></tr>
-      <tr><td><b>special</b></td><td>France · Colombia</td><td><b>French</b> · Colomb<b>ian</b></td></tr>
+      <tr><td><b>-ian / -an</b></td><td>Brazil · Italy · Canada · Egypt · Colombia</td><td>Brazil<b>ian</b> · Ital<b>ian</b> · Canad<b>ian</b> · Egypt<b>ian</b> · Colomb<b>ian</b></td></tr>
+      <tr><td><b>-ish</b></td><td>Türkiye · Spain · Poland</td><td>Turk<b>ish</b> · Span<b>ish</b> · Pol<b>ish</b></td></tr>
+      <tr><td><b>-ese</b></td><td>Japan · China · Portugal</td><td>Japan<b>ese</b> · Chin<b>ese</b> · Portugu<b>ese</b></td></tr>
+      <tr><td><b>other common pairs</b></td><td>Mexico · Germany · the United States · France</td><td><b>Mexican</b> · <b>German</b> · <b>American</b> · <b>French</b></td></tr>
     </tbody>
   </table>
+
+  <div class="note">
+    <h3>Country, nationality, language, and current home are different</h3>
+    <table>
+      <thead><tr><th>meaning</th><th>example</th></tr></thead>
+      <tbody>
+        <tr><td>country connected to the person</td><td><span class="ex">Mina is from Brazil.</span></td></tr>
+        <tr><td>nationality adjective the person uses</td><td><span class="ex">Mina is Brazilian.</span></td></tr>
+        <tr><td>language the person says they speak</td><td><span class="ex">Mina speaks Portuguese and English.</span></td></tr>
+        <tr><td>current home</td><td><span class="ex">Mina lives in Canada now.</span></td></tr>
+      </tbody>
+    </table>
+    <p>One fact does not prove the others. A Brazilian person may speak Portuguese, another language, or several languages. Someone can be from one country, have more than one nationality, and live in another country. Use the words a person provides. Do not infer identity from a name, appearance, accent, or flag.</p>
+  </div>
+
+  <div class="note">
+    <h3>Small country-name boundaries</h3>
+    <ul>
+      <li>Use <span class="ex">the</span> in <span class="ex">the United States</span> and <span class="ex">the United Kingdom</span>: <span class="ex">She's from the United States.</span> Most names here have no article: <span class="ex">from Mexico · from Japan · from Brazil</span>.</li>
+      <li><span class="ex">The United Kingdom</span> includes England, Scotland, Wales, and Northern Ireland. <span class="ex">British</span> and <span class="ex">English</span> are not exact synonyms.</li>
+      <li>In English, <span class="ex">American</span> commonly names a nationality connected to the United States. <span class="ex">The Americas</span> is a larger geographic region with many countries.</li>
+      <li>The official country name used here is <span class="ex">Türkiye</span>. You may still hear or read <span class="ex">Turkey</span> in some English-language contexts. The nationality adjective is <span class="ex">Turkish</span>.</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each complete profile separates a country, nationality adjective, language, or current home instead of treating them as the same fact.">
+    <h3>Meaning check: which kind of word?</h3>
+    <p class="choice-hint">Read the label and the whole profile sentence before choosing.</p>
+    <div class="choice-bank" aria-label="Country, nationality, language, and home choices">
+      <button class="choice-option" data-choice-option="Brazil">Brazil</button>
+      <button class="choice-option" data-choice-option="Brazilian">Brazilian</button>
+      <button class="choice-option" data-choice-option="Portuguese">Portuguese</button>
+      <button class="choice-option" data-choice-option="Canada">Canada</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Country connected to Mina: She is from <button class="choice-gap" data-choice-gap data-answer="Brazil" data-hint="After from, choose the country Brazil." data-fix="Mina is from Brazil." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Nationality adjective Mina uses: She is <button class="choice-gap" data-choice-gap data-answer="Brazilian" data-hint="After is, choose the nationality adjective Brazilian." data-fix="Mina is Brazilian." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>One language Mina says she speaks: She speaks <button class="choice-gap" data-choice-gap data-answer="Portuguese" data-hint="The sentence asks for a language, not a country or nationality." data-fix="Mina speaks Portuguese." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Current home in this fictional profile: She lives in <button class="choice-gap" data-choice-gap data-answer="Canada" data-hint="Lives in identifies the current home given by the profile." data-fix="Mina lives in Canada now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: the strong beat can move</h3>
+    <p>When a country becomes a nationality, the number of syllables or the main stress can change. Learn the pair aloud, not only by spelling.</p>
+    <table>
+      <thead><tr><th>country</th><th>nationality</th><th>stress pattern</th></tr></thead>
+      <tbody>
+        <tr><td>Mexico</td><td>Mexican</td><td><span class="ex"><strong>MEX</strong>-i-co → <strong>MEX</strong>-i-can</span></td></tr>
+        <tr><td>Italy</td><td>Italian</td><td><span class="ex"><strong>IT</strong>-a-ly → i-<strong>TAL</strong>-ian</span></td></tr>
+        <tr><td>Japan</td><td>Japanese</td><td><span class="ex">Ja-<strong>PAN</strong> → Jap-a-<strong>NESE</strong></span></td></tr>
+        <tr><td>China</td><td>Chinese</td><td><span class="ex"><strong>CHI</strong>-na → Chi-<strong>NESE</strong></span></td></tr>
+        <tr><td>Brazil</td><td>Brazilian</td><td><span class="ex">Bra-<strong>ZIL</strong> → Bra-<strong>ZIL</strong>-ian</span></td></tr>
+      </tbody>
+    </table>
+    <p>The ending <span class="ex">-ese</span> carries a strong beat in <span class="ex">Japanese</span>, <span class="ex">Chinese</span>, and <span class="ex">Portuguese</span>. In a sentence, make the place or nationality clear: <span class="ex">I’m from <strong>MEX</strong>ico. I’m <strong>MEX</strong>ican.</span></p>
+    <p>In relaxed U.S. speech, <span class="ex">Where are you from?</span> may connect and sound close to <span class="ex">Where-er-yuh from?</span>. <span class="ex">I'm from</span> often has a light, quick <span class="ex">from</span>. Recognize the connected form, but keep the full words in writing.</p>
+  </div>
 
   <div class="note">
     <h3>Meaning check</h3>
@@ -119,26 +213,57 @@ export const page = defineLesson({
       <li>Can we say <span class="ex">I'm Brazil</span>? <strong>No.</strong> After <em>be</em> we use the nationality: <span class="ex">I'm Brazilian.</span></li>
       <li>Do we write <span class="ex">spanish</span> with a small letter? <strong>No.</strong> Countries and nationalities always take a <strong>capital</strong>: <span class="ex">Spain, Spanish</span>.</li>
       <li>Is the nationality the same for he, she, and they? <strong>Yes.</strong> The adjective never changes: <span class="ex">He's French. She's French. They're French.</span></li>
+      <li>Does <span class="ex">She's from Brazil</span> prove which language she speaks or where she lives now? <strong>No.</strong> Ask or use only information she provides.</li>
+      <li>Does <span class="ex">Where are you from?</span> always mean current home? <strong>No.</strong> For current home, ask <span class="ex">Where do you live now?</span></li>
     </ul>
   </div>
+
+  <section data-lesson-extension="Tutor-read country, nationality, and language listening check">
+    <h2>Listen: place, nationality, or language?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional profile sentence once at a natural speed and once more slowly. Listen before you choose.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard countries after from, nationality adjectives after be, a language after speaks, and the article in the United States.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Listening choices">
+        <button class="choice-option" data-choice-option="Brazil">Brazil</button><button class="choice-option" data-choice-option="Brazilian">Brazilian</button>
+        <button class="choice-option" data-choice-option="Japan">Japan</button><button class="choice-option" data-choice-option="Japanese">Japanese</button>
+        <button class="choice-option" data-choice-option="Portuguese">Portuguese</button><button class="choice-option" data-choice-option="Portugal">Portugal</button>
+        <button class="choice-option" data-choice-option="the">the</button><button class="choice-option" data-choice-option="no article">no article</button>
+        <button class="choice-option" data-choice-option="Italian">Italian</button><button class="choice-option" data-choice-option="Italy">Italy</button>
+        <button class="choice-option" data-choice-option="Canada">Canada</button><button class="choice-option" data-choice-option="Canadian">Canadian</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Diego's fictional profile says, “I'm from <button class="choice-gap" data-choice-gap data-answer="Brazil" data-hint="Listen for the country after from." data-fix="I'm from Brazil." data-placeholder="listen">listen</button>.”</span></div>
+      <div class="q"><span class="n">2</span><span>Akira's profile says, “I'm <button class="choice-gap" data-choice-gap data-answer="Japanese" data-hint="Listen for the nationality adjective after am." data-fix="I'm Japanese." data-placeholder="listen">listen</button>.”</span></div>
+      <div class="q"><span class="n">3</span><span>Rita says she speaks <button class="choice-gap" data-choice-gap data-answer="Portuguese" data-hint="Listen for the language after speaks." data-fix="Rita says she speaks Portuguese." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Omar's profile says, “I live in <button class="choice-gap" data-choice-gap data-answer="the" data-hint="The complete country name the United States includes the." data-fix="I live in the United States." data-placeholder="listen">listen</button> United States.”</span></div>
+      <div class="q"><span class="n">5</span><span>Giulia's profile states that she is <button class="choice-gap" data-choice-gap data-answer="Italian" data-hint="Listen for the nationality adjective, not the country Italy." data-fix="Giulia is Italian." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Noah's profile states that he is from <button class="choice-gap" data-choice-gap data-answer="Canada" data-hint="Listen for the country name after from." data-fix="Noah is from Canada." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol><li>Diego's fictional profile says, “I'm from Brazil.”</li><li>Akira's profile says, “I'm Japanese.”</li><li>Rita says she speaks Portuguese.</li><li>Omar's profile says, “I live in the United States.”</li><li>Giulia's profile states that she is Italian.</li><li>Noah's profile states that he is from Canada.</li></ol>
+    </details>
+  </section>
 
   <h2>Build the pairs</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 1 — match each country to its nationality</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each match preserves the learned country and nationality-adjective pair rather than guessing from an ending alone.">
+    <h3>Drill 1: match each country to its nationality</h3>
     <p class="tile-target">Tap a country, then tap the nationality that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="brazil">Brazil</button>
       <button class="tile" data-tile="japan">Japan</button>
-      <button class="tile" data-tile="turkey">Turkey</button>
+      <button class="tile" data-tile="turkiye">Türkiye</button>
       <button class="tile" data-tile="mexico">Mexico</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="brazil" data-placeholder="Brazilian">Brazilian</button>
-      <button class="slot" data-slot="japan" data-placeholder="Japanese">Japanese</button>
-      <button class="slot" data-slot="turkey" data-placeholder="Turkish">Turkish</button>
-      <button class="slot" data-slot="mexico" data-placeholder="Mexican">Mexican</button>
+      <button class="slot" data-slot="brazil" data-hint="The learned pair is Brazil and Brazilian." data-fix="Brazil → Brazilian" data-placeholder="Brazilian">Brazilian</button>
+      <button class="slot" data-slot="japan" data-hint="The learned pair is Japan and Japanese." data-fix="Japan → Japanese" data-placeholder="Japanese">Japanese</button>
+      <button class="slot" data-slot="turkiye" data-hint="The learned pair is Türkiye and Turkish." data-fix="Türkiye → Turkish" data-placeholder="Turkish">Turkish</button>
+      <button class="slot" data-slot="mexico" data-hint="The learned pair is Mexico and Mexican." data-fix="Mexico → Mexican" data-placeholder="Mexican">Mexican</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -147,8 +272,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2 — give the nationality</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each fictional profile states a country first, so the matching nationality adjective is supported without inferring identity from a name.">
+    <h3>Drill 2: give the nationality</h3>
     <p class="choice-hint">The country is given. Choose the matching nationality.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="French">French</button>
@@ -158,12 +283,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Colombian">Colombian</button>
       <button class="choice-option" data-choice-option="Ukrainian">Ukrainian</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My coworker is from China. He is <button class="choice-gap" data-choice-gap data-answer="Chinese" data-placeholder="choose">choose</button>.</span></div>
-    <div class="q"><span class="n">2</span><span>Our client is from France. She is <button class="choice-gap" data-choice-gap data-answer="French" data-placeholder="choose">choose</button>.</span></div>
-    <div class="q"><span class="n">3</span><span>Anna is from Poland. She is <button class="choice-gap" data-choice-gap data-answer="Polish" data-placeholder="choose">choose</button>.</span></div>
-    <div class="q"><span class="n">4</span><span>Max is from Germany. He is <button class="choice-gap" data-choice-gap data-answer="German" data-placeholder="choose">choose</button>.</span></div>
-    <div class="q"><span class="n">5</span><span>Mateo is from Colombia. He is <button class="choice-gap" data-choice-gap data-answer="Colombian" data-placeholder="choose">choose</button>.</span></div>
-    <div class="q"><span class="n">6</span><span>Olena is from Ukraine. She is <button class="choice-gap" data-choice-gap data-answer="Ukrainian" data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">1</span><span>A fictional coworker uses <span class="ex">he</span> and states that he is from China. He is <button class="choice-gap" data-choice-gap data-answer="Chinese" data-hint="Match the stated country China with the adjective Chinese." data-fix="He is Chinese." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>A fictional client uses <span class="ex">she</span> and states that she is from France. She is <button class="choice-gap" data-choice-gap data-answer="French" data-hint="Match the stated country France with the adjective French." data-fix="She is French." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Anna's fictional profile states that she uses <span class="ex">she</span> and is from Poland. She is <button class="choice-gap" data-choice-gap data-answer="Polish" data-hint="Match Poland with its learned adjective Polish." data-fix="She is Polish." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Max's fictional profile states that he uses <span class="ex">he</span> and is from Germany. He is <button class="choice-gap" data-choice-gap data-answer="German" data-hint="Match Germany with its learned adjective German." data-fix="He is German." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Mateo's fictional profile states that he uses <span class="ex">he</span> and is from Colombia. He is <button class="choice-gap" data-choice-gap data-answer="Colombian" data-hint="Match Colombia with its learned adjective Colombian." data-fix="He is Colombian." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>Olena's fictional profile states that she uses <span class="ex">she</span> and is from Ukraine. She is <button class="choice-gap" data-choice-gap data-answer="Ukrainian" data-hint="Match Ukraine with its learned adjective Ukrainian." data-fix="She is Ukrainian." data-placeholder="choose">choose</button>.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -174,9 +299,9 @@ export const page = defineLesson({
   <h2>Build the sentence, then say it</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-builder data-answer="i am from mexico">
-    <h3>Drill 3 — say where you are from</h3>
-    <p class="tile-target">Pattern: <span class="ex">from + country</span>. Build it, then say it.</p>
+  <div class="tile-game" data-tile-builder data-answer="i am from mexico" data-hint="Begin with I am, then place from before the country Mexico." data-fix="I am from Mexico." data-success-message="Correct. The country Mexico follows from in the complete statement I am from Mexico.">
+    <h3>Drill 3: build a fictional speaker's answer</h3>
+    <p class="tile-target">The fictional speaker chooses Mexico. Pattern: <span class="ex">from + country</span>. Build the answer, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="mexico">Mexico</button>
       <button class="tile" data-build-tile="i">I</button>
@@ -191,9 +316,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="he is japanese">
-    <h3>Drill 4 — give his nationality</h3>
-    <p class="tile-target">Pattern: <span class="ex">be + nationality</span>. One man, from Japan.</p>
+  <div class="tile-game" data-tile-builder data-answer="he is japanese" data-hint="The fictional profile states he. Begin with He is, then add the adjective Japanese." data-fix="He is Japanese." data-success-message="Correct. The stated pronoun he takes is, followed by the nationality adjective Japanese.">
+    <h3>Drill 4: give his nationality</h3>
+    <p class="tile-target">A fictional profile states that Ken uses <span class="ex">he</span> and is Japanese. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="japanese">Japanese</button>
       <button class="tile" data-build-tile="he">He</button>
@@ -209,8 +334,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="brazilian" data-fix="I am from Brazil." data-why="After from we name the country, not the nationality. So it is from Brazil, not from Brazilian.">
-    <h3>Drill 5 — from a country or a nationality?</h3>
+  <div class="micro-drill" data-spot-error data-answer="brazilian" data-hint="After from, check whether the final word is a country or a nationality adjective." data-fix="I am from Brazil." data-why="After from we name the country, not the nationality adjective. So it is from Brazil, not from Brazilian.">
+    <h3>Drill 5: from a country or a nationality?</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
@@ -221,8 +346,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="japanese" data-fix="She is Japanese." data-why="Nationalities always start with a capital letter, so we write Japanese, not japanese.">
-    <h3>Drill 6 — fix the capital letter</h3>
+  <div class="micro-drill" data-spot-error data-answer="japanese" data-hint="Nationality adjectives begin with a capital letter in English." data-fix="She is Japanese." data-why="Nationality adjectives always start with a capital letter, so we write Japanese, not japanese.">
+    <h3>Drill 6: fix the capital letter</h3>
     <p>Tap the word that is written wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="she">She</button>
@@ -233,7 +358,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — country → nationality, then say it</h3>
+    <h3>Drill 7: country → nationality, then say it</h3>
     <p>Say the nationality aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -242,7 +367,7 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>Spanish</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> Turkey &nbsp;→&nbsp; nationality</p>
+        <p class="transform-cue"><b>2</b> Türkiye &nbsp;→&nbsp; nationality</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>Turkish</strong></p>
       </div>
@@ -267,21 +392,21 @@ export const page = defineLesson({
   <h2>Read and choose</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Meet the new team</h3>
-    <p><span class="ex">“Paulo is from Brazil. He speaks Portuguese. Yuki is Japanese; she is from Osaka. And Sara is from Egypt. She speaks Arabic and English.”</span></p>
+    <h3>A fictional team profile</h3>
+    <p><span class="ex">“Paulo uses he. He states that he is from Brazil and speaks Portuguese. Yuki uses she. She states that she is Japanese and is from Osaka, Japan. Sara uses she. She states that she is Egyptian and speaks Arabic and English.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood countries and nationalities in a real profile.">
+  <div class="quiz" data-quiz data-success-message="Correct. You found Paulo's stated country, Yuki's stated nationality, and Sara's stated languages without inferring one fact from another.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Brazil">
+      <div class="quiz-item" data-quiz-item data-answer="Brazil" data-hint="The first profile sentence states Paulo's country after from." data-fix="Paulo states that he is from Brazil.">
         <p class="quiz-question">1. Where is Paulo from?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Brazil">Brazil</button><button class="quiz-option" data-quiz-option="Japan">Japan</button><button class="quiz-option" data-quiz-option="Egypt">Egypt</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Japanese">
+      <div class="quiz-item" data-quiz-item data-answer="Japanese" data-hint="Yuki's profile directly states a nationality adjective before the city and country." data-fix="Yuki states that she is Japanese.">
         <p class="quiz-question">2. What nationality is Yuki?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Japanese">Japanese</button><button class="quiz-option" data-quiz-option="Brazilian">Brazilian</button><button class="quiz-option" data-quiz-option="Egyptian">Egyptian</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Arabic and English">
+      <div class="quiz-item" data-quiz-item data-answer="Arabic and English" data-hint="Sara's profile directly names two languages after speaks." data-fix="Sara states that she speaks Arabic and English.">
         <p class="quiz-question">3. What does Sara speak?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Arabic and English">Arabic and English</button><button class="quiz-option" data-quiz-option="Portuguese">Portuguese</button><button class="quiz-option" data-quiz-option="Japanese only">Japanese only</button></div>
       </div>
@@ -295,53 +420,66 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>About you:</b> Answer the question two ways. <span class="ex">Where are you from? — I'm from… &nbsp;I'm…</span> Use your real country and nationality.</div>
-  <div class="prompt-card"><b>Your coworkers:</b> Think of two people you work with. Say where each one is from. <span class="ex">My coworker Sofia is from Mexico. She's Mexican.</span></div>
-  <div class="prompt-card"><b>Your clients:</b> Name a client or company abroad. <span class="ex">Our client is from Germany. He's German.</span> &nbsp;Then ask the teacher: <span class="ex">Where is your client from?</span></div>
-  <div class="prompt-card"><b>On a video call:</b> Role-play meeting someone new online. <span class="ex">Hi, I'm Lena. Where are you from? — I'm from Poland. And you?</span></div>
-  <div class="prompt-card"><b>Friends and travel:</b> Talk about a friend from another country, or a country you want to visit. <span class="ex">My friend is Italian. I want to go to Japan.</span></div>
+  <p class="note-line">You never need to share your nationality, birthplace, current home, languages, immigration history, or information about real coworkers, clients, family, or friends. Use a fictional profile or a public figure's verified self-description. Ask about origin only when the setting is appropriate and the person appears comfortable sharing.</p>
+  <div class="prompt-card"><b>A fictional profile:</b> Choose or invent a country, nationality adjective, language, and current home. Keep the four facts separate: <span class="ex">Mina is from Brazil. She is Brazilian. She speaks Portuguese. She lives in Canada now.</span></div>
+  <div class="prompt-card"><b>Two possible answers:</b> A fictional speaker answers in two ways: <span class="ex">Where are you from? I'm from Mexico. I'm Mexican.</span> Add <span class="ex">And you?</span> only if the other person is participating voluntarily.</div>
+  <div class="prompt-card"><b>Current home, not origin:</b> Contrast <span class="ex">Where are you from?</span> with <span class="ex">Where do you live now?</span> Give different invented answers and explain which question asks about the current home.</div>
+  <div class="prompt-card"><b>Information gap:</b> You and your teacher each choose one fictional profile. Ask for one missing fact at a time. Do not guess a nationality or language from the person's name, picture, or accent.</div>
+  <div class="prompt-card"><b>Repair an assumption:</b> Your partner says, <span class="ex">She's from Brazil, so she speaks Portuguese.</span> Respond with the known fact and the missing information: <span class="ex">She's from Brazil. We don't know which languages she speaks.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: welcome a fictional international team</h3>
+    <p>Create three short profile cards and give a 45- to 60-second welcome. Use labels or invented information rather than real private details.</p>
+    <ol>
+      <li>Use <span class="ex">from + country</span> accurately at least twice.</li>
+      <li>Use <span class="ex">be + nationality adjective</span> accurately at least twice.</li>
+      <li>Include <span class="ex">the</span> if you use the United States or the United Kingdom.</li>
+      <li>Keep nationality, language, and current home separate.</li>
+      <li>Ask one correctly ordered, respectful question and accept “I'd rather not say.”</li>
+    </ol>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Close the level</h3>
-    <p>Complete this aloud: “After <strong>from</strong>, I use the ______ . After <strong>am, is, are</strong>, I use the ______ . Both words start with a ______ letter.”</p>
-    <p>Then say three true sentences: one about yourself, one about a coworker or client, one about a friend. Use both <span class="ex">from + country</span> and <span class="ex">be + nationality</span>. This is your last A0 lesson — next is the level check.</p>
+    <p>Complete this aloud: “After <strong>from</strong>, I use the ______ . After <strong>am, is, are</strong>, I use the nationality ______ . Country, nationality, and language words begin with a ______ letter.”</p>
+    <p>Then explain why <span class="ex">She's from Brazil</span> does not tell you her language or current home. Give one fictional example with different origin and current-home countries. This is the last A0 lesson in the sequence. The A0 level check provides broader evidence across several skills.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great work — and that's all of A0. You can say where people are from and give their nationality. You're ready for the level check.">
-    <h3>Final quiz — countries and nationalities</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. In this practice, you separated countries from nationality adjectives, preserved capitals and articles, and built the origin question accurately. Use the A0 level check for broader evidence.">
+    <h3>Final quiz: countries and nationalities</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Spanish">
+      <div class="quiz-item" data-quiz-item data-answer="Spanish" data-hint="After is, choose the nationality adjective connected to Spain." data-fix="He is Spanish.">
         <p class="quiz-question">1. He is from Spain. He is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Spain">Spain</button><button class="quiz-option" data-quiz-option="Spanish">Spanish</button><button class="quiz-option" data-quiz-option="Spainish">Spainish</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Spain">Spain</button><button class="quiz-option" data-quiz-option="Spanish">Spanish</button><button class="quiz-option" data-quiz-option="from Spain">from Spain</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Japan">
+      <div class="quiz-item" data-quiz-item data-answer="Japan" data-hint="After from, choose the capitalized country name." data-fix="She's from Japan. She's Japanese.">
         <p class="quiz-question">2. She's from ___. She's Japanese.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Japan">Japan</button><button class="quiz-option" data-quiz-option="Japanese">Japanese</button><button class="quiz-option" data-quiz-option="japan">japan</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Turkish">
-        <p class="quiz-question">3. Our client is from Turkey. He is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Turkey">Turkey</button><button class="quiz-option" data-quiz-option="Turkish">Turkish</button><button class="quiz-option" data-quiz-option="Turkelse">Turkese</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Turkish" data-hint="After is, choose the nationality adjective connected to Türkiye." data-fix="The fictional client is Turkish.">
+        <p class="quiz-question">3. A fictional client states that she is from Türkiye. She is ___.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Türkiye">Türkiye</button><button class="quiz-option" data-quiz-option="Turkish">Turkish</button><button class="quiz-option" data-quiz-option="from Türkiye">from Türkiye</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I'm from Mexico.">
+      <div class="quiz-item" data-quiz-item data-answer="I'm from Mexico." data-hint="The complete pattern is from followed by a country name." data-fix="I'm from Mexico.">
         <p class="quiz-question">4. Which sentence is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="I'm from Mexico.">I'm from Mexico.</button><button class="quiz-option" data-quiz-option="I'm from Mexican.">I'm from Mexican.</button><button class="quiz-option" data-quiz-option="I'm Mexico.">I'm Mexico.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="French">
-        <p class="quiz-question">5. My coworker is from France. She is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="France">France</button><button class="quiz-option" data-quiz-option="French">French</button><button class="quiz-option" data-quiz-option="Franch">Franch</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="French" data-hint="After is, choose the adjective French, not the country France." data-fix="The fictional coworker is French.">
+        <p class="quiz-question">5. A fictional coworker states that she is from France. She is ___.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="France">France</button><button class="quiz-option" data-quiz-option="French">French</button><button class="quiz-option" data-quiz-option="from France">from France</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="They're Italian.">
-        <p class="quiz-question">6. The team is from Italy. Which is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="They're Italian." data-hint="After are, use the nationality adjective without from." data-fix="They're Italian.">
+        <p class="quiz-question">6. The team members are from Italy. Which is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="They're Italian.">They're Italian.</button><button class="quiz-option" data-quiz-option="They're from Italian.">They're from Italian.</button><button class="quiz-option" data-quiz-option="They're Italy.">They're Italy.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="American">
-        <p class="quiz-question">7. They are from the United States. They are ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="American" data-hint="In common English, American is the nationality adjective connected to the United States." data-fix="They state that they are American.">
+        <p class="quiz-question">7. Two fictional speakers state that they are from the United States. They are ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="America">America</button><button class="quiz-option" data-quiz-option="American">American</button><button class="quiz-option" data-quiz-option="States">States</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Where are you from?">
-        <p class="quiz-question">8. On a video call, you want to know someone's country. You ask:</p>
+      <div class="quiz-item" data-quiz-item data-answer="Where are you from?" data-hint="In a question with you, place are before the subject." data-fix="Where are you from?">
+        <p class="quiz-question">8. In a voluntary introduction, your partner invites an origin question. You ask:</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Where are you from?">Where are you from?</button><button class="quiz-option" data-quiz-option="Where you are from?">Where you are from?</button><button class="quiz-option" data-quiz-option="From where you?">From where you?</button></div>
       </div>
     </div>
@@ -351,6 +489,38 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the country, adjective, language, article, or question pattern that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day country and nationality retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved Japan after from, Japanese after is, the before United Kingdom, and Portuguese as the stated language.">
+      <h3>Complete the fictional profiles from memory</h3>
+      <div class="choice-bank" aria-label="Next-day country and nationality choices">
+        <button class="choice-option" data-choice-option="Japan">Japan</button><button class="choice-option" data-choice-option="Japanese">Japanese</button>
+        <button class="choice-option" data-choice-option="the">the</button><button class="choice-option" data-choice-option="no article">no article</button>
+        <button class="choice-option" data-choice-option="Portuguese">Portuguese</button><button class="choice-option" data-choice-option="Portugal">Portugal</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The profile says, “I'm from <button class="choice-gap" data-choice-gap data-answer="Japan" data-hint="After from, choose the country Japan." data-fix="I'm from Japan." data-placeholder="choose">choose</button>.”</span></div>
+      <div class="q"><span class="n">2</span><span>The same profile says, “I'm <button class="choice-gap" data-choice-gap data-answer="Japanese" data-hint="After am, choose the nationality adjective Japanese." data-fix="I'm Japanese." data-placeholder="choose">choose</button>.”</span></div>
+      <div class="q"><span class="n">3</span><span>They live in <button class="choice-gap" data-choice-gap data-answer="the" data-hint="The complete country name is the United Kingdom." data-fix="They live in the United Kingdom." data-placeholder="choose">choose</button> United Kingdom now.</span></div>
+      <div class="q"><span class="n">4</span><span>They state that they speak <button class="choice-gap" data-choice-gap data-answer="Portuguese" data-hint="After speak, choose the language Portuguese, not the country Portugal." data-fix="They state that they speak Portuguese." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="are" data-hint="In a question with you, the form of be comes before the subject." data-fix="Where are you from?" data-why="The question order is Where + are + you + from.">
+      <h3>Repair the question order</h3>
+      <p>Tap the word that is in the wrong position.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="where">Where</button><button class="error-choice" data-error-choice="you">you</button><button class="error-choice" data-error-choice="are">are</button><button class="error-choice" data-error-choice="from">from?</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, give the country, nationality adjective, and language labels in this invented profile: <span class="ex">Amir is from Egypt. He is Egyptian. He speaks Arabic.</span> Then say one fact that the profile does not tell you.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Country: Egypt. Nationality adjective: Egyptian. Language: Arabic.</strong> The profile does not state his current home, other languages, birthplace, or legal nationality details.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

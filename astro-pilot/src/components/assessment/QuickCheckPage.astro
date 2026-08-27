@@ -1,26 +1,35 @@
 ---
 import "../../styles/quick-level-check.css";
 import QuickCheckEngine from "./QuickCheckEngine.astro";
+import FontStyles from "../FontStyles.astro";
+import SocialMetadata from "../SocialMetadata.astro";
+import SkipLink from "../SkipLink.astro";
+import StructuredData from "../StructuredData.astro";
+import { formatPageTitle } from "../../lib/page-title.mjs";
+import { assessmentSchemaNodes } from "../../lib/structured-data.mjs";
 interface PageMetadata { title: string; description: string; route: string; bodyClass?: string }
 interface Props { page: PageMetadata }
 const { page } = Astro.props;
 const canonical = new URL(page.route, Astro.site);
+const documentTitle = formatPageTitle(page.title);
+const structuredData = assessmentSchemaNodes({ page, canonical, site: Astro.site, documentTitle });
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{page.title}</title>
+    <FontStyles />
+    <title>{documentTitle}</title>
     <meta name="description" content={page.description} />
-    <link rel="canonical" href={canonical} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <SocialMetadata title={documentTitle} description={page.description} canonical={canonical} />
+    <StructuredData nodes={structuredData} />
   </head>
   <body class={page.bodyClass}>
-    <slot />
+    <SkipLink target="quick-check-content" />
+    <div id="quick-check-content" tabindex="-1">
+      <slot />
+    </div>
     <QuickCheckEngine />
   </body>
 </html>
-

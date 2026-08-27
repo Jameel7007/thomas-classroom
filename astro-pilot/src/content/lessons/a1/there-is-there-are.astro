@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "there is / there are · A1 Grammar · Curriculum Map",
+  "title": "There is / there are · A1 Grammar",
   "slug": "there-is-there-are",
   "level": "A1",
   "topic": "there is / there are",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Say what exists in a place: There’s a pharmacy near my house , There are two chairs , and Is there a bank?",
+  "description": "Use there is and there are to say what exists in a place and to ask about singular, plural, and uncountable things.",
   "sequence": 3,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/the-verb-to-be", "a0/articles-a-an", "a0/regular-plural-nouns"],
+  "related": ["a1/some-any-with-countable-and-uncountable-nouns", "a1/rooms-and-furniture"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Existence and introduction meaning, singular/plural/uncountable form, questions, quantity words, spoken form, listening, privacy, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 3</p>
   <h1><em>there is / there are</em></h1>
   <p class="standfirst">Say what exists in a place: <span class="ex">There’s a pharmacy near my house</span>, <span class="ex">There are two chairs</span>, and <span class="ex">Is there a bank?</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">one and many</span>
-    <span class="tag">places</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">singular · plural · uncountable</span>
+    <span class="tag">introducing what exists</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Explore a new apartment.</span></div>
     <div class="flow-step"><b>Discover</b><span>Match is / are to the noun.</span></div>
     <div class="flow-step"><b>Build</b><span>Describe, deny, and ask.</span></div>
-    <div class="flow-step"><b>Use</b><span>Give a real tour.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional tour or service check.</span></div>
   </div>
 
   <p class="note-line"><span class="ex">There is / there are</span> is how English puts something on the table: a café on your street, a problem in a file, two chairs in the kitchen.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a regular plural, the article an before a vowel sound, and third-person starts from earlier lessons.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -52,9 +60,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="starts">starts</button>
       <button class="choice-option" data-choice-option="start">start</button>
     </div>
-    <div class="q"><span class="n">1</span><span>We have two <button class="choice-gap" data-choice-gap data-answer="chairs" data-placeholder="choose">choose</button> in the kitchen. &nbsp;<span class="contraction">(regular plurals)</span></span></div>
-    <div class="q"><span class="n">2</span><span>He is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> engineer. &nbsp;<span class="contraction">(a or an)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Leo <button class="choice-gap" data-choice-gap data-answer="starts" data-placeholder="choose">choose</button> work early on Mondays. &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The inventory lists two <button class="choice-gap" data-choice-gap data-answer="chairs" data-hint="Two requires the regular plural noun chairs." data-fix="The inventory lists two chairs in the kitchen." data-placeholder="choose">choose</button> in the kitchen. &nbsp;<span class="contraction">(regular plurals)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The profile says he is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Engineer begins with a vowel sound, so use an." data-fix="He is an engineer." data-placeholder="choose">choose</button> engineer. &nbsp;<span class="contraction">(a or an)</span></span></div>
+    <div class="q"><span class="n">3</span><span>Leo’s regular Monday schedule says he <button class="choice-gap" data-choice-gap data-answer="starts" data-hint="A regular action with the third-person subject Leo takes starts." data-fix="Leo starts work early on Mondays." data-placeholder="choose">choose</button> work early. &nbsp;<span class="contraction">(present simple)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -74,7 +82,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Is introduces one thing or an uncountable amount, are introduces plural things, and questions move the matching verb before there.">
     <h3>Discovery check: choose the pattern</h3>
     <p class="choice-hint">Look at the noun after the verb. One thing or an amount takes <b>is</b>; more than one takes <b>are</b>.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -83,12 +91,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Is">Is</button>
       <button class="choice-option" data-choice-option="Are">Are</button>
     </div>
-    <div class="q"><span class="n">1</span><span>There <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> a café.</span></div>
-    <div class="q"><span class="n">2</span><span>There <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> three cafés.</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Is" data-placeholder="choose">choose</button> there a restroom?</span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Are" data-placeholder="choose">choose</button> there any tables?</span></div>
-    <div class="q"><span class="n">5</span><span>There <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> some milk in the fridge.</span></div>
-    <div class="q"><span class="n">6</span><span>There <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> five floors in the building.</span></div>
+    <div class="q"><span class="n">1</span><span>The street map introduces one café: There <button class="choice-gap" data-choice-gap data-answer="is" data-hint="A café is one countable thing, so use is." data-fix="There is a café on the corner." data-placeholder="choose">choose</button> a café on the corner.</span></div>
+    <div class="q"><span class="n">2</span><span>The same map introduces three cafés: There <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Three cafés is plural, so use are." data-fix="There are three cafés on this street." data-placeholder="choose">choose</button> three cafés on this street.</span></div>
+    <div class="q"><span class="n">3</span><span>A visitor asks about one facility: <button class="choice-gap" data-choice-gap data-answer="Is" data-hint="The singular noun a restroom takes is; move it before there." data-fix="Is there a restroom on this floor?" data-placeholder="choose">choose</button> there a restroom on this floor?</span></div>
+    <div class="q"><span class="n">4</span><span>A customer asks about plural furniture: <button class="choice-gap" data-choice-gap data-answer="Are" data-hint="Tables is plural, so move are before there." data-fix="Are there any tables near the window?" data-placeholder="choose">choose</button> there any tables near the window?</span></div>
+    <div class="q"><span class="n">5</span><span>The fridge note introduces an uncountable amount: There <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Milk is uncountable here, so the amount takes is." data-fix="There is some milk in the fridge." data-placeholder="choose">choose</button> some milk in the fridge.</span></div>
+    <div class="q"><span class="n">6</span><span>The building guide introduces five floors: There <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Five floors is plural, so use are." data-fix="There are five floors in the building." data-placeholder="choose">choose</button> five floors in the building.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -124,6 +132,13 @@ export const page = defineLesson({
   <h3>“There” has a grammar job</h3>
   <p>In this pattern, <span class="ex">there</span> does not usually mean “in that place.” It holds the subject position so English can introduce new information after the verb. Compare <span class="ex">There is a bank there</span>: the first <span class="ex">there</span> builds the structure; the second one really means “in that place.”</p>
 
+  <div class="thinking-card">
+    <h3>New thing or known thing?</h3>
+    <p>A speaker often uses <span class="ex">there is / there are</span> to bring a thing into the conversation. After both people know which thing it is, the speaker can use <span class="ex">it</span> or the noun with <span class="ex">the</span>.</p>
+    <p><span class="ex">There’s a pharmacy on Oak Street. It’s beside the bank. The pharmacy closes at 8.</span></p>
+    <p>The first sentence introduces the pharmacy. The next two sentences talk about that known pharmacy. This is a meaning choice, not simply a choice between two forms of <span class="ex">be</span>.</p>
+  </div>
+
   <h3>The noun controls is or are</h3>
   <p>Look forward to the first noun after the verb. One countable thing or an uncountable substance takes <span class="ex">is</span>; plural things take <span class="ex">are</span>.</p>
   <table>
@@ -136,7 +151,55 @@ export const page = defineLesson({
   </table>
   <p class="note-line">In quick informal speech, you may hear <span class="ex">There’s two people outside</span>. Careful standard English uses <span class="ex">There are two people outside</span>, so that is the form to build first.</p>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Sound natural: link the structure and stress the new thing</h3>
+    <p><span class="ex">There is / there are</span> introduces information, so the new noun usually carries the strongest beat: <span class="ex">There’s a <strong>CAFÉ</strong> nearby</span> and <span class="ex">There are two <strong>WIN</strong>dows</span>. The structure is lighter; the thing you are introducing is clearer.</p>
+    <table>
+      <thead><tr><th>careful form</th><th>natural spoken rhythm</th><th>focus</th></tr></thead>
+      <tbody>
+        <tr><td>There is a problem.</td><td>There’s-a problem.</td><td><b>problem</b></td></tr>
+        <tr><td>There are two seats.</td><td>There-are two seats.</td><td><b>two seats</b></td></tr>
+        <tr><td>Is there a bank?</td><td>Is-there-a bank?</td><td><b>bank</b></td></tr>
+        <tr><td>Are there any tables?</td><td>Are-there-any tables?</td><td><b>tables</b></td></tr>
+      </tbody>
+    </table>
+    <p><span class="ex">There’s</span> is a common spoken and written contraction. English normally writes <span class="ex">there are</span> as two words, although speakers make <span class="ex">are</span> very short and link it to <span class="ex">there</span>. Linking does not change the grammar. Keep <span class="ex">are</span> for plural nouns, and use the full careful rhythm when the listener needs extra clarity.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read there is and there are listening check">
+    <h2>Listen: one, many, amount, or known thing?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each complete fictional context once at a natural speed and once more slowly. Listen to the noun and the information status before you choose. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard singular, plural, uncountable, question, negative, and known-information contexts and matched each one to its natural structure.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Listening structure choices">
+        <button class="choice-option" data-choice-option="There’s">There’s</button><button class="choice-option" data-choice-option="There are">There are</button>
+        <button class="choice-option" data-choice-option="There isn’t">There isn’t</button><button class="choice-option" data-choice-option="Are there">Are there</button>
+        <button class="choice-option" data-choice-option="There is">There is</button><button class="choice-option" data-choice-option="It’s">It’s</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The guide introduces one elevator: <button class="choice-gap" data-choice-gap data-answer="There’s" data-hint="Listen for one elevator being introduced for the first time." data-fix="There's an elevator beside reception." data-placeholder="listen">listen</button> an elevator beside reception.</span></div>
+      <div class="q"><span class="n">2</span><span>The guide introduces two restrooms: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Listen for the plural noun two restrooms." data-fix="There are two restrooms on this floor." data-placeholder="listen">listen</button> two restrooms on this floor.</span></div>
+      <div class="q"><span class="n">3</span><span>The kitchen update introduces an uncountable amount: <button class="choice-gap" data-choice-gap data-answer="There is" data-hint="Coffee is an uncountable amount here, so use the singular form is." data-fix="There is some coffee in the kitchen." data-placeholder="listen">listen</button> some coffee in the kitchen.</span></div>
+      <div class="q"><span class="n">4</span><span>The visitor asks about plural facilities: <button class="choice-gap" data-choice-gap data-answer="Are there" data-hint="Listen for the plural noun any outlets and question order." data-fix="Are there any outlets near this table?" data-placeholder="listen">listen</button> any outlets near this table?</span></div>
+      <div class="q"><span class="n">5</span><span>The notice reports that one service is unavailable: <button class="choice-gap" data-choice-gap data-answer="There isn’t" data-hint="Listen for one shuttle and the negative meaning unavailable today." data-fix="There isn't a shuttle today." data-placeholder="listen">listen</button> a shuttle today.</span></div>
+      <div class="q"><span class="n">6</span><span>The speaker already introduced the elevator and now locates that known elevator: <button class="choice-gap" data-choice-gap data-answer="It’s" data-hint="The elevator is already known, so the speaker now refers back to it with it." data-fix="It's beside reception." data-placeholder="listen">listen</button> beside reception.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol>
+        <li>There’s an elevator beside reception.</li>
+        <li>There are two restrooms on this floor.</li>
+        <li>There is some coffee in the kitchen.</li>
+        <li>Are there any outlets near this table?</li>
+        <li>There isn’t a shuttle today.</li>
+        <li>There’s an elevator in the lobby. It’s beside reception.</li>
+      </ol>
+    </details>
+  </section>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each complete chunk agrees with the following singular, plural, or uncountable noun and matches the stated positive or negative meaning.">
     <h3>Drill 1: choose the natural chunk</h3>
     <p class="choice-hint">Read to the noun first. Then choose the chunk that fits.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -145,14 +208,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="There isn’t">There isn’t</button>
       <button class="choice-option" data-choice-option="There aren’t">There aren’t</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="There’s" data-placeholder="choose">choose</button> a pharmacy on the corner.</span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> two elevators in the building.</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="There isn’t" data-placeholder="choose">choose</button> a parking lot, so I take the bus.</span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="There aren’t" data-placeholder="choose">choose</button> any windows in the meeting room.</span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="There’s" data-placeholder="choose">choose</button> some coffee in the kitchen.</span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> many restaurants near my office.</span></div>
-    <div class="q"><span class="n">7</span><span><button class="choice-gap" data-choice-gap data-answer="There’s" data-placeholder="choose">choose</button> an ATM in the station.</span></div>
-    <div class="q"><span class="n">8</span><span><button class="choice-gap" data-choice-gap data-answer="There aren’t" data-placeholder="choose">choose</button> any chairs left in the waiting room.</span></div>
+    <div class="q"><span class="n">1</span><span>The map introduces one pharmacy: <button class="choice-gap" data-choice-gap data-answer="There’s" data-hint="A pharmacy is one countable thing, so use the contracted singular chunk There's." data-fix="There's a pharmacy on the corner." data-placeholder="choose">choose</button> a pharmacy on the corner.</span></div>
+    <div class="q"><span class="n">2</span><span>The building guide lists two elevators: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Two elevators is plural, so use There are." data-fix="There are two elevators in the building." data-placeholder="choose">choose</button> two elevators in the building.</span></div>
+    <div class="q"><span class="n">3</span><span>The listing says parking is unavailable: <button class="choice-gap" data-choice-gap data-answer="There isn’t" data-hint="A parking lot is singular, and the sentence states that it is absent." data-fix="There isn't a parking lot, so I take the bus." data-placeholder="choose">choose</button> a parking lot, so I take the bus.</span></div>
+    <div class="q"><span class="n">4</span><span>The room inspection finds zero windows: <button class="choice-gap" data-choice-gap data-answer="There aren’t" data-hint="Windows is plural, and zero means the plural statement is negative." data-fix="There aren't any windows in the meeting room." data-placeholder="choose">choose</button> any windows in the meeting room.</span></div>
+    <div class="q"><span class="n">5</span><span>The kitchen note introduces an uncountable amount: <button class="choice-gap" data-choice-gap data-answer="There’s" data-hint="Coffee is uncountable here, so use the singular chunk There's." data-fix="There's some coffee in the kitchen." data-placeholder="choose">choose</button> some coffee in the kitchen.</span></div>
+    <div class="q"><span class="n">6</span><span>The area guide introduces many restaurants: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Many restaurants is plural, so use There are." data-fix="There are many restaurants near my office." data-placeholder="choose">choose</button> many restaurants near my office.</span></div>
+    <div class="q"><span class="n">7</span><span>The station guide introduces one ATM: <button class="choice-gap" data-choice-gap data-answer="There’s" data-hint="An ATM is one countable thing, so use There's." data-fix="There's an ATM in the station." data-placeholder="choose">choose</button> an ATM in the station.</span></div>
+    <div class="q"><span class="n">8</span><span>The waiting-room display reports zero chairs left: <button class="choice-gap" data-choice-gap data-answer="There aren’t" data-hint="Chairs is plural, and zero available chairs requires the negative aren't." data-fix="There aren't any chairs left in the waiting room." data-placeholder="choose">choose</button> any chairs left in the waiting room.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -173,17 +236,18 @@ export const page = defineLesson({
   <div class="note">
     <h3>Articles and quantity still matter</h3>
     <p>Use <span class="ex">a/an</span> with one countable noun: <span class="ex">There is a pharmacy</span>. Use a number or <span class="ex">some</span> with plural nouns. In ordinary questions and negatives, <span class="ex">any</span> is common: <span class="ex">Are there any pharmacies? There aren’t any nearby.</span></p>
+    <p><span class="ex">No</span> gives the same zero quantity in another natural pattern: <span class="ex">There is no parking lot</span> and <span class="ex">There are no free seats</span>. Do not combine the two negative patterns: use <span class="ex">There aren’t any seats</span> or <span class="ex">There are no seats</span>.</p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <div class="practice" data-answer-drill data-success-message="Correct. Each answer matches the following noun, carries the negative when required, or moves before there to form the stated question.">
     <h3>Drill 2: type is, are, isn’t, aren’t, Is, or Are</h3>
     <p class="choice-hint">Find the noun after the verb, then choose its form. Questions start with the verb.</p>
-    <div class="q"><span class="n">1</span><span>There <input class="answer-input" data-answer="is" aria-label="answer 1" /> a bus stop outside.</span></div>
-    <div class="q"><span class="n">2</span><span>There <input class="answer-input" data-answer="are" aria-label="answer 2" /> four people in line.</span></div>
-    <div class="q"><span class="n">3</span><span>There <input class="answer-input" data-answer="isn’t" aria-label="answer 3" /> a bank here.</span></div>
-    <div class="q"><span class="n">4</span><span>There <input class="answer-input" data-answer="aren’t" aria-label="answer 4" /> any free tables.</span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Is" aria-label="answer 5" /> there a restroom on this floor?</span></div>
-    <div class="q"><span class="n">6</span><span><input class="answer-input" data-answer="Are" aria-label="answer 6" /> there any seats near the window?</span></div>
+    <div class="q"><span class="n">1</span><span>The transit map introduces one stop: There <input class="answer-input" data-answer="is" data-hint="A bus stop is singular, so use is." data-fix="There is a bus stop outside." aria-label="Verb after there before singular a bus stop outside" /> a bus stop outside.</span></div>
+    <div class="q"><span class="n">2</span><span>The line counter shows four people: There <input class="answer-input" data-answer="are" data-hint="Four people is plural, so use are." data-fix="There are four people in line." aria-label="Verb after there before plural four people in line" /> four people in line.</span></div>
+    <div class="q"><span class="n">3</span><span>The directory confirms that no bank is available here: There <input class="answer-input" data-answer="isn’t" data-hint="A bank is singular, and the directory gives a negative result." data-fix="There isn't a bank here." aria-label="Negative verb after there before singular a bank here" /> a bank here.</span></div>
+    <div class="q"><span class="n">4</span><span>The host says all the tables are occupied: There <input class="answer-input" data-answer="aren’t" data-hint="Tables is plural, and all occupied means no free tables remain." data-fix="There aren't any free tables." aria-label="Negative verb after there before plural any free tables" /> any free tables.</span></div>
+    <div class="q"><span class="n">5</span><span>A visitor asks about one restroom: <input class="answer-input" data-answer="Is" data-hint="A restroom is singular; move Is before there and capitalize it." data-fix="Is there a restroom on this floor?" aria-label="Question starter before there a restroom on this floor" /> there a restroom on this floor?</span></div>
+    <div class="q"><span class="n">6</span><span>A customer asks about plural seats: <input class="answer-input" data-answer="Are" data-hint="Seats is plural; move Are before there and capitalize it." data-fix="Are there any seats near the window?" aria-label="Question starter before there any seats near the window" /> there any seats near the window?</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -197,18 +261,18 @@ export const page = defineLesson({
     <h3>An apartment listing</h3>
     <p><span class="ex">"Bright one-bedroom apartment on Alder Street. There’s a modern kitchen and a large closet in the bedroom. There are two big windows in the living room. There isn’t a parking space, but there’s a bus stop across the street. Sorry, no pets: there aren’t any animals in the building."</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood there is / there are in a real listing.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the apartment's two windows, missing parking space, and bus stop from explicit details in the listing.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="two">
+      <div class="quiz-item" data-quiz-item data-answer="two" data-hint="The listing gives a number immediately before big windows." data-fix="There are two big windows in the living room.">
         <p class="quiz-question">1. How many big windows are there in the living room?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a parking space">
-        <p class="quiz-question">2. What isn’t there?</p>
+      <div class="quiz-item" data-quiz-item data-answer="a parking space" data-hint="The listing uses There isn't before one missing apartment feature." data-fix="There isn't a parking space.">
+        <p class="quiz-question">2. Which listed apartment feature is missing?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a parking space">a parking space</button><button class="quiz-option" data-quiz-option="a kitchen">a kitchen</button><button class="quiz-option" data-quiz-option="a closet">a closet</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="across the street">
+      <div class="quiz-item" data-quiz-item data-answer="across the street" data-hint="The sentence about the bus stop ends with its location." data-fix="The bus stop is across the street.">
         <p class="quiz-question">3. Where is the bus stop?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="across the street">across the street</button><button class="quiz-option" data-quiz-option="in the building">in the building</button><button class="quiz-option" data-quiz-option="on the corner">on the corner</button></div>
       </div>
@@ -220,9 +284,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="are there any stores nearby">
+  <div class="tile-game" data-tile-builder data-answer="are there any stores nearby" data-hint="The customer is asking about plural stores, so begin with Are there, then use any." data-fix="Are there any stores nearby?" data-success-message="Correct. The plural question moves are before there and uses any before stores.">
     <h3>Drill 4: build the question</h3>
-    <p class="tile-target">Build the question. The verb moves before there.</p>
+    <p class="tile-target">A new resident wants to know whether the area has stores. Build the plural question.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="stores">stores</button>
       <button class="tile" data-build-tile="any">any</button>
@@ -238,9 +302,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="there isn’t an elevator in the building">
+  <div class="tile-game" data-tile-builder data-answer="there isn’t an elevator in the building" data-hint="Begin with There isn't because elevator is singular and the inspection found none." data-fix="There isn't an elevator in the building." data-success-message="Correct. The singular negative keeps there first and places isn't before an elevator.">
     <h3>Drill 5: build the negative</h3>
-    <p class="tile-target">Build the sentence. Only isn’t carries the negative.</p>
+    <p class="tile-target">The accessibility inspection found no elevator. Build the singular negative.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="elevator">elevator</button>
       <button class="tile" data-build-tile="in">in</button>
@@ -260,7 +324,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="is" data-fix="There are two bathrooms." data-why="Two bathrooms is plural, so use there are.">
+  <div class="micro-drill" data-spot-error data-answer="is" data-hint="Look forward to the noun phrase two bathrooms before choosing is or are." data-fix="There are two bathrooms." data-why="Two bathrooms is plural, so use there are.">
     <h3>Drill 6: the noun decides</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -272,9 +336,9 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="it" data-fix="There is a problem with my order." data-why="To introduce something new, use there is, not it is.">
+  <div class="micro-drill" data-spot-error data-answer="it" data-hint="The caller is introducing the problem for the first time, so no earlier noun gives it a referent." data-fix="There is a problem with my order." data-why="Use there is to introduce a problem. It is needs a known referent from the earlier context.">
     <h3>Drill 7: introduce it with there</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>A caller begins the conversation with “It is a problem with my order.” Tap the word that is wrong in this first mention.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="it">It</button>
       <button class="error-choice" data-error-choice="is">is</button>
@@ -323,53 +387,67 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your home:</b> Give a six-sentence tour. Include one negative. <span class="ex">There’s a big window in my kitchen. There isn’t a balcony.</span></div>
-  <div class="prompt-card"><b>Your neighborhood:</b> Say what is nearby, then ask the teacher three <span class="ex">Is there / Are there…?</span> questions about their neighborhood.</div>
-  <div class="prompt-card"><b>Your workplace or classroom:</b> Describe what there is in the room right now. One plural, one singular, one negative.</div>
-  <div class="prompt-card"><b>Choose an apartment:</b> You are calling about a listing. Ask about bedrooms, transport, stores, and furniture.</div>
-  <div class="prompt-card"><b>Two cities:</b> Compare your city with another one. <span class="ex">There are lots of cafés here, but there isn’t a subway.</span></div>
+  <p class="note-line">You never need to describe your actual home, neighborhood, workplace, location, schedule, or finances. Use an invented map, a fictional listing, or a teacher-read scene card. If a visual is not accessible, the teacher reads every relevant feature aloud.</p>
+  <div class="prompt-card"><b>Apartment card:</b> Give a six-sentence tour of an invented apartment or a provided listing. Include a singular item, a plural item, an uncountable amount, and one negative.</div>
+  <div class="prompt-card"><b>Neighborhood map:</b> Introduce three places on a fictional map, then ask the teacher three <span class="ex">Is there / Are there...?</span> questions about a second map.</div>
+  <div class="prompt-card"><b>Accessible room check:</b> Use a written room inventory or teacher-read scene. Report one available feature, two plural features, and one missing feature.</div>
+  <div class="prompt-card"><b>Choose an apartment:</b> Call about a fictional listing. Ask focused questions about bedrooms, transportation, stores, furniture, and one accessibility feature.</div>
+  <div class="prompt-card"><b>Introduce, then locate:</b> Introduce a place with <span class="ex">there is</span>, then refer to the known place with <span class="ex">it</span>: <span class="ex">There's a café on Pine Street. It's beside the library.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: recommend one neighborhood</h3>
+    <p>Study two short fictional neighborhood inventories. Give a 45- to 60-second recommendation for one person: a commuter, a wheelchair user, or someone who enjoys cooking at home.</p>
+    <ol>
+      <li>Introduce at least one singular place and one plural set of places.</li>
+      <li>Include one uncountable amount or service, such as traffic, parking, or public transportation.</li>
+      <li>State one missing feature with <span class="ex">isn't / aren't any</span> or <span class="ex">no</span>.</li>
+      <li>Ask one correctly ordered <span class="ex">Is there...?</span> or <span class="ex">Are there...?</span> question.</li>
+      <li>Refer back to one introduced place with <span class="ex">it</span> or <span class="ex">the + noun</span>.</li>
+    </ol>
+    <p>The teacher asks one follow-up question. Repair one sentence if the noun number, information status, or quantity word is unclear.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
     <p>Complete this aloud: “One thing or an amount: there ______. More than one: there ______. In a question, ______ moves before there. In negatives and questions, plural nouns often take ______.”</p>
-    <p>Then introduce three real things: one in your home, one on your street, and one that is missing.</p>
+    <p>Then introduce three fictional things: one singular, one plural, and one uncountable amount. Refer back to one of them with <span class="ex">it</span> or <span class="ex">the + noun</span>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can say what exists, ask about it, and deny it.">
+  <div class="quiz" data-quiz data-success-message="Correct. You matched form to noun number and quantity, built questions and short answers, and distinguished introducing new information from referring back to it.">
     <h3>Final quiz: there is / there are forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="There is">
-        <p class="quiz-question">1. ___ a table in the kitchen.</p>
+      <div class="quiz-item" data-quiz-item data-answer="There is" data-hint="The room inventory introduces one table for the first time." data-fix="There is a table in the kitchen.">
+        <p class="quiz-question">1. A room inventory introduces one table: ___ a table in the kitchen.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="There is">There is</button><button class="quiz-option" data-quiz-option="There are">There are</button><button class="quiz-option" data-quiz-option="It is">It is</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Are there">
-        <p class="quiz-question">2. ___ any windows?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Are there" data-hint="Windows is plural, and the visitor is asking a question." data-fix="Are there any windows in the meeting room?">
+        <p class="quiz-question">2. A visitor asks about plural windows in the meeting room: ___ any windows?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Are there">Are there</button><button class="quiz-option" data-quiz-option="Is there">Is there</button><button class="quiz-option" data-quiz-option="There are">There are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="aren’t">
-        <p class="quiz-question">3. There ___ any buses at night.</p>
+      <div class="quiz-item" data-quiz-item data-answer="aren’t" data-hint="Buses is plural, and the schedule shows zero service at night." data-fix="There aren't any buses at night.">
+        <p class="quiz-question">3. The schedule shows zero nighttime bus service: There ___ any buses at night.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="aren’t">aren’t</button><button class="quiz-option" data-quiz-option="isn’t">isn’t</button><button class="quiz-option" data-quiz-option="not">not</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="is">
-        <p class="quiz-question">4. There ___ some water on the floor.</p>
+      <div class="quiz-item" data-quiz-item data-answer="is" data-hint="Water is an uncountable amount here, so use is." data-fix="There is some water on the floor.">
+        <p class="quiz-question">4. A maintenance report introduces an uncountable amount: There ___ some water on the floor.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button><button class="quiz-option" data-quiz-option="be">be</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="There’s">
-        <p class="quiz-question">5. ___ a good café near here.</p>
+      <div class="quiz-item" data-quiz-item data-answer="There’s" data-hint="The guide is introducing one café, so use the contracted singular structure." data-fix="There's a good café near here.">
+        <p class="quiz-question">5. A local guide introduces one café for the first time: ___ a good café near here.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="There’s">There’s</button><button class="quiz-option" data-quiz-option="It’s">It’s</button><button class="quiz-option" data-quiz-option="Is">Is</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="There’s a message for you.">
-        <p class="quiz-question">6. Which sentence introduces something new?</p>
+      <div class="quiz-item" data-quiz-item data-answer="There’s a message for you." data-hint="The caller cannot see the message and does not know about it yet, so the receptionist must introduce it." data-fix="There's a message for you introduces the message before giving more details.">
+        <p class="quiz-question">6. A receptionist tells a caller about a message the caller cannot see and does not know about. Which sentence introduces the message?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="There’s a message for you.">There’s a message for you.</button><button class="quiz-option" data-quiz-option="The message is for you.">The message is for you.</button><button class="quiz-option" data-quiz-option="It is for you.">It is for you.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="there is">
-        <p class="quiz-question">7. Is there a pharmacy nearby? Yes, ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="there is" data-hint="A positive short answer repeats there and the singular verb is, but not the noun." data-fix="Is there a pharmacy nearby? Yes, there is.">
+        <p class="quiz-question">7. Complete the positive short answer: “Is there a pharmacy nearby?” “Yes, ___.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="there is">there is</button><button class="quiz-option" data-quiz-option="it is">it is</button><button class="quiz-option" data-quiz-option="there’s a">there’s a</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Are there any seats?">
-        <p class="quiz-question">8. Which question is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Are there any seats?" data-hint="Seats is plural, so the question begins Are there and commonly uses any." data-fix="Are there any seats?">
+        <p class="quiz-question">8. You want to know whether a waiting room has seats available. Which plural question is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Are there any seats?">Are there any seats?</button><button class="quiz-option" data-quiz-option="Is there any seats?">Is there any seats?</button><button class="quiz-option" data-quiz-option="There are any seats?">There are any seats?</button></div>
       </div>
     </div>
@@ -379,6 +457,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the noun-number, quantity, question-order, or new-versus-known decision that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day there is and there are retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved singular and plural introductions, a singular question, and a known-place reference without rereading the lesson.">
+      <h3>Choose from number and information status</h3>
+      <div class="choice-bank" aria-label="Next-day existence and reference choices">
+        <button class="choice-option" data-choice-option="There is">There is</button><button class="choice-option" data-choice-option="There are">There are</button>
+        <button class="choice-option" data-choice-option="Is there">Is there</button><button class="choice-option" data-choice-option="It is">It is</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The directory introduces one pharmacy: <button class="choice-gap" data-choice-gap data-answer="There is" data-hint="A pharmacy is one new countable thing, so use There is." data-fix="There is a pharmacy on Cedar Street." data-placeholder="choose">choose</button> a pharmacy on Cedar Street.</span></div>
+      <div class="q"><span class="n">2</span><span>The directory introduces two clinics: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Two clinics is plural, so use There are." data-fix="There are two clinics near the station." data-placeholder="choose">choose</button> two clinics near the station.</span></div>
+      <div class="q"><span class="n">3</span><span>A visitor asks about one accessible entrance: <button class="choice-gap" data-choice-gap data-answer="Is there" data-hint="An accessible entrance is singular, and the visitor is asking a question." data-fix="Is there an accessible entrance?" data-placeholder="choose">choose</button> an accessible entrance?</span></div>
+      <div class="q"><span class="n">4</span><span>The pharmacy is now known. Refer back to it: <button class="choice-gap" data-choice-gap data-answer="It is" data-hint="The pharmacy was already introduced, so refer back to that known place with It." data-fix="It is beside the library." data-placeholder="choose">choose</button> beside the library.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="is" data-hint="Look ahead to the plural noun two elevators." data-fix="There are two elevators in the building." data-why="Two elevators is plural, so the introducing structure requires there are.">
+      <h3>Repair the agreement</h3>
+      <p>The building guide says “There is two elevators in the building.” Tap the word that is wrong.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="there">There</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="two">two</button><button class="error-choice" data-error-choice="elevators">elevators</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, introduce one café and two stores on an invented street. Ask whether there is a bank. Then refer back to the café with <span class="ex">it</span>.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>There's a café and there are two stores on the street. Is there a bank? The café is beside the station. It's open until 8.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

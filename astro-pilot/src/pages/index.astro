@@ -1,69 +1,187 @@
 ---
-import "../styles/home.css";
+import homeStyles from "../styles/home.css?raw";
+import FontStyles from "../components/FontStyles.astro";
 import HomeInteractions from "../components/home/HomeInteractions.astro";
+import SocialMetadata from "../components/SocialMetadata.astro";
+import SkipLink from "../components/SkipLink.astro";
+import StructuredData from "../components/StructuredData.astro";
+import { curriculum } from "../lib/curriculum";
+import { getLessonsForLevel, lessonCounts } from "../data/lesson-catalog.mjs";
+import { siteSettings } from "../data/site-settings.mjs";
+import { schemaIds, siteIdentityNodes, webPageNode } from "../lib/structured-data.mjs";
+const title = "Welcome to Thomas's Classroom — American English Tutor";
+const description = "Conversation and pronunciation lessons with a native American English speaker. Welcome to Thomas's Classroom — clear what's blocking your English.";
 const canonical = new URL("/", Astro.site);
+const bookingUrl = siteSettings.bookingUrl;
+const bookingLabel = siteSettings.bookingLabel;
+const ratingValue = siteSettings.ratingValue;
+const reviewCount = siteSettings.reviewCount;
+const curriculumCounts = lessonCounts();
+const levelHues: Record<string, number> = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305, C1: 345 };
+const curriculumLevels = curriculum.map((level) => {
+  const lessons = getLessonsForLevel(level.code);
+  const ready = lessons.filter((lesson) => lesson.status === "ready");
+  return {
+    ...level,
+    total: lessons.length,
+    ready: ready.length,
+    firstLesson: ready[0],
+    hue: levelHues[level.code],
+  };
+});
+const presentPerfectNoticingSentence = "Yesterday I go to my first lesson, and it change everything.";
+const ids = schemaIds(Astro.site);
+const structuredData = [
+  ...siteIdentityNodes(Astro.site),
+  webPageNode({ canonical, title, description, site: Astro.site, mainEntityId: ids.tutor }),
+];
 ---
 <!doctype html>
-<html lang="en" data-theme="raw">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Thomas's Classroom — American English Tutor</title>
-    <meta name="description" content="Conversation and pronunciation lessons with a native American English speaker. Welcome to Thomas's Classroom — clear what's blocking your English." />
-    <link rel="canonical" href={canonical} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Albert+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <FontStyles />
+    <style is:inline set:html={homeStyles} />
+    <script is:inline>document.documentElement.classList.replace("no-js", "js");</script>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <SocialMetadata title={title} description={description} canonical={canonical} />
+    <StructuredData nodes={structuredData} />
+    <style is:inline>
+      .curriculum-home{padding:clamp(5rem,10vh,7.5rem) clamp(1.2rem,4vw,3rem);border-top:1px solid color-mix(in srgb,var(--ink) 12%,transparent);background:linear-gradient(180deg,var(--card),var(--paper))}
+      .curriculum-home-head{max-width:72rem;margin:0 auto 2.6rem;display:grid;grid-template-columns:minmax(0,.95fr) minmax(320px,.75fr);gap:clamp(2rem,6vw,5rem);align-items:end}.curriculum-home-head h2{max-width:12ch}.curriculum-home-intro>p{margin:0;color:var(--ink-soft);font-size:1.06rem;line-height:1.72}.curriculum-home-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+      .curriculum-action{display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.7rem .95rem;border:1px solid color-mix(in srgb,var(--ink) 28%,transparent);border-radius:10px;background:var(--card);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:.035em;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}.curriculum-action:hover{transform:translateY(-2px);border-color:var(--teal);box-shadow:0 14px 24px -20px var(--teal-deep)}.curriculum-action--primary{border-color:var(--ink);background:var(--ink);color:var(--paper)}.curriculum-action:focus-visible,.curriculum-level-card:focus-visible{outline:3px solid var(--pen);outline-offset:4px}
+      .curriculum-level-grid{max-width:72rem;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.curriculum-level-card{min-height:248px;padding:1.45rem;border:1px solid color-mix(in srgb,var(--level-deep) 34%,var(--ink) 8%);border-radius:16px;background:linear-gradient(145deg,var(--card),var(--level-tint));color:var(--ink);text-decoration:none;display:flex;flex-direction:column;box-shadow:0 18px 36px -32px var(--level-deep);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}.curriculum-level-card:hover{transform:translateY(-5px);border-color:var(--level-deep);box-shadow:0 24px 44px -30px var(--level-deep)}
+      .curriculum-level-top{display:flex;align-items:baseline;gap:.85rem}.curriculum-level-top b{color:var(--level-deep);font-family:'Albert Sans',sans-serif;font-size:2.75rem;line-height:1;font-weight:750;letter-spacing:-.04em}.curriculum-level-top span{font-family:'Fraunces',serif;font-size:1.15rem;font-style:italic;font-variation-settings:'opsz' 40,'wght' 560}.curriculum-level-copy{display:block;margin-top:1rem;color:var(--ink-soft);font-size:.94rem;line-height:1.55}.curriculum-level-meta{display:flex;align-items:center;gap:.3rem;margin-top:auto;padding-top:1.25rem;color:var(--level-deep);font-family:'IBM Plex Mono',monospace;font-size:.7rem}.curriculum-level-meta strong{font-weight:700}.curriculum-level-meta i{margin-left:auto;font-size:1rem;font-style:normal}
+      .curriculum-promise{max-width:72rem;margin:1.2rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:16px;background:var(--card);overflow:hidden}.curriculum-promise>div{display:grid;grid-template-columns:auto 1fr;gap:.9rem;padding:1.3rem 1.4rem;border-right:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}.curriculum-promise>div:last-child{border-right:0}.curriculum-promise span{color:var(--pen);font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:700}.curriculum-promise p{margin:0;color:var(--ink-soft);font-size:.86rem;line-height:1.5}.curriculum-promise b{display:block;margin-bottom:.2rem;color:var(--ink);font-size:1rem}
+      @media(max-width:900px){.curriculum-home-head{grid-template-columns:1fr;gap:1.5rem;align-items:start}.curriculum-home-head h2{max-width:15ch}.curriculum-level-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.curriculum-promise{grid-template-columns:1fr}.curriculum-promise>div{border-right:0;border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}.curriculum-promise>div:last-child{border-bottom:0}}
+      @media(max-width:580px){.hero-break{display:block}.curriculum-level-grid{grid-template-columns:1fr}.curriculum-level-card{min-height:0}.curriculum-home-actions{display:grid}.curriculum-action{justify-content:space-between}}
+    </style>
   </head>
-  <body>
+  <body data-public-review-count={reviewCount}>
+<SkipLink target="main-content" className="home-skip" />
 <div id="loader" aria-hidden="true"><div class="word">Hello<span class="dot">.</span></div></div>
 
 <div class="cursor-dot" aria-hidden="true"></div>
 <div class="cursor-ring" aria-hidden="true"></div>
 
-<nav id="nav">
-  <a class="logo" href="#top" data-cursor>Thomas's Classroom<span class="dot">.</span></a>
+<header id="nav">
+  <a class="logo" href="#top" data-cursor aria-label="Thomas's Classroom — back to top">
+    <span class="logo-full">Thomas's Classroom</span><span class="logo-short" aria-hidden="true">Thomas's</span><span class="dot" aria-hidden="true">.</span>
+  </a>
   <div class="nav-right">
-    <a class="nav-link" href="#about" data-cursor>About</a>
-    <a class="nav-link" href="#method" data-cursor>Method</a>
-    <a class="nav-link" href="#students" data-cursor>Students</a>
-    <a class="nav-link" href="#numbers" data-cursor>Results</a>
-    <a class="nav-link" href="#faq" data-cursor>FAQ</a>
-    <button id="themeBtn" data-cursor aria-label="Invert theme: raw / blackout">◐</button>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a class="nav-link nav-link--primary" href="/curriculum/" data-cursor>Curriculum</a>
+      <a class="nav-link" href="#method" data-cursor>Method</a>
+      <a class="nav-link" href="#students" data-cursor>Students</a>
+      <a class="nav-link" href="#numbers" data-cursor>Results</a>
+      <a class="nav-link" href="#faq" data-cursor>FAQ</a>
+      <a class="nav-link" href="#about" data-cursor>About</a>
+      <a class="nav-book" href={bookingUrl} data-booking-link data-booking-position="navigation" data-cursor>Book a lesson</a>
+    </nav>
+    <details class="mobile-nav" data-mobile-nav>
+      <summary
+        class="menu-toggle"
+        data-mobile-nav-toggle
+        data-cursor
+        aria-label="Navigation menu"
+        aria-controls="mobileNavPanel"
+      >
+        <span>Menu</span><span class="menu-icon" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation">
+        <a class="mobile-nav-link" href="/curriculum/" data-cursor>Curriculum</a>
+        <a class="mobile-nav-link" href="#method" data-cursor>Method</a>
+        <a class="mobile-nav-link" href="#students" data-cursor>Students</a>
+        <a class="mobile-nav-link" href="#numbers" data-cursor>Results</a>
+        <a class="mobile-nav-link" href="#faq" data-cursor>FAQ</a>
+        <a class="mobile-nav-link" href="#about" data-cursor>About Thomas</a>
+        <a class="mobile-nav-link mobile-nav-link--book" href={bookingUrl} data-booking-link data-booking-position="mobile-navigation" data-cursor>Book a lesson</a>
+      </nav>
+    </details>
   </div>
-</nav>
+</header>
 
+<main id="main-content" tabindex="-1">
 <!-- ============= HERO ============= -->
 <header class="hero" id="top">
-  <div class="eyebrow"><span>American English tutor<br>Conversation &amp; pronunciation</span></div>
-  <h1 class="hero-word" id="heroWord">Welcome<span class="dot">.</span></h1>
-  <div class="hero-ipa">/ˈklæs.ruːm/ &nbsp;·&nbsp; noun &nbsp;·&nbsp; where English finally clicks</div>
+  <div class="eyebrow"><span>A0–C1 English curriculum<br>Clear theory · active practice · real communication</span></div>
+  <h1 class="hero-word" id="heroWord">English<span class="dot">.</span><br class="hero-break" /> Clearly<span class="dot">.</span></h1>
+  <div class="hero-ipa">A complete learning path &nbsp;·&nbsp; one useful pattern at a time</div>
 
   <div class="hero-row">
     <div>
-      <div class="greeting-line"><span id="greeting">Hello —</span></div>
+      <div class="greeting-line"><span id="greeting">Start here —</span></div>
       <p class="hero-copy">
-        I'm Thomas — a native speaker from the U.S., living in Mexico, teaching
-        professionals from São Paulo to Kyiv. <strong>You already know more English
-        than you can say.</strong> My job is to clear what's blocking it.
+        Thomas’s Classroom is a complete curriculum for adult learners, from first words
+        to advanced, precise English. <strong>See the whole path, choose your level, and open
+        a lesson built to make you notice, understand, practice, and speak.</strong>
       </p>
       <div class="tutor-note" style="margin-top:.8rem;position:relative;">
         real talk: most students are one level higher than they think
       </div>
     </div>
     <div class="hero-actions">
-      <a class="btn" href="/curriculum/" data-cursor>
-        <span>Enter the classroom</span><span class="price">A0 → B2</span>
-      </a>
+      <div class="hero-cta-group">
+        <a class="btn" href="/curriculum/" data-cursor>
+          <span>Explore the curriculum</span><span class="price">A0–C1 →</span>
+        </a>
+        <a class="hero-secondary-link" href="/assessments/" data-cursor>
+          Not sure where to start? Open diagnostics <span aria-hidden="true">→</span>
+        </a>
+        <a class="hero-tertiary-link" href={bookingUrl} data-booking-link data-booking-position="hero" data-cursor>
+          Learn with Thomas in a one-on-one lesson <span aria-hidden="true">→</span>
+        </a>
+      </div>
       <div class="stats">
-        <div><b id="statLessons">0</b> lessons</div>
-        <div><b>5.0</b> ★ rating</div>
-        <div><b>24</b> reviews</div>
+        <div><b>{curriculumCounts.total}</b> topics</div>
+        <div><b>{curriculumCounts.ready}</b> full lessons</div>
+        <div data-public-proof="lessons-taught-hero"><b id="statLessons">{siteSettings.lessonsTaughtClaim}</b></div>
+        <div data-public-proof="rating-hero"><b>{ratingValue} ★ rating</b></div>
+        <div data-public-proof="reviews-hero"><b>{reviewCount} reviews</b></div>
       </div>
     </div>
   </div>
   <div class="scroll-cue">SCROLL ↓</div>
 </header>
+
+<!-- ============= CURRICULUM FIRST ============= -->
+<section class="curriculum-home" id="curriculum" aria-labelledby="curriculum-home-title">
+  <div class="curriculum-home-head">
+    <div>
+      <span class="kicker">The curriculum is the classroom</span>
+      <h2 id="curriculum-home-title">Choose a level.<br />See every next step.</h2>
+    </div>
+    <div class="curriculum-home-intro">
+      <p>Every level connects grammar, vocabulary, listening, reading, speaking, and writing. Published lessons are interactive; planned lessons stay visible so the complete path is always honest.</p>
+      <div class="curriculum-home-actions">
+        <a class="curriculum-action curriculum-action--primary" href="/curriculum/">Browse all {curriculumCounts.total} topics <span aria-hidden="true">→</span></a>
+        <a class="curriculum-action" href="/assessments/">Open diagnostics</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="curriculum-level-grid" aria-label="Curriculum levels">
+    {curriculumLevels.map((level) => (
+      <a
+        class="curriculum-level-card"
+        href={`/curriculum/?level=${level.code}#lvl-${level.code}`}
+        style={`--level-accent:oklch(.58 .13 ${level.hue});--level-deep:oklch(.43 .13 ${level.hue});--level-tint:oklch(.955 .045 ${level.hue})`}
+      >
+        <span class="curriculum-level-top"><b>{level.code}</b><span>{level.name}</span></span>
+        <span class="curriculum-level-copy">{level.blurb}</span>
+        <span class="curriculum-level-meta"><strong>{level.ready} of {level.total}</strong> lessons available <i aria-hidden="true">→</i></span>
+      </a>
+    ))}
+  </div>
+
+  <div class="curriculum-promise" aria-label="What every lesson includes">
+    <div><span>01</span><p><b>Clear theory</b>Large examples explain form, meaning, use, and spoken English.</p></div>
+    <div><span>02</span><p><b>Active drills</b>Tap, build, correct, retrieve, and get meaningful feedback.</p></div>
+    <div><span>03</span><p><b>Real communication</b>Finish by using the language for an adult, practical purpose.</p></div>
+  </div>
+</section>
 
 <!-- ============= MARQUEE ============= -->
 <div class="marquee" aria-hidden="true">
@@ -76,8 +194,12 @@ const canonical = new URL("/", Astro.site);
 <div class="pin-wrap" id="pinWrap">
   <div class="pin-stage" id="pinStage">
     <div class="stage-label"><b>01 NOTICE</b><b>02 CLEAR</b><b>03 DRILL</b></div>
-    <p class="sentence">
-      “Yesterday I <span class="err">go</span> <span class="fix">went&nbsp;</span>to my first lesson, and it
+    <p
+      data-present-perfect-noticing-sentence
+      style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0"
+    >{presentPerfectNoticingSentence}</p>
+    <p class="sentence" aria-hidden="true" data-tokenized-example="present-perfect-noticing">
+      “Yesterday I <span class="err">go</span> <span class="fix">went&nbsp;</span>to my first lesson, and it{' '}
       <span class="err">change</span> <span class="fix">changed&nbsp;</span>everything.”
     </p>
     <p class="annotation">
@@ -137,12 +259,9 @@ const canonical = new URL("/", Astro.site);
   <div class="section-head reveal">
     <span class="kicker">Who's teaching</span>
     <h2>An American who explains<br>the part textbooks skip.</h2>
-    <div class="tutor-note" style="right:5%;top:22%;">drop a photo in the slot → (optional)</div>
   </div>
   <div class="about-grid reveal">
-    <!-- Thomas: want a photo? Replace the "TM" line with <img src="you.jpg" alt="Thomas"> -->
     <div class="about-portrait" aria-hidden="true">TM</div>
-    <!-- Thomas: edit this bio to taste — it's written from the page persona. -->
     <div class="about-body">
       <p>I'm <b>Thomas</b> — born and raised in the United States, now living in Chiapas, Mexico.
       I teach conversation and pronunciation to working adults: developers, professionals, and anyone
@@ -150,13 +269,13 @@ const canonical = new URL("/", Astro.site);
       <p>I'm not a textbook. Most students already know more grammar than they think — what's missing
       is the <b>reflex</b>. So we talk about your real life, I catch the exact patterns your first
       language quietly imports into English, and we drill them until the right form is automatic.</p>
-      <p>771 lessons in, the thing I care about most is simple: you leave every session having
+      <p>With {siteSettings.lessonsTaughtClaim}, the thing I care about most is simple: you leave every session having{" "}
       <b>said something real</b> — and a little more sure of yourself than when you walked in.</p>
       <div class="about-facts">
         <span class="fact">Native U.S. speaker</span>
         <span class="fact">Based in Chiapas, MX</span>
-        <span class="fact">771 lessons taught</span>
-        <span class="fact">5.0★ rating</span>
+        <span class="fact" data-public-proof="lessons-taught-about">{siteSettings.lessonsTaughtClaim}</span>
+        <span class="fact" data-public-proof="rating-about">{ratingValue}★ rating</span>
         <span class="fact">Conversation + pronunciation</span>
       </div>
     </div>
@@ -172,37 +291,37 @@ const canonical = new URL("/", Astro.site);
   <div class="deck">
     <div class="scard" data-cursor>
       <div class="flag">🇧🇷</div>
-      <h4>Developers in Brazil</h4>
+      <h3>Developers in Brazil</h3>
       <p>Tech interviews, daily standups, and the meeting where you finally disagree out loud.</p>
       <div class="transfer">fazer → it's <b>make</b> a decision, <b>do</b> the work</div>
     </div>
     <div class="scard" data-cursor>
       <div class="flag">🇺🇦</div>
-      <h4>Professionals from Ukraine</h4>
+      <h3>Professionals from Ukraine</h3>
       <p>Workplace English for new careers abroad — emails, clients, and small talk that lands.</p>
       <div class="transfer">no "to be" in Ukrainian → "I <b>am</b> ready", not "I ready"</div>
     </div>
     <div class="scard" data-cursor>
       <div class="flag">🇨🇴</div>
-      <h4>Spanish speakers everywhere</h4>
+      <h3>Spanish speakers everywhere</h3>
       <p>From Bogotá to Monterrey to Florida — exam prep, HR meetings, patients and clients.</p>
       <div class="transfer">estoy de acuerdo → "I agree", not "I am agree"</div>
     </div>
     <div class="scard" data-cursor>
       <div class="flag">🇹🇷</div>
-      <h4>Readers who can't speak yet</h4>
+      <h3>Readers who can't speak yet</h3>
       <p>B2 on paper, A1 out loud? We close the gap between what you know and what you say.</p>
       <div class="transfer">SOV → SVO: the verb moves <b>up front</b> in English</div>
     </div>
     <div class="scard" data-cursor>
       <div class="flag">🌍</div>
-      <h4>Anyone tired of freezing</h4>
+      <h3>Anyone tired of freezing</h3>
       <p>If you understand Netflix but panic in meetings, you're exactly who this works for.</p>
       <div class="transfer">fluency = automaticity, and automaticity is trainable</div>
     </div>
     <div class="scard" data-cursor>
       <div class="flag">🇮🇹</div>
-      <h4>Italians going global</h4>
+      <h3>Italians going global</h3>
       <p>Strong on vocabulary, tangled in tenses — especially the simple past Italian quietly skips.</p>
       <div class="transfer">ieri ho mangiato → "I <b>ate</b>", not "I have eaten"</div>
     </div>
@@ -217,12 +336,12 @@ const canonical = new URL("/", Astro.site);
     <div class="tutor-note" style="right:6%;top:30%;">reassurance first — confidence unlocks output</div>
   </div>
   <div class="numbers-grid">
-    <div class="ncard"><div class="big"><span data-count="4.9">0</span></div><div class="lbl">Reassurance — you'll feel safe making mistakes</div></div>
-    <div class="ncard"><div class="big"><span data-count="4.9">0</span></div><div class="lbl">Clarity — explanations that take seconds, not lectures</div></div>
-    <div class="ncard"><div class="big"><span data-count="4.8">0</span></div><div class="lbl">Progress — you leave each lesson saying something new</div></div>
-    <div class="ncard"><div class="big"><span data-count="4.8">0</span></div><div class="lbl">Preparation — materials built for you, not from a book</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.9">4.9</span></div><div class="lbl">Reassurance — you'll feel safe making mistakes</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.9">4.9</span></div><div class="lbl">Clarity — explanations that take seconds, not lectures</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.8">4.8</span></div><div class="lbl">Progress — you leave each lesson saying something new</div></div>
+    <div class="ncard"><div class="big"><span data-count="4.8">4.8</span></div><div class="lbl">Preparation — materials built for you, not from a book</div></div>
   </div>
-  <p class="numbers-foot">771 lessons taught · 5.0★ overall · 24 five-star reviews</p>
+  <p class="numbers-foot" data-public-proof="results-summary">{siteSettings.lessonsTaughtClaim} · {ratingValue}★ overall · {reviewCount} five-star reviews</p>
 </section>
 
 <!-- ============= WHAT TO EXPECT ============= -->
@@ -252,31 +371,31 @@ const canonical = new URL("/", Astro.site);
     <details class="faq-item"><summary data-cursor>What level do I need to start?</summary>
       <p>Anywhere from absolute beginner to advanced. If you can read this page, we can work together. Your first lesson maps where you actually are out loud — usually a level higher than people expect.</p></details>
     <details class="faq-item"><summary data-cursor>Is it grammar lessons or conversation?</summary>
-      <p>Conversation first — but we stop and clear the grammar the moment it gets in the way. You get the rule in seconds, then we make it automatic. You can also browse the full <a href="/curriculum/">A0–B2 curriculum map</a>.</p></details>
+      <p>Conversation first — but we stop and clear the grammar the moment it gets in the way. You get the rule in seconds, then we make it automatic. You can also browse the full <a href="/curriculum/">A0–C1 curriculum map</a>.</p></details>
     <details class="faq-item"><summary data-cursor>What if I freeze up or make mistakes?</summary>
       <p>That's the whole point — mistakes are the lesson plan. Lessons are built to feel safe, and reassurance comes first, because confidence is what unlocks speaking.</p></details>
     <details class="faq-item"><summary data-cursor>How long are lessons, and where?</summary>
       <p>50 minutes, one-on-one, online. I prepare materials around you and send notes after each session, so progress stays visible.</p></details>
     <details class="faq-item"><summary data-cursor>How do we get started?</summary>
-      <p><a href="/curriculum/">Open the curriculum map</a> to see what we'd cover, or scroll down and say hello — your first lesson maps your patterns and shows exactly what we'd clear first.</p></details>
+      <p><a href={bookingUrl} data-booking-link data-booking-position="faq">Book your first lesson</a> to map your speaking patterns, or <a href="/curriculum/">open the curriculum</a> to see the complete A0–C1 path first.</p></details>
   </div>
 </section>
 
 <!-- ============= CTA ============= -->
 <section class="cta reveal">
   <span class="kicker">Your first lesson · 50 minutes</span>
-  <!-- Want a photo here? Add: <img class="portrait-slot" src="you.jpg" alt="Thomas"> above the heading. -->
   <h2 class="cta-word">Say hello<span id="ctaDot" data-cursor>.</span></h2>
   <p>One lesson is enough to map your patterns and show you exactly what we'd clear first.
   Worst case, you practice English for an hour with a friendly American. Best case, it clicks.</p>
-  <a class="btn" href="/curriculum/" data-cursor>
-    <span>Open the curriculum</span><span class="price">→</span>
+  <a class="btn" href={bookingUrl} data-booking-link data-booking-position="closing" data-cursor>
+    <span>{bookingLabel}</span><span class="price">→</span>
   </a>
 </section>
+</main>
 
 <footer>
   <div>Thomas's Classroom — American English tutor · Made with patience in Chiapas, MX</div>
-  <div id="bottomSecret">You scrolled the whole page. That's B2-level persistence. ✓</div>
+  <div><a href="/tutor/">Tutor planning guide</a> · <span id="bottomSecret">You scrolled the whole page. That's B2-level persistence. ✓</span></div>
 </footer>
 
 <div id="toast" role="status"></div>

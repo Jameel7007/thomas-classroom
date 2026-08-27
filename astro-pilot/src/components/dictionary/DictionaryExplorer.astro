@@ -1,0 +1,281 @@
+---
+import { DICTIONARY_LEVELS, DICTIONARY_PARTS } from "../../data/dictionary.mjs";
+
+interface Props {
+  entries: readonly DictionaryEntry[];
+  counts: { words: number; senses: number; chunks: number };
+}
+
+interface DictionarySense {
+  id: string;
+  level: string;
+  partOfSpeech: string;
+  label: string;
+  definition: string;
+  examples: string[];
+  chunks: string[];
+  synonyms: string[];
+  contrast: string;
+}
+
+interface DictionaryEntry {
+  word: string;
+  pronunciation: string;
+  level: string;
+  forms: string[];
+  origin: string;
+  lesson?: { label: string; route: string };
+  senses: DictionarySense[];
+}
+
+const { entries, counts } = Astro.props;
+const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part.replace(/^./, (letter) => letter.toUpperCase())]));
+---
+<section class="dictionary-explorer" data-dictionary-app>
+  <section class="dictionary-finder" data-dictionary-finder hidden aria-labelledby="dictionary-finder-title">
+    <div class="dictionary-finder-heading">
+      <div>
+        <p class="finder-kicker">Clear the exact meaning</p>
+        <h2 id="dictionary-finder-title">Find a useful word.</h2>
+      </div>
+      <p>{counts.words} carefully chosen words · {counts.senses} meanings · {counts.chunks} reusable chunks</p>
+    </div>
+
+    <form class="dictionary-finder-form" data-dictionary-form role="search" action="/dictionary/" method="get">
+      <label class="dictionary-field dictionary-search-field">
+        <span>Search words and meanings</span>
+        <span class="finder-input-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.4a7.75 7.75 0 1 1-15.5 0 7.75 7.75 0 0 1 15.5 0Z" /></svg>
+          <input id="dictionary-query" type="search" name="q" autocomplete="off" placeholder="Try “get”, “arrive”, or “fair”" data-dictionary-query />
+        </span>
+      </label>
+      <label class="dictionary-field">
+        <span>Meaning level</span>
+        <select name="level" data-dictionary-level>
+          <option value="all">All levels</option>
+          {DICTIONARY_LEVELS.map((level) => <option value={level}>{level}</option>)}
+        </select>
+      </label>
+      <label class="dictionary-field">
+        <span>Part of speech</span>
+        <select name="part" data-dictionary-part>
+          <option value="all">All word types</option>
+          {DICTIONARY_PARTS.map((part) => <option value={part}>{partLabels[part]}</option>)}
+        </select>
+      </label>
+      <button class="dictionary-search-button" type="submit">Search</button>
+    </form>
+
+    <div class="dictionary-finder-lower">
+      <div class="dictionary-result-copy">
+        <p data-dictionary-status aria-live="polite">Showing {counts.words} words and {counts.senses} meanings</p>
+        <button type="button" class="finder-reset" data-dictionary-reset disabled>Clear filters</button>
+      </div>
+      <div class="dictionary-session-copy">
+        <p data-dictionary-cleared aria-live="polite">0 of {counts.senses} meanings clear for this session</p>
+        <button type="button" class="finder-reset" data-dictionary-reset-cleared disabled>Reset clear marks</button>
+      </div>
+    </div>
+  </section>
+
+  <details class="dictionary-method" open>
+    <summary>How to clear a meaning</summary>
+    <ol>
+      <li><b>Choose the sense</b><span>Find the definition that fits the sentence—not simply the first meaning.</span></li>
+      <li><b>Test the examples</b><span>Replace the example’s details and check whether the meaning stays stable.</span></li>
+      <li><b>Say your own sentence</b><span>Use a real person, place, task, or decision from your life.</span></li>
+      <li><b>Mark it clear</b><span>Check only the meaning you can now explain and use. Marks reset when the page refreshes.</span></li>
+    </ol>
+  </details>
+
+  <section class="dictionary-empty" data-dictionary-empty hidden aria-labelledby="dictionary-empty-title">
+    <p class="finder-kicker">No matching meaning</p>
+    <h2 id="dictionary-empty-title">Try the headword, a simpler synonym, or a broader filter.</h2>
+    <p>This is a curated classroom collection, so it focuses on high-value words that commonly block understanding.</p>
+    <button type="button" class="home-link" data-dictionary-empty-reset>Show the complete collection</button>
+  </section>
+
+  <div class="dictionary-list" data-dictionary-list>
+    {entries.map((entry) => <article class="dictionary-entry" data-dictionary-entry data-headword={entry.word} data-entry-level={entry.level}>
+      <header class="dictionary-entry-header">
+        <div>
+          <div class="dictionary-word"><h2>{entry.word}</h2><span class="dictionary-pronunciation">{entry.pronunciation}</span></div>
+          <p class="dictionary-forms">{entry.forms.length ? <>Forms: <span>{entry.forms.join(" · ")}</span></> : "No changing forms"}</p>
+        </div>
+        <div class="dictionary-entry-meta">
+          <span class="dictionary-level">First useful at {entry.level}</span>
+          <span>{entry.senses.length} meanings</span>
+        </div>
+      </header>
+
+      <div class="dictionary-entry-tools">
+        <details class="dictionary-origin">
+          <summary>Word story</summary>
+          <p>{entry.origin}</p>
+        </details>
+        {entry.lesson && <a class="dictionary-lesson-link" href={entry.lesson.route}>Practice in: {entry.lesson.label} <span aria-hidden="true">→</span></a>}
+      </div>
+
+      <div class="dictionary-senses">
+        {entry.senses.map((sense, index) => {
+          const inputId = `meaning-${entry.word}-${sense.id}`;
+          return <section
+            class="dictionary-sense"
+            aria-labelledby={`${inputId}-title`}
+            data-dictionary-sense
+            data-sense-id={`${entry.word}/${sense.id}`}
+            data-sense-level={sense.level}
+            data-sense-part={sense.partOfSpeech}
+          >
+            <div class="dictionary-sense-heading">
+              <div class="dictionary-sense-index"><span>Meaning</span><b>{String(index + 1).padStart(2, "0")}</b></div>
+              <div>
+                <div class="dictionary-sense-meta"><span>{sense.partOfSpeech}</span><span>{sense.level}</span></div>
+                <h3 id={`${inputId}-title`}>{sense.label}</h3>
+              </div>
+            </div>
+            <p class="dictionary-definition">{sense.definition}</p>
+            <div class="dictionary-sense-grid">
+              <div>
+                <h4>Natural examples</h4>
+                <ul class="dictionary-examples">{sense.examples.map((example) => <li>{example}</li>)}</ul>
+              </div>
+              <div>
+                <h4>Useful chunks</h4>
+                <div class="dictionary-chunks">{sense.chunks.map((chunk) => <span>{chunk}</span>)}</div>
+                {sense.synonyms.length > 0 && <p class="dictionary-synonyms"><b>Close words</b> {sense.synonyms.join(" · ")}</p>}
+              </div>
+            </div>
+            <p class="dictionary-contrast"><b>Choose carefully</b>{sense.contrast}</p>
+            <div class="dictionary-clear-control">
+              <input id={inputId} type="checkbox" data-dictionary-cleared-input />
+              <label for={inputId}><span aria-hidden="true"></span><b>Meaning clear for this session</b><small>I can explain it and make my own example.</small></label>
+            </div>
+          </section>;
+        })}
+      </div>
+    </article>)}
+  </div>
+</section>
+
+<script>
+  const app = document.querySelector<HTMLElement>("[data-dictionary-app]");
+
+  if (app) {
+    const finder = app.querySelector<HTMLElement>("[data-dictionary-finder]");
+    const form = app.querySelector<HTMLFormElement>("[data-dictionary-form]");
+    const queryInput = app.querySelector<HTMLInputElement>("[data-dictionary-query]");
+    const levelSelect = app.querySelector<HTMLSelectElement>("[data-dictionary-level]");
+    const partSelect = app.querySelector<HTMLSelectElement>("[data-dictionary-part]");
+    const status = app.querySelector<HTMLElement>("[data-dictionary-status]");
+    const clearedStatus = app.querySelector<HTMLElement>("[data-dictionary-cleared]");
+    const resetFilters = app.querySelector<HTMLButtonElement>("[data-dictionary-reset]");
+    const resetCleared = app.querySelector<HTMLButtonElement>("[data-dictionary-reset-cleared]");
+    const emptyReset = app.querySelector<HTMLButtonElement>("[data-dictionary-empty-reset]");
+    const empty = app.querySelector<HTMLElement>("[data-dictionary-empty]");
+    const entries = Array.from(app.querySelectorAll<HTMLElement>("[data-dictionary-entry]"));
+    const senses = Array.from(app.querySelectorAll<HTMLElement>("[data-dictionary-sense]"));
+    const clearInputs = Array.from(app.querySelectorAll<HTMLInputElement>("[data-dictionary-cleared-input]"));
+
+    if (finder && form && queryInput && levelSelect && partSelect && status && clearedStatus && resetFilters && resetCleared && emptyReset && empty) {
+      const validLevels = new Set(["all", "A0", "A1", "A2", "B1", "B2"]);
+      const validParts = new Set(["all", "adjective", "adverb", "conjunction", "determiner", "modal verb", "noun", "preposition", "verb"]);
+      const params = new URLSearchParams(window.location.search);
+      const requestedLevel = params.get("level") ?? "all";
+      const requestedPart = params.get("part") ?? "all";
+      const normalize = (value: string) => value.toLocaleLowerCase().replace(/[’']/g, "'").replace(/\s+/g, " ").trim();
+
+      queryInput.value = params.get("q") ?? "";
+      levelSelect.value = validLevels.has(requestedLevel) ? requestedLevel : "all";
+      partSelect.value = validParts.has(requestedPart) ? requestedPart : "all";
+      finder.hidden = false;
+
+      const updateUrl = () => {
+        const next = new URL(window.location.href);
+        const values = { q: queryInput.value.trim(), level: levelSelect.value, part: partSelect.value };
+        Object.entries(values).forEach(([key, value]) => {
+          if (value && value !== "all") next.searchParams.set(key, value);
+          else next.searchParams.delete(key);
+        });
+        window.history.replaceState({}, "", `${next.pathname}${next.search}${next.hash}`);
+      };
+
+      const updateCleared = () => {
+        const cleared = clearInputs.filter((input) => input.checked).length;
+        clearInputs.forEach((input) => input.closest("[data-dictionary-sense]")?.classList.toggle("is-cleared", input.checked));
+        clearedStatus.textContent = `${cleared} of ${clearInputs.length} meanings clear for this session`;
+        resetCleared.disabled = cleared === 0;
+      };
+
+      const applyFilters = () => {
+        const query = normalize(queryInput.value);
+        const selectedLevel = levelSelect.value;
+        const selectedPart = partSelect.value;
+        let visibleWords = 0;
+        let visibleMeanings = 0;
+
+        entries.forEach((entry) => {
+          const headword = normalize(entry.dataset.headword ?? "");
+          const entryHeader = normalize(entry.querySelector(".dictionary-entry-header")?.textContent ?? "");
+          const origin = normalize(entry.querySelector(".dictionary-origin")?.textContent ?? "");
+          const entryMatchesQuery = !query || headword.includes(query) || entryHeader.includes(query) || origin.includes(query);
+          const entrySenses = Array.from(entry.querySelectorAll<HTMLElement>("[data-dictionary-sense]"));
+          let entryMeaningCount = 0;
+
+          entrySenses.forEach((sense) => {
+            const levelMatches = selectedLevel === "all" || sense.dataset.senseLevel === selectedLevel;
+            const partMatches = selectedPart === "all" || sense.dataset.sensePart === selectedPart;
+            const queryMatches = entryMatchesQuery || !query || normalize(sense.textContent ?? "").includes(query);
+            const visible = levelMatches && partMatches && queryMatches;
+            sense.hidden = !visible;
+            if (visible) entryMeaningCount += 1;
+          });
+
+          entry.hidden = entryMeaningCount === 0;
+          if (entryMeaningCount > 0) {
+            visibleWords += 1;
+            visibleMeanings += entryMeaningCount;
+          }
+        });
+
+        const hasFilters = Boolean(query) || selectedLevel !== "all" || selectedPart !== "all";
+        resetFilters.disabled = !hasFilters;
+        empty.hidden = visibleMeanings !== 0;
+        status.textContent = hasFilters
+          ? `${visibleWords} ${visibleWords === 1 ? "word" : "words"} and ${visibleMeanings} ${visibleMeanings === 1 ? "meaning" : "meanings"} found`
+          : `Showing ${entries.length} words and ${senses.length} meanings`;
+        updateUrl();
+      };
+
+      const clearFilters = () => {
+        form.reset();
+        queryInput.value = "";
+        levelSelect.value = "all";
+        partSelect.value = "all";
+        applyFilters();
+        queryInput.focus();
+      };
+
+      form.addEventListener("input", applyFilters);
+      form.addEventListener("change", applyFilters);
+      form.addEventListener("submit", (event) => { event.preventDefault(); applyFilters(); });
+      queryInput.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && queryInput.value) {
+          queryInput.value = "";
+          applyFilters();
+        }
+      });
+      resetFilters.addEventListener("click", clearFilters);
+      emptyReset.addEventListener("click", clearFilters);
+      clearInputs.forEach((input) => input.addEventListener("change", updateCleared));
+      resetCleared.addEventListener("click", () => {
+        clearInputs.forEach((input) => { input.checked = false; });
+        updateCleared();
+        resetCleared.focus();
+      });
+
+      applyFilters();
+      updateCleared();
+    }
+  }
+</script>

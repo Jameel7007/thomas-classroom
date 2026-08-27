@@ -2,395 +2,438 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Jobs and workplaces · A1 Vocabulary · Curriculum Map",
+  "title": "Jobs and workplaces · A1 Vocabulary",
   "slug": "jobs-and-workplaces",
   "level": "A1",
   "topic": "Jobs & workplaces",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Talk about work — the most common first question between adults. Name the job with I'm a… and the place with I work at a… Choose a or an by the sound, and add -s for he and she: Sh",
+  "description": "Name common jobs and workplaces and use natural sentence patterns to explain what you do, where you work, and your responsibilities.",
   "sequence": 13,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a1/present-simple", "a0/the-verb-to-be"],
+  "related": ["a1/present-simple", "a1/daily-routines-and-telling-the-time", "b1/work-and-careers"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Role, workplace, employer, task, article and preposition choices, job questions, U.S. spoken form, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 13</p>
   <h1>Jobs &amp; <em>workplaces</em></h1>
-  <p class="standfirst">Talk about work — the most common first question between adults. Name the <strong>job</strong> with <span class="ex">I'm a…</span> and the <strong>place</strong> with <span class="ex">I work at a…</span> Choose <span class="ex">a</span> or <span class="ex">an</span> by the sound, and add <span class="ex">-s</span> for he and she: <span class="ex">She works at a hospital.</span></p>
+  <p class="standfirst">Talk about a person’s work without mixing up the <strong>role</strong>, <strong>workplace</strong>, <strong>employer</strong>, and <strong>responsibilities</strong>. Compare <span class="ex">She’s a nurse</span>, <span class="ex">She works at Northside Clinic</span>, <span class="ex">She works for Northside Health</span>, and <span class="ex">She helps patients</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">a / an + job</span>
-    <span class="tag">work at · in · as</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">a / an + role</span>
+    <span class="tag">as · at · in · for · from home</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read a short work introduction.</span></div>
-    <div class="flow-step"><b>Discover</b><span>a / an + job, and at / in a + place.</span></div>
-    <div class="flow-step"><b>Build</b><span>Match jobs to places, choose, and build.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about your job and a coworker's.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Separate four kinds of work information.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose a or an from the first sound.</span></div>
+    <div class="flow-step"><b>Build</b><span>Connect roles, places, employers, and tasks.</span></div>
+    <div class="flow-step"><b>Use</b><span>Present a fictional team and ask clear questions.</span></div>
   </div>
 
-  <p class="note-line">We choose <span class="ex">a</span> or <span class="ex">an</span> by the <strong>first sound</strong>, not the spelling: <span class="ex">a nurse, a doctor, a manager</span> but <span class="ex">an engineer, an accountant, an electrician</span> — these start with a vowel sound.</p>
+  <p class="note-line">Work can be a useful conversation topic, but it is not always the right first question. A person can answer briefly, choose a different topic, or use a safe status such as <span class="ex">I’m a student</span>, <span class="ex">I’m retired</span>, or <span class="ex">I’m not working right now</span>.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a clock phrase, a third-person present form, and at before an exact time.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="half past">half past</button>
       <button class="choice-option" data-choice-option="quarter to">quarter to</button>
-      <button class="choice-option" data-choice-option="Japan">Japan</button>
-      <button class="choice-option" data-choice-option="Japanese">Japanese</button>
+      <button class="choice-option" data-choice-option="work">work</button>
+      <button class="choice-option" data-choice-option="works">works</button>
       <button class="choice-option" data-choice-option="at">at</button>
       <button class="choice-option" data-choice-option="in">in</button>
     </div>
-    <div class="q"><span class="n">1</span><span>7:30 is <button class="choice-gap" data-choice-gap data-answer="half past" data-placeholder="choose">choose</button> seven. &nbsp;<span class="contraction">(previous lesson · telling the time)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Emi is from Japan. She is <button class="choice-gap" data-choice-gap data-answer="Japanese" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(older lesson · nationality)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The meeting starts <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> nine. &nbsp;<span class="contraction">(common contrast · at + time)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The digital clock shows 7:30: It is <button class="choice-gap" data-choice-gap data-answer="half past" data-hint="Thirty minutes after seven is half past seven." data-fix="7:30 is half past seven." data-placeholder="choose">choose</button> seven. <span class="contraction">(telling the time)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The routine belongs to one person: Maya <button class="choice-gap" data-choice-gap data-answer="works" data-hint="The third-person singular subject Maya takes works." data-fix="Maya works every weekday." data-placeholder="choose">choose</button> every weekday. <span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The meeting card gives the exact time 9:00: The meeting starts <button class="choice-gap" data-choice-gap data-answer="at" data-hint="Use at before an exact clock time." data-fix="The meeting starts at nine." data-placeholder="choose">choose</button> nine. <span class="contraction">(prepositions of time)</span></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Meet the jobs</h2>
+  <h2>Meet the roles</h2>
   <div class="lead-rule"></div>
-  <p>People at work. Say each one aloud: <span class="ex">She’s a doctor. He’s a cook.</span></p>
+  <p>Use this as an optional word bank. Say each role in a complete chunk: <span class="ex">She’s a doctor. He works as a cook.</span> The last card, <span class="ex">student</span>, describes study status and is not necessarily a paid job.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/doctor.svg" alt="" loading="lazy" /></span><span class="nm">doctor</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/teacher.svg" alt="" loading="lazy" /></span><span class="nm">teacher</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cook.svg" alt="" loading="lazy" /></span><span class="nm">cook</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/police-officer.svg" alt="" loading="lazy" /></span><span class="nm">police officer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/firefighter.svg" alt="" loading="lazy" /></span><span class="nm">firefighter</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/farmer.svg" alt="" loading="lazy" /></span><span class="nm">farmer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mechanic.svg" alt="" loading="lazy" /></span><span class="nm">mechanic</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/office-worker.svg" alt="" loading="lazy" /></span><span class="nm">office worker</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/scientist.svg" alt="" loading="lazy" /></span><span class="nm">scientist</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/artist.svg" alt="" loading="lazy" /></span><span class="nm">artist</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pilot.svg" alt="" loading="lazy" /></span><span class="nm">pilot</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/construction-worker.svg" alt="" loading="lazy" /></span><span class="nm">construction worker</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/factory-worker.svg" alt="" loading="lazy" /></span><span class="nm">factory worker</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/programmer.svg" alt="" loading="lazy" /></span><span class="nm">programmer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/singer.svg" alt="" loading="lazy" /></span><span class="nm">singer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/astronaut.svg" alt="" loading="lazy" /></span><span class="nm">astronaut</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/judge.svg" alt="" loading="lazy" /></span><span class="nm">judge</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/student.svg" alt="" loading="lazy" /></span><span class="nm">student</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/doctor.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">doctor</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/teacher.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">teacher</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cook.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cook</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/police-officer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">police officer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/firefighter.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">firefighter</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/farmer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">farmer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mechanic.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">mechanic</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/office-worker.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">office worker</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/scientist.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">scientist</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/artist.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">artist</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pilot.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">pilot</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/construction-worker.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">construction worker</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/factory-worker.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">factory worker</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/programmer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">programmer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/singer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">singer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/astronaut.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">astronaut</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/judge.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">judge</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/student.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">student</span></div>
   </div>
 
   <h2>Meet the workplaces</h2>
   <div class="lead-rule"></div>
-  <p>Where people work. Say each one aloud: <span class="ex">She works at a hospital. He works in an office.</span></p>
+  <p>These are physical settings. Say the complete chunks: <span class="ex">at a hospital</span>, <span class="ex">in an office</span>, and <span class="ex">from home</span>. A <span class="ex">store</span> is the usual U.S. English word for a place that sells things.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/office.svg" alt="" loading="lazy" /></span><span class="nm">office</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hospital.svg" alt="" loading="lazy" /></span><span class="nm">hospital</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/school.svg" alt="" loading="lazy" /></span><span class="nm">school</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/factory.svg" alt="" loading="lazy" /></span><span class="nm">factory</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/store.svg" alt="" loading="lazy" /></span><span class="nm">store</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bank.svg" alt="" loading="lazy" /></span><span class="nm">bank</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hotel.svg" alt="" loading="lazy" /></span><span class="nm">hotel</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/house.svg" alt="" loading="lazy" /></span><span class="nm">home</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/office.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">office</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hospital.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">hospital</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/school.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">school</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/factory.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">factory</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/store.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">store</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bank.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">bank</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hotel.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">hotel</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/house.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">home</span></div>
   </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read about Marco at a party</h3>
-    <p><span class="ex">"Hi, I'm Marco. I'm a nurse. I work at a hospital downtown. My wife is an engineer — she works for a big tech company. What do you do?"</span></p>
+    <h3>Four lines from a fictional welcome event</h3>
+    <p><span class="ex">“I’m Nia. I’m a nurse. I work at Northside Clinic. I work for Northside Health, and I help patients.”</span></p>
     <ul>
-      <li>Marco says <span class="ex">a nurse</span> but <span class="ex">an engineer</span>. Say both aloud. What sound does <strong>engineer</strong> start with? Why is it <span class="ex">an</span>?</li>
-      <li>Two patterns name work: one names the <strong>job</strong> (<span class="ex">I'm a nurse</span>) and one names the <strong>place</strong> (<span class="ex">I work at a hospital</span>). Which little word comes before the job? Which comes before the place?</li>
-      <li>Marco's wife <span class="ex">works for a company</span>. Why is it <span class="ex">works</span> and not <span class="ex">work</span>?</li>
+      <li>Which words name Nia’s <strong>role</strong>? Which name the <strong>workplace</strong>?</li>
+      <li>Which words name the <strong>employer</strong>? Which words describe a regular <strong>responsibility</strong>?</li>
+      <li>Why does <span class="ex">nurse</span> have <span class="ex">a</span>? What would change before <span class="ex">engineer</span>?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the job, then choose a or an</h3>
-    <p class="choice-hint">Say the job aloud first. A vowel sound takes <b>an</b>; everything else takes <b>a</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="a">a</button>
-      <button class="choice-option" data-choice-option="an">an</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I'm <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> nurse. &nbsp;<span class="contraction">(starts with /n/)</span></span></div>
-    <div class="q"><span class="n">2</span><span>She's <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> engineer. &nbsp;<span class="contraction">(starts with /e/)</span></span></div>
-    <div class="q"><span class="n">3</span><span>He's <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> accountant. &nbsp;<span class="contraction">(starts with /a/)</span></span></div>
-    <div class="q"><span class="n">4</span><span>I'm <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> manager. &nbsp;<span class="contraction">(starts with /m/)</span></span></div>
-    <div class="q"><span class="n">5</span><span>She's <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> electrician. &nbsp;<span class="contraction">(starts with /e/)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose a or an from the first spoken sound, including the /y/ sound in university.">
+    <h3>Discovery check: choose a or an from the sound</h3>
+    <p class="choice-hint">Say the next word aloud. Use <b>an</b> before a vowel sound and <b>a</b> before a consonant sound.</p>
+    <div class="choice-bank" aria-label="Article choices"><button class="choice-option" data-choice-option="a">a</button><button class="choice-option" data-choice-option="an">an</button></div>
+    <div class="q"><span class="n">1</span><span>The profile says Nia works in patient care: She’s <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Nurse begins with the consonant sound /n/." data-fix="She’s a nurse." data-placeholder="choose">choose</button> nurse.</span></div>
+    <div class="q"><span class="n">2</span><span>The profile says Omar designs machines: He’s <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Engineer begins with a vowel sound." data-fix="He’s an engineer." data-placeholder="choose">choose</button> engineer.</span></div>
+    <div class="q"><span class="n">3</span><span>The profile says Zoe prepares financial reports: She’s <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Accountant begins with a vowel sound." data-fix="She’s an accountant." data-placeholder="choose">choose</button> accountant.</span></div>
+    <div class="q"><span class="n">4</span><span>The profile says Luis leads the office team: He’s <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Manager begins with the consonant sound /m/." data-fix="He’s a manager." data-placeholder="choose">choose</button> manager.</span></div>
+    <div class="q"><span class="n">5</span><span>The profile says Ava installs electrical systems: She’s <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Electrician begins with a vowel sound." data-fix="She’s an electrician." data-placeholder="choose">choose</button> electrician.</span></div>
+    <div class="q"><span class="n">6</span><span>The study profile says Ben attends college: He’s <button class="choice-gap" data-choice-gap data-answer="a" data-hint="University begins with the consonant sound /y/, as in you." data-fix="He’s a university student." data-placeholder="choose">choose</button> university student.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: name the job, name the place</h2>
+  <h2>Get to the root: four kinds of work information</h2>
   <div class="lead-rule"></div>
-  <p>When someone asks <span class="ex">What do you do?</span>, you have two natural answers:</p>
-  <p><strong>1. Name the job.</strong> &nbsp;<span class="ex">I'm a nurse.</span> &nbsp;·&nbsp; <span class="ex">I work as a nurse.</span></p>
-  <p><strong>2. Name the place.</strong> &nbsp;<span class="ex">I work at a hospital.</span> &nbsp;·&nbsp; <span class="ex">I work in an office.</span></p>
-  <p>For a company, use <span class="ex">for</span>: <span class="ex">She works for Toyota.</span></p>
+  <p>A job conversation becomes easier when you decide what information you want. The same person can give four different answers because each answer has a different focus.</p>
   <table>
-    <thead><tr><th>job</th><th>typical workplace</th></tr></thead>
+    <thead><tr><th>information</th><th>question</th><th>answer pattern</th></tr></thead>
     <tbody>
-      <tr><td><b>teacher</b></td><td><b>school</b></td></tr>
-      <tr><td><b>nurse</b> · <b>doctor</b></td><td><b>hospital</b></td></tr>
-      <tr><td><b>chef</b> · <b>waiter</b></td><td><b>restaurant</b></td></tr>
-      <tr><td><b>accountant</b> · <b>manager</b> · <b>designer</b></td><td><b>office</b></td></tr>
-      <tr><td><b>receptionist</b></td><td><b>hotel</b></td></tr>
-      <tr><td><b>salesperson</b></td><td><b>store</b> &nbsp;<span class="contraction">shop</span></td></tr>
+      <tr><td><b>occupation or role</b></td><td><span class="ex">What do you do?</span></td><td><span class="ex">I’m a nurse. I work as a nurse.</span></td></tr>
+      <tr><td><b>workplace</b></td><td><span class="ex">Where do you work?</span></td><td><span class="ex">I work at Northside Clinic.</span></td></tr>
+      <tr><td><b>employer</b></td><td><span class="ex">Who do you work for?</span></td><td><span class="ex">I work for Northside Health.</span></td></tr>
+      <tr><td><b>responsibilities</b></td><td><span class="ex">What do you do at work?</span></td><td><span class="ex">I help patients.</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line"><span class="ex">What do you do?</span> commonly asks about occupation during an introduction. In a different situation, it can ask about an action. Context creates the meaning. Compare a welcome event with someone asking what to do during an emergency.</p>
+
+  <h3>Role, workplace, employer, department, or arrangement?</h3>
+  <table>
+    <thead><tr><th>pattern</th><th>use</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><b>work as + a/an + role</b></td><td>name the role</td><td><span class="ex">I work as an accountant.</span></td></tr>
+      <tr><td><b>work at + named place</b></td><td>present an organization or location as the workplace point</td><td><span class="ex">I work at City Hospital.</span></td></tr>
+      <tr><td><b>work in + setting, department, or field</b></td><td>look inside an environment or area of work</td><td><span class="ex">I work in an office. I work in sales.</span></td></tr>
+      <tr><td><b>work for + employer or client</b></td><td>name the organization or person that employs the worker</td><td><span class="ex">I work for SunTech.</span></td></tr>
+      <tr><td><b>work from home</b></td><td>name a remote-work arrangement</td><td><span class="ex">I work from home on Fridays.</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <h3>At and in can overlap</h3>
+    <p><span class="ex">She works at a hospital</span> presents the hospital as her workplace. <span class="ex">She works in a hospital</span> presents the setting she works inside. Both can be natural. Use <span class="ex">in</span> clearly for a department or field: <span class="ex">in the billing department</span>, <span class="ex">in education</span>. Use <span class="ex">at</span> clearly when naming a workplace point: <span class="ex">at Northside Clinic</span>. Do not treat every <span class="ex">at/in</span> difference as a right-or-wrong choice.</p>
+  </div>
 
   <div class="note">
-    <h3>Meaning check</h3>
+    <h3>A singular role needs a marker</h3>
     <ul>
-      <li>What is the difference between <span class="ex">as</span> and <span class="ex">at</span>? <strong>As</strong> introduces the <em>job</em>: <span class="ex">work as a chef</span>. <strong>At / in</strong> introduces the <em>place</em>: <span class="ex">work at a restaurant</span>.</li>
-      <li>Do we say <span class="ex">I am nurse</span>? <strong>No.</strong> A job after <em>be</em> needs <span class="ex">a / an</span>: <span class="ex">I'm a nurse.</span></li>
-      <li>What changes for <strong>he</strong> and <strong>she</strong>? The verb adds <span class="ex">-s</span>: <span class="ex">I work</span> → <span class="ex">She works</span>. After a teacher word like <em>teach</em>, we add <span class="ex">-es</span>: <span class="ex">He teaches.</span></li>
+      <li>Use <span class="ex">a/an</span> with one singular countable role: <span class="ex">I’m a nurse. She’s an engineer.</span></li>
+      <li>Do not use <span class="ex">a/an</span> before a plural role: <span class="ex">They’re nurses.</span></li>
+      <li>Choose the article by the first <strong>sound</strong>, not the first letter: <span class="ex">an accountant</span> but <span class="ex">a university student</span> because <em>university</em> starts with /y/.</li>
     </ul>
   </div>
 
-  <h2>Choose the linking word</h2>
-  <div class="lead-rule"></div>
-  <p>The word after <span class="ex">work</span> depends on what comes next — a job, a place, or a company:</p>
-  <p><span class="ex">work as a + JOB &nbsp; · &nbsp; work at / in a + PLACE &nbsp; · &nbsp; work for a + COMPANY</span></p>
+  <h3>Roles connect to tasks, but titles vary</h3>
+  <p>The examples below are useful starting points, not universal definitions. The same title can involve different tasks in different workplaces. A <strong>cook</strong> prepares food; a <strong>chef</strong> may also plan menus or lead a kitchen, but workplaces use these titles differently.</p>
+  <table>
+    <thead><tr><th>role</th><th>possible responsibility</th><th>possible setting</th></tr></thead>
+    <tbody>
+      <tr><td><b>teacher</b></td><td>teaches classes</td><td>school or online</td></tr>
+      <tr><td><b>nurse</b></td><td>helps patients</td><td>clinic or hospital</td></tr>
+      <tr><td><b>cook</b></td><td>prepares food</td><td>restaurant or cafeteria</td></tr>
+      <tr><td><b>mechanic</b></td><td>repairs vehicles</td><td>repair shop</td></tr>
+      <tr><td><b>programmer</b></td><td>writes and tests software</td><td>office or home</td></tr>
+      <tr><td><b>server</b></td><td>takes orders and brings food</td><td>restaurant</td></tr>
+      <tr><td><b>receptionist</b></td><td>greets visitors and answers calls</td><td>office, clinic, or hotel</td></tr>
+    </tbody>
+  </table>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose as, at, or for</h3>
-    <p class="choice-hint">A job follows <b>as</b>; a place follows <b>at</b>; a company name follows <b>for</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="as">as</button>
-      <button class="choice-option" data-choice-option="at">at</button>
-      <button class="choice-option" data-choice-option="for">for</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each fictional staff profile now has the one responsibility stated in its work notes.">
+    <h3>Responsibility check: what does each person do at work?</h3>
+    <p class="choice-hint">Use the stated task, not a stereotype about every person with that job.</p>
+    <div class="choice-bank" aria-label="Work responsibility choices">
+      <button class="choice-option" data-choice-option="helps patients">helps patients</button><button class="choice-option" data-choice-option="teaches classes">teaches classes</button>
+      <button class="choice-option" data-choice-option="repairs cars">repairs cars</button><button class="choice-option" data-choice-option="writes software">writes software</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I work <button class="choice-gap" data-choice-gap data-answer="as" data-placeholder="choose">choose</button> a chef. &nbsp;<span class="contraction">(job: chef)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I work <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> a restaurant. &nbsp;<span class="contraction">(place: restaurant)</span></span></div>
-    <div class="q"><span class="n">3</span><span>She works <button class="choice-gap" data-choice-gap data-answer="for" data-placeholder="choose">choose</button> Google. &nbsp;<span class="contraction">(company: Google)</span></span></div>
-    <div class="q"><span class="n">4</span><span>He works <button class="choice-gap" data-choice-gap data-answer="as" data-placeholder="choose">choose</button> a driver. &nbsp;<span class="contraction">(job: driver)</span></span></div>
-    <div class="q"><span class="n">5</span><span>They work <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> a bank. &nbsp;<span class="contraction">(place: bank)</span></span></div>
-    <div class="q"><span class="n">6</span><span>My cousin works <button class="choice-gap" data-choice-gap data-answer="for" data-placeholder="choose">choose</button> a small startup. &nbsp;<span class="contraction">(company: a startup)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
+    <div class="q"><span class="n">1</span><span>Nia’s clinic profile says “patient care”: She <button class="choice-gap" data-choice-gap data-answer="helps patients" data-hint="Patient care means that Nia helps patients." data-fix="Nia is a nurse, and she helps patients." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Mr. Lee’s schedule lists three English classes: He <button class="choice-gap" data-choice-gap data-answer="teaches classes" data-hint="The schedule lists classes that Mr. Lee teaches." data-fix="Mr. Lee is a teacher, and he teaches classes." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Rosa’s garage card lists brake and engine repairs: She <button class="choice-gap" data-choice-gap data-answer="repairs cars" data-hint="Brake and engine repairs are work on cars." data-fix="Rosa is a mechanic, and she repairs cars." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Dev’s project list names a new phone app: He <button class="choice-gap" data-choice-gap data-answer="writes software" data-hint="A phone app is software that a programmer can write." data-fix="Dev is a programmer, and he writes software." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: stress, linking, and third-person endings</h3>
+    <p>The spellings below are simple sound guides, not new spellings to write. Put one clear beat in each longer role word.</p>
+    <table>
+      <thead><tr><th>word</th><th>sound guide</th><th>spoken detail</th></tr></thead>
+      <tbody>
+        <tr><td>engineer</td><td><span class="ex">en-juh-<strong>NEER</strong></span></td><td>link the article: <span class="contraction">an-engineer</span></td></tr>
+        <tr><td>accountant</td><td><span class="ex">uh-<strong>COUNT</strong>-uhnt</span></td><td>the first and last vowel sounds are light</td></tr>
+        <tr><td>electrician</td><td><span class="ex">ih-lek-<strong>TRISH</strong>-uhn</span></td><td>the ending <span class="ex">-cian</span> sounds like <span class="ex">shuhn</span></td></tr>
+        <tr><td>receptionist</td><td><span class="ex">ri-<strong>SEP</strong>-shuh-nist</span></td><td>the letters <span class="ex">-tion-</span> include a /sh/ sound</td></tr>
+      </tbody>
+    </table>
+    <p>Keep the linking words light in <span class="ex">work as a</span>, <span class="ex">work at a</span>, and <span class="ex">work for a</span>. Give the new information the clearest beat: <span class="ex">I work as a <strong>COOK</strong>. I work for <strong>SUN</strong>Tech.</span></p>
+    <p>Keep the third-person ending audible. <span class="ex">works</span> ends with /s/. <span class="ex">teaches</span> adds a final syllable /ɪz/. Compare <span class="ex">I work</span> with <span class="ex">She works</span>, and <span class="ex">I teach</span> with <span class="ex">He teaches</span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read role, workplace, employer, department, and remote-work listening check">
+    <h2>Listen: what kind of work information did you hear?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once with natural U.S. rhythm and once more slowly. Choose the information focus. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished a job title, role, named workplace, department, employer, and remote arrangement.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Work information meanings">
+        <button class="choice-option" data-choice-option="job title">job title</button><button class="choice-option" data-choice-option="role">role</button>
+        <button class="choice-option" data-choice-option="named workplace">named workplace</button><button class="choice-option" data-choice-option="department">department</button>
+        <button class="choice-option" data-choice-option="employer">employer</button><button class="choice-option" data-choice-option="remote arrangement">remote arrangement</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 gives a <button class="choice-gap" data-choice-gap data-answer="job title" data-hint="The pattern be plus a nurse directly names the job title." data-fix="She’s a nurse: job title." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 gives a <button class="choice-gap" data-choice-gap data-answer="role" data-hint="Work as introduces the person’s role." data-fix="She works as a nurse: role." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 gives a <button class="choice-gap" data-choice-gap data-answer="named workplace" data-hint="At plus Northside Clinic names the workplace point." data-fix="She works at Northside Clinic: named workplace." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 gives a <button class="choice-gap" data-choice-gap data-answer="department" data-hint="In the billing department names an area inside the organization." data-fix="She works in the billing department: department." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 gives an <button class="choice-gap" data-choice-gap data-answer="employer" data-hint="Work for introduces the employer." data-fix="She works for Northside Health: employer." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 gives a <button class="choice-gap" data-choice-gap data-answer="remote arrangement" data-hint="Work from home describes a remote-work arrangement." data-fix="She works from home: remote arrangement." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
     </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">She’s a nurse.</span></li>
+        <li><span class="ex">She works as a nurse.</span></li>
+        <li><span class="ex">She works at Northside Clinic.</span></li>
+        <li><span class="ex">She works in the billing department.</span></li>
+        <li><span class="ex">She works for Northside Health.</span></li>
+        <li><span class="ex">She works from home.</span></li>
+      </ol>
+      <p>Keep <span class="ex">as</span>, <span class="ex">at</span>, <span class="ex">in</span>, and <span class="ex">for</span> light. Stress the role, organization, department, or place that carries the new information.</p>
+    </details>
+  </section>
+
+  <h2>Choose the linking pattern</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected as, at, in, for, or from by identifying the exact information after work.">
+    <h3>Drill 1: use the stated focus</h3>
+    <p class="choice-hint">Read the label in parentheses. It removes the possible at/in overlap and gives one intended answer.</p>
+    <div class="choice-bank" aria-label="Work pattern choices">
+      <button class="choice-option" data-choice-option="as">as</button><button class="choice-option" data-choice-option="at">at</button><button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="for">for</button><button class="choice-option" data-choice-option="from">from</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Nia works <button class="choice-gap" data-choice-gap data-answer="as" data-hint="As introduces the role nurse." data-fix="Nia works as a nurse." data-placeholder="choose">choose</button> a nurse. <span class="contraction">(role)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Nia works <button class="choice-gap" data-choice-gap data-answer="at" data-hint="At presents Northside Clinic as the named workplace point." data-fix="Nia works at Northside Clinic." data-placeholder="choose">choose</button> Northside Clinic. <span class="contraction">(named workplace)</span></span></div>
+    <div class="q"><span class="n">3</span><span>Zoe works <button class="choice-gap" data-choice-gap data-answer="in" data-hint="In introduces the accounting department inside the organization." data-fix="Zoe works in the accounting department." data-placeholder="choose">choose</button> the accounting department. <span class="contraction">(department)</span></span></div>
+    <div class="q"><span class="n">4</span><span>Dev works <button class="choice-gap" data-choice-gap data-answer="for" data-hint="For introduces the employer SunTech." data-fix="Dev works for SunTech." data-placeholder="choose">choose</button> SunTech. <span class="contraction">(employer)</span></span></div>
+    <div class="q"><span class="n">5</span><span>On Fridays, Dev works <button class="choice-gap" data-choice-gap data-answer="from" data-hint="The remote-work chunk is work from home." data-fix="On Fridays, Dev works from home." data-placeholder="choose">choose</button> home. <span class="contraction">(remote arrangement)</span></span></div>
+    <div class="q"><span class="n">6</span><span>Rosa works <button class="choice-gap" data-choice-gap data-answer="in" data-hint="In introduces the field of auto repair." data-fix="Rosa works in auto repair." data-placeholder="choose">choose</button> auto repair. <span class="contraction">(field)</span></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
   <h2>Build the meaning, then the sentence</h2>
   <div class="lead-rule"></div>
-
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each job to its workplace</h3>
-    <p class="tile-target">Tap a job, then tap the place where that person usually works</p>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each role matches the one responsibility stated on its fictional staff card.">
+    <h3>Drill 2: match each fictional profile to its role</h3>
+    <p class="tile-target">Tap a role, then tap the staff card that explicitly describes that person’s task.</p>
     <div class="tile-bank">
-      <button class="tile" data-tile="nurse">nurse</button>
-      <button class="tile" data-tile="chef">chef</button>
-      <button class="tile" data-tile="teacher">teacher</button>
-      <button class="tile" data-tile="accountant">accountant</button>
-      <button class="tile" data-tile="receptionist">receptionist</button>
+      <button class="tile" data-tile="nurse">nurse</button><button class="tile" data-tile="cook">cook</button><button class="tile" data-tile="teacher">teacher</button><button class="tile" data-tile="accountant">accountant</button><button class="tile" data-tile="receptionist">receptionist</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="nurse" data-placeholder="hospital">hospital</button>
-      <button class="slot" data-slot="chef" data-placeholder="restaurant">restaurant</button>
-      <button class="slot" data-slot="teacher" data-placeholder="school">school</button>
-      <button class="slot" data-slot="accountant" data-placeholder="office">office</button>
-      <button class="slot" data-slot="receptionist" data-placeholder="hotel">hotel</button>
+      <button class="slot" data-slot="nurse" data-hint="This card states that the person provides patient care at a clinic." data-fix="Profile A provides patient care: nurse." data-placeholder="Profile A: provides patient care at a clinic">Profile A: provides patient care at a clinic</button>
+      <button class="slot" data-slot="cook" data-hint="This card states that the person prepares lunch in a cafeteria." data-fix="Profile B prepares lunch: cook." data-placeholder="Profile B: prepares lunch in a cafeteria">Profile B: prepares lunch in a cafeteria</button>
+      <button class="slot" data-slot="teacher" data-hint="This card states that the person teaches adult evening classes." data-fix="Profile C teaches classes: teacher." data-placeholder="Profile C: teaches adult evening classes">Profile C: teaches adult evening classes</button>
+      <button class="slot" data-slot="accountant" data-hint="This card states that the person prepares financial reports." data-fix="Profile D prepares financial reports: accountant." data-placeholder="Profile D: prepares financial reports">Profile D: prepares financial reports</button>
+      <button class="slot" data-slot="receptionist" data-hint="This card states that the person greets visitors at a front desk." data-fix="Profile E greets visitors: receptionist." data-placeholder="Profile E: greets visitors at a front desk">Profile E: greets visitors at a front desk</button>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-tiles>Check</button>
-      <button class="lesson-btn" data-reset-tiles>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-tiles>Check</button><button class="lesson-btn" data-reset-tiles>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="i work as a nurse">
-    <h3>Drill 3 — build the job sentence</h3>
-    <p class="tile-target">Name your job with <span class="ex">as</span>. Build the sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="nurse">nurse</button>
-      <button class="tile" data-build-tile="i">I</button>
-      <button class="tile" data-build-tile="as">as</button>
-      <button class="tile" data-build-tile="work">work</button>
-      <button class="tile" data-build-tile="a">a</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="nia works as a nurse" data-hint="Begin with Nia, use third-person works, and put as before the role." data-fix="Nia works as a nurse." data-success-message="Correct. The third-person verb is works, and as introduces Nia’s role as a nurse.">
+    <h3>Drill 3: build the role sentence</h3>
+    <p class="tile-target">The fictional staff card labels Nia’s role “nurse.” Build the complete sentence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="nurse">nurse</button><button class="tile" data-build-tile="nia">Nia</button><button class="tile" data-build-tile="as">as</button><button class="tile" data-build-tile="works">works</button><button class="tile" data-build-tile="a">a</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she works at a hospital">
-    <h3>Drill 4 — build the place sentence with -s</h3>
-    <p class="tile-target">Talk about her, not you. Remember the <span class="ex">-s</span> on the verb and <span class="ex">at</span> before the place.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="hospital">hospital</button>
-      <button class="tile" data-build-tile="she">She</button>
-      <button class="tile" data-build-tile="at">at</button>
-      <button class="tile" data-build-tile="works">works</button>
-      <button class="tile" data-build-tile="a">a</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="she works for northside health" data-hint="Begin with She, use works, and put for before the employer name." data-fix="She works for Northside Health." data-success-message="Correct. She takes works, and for introduces the employer Northside Health.">
+    <h3>Drill 4: build the employer sentence</h3>
+    <p class="tile-target">The same staff card names Northside Health as Nia’s employer. Build the sentence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="health">Health</button><button class="tile" data-build-tile="she">She</button><button class="tile" data-build-tile="for">for</button><button class="tile" data-build-tile="works">works</button><button class="tile" data-build-tile="northside">Northside</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="nurse" data-fix="I'm a nurse." data-why="A singular job after be needs an article. We say I'm a nurse, not I'm nurse.">
-    <h3>Drill 5 — the missing word</h3>
-    <p>Tap the word where something is missing in front of it.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="i'm">I'm</button>
-      <button class="error-choice" data-error-choice="nurse">nurse.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="nurse" data-hint="One singular role after be needs a or an." data-fix="I’m a nurse." data-why="Nurse is one singular countable role, so it needs the article a after I’m.">
+    <h3>Drill 5: repair the missing article</h3>
+    <p>In the sentence “I’m nurse,” tap the word that needs an article before it.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="i'm">I’m</button><button class="error-choice" data-error-choice="nurse">nurse.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="work" data-fix="He works in an office." data-why="For he and she, the present verb adds -s. We say He works, not He work.">
-    <h3>Drill 6 — fix the verb for he</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="he">He</button>
-      <button class="error-choice" data-error-choice="work">work</button>
-      <button class="error-choice" data-error-choice="in">in</button>
-      <button class="error-choice" data-error-choice="an">an</button>
-      <button class="error-choice" data-error-choice="office">office.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="work" data-hint="The subject He requires the third-person singular present form." data-fix="He works in the billing department." data-why="For he or she in the present simple, work adds -s: he works.">
+    <h3>Drill 6: repair the verb for he</h3>
+    <p>In the sentence “He work in the billing department,” tap the one word to change.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="he">He</button><button class="error-choice" data-error-choice="work">work</button><button class="error-choice" data-error-choice="in">in</button><button class="error-choice" data-error-choice="department">the billing department.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — name the job, then say it</h3>
-    <p>Read the cue and say <span class="ex">I'm a…</span> or <span class="ex">I'm an…</span> aloud first. Reveal only after you answer.</p>
+    <h3>Oral transform: turn profile notes into sentences</h3>
+    <p>Say each complete sentence aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> your job: nurse &nbsp;→&nbsp; I'm…</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I'm a nurse.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> your job: engineer &nbsp;→&nbsp; I'm…</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I'm an engineer.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> your job: accountant &nbsp;→&nbsp; I'm…</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I'm an accountant.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> your job: chef &nbsp;→&nbsp; I'm…</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I'm a chef.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> your job: electrician &nbsp;→&nbsp; I'm…</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I'm an electrician.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> Nia · role: nurse</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Nia is a nurse. She works as a nurse.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> Omar · role: engineer</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Omar is an engineer. He works as an engineer.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> Zoe · department: accounting</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Zoe works in the accounting department.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Dev · employer: SunTech</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Dev works for SunTech.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> Rosa · task: repair cars</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Rosa repairs cars.</strong></p></div>
     </div>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Read a fictional staff directory</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Two busy people</h3>
-    <p><span class="ex">“My sister is a nurse at the city hospital. She starts early, at six. Her husband is a cook in an Italian restaurant. He works at night. They are both very busy, but they love their jobs.”</span></p>
+    <h3>Northside Community Center</h3>
+    <p><span class="ex">Nia is a nurse. She works at Northside Clinic, one part of the community center. She works for Northside Health and helps patients. Dev is a programmer. He works in the technology department and writes software for the center. He usually works from home on Fridays.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood jobs in a real description.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You separated Nia’s workplace and employer and identified Dev’s regular Friday arrangement.">
+    <h3>Read, then choose the exact information</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="at the hospital">
-        <p class="quiz-question">1. Where does the nurse work?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="at the hospital">at the hospital</button><button class="quiz-option" data-quiz-option="at a restaurant">at a restaurant</button><button class="quiz-option" data-quiz-option="at a school">at a school</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Northside Clinic" data-hint="Look for the name after works at." data-fix="Nia works at Northside Clinic.">
+        <p class="quiz-question">1. What is Nia’s named workplace?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Northside Clinic">Northside Clinic</button><button class="quiz-option" data-quiz-option="Northside Health">Northside Health</button><button class="quiz-option" data-quiz-option="the technology department">the technology department</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a cook">
-        <p class="quiz-question">2. What is her husband’s job?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a cook">a cook</button><button class="quiz-option" data-quiz-option="a nurse">a nurse</button><button class="quiz-option" data-quiz-option="a teacher">a teacher</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Northside Health" data-hint="Look for the organization after works for." data-fix="Nia works for Northside Health.">
+        <p class="quiz-question">2. Who is Nia’s employer?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Northside Health">Northside Health</button><button class="quiz-option" data-quiz-option="Northside Clinic">Northside Clinic</button><button class="quiz-option" data-quiz-option="Dev">Dev</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="at night">
-        <p class="quiz-question">3. When does he work?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="at night">at night</button><button class="quiz-option" data-quiz-option="at six in the morning">at six in the morning</button><button class="quiz-option" data-quiz-option="on weekends">on weekends</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="He works from home." data-hint="The text says where Dev works on Fridays." data-fix="On Fridays, Dev works from home.">
+        <p class="quiz-question">3. What is Dev’s usual Friday work arrangement?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="He works from home.">He works from home.</button><button class="quiz-option" data-quiz-option="He works at the clinic.">He works at the clinic.</button><button class="quiz-option" data-quiz-option="He does not work.">He does not work.</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it safely and flexibly</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>What do you do?</b> Answer about your real job — or a dream job — in two ways: name the job, then name the place. <span class="ex">I'm a designer. I work at a small studio.</span></div>
-  <div class="prompt-card"><b>A coworker or friend:</b> Describe someone you know using <span class="ex">he / she</span> and the <span class="ex">-s</span> ending. <span class="ex">My friend Ana is a doctor. She works at a hospital.</span></div>
-  <div class="prompt-card"><b>Where do people work?</b> The teacher names a job; you say the typical place in a full sentence. <span class="ex">A chef works in a restaurant. A receptionist works at a hotel.</span></div>
-  <div class="prompt-card"><b>Mingle at a party:</b> Role-play meeting three new people. Ask and answer. <span class="ex">What do you do? &nbsp;I'm an accountant. I work for a bank. And you?</span></div>
-  <div class="prompt-card"><b>Guess the job:</b> The teacher describes a workplace or a task; you guess the job. <span class="ex">"I work in a hospital and help patients." → "Are you a nurse?"</span></div>
+  <p class="note-line">You never need to disclose your real job, employer, workplace, income, schedule, coworkers, or employment status. Use the fictional profiles below, invent details, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Question choice:</b> Your partner has a fictional profile. Ask one question about the role, one about the workplace, one about the employer, and one about responsibilities. Use <span class="ex">What do you do?</span>, <span class="ex">Where do you work?</span>, <span class="ex">Who do you work for?</span>, and <span class="ex">What do you do at work?</span>.</div>
+  <div class="prompt-card"><b>Flexible answers:</b> Practice three honest status answers without adding private details: <span class="ex">I’m a student. I’m retired. I’m not working right now.</span> Then move the conversation to a comfortable topic.</div>
+  <div class="prompt-card"><b>At or in:</b> Explain the difference in viewpoint between <span class="ex">works at a hospital</span> and <span class="ex">works in a hospital</span>. Give one clear department example with <span class="ex">in</span>.</div>
+  <div class="prompt-card"><b>Final production: introduce a fictional community-center team for 45–60 seconds.</b> Include two people, two roles with <span class="ex">a/an</span>, one named workplace, one employer, one department or field, two responsibilities, one remote arrangement, and one clear question for a new team member.</div>
+  <div class="prompt-card"><b>Tutor extension:</b> Add one new fictional profile. The learner reformulates it twice, first as a short social introduction and then as a more detailed staff-directory entry.</div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Say the patterns back</h3>
-    <p>Complete this aloud: “To name my job I say <strong>I'm ___ a nurse</strong> or <strong>I work ___ a nurse</strong>. To name the place I say <strong>I work ___ a hospital</strong>. For a company I say <strong>I work ___ a company</strong>. I use <strong>an</strong> before a job that starts with a ______ sound.”</p>
-    <p>Then say one true sentence about your own work and one about a coworker, using the <strong>-s</strong> ending correctly.</p>
+    <h3>Say the system back</h3>
+    <p>Complete this aloud: “To name a role, I use ______ or ______. To name an employer, I use ______. To name a department, I use ______. A remote arrangement is work ______ home.”</p>
+    <p>Then explain why <span class="ex">a university student</span> and <span class="ex">an engineer</span> use different articles, and say the four different work questions from memory.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can name a job with a / an, match jobs to workplaces, and use work as, at, in, and for correctly.">
-    <h3>Final quiz — jobs, places, and linking words</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You can distinguish role, workplace, employer, department, responsibility, and remote-work patterns.">
+    <h3>Final quiz: choose from meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="an">
-        <p class="quiz-question">1. She's ___ engineer.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="the">the</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="Engineer begins with a vowel sound." data-fix="Omar is an engineer.">
+        <p class="quiz-question">1. The profile gives one role: Omar is ___ engineer.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a">
-        <p class="quiz-question">2. I'm ___ manager.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="the">the</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="a" data-hint="University begins with the consonant sound /y/." data-fix="Ben is a university student.">
+        <p class="quiz-question">2. The profile gives one study status: Ben is ___ university student.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="no article">no article</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="hospital">
-        <p class="quiz-question">3. A nurse usually works at a ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="hospital">hospital</button><button class="quiz-option" data-quiz-option="school">school</button><button class="quiz-option" data-quiz-option="restaurant">restaurant</button><button class="quiz-option" data-quiz-option="bank">bank</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="as" data-hint="The noun nurse names Nia’s role." data-fix="Nia works as a nurse.">
+        <p class="quiz-question">3. The next words name a role: Nia works ___ a nurse.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="as">as</button><button class="quiz-option" data-quiz-option="for">for</button><button class="quiz-option" data-quiz-option="from">from</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="restaurant">
-        <p class="quiz-question">4. A chef usually works in a ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="restaurant">restaurant</button><button class="quiz-option" data-quiz-option="office">office</button><button class="quiz-option" data-quiz-option="hotel">hotel</button><button class="quiz-option" data-quiz-option="factory">factory</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="for" data-hint="SunTech is Dev’s employer." data-fix="Dev works for SunTech.">
+        <p class="quiz-question">4. The next name is the employer: Dev works ___ SunTech.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="for">for</button><button class="quiz-option" data-quiz-option="as">as</button><button class="quiz-option" data-quiz-option="from">from</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="as">
-        <p class="quiz-question">5. I work ___ a teacher.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="as">as</button><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="for">for</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="in" data-hint="A department is an area inside an organization, so use in." data-fix="Zoe works in the accounting department.">
+        <p class="quiz-question">5. The next words name a department: Zoe works ___ the accounting department.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="as">as</button><button class="quiz-option" data-quiz-option="for">for</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="at">
-        <p class="quiz-question">6. He works ___ a hotel.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="as">as</button><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="for">for</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Who do you work for?" data-hint="Ask who plus work for when you want the employer." data-fix="Who do you work for? asks about the employer.">
+        <p class="quiz-question">6. You want the employer’s name. Which question asks for it?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Who do you work for?">Who do you work for?</button><button class="quiz-option" data-quiz-option="Where do you work?">Where do you work?</button><button class="quiz-option" data-quiz-option="What do you do at work?">What do you do at work?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="She works at a bank.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="She works at a bank.">She works at a bank.</button><button class="quiz-option" data-quiz-option="She work at a bank.">She work at a bank.</button><button class="quiz-option" data-quiz-option="She works at bank.">She works at bank.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="She helps patients." data-hint="The question asks for an activity or responsibility, not a title or place." data-fix="What does Nia do at work? She helps patients.">
+        <p class="quiz-question">7. The question is “What does Nia do at work?” Which answer gives a responsibility?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She helps patients.">She helps patients.</button><button class="quiz-option" data-quiz-option="She’s a nurse.">She’s a nurse.</button><button class="quiz-option" data-quiz-option="She works at a clinic.">She works at a clinic.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I'm a doctor.">
-        <p class="quiz-question">8. Someone asks "What do you do?" Which answer is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I'm a doctor.">I'm a doctor.</button><button class="quiz-option" data-quiz-option="I'm doctor.">I'm doctor.</button><button class="quiz-option" data-quiz-option="I doctor.">I doctor.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="He works from home on Fridays." data-hint="The remote-work chunk is work from home, and he takes works." data-fix="He works from home on Fridays.">
+        <p class="quiz-question">8. The Friday schedule says Dev does his job at home. Which sentence is correct?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="He works from home on Fridays.">He works from home on Fridays.</button><button class="quiz-option" data-quiz-option="He work at home on Fridays.">He work at home on Fridays.</button><button class="quiz-option" data-quiz-option="He works from the home on Fridays.">He works from the home on Fridays.</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check quiz</button><button class="lesson-btn" data-reset-quiz>Reset quiz</button></div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the role, article, question, or work pattern that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day jobs and workplaces retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved the role, named-workplace, and employer patterns from three new profile notes.">
+      <h3>Choose the missing work pattern</h3>
+      <div class="choice-bank" aria-label="Next-day work pattern choices"><button class="choice-option" data-choice-option="as">as</button><button class="choice-option" data-choice-option="at">at</button><button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="for">for</button></div>
+      <div class="q"><span class="n">1</span><span>The profile labels Ava’s role “electrician”: She works <button class="choice-gap" data-choice-gap data-answer="as" data-hint="A role after work takes as." data-fix="She works as an electrician." data-placeholder="choose">choose</button> an electrician.</span></div>
+      <div class="q"><span class="n">2</span><span>The directory presents Lakeview Hotel as the named workplace: She works <button class="choice-gap" data-choice-gap data-answer="at" data-hint="A named workplace point can take at." data-fix="She works at Lakeview Hotel." data-placeholder="choose">choose</button> Lakeview Hotel.</span></div>
+      <div class="q"><span class="n">3</span><span>The directory identifies Horizon Group as the employer: She works <button class="choice-gap" data-choice-gap data-answer="for" data-hint="An employer after work takes for." data-fix="She works for Horizon Group." data-placeholder="choose">choose</button> Horizon Group.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="engineer" data-hint="One singular role after be needs a or an, and engineer begins with a vowel sound." data-fix="Omar is an engineer." data-why="Engineer is one singular countable role and begins with a vowel sound, so it needs an.">
+      <h3>Repair the missing article</h3>
+      <p>The new profile says, “Omar is engineer.” Tap the word that needs an article before it.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="omar">Omar</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="engineer">engineer.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, invent one safe fictional profile. State a role, named workplace, employer, responsibility, and remote or on-site arrangement. Then ask the four work questions from memory.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Ava is an electrician. She works at Lakeview Hotel for Horizon Group. She repairs electrical systems and sometimes works from home on reports. What do you do? Where do you work? Who do you work for? What do you do at work?</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

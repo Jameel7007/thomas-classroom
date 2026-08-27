@@ -1,0 +1,21 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+<SiteLayout
+  title="Page not found · Thomas’s Classroom"
+  description="The requested Thomas’s Classroom page could not be found. Return to the curriculum, check your English level, or start from the homepage."
+  heading="That page is not in the classroom."
+  lede="The link may be old or the address may contain a small mistake. Your learning path is still right here."
+  noindex={true}
+>
+  <section class="tab-page error-page" aria-labelledby="not-found-title">
+    <p class="tab-overline">404 · Page not found</p>
+    <h2 class="tab-title" id="not-found-title">Choose the next useful step.</h2>
+    <p class="tab-lede">Return to the complete A0–C1 path, estimate your current level, or begin again from the homepage.</p>
+    <div class="home-actions" aria-label="Page recovery options">
+      <a class="home-link primary" href="/curriculum/">Explore the curriculum</a>
+      <a class="home-link" href="/assessments/quick-level-check/">Take the quick check</a>
+      <a class="home-link" href="/">Return home</a>
+    </div>
+  </section>
+</SiteLayout>

@@ -6,10 +6,9 @@ const { items, label = "Vocabulary" } = Astro.props;
 <div class="figure-grid" aria-label={label}>
   {items.map((item) => (
     <div class="figure">
-      {item.image && <span class="fig"><img src={item.image} alt="" loading="lazy" /></span>}
+      {item.image && <span class="fig"><img src={item.image} alt="" width="62" height="62" loading="lazy" decoding="async" /></span>}
       <span class="nm">{item.term}</span>
       {item.note && <small>{item.note}</small>}
     </div>
   ))}
 </div>
-

@@ -2,32 +2,40 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "some / any with countable and uncountable nouns · A1 Grammar · Curriculum Map",
+  "title": "Some / any with countable and uncountable nouns · A1 Grammar",
   "slug": "some-any-with-countable-and-uncountable-nouns",
   "level": "A1",
   "topic": "some / any with countable & uncountable nouns",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Talk about food, supplies, and quantities naturally: We’ve got some rice , There isn’t any milk , and Is there any coffee?",
+  "description": "Use some and any with countable and uncountable nouns to discuss food, supplies, quantities, negatives, and questions.",
   "sequence": 8,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/articles-a-an", "a0/regular-plural-nouns", "a1/there-is-there-are"],
+  "related": ["a1/food-and-drink", "a1/rooms-and-furniture", "a2/quantifiers-much-many-a-lot-of"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Countability, singular units, polarity, offers and requests, zero quantity, free-choice any, weak and stressed forms, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 8</p>
   <h1>Quantities with <em>some</em> and <em>any</em></h1>
   <p class="standfirst">Talk about food, supplies, and quantities naturally: <span class="ex">We’ve got some rice</span>, <span class="ex">There isn’t any milk</span>, and <span class="ex">Is there any coffee?</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">some / any</span>
     <span class="tag">countable / uncountable</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -41,7 +49,7 @@ export const page = defineLesson({
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved plural There are, a regular plural noun, and third-person has got.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -52,9 +60,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="have">have</button>
       <button class="choice-option" data-choice-option="has">has</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> some cups on the shelf. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I bought two <button class="choice-gap" data-choice-gap data-answer="apples" data-placeholder="choose">choose</button> at the market. &nbsp;<span class="contraction">(regular plurals, A0)</span></span></div>
-    <div class="q"><span class="n">3</span><span>She <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> got a big kitchen. &nbsp;<span class="contraction">(have got)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The staged shelf contains several cups: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Several cups is plural, so introduce them with There are." data-fix="There are some cups on the shelf." data-placeholder="choose">choose</button> some cups on the shelf. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The shopping receipt lists a quantity of two. I bought two <button class="choice-gap" data-choice-gap data-answer="apples" data-hint="A number greater than one needs the regular plural apples." data-fix="I bought two apples at the market." data-placeholder="choose">choose</button> at the market. &nbsp;<span class="contraction">(regular plurals, A0)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The fictional profile describes one person: She <button class="choice-gap" data-choice-gap data-answer="has" data-hint="She takes the third-person form has got." data-fix="She has got a big kitchen." data-placeholder="choose">choose</button> got a big kitchen. &nbsp;<span class="contraction">(have got)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -74,19 +82,19 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Some presents an existing quantity; any leaves it open in a neutral question or means zero after a negative.">
     <h3>Discovery check: choose the pattern</h3>
-    <p class="choice-hint">Positive sentence, negative sentence, or question? Let the sentence type choose the word.</p>
+    <p class="choice-hint">Begin with the usual pattern: positive <b>some</b>, negative or open question <b>any</b>. Offers and requests get a separate pattern below.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="some">some</button>
       <button class="choice-option" data-choice-option="any">any</button>
     </div>
-    <div class="q"><span class="n">1</span><span>There’s <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> juice in the fridge.</span></div>
-    <div class="q"><span class="n">2</span><span>We haven’t got <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> eggs.</span></div>
-    <div class="q"><span class="n">3</span><span>Is there <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> soap left?</span></div>
-    <div class="q"><span class="n">4</span><span>I bought <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> bananas.</span></div>
-    <div class="q"><span class="n">5</span><span>There aren’t <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> napkins on the table.</span></div>
-    <div class="q"><span class="n">6</span><span>She’s got <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> good news.</span></div>
+    <div class="q"><span class="n">1</span><span>The inventory confirms a quantity exists: There’s <button class="choice-gap" data-choice-gap data-answer="some" data-hint="A positive inventory statement presents the juice as existing, so use some." data-fix="There’s some juice in the fridge." data-placeholder="choose">choose</button> juice in the fridge.</span></div>
+    <div class="q"><span class="n">2</span><span>The inventory shows zero eggs: We haven’t got <button class="choice-gap" data-choice-gap data-answer="any" data-hint="After the negative haven’t got, any expresses zero eggs." data-fix="We haven’t got any eggs." data-placeholder="choose">choose</button> eggs.</span></div>
+    <div class="q"><span class="n">3</span><span>The speaker genuinely does not know: Is there <button class="choice-gap" data-choice-gap data-answer="any" data-hint="A neutral question leaves the quantity open, so use any." data-fix="Is there any soap left?" data-placeholder="choose">choose</button> soap left?</span></div>
+    <div class="q"><span class="n">4</span><span>The receipt confirms the purchase: I bought <button class="choice-gap" data-choice-gap data-answer="some" data-hint="This positive statement presents a quantity of bananas as existing." data-fix="I bought some bananas." data-placeholder="choose">choose</button> bananas.</span></div>
+    <div class="q"><span class="n">5</span><span>The table check finds zero napkins: There aren’t <button class="choice-gap" data-choice-gap data-answer="any" data-hint="After the negative aren’t, any expresses zero napkins." data-fix="There aren’t any napkins on the table." data-placeholder="choose">choose</button> napkins on the table.</span></div>
+    <div class="q"><span class="n">6</span><span>The message contains positive information: She’s got <button class="choice-gap" data-choice-gap data-answer="some" data-hint="News is uncountable, and this positive statement presents a quantity as existing." data-fix="She’s got some good news." data-placeholder="choose">choose</button> good news.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -114,6 +122,7 @@ export const page = defineLesson({
     <h3>Count the container or piece</h3>
     <p>To count an uncountable idea, add a unit: <span class="ex">two cups of coffee, a bottle of water, three pieces of information, two loaves of bread</span>. The container or piece becomes countable; the substance noun stays unchanged.</p>
   </div>
+  <p class="note-line">One countable thing needs a singular marker: <span class="ex">a charger</span> or <span class="ex">one charger</span>. For the basic quantity meaning in this lesson, use <span class="ex">some chargers</span> with a plural noun, not <span class="ex">some charger</span>.</p>
 
   <h2>The system, part 2: some and any</h2>
   <div class="lead-rule"></div>
@@ -142,7 +151,61 @@ export const page = defineLesson({
     <p>These are questions in form, but the speaker expects a yes and presents the quantity as available. That is why offers and requests use <span class="ex">some</span>. Compare <span class="ex">Is there any coffee?</span>, where the speaker genuinely does not know.</p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Two useful boundaries</h3>
+    <p><span class="ex">There isn’t any milk</span> and <span class="ex">There is no milk</span> both express zero milk. Use one negative pattern, not two: in the target standard, avoid <span class="ex">There isn’t no milk</span>.</p>
+    <p>In a positive sentence, <span class="ex">any</span> can have a different meaning: “it does not matter which one.” Compare <span class="ex">There are some seats near the door</span> with <span class="ex">Any seat is fine</span>. The first presents a quantity. The second gives free choice.</p>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: make the quantity word light and the noun clear</h3>
+    <p>In a neutral sentence, <span class="ex">some</span> and <span class="ex">any</span> usually support the noun rather than carry the main beat. Unstressed <span class="ex">some</span> often sounds approximately like <span class="ex">suhm</span> /səm/. <span class="ex">Any</span> begins with the strong first syllable <span class="ex">EN</span>: /ˈeni/. Link both words forward: <span class="ex">some-rice</span>, <span class="ex">any-milk</span>, and <span class="ex">some-questions</span>.</p>
+    <table>
+      <thead><tr><th>sentence</th><th>main beat</th><th>speaker’s message</th></tr></thead>
+      <tbody>
+        <tr><td>We need some <b>WATER</b>.</td><td>water</td><td>The needed thing is water.</td></tr>
+        <tr><td>Do you have any <b>QUESTIONS</b>?</td><td>questions</td><td>The speaker leaves the answer open.</td></tr>
+        <tr><td>Would you like some <b>COFFEE</b>?</td><td>coffee</td><td>The speaker presents coffee as available.</td></tr>
+      </tbody>
+    </table>
+    <p>Stress <span class="ex">some</span> as /sʌm/ when it carries a contrast: <span class="ex"><strong>SOME</strong> people agreed, but not everyone.</span> That stronger use means “a part of the group,” not simply an unknown quantity.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read some and any meaning and rhythm check">
+    <h2>Listen: what does the quantity word do?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once at a natural speed and once more slowly. Listen to the whole situation, not only the small word. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished an existing quantity, zero quantity, an open question, an offer, a request, and free choice.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Some and any listening meanings">
+        <button class="choice-option" data-choice-option="existing quantity">existing quantity</button><button class="choice-option" data-choice-option="zero quantity">zero quantity</button>
+        <button class="choice-option" data-choice-option="open question">open question</button><button class="choice-option" data-choice-option="offer">offer</button>
+        <button class="choice-option" data-choice-option="request">request</button><button class="choice-option" data-choice-option="free choice">free choice</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 presents an <button class="choice-gap" data-choice-gap data-answer="existing quantity" data-hint="The positive inventory statement confirms that cups are available." data-fix="We have some clean cups: existing quantity." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 reports a <button class="choice-gap" data-choice-gap data-answer="zero quantity" data-hint="Not any after the negative means zero milk." data-fix="We don’t have any milk: zero quantity." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 asks an <button class="choice-gap" data-choice-gap data-answer="open question" data-hint="The speaker genuinely does not know whether pens are available." data-fix="Do we have any pens: open question." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 makes an <button class="choice-gap" data-choice-gap data-answer="offer" data-hint="Would you like presents tea as available to the listener." data-fix="Would you like some tea: offer." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 makes a <button class="choice-gap" data-choice-gap data-answer="request" data-hint="Can I have asks the other person to provide water." data-fix="Can I have some water, please: request." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 gives <button class="choice-gap" data-choice-gap data-answer="free choice" data-hint="Any seat means the choice does not matter." data-fix="Any seat is fine: free choice." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">We have some clean cups on the counter.</span></li>
+        <li><span class="ex">We don’t have any milk today.</span></li>
+        <li><span class="ex">Do we have any pens for the workshop?</span></li>
+        <li><span class="ex">Would you like some tea?</span></li>
+        <li><span class="ex">Can I have some water, please?</span></li>
+        <li><span class="ex">Any seat is fine. Choose the one you like.</span></li>
+      </ol>
+      <p>Keep neutral <span class="ex">some</span> light and let the noun carry the main beat. In the free-choice line, keep the first syllable of <span class="ex">any</span> clear: <span class="ex"><strong>EN</strong>-ee seat</span>.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched existing, open, zero, request, and singular-unit meanings to some, any, or a.">
     <h3>Drill 1: choose the word that fits</h3>
     <p class="choice-hint">Read the whole sentence first. Positive, negative, real question, or polite request? Then check the noun: countable or uncountable?</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -150,14 +213,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="any">any</button>
       <button class="choice-option" data-choice-option="a">a</button>
     </div>
-    <div class="q"><span class="n">1</span><span>There’s <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> milk in the fridge.</span></div>
-    <div class="q"><span class="n">2</span><span>We haven’t got <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> onions.</span></div>
-    <div class="q"><span class="n">3</span><span>Is there <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> sugar in the cupboard?</span></div>
-    <div class="q"><span class="n">4</span><span>I bought <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> tomatoes at the market.</span></div>
-    <div class="q"><span class="n">5</span><span>Can I have <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> water, please? &nbsp;<span class="contraction">(a request)</span></span></div>
-    <div class="q"><span class="n">6</span><span>There aren’t <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> clean mugs in the office kitchen.</span></div>
-    <div class="q"><span class="n">7</span><span>I need <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> new charger for my laptop.</span></div>
-    <div class="q"><span class="n">8</span><span>Have you got <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> questions before the meeting?</span></div>
+    <div class="q"><span class="n">1</span><span>The inventory confirms milk is present: There’s <button class="choice-gap" data-choice-gap data-answer="some" data-hint="A positive statement presents an existing quantity of uncountable milk." data-fix="There’s some milk in the fridge." data-placeholder="choose">choose</button> milk in the fridge.</span></div>
+    <div class="q"><span class="n">2</span><span>The inventory records zero onions: We haven’t got <button class="choice-gap" data-choice-gap data-answer="any" data-hint="After haven’t got, any expresses zero plural onions." data-fix="We haven’t got any onions." data-placeholder="choose">choose</button> onions.</span></div>
+    <div class="q"><span class="n">3</span><span>The speaker genuinely does not know: Is there <button class="choice-gap" data-choice-gap data-answer="any" data-hint="A neutral question leaves the quantity of sugar open." data-fix="Is there any sugar in the cupboard?" data-placeholder="choose">choose</button> sugar in the cupboard?</span></div>
+    <div class="q"><span class="n">4</span><span>The receipt confirms the purchase: I bought <button class="choice-gap" data-choice-gap data-answer="some" data-hint="A positive statement presents a quantity of plural tomatoes as existing." data-fix="I bought some tomatoes at the market." data-placeholder="choose">choose</button> tomatoes at the market.</span></div>
+    <div class="q"><span class="n">5</span><span>The customer asks for water: Can I have <button class="choice-gap" data-choice-gap data-answer="some" data-hint="A polite request presents the wanted quantity, so use some." data-fix="Can I have some water, please?" data-placeholder="choose">choose</button> water, please? &nbsp;<span class="contraction">(a request)</span></span></div>
+    <div class="q"><span class="n">6</span><span>The office check finds zero clean mugs: There aren’t <button class="choice-gap" data-choice-gap data-answer="any" data-hint="After aren’t, any expresses zero plural mugs." data-fix="There aren’t any clean mugs in the office kitchen." data-placeholder="choose">choose</button> clean mugs in the office kitchen.</span></div>
+    <div class="q"><span class="n">7</span><span>The order requires exactly one new device: I need <button class="choice-gap" data-choice-gap data-answer="a" data-hint="One singular countable charger needs a, not the plural-quantity pattern some chargers." data-fix="I need a new charger for my laptop." data-placeholder="choose">choose</button> new charger for my laptop.</span></div>
+    <div class="q"><span class="n">8</span><span>The chair genuinely does not know: Have you got <button class="choice-gap" data-choice-gap data-answer="any" data-hint="This open question asks whether questions exist, so use any." data-fix="Have you got any questions before the meeting?" data-placeholder="choose">choose</button> questions before the meeting?</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -165,15 +228,15 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <div class="practice" data-answer-drill data-success-message="Correct. You used some for existing and offered quantities, any for open or zero quantities, and the noun forms rice and chairs.">
     <h3>Drill 2: type the missing word</h3>
     <p class="choice-hint">Type <b>some</b> or <b>any</b>. In items 5 and 6, type the correct form of the noun in parentheses.</p>
-    <div class="q"><span class="n">1</span><span>We’ve got <input class="answer-input" data-answer="some" aria-label="answer 1" /> rice, so don’t buy more.</span></div>
-    <div class="q"><span class="n">2</span><span>I don’t have <input class="answer-input" data-answer="any" aria-label="answer 2" /> cash on me.</span></div>
-    <div class="q"><span class="n">3</span><span>Is there <input class="answer-input" data-answer="any" aria-label="answer 3" /> juice left?</span></div>
-    <div class="q"><span class="n">4</span><span>Would you like <input class="answer-input" data-answer="some" aria-label="answer 4" /> tea? &nbsp;<span class="contraction">(an offer)</span></span></div>
-    <div class="q"><span class="n">5</span><span>The recipe needs some <input class="answer-input" data-answer="rice" aria-label="answer 5" />. &nbsp;<span class="contraction">(rice / rices)</span></span></div>
-    <div class="q"><span class="n">6</span><span>We need two more <input class="answer-input" data-answer="chairs" aria-label="answer 6" /> for the meeting room. &nbsp;<span class="contraction">(chair / chairs)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The inventory confirms rice is available: We’ve got <input class="answer-input" data-answer="some" data-hint="This positive sentence presents an existing quantity of rice." data-fix="We’ve got some rice, so don’t buy more." aria-label="Quantity word before rice in a positive inventory statement" /> rice, so don’t buy more.</span></div>
+    <div class="q"><span class="n">2</span><span>The wallet check finds zero cash: I don’t have <input class="answer-input" data-answer="any" data-hint="After don’t have, any expresses zero cash." data-fix="I don’t have any cash on me." aria-label="Quantity word before cash in a negative statement" /> cash on me.</span></div>
+    <div class="q"><span class="n">3</span><span>The speaker genuinely does not know: Is there <input class="answer-input" data-answer="any" data-hint="A neutral question leaves the quantity of juice open." data-fix="Is there any juice left?" aria-label="Quantity word before juice in an open question" /> juice left?</span></div>
+    <div class="q"><span class="n">4</span><span>The host presents tea as available: Would you like <input class="answer-input" data-answer="some" data-hint="An offer normally uses some because the speaker presents the quantity as available." data-fix="Would you like some tea?" aria-label="Quantity word before tea in an offer" /> tea? &nbsp;<span class="contraction">(an offer)</span></span></div>
+    <div class="q"><span class="n">5</span><span>The recipe treats the food as an uncountable substance: It needs some <input class="answer-input" data-answer="rice" data-hint="Rice is uncountable in this meaning, so it has no plural ending." data-fix="The recipe needs some rice." aria-label="Correct noun form for uncountable rice" />. &nbsp;<span class="contraction">(rice / rices)</span></span></div>
+    <div class="q"><span class="n">6</span><span>The room plan requires a total of two additional seats: We need two more <input class="answer-input" data-answer="chairs" data-hint="A number greater than one needs the plural countable form chairs." data-fix="We need two more chairs for the meeting room." aria-label="Correct plural form after two more" /> for the meeting room. &nbsp;<span class="contraction">(chair / chairs)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -190,15 +253,15 @@ export const page = defineLesson({
   <div class="quiz" data-quiz data-success-message="Good reading. You followed some and any in a real note.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="some chicken">
+      <div class="quiz-item" data-quiz-item data-answer="some chicken" data-hint="The first sentence names the food already in the fridge for tonight." data-fix="There’s some chicken in the fridge for tonight.">
         <p class="quiz-question">1. What is in the fridge for tonight?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="some chicken">some chicken</button><button class="quiz-option" data-quiz-option="some onions">some onions</button><button class="quiz-option" data-quiz-option="some bread">some bread</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="There aren’t any onions.">
+      <div class="quiz-item" data-quiz-item data-answer="There aren’t any onions." data-hint="The writer connects the store stop to the item with zero quantity." data-fix="The writer is stopping because there aren’t any onions.">
         <p class="quiz-question">2. Why is the writer stopping at the store?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="There aren’t any onions.">There aren’t any onions.</button><button class="quiz-option" data-quiz-option="There isn’t any chicken.">There isn’t any chicken.</button><button class="quiz-option" data-quiz-option="There isn’t any fruit.">There isn’t any fruit.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="fruit">
+      <div class="quiz-item" data-quiz-item data-answer="fruit" data-hint="The writer says this item was bought yesterday and tells the reader not to buy more." data-fix="The reader should not buy fruit.">
         <p class="quiz-question">3. What should the reader not buy?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="fruit">fruit</button><button class="quiz-option" data-quiz-option="chicken">chicken</button><button class="quiz-option" data-quiz-option="bread">bread</button></div>
       </div>
@@ -210,7 +273,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="is there any sugar in the coffee">
+  <div class="tile-game" data-tile-builder data-answer="is there any sugar in the coffee" data-hint="Begin with Is there, use any for the open quantity, and finish with in the coffee." data-fix="Is there any sugar in the coffee?" data-success-message="Correct. The neutral question uses any because the speaker does not know whether sugar is present.">
     <h3>Drill 4: build the question</h3>
     <p class="tile-target">Build the question. It is a real question, so it uses any.</p>
     <div class="tile-bank" data-build-bank>
@@ -230,7 +293,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="we’ve got some eggs in the fridge">
+  <div class="tile-game" data-tile-builder data-answer="we’ve got some eggs in the fridge" data-hint="Begin with We’ve got, use some before the plural noun eggs, and finish with in the fridge." data-fix="We’ve got some eggs in the fridge." data-success-message="Correct. The positive inventory statement presents a quantity of plural eggs as existing.">
     <h3>Drill 5: build the positive sentence</h3>
     <p class="tile-target">Build the sentence. It is positive, so it uses some.</p>
     <div class="tile-bank" data-build-bank>
@@ -252,7 +315,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="some" data-fix="We haven’t got any milk." data-why="After a negative like haven’t, use any, not some.">
+  <div class="micro-drill" data-spot-error data-answer="some" data-hint="The verb phrase haven’t got makes the sentence negative, so the quantity word must express zero." data-fix="We haven’t got any milk." data-why="After a negative like haven’t, use any, not some.">
     <h3>Drill 6: negative sentences take any</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -264,9 +327,9 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="breads" data-fix="I need two pieces of bread for lunch." data-why="Bread is uncountable, so it has no plural. Count the pieces, not the bread.">
+  <div class="micro-drill" data-spot-error data-answer="breads" data-hint="The packing note requires two individual pieces. Count pieces, while bread stays uncountable." data-fix="I need two pieces of bread for lunch." data-why="Bread is uncountable, so it has no plural. Count the pieces, not the bread.">
     <h3>Drill 7: uncountable nouns have no plural</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>The packing note requires two individual pieces for lunch. Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
       <button class="error-choice" data-error-choice="need">need</button>
@@ -316,11 +379,26 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Fridge check:</b> Picture your real fridge. Say five true sentences with some and any. <span class="ex">There’s some cheese. There isn’t any juice.</span></div>
-  <div class="prompt-card"><b>Not at home:</b> Say three things you haven’t got any of at home right now. <span class="ex">We haven’t got any coffee.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five real questions about the teacher’s kitchen, bag, or desk. <span class="ex">Is there any tea in your kitchen? Are there any pens in your bag?</span></div>
-  <div class="prompt-card"><b>At the café:</b> Order politely with some. <span class="ex">Can I have some water and some bread, please?</span></div>
-  <div class="prompt-card"><b>Shopping list:</b> Say your real shopping list aloud with some. <span class="ex">I need some tomatoes, some rice, and some soap.</span></div>
+  <p class="note-line">You never need to disclose your real home, belongings, shopping habits, money, food, workplace, or location. Use the fictional café, supply room, staged image, or invented inventory below whenever you prefer.</p>
+  <div class="prompt-card"><b>Staged fridge:</b> Describe five items in a fictional fridge image with some and any. <span class="ex">There’s some cheese. There isn’t any juice.</span></div>
+  <div class="prompt-card"><b>Supply check:</b> Say three things a fictional workshop does not have. <span class="ex">We haven’t got any markers.</span></div>
+  <div class="prompt-card"><b>Open questions:</b> Ask five neutral questions about a fictional café or event desk. <span class="ex">Is there any tea? Are there any pens?</span></div>
+  <div class="prompt-card"><b>At the café:</b> Make one offer and one request with some. <span class="ex">Would you like some tea? Can I have some water, please?</span></div>
+  <div class="prompt-card"><b>Shopping list:</b> Create an invented list with a plural countable noun, an uncountable noun, and a countable unit. <span class="ex">We need some tomatoes, some rice, and two bottles of water.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: prepare a fictional community workshop</h3>
+    <p>Give a 45–60 second inventory and refreshment update. Include all six pieces of evidence:</p>
+    <ol>
+      <li>one positive quantity with <span class="ex">some</span> and a plural countable noun;</li>
+      <li>one positive quantity with <span class="ex">some</span> and an uncountable noun;</li>
+      <li>one zero quantity with <span class="ex">not any</span> or <span class="ex">no</span>;</li>
+      <li>one neutral question with <span class="ex">any</span>;</li>
+      <li>one offer or request with <span class="ex">some</span>;</li>
+      <li>one countable unit for an uncountable noun, such as <span class="ex">two bottles of water</span>.</li>
+    </ol>
+    <p>The listener records the inventory and asks one follow-up question. As an optional extension, add one positive free-choice sentence such as <span class="ex">Any seat is fine</span>.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -330,39 +408,39 @@ export const page = defineLesson({
     <p>Then say one positive sentence, one negative sentence, and one real question about your own kitchen.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can handle some, any, and both kinds of nouns in real situations.">
+  <div class="quiz" data-quiz data-success-message="Correct. You distinguished existing, zero, open, offered, countable, uncountable, and packaged quantities.">
     <h3>Final quiz: some, any, and noun types</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="some">
-        <p class="quiz-question">1. There’s ___ rice in the cupboard.</p>
+      <div class="quiz-item" data-quiz-item data-answer="some" data-hint="This positive inventory statement presents an existing quantity of uncountable rice." data-fix="There’s some rice in the cupboard.">
+        <p class="quiz-question">1. The inventory confirms rice is present: There’s ___ rice in the cupboard.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="a">a</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="any">
-        <p class="quiz-question">2. We don’t have ___ meetings today.</p>
+      <div class="quiz-item" data-quiz-item data-answer="any" data-hint="After don’t have, any expresses zero meetings." data-fix="We don’t have any meetings today.">
+        <p class="quiz-question">2. The calendar shows zero meetings today: We don’t have ___ meetings today.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="a">a</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Is">
-        <p class="quiz-question">3. ___ there any mail for me?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Is" data-hint="Mail is uncountable here, so the there-question begins with singular Is." data-fix="Is there any mail for me?">
+        <p class="quiz-question">3. Mail is an uncountable category here: ___ there any mail for me?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Is">Is</button><button class="quiz-option" data-quiz-option="Are">Are</button><button class="quiz-option" data-quiz-option="Do">Do</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="money">
-        <p class="quiz-question">4. Which noun is uncountable?</p>
+      <div class="quiz-item" data-quiz-item data-answer="money" data-hint="You can count coins or dollars, but standard English treats money as a mass noun." data-fix="Money is uncountable; coin and dollar are countable.">
+        <p class="quiz-question">4. Which noun is uncountable in its ordinary financial meaning?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="money">money</button><button class="quiz-option" data-quiz-option="coin">coin</button><button class="quiz-option" data-quiz-option="dollar">dollar</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="apple">
-        <p class="quiz-question">5. Which noun is countable?</p>
+      <div class="quiz-item" data-quiz-item data-answer="apple" data-hint="This noun can directly take a number and the plural ending: two apples." data-fix="Apple is countable; bread and information are normally uncountable.">
+        <p class="quiz-question">5. Which noun can directly follow the number two in its ordinary meaning?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="apple">apple</button><button class="quiz-option" data-quiz-option="bread">bread</button><button class="quiz-option" data-quiz-option="information">information</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="some">
-        <p class="quiz-question">6. Would you like ___ tea?</p>
+      <div class="quiz-item" data-quiz-item data-answer="some" data-hint="An offer presents tea as available, so it normally uses some." data-fix="Would you like some tea?">
+        <p class="quiz-question">6. The host offers an available drink: Would you like ___ tea?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="a">a</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="bottles">
-        <p class="quiz-question">7. We bought three ___ of water.</p>
+      <div class="quiz-item" data-quiz-item data-answer="bottles" data-hint="The number three counts the containers, while water stays unchanged." data-fix="We bought three bottles of water.">
+        <p class="quiz-question">7. The receipt lists three separate containers: We bought three ___ of water.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="bottles">bottles</button><button class="quiz-option" data-quiz-option="waters">waters</button><button class="quiz-option" data-quiz-option="bottle">bottle</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="any">
-        <p class="quiz-question">8. Have we got ___ butter?</p>
+      <div class="quiz-item" data-quiz-item data-answer="any" data-hint="This is a neutral inventory question. The speaker does not know whether butter is available." data-fix="Have we got any butter?">
+        <p class="quiz-question">8. The speaker genuinely does not know: Have we got ___ butter?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="the">the</button></div>
       </div>
     </div>
@@ -372,6 +450,36 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the countability, quantity meaning, offer/request, or zero pattern that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day some and any retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an existing plural quantity, zero uncountable quantity, an open question, and an offer from explicit contexts.">
+      <h3>Choose some or any from the intended meaning</h3>
+      <div class="choice-bank" aria-label="Next-day some and any choices">
+        <button class="choice-option" data-choice-option="some">some</button><button class="choice-option" data-choice-option="any">any</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The supply list confirms chairs are available: We have <button class="choice-gap" data-choice-gap data-answer="some" data-hint="A positive statement presents an existing quantity of plural chairs." data-fix="We have some chairs for the guests." data-placeholder="choose">choose</button> chairs for the guests.</span></div>
+      <div class="q"><span class="n">2</span><span>The inventory records zero water: There isn’t <button class="choice-gap" data-choice-gap data-answer="any" data-hint="After isn’t, any expresses zero uncountable water." data-fix="There isn’t any water in the cooler." data-placeholder="choose">choose</button> water in the cooler.</span></div>
+      <div class="q"><span class="n">3</span><span>The organizer genuinely does not know: Are there <button class="choice-gap" data-choice-gap data-answer="any" data-hint="A neutral question leaves the quantity of pens open." data-fix="Are there any pens at the sign-in desk?" data-placeholder="choose">choose</button> pens at the sign-in desk?</span></div>
+      <div class="q"><span class="n">4</span><span>The host presents tea as available: Would you like <button class="choice-gap" data-choice-gap data-answer="some" data-hint="An offer normally uses some because the speaker presents the quantity as available." data-fix="Would you like some tea?" data-placeholder="choose">choose</button> tea?</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="no" data-hint="The sentence already has the negative isn’t. The target standard uses any after it." data-fix="There isn’t any milk in the office fridge." data-why="Use either not any or no for zero quantity, not both negative patterns together.">
+      <h3>Repair the doubled negative pattern</h3>
+      <p>The target inventory pattern is <span class="ex">not any</span>: “There isn’t no milk in the office fridge.” Tap the one word to replace.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="there">There</button><button class="error-choice" data-error-choice="isn’t">isn’t</button><button class="error-choice" data-error-choice="no">no</button><button class="error-choice" data-error-choice="milk">milk</button><button class="error-choice" data-error-choice="fridge">in the office fridge.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, give a fictional supply update with one positive quantity, one zero quantity, one open question, and one offer or request.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>We have some cups and some coffee. We don’t have any milk. Are there any clean spoons? Would you like some coffee?</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

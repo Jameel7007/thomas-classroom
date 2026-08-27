@@ -60,7 +60,7 @@ body{margin:0;background:#d8d8d8;color:var(--ink);font-family:var(--sans);
 .level-code{font-family:var(--sans);font-weight:700;font-size:62px;line-height:0.85;
   letter-spacing:-0.03em;color:var(--accent-deep);font-variant-numeric:lining-nums;}
 .level-headtext{flex:1;}
-.level-name{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ink);line-height:1;}
+.level-name{font-family:var(--serif);font-style:italic;font-weight:500;font-size:22px;color:var(--ink);line-height:1;margin:0;}
 .level-cefr{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--muted);margin:6px 0 0;}
 .level-meta-chips{display:flex;gap:8px;margin-top:10px;}

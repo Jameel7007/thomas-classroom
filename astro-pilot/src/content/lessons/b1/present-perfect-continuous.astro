@@ -1,23 +1,326 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Present perfect continuous · B1 Grammar · Curriculum Map",
+  "title": "Present perfect continuous · B1 Grammar",
   "slug": "present-perfect-continuous",
   "level": "B1",
   "topic": "Present perfect continuous",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Present perfect continuous.",
+  "status": "ready",
+  "description": "Connect an activity before now to its duration, repetition, current progress, or recent evidence, and contrast the activity viewpoint with present perfect simple results.",
   "sequence": 1,
-  "prerequisites": [
-    "a2/present-perfect"
-  ],
-  "related": [
-    "b1/past-perfect"
-  ],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a2/present-perfect", "a2/past-continuous"],
+  "related": ["b1/past-perfect", "a2/present-perfect"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Activity viewpoint, duration, repetition, recent evidence, simple-continuous contrast, state and dynamic meanings, U.S. spoken form, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="55–65 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 1</p>
+  <h1>Present perfect continuous: <em>look back from now at an activity</em></h1>
+  <p class="standfirst">The form <span class="ex">have / has been + -ing</span> does more than say that something started earlier. It lets a speaker look back from now at an activity, then highlight its duration, repetition, current progress, or recent evidence. Context tells us whether the activity is still happening or has just stopped.</p>
+  <div class="meta-row">
+    <span class="tag">55–65 min core</span>
+    <span class="tag">duration · repetition · recent evidence</span>
+    <span class="tag">I’ve been working · She hasn’t been sleeping</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Compare activity, completed result, and evidence now.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Build the verb chain and choose a time viewpoint.</span></div>
+    <div class="flow-step"><b>Contrast</b><span>Separate process from result, quantity, and state.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional project update and defend each choice.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can form positive, negative, and question patterns; connect an earlier activity to now; distinguish an activity that continues from one that has just stopped; report repeated attempts and recent evidence; choose <span class="ex">for, since, all day, lately</span>, or <span class="ex">recently</span>; contrast present perfect continuous with present perfect simple, present continuous, and past continuous; handle common state and dynamic meanings; hear reduced U.S. forms; and give a clear status update.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a present-perfect result, a past activity in progress, and the difference between a duration and a starting point.">
+    <h3>Three foundations from A2</h3>
+    <p class="choice-hint">Use present perfect for a result connected to now, past continuous for an activity in progress at a finished past time, and the time marker that matches the information after it.</p>
+    <div class="choice-bank" aria-label="Present perfect continuous foundation choices"><button class="choice-option" data-choice-option="has completed">has completed</button><button class="choice-option" data-choice-option="was checking">was checking</button><button class="choice-option" data-choice-option="since">since</button><button class="choice-option" data-choice-option="completed yesterday">completed yesterday</button><button class="choice-option" data-choice-option="is checking">is checking</button><button class="choice-option" data-choice-option="for">for</button></div>
+    <div class="q"><span class="n">1</span><span>The checklist is ready now: Maya <button class="choice-gap" data-choice-gap data-answer="has completed" data-hint="Choose the present-perfect form that presents a completed result available now." data-fix="Maya has completed the checklist, so it is ready now.">choose</button> it.</span></div>
+    <div class="q"><span class="n">2</span><span>At 8:15 yesterday, the activity was in progress: Maya <button class="choice-gap" data-choice-gap data-answer="was checking" data-hint="The reference point is a finished time yesterday, so use past continuous." data-fix="At 8:15 yesterday, Maya was checking the list.">choose</button> the list.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">Nine o’clock</span> is a starting point: She has worked <button class="choice-gap" data-choice-gap data-answer="since" data-hint="Use since before the point where the period began." data-fix="She has worked since nine o’clock.">choose</button> nine o’clock.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice three ways the past reaches now</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Harbor forum update at 2:00 p.m.</h3>
+    <p><span class="ex">Maya: “I’ve been checking the registration list since noon. I’m still working on it.”</span></p>
+    <p><span class="ex">Leo: “I’ve checked 42 names, so this page is complete.”</span></p>
+    <p><span class="ex">Jordan: “There’s blue paint on my sleeve because I’ve been painting the signs. I stopped five minutes ago for lunch.”</span></p>
+    <ul>
+      <li>Which sentence looks at an activity that is still in progress?</li>
+      <li>Which sentence highlights a completed number?</li>
+      <li>Which activity has stopped, although its evidence is visible now?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated an ongoing activity, a completed quantity, recent evidence, the continuous verb chain, and the present reference point.">
+    <h3>Discovery check: identify the speaker’s viewpoint</h3>
+    <div class="choice-bank" aria-label="Present perfect continuous discovery choices"><button class="choice-option" data-choice-option="checking the registration list">checking the registration list</button><button class="choice-option" data-choice-option="42 checked names">42 checked names</button><button class="choice-option" data-choice-option="painting the signs">painting the signs</button><button class="choice-option" data-choice-option="has been checking">has been checking</button><button class="choice-option" data-choice-option="now">now</button></div>
+    <div class="q"><span class="n">1</span><span>Maya says she is still working. Which activity continues? <button class="choice-gap" data-choice-gap data-answer="checking the registration list" data-hint="Follow the sentence after Maya’s present-perfect continuous report." data-fix="Checking the registration list continues at 2:00 p.m.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Leo wants the listener to notice a completed result. That result is <button class="choice-gap" data-choice-gap data-answer="42 checked names" data-hint="The number answers how many, not how long." data-fix="Leo highlights 42 checked names as the completed quantity.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Jordan stopped for lunch, but paint supplies evidence of the recent activity: <button class="choice-gap" data-choice-gap data-answer="painting the signs" data-hint="The blue paint connects a very recent activity to the present scene." data-fix="Painting the signs explains the blue paint visible now.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Which complete verb chain contains <span class="ex">has + been + -ing</span>? <button class="choice-gap" data-choice-gap data-answer="has been checking" data-hint="Choose the auxiliary, been, and the -ing activity together." data-fix="Has been checking is the complete present perfect continuous chain.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>In every report, the speaker looks back from the reference point <button class="choice-gap" data-choice-gap data-answer="now" data-hint="The earlier activity matters because of its duration, result, or evidence at the present reference point." data-fix="The reference point is now.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: choose an activity viewpoint</h2>
+  <div class="lead-rule"></div>
+  <p>The present perfect continuous creates a bridge from an activity before now to a concern now. The speaker views the activity across a period, not as one isolated finished event. That concern may be duration, continuing progress, repetition, a temporary situation, or evidence left by a very recent activity.</p>
+  <p>The form alone does not prove that the activity continues at this exact second. Compare <span class="ex">I’ve been painting, and I’m still painting</span> with <span class="ex">I’ve been painting, but I just stopped</span>. The surrounding context completes the timeline.</p>
+
+  <table>
+    <thead><tr><th>job</th><th>form</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>positive</td><td><span class="ex">subject + have / has been + -ing</span></td><td><span class="ex">They have been testing the microphones.</span></td></tr>
+      <tr><td>negative</td><td><span class="ex">subject + haven’t / hasn’t been + -ing</span></td><td><span class="ex">She hasn’t been sleeping well lately.</span></td></tr>
+      <tr><td>yes-or-no question</td><td><span class="ex">Have / Has + subject + been + -ing?</span></td><td><span class="ex">Have you been waiting long?</span></td></tr>
+      <tr><td>information question</td><td><span class="ex">question word + have / has + subject + been + -ing?</span></td><td><span class="ex">What have they been testing?</span></td></tr>
+      <tr><td>duration question</td><td><span class="ex">How long + have / has + subject + been + -ing?</span></td><td><span class="ex">How long has the team been waiting?</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Been</span> is the past participle of <span class="ex">be</span>, and the activity after it uses the <span class="ex">-ing</span> form. Ordinary continuous spelling still applies: <span class="ex">work → working, write → writing, run → running, lie → lying</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You built positive, negative, yes-or-no, information, and duration patterns while keeping been before the -ing activity.">
+    <h3>Form check: build the complete chain</h3>
+    <div class="choice-bank" aria-label="Present perfect continuous form choices"><button class="choice-option" data-choice-option="has been reviewing">has been reviewing</button><button class="choice-option" data-choice-option="haven’t been receiving">haven’t been receiving</button><button class="choice-option" data-choice-option="Have they been testing">Have they been testing</button><button class="choice-option" data-choice-option="What has Maya been checking">What has Maya been checking</button><button class="choice-option" data-choice-option="How long have you been waiting">How long have you been waiting</button></div>
+    <div class="q"><span class="n">1</span><span>One reviewer started earlier and is still active: Jordan <button class="choice-gap" data-choice-gap data-answer="has been reviewing" data-hint="Use has for Jordan, then been and the -ing activity." data-fix="Jordan has been reviewing the applications since noon.">choose</button> the applications since noon.</span></div>
+    <div class="q"><span class="n">2</span><span>The updates have repeatedly failed to arrive: We <button class="choice-gap" data-choice-gap data-answer="haven’t been receiving" data-hint="Put not inside the have auxiliary, then keep been before receiving." data-fix="We haven’t been receiving the updates this week.">choose</button> the updates this week.</span></div>
+    <div class="q"><span class="n">3</span><span>Ask a yes-or-no question about the recent microphone work: <button class="choice-gap" data-choice-gap data-answer="Have they been testing" data-hint="Move Have before the subject they; keep been testing after the subject." data-fix="Have they been testing the microphones?">choose</button> the microphones?</span></div>
+    <div class="q"><span class="n">4</span><span>Ask for the object of Maya’s activity: <button class="choice-gap" data-choice-gap data-answer="What has Maya been checking" data-hint="Begin with What, then has, the subject Maya, and been checking." data-fix="What has Maya been checking?">choose</button>?</span></div>
+    <div class="q"><span class="n">5</span><span>Ask for the duration of the listener’s wait: <button class="choice-gap" data-choice-gap data-answer="How long have you been waiting" data-hint="Begin with How long, then have, you, and been waiting." data-fix="How long have you been waiting?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Five common uses, one connection to now</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>speaker’s concern</th><th>context</th><th>present perfect continuous</th></tr></thead>
+    <tbody>
+      <tr><td>activity continuing now</td><td>It began at 9:00 and is still underway.</td><td><span class="ex">We’ve been setting up since nine.</span></td></tr>
+      <tr><td>repeated activity</td><td>Several attempts occurred in an unfinished period.</td><td><span class="ex">I’ve been calling every hour.</span></td></tr>
+      <tr><td>recent activity with evidence</td><td>The action stopped, but its result is visible now.</td><td><span class="ex">The floor is wet because they’ve been mopping.</span></td></tr>
+      <tr><td>temporary current situation</td><td>The arrangement is limited to this month.</td><td><span class="ex">We’ve been working from the library this month.</span></td></tr>
+      <tr><td>negative recent pattern</td><td>A normal activity has not happened enough recently.</td><td><span class="ex">She hasn’t been sleeping well lately.</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched continuing progress, repeated attempts, recent evidence, a temporary situation, and a negative recent pattern to the context.">
+    <h3>Meaning check: choose the activity that explains now</h3>
+    <div class="choice-bank" aria-label="Present perfect continuous use choices"><button class="choice-option" data-choice-option="have been setting up">have been setting up</button><button class="choice-option" data-choice-option="has been calling">has been calling</button><button class="choice-option" data-choice-option="have been mopping">have been mopping</button><button class="choice-option" data-choice-option="have been working">have been working</button><button class="choice-option" data-choice-option="hasn’t been sleeping">hasn’t been sleeping</button></div>
+    <div class="q"><span class="n">1</span><span>The setup began at 9:00 and is still in progress at 11:30: We <button class="choice-gap" data-choice-gap data-answer="have been setting up" data-hint="Choose the activity that extends from the stated start to the present progress report." data-fix="We have been setting up since 9:00.">choose</button> since 9:00.</span></div>
+    <div class="q"><span class="n">2</span><span>Jordan made one attempt each hour today and still has no answer: Jordan <button class="choice-gap" data-choice-gap data-answer="has been calling" data-hint="Several calls belong to the unfinished period today." data-fix="Jordan has been calling every hour today.">choose</button> every hour.</span></div>
+    <div class="q"><span class="n">3</span><span>Maintenance stopped one minute ago, and the floor is still wet: They <button class="choice-gap" data-choice-gap data-answer="have been mopping" data-hint="Use the recent activity that explains the wet floor now; the context says it has just stopped." data-fix="They have been mopping; they stopped one minute ago, and the floor is still wet.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The office is closed only this month, so the team uses the library temporarily: We <button class="choice-gap" data-choice-gap data-answer="have been working" data-hint="The activity describes a temporary arrangement across the current month." data-fix="We have been working from the library this month.">choose</button> from the library this month.</span></div>
+    <div class="q"><span class="n">5</span><span>Maya reports poor sleep on several recent nights and feels exhausted now: She <button class="choice-gap" data-choice-gap data-answer="hasn’t been sleeping" data-hint="Use the negative form for a recent pattern that has not happened well enough." data-fix="She hasn’t been sleeping well lately.">choose</button> well lately.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose the time lens, not a nearby signal word</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>time lens</th><th>what it presents</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>present continuous</td><td>activity around now, with no built-in earlier-to-now bridge</td><td><span class="ex">I’m testing microphone three now.</span></td></tr>
+      <tr><td>past continuous</td><td>activity in progress at a finished past reference point</td><td><span class="ex">I was testing it at 10:00 yesterday.</span></td></tr>
+      <tr><td>present perfect continuous</td><td>activity before now viewed through duration, repetition, progress, or evidence now</td><td><span class="ex">I’ve been testing it since ten.</span></td></tr>
+      <tr><td>present perfect simple</td><td>completed result, quantity, experience, or continuing state connected to now</td><td><span class="ex">I’ve tested three microphones.</span></td></tr>
+    </tbody>
+  </table>
+  <p>A time expression can support a choice, but it does not make the choice alone. <span class="ex">This morning</span> can accompany a finished result, an activity across the unfinished morning, or a finished-past report if the morning is over. First decide how the speaker views the situation.</p>
+
+  <h2>Process and result: continuous versus simple</h2>
+  <div class="lead-rule"></div>
+  <p>Use the continuous when the activity or its unfolding matters: <span class="ex">I’ve been repairing chairs all morning.</span> Use the simple when a completed result or quantity matters: <span class="ex">I’ve repaired twelve chairs.</span> Both can appear in one accurate update: <span class="ex">I’ve been repairing chairs all morning, and I’ve finished twelve so far.</span></p>
+  <p>With an activity such as reading, the continuous does not promise completion: <span class="ex">I’ve been reading the report</span> focuses on the process. <span class="ex">I’ve read the report</span> normally presents it as completed or sufficiently covered for the present purpose.</p>
+  <p>Do not force the continuous onto every recent event. When one completed achievement matters, use the simple: <span class="ex">The team has finished the setup. The speaker has arrived.</span></p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected activity, completed quantity, sufficient completion, current action, and a finished past reference from the requested viewpoint.">
+    <h3>Contrast check: what does the update need to foreground?</h3>
+    <div class="choice-bank" aria-label="Perfect aspect contrast choices"><button class="choice-option" data-choice-option="have been repairing">have been repairing</button><button class="choice-option" data-choice-option="have repaired">have repaired</button><button class="choice-option" data-choice-option="has read">has read</button><button class="choice-option" data-choice-option="is reading">is reading</button><button class="choice-option" data-choice-option="was reading">was reading</button></div>
+    <div class="q"><span class="n">1</span><span>The manager asks what activity occupied the team all morning, not how many items are complete: We <button class="choice-gap" data-choice-gap data-answer="have been repairing" data-hint="Foreground the activity across the morning rather than its completed count." data-fix="We have been repairing chairs all morning.">choose</button> chairs all morning.</span></div>
+    <div class="q"><span class="n">2</span><span>The inventory needs the completed quantity <span class="ex">twelve</span>: We <button class="choice-gap" data-choice-gap data-answer="have repaired" data-hint="A completed number calls for present perfect simple." data-fix="We have repaired twelve chairs so far.">choose</button> twelve chairs so far.</span></div>
+    <div class="q"><span class="n">3</span><span>Maya can brief the team because she completed the report for this purpose: She <button class="choice-gap" data-choice-gap data-answer="has read" data-hint="Present the report as completed or sufficiently covered, not merely in progress." data-fix="She has read the report, so she can brief the team.">choose</button> the report.</span></div>
+    <div class="q"><span class="n">4</span><span>The only requested fact is what Leo is doing at this exact moment: He <button class="choice-gap" data-choice-gap data-answer="is reading" data-hint="Use present continuous for the activity at the exact present moment without adding an earlier interval." data-fix="He is reading page six now.">choose</button> page six now.</span></div>
+    <div class="q"><span class="n">5</span><span>The reference point is 8:00 last night, with no claim about now: At 8:00 last night, Ava <button class="choice-gap" data-choice-gap data-answer="was reading" data-hint="Use past continuous for an activity in progress at a finished past reference point." data-fix="At 8:00 last night, Ava was reading the report.">choose</button> the report.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Time markers and verb meaning</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">For</span> introduces a duration: <span class="ex">for two hours</span>. <span class="ex">Since</span> introduces the starting point: <span class="ex">since noon</span>. A complete span can stand without either: <span class="ex">all morning, all week</span>. <span class="ex">Lately</span> and <span class="ex">recently</span> create a broad unfinished recent period.</p>
+  <p>Many state meanings normally use present perfect simple, not continuous: <span class="ex">I’ve known Maya for years. They’ve owned the equipment since 2021. We’ve needed a replacement for months.</span> The reason is meaning, not a permanent ban on a written verb.</p>
+  <div class="note">
+    <h3>One verb can have a state meaning and an activity meaning</h3>
+    <p><span class="ex">I’ve thought the plan was risky for months</span> presents an opinion state. <span class="ex">I’ve been thinking about the plan all morning</span> presents a mental activity. Likewise, <span class="ex">They’ve had the equipment for years</span> presents possession, while <span class="ex">They’ve been having connection problems lately</span> presents repeated experiences.</p>
+    <p>With activity verbs such as <span class="ex">live, work</span>, and <span class="ex">study</span>, both perfect forms can sometimes be natural. The continuous foregrounds ongoing activity or temporary development; the simple often presents the continuing situation as a fact. Context and speaker viewpoint matter more than a false one-form rule.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished duration from starting point, a span without a preposition, a continuing state, and a dynamic thinking activity.">
+    <h3>Precision check: time marker or verb viewpoint</h3>
+    <div class="choice-bank" aria-label="Time marker and verb viewpoint choices"><button class="choice-option" data-choice-option="for">for</button><button class="choice-option" data-choice-option="since">since</button><button class="choice-option" data-choice-option="all morning">all morning</button><button class="choice-option" data-choice-option="have owned">have owned</button><button class="choice-option" data-choice-option="have been thinking">have been thinking</button></div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Two hours</span> is a duration: We have been waiting <button class="choice-gap" data-choice-gap data-answer="for" data-hint="Use for before a length of time." data-fix="We have been waiting for two hours.">choose</button> two hours.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">Noon</span> is the point where the wait began: We have been waiting <button class="choice-gap" data-choice-gap data-answer="since" data-hint="Use since before the starting point." data-fix="We have been waiting since noon.">choose</button> noon.</span></div>
+    <div class="q"><span class="n">3</span><span>The complete span needs no <span class="ex">for</span> or <span class="ex">since</span>: We have been testing the system <button class="choice-gap" data-choice-gap data-answer="all morning" data-hint="Use the complete time-span expression directly." data-fix="We have been testing the system all morning.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Possession began in 2021 and continues now: They <button class="choice-gap" data-choice-gap data-answer="have owned" data-hint="Own presents a continuing possession state, so use present perfect simple." data-fix="They have owned the equipment since 2021.">choose</button> the equipment since 2021.</span></div>
+    <div class="q"><span class="n">5</span><span>The team spent the morning considering possible locations: We <button class="choice-gap" data-choice-gap data-answer="have been thinking" data-hint="Think about presents an unfolding mental activity, not a fixed opinion state." data-fix="We have been thinking about possible locations all morning.">choose</button> about possible locations all morning.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: U.S. contractions, linking, and stress</h2>
+  <div class="lead-rule"></div>
+  <div class="two-col">
+    <div>
+      <h3>Reduce the grammar, keep the message clear</h3>
+      <p>Positive forms usually contract: <span class="ex">I’ve /aɪv/, you’ve /juv/, we’ve /wiv/, she’s /ʃiz/, he’s /hiz/</span>. In U.S. English, <span class="ex">been</span> is commonly /bɪn/. Do not give every auxiliary equal stress.</p>
+      <p>In <span class="ex">I’ve been WORKing on the SIGNS since NINE</span>, the activity and useful new details carry the main beats. The exact stress changes with the correction: <span class="ex">since NINE, not since NOON</span>.</p>
+    </div>
+    <div>
+      <h3>Link the duration question</h3>
+      <p><span class="ex">How long have you been waiting?</span> may link as /haʊ lɔŋ əv jə bɪn ˈweɪtɪŋ/. The weak forms /əv/ and /jə/ stay understandable because <span class="ex">how LONG</span> and <span class="ex">WAITing</span> carry the message.</p>
+      <p>Keep the final consonant in <span class="ex">I’ve</span> or <span class="ex">we’ve</span>; it helps the listener hear the perfect chain before <span class="ex">been</span>.</p>
+    </div>
+  </div>
+
+  <section data-lesson-extension="Tutor-read ongoing activity, completed quantity, repeated attempt, recent evidence, duration question, and negative-pattern listening check">
+    <h2>Listen for viewpoint before opening the transcript</h2>
+    <div class="lead-rule"></div>
+    <p>Your tutor reads each line once naturally and once in short thought groups. Decide what the speaker highlights, not only which words you hear.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard continuing activity, completed quantity, repeated attempts, recent evidence, a duration question, and a negative recent pattern.">
+      <h3>Listening check: recover the present concern</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The list review began at ten and is still on its last page." data-hint="Listen for since ten and the current last-page progress." data-fix="The list review began at ten and is still on its last page."><p class="quiz-question">1. What timeline does the reviewer report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The list review began at ten and is still on its last page.">The list review began at ten and is still on its last page.</button><button class="quiz-option" data-quiz-option="The reviewer completed the list yesterday.">The reviewer completed the list yesterday.</button><button class="quiz-option" data-quiz-option="The review will begin at ten tomorrow.">The review will begin at ten tomorrow.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Thirty applications are complete." data-hint="Listen for a number with present perfect simple." data-fix="Thirty applications are complete."><p class="quiz-question">2. Which result matters in the second line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Thirty applications are complete.">Thirty applications are complete.</button><button class="quiz-option" data-quiz-option="The application review has not started.">The application review has not started.</button><button class="quiz-option" data-quiz-option="Thirty reviewers arrived yesterday.">Thirty reviewers arrived yesterday.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The speaker made repeated calls but has not reached Leo." data-hint="Listen for every hour and the unreached person." data-fix="The speaker made repeated calls but has not reached Leo."><p class="quiz-question">3. What does the third line report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The speaker made repeated calls but has not reached Leo.">The speaker made repeated calls but has not reached Leo.</button><button class="quiz-option" data-quiz-option="Leo has called once and completed the task.">Leo has called once and completed the task.</button><button class="quiz-option" data-quiz-option="The calls are scheduled for next week.">The calls are scheduled for next week.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Recent sign painting explains the wet brushes and blue paint." data-hint="Connect the visible evidence to the recent activity." data-fix="Recent sign painting explains the wet brushes and blue paint."><p class="quiz-question">4. What explains the evidence in the fourth line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Recent sign painting explains the wet brushes and blue paint.">Recent sign painting explains the wet brushes and blue paint.</button><button class="quiz-option" data-quiz-option="A completed phone call explains the paint.">A completed phone call explains the paint.</button><button class="quiz-option" data-quiz-option="Tomorrow’s meeting explains the wet brushes.">Tomorrow’s meeting explains the wet brushes.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the duration of the wait up to now" data-hint="Listen for How long before the perfect continuous chain." data-fix="The question asks for the duration of the wait up to now."><p class="quiz-question">5. What information does the linked question request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the duration of the wait up to now">the duration of the wait up to now</button><button class="quiz-option" data-quiz-option="the number of completed chairs">the number of completed chairs</button><button class="quiz-option" data-quiz-option="a finished time yesterday">a finished time yesterday</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Poor sleep has been a recent negative pattern." data-hint="Listen for hasn’t, well, and lately." data-fix="Poor sleep has been a recent negative pattern."><p class="quiz-question">6. What does the last line mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Poor sleep has been a recent negative pattern.">Poor sleep has been a recent negative pattern.</button><button class="quiz-option" data-quiz-option="One good night ended years ago.">One good night ended years ago.</button><button class="quiz-option" data-quiz-option="The speaker is making a future sleep arrangement.">The speaker is making a future sleep arrangement.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">I’ve been reviewing the list since TEN. I’m on the LAST page now.</span> Evidence: earlier start plus continuing progress.</li>
+        <li><span class="ex">I’ve reviewed THIRTY applications, so those records are complete.</span> Evidence: completed quantity.</li>
+        <li><span class="ex">I’ve been calling Leo every HOUR, but I still haven’t reached him.</span> Evidence: repetition in an unfinished period.</li>
+        <li><span class="ex">The brushes are wet and there’s blue paint on my sleeve. I’ve been PAINTing the signs.</span> Evidence: recent activity inferred from the stated evidence.</li>
+        <li><span class="ex">How LONG have you been WAITing?</span> Evidence: linked duration question.</li>
+        <li><span class="ex">I HAVEN’T been sleeping WELL lately.</span> Evidence: negative recent pattern.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read one complete project update</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Harbor forum status at 3:30 p.m.</h3>
+    <p><span class="ex">Since 1:00, Jordan has been setting up the Harbor forum. The team has arranged 60 chairs. They’ve been testing the microphones, but microphone three is still cutting out. Ava has owned the equipment for five years, and she knows which replacement cable fits. Maintenance has been mopping near the stage. They stopped one minute ago, but the floor and mop are still wet. Jordan has called support three times and has been waiting for a reply since 3:00.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the continuing wait, completed chair quantity, possession state, and recently stopped activity from the status report.">
+    <h3>Reading check: use only the 3:30 update</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Jordan has been waiting for support since 3:00." data-hint="The final clause gives the activity that started at 3:00 and continues at 3:30." data-fix="Jordan has been waiting for support since 3:00."><p class="quiz-question">1. Which activity clearly continues at 3:30?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Jordan has been waiting for support since 3:00.">Jordan has been waiting for support since 3:00.</button><button class="quiz-option" data-quiz-option="Maintenance is still mopping at 3:30.">Maintenance is still mopping at 3:30.</button><button class="quiz-option" data-quiz-option="Ava is buying the equipment at 3:30.">Ava is buying the equipment at 3:30.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The team has arranged 60 chairs." data-hint="Choose the sentence that reports a completed number." data-fix="The team has arranged 60 chairs."><p class="quiz-question">2. Which sentence foregrounds a completed quantity?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The team has arranged 60 chairs.">The team has arranged 60 chairs.</button><button class="quiz-option" data-quiz-option="The team has been arranging for 60 hours.">The team has been arranging for 60 hours.</button><button class="quiz-option" data-quiz-option="The chairs will arrive next year.">The chairs will arrive next year.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Own presents continuing possession, a state." data-hint="The equipment relationship has continued for five years; it is not an unfolding ownership activity." data-fix="Own presents continuing possession, a state, so the update uses has owned."><p class="quiz-question">3. Why does the update say <span class="ex">Ava has owned</span>, not <span class="ex">has been owning</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Own presents continuing possession, a state.">Own presents continuing possession, a state.</button><button class="quiz-option" data-quiz-option="Five years is a finished time yesterday.">Five years is a finished time yesterday.</button><button class="quiz-option" data-quiz-option="Every verb must use the simple form.">Every verb must use the simple form.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="No. They stopped one minute ago; the wet floor is present evidence." data-hint="The next sentence explicitly says when maintenance stopped." data-fix="No. They stopped one minute ago; the wet floor is present evidence of the recent mopping."><p class="quiz-question">4. Does <span class="ex">has been mopping</span> mean maintenance must still be mopping?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="No. They stopped one minute ago; the wet floor is present evidence.">No. They stopped one minute ago; the wet floor is present evidence.</button><button class="quiz-option" data-quiz-option="Yes. The form always proves the action continues this second.">Yes. The form always proves the action continues this second.</button><button class="quiz-option" data-quiz-option="No. The mopping is only a future plan.">No. The mopping is only a future plan.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build a duration question and a completed result</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="how long have they been testing the microphones" data-hint="Begin with How long, then place have before they and keep been testing together." data-fix="How long have they been testing the microphones?" data-success-message="Correct. How long requests duration, and have they been testing preserves the question chain.">
+    <h3>Build 1: ask about the activity’s duration</h3><p class="tile-target">The microphone testing began earlier, and you want the length of the activity up to now.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="microphones">microphones</button><button class="tile" data-build-tile="they">they</button><button class="tile" data-build-tile="testing">testing</button><button class="tile" data-build-tile="how">How</button><button class="tile" data-build-tile="been">been</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="long">long</button><button class="tile" data-build-tile="have">have</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="they have repaired three cables so far" data-hint="Use present perfect simple because three is the completed result so far." data-fix="They have repaired three cables so far." data-success-message="Correct. Have repaired foregrounds the completed quantity of three cables.">
+    <h3>Build 2: report the completed quantity</h3><p class="tile-target">The repair log needs the number of finished cables, not the duration of the activity.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="far">far</button><button class="tile" data-build-tile="three">three</button><button class="tile" data-build-tile="have">have</button><button class="tile" data-build-tile="cables">cables</button><button class="tile" data-build-tile="they">They</button><button class="tile" data-build-tile="so">so</button><button class="tile" data-build-tile="repaired">repaired</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair form, time, or meaning</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="check" data-hint="Been requires the -ing activity form after it." data-fix="She has been checking the list since noon." data-why="The perfect auxiliary is has, been creates the continuous bridge, and checking names the activity." data-success-message="Correct. The activity after been must use the -ing form checking.">
+    <h3>Repair 1: complete the verb chain</h3><p>Tap the word that breaks <span class="ex">has + been + -ing</span>.</p><div class="spot-options"><button class="error-choice" data-error-choice="she">She</button><button class="error-choice" data-error-choice="has">has</button><button class="error-choice" data-error-choice="been">been</button><button class="error-choice" data-error-choice="check">check</button><button class="error-choice" data-error-choice="list">the list</button><button class="error-choice" data-error-choice="since">since noon.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="for" data-hint="Three o’clock is the point where the wait began, not the length of the wait." data-fix="I’ve been waiting since three o’clock." data-why="Since introduces a starting point. For would need a duration such as for thirty minutes." data-success-message="Correct. Since introduces the starting point three o’clock.">
+    <h3>Repair 2: match the time information</h3><p>Tap the preposition that incorrectly introduces a starting point.</p><div class="spot-options"><button class="error-choice" data-error-choice="i">I’ve</button><button class="error-choice" data-error-choice="been">been</button><button class="error-choice" data-error-choice="waiting">waiting</button><button class="error-choice" data-error-choice="for">for</button><button class="error-choice" data-error-choice="three">three o’clock.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="knowing" data-hint="Know presents a continuing relationship state in this sentence." data-fix="They’ve known Ava for six years." data-why="Use present perfect simple for the continuing state know: have known, not have been knowing." data-success-message="Correct. Known presents the continuing state without forcing a continuous form.">
+    <h3>Repair 3: preserve the state meaning</h3><p>Tap the form that treats the relationship state as an unfolding activity.</p><div class="spot-options"><button class="error-choice" data-error-choice="they">They’ve</button><button class="error-choice" data-error-choice="been">been</button><button class="error-choice" data-error-choice="knowing">knowing</button><button class="error-choice" data-error-choice="ava">Ava</button><button class="error-choice" data-error-choice="years">for six years.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing real work or private routines</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real employer, clients, projects, schedule, location, commute, health, sleep, finances, account details, relationships, family, study record, or daily habits. Use the fictional Harbor forum. Real details are optional.</p>
+  <div class="prompt-card"><b>Continuing activity:</b> The setup began at 1:00 and is still underway at 3:30. Explain what the team has been doing and for how long.</div>
+  <div class="prompt-card"><b>Repeated attempt:</b> Jordan called support at 3:00, 3:10, and 3:20, but no one has answered. Report the pattern and result.</div>
+  <div class="prompt-card"><b>Recent evidence:</b> Maintenance stopped one minute ago. The floor and mop are still wet. Explain the evidence without claiming the activity continues.</div>
+  <div class="prompt-card"><b>Process and result:</b> The team worked on chairs all morning and completed 60. Use one continuous sentence and one simple sentence.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: give a 60–75 second fictional status briefing</h3>
+    <p>Use the Harbor forum. Include one continuing activity with duration, one repeated attempt, one recently stopped activity with present evidence, one completed result or quantity, one continuing state, and one follow-up question. Then identify which perfect form you chose in each case and why.</p>
+    <p><b>Evidence check:</b> Can the listener reconstruct what continues, what stopped, what is complete, how long or since when, and which evidence supports the report?</p>
+  </div>
+
+  <div class="quiz" data-quiz data-success-message="Correct. You protected the activity viewpoint, completed quantity, and continuing state instead of choosing one perfect form mechanically.">
+    <h3>Final check: defend the viewpoint</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="We’ve been testing the microphones since one, and the work is still underway." data-hint="The update asks for the activity across the interval and explicitly says it continues." data-fix="We’ve been testing the microphones since one, and the work is still underway."><p class="quiz-question">1. At 3:30, which sentence accurately reports an activity that began at 1:00 and still continues?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We’ve been testing the microphones since one, and the work is still underway.">We’ve been testing the microphones since one, and the work is still underway.</button><button class="quiz-option" data-quiz-option="We were testing the microphones tomorrow.">We were testing the microphones tomorrow.</button><button class="quiz-option" data-quiz-option="We have been test the microphones since one.">We have been test the microphones since one.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="We’ve arranged 60 chairs so far." data-hint="The manager requests the number of chairs that are complete." data-fix="We’ve arranged 60 chairs so far."><p class="quiz-question">2. Which sentence foregrounds the completed quantity for the inventory?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We’ve arranged 60 chairs so far.">We’ve arranged 60 chairs so far.</button><button class="quiz-option" data-quiz-option="We’ve been arranging 60 hours so far.">We’ve been arranging 60 hours so far.</button><button class="quiz-option" data-quiz-option="We arrange yesterday 60 chairs.">We arrange yesterday 60 chairs.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="I’ve known Maya since 2019." data-hint="Know presents the continuing relationship as a state." data-fix="I’ve known Maya since 2019."><p class="quiz-question">3. The relationship began in 2019 and continues. Which sentence preserves the state meaning of <span class="ex">know</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I’ve known Maya since 2019.">I’ve known Maya since 2019.</button><button class="quiz-option" data-quiz-option="I’ve been knowing Maya since 2019.">I’ve been knowing Maya since 2019.</button><button class="quiz-option" data-quiz-option="I know Maya for 2019.">I know Maya for 2019.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: activity, result, state, or exact time?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">I choose the continuous when...</span> <span class="ex">I choose the simple when...</span> <span class="ex">The continuous form does not prove...</span> <span class="ex">For gives...</span> <span class="ex">Since gives...</span> <span class="ex">A state meaning such as know usually...</span></p>
+    <p>Then create two different contexts for one activity verb. Make the first context require process or duration and the second require a completed result or quantity.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day state meaning, time marker, and recently stopped activity retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Name the viewpoint before choosing a form.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the simple form for a state, since for a starting point, and the continuous form for recent evidence without forcing continuation.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="I’ve known the coordinator for five years." data-hint="Know presents a continuing relationship state, not an unfolding activity." data-fix="I’ve known the coordinator for five years."><p class="quiz-question">1. The relationship began five years ago and continues. Which sentence is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I’ve known the coordinator for five years.">I’ve known the coordinator for five years.</button><button class="quiz-option" data-quiz-option="I’ve been knowing the coordinator for five years.">I’ve been knowing the coordinator for five years.</button><button class="quiz-option" data-quiz-option="I know the coordinator since five years.">I know the coordinator since five years.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="They’ve been waiting since 3:00." data-hint="Three o’clock is the point where the waiting began." data-fix="They’ve been waiting since 3:00."><p class="quiz-question">2. The wait began at 3:00 and continues at 3:30. Which sentence is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="They’ve been waiting since 3:00.">They’ve been waiting since 3:00.</button><button class="quiz-option" data-quiz-option="They’ve been waiting for 3:00.">They’ve been waiting for 3:00.</button><button class="quiz-option" data-quiz-option="They were waiting since tomorrow.">They were waiting since tomorrow.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="She’s been painting the signs, but she stopped five minutes ago." data-hint="Use the continuous form for the recent activity that explains the paint, then let the second clause state that it stopped." data-fix="She’s been painting the signs, but she stopped five minutes ago."><p class="quiz-question">3. Blue paint is on Maya’s sleeve now, and the context says she stopped five minutes ago. Which report is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She’s been painting the signs, but she stopped five minutes ago.">She’s been painting the signs, but she stopped five minutes ago.</button><button class="quiz-option" data-quiz-option="She’s been painting, so she must still be painting this second.">She’s been painting, so she must still be painting this second.</button><button class="quiz-option" data-quiz-option="She will have painted the signs yesterday.">She will have painted the signs yesterday.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

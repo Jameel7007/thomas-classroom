@@ -2,419 +2,421 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Past simple · A2 Grammar · Curriculum Map",
+  "title": "Past simple · A2 Grammar",
   "slug": "past-simple",
   "level": "A2",
   "topic": "Past simple (regular & irregular verbs)",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Talk about finished actions, past events, and real stories: I worked late on Friday , She went to Lisbon , Did you take the early train? , and We didn’t have time.",
+  "description": "Use regular and irregular past-simple forms to report finished events, build questions and negatives, and tell a clear sequence.",
   "sequence": 1,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a1/present-simple", "a1/was-were", "a1/common-verbs-and-adjectives"],
+  "related": ["a2/past-time-expressions", "a2/past-continuous", "a2/present-perfect"],
   "assessments": [
     "a2-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Finished-past meaning, discourse time, accurate spelling, irregular forms, did and be systems, questions, speech, listening, feedback, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 1</p>
   <h1>Past simple <em>worked / went / did</em></h1>
-  <p class="standfirst">Talk about finished actions, past events, and real stories: <span class="ex">I worked late on Friday</span>, <span class="ex">She went to Lisbon</span>, <span class="ex">Did you take the early train?</span>, and <span class="ex">We didn’t have time.</span></p>
+  <p class="standfirst">Report a finished event and help a listener follow what happened: <span class="ex">The center opened at nine. Rina took the first call. The team didn’t find the missing box. Where did they look?</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">finished past actions</span>
-    <span class="tag">regular -ed · irregular forms</span>
-    <span class="tag">did / didn’t</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">finished past · event sequence</span>
+    <span class="tag">regular and irregular forms</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Compare a normal day with yesterday.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Find regular -ed and irregular past forms.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose forms, build sentences, and repair errors.</span></div>
-    <div class="flow-step"><b>Use</b><span>Tell true stories about your past week.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Compare a normal Friday with one finished Friday.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Locate the past time before choosing the form.</span></div>
+    <div class="flow-step"><b>Build</b><span>Control spelling, irregular forms, did, and be.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a clear fictional event report.</span></div>
   </div>
 
-  <p class="note-line">The past simple is the main grammar for telling what happened: yesterday, last week, or years ago. One past form works for every subject.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can report a finished event, connect its main actions in order, say what did not happen, and ask for missing details.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="was">was</button>
-      <button class="choice-option" data-choice-option="were">were</button>
-      <button class="choice-option" data-choice-option="works">works</button>
-      <button class="choice-option" data-choice-option="work">work</button>
-      <button class="choice-option" data-choice-option="on">on</button>
-      <button class="choice-option" data-choice-option="in">in</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved past be, present-simple agreement, and a complete light-verb chunk.">
+    <h3>Three checks from A1</h3>
+    <p class="choice-hint">Use the subject, time, and complete chunk. Say every finished sentence aloud.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices">
+      <button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="were">were</button>
+      <button class="choice-option" data-choice-option="opens">opens</button><button class="choice-option" data-choice-option="open">open</button>
+      <button class="choice-option" data-choice-option="make">make</button><button class="choice-option" data-choice-option="do">do</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> tired after work yesterday. &nbsp;<span class="contraction">(was / were)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My brother <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> in a restaurant. &nbsp;<span class="contraction">(present simple)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The meeting is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> Monday. &nbsp;<span class="contraction">(prepositions of time)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The report describes one room yesterday: The room <button class="choice-gap" data-choice-gap data-answer="was" data-hint="A singular subject takes was for a past state." data-fix="The room was quiet yesterday." data-placeholder="choose">choose</button> quiet yesterday.</span></div>
+    <div class="q"><span class="n">2</span><span>The schedule states a normal Friday routine: The center <button class="choice-gap" data-choice-gap data-answer="opens" data-hint="A third-person singular present routine adds -s to open." data-fix="The center opens at nine every Friday." data-placeholder="choose">choose</button> at nine every Friday.</span></div>
+    <div class="q"><span class="n">3</span><span>The team must choose one plan: They need to <button class="choice-gap" data-choice-gap data-answer="make" data-hint="English uses the complete collocation make a decision." data-fix="They need to make a decision." data-placeholder="choose">choose</button> a decision.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice before the rule</h2>
+  <h2>Notice one routine and one finished day</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>One person, two days</h3>
-    <p><span class="ex">"Most days I work at the office. I go home at six and make dinner."</span><br /><span class="ex">"Yesterday I worked at home. I went to the gym and made pasta."</span></p>
+    <h3>Harbor Community Center</h3>
+    <p><span class="ex">Every Friday, the center opens at nine. Rina takes the first call and makes the visitor list.</span></p>
+    <p><span class="ex">Last Friday, the center opened at ten. Rina took the first call and made the visitor list.</span></p>
     <ul>
-      <li>What changes in the second text? Look at <span class="ex">work</span>, <span class="ex">go</span>, and <span class="ex">make</span>.</li>
-      <li>Which words tell you the time: <span class="ex">most days</span> and <span class="ex">yesterday</span>?</li>
-      <li><span class="ex">Worked</span> ends in <span class="ex">-ed</span>. Do <span class="ex">went</span> and <span class="ex">made</span> end in <span class="ex">-ed</span>?</li>
+      <li>Which expression describes a repeated routine? Which one locates one finished Friday?</li>
+      <li>Which past verb follows the regular pattern: <span class="ex">opened, took</span>, or <span class="ex">made</span>?</li>
+      <li>After <span class="ex">Last Friday</span> establishes the time, does every following sentence need another time expression?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: choose the pattern</h3>
-    <p class="choice-hint">Find the time word first. Then choose present or past.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="work">work</button>
-      <button class="choice-option" data-choice-option="worked">worked</button>
-      <button class="choice-option" data-choice-option="go">go</button>
-      <button class="choice-option" data-choice-option="went">went</button>
-      <button class="choice-option" data-choice-option="make">make</button>
-      <button class="choice-option" data-choice-option="made">made</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used the routine frame for repeated Fridays and the past frame for one finished Friday.">
+    <h3>Discovery check: follow the time frame</h3>
+    <p class="choice-hint">The first sentence establishes either a normal routine or one finished event report.</p>
+    <div class="choice-bank" aria-label="Present and past choices">
+      <button class="choice-option" data-choice-option="opens">opens</button><button class="choice-option" data-choice-option="opened">opened</button>
+      <button class="choice-option" data-choice-option="takes">takes</button><button class="choice-option" data-choice-option="took">took</button>
+      <button class="choice-option" data-choice-option="makes">makes</button><button class="choice-option" data-choice-option="made">made</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Most days I <button class="choice-gap" data-choice-gap data-answer="work" data-placeholder="choose">choose</button> at the office.</span></div>
-    <div class="q"><span class="n">2</span><span>Yesterday I <button class="choice-gap" data-choice-gap data-answer="worked" data-placeholder="choose">choose</button> at home.</span></div>
-    <div class="q"><span class="n">3</span><span>Every evening I <button class="choice-gap" data-choice-gap data-answer="go" data-placeholder="choose">choose</button> home at six.</span></div>
-    <div class="q"><span class="n">4</span><span>Last night I <button class="choice-gap" data-choice-gap data-answer="went" data-placeholder="choose">choose</button> home at nine.</span></div>
-    <div class="q"><span class="n">5</span><span>I usually <button class="choice-gap" data-choice-gap data-answer="make" data-placeholder="choose">choose</button> dinner at seven.</span></div>
-    <div class="q"><span class="n">6</span><span>Yesterday I <button class="choice-gap" data-choice-gap data-answer="made" data-placeholder="choose">choose</button> pasta.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The card says <b>Every Friday</b>: The center <button class="choice-gap" data-choice-gap data-answer="opens" data-hint="Every Friday describes a repeated present routine." data-fix="Every Friday, the center opens at nine." data-placeholder="choose">choose</button> at nine.</span></div>
+    <div class="q"><span class="n">2</span><span>The same routine continues: Rina <button class="choice-gap" data-choice-gap data-answer="takes" data-hint="The established every-Friday frame continues, so use the present routine form." data-fix="Rina takes the first call." data-placeholder="choose">choose</button> the first call.</span></div>
+    <div class="q"><span class="n">3</span><span>The same routine continues: She <button class="choice-gap" data-choice-gap data-answer="makes" data-hint="She needs the third-person present form makes in this routine." data-fix="She makes the visitor list." data-placeholder="choose">choose</button> the visitor list.</span></div>
+    <div class="q"><span class="n">4</span><span>The report now says <b>Last Friday</b>: The center <button class="choice-gap" data-choice-gap data-answer="opened" data-hint="Last Friday locates one finished event, so use opened." data-fix="Last Friday, the center opened at ten." data-placeholder="choose">choose</button> at ten.</span></div>
+    <div class="q"><span class="n">5</span><span>The finished-Friday report continues: Rina <button class="choice-gap" data-choice-gap data-answer="took" data-hint="The past time remains active in the report, and take has the irregular past took." data-fix="Rina took the first call." data-placeholder="choose">choose</button> the first call.</span></div>
+    <div class="q"><span class="n">6</span><span>The same report continues: She <button class="choice-gap" data-choice-gap data-answer="made" data-hint="The finished report continues, and make has the irregular past made." data-fix="She made the visitor list." data-placeholder="choose">choose</button> the visitor list.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: regular verbs add -ed</h2>
+  <h2>Get to the root: locate the situation in finished past time</h2>
   <div class="lead-rule"></div>
-  <p>Most English verbs are regular. Add <span class="ex">-ed</span> to the base verb, and the same form works for every subject: <span class="ex">I worked, she worked, they worked</span>.</p>
+  <p>The past simple presents an action, event, or state as part of a finished past time. The speaker looks at it as a complete fact: <span class="ex">The center opened at ten. Rina took a call. The room was quiet.</span> The form does not tell us whether an event was quick or long. It tells us where the speaker places it in time.</p>
+  <table>
+    <thead><tr><th>message</th><th>example</th><th>why past simple?</th></tr></thead>
+    <tbody>
+      <tr><td>one finished event</td><td><span class="ex">The delivery arrived at 10:20.</span></td><td>the arrival is a complete past event</td></tr>
+      <tr><td>a completed sequence</td><td><span class="ex">Rina signed the form, opened the box, and called Lee.</span></td><td>the verbs move the report forward</td></tr>
+      <tr><td>a past state</td><td><span class="ex">The box was empty.</span></td><td><span class="ex">was</span> describes the state then</td></tr>
+      <tr><td>repetition inside a finished period</td><td><span class="ex">The team met every Friday last year.</span></td><td><span class="ex">last year</span> is finished</td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">A past expression can establish the time for a whole passage. After <span class="ex">Last Friday</span>, later actions can stay in that frame without repeating <span class="ex">last Friday</span>. Context, not a magic time word beside every verb, makes the time clear.</p>
+
   <div class="note">
-    <h3>Spelling you will use a lot</h3>
+    <h3>Useful time boundaries</h3>
+    <p>Use no time preposition before <span class="ex">yesterday, last Friday</span>, or <span class="ex">two days ago</span>. Use <span class="ex">in</span> before a past year: <span class="ex">in 2024</span>. <span class="ex">Ago</span> counts backward from now: <span class="ex">The center opened two years ago.</span></p>
+    <p>A time period does not have to be over for one event inside it to be finished. At 3:00 p.m., someone can say <span class="ex">I called at nine this morning</span>. The call is complete and its time is clear.</p>
+  </div>
+
+  <h2>Build positive forms accurately</h2>
+  <div class="lead-rule"></div>
+  <p>For ordinary action and state verbs, one past form works with every subject: <span class="ex">I worked, she worked, we worked</span>. The verb <span class="ex">be</span> is the exception: <span class="ex">I/he/she/it was</span> and <span class="ex">you/we/they were</span>.</p>
+  <div class="note">
+    <h3>Regular spelling: the precise pattern</h3>
     <table>
-      <thead><tr><th>pattern</th><th>base → past</th><th>example</th></tr></thead>
+      <thead><tr><th>ending</th><th>change</th><th>examples</th></tr></thead>
       <tbody>
-        <tr><td>most verbs: add <b>-ed</b></td><td>work → worked</td><td><span class="contraction">I worked late on Friday.</span></td></tr>
-        <tr><td>one vowel + one consonant: double it, add <b>-ed</b></td><td>stop → stopped</td><td><span class="contraction">The rain stopped at noon.</span></td></tr>
-        <tr><td>consonant + y: change y to i, add <b>-ed</b></td><td>study → studied</td><td><span class="contraction">She studied law in college.</span></td></tr>
-        <tr><td>ends in e: add <b>-d</b></td><td>live → lived</td><td><span class="contraction">We lived in Chicago.</span></td></tr>
+        <tr><td>most verbs</td><td>add <b>-ed</b></td><td><span class="ex">open → opened · call → called</span></td></tr>
+        <tr><td>final <b>e</b></td><td>add <b>-d</b></td><td><span class="ex">live → lived · arrive → arrived</span></td></tr>
+        <tr><td>consonant + <b>y</b></td><td>change <b>y</b> to <b>i</b>, add <b>-ed</b></td><td><span class="ex">study → studied · carry → carried</span></td></tr>
+        <tr><td>vowel + <b>y</b></td><td>keep <b>y</b>, add <b>-ed</b></td><td><span class="ex">play → played · enjoy → enjoyed</span></td></tr>
+        <tr><td>short stressed vowel + final consonant</td><td>double the final consonant, add <b>-ed</b></td><td><span class="ex">stop → stopped · plan → planned</span></td></tr>
       </tbody>
     </table>
-  </div>
-
-  <h2>The system: irregular verbs change shape</h2>
-  <div class="lead-rule"></div>
-  <p>The most common verbs in English are irregular. They do not take <span class="ex">-ed</span>; each one has its own past form. Learn these ten first, because you will use them every day.</p>
-  <table>
-    <thead><tr><th>base verb</th><th>past simple</th><th>example</th></tr></thead>
-    <tbody>
-      <tr><td>go</td><td><b>went</b></td><td><span class="contraction">We went to the beach on Sunday.</span></td></tr>
-      <tr><td>have</td><td><b>had</b></td><td><span class="contraction">I had a meeting at nine.</span></td></tr>
-      <tr><td>do</td><td><b>did</b></td><td><span class="contraction">She did the dishes last night.</span></td></tr>
-      <tr><td>make</td><td><b>made</b></td><td><span class="contraction">He made dinner for us.</span></td></tr>
-      <tr><td>get</td><td><b>got</b></td><td><span class="contraction">I got your message this morning.</span></td></tr>
-      <tr><td>see</td><td><b>saw</b></td><td><span class="contraction">We saw the new movie.</span></td></tr>
-      <tr><td>come</td><td><b>came</b></td><td><span class="contraction">They came to the party late.</span></td></tr>
-      <tr><td>take</td><td><b>took</b></td><td><span class="contraction">She took the early train.</span></td></tr>
-      <tr><td>buy</td><td><b>bought</b></td><td><span class="contraction">I bought coffee on the way.</span></td></tr>
-      <tr><td>say</td><td><b>said</b></td><td><span class="contraction">He said yes right away.</span></td></tr>
-    </tbody>
-  </table>
-
-  <h2>Get to the root: did carries the past</h2>
-  <div class="lead-rule"></div>
-  <p>For questions and negatives, the past simple uses <span class="ex">did</span> and <span class="ex">didn’t</span> with every subject. When <span class="ex">did</span> enters the sentence, it takes all the past grammar with it, so the main verb goes back to the base form.</p>
-  <table>
-    <thead><tr><th>meaning</th><th>regular verb</th><th>irregular verb</th></tr></thead>
-    <tbody>
-      <tr><td><b>positive</b></td><td>I worked late.</td><td>She took the train.</td></tr>
-      <tr><td><b>negative</b></td><td>I didn’t work late.</td><td>She didn’t take the train.</td></tr>
-      <tr><td><b>question</b></td><td>Did you work late?</td><td>Did she take the train?</td></tr>
-      <tr><td><b>short answer</b></td><td>Yes, I did.</td><td>No, she didn’t.</td></tr>
-    </tbody>
-  </table>
-  <p class="note-line">Important: say <span class="ex">Did you go?</span>, not <span class="ex">Did you went?</span>. The word <span class="ex">did</span> already carries the past.</p>
-
-  <div class="thinking-card">
-    <h3>Follow the moving part</h3>
-    <p><span class="ex">She took the train. → Did she take the train? → She didn’t take the train.</span></p>
-    <p>Only <span class="ex">did</span> moves or becomes negative, and it holds all the past. That is why the main verb returns to the base form: <span class="ex">take</span>, not <span class="ex">took</span>.</p>
+    <p>Do not extend the doubling rule to every vowel-plus-consonant spelling. Say <span class="ex">opened</span>, not <span class="ex">openned</span>, because the final syllable is not stressed. Do not double final <span class="ex">w, x</span>, or <span class="ex">y</span>: <span class="ex">snowed, fixed, played</span>.</p>
   </div>
 
   <div class="note">
-    <h3>The verb be plays by its own rules</h3>
-    <p><span class="ex">Was</span> and <span class="ex">were</span> never need <span class="ex">did</span>. Say <span class="ex">Were you tired?</span> and <span class="ex">I wasn’t at home</span>. You already know this system from <span class="ex">was / were</span>.</p>
+    <h3>Frequent irregular forms</h3>
+    <p><span class="ex">go → went · have → had · do → did · make → made · get → got · see → saw · come → came · take → took · buy → bought · say → said · leave → left · tell → told</span></p>
+    <p>Irregular does not mean random grammar. The positive form changes, but the question and negative still use <span class="ex">did + base verb</span>. Store each irregular pair as a spoken chunk: <span class="ex">take, took · buy, bought · say, said</span>.</p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: choose the past form</h3>
-    <p class="choice-hint">Find the time word. Then choose the past form. Four verbs are regular and four are irregular.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="worked">worked</button>
-      <button class="choice-option" data-choice-option="stopped">stopped</button>
-      <button class="choice-option" data-choice-option="studied">studied</button>
-      <button class="choice-option" data-choice-option="lived">lived</button>
-      <button class="choice-option" data-choice-option="went">went</button>
-      <button class="choice-option" data-choice-option="had">had</button>
-      <button class="choice-option" data-choice-option="saw">saw</button>
-      <button class="choice-option" data-choice-option="bought">bought</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed four regular past verbs and recalled four frequent irregular past forms.">
+    <h3>Drill 1: complete the finished event log</h3>
+    <p class="choice-hint">Each line includes a finished time or continues the same finished report.</p>
+    <div class="choice-bank" aria-label="Regular and irregular past choices">
+      <button class="choice-option" data-choice-option="opened">opened</button><button class="choice-option" data-choice-option="planned">planned</button>
+      <button class="choice-option" data-choice-option="carried">carried</button><button class="choice-option" data-choice-option="played">played</button>
+      <button class="choice-option" data-choice-option="went">went</button><button class="choice-option" data-choice-option="took">took</button>
+      <button class="choice-option" data-choice-option="bought">bought</button><button class="choice-option" data-choice-option="said">said</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="worked" data-placeholder="choose">choose</button> at the front desk yesterday.</span></div>
-    <div class="q"><span class="n">2</span><span>The rain <button class="choice-gap" data-choice-gap data-answer="stopped" data-placeholder="choose">choose</button> in the afternoon.</span></div>
-    <div class="q"><span class="n">3</span><span>She <button class="choice-gap" data-choice-gap data-answer="studied" data-placeholder="choose">choose</button> economics in college.</span></div>
-    <div class="q"><span class="n">4</span><span>We <button class="choice-gap" data-choice-gap data-answer="lived" data-placeholder="choose">choose</button> in a small apartment for two years.</span></div>
-    <div class="q"><span class="n">5</span><span>They <button class="choice-gap" data-choice-gap data-answer="went" data-placeholder="choose">choose</button> to the beach last weekend.</span></div>
-    <div class="q"><span class="n">6</span><span>He <button class="choice-gap" data-choice-gap data-answer="had" data-placeholder="choose">choose</button> a meeting at nine yesterday.</span></div>
-    <div class="q"><span class="n">7</span><span>I <button class="choice-gap" data-choice-gap data-answer="saw" data-placeholder="choose">choose</button> my old boss at the train station.</span></div>
-    <div class="q"><span class="n">8</span><span>She <button class="choice-gap" data-choice-gap data-answer="bought" data-placeholder="choose">choose</button> a new phone two days ago.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
+    <div class="q"><span class="n">1</span><span>At 9:00 yesterday, Lee <button class="choice-gap" data-choice-gap data-answer="opened" data-hint="Open is regular and does not double its final consonant." data-fix="Lee opened the front door at 9:00 yesterday." data-placeholder="choose">choose</button> the front door.</span></div>
+    <div class="q"><span class="n">2</span><span>Before the event, the team <button class="choice-gap" data-choice-gap data-answer="planned" data-hint="Plan has a short stressed vowel plus final consonant, so double n before -ed." data-fix="The team planned the event." data-placeholder="choose">choose</button> the event.</span></div>
+    <div class="q"><span class="n">3</span><span>Rina <button class="choice-gap" data-choice-gap data-answer="carried" data-hint="Carry ends consonant plus y, so change y to i and add -ed." data-fix="Rina carried two signs outside." data-placeholder="choose">choose</button> two signs outside.</span></div>
+    <div class="q"><span class="n">4</span><span>A local band <button class="choice-gap" data-choice-gap data-answer="played" data-hint="Play ends vowel plus y, so keep y and add -ed." data-fix="A local band played at noon." data-placeholder="choose">choose</button> at noon.</span></div>
+    <div class="q"><span class="n">5</span><span>At 12:30, Lee <button class="choice-gap" data-choice-gap data-answer="went" data-hint="Go has the irregular past form went." data-fix="Lee went to the supply room at 12:30." data-placeholder="choose">choose</button> to the supply room.</span></div>
+    <div class="q"><span class="n">6</span><span>He <button class="choice-gap" data-choice-gap data-answer="took" data-hint="Take has the irregular past form took." data-fix="He took the last box." data-placeholder="choose">choose</button> the last box.</span></div>
+    <div class="q"><span class="n">7</span><span>Rina <button class="choice-gap" data-choice-gap data-answer="bought" data-hint="Buy has the irregular past form bought." data-fix="Rina bought more tape." data-placeholder="choose">choose</button> more tape.</span></div>
+    <div class="q"><span class="n">8</span><span>She <button class="choice-gap" data-choice-gap data-answer="said" data-hint="Say has the irregular written and spoken past form said." data-fix="She said the room was ready." data-placeholder="choose">choose</button> the room was ready.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: did carries one past marker</h2>
+  <div class="lead-rule"></div>
+  <p>In an ordinary past-simple question or negative, <span class="ex">did</span> carries the past grammar. The main verb returns to its base form. English uses one past marker, not two: <span class="ex">She took the bus. She didn’t take the bus. Did she take the bus?</span></p>
+  <table>
+    <thead><tr><th>purpose</th><th>pattern</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>positive</td><td>subject + past verb</td><td><span class="ex">Rina made the list.</span></td></tr>
+      <tr><td>negative</td><td>subject + didn’t + base verb</td><td><span class="ex">Rina didn’t make the list.</span></td></tr>
+      <tr><td>yes/no question</td><td>Did + subject + base verb?</td><td><span class="ex">Did Rina make the list?</span></td></tr>
+      <tr><td>information question</td><td>question word + did + subject + base verb?</td><td><span class="ex">Why did Rina make the list?</span></td></tr>
+      <tr><td>short answer</td><td>Yes, subject + did. / No, subject + didn’t.</td><td><span class="ex">Yes, she did. No, she didn’t.</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <h3>Be keeps its own past system</h3>
+    <p><span class="ex">Was</span> and <span class="ex">were</span> do not use <span class="ex">did</span>: <span class="ex">The room was quiet. Was the room quiet? The doors weren’t open.</span> Use <span class="ex">did</span> when another verb carries the message: <span class="ex">Did the room become quiet?</span></p>
+  </div>
+
+  <div class="note">
+    <h3>Who did what?</h3>
+    <p><span class="ex">Who called Rina?</span> asks for the subject, the person who called, so there is no <span class="ex">did</span>. <span class="ex">Who did Rina call?</span> already names the subject <span class="ex">Rina</span> and asks for the object. This second pattern uses <span class="ex">did + base verb</span>.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept one past marker in statements, negatives, action questions, and past-be questions.">
+    <h3>Drill 2: choose the complete past frame</h3>
+    <div class="choice-bank" aria-label="Past statement and question choices">
+      <button class="choice-option" data-choice-option="made">made</button><button class="choice-option" data-choice-option="didn’t make">didn’t make</button>
+      <button class="choice-option" data-choice-option="Did she make">Did she make</button><button class="choice-option" data-choice-option="Why did she make">Why did she make</button>
+      <button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="Were">Were</button>
     </div>
+    <div class="q"><span class="n">1</span><span>The event log confirms the completed action: Rina <button class="choice-gap" data-choice-gap data-answer="made" data-hint="A positive past statement uses the irregular past form made." data-fix="Rina made the visitor list." data-placeholder="choose">choose</button> the visitor list.</span></div>
+    <div class="q"><span class="n">2</span><span>The corrected log says the action did not happen: Rina <button class="choice-gap" data-choice-gap data-answer="didn’t make" data-hint="The negative uses didn’t plus base form make." data-fix="Rina didn’t make the lunch list." data-placeholder="choose">choose</button> the lunch list.</span></div>
+    <div class="q"><span class="n">3</span><span>The manager wants yes or no about the visitor list: <button class="choice-gap" data-choice-gap data-answer="Did she make" data-hint="A past action question begins Did she and keeps make in base form." data-fix="Did she make the visitor list?" data-placeholder="choose">choose</button> the visitor list?</span></div>
+    <div class="q"><span class="n">4</span><span>The manager already knows she made it and asks for the reason: <button class="choice-gap" data-choice-gap data-answer="Why did she make" data-hint="A reason question begins Why did she and keeps make in base form." data-fix="Why did she make the visitor list?" data-placeholder="choose">choose</button> the visitor list?</span></div>
+    <div class="q"><span class="n">5</span><span>The report describes one room’s past state: The room <button class="choice-gap" data-choice-gap data-answer="was" data-hint="A singular past state with be takes was, without did." data-fix="The room was quiet." data-placeholder="choose">choose</button> quiet.</span></div>
+    <div class="q"><span class="n">6</span><span>The manager asks about the plural doors’ past state: <button class="choice-gap" data-choice-gap data-answer="Were" data-hint="A past be question with plural doors begins Were." data-fix="Were the doors open?" data-placeholder="choose">choose</button> the doors open?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
   <h2>How -ed sounds</h2>
   <div class="lead-rule"></div>
-  <p>The ending <span class="ex">-ed</span> has three sounds. Most of the time it is one quick sound, not an extra syllable.</p>
+  <p>The written ending <span class="ex">-ed</span> has three pronunciations. The final <b>sound</b> of the base verb selects the ending. The spelling alone does not.</p>
   <table>
-    <thead><tr><th>-ed says</th><th>examples</th><th>how it feels</th></tr></thead>
+    <thead><tr><th>ending</th><th>after which sound?</th><th>examples</th></tr></thead>
     <tbody>
-      <tr><td><b>/t/</b></td><td>worked, stopped, watched</td><td><span class="contraction">A quick t sound: workt.</span></td></tr>
-      <tr><td><b>/d/</b></td><td>lived, played, called</td><td><span class="contraction">A quick d sound: livd.</span></td></tr>
-      <tr><td><b>/ɪd/</b></td><td>wanted, needed, started</td><td><span class="contraction">An extra syllable: want-ed.</span></td></tr>
+      <tr><td><b>/t/</b></td><td>after a voiceless sound other than /t/</td><td><span class="ex">worked · stopped · watched</span></td></tr>
+      <tr><td><b>/d/</b></td><td>after a vowel or voiced sound other than /d/</td><td><span class="ex">played · called · lived</span></td></tr>
+      <tr><td><b>/ɪd/</b></td><td>after /t/ or /d/</td><td><span class="ex">wanted · needed · started</span></td></tr>
     </tbody>
   </table>
-  <p class="note-line">Say <span class="ex">worked</span> as one syllable. Only verbs that end in a <span class="ex">t</span> or <span class="ex">d</span> sound add the extra syllable: <span class="ex">wanted, needed</span>.</p>
+  <p><span class="ex">Worked, stopped, played, called</span>, and <span class="ex">lived</span> stay one syllable. <span class="ex">Wanted</span> and <span class="ex">needed</span> add a syllable. Touch your throat: vibration continues into /d/ after a voiced sound; /t/ has no voice.</p>
 
-  <h3>Words that point to the past</h3>
-  <p>These time expressions tell the listener you are in past-simple territory. Put them at the start or the end of the sentence.</p>
-  <table>
-    <thead><tr><th>time expression</th><th>example</th></tr></thead>
-    <tbody>
-      <tr><td><b>yesterday</b>, yesterday morning</td><td><span class="contraction">I saw him yesterday.</span></td></tr>
-      <tr><td><b>last</b> night / week / month / year</td><td><span class="contraction">We went out last night.</span></td></tr>
-      <tr><td>two days / a week / a year <b>ago</b></td><td><span class="contraction">She moved here two years ago.</span></td></tr>
-      <tr><td><b>in</b> + a past year</td><td><span class="contraction">They got married in 2020.</span></td></tr>
-    </tbody>
-  </table>
-
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type did, didn’t, or the short answer</h3>
-    <p class="choice-hint">Use <b>did</b> for past questions and <b>didn’t</b> for negatives, with every subject. Short answers never repeat the main verb.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Did" aria-label="answer 1" /> you watch the game last night?</span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Did" aria-label="answer 2" /> Ana take the early train?</span></div>
-    <div class="q"><span class="n">3</span><span>Yes, she <input class="answer-input" data-answer="did" aria-label="answer 3" />.</span></div>
-    <div class="q"><span class="n">4</span><span>No, I <input class="answer-input" data-answer="didn’t" aria-label="answer 4" />.</span></div>
-    <div class="q"><span class="n">5</span><span>We <input class="answer-input" data-answer="didn’t" aria-label="answer 5" /> go out last night.</span></div>
-    <div class="q"><span class="n">6</span><span>Did they like the movie? Yes, they <input class="answer-input" data-answer="did" aria-label="answer 6" />.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="note">
+    <h3>Connected questions and story stress</h3>
+    <p>In relaxed U.S. English, <span class="ex">Did you...?</span> often links approximately as <span class="ex">didja</span>: <span class="ex">Did you call?</span> The written form stays <span class="ex">did you</span>. In <span class="ex">Where did you go?</span>, <span class="ex">did you</span> can be light while <span class="ex">where</span> and <span class="ex">go</span> carry the message.</p>
+    <p>In an event sequence, stress the new action and useful detail: <span class="ex">We <strong>OPENED</strong> the doors, <strong>GREETED</strong> the visitors, and <strong>STARTED</strong> the talk.</span></p>
   </div>
 
-  <h2>Read and choose</h2>
+  <section data-lesson-extension="Tutor-read past form, polarity, be, and -ed listening check">
+    <h2>Listen: what exactly happened?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once naturally and once more slowly. Listen for the final sound, positive or negative meaning, action-question form, and past <span class="ex">be</span>. Open the script only after checking.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard three -ed endings, a negative action, a did question, and a past state.">
+      <h3>Tutor-read listening check</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="the center opened at eight" data-hint="Opened ends /d/ and reports the opening time." data-fix="The center opened at eight.">
+          <p class="quiz-question">1. What does Clip 1 report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the center opened at eight">the center opened at eight</button><button class="quiz-option" data-quiz-option="the center opens at eight every day">the center opens at eight every day</button><button class="quiz-option" data-quiz-option="the center did not open">the center did not open</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the rain stopped at noon" data-hint="Stopped ends /t/ and reports when the rain ended." data-fix="The rain stopped at noon.">
+          <p class="quiz-question">2. What does Clip 2 report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the rain stopped at noon">the rain stopped at noon</button><button class="quiz-option" data-quiz-option="the rain started at noon">the rain started at noon</button><button class="quiz-option" data-quiz-option="the rain stops every day">the rain stops every day</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the visitors waited outside" data-hint="Waited ends /ɪd/ with an extra syllable." data-fix="The visitors waited outside.">
+          <p class="quiz-question">3. What does Clip 3 report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the visitors waited outside">the visitors waited outside</button><button class="quiz-option" data-quiz-option="the visitors walked outside">the visitors walked outside</button><button class="quiz-option" data-quiz-option="the visitors were inside">the visitors were inside</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="Rina did not call Lee" data-hint="Listen for didn’t before the base verb call." data-fix="Rina didn’t call Lee.">
+          <p class="quiz-question">4. What does Clip 4 mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rina did not call Lee">Rina did not call Lee</button><button class="quiz-option" data-quiz-option="Rina called Lee">Rina called Lee</button><button class="quiz-option" data-quiz-option="Lee did not call Rina">Lee did not call Rina</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="whether Maya used the bus" data-hint="Did Maya take the bus is a yes-or-no question about her transport." data-fix="Did Maya take the bus? asks whether Maya used the bus.">
+          <p class="quiz-question">5. What information does Clip 5 request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="whether Maya used the bus">whether Maya used the bus</button><button class="quiz-option" data-quiz-option="which bus Maya used">which bus Maya used</button><button class="quiz-option" data-quiz-option="why Maya missed the bus">why Maya missed the bus</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the hall was quiet" data-hint="Was describes the hall’s past state, not an action." data-fix="The hall was quiet.">
+          <p class="quiz-question">6. What past state does Clip 6 describe?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the hall was quiet">the hall was quiet</button><button class="quiz-option" data-quiz-option="the hall became quiet">the hall became quiet</button><button class="quiz-option" data-quiz-option="the hall is usually quiet">the hall is usually quiet</button></div>
+        </div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">The center opened at eight.</span></li>
+        <li><span class="ex">The rain stopped at noon.</span></li>
+        <li><span class="ex">The visitors waited outside.</span></li>
+        <li><span class="ex">Rina didn’t call Lee.</span></li>
+        <li><span class="ex">Did Maya take the bus?</span></li>
+        <li><span class="ex">The hall was quiet.</span></li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read a complete event report</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message about a weekend trip</h3>
-    <p><span class="ex">"Hi Dana! We just got back. We went to Montreal for the weekend. On Saturday we saw the old city and took about a hundred photos. The hotel was small but really nice. We didn’t have time for the museum, so we want to go back next month. How was your weekend?"</span></p>
+    <h3>Saturday open house</h3>
+    <p><span class="ex">Last Saturday, Harbor Center held an open house. The team arrived at 8:00, but the delivery came at 8:40. Rina opened the front doors at 9:00 and greeted the first visitors. Lee didn’t start the welcome talk on time because he helped the delivery driver. The talk started at 9:20. Afterward, twenty visitors joined short classes, and the center closed at 2:00.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed a real past-simple story.">
-    <h3>Drill 3: read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the event sequence, located the delayed talk, and identified its stated cause.">
+    <h3>Read, then choose the report evidence</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Montreal">
-        <p class="quiz-question">1. Where did they go for the weekend?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Montreal">Montreal</button><button class="quiz-option" data-quiz-option="the museum">the museum</button><button class="quiz-option" data-quiz-option="Dana’s city">Dana’s city</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="the delivery came" data-hint="The delivery event appears after the team’s arrival and before the doors opened." data-fix="The team arrived first, and then the delivery came at 8:40.">
+        <p class="quiz-question">1. What happened immediately after the team arrived?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the delivery came">the delivery came</button><button class="quiz-option" data-quiz-option="the center closed">the center closed</button><button class="quiz-option" data-quiz-option="the talk started">the talk started</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the museum">
-        <p class="quiz-question">2. What didn’t they have time for?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="the museum">the museum</button><button class="quiz-option" data-quiz-option="the old city">the old city</button><button class="quiz-option" data-quiz-option="photos">photos</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="9:20" data-hint="The report gives the actual start time after explaining the delay." data-fix="The welcome talk started at 9:20.">
+        <p class="quiz-question">2. When did the welcome talk actually start?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="9:20">9:20</button><button class="quiz-option" data-quiz-option="8:40">8:40</button><button class="quiz-option" data-quiz-option="2:00">2:00</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="small but nice">
-        <p class="quiz-question">3. How was the hotel?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="small but nice">small but nice</button><button class="quiz-option" data-quiz-option="big and noisy">big and noisy</button><button class="quiz-option" data-quiz-option="closed">closed</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="he helped the delivery driver" data-hint="The because clause states Lee’s reason for starting late." data-fix="Lee started late because he helped the delivery driver.">
+        <p class="quiz-question">3. Why didn’t Lee start the talk on time?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="he helped the delivery driver">he helped the delivery driver</button><button class="quiz-option" data-quiz-option="he greeted the first visitors">he greeted the first visitors</button><button class="quiz-option" data-quiz-option="he joined a short class">he joined a short class</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="they went to the beach yesterday">
-    <h3>Drill 4: build a positive sentence</h3>
-    <p class="tile-target">Build the sentence. Remember the irregular past form of go.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="beach">beach</button>
-      <button class="tile" data-build-tile="they">They</button>
-      <button class="tile" data-build-tile="yesterday">yesterday</button>
-      <button class="tile" data-build-tile="went">went</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="to">to</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="did you take the bus">
-    <h3>Drill 5: build a question</h3>
-    <p class="tile-target">Build the question. After did, the verb goes back to the base form.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="bus">bus</button>
-      <button class="tile" data-build-tile="take">take</button>
-      <button class="tile" data-build-tile="did">Did</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="you">you</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
+  <h2>Build questions and reports</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="went" data-fix="Did you go to the bank?" data-why="After did, the verb goes back to the base form. Say Did you go, not Did you went.">
-    <h3>Drill 6: after did</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="did">Did</button>
-      <button class="error-choice" data-error-choice="you">you</button>
-      <button class="error-choice" data-error-choice="went">went</button>
-      <button class="error-choice" data-error-choice="bank">to the bank?</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="the team opened the doors at nine" data-hint="Begin with the team, use the regular past opened, then add the object and time." data-fix="The team opened the doors at nine." data-success-message="Correct. The positive report uses one regular past verb and places the time at the end.">
+    <h3>Drill 3: build the positive event</h3>
+    <p class="tile-target">The event log gives a completed action at 9:00.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="doors">doors</button><button class="tile" data-build-tile="the team">The team</button><button class="tile" data-build-tile="at">at</button><button class="tile" data-build-tile="opened">opened</button><button class="tile" data-build-tile="nine">nine</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer="why did the meeting start late" data-hint="Begin with why, add did and the subject, then use base form start before late." data-fix="Why did the meeting start late?" data-success-message="Correct. The information question uses why plus did, a subject, and the base verb start.">
+    <h3>Drill 4: build the reason question</h3>
+    <p class="tile-target">The manager knows the meeting started late and wants the cause.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="late">late</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="why">Why</button><button class="tile" data-build-tile="start">start</button><button class="tile" data-build-tile="did">did</button><button class="tile" data-build-tile="meeting">meeting</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair three high-value errors</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="openned" data-hint="Open does not have final stress, so its final consonant does not double." data-fix="The center opened at nine." data-why="The accurate spelling is opened, with one n. The broad vowel-plus-consonant idea does not apply when the final syllable is unstressed." data-success-message="Correct. You removed the extra consonant from the regular past form opened.">
+    <h3>Drill 5: apply the precise spelling condition</h3>
+    <p>The report says, “The center openned at nine.” Tap the word to repair.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="center">The center</button><button class="error-choice" data-error-choice="openned">openned</button><button class="error-choice" data-error-choice="at">at</button><button class="error-choice" data-error-choice="nine">nine.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="worked" data-fix="She didn’t work yesterday." data-why="Didn’t already carries the past. The main verb stays in the base form: work.">
-    <h3>Drill 7: after didn’t</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="she">She</button>
-      <button class="error-choice" data-error-choice="didn’t">didn’t</button>
-      <button class="error-choice" data-error-choice="worked">worked</button>
-      <button class="error-choice" data-error-choice="yesterday">yesterday.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="took" data-hint="Did already carries the past marker, so the main verb must return to take." data-fix="Did Maya take the bus?" data-why="A past action question has one past marker: did plus base verb take, not did plus took." data-success-message="Correct. You kept one past marker and restored the base verb after did.">
+    <h3>Drill 6: remove the second past marker</h3>
+    <p>The manager asks, “Did Maya took the bus?” Tap the word to repair.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="did">Did</button><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="took">took</button><button class="error-choice" data-error-choice="bus">the bus?</button></div>
+    <p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="did" data-hint="Quiet is an adjective after past be, so the question begins Was." data-fix="Was the room quiet?" data-why="Past be moves before the subject in a question and never combines with did in this simple adjective frame." data-success-message="Correct. You used the independent past-be question pattern for a past state.">
+    <h3>Drill 7: action question or past state?</h3>
+    <p>The report asks about a past state: “Did the room quiet?” Tap the word to repair.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="did">Did</button><button class="error-choice" data-error-choice="room">the room</button><button class="error-choice" data-error-choice="quiet">quiet?</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 8: say it, then reveal</h3>
-    <p>Read the cue, say the full sentence aloud, then reveal only after you answer.</p>
+    <h3>Oral transform: keep only one past marker</h3>
+    <p>Say each complete response before revealing it.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> I work downtown. Change to yesterday.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I worked downtown yesterday.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> She goes to the gym. Change to last night.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>She went to the gym last night.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> They took the bus. Make it negative.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>They didn’t take the bus.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> He bought a car. Ask the question.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Did he buy a car?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> Did you see the email? Answer yes.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Yes, I did.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> We had a meeting. Make it negative.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>We didn’t have a meeting.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> The team plans the event. Change to last week.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>The team planned the event last week.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> Rina takes the first call. Change to yesterday.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Rina took the first call yesterday.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> Lee started the talk. Make it negative.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Lee didn’t start the talk.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Maya went by bus. Ask a yes-or-no question.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Did Maya go by bus?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> The hall was quiet. Ask about its state.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Was the hall quiet?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> Rina called Lee. Ask for the person Rina called.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Who did Rina call?</strong></p></div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it: report an event without giving private information</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Yesterday:</b> Say five true sentences about yesterday. Use times if you can. <span class="ex">I started work at nine. I made dinner at seven.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask three <span class="ex">Did you…?</span> questions about last weekend. Listen and ask one follow-up question. <span class="ex">Did you go out? Did you watch anything good?</span></div>
-  <div class="prompt-card"><b>A real trip:</b> Describe a trip you took. Where did you go? What did you see? <span class="ex">We went to Istanbul. I took a lot of photos.</span></div>
-  <div class="prompt-card"><b>Not true for me:</b> Say three negative sentences about last week. <span class="ex">I didn’t drive to work. I didn’t sleep well on Monday.</span></div>
-  <div class="prompt-card"><b>Then and now:</b> Compare your life now with five years ago. <span class="ex">Now I work downtown. In 2021 I lived with my parents.</span></div>
+  <p class="note-line">You never need to disclose your real work, study, travel, routine, home, location, family, relationships, finances, purchases, schedule, health, body, legal history, or difficult experiences. Use the fictional center report, invent a public event, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Rebuild the timeline:</b> Use the supplied open-house times to report five actions in order. Include two regular and two irregular past forms.</div>
+  <div class="prompt-card"><b>Correct the record:</b> Add two things that did not happen. Then ask one yes-or-no question and two information questions about missing details.</div>
+  <div class="prompt-card"><b>Compare systems:</b> Choose one action and show its positive, negative, yes-or-no question, and short answer. Then contrast one past state with <span class="ex">was</span> or <span class="ex">were</span>.</div>
+  <div class="prompt-card"><b>Final production: give a fictional community-event report for 45–60 seconds.</b> Establish one finished time; connect at least four actions in order; use two regular and two irregular past verbs; include one negative; describe one past state with <span class="ex">was</span> or <span class="ex">were</span>; and finish with one useful follow-up question.</div>
 
-  <h2>Reflect</h2>
+  <h2>Final check</h2>
   <div class="lead-rule"></div>
-  <div class="thinking-card">
-    <h3>Say the system back</h3>
-    <p>Complete this aloud: “Regular verbs add ______. Irregular verbs change shape, like go to ______ and buy to ______. For questions I use ______, and for negatives I use ______. After both, the main verb goes back to the ______ form.”</p>
-    <p>Then tell your teacher one thing you did yesterday, one thing you didn’t do, and ask one question about your teacher’s week.</p>
-  </div>
-
-  <div class="quiz" data-quiz data-success-message="Great. You can tell past stories with regular verbs, irregular verbs, and did / didn’t.">
-    <h3>Final quiz: past simple forms and meaning</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled finished-past meaning, spelling, irregular forms, did, past be, and -ed sound.">
+    <h3>Eight decisions from a fictional event report</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="worked">
-        <p class="quiz-question">1. I ___ in a restaurant in 2020.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="worked">worked</button><button class="quiz-option" data-quiz-option="work">work</button><button class="quiz-option" data-quiz-option="working">working</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="planned" data-hint="Plan has a short stressed vowel plus final consonant, so double n before -ed." data-fix="The team planned the event last week.">
+        <p class="quiz-question">1. The planning ended last week: The team ___ the event then.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="planned">planned</button><button class="quiz-option" data-quiz-option="planed">planed</button><button class="quiz-option" data-quiz-option="plans">plans</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="went">
-        <p class="quiz-question">2. She ___ to Lisbon last summer.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="went">went</button><button class="quiz-option" data-quiz-option="goed">goed</button><button class="quiz-option" data-quiz-option="goes">goes</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="left" data-hint="Leave has the irregular past form left." data-fix="The driver left at five yesterday.">
+        <p class="quiz-question">2. The log says the driver departed at five yesterday: The driver ___ at five.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="left">left</button><button class="quiz-option" data-quiz-option="leaved">leaved</button><button class="quiz-option" data-quiz-option="leaves">leaves</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Did">
-        <p class="quiz-question">3. ___ you take the early train this morning?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Did">Did</button><button class="quiz-option" data-quiz-option="Do">Do</button><button class="quiz-option" data-quiz-option="Was">Was</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="didn’t call" data-hint="A negative finished action uses didn’t plus base verb call." data-fix="They didn’t call because the phone was offline.">
+        <p class="quiz-question">3. The phone was offline, so the completed report says they ___ anyone.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="didn’t call">didn’t call</button><button class="quiz-option" data-quiz-option="didn’t called">didn’t called</button><button class="quiz-option" data-quiz-option="don’t call">don’t call</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="did">
-        <p class="quiz-question">4. Yes, I ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="did">did</button><button class="quiz-option" data-quiz-option="took">took</button><button class="quiz-option" data-quiz-option="was">was</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Did Maya see" data-hint="A past action question begins Did Maya and uses base verb see." data-fix="Did Maya see the message yesterday?">
+        <p class="quiz-question">4. The manager wants yes or no about yesterday’s message: ___ the message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Did Maya see">Did Maya see</button><button class="quiz-option" data-quiz-option="Did Maya saw">Did Maya saw</button><button class="quiz-option" data-quiz-option="Was Maya see">Was Maya see</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="didn’t">
-        <p class="quiz-question">5. He ___ come to the meeting yesterday.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="didn’t">didn’t</button><button class="quiz-option" data-quiz-option="doesn’t">doesn’t</button><button class="quiz-option" data-quiz-option="wasn’t">wasn’t</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Where did they go?" data-hint="The question asks for a destination, so use where plus did, subject, and base go." data-fix="Where did they go?">
+        <p class="quiz-question">5. The report says they left, but the destination is missing. Which question requests it?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Where did they go?">Where did they go?</button><button class="quiz-option" data-quiz-option="When did they go?">When did they go?</button><button class="quiz-option" data-quiz-option="Why did they go?">Why did they go?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="see">
-        <p class="quiz-question">6. They didn’t ___ the email.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="see">see</button><button class="quiz-option" data-quiz-option="saw">saw</button><button class="quiz-option" data-quiz-option="seen">seen</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="were" data-hint="Plural keys take were for their past location." data-fix="The keys were in the office at noon.">
+        <p class="quiz-question">6. The location log describes the plural keys at noon: The keys ___ in the office.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="did">did</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="/ɪd/, an extra syllable">
-        <p class="quiz-question">7. In “wanted,” the -ed sounds like ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="/ɪd/, an extra syllable">/ɪd/, an extra syllable</button><button class="quiz-option" data-quiz-option="/t/, a quick sound">/t/, a quick sound</button><button class="quiz-option" data-quiz-option="/d/, a quick sound">/d/, a quick sound</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="/t/, one syllable" data-hint="Watch ends in a voiceless sound other than /t/, so -ed is /t/ without a new syllable." data-fix="Watched ends /t/ and remains one syllable.">
+        <p class="quiz-question">7. How does the ending of <b>watched</b> sound?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="/t/, one syllable">/t/, one syllable</button><button class="quiz-option" data-quiz-option="/d/, one syllable">/d/, one syllable</button><button class="quiz-option" data-quiz-option="/ɪd/, two syllables">/ɪd/, two syllables</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Did she buy a ticket?">
-        <p class="quiz-question">8. Which question is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Did she buy a ticket?">Did she buy a ticket?</button><button class="quiz-option" data-quiz-option="Did she bought a ticket?">Did she bought a ticket?</button><button class="quiz-option" data-quiz-option="Do she bought a ticket?">Do she bought a ticket?</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="opened" data-hint="Last Saturday establishes a finished past frame that continues into the next sentence." data-fix="Last Saturday, we prepared the hall. We opened the doors at nine.">
+        <p class="quiz-question">8. The first sentence says, “Last Saturday, we prepared the hall.” The same report continues: “We ___ the doors at nine.”</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="opened">opened</button><button class="quiz-option" data-quiz-option="open">open</button><button class="quiz-option" data-quiz-option="opens">opens</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check quiz</button><button class="lesson-btn" data-reset-quiz>Reset quiz</button></div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <h2>Reflect and plan the next use</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Can you do this without the page?</h3>
+    <p>Explain why <span class="ex">Last Saturday</span> can establish the time for several later verbs. Then give one positive action, change it to a negative and question with only one past marker, and contrast it with a past state using <span class="ex">was</span> or <span class="ex">were</span>.</p>
+    <p>Choose your next use: repeat the fictional report with fewer notes, ask your teacher three event-detail questions, or complete the retrieval below tomorrow.</p>
+  </div>
+
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the meaning, spelling, irregular form, did pattern, be pattern, or sound that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day finished-past form and meaning retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved regular spelling, the base verb after didn’t, and the independent past-be system.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day past choices"><button class="choice-option" data-choice-option="planned">planned</button><button class="choice-option" data-choice-option="planed">planed</button><button class="choice-option" data-choice-option="take">take</button><button class="choice-option" data-choice-option="took">took</button><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="did">did</button></div>
+      <div class="q"><span class="n">1</span><span>The work ended yesterday: The team <button class="choice-gap" data-choice-gap data-answer="planned" data-hint="Plan doubles final n before the regular -ed ending." data-fix="The team planned the event yesterday." data-placeholder="choose">choose</button> the event yesterday.</span></div>
+      <div class="q"><span class="n">2</span><span>The corrected report is negative: Maya didn’t <button class="choice-gap" data-choice-gap data-answer="take" data-hint="Didn’t already carries past, so use base form take." data-fix="Maya didn’t take the bus." data-placeholder="choose">choose</button> the bus.</span></div>
+      <div class="q"><span class="n">3</span><span>The report describes one room’s past state: The room <button class="choice-gap" data-choice-gap data-answer="was" data-hint="A singular past state uses was without did." data-fix="The room was quiet." data-placeholder="choose">choose</button> quiet.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="wrote" data-hint="Did carries the past marker, so the main verb must return to write." data-fix="Did Rina write the report?" data-why="The question needs one past marker: did plus base verb write, not did plus wrote." data-success-message="Correct. You removed the second past marker and restored the base verb write.">
+      <h3>Repair one high-risk question</h3>
+      <p>The manager asks, “Did Rina wrote the report?” Tap the word to repair.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="did">Did</button><button class="error-choice" data-error-choice="rina">Rina</button><button class="error-choice" data-error-choice="wrote">wrote</button><button class="error-choice" data-error-choice="report">the report?</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, report one finished regular action, one irregular action, one negative, one information question, and one past state. Then say one regular ending with /t/, one with /d/, and one with /ɪd/.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>The team planned the event. Rina took the first call. Lee didn’t start on time. Why did the talk start late? The hall was quiet. Watched ends /t/, played ends /d/, and wanted ends /ɪd/.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Object pronouns · A1 Grammar · Curriculum Map",
+  "title": "Object pronouns · A1 Grammar",
   "slug": "object-pronouns",
   "level": "A1",
   "topic": "Object pronouns",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Avoid repeating names and things: Call me , I know her , Give it to them , and Come with us .",
+  "description": "Use me, you, him, her, it, us, and them after verbs and prepositions to avoid repeating the same names and nouns.",
   "sequence": 9,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/subject-pronouns", "a1/present-simple"],
+  "related": ["a0/possessive-adjectives", "a1/imperatives", "a2/phrasal-verbs"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Subject/object roles, clear reference, singular them, object/possessive her, reflexive boundary, pronoun placement, linked speech, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 9</p>
   <h1>Object <em>pronouns</em></h1>
   <p class="standfirst">Avoid repeating names and things: <span class="ex">Call me</span>, <span class="ex">I know her</span>, <span class="ex">Give it to them</span>, and <span class="ex">Come with us</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">me / him / her / them</span>
     <span class="tag">after verbs and prepositions</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Track people in a short exchange.</span></div>
     <div class="flow-step"><b>Discover</b><span>Match subject and object forms.</span></div>
     <div class="flow-step"><b>Build</b><span>Replace repeated nouns and things.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about your real people.</span></div>
+    <div class="flow-step"><b>Use</b><span>Track people and things in a fictional task.</span></div>
   </div>
 
   <p class="note-line">Object pronouns keep your sentences short and natural: say a name once, then let <span class="ex">me, him, her, it, us,</span> and <span class="ex">them</span> do the work.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a subject pronoun, a possessive adjective, and third-person present-simple agreement.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -52,9 +60,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="studies">studies</button>
       <button class="choice-option" data-choice-option="study">study</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My sister lives in Chicago. <button class="choice-gap" data-choice-gap data-answer="She" data-placeholder="choose">choose</button> works downtown. &nbsp;<span class="contraction">(subject pronouns)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My brother loves <button class="choice-gap" data-choice-gap data-answer="his" data-placeholder="choose">choose</button> new job. &nbsp;<span class="contraction">(possessive adjectives)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Ana <button class="choice-gap" data-choice-gap data-answer="studies" data-placeholder="choose">choose</button> English before work. &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The fictional profile introduces Maya with <span class="ex">she</span>: Maya lives in Chicago. <button class="choice-gap" data-choice-gap data-answer="She" data-hint="The second sentence needs the subject form She before works." data-fix="Maya lives in Chicago. She works downtown." data-placeholder="choose">choose</button> works downtown. &nbsp;<span class="contraction">(subject pronouns)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The fictional profile introduces Luis with <span class="ex">he</span>: Luis loves <button class="choice-gap" data-choice-gap data-answer="his" data-hint="The noun job needs the possessive adjective his before it." data-fix="Luis loves his new job." data-placeholder="choose">choose</button> new job. &nbsp;<span class="contraction">(possessive adjectives)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The weekly study log has Ana as one third-person subject: Ana <button class="choice-gap" data-choice-gap data-answer="studies" data-hint="One third-person subject takes studies in the present simple." data-fix="Ana studies English before work." data-placeholder="choose">choose</button> English before work. &nbsp;<span class="contraction">(present simple)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -74,7 +82,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched each object form to an explicitly introduced person, group, speaker, listener, or thing.">
     <h3>Discovery check: point to the right person or thing</h3>
     <p class="choice-hint">Think about who or what the pronoun points back to.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -85,12 +93,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="us">us</button>
       <button class="choice-option" data-choice-option="it">it</button>
     </div>
-    <div class="q"><span class="n">1</span><span>This is my brother. Do you know <button class="choice-gap" data-choice-gap data-answer="him" data-placeholder="choose">choose</button>?</span></div>
-    <div class="q"><span class="n">2</span><span>I love this song. Play <button class="choice-gap" data-choice-gap data-answer="it" data-placeholder="choose">choose</button> again.</span></div>
-    <div class="q"><span class="n">3</span><span>We’re lost. Can you help <button class="choice-gap" data-choice-gap data-answer="us" data-placeholder="choose">choose</button>?</span></div>
-    <div class="q"><span class="n">4</span><span>My parents live far away, so I call <button class="choice-gap" data-choice-gap data-answer="them" data-placeholder="choose">choose</button> every week.</span></div>
-    <div class="q"><span class="n">5</span><span>I don’t understand this word. Can you explain it to <button class="choice-gap" data-choice-gap data-answer="me" data-placeholder="choose">choose</button>?</span></div>
-    <div class="q"><span class="n">6</span><span>Ana is new here, so I eat lunch with <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> on Mondays.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional profile introduces Omar with <span class="ex">he</span>: This is Omar. Do you know <button class="choice-gap" data-choice-gap data-answer="him" data-hint="Omar is the object after know, so he changes to him." data-fix="This is Omar. Do you know him?" data-placeholder="choose">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>The song is one known thing: I love this song. Play <button class="choice-gap" data-choice-gap data-answer="it" data-hint="One known thing takes the object form it." data-fix="I love this song. Play it again." data-placeholder="choose">choose</button> again.</span></div>
+    <div class="q"><span class="n">3</span><span>The two fictional travelers speak together: We’re lost. Can you help <button class="choice-gap" data-choice-gap data-answer="us" data-hint="The speakers are we in the first sentence and the object us after help." data-fix="We’re lost. Can you help us?" data-placeholder="choose">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>The message introduces two clients: The clients live far away, so I call <button class="choice-gap" data-choice-gap data-answer="them" data-hint="The plural people become the object form them after call." data-fix="The clients live far away, so I call them every week." data-placeholder="choose">choose</button> every week.</span></div>
+    <div class="q"><span class="n">5</span><span>The fictional speaker requests the explanation: I don’t understand this word. Can you explain it to <button class="choice-gap" data-choice-gap data-answer="me" data-hint="After the preposition to, the speaker I changes to the object form me." data-fix="Can you explain it to me?" data-placeholder="choose">choose</button>?</span></div>
+    <div class="q"><span class="n">6</span><span>The profile introduces Ana with <span class="ex">she</span>: Ana is new here, so I eat lunch with <button class="choice-gap" data-choice-gap data-answer="her" data-hint="After the preposition with, she changes to the object form her." data-fix="Ana is new here, so I eat lunch with her on Mondays." data-placeholder="choose">choose</button> on Mondays.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -100,7 +108,7 @@ export const page = defineLesson({
 
   <h2>The system: subject and object pairs</h2>
   <div class="lead-rule"></div>
-  <p>Every subject pronoun has a partner form for the other side of the verb. Two of them, <span class="ex">you</span> and <span class="ex">it</span>, do not change at all.</p>
+  <p>Every subject pronoun has a partner form for the object role. Two of them, <span class="ex">you</span> and <span class="ex">it</span>, do not change at all. The word’s position and job, not its appearance alone, tell you the role.</p>
   <table>
     <thead><tr><th>subject</th><th>object</th><th>example</th></tr></thead>
     <tbody>
@@ -113,7 +121,7 @@ export const page = defineLesson({
       <tr><td>they</td><td><b>them</b></td><td>Email them the address.</td></tr>
     </tbody>
   </table>
-  <p class="note-line">Use an object pronoun after a verb or a preposition: <span class="ex">see her</span>, <span class="ex">for him</span>, <span class="ex">with them</span>.</p>
+  <p class="note-line">Use an object pronoun after a verb or a preposition: <span class="ex">see her</span>, <span class="ex">for him</span>, <span class="ex">with them</span>. <span class="ex">They / them</span> can refer to several people or to one person: <span class="ex">A customer left a message. Please call them back.</span></p>
 
   <h2>Get to the root: roles inside the sentence</h2>
   <div class="lead-rule"></div>
@@ -135,10 +143,68 @@ export const page = defineLesson({
     <p>The same two people swap roles, and the forms swap with them. This is why <span class="ex">I saw she</span> is never possible: after the verb, only the object form works. At A1, keep it simple: before the verb, use <span class="ex">I, he, she</span>; after the verb or a preposition, use <span class="ex">me, him, her</span>.</p>
   </div>
 
-  <h3><em>It</em> for a thing, <em>them</em> for plural things</h3>
-  <p>Things follow the same system as people. Use <span class="ex">it</span> for one known thing and <span class="ex">them</span> for plural things: <span class="ex">I love this song. Play it again.</span> and <span class="ex">I bought apples. Put them in the fridge.</span> The listener recovers the thing from the sentence before.</p>
+  <div class="note">
+    <h3>Same spelling, different job: her</h3>
+    <p>In <span class="ex">The manager called her</span>, <span class="ex">her</span> stands alone after the verb, so it is an object pronoun. In <span class="ex">She called her manager</span>, <span class="ex">her</span> comes before the noun <span class="ex">manager</span>, so it is a possessive adjective. Ask what job the word does before you name its grammar.</p>
+  </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <h3><em>It</em> for a thing, <em>them</em> for plural things</h3>
+  <p>Things follow the same system as people. Use <span class="ex">it</span> for one known thing and <span class="ex">them</span> for plural things: <span class="ex">I love this song. Play it again.</span> and <span class="ex">I bought apples. Put them in the fridge.</span> The listener recovers the thing from the sentence before. For people, use the pronoun introduced in the context: <span class="ex">he → him</span>, <span class="ex">she → her</span>, and singular <span class="ex">they → them</span>. Do not guess a pronoun from a person’s name or appearance.</p>
+
+  <div class="thinking-card">
+    <h3>Different person or the same person?</h3>
+    <p>An ordinary object pronoun normally points to someone different from the subject: <span class="ex">Maya called her</span> means Maya called another person. When the subject and object are the same person, English uses a reflexive form: <span class="ex">Maya called herself</span>. Reflexive pronouns receive a full lesson later; for now, notice that <span class="ex">her</span> and <span class="ex">herself</span> do not mean the same thing.</p>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: link the pronoun unless it carries a contrast</h3>
+    <p>Object pronouns are often known information, so neutral speech keeps them light and links them to the verb or preposition: <span class="ex"><strong>CALL</strong>-me</span>, <span class="ex"><strong>ASK</strong>-her</span>, <span class="ex"><strong>TELL</strong>-them</span>, and <span class="ex">with-us</span>. Do not insert a pause between the action and its object.</p>
+    <table>
+      <thead><tr><th>neutral message</th><th>natural focus</th><th>contrastive message</th></tr></thead>
+      <tbody>
+        <tr><td>Call me after lunch.</td><td><b>CALL</b> me after <b>LUNCH</b>.</td><td>Call <b>ME</b>, not Sara.</td></tr>
+        <tr><td>I emailed him yesterday.</td><td>I <b>EMAILED</b> him yesterday.</td><td>I emailed <b>HIM</b>, not her.</td></tr>
+        <tr><td>Come with us.</td><td><b>COME</b> with us.</td><td>Come with <b>US</b>, not them.</td></tr>
+      </tbody>
+    </table>
+    <p>In fast American speech, an unstressed <span class="ex">him</span> or <span class="ex">her</span> can lose a clear <span class="ex">h</span>, and <span class="ex">them</span> can reduce. You may hear <span class="ex"><strong>CALL</strong>-im</span>, <span class="ex"><strong>ASK</strong>-er</span>, and <span class="ex"><strong>TELL</strong>-em</span>. These are listening approximations, not new spellings. At A1, say the full word clearly and link it smoothly. Stress the pronoun only when the identity is the contrast.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read object-pronoun role, reference, and linking check">
+    <h2>Listen: what role or reference did you hear?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once at a natural speed and once more slowly. Listen through the linked form to identify the pronoun’s job or reference. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard subject and object roles, singular them, same versus another thing, and natural pronoun placement.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Object-pronoun listening roles and references">
+        <button class="choice-option" data-choice-option="subject she">subject she</button><button class="choice-option" data-choice-option="object her">object her</button>
+        <button class="choice-option" data-choice-option="one customer">one customer</button><button class="choice-option" data-choice-option="the same report">the same report</button>
+        <button class="choice-option" data-choice-option="another report">another report</button><button class="choice-option" data-choice-option="it to him">it to him</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 starts the second clause with <button class="choice-gap" data-choice-gap data-answer="subject she" data-hint="Listen for the form before can, where the second clause needs a subject." data-fix="Maya says she can help: subject she." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 places <button class="choice-gap" data-choice-gap data-answer="object her" data-hint="Listen for the light pronoun immediately after the verb call." data-fix="Please call her after lunch: object her." data-placeholder="listen">listen</button> after the verb.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 uses <span class="ex">them</span> for <button class="choice-gap" data-choice-gap data-answer="one customer" data-hint="The first sentence introduces one customer without specifying he or she." data-fix="Please return it to them: them refers to one customer." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 uses <span class="ex">it</span> for <button class="choice-gap" data-choice-gap data-answer="the same report" data-hint="The speaker reads one report and then sends that identical document." data-fix="I read the report and sent it to Omar: it means the same report." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 uses <span class="ex">one</span> for <button class="choice-gap" data-choice-gap data-answer="another report" data-hint="The speaker needs a report cover and asks whether a different example is available." data-fix="Do you have one: one means another report cover of that type." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 orders the two pronouns as <button class="choice-gap" data-choice-gap data-answer="it to him" data-hint="The thing pronoun follows send, then to introduces the person pronoun." data-fix="Send it to him today: it to him." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">Maya says she can help.</span></li>
+        <li><span class="ex">Please call her after lunch.</span></li>
+        <li><span class="ex">A customer left this umbrella. Please return it to them.</span></li>
+        <li><span class="ex">I read the report and sent it to Omar.</span></li>
+        <li><span class="ex">I need a clean report cover. Do you have one?</span></li>
+        <li><span class="ex">Omar needs the file. Send it to him today.</span></li>
+      </ol>
+      <p>Keep the object pronouns light and linked on the first reading. On the second reading, preserve the same rhythm while making every full written form recoverable.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched each explicit subject or noun reference to its object form after a verb or preposition.">
     <h3>Drill 1: replace the person or thing</h3>
     <p class="choice-hint">Find who or what the pronoun points back to. Then choose the object form.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -150,14 +216,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="us">us</button>
       <button class="choice-option" data-choice-option="them">them</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Mr. Adler is busy now. Call <button class="choice-gap" data-choice-gap data-answer="him" data-placeholder="choose">choose</button> after lunch.</span></div>
-    <div class="q"><span class="n">2</span><span>My sister works downtown, so I have lunch with <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> on Fridays.</span></div>
-    <div class="q"><span class="n">3</span><span>The invoice is ready. I’ll send <button class="choice-gap" data-choice-gap data-answer="it" data-placeholder="choose">choose</button> to the client today.</span></div>
-    <div class="q"><span class="n">4</span><span>Our neighbors are kind. We invite <button class="choice-gap" data-choice-gap data-answer="them" data-placeholder="choose">choose</button> for dinner sometimes.</span></div>
-    <div class="q"><span class="n">5</span><span>We’re near the station. You can meet <button class="choice-gap" data-choice-gap data-answer="us" data-placeholder="choose">choose</button> at the main entrance.</span></div>
-    <div class="q"><span class="n">6</span><span>I’m in the lobby downstairs. Can you see <button class="choice-gap" data-choice-gap data-answer="me" data-placeholder="choose">choose</button>?</span></div>
-    <div class="q"><span class="n">7</span><span>You’re next on the list. The nurse will call <button class="choice-gap" data-choice-gap data-answer="you" data-placeholder="choose">choose</button> soon.</span></div>
-    <div class="q"><span class="n">8</span><span>My grandfather tells great stories. I love listening to <button class="choice-gap" data-choice-gap data-answer="him" data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">1</span><span>The staff profile introduces Mr. Adler with <span class="ex">he</span>: He is busy now. Call <button class="choice-gap" data-choice-gap data-answer="him" data-hint="After the verb call, the stated subject form he changes to the object form him." data-fix="Mr. Adler is busy now. Call him after lunch." data-placeholder="choose">choose</button> after lunch.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional profile introduces Nia with <span class="ex">she</span>: Nia works downtown, so I have lunch with <button class="choice-gap" data-choice-gap data-answer="her" data-hint="After the preposition with, the stated form she changes to her." data-fix="Nia works downtown, so I have lunch with her on Fridays." data-placeholder="choose">choose</button> on Fridays.</span></div>
+    <div class="q"><span class="n">3</span><span>One known invoice is ready. I’ll send <button class="choice-gap" data-choice-gap data-answer="it" data-hint="One known thing takes it after the verb send." data-fix="The invoice is ready. I’ll send it to the client today." data-placeholder="choose">choose</button> to the client today.</span></div>
+    <div class="q"><span class="n">4</span><span>The fictional neighbors are two people. We invite <button class="choice-gap" data-choice-gap data-answer="them" data-hint="Several people take the object form them after invite." data-fix="Our fictional neighbors are kind. We invite them for dinner sometimes." data-placeholder="choose">choose</button> for dinner sometimes.</span></div>
+    <div class="q"><span class="n">5</span><span>Two fictional speakers say, “We’re near the station.” You can meet <button class="choice-gap" data-choice-gap data-answer="us" data-hint="The speakers are we as subjects and us as the object after meet." data-fix="We’re near the station. You can meet us at the main entrance." data-placeholder="choose">choose</button> at the main entrance.</span></div>
+    <div class="q"><span class="n">6</span><span>The fictional speaker says, “I’m in the lobby downstairs.” Can you see <button class="choice-gap" data-choice-gap data-answer="me" data-hint="The speaker I becomes the object me after see." data-fix="I’m in the lobby downstairs. Can you see me?" data-placeholder="choose">choose</button>?</span></div>
+    <div class="q"><span class="n">7</span><span>The message is addressed directly to one listener: You’re next on the list. The nurse will call <button class="choice-gap" data-choice-gap data-answer="you" data-hint="The form you stays the same in subject and object roles." data-fix="You’re next on the list. The nurse will call you soon." data-placeholder="choose">choose</button> soon.</span></div>
+    <div class="q"><span class="n">8</span><span>The story card introduces Luis with <span class="ex">he</span>: Luis tells great stories. I love listening to <button class="choice-gap" data-choice-gap data-answer="him" data-hint="After the preposition to, the stated form he changes to him." data-fix="Luis tells great stories. I love listening to him." data-placeholder="choose">choose</button>.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -177,25 +243,26 @@ export const page = defineLesson({
       <tr><td>preposition + object</td><td>Wait for <span class="ex">me</span>. Sit next to <span class="ex">him</span>.</td></tr>
     </tbody>
   </table>
+  <p class="note-line">When the thing is itself a pronoun, neutral U.S. English normally uses <span class="ex">verb + it/them + to + person</span>: <span class="ex">Send it to her</span> and <span class="ex">Give them to us</span>. With a full thing noun, both common patterns work: <span class="ex">Send her the link</span> or <span class="ex">Send the link to her</span>. Avoid the awkward learner pattern <span class="ex">Send her it</span>.</p>
 
   <h3>Pronouns are reference tools</h3>
   <p>A pronoun lets the listener recover a person or thing without repeating the full noun. The reference must be clear. <span class="ex">I spoke to Maya and sent her the file</span> is clear because <span class="ex">her</span> points back to Maya. If several women were mentioned, repeating the name may be clearer than using <span class="ex">her</span>.</p>
-  <p>Number and person must match the reference: one male person → <span class="ex">him</span>; one female person → <span class="ex">her</span>; one thing or animal when sex is not relevant → <span class="ex">it</span>; multiple people or things → <span class="ex">them</span>.</p>
+  <p>Person, number, and the introduced pronoun must match the reference: <span class="ex">he → him</span>; <span class="ex">she → her</span>; singular <span class="ex">they → them</span>; one known thing or animal when no personal pronoun is introduced → <span class="ex">it</span>; multiple people or things → <span class="ex">them</span>.</p>
   <div class="note">
     <h3>It, them, and one</h3>
     <p>Use <span class="ex">it/them</span> when referring to the same known thing or things: <span class="ex">Where is my key? I need it.</span> Use <span class="ex">one/ones</span> when you mean another example of that type: <span class="ex">I need a key. Do you have one?</span></p>
   </div>
-  <p class="note-line">In careful standard usage, say <span class="ex">between you and me</span>, because a pronoun after a preposition takes the object form.</p>
+  <p class="note-line">In the target standard, say <span class="ex">Ana and I are ready</span> because the whole phrase is the subject, but <span class="ex">They invited Ana and me</span> and <span class="ex">between you and me</span> because those pronouns are objects.</p>
 
-  <div class="practice" data-answer-drill>
+  <div class="practice" data-answer-drill data-success-message="Correct. You changed each explicitly stated subject or noun phrase into the matching object form.">
     <h3>Drill 2: type the object pronoun</h3>
     <p class="choice-hint">Read the cue in parentheses. Type the object pronoun that replaces it.</p>
-    <div class="q"><span class="n">1</span><span>I texted <input class="answer-input" data-answer="her" aria-label="answer 1" /> this morning. &nbsp;<span class="contraction">(Sara)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I call <input class="answer-input" data-answer="them" aria-label="answer 2" /> every Sunday evening. &nbsp;<span class="contraction">(my parents)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Wait for <input class="answer-input" data-answer="him" aria-label="answer 3" /> outside the office. &nbsp;<span class="contraction">(Tom)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Please print <input class="answer-input" data-answer="it" aria-label="answer 4" /> before the meeting. &nbsp;<span class="contraction">(the report)</span></span></div>
-    <div class="q"><span class="n">5</span><span>The manager invited <input class="answer-input" data-answer="us" aria-label="answer 5" /> to the workshop. &nbsp;<span class="contraction">(my coworker and me)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Can you help <input class="answer-input" data-answer="me" aria-label="answer 6" /> with these bags? &nbsp;<span class="contraction">(I)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The profile introduces Sara with <span class="ex">she</span>: I texted <input class="answer-input" data-answer="her" data-hint="After texted, the stated subject form she changes to her." data-fix="I texted her this morning." aria-label="Object pronoun for a person introduced with she after texted" /> this morning. &nbsp;<span class="contraction">(she → ?)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The contact card names two clients: I call <input class="answer-input" data-answer="them" data-hint="Two clients take the plural object form them." data-fix="I call them every Sunday evening." aria-label="Object pronoun replacing two clients after call" /> every Sunday evening. &nbsp;<span class="contraction">(the two clients)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The profile introduces Tom with <span class="ex">he</span>: Wait for <input class="answer-input" data-answer="him" data-hint="After the preposition for, the stated subject form he changes to him." data-fix="Wait for him outside the office." aria-label="Object pronoun for a person introduced with he after for" /> outside the office. &nbsp;<span class="contraction">(he → ?)</span></span></div>
+    <div class="q"><span class="n">4</span><span>One known report needs a paper copy: Please print <input class="answer-input" data-answer="it" data-hint="One known thing takes the object form it." data-fix="Please print it before the meeting." aria-label="Object pronoun replacing one known report after print" /> before the meeting. &nbsp;<span class="contraction">(the report)</span></span></div>
+    <div class="q"><span class="n">5</span><span>The fictional speaker and one coworker form the object group: The manager invited <input class="answer-input" data-answer="us" data-hint="A group that includes the speaker is us in the object role." data-fix="The manager invited us to the workshop." aria-label="Object pronoun for the speaker and one coworker after invited" /> to the workshop. &nbsp;<span class="contraction">(my coworker and me)</span></span></div>
+    <div class="q"><span class="n">6</span><span>The fictional speaker asks for help: Can you help <input class="answer-input" data-answer="me" data-hint="The speaker I changes to the object form me after help." data-fix="Can you help me with these bags?" aria-label="Object pronoun for the fictional speaker after help" /> with these staged bags? &nbsp;<span class="contraction">(I → ?)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -212,15 +279,15 @@ export const page = defineLesson({
   <div class="quiz" data-quiz data-success-message="Good reading. You tracked every pronoun back to the right person or thing.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Dario">
+      <div class="quiz-item" data-quiz-item data-answer="Dario" data-hint="The first request names Dario, and the next sentence replaces that same person with him." data-fix="Him refers to Dario.">
         <p class="quiz-question">1. “I emailed him yesterday.” Who is him?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Dario">Dario</button><button class="quiz-option" data-quiz-option="Petra">Petra</button><button class="quiz-option" data-quiz-option="the writer">the writer</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Dario and Petra">
+      <div class="quiz-item" data-quiz-item data-answer="Dario and Petra" data-hint="Immediately before them, the writer joins Dario and Petra with and." data-fix="Them refers to Dario and Petra together.">
         <p class="quiz-question">2. “Tell them about the schedule change.” Who is them?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Dario and Petra">Dario and Petra</button><button class="quiz-option" data-quiz-option="the writer and Dario">the writer and Dario</button><button class="quiz-option" data-quiz-option="the clients">the clients</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the new schedule">
+      <div class="quiz-item" data-quiz-item data-answer="the new schedule" data-hint="The instruction first says to finish one new schedule and then says to send it." data-fix="It refers to the new schedule.">
         <p class="quiz-question">3. “Send it to me too.” What is it?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the new schedule">the new schedule</button><button class="quiz-option" data-quiz-option="the email">the email</button><button class="quiz-option" data-quiz-option="the phone">the phone</button></div>
       </div>
@@ -232,9 +299,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="my manager needs it before friday">
+  <div class="tile-game" data-tile-builder data-answer="my manager needs it before friday" data-hint="Begin with My manager needs, place the object it after the verb, and finish with before Friday." data-fix="My manager needs it before Friday." data-success-message="Correct. It replaces the one draft schedule already introduced and sits directly after needs.">
     <h3>Drill 4: build the reminder</h3>
-    <p class="tile-target">Build the sentence. It stands for a thing you both already know.</p>
+    <p class="tile-target">The shared project card already introduced one draft schedule. Build the reminder; <span class="ex">it</span> stands for that same schedule.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="needs">needs</button>
       <button class="tile" data-build-tile="my">My</button>
@@ -251,9 +318,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="call me when you see them">
+  <div class="tile-game" data-tile-builder data-answer="call me when you see them" data-hint="Begin with the request Call me, add when you, and place them immediately after see." data-fix="Call me when you see them." data-success-message="Correct. Me is the object of call, and them replaces the two clients after see.">
     <h3>Drill 5: build the request</h3>
-    <p class="tile-target">Build the sentence. Each object pronoun comes right after its verb.</p>
+    <p class="tile-target">The message has already introduced two clients. Build the request. Each object pronoun comes right after its verb.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="them">them</button>
       <button class="tile" data-build-tile="call">Call</button>
@@ -272,9 +339,9 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="she" data-fix="I saw her at the market." data-why="After a verb, use the object form: saw her.">
+  <div class="micro-drill" data-spot-error data-answer="she" data-hint="The pronoun comes after saw and refers to the person who receives the seeing action." data-fix="I saw her at the market." data-why="After a verb, use the object form: saw her.">
     <h3>Drill 6: object after the verb</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>The previous sentence introduced Elena with <span class="ex">she</span>. Tap the word that is wrong in “I saw she at the market.”</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
       <button class="error-choice" data-error-choice="saw">saw</button>
@@ -284,9 +351,9 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="he" data-fix="Listen to him carefully." data-why="After the preposition to, use the object form: to him.">
+  <div class="micro-drill" data-spot-error data-answer="he" data-hint="The pronoun follows the preposition to, so it needs the object form." data-fix="Listen to him carefully." data-why="After the preposition to, use the object form: to him.">
     <h3>Drill 7: object after a preposition</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>The speaker card introduced Omar with <span class="ex">he</span>. Tap the word that is wrong in “Listen to he carefully.”</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="listen">Listen</button>
       <button class="error-choice" data-error-choice="to">to</button>
@@ -301,7 +368,7 @@ export const page = defineLesson({
     <p>Read the cue, say the full sentence aloud with a pronoun, then reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> I called Sara. Replace “Sara.”</p>
+        <p class="transform-cue"><b>1</b> Sara is introduced with <span class="ex">she</span>: I called Sara. Replace “Sara.”</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>I called her.</strong></p>
       </div>
@@ -311,7 +378,7 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>We invited them.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> Do you know my brother? Replace “my brother.”</p>
+        <p class="transform-cue"><b>3</b> Omar is introduced with <span class="ex">he</span>: Do you know Omar? Replace “Omar.”</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>Do you know him?</strong></p>
       </div>
@@ -326,7 +393,7 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>Please send the file to us.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> Wait for Mr. Silva downstairs. Replace “Mr. Silva.”</p>
+        <p class="transform-cue"><b>6</b> Mr. Silva is introduced with <span class="ex">he</span>: Wait for Mr. Silva downstairs. Replace “Mr. Silva.”</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>Wait for him downstairs.</strong></p>
       </div>
@@ -335,52 +402,67 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your helpers:</b> Name two people who help you, and say how you help them back. <span class="ex">My coworker helps me with reports. I help her with English.</span></div>
-  <div class="prompt-card"><b>Your phone:</b> Say four true sentences about your phone with <span class="ex">it</span>. <span class="ex">I charge it at night. I check it too often.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask three questions with object pronouns and listen to the answers. <span class="ex">Can you hear me? Who calls you every day?</span></div>
-  <div class="prompt-card"><b>Messages:</b> Describe the messages you send in a normal day: who you send them to, and who answers you first.</div>
-  <div class="prompt-card"><b>Family:</b> Say five sentences about family members with <span class="ex">him</span>, <span class="ex">her</span>, and <span class="ex">them</span>. <span class="ex">I visit her on weekends. I call them from the car.</span></div>
+  <p class="note-line">You never need to disclose your real family, contacts, messages, phone use, workplace, relationships, schedule, or location. Use the fictional staff cards, project files, help desk, or event plan below whenever you prefer.</p>
+  <div class="prompt-card"><b>Role swap:</b> Use two fictional staff cards to show a subject and object changing roles. <span class="ex">She helps him. He helps her.</span></div>
+  <div class="prompt-card"><b>Known project items:</b> Introduce one file and several photos, then continue with <span class="ex">it</span> and <span class="ex">them</span>.</div>
+  <div class="prompt-card"><b>Help desk:</b> Make three requests with an object after a verb or preposition. <span class="ex">Call me. Wait for us. Send it to them.</span></div>
+  <div class="prompt-card"><b>One unknown visitor:</b> Introduce one person without specifying <span class="ex">he</span> or <span class="ex">she</span>, then refer back with singular <span class="ex">them</span>.</div>
+  <div class="prompt-card"><b>Clear reference:</b> Create one unclear sentence with two possible references. Repeat a name or noun to make the intended person unmistakable.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: coordinate a fictional community event</h3>
+    <p>Give a 45–60 second staff and materials update. Include all six pieces of evidence:</p>
+    <ol>
+      <li>one role swap with a subject form and its object partner;</li>
+      <li>one object directly after a verb and one after a preposition;</li>
+      <li><span class="ex">it</span> for one known item and <span class="ex">them</span> for several known items;</li>
+      <li>singular <span class="ex">them</span> for one person whose <span class="ex">he / she</span> pronoun is not specified;</li>
+      <li>one natural placement such as <span class="ex">Send it to her</span>;</li>
+      <li>one linked neutral pronoun and one contrastively stressed pronoun: <span class="ex">Call <strong>ME</strong>, not them</span>.</li>
+    </ol>
+    <p>The listener identifies every pronoun’s reference. If any pronoun could point to two people or things, revise the update by repeating the clearest name or noun.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
     <p>Recite the seven pairs aloud: <span class="ex">I → me, you → you, he → him, she → her, it → it, we → us, they → them.</span> Then complete this aloud: “Before the verb, I use the ______ form. After the verb or a preposition, I use the ______ form.”</p>
-    <p>Finish with one true sentence about a person you will see today, using <span class="ex">him</span> or <span class="ex">her</span>.</p>
+    <p>Then use two fictional staff cards to say one subject sentence, one object-after-verb sentence, and one object-after-preposition sentence.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can point to people and things without repeating their names.">
+  <div class="quiz" data-quiz data-success-message="Correct. You matched object forms to explicit roles and clear singular, plural, speaker, and thing references.">
     <h3>Final quiz: object pronoun forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="her">
-        <p class="quiz-question">1. I work with Elena. I see ___ every day.</p>
+      <div class="quiz-item" data-quiz-item data-answer="her" data-hint="The profile introduces Elena with she, and the gap follows the verb see." data-fix="Elena uses she. I see her every day.">
+        <p class="quiz-question">1. The profile introduces Elena with <span class="ex">she</span>: I work with Elena. I see ___ every day.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="her">her</button><button class="quiz-option" data-quiz-option="she">she</button><button class="quiz-option" data-quiz-option="hers">hers</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="them">
-        <p class="quiz-question">2. These boxes are heavy. Don’t carry ___ alone.</p>
+      <div class="quiz-item" data-quiz-item data-answer="them" data-hint="These boxes is plural, so the object after carry is them." data-fix="These boxes are heavy. Don’t carry them alone.">
+        <p class="quiz-question">2. The staged image shows several boxes: These boxes are heavy. Don’t carry ___ alone.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="them">them</button><button class="quiz-option" data-quiz-option="they">they</button><button class="quiz-option" data-quiz-option="it">it</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="us">
-        <p class="quiz-question">3. Marco and I are at the café. Come and join ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="us" data-hint="The group includes the speaker, so we changes to us after join." data-fix="Marco and I are at the café. Come and join us.">
+        <p class="quiz-question">3. The fictional speaker is with Marco: Marco and I are at the café. Come and join ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="us">us</button><button class="quiz-option" data-quiz-option="we">we</button><button class="quiz-option" data-quiz-option="them">them</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="him">
-        <p class="quiz-question">4. That’s Mr. Iqbal from the third floor. Do you know ___?</p>
+      <div class="quiz-item" data-quiz-item data-answer="him" data-hint="The profile introduces Mr. Iqbal with he, and the gap follows know." data-fix="That’s Mr. Iqbal. Do you know him?">
+        <p class="quiz-question">4. The profile introduces Mr. Iqbal with <span class="ex">he</span>: That’s Mr. Iqbal from the third floor. Do you know ___?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="him">him</button><button class="quiz-option" data-quiz-option="he">he</button><button class="quiz-option" data-quiz-option="his">his</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="it">
-        <p class="quiz-question">5. Where’s the remote? I can’t find ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="it" data-hint="The remote is one known thing, so replace it with it." data-fix="Where’s the remote? I can’t find it.">
+        <p class="quiz-question">5. The speaker wants the same known remote: Where’s the remote? I can’t find ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="it">it</button><button class="quiz-option" data-quiz-option="them">them</button><button class="quiz-option" data-quiz-option="him">him</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the person writing">
+      <div class="quiz-item" data-quiz-item data-answer="the person writing" data-hint="Me is the object form of I, so it points to the speaker or writer." data-fix="Me refers to the person writing the message.">
         <p class="quiz-question">6. “I emailed Dario, but he didn’t answer me.” Who is me?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the person writing">the person writing</button><button class="quiz-option" data-quiz-option="Dario">Dario</button><button class="quiz-option" data-quiz-option="Dario’s manager">Dario’s manager</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I saw her at the market.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="I saw her at the market." data-hint="The subject slot needs I, and the object after saw needs her." data-fix="I saw her at the market.">
+        <p class="quiz-question">7. In the target standard, which sentence has a subject before saw and an object after it?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="I saw her at the market.">I saw her at the market.</button><button class="quiz-option" data-quiz-option="I saw she at the market.">I saw she at the market.</button><button class="quiz-option" data-quiz-option="Me saw her at the market.">Me saw her at the market.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the apples">
+      <div class="quiz-item" data-quiz-item data-answer="the apples" data-hint="Them is plural and points back to the plural noun immediately introduced before it." data-fix="Them refers to the apples.">
         <p class="quiz-question">8. “I bought apples and put them in the fridge.” What does them mean?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the apples">the apples</button><button class="quiz-option" data-quiz-option="the fridge">the fridge</button><button class="quiz-option" data-quiz-option="the bags">the bags</button></div>
       </div>
@@ -391,6 +473,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the subject/object role, reference, pronoun placement, or spoken link that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day object-pronoun retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an object after a verb, singular them, it for the same file, and me after a preposition.">
+      <h3>Choose the object form from the role and reference</h3>
+      <div class="choice-bank" aria-label="Next-day object-pronoun choices">
+        <button class="choice-option" data-choice-option="me">me</button><button class="choice-option" data-choice-option="her">her</button>
+        <button class="choice-option" data-choice-option="it">it</button><button class="choice-option" data-choice-option="them">them</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The profile introduces Maya with <span class="ex">she</span>: Please call <button class="choice-gap" data-choice-gap data-answer="her" data-hint="After the verb call, the stated subject form she changes to her." data-fix="Please call her after lunch." data-placeholder="choose">choose</button> after lunch.</span></div>
+      <div class="q"><span class="n">2</span><span>One customer left a message, but no <span class="ex">he / she</span> pronoun is specified: Please call <button class="choice-gap" data-choice-gap data-answer="them" data-hint="Singular they changes to singular them in the object role." data-fix="One customer left a message. Please call them back." data-placeholder="choose">choose</button> back.</span></div>
+      <div class="q"><span class="n">3</span><span>The team is discussing the same known file: I opened the file and sent <button class="choice-gap" data-choice-gap data-answer="it" data-hint="One identical known thing takes it." data-fix="I opened the file and sent it to Maya." data-placeholder="choose">choose</button> to Maya.</span></div>
+      <div class="q"><span class="n">4</span><span>The fictional speaker requests an explanation: Can you explain the change to <button class="choice-gap" data-choice-gap data-answer="me" data-hint="After the preposition to, the speaker I changes to me." data-fix="Can you explain the change to me?" data-placeholder="choose">choose</button>?</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="I" data-hint="The whole phrase follows invited, so both names and pronouns inside it are objects." data-fix="The organizer invited Ana and me." data-why="Use I in a subject phrase, but me in an object phrase after a verb or preposition.">
+      <h3>Repair the coordinated object</h3>
+      <p>The invitation report says, “The organizer invited Ana and I.” Tap the one pronoun to replace.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="organizer">The organizer</button><button class="error-choice" data-error-choice="invited">invited</button><button class="error-choice" data-error-choice="ana">Ana and</button><button class="error-choice" data-error-choice="I">I</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, introduce two fictional staff members and one project file. Continue with one subject pronoun, two object pronouns, singular <span class="ex">them</span>, and <span class="ex">it</span> for the file.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Maya works with Omar. She calls him every morning, and he sends the schedule to her. A visitor needs help, so Maya calls them. Omar opens the file and checks it.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

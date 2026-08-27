@@ -1,19 +1,348 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Second conditional · B1 Grammar · Curriculum Map",
+  "title": "Second conditional · B1 Grammar",
   "slug": "second-conditional",
   "level": "B1",
   "topic": "Second conditional",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Second conditional.",
+  "status": "ready",
+  "description": "Use past-form distance to explore imagined present or future situations, compare speaker viewpoints, give tactful advice, and discuss possible results.",
   "sequence": 3,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a2/first-conditional", "a2/past-simple", "a2/modals-should-must-have-to"],
+  "related": ["b2/third-and-mixed-conditionals", "b2/wish-if-only"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 57,
+    "revisionSummary": "Speaker distance, present and future meaning, form, First Conditional contrast, were/was, modal results, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 3</p>
+  <h1>Second conditional: <em>step into an imagined situation</em></h1>
+  <p class="standfirst">A past form can create distance without moving the meaning into past time. In <span class="ex">If we had more room, we’d add a studio</span>, the speaker imagines a different situation now. The grammar presents a viewpoint; it does not calculate the real-world probability for us.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">imagined present · remote future · advice</span>
+    <span class="tag">if + past form · would / could / might + base verb</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Compare an open plan with a deliberately distant scenario.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Use past grammar for distance, not past time.</span></div>
+    <div class="flow-step"><b>Contrast</b><span>Choose First or Second Conditional from the speaker’s stance.</span></div>
+    <div class="flow-step"><b>Use</b><span>Explore fictional options, advice, and consequences.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can build positive, negative, and question patterns; use a past form for imagined present or future distance; distinguish an open First Conditional from a remote Second Conditional without claiming objective probability; choose <span class="ex">would, could</span>, or <span class="ex">might</span> for the intended result; use careful <span class="ex">were</span> and natural informal <span class="ex">was</span> accurately; give tactful advice; hear reduced U.S. forms; and lead a clear hypothetical discussion.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an open First Conditional result, the Past Simple form had, and advice with should.">
+    <h3>Three foundations from A2</h3>
+    <p class="choice-hint">Use the stated future status, verb family, and advice purpose.</p>
+    <div class="choice-bank" aria-label="Second conditional foundation choices"><button class="choice-option" data-choice-option="will rent">will rent</button><button class="choice-option" data-choice-option="had">had</button><button class="choice-option" data-choice-option="should ask">should ask</button><button class="choice-option" data-choice-option="would rented">would rented</button><button class="choice-option" data-choice-option="have">have</button><button class="choice-option" data-choice-option="asked yesterday">asked yesterday</button></div>
+    <div class="q"><span class="n">1</span><span>The grant decision on Friday is open, and the team has a real response plan: If the grant arrives, we <button class="choice-gap" data-choice-gap data-answer="will rent" data-hint="Use will plus a base verb for the planned result of this open future condition." data-fix="If the grant arrives on Friday, we will rent Hall A.">choose</button> Hall A.</span></div>
+    <div class="q"><span class="n">2</span><span>The Past Simple form of <span class="ex">have</span> for every subject is <button class="choice-gap" data-choice-gap data-answer="had" data-hint="Retrieve the second form in have, had, had." data-fix="The Past Simple form of have is had.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>A colleague wants direct advice about a smaller pilot: You <button class="choice-gap" data-choice-gap data-answer="should ask" data-hint="Should plus a base verb gives direct advice." data-fix="You should ask whether a smaller pilot is possible.">choose</button> whether a smaller pilot is possible.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice an open plan, an imagined world, and advice</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Riverside community studio meeting</h3>
+    <p><b>Open decision:</b> <span class="ex">If the grant arrives on Friday, we’ll rent Hall A.</span></p>
+    <p><b>Different situation now:</b> <span class="ex">If we had twice the budget, we’d build a recording booth. We do not have that money now.</span></p>
+    <p><b>Advice through imagination:</b> <span class="ex">If I were you, I’d start with a smaller pilot.</span></p>
+    <ul>
+      <li>Which condition belongs to a real current plan?</li>
+      <li>Which past form describes an imagined present, not a finished past event?</li>
+      <li>Which speaker briefly imagines being in another person’s position?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated the open grant plan, imagined present budget, past-form distance, hypothetical result, and advice frame.">
+    <h3>Discovery check: identify the speaker’s viewpoint</h3>
+    <div class="choice-bank" aria-label="Second conditional discovery choices"><button class="choice-option" data-choice-option="the grant arrives on Friday">the grant arrives on Friday</button><button class="choice-option" data-choice-option="twice the budget">twice the budget</button><button class="choice-option" data-choice-option="had">had</button><button class="choice-option" data-choice-option="would build">would build</button><button class="choice-option" data-choice-option="If I were you">If I were you</button></div>
+    <div class="q"><span class="n">1</span><span>The condition connected to the team’s real Friday plan is <button class="choice-gap" data-choice-gap data-answer="the grant arrives on Friday" data-hint="Choose the event the team is genuinely waiting for and has planned around." data-fix="The grant arrives on Friday is the open condition in the First Conditional plan.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The situation the team explicitly says is not true now is having <button class="choice-gap" data-choice-gap data-answer="twice the budget" data-hint="The next sentence states that the team does not have this money now." data-fix="Twice the budget is the imagined present situation.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The past form that creates distance from the team’s current budget is <button class="choice-gap" data-choice-gap data-answer="had" data-hint="Find the verb after If we in the imagined sentence." data-fix="Had is a past form, but it creates present hypothetical distance here.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The result inside that imagined world is <button class="choice-gap" data-choice-gap data-answer="would build" data-hint="Choose would plus the base verb that describes the hypothetical result." data-fix="Would build is the imagined result of having twice the budget.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The phrase that imagines the listener’s position in order to give advice is <button class="choice-gap" data-choice-gap data-answer="If I were you" data-hint="Choose the conventional advice frame in which the speaker imagines being the listener." data-fix="If I were you creates an imagined position before the advice result.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: past form as distance, not past time</h2>
+  <div class="lead-rule"></div>
+  <p>The Second Conditional creates a mental space that is separate from the speaker’s current reality or expected path. The condition uses a past form, but the meaning usually concerns now or the future:</p>
+  <div class="thinking-card">
+    <p><span class="ex">current reality: we have one room</span> → <span class="ex">imagined alternative now: if we had two rooms</span> → <span class="ex">result in that world: we would add a studio</span></p>
+  </div>
+  <p>This distance can serve several purposes: contradict the present facts, explore an unlikely or remote future, dream freely, offer advice, or make a proposal less direct. The grammar reports the speaker’s stance. Two speakers can frame the same possible event differently without either one knowing its objective probability.</p>
+
+  <table>
+    <thead><tr><th>job</th><th>form</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>condition first</td><td><span class="ex">If + subject + past form, subject + would + base verb</span></td><td><span class="ex">If we had more room, we would add a studio.</span></td></tr>
+      <tr><td>result first</td><td><span class="ex">Subject + would + base verb + if + subject + past form</span></td><td><span class="ex">We would add a studio if we had more room.</span></td></tr>
+      <tr><td>negative condition</td><td><span class="ex">if + subject + didn’t + base verb</span></td><td><span class="ex">If rent didn’t cost so much, we would stay.</span></td></tr>
+      <tr><td>negative result</td><td><span class="ex">subject + wouldn’t + base verb</span></td><td><span class="ex">We wouldn’t move if this room were larger.</span></td></tr>
+      <tr><td>question</td><td><span class="ex">question word + would + subject + base verb + if...?</span></td><td><span class="ex">What would you change if you led the project?</span></td></tr>
+    </tbody>
+  </table>
+  <p>Use a comma when the if-clause comes first. Do not normally put <span class="ex">would</span> in the condition of a neutral hypothetical: <span class="ex">If we had more room, we would expand</span>. English can use <span class="ex">if you would...</span> for willingness or a formal request, as in <span class="ex">If you would wait here, I’ll check</span>, but that is a different meaning, not the ordinary Second Conditional pattern.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You built a positive condition, result-first order, negative condition, negative result, information question, and modal-distance pattern.">
+    <h3>Form check: build both clauses</h3>
+    <div class="choice-bank" aria-label="Second conditional form choices"><button class="choice-option" data-choice-option="had">had</button><button class="choice-option" data-choice-option="would add">would add</button><button class="choice-option" data-choice-option="didn’t cost">didn’t cost</button><button class="choice-option" data-choice-option="wouldn’t move">wouldn’t move</button><button class="choice-option" data-choice-option="What would you change">What would you change</button><button class="choice-option" data-choice-option="if you led">if you led</button></div>
+    <div class="q"><span class="n">1</span><span>The team has one room now. Imagine the alternative: If we <button class="choice-gap" data-choice-gap data-answer="had" data-hint="Use the Past Simple form had to create distance from the team’s current one-room reality." data-fix="If we had two rooms, we would create a recording studio.">choose</button> two rooms, we would create a recording studio.</span></div>
+    <div class="q"><span class="n">2</span><span>Put the imagined result first: We <button class="choice-gap" data-choice-gap data-answer="would add" data-hint="Begin the result with would plus the base verb add." data-fix="We would add evening classes if more tutors were available.">choose</button> evening classes if more tutors were available.</span></div>
+    <div class="q"><span class="n">3</span><span>Rent is expensive now. Imagine a lower-cost situation: If rent <button class="choice-gap" data-choice-gap data-answer="didn’t cost" data-hint="A negative past-form condition uses didn’t plus the base verb cost." data-fix="If rent didn’t cost so much, the center would stay in this building.">choose</button> so much, the center would stay in this building.</span></div>
+    <div class="q"><span class="n">4</span><span>The room is too small, so imagine the opposite: We <button class="choice-gap" data-choice-gap data-answer="wouldn’t move" data-hint="Put not on would and keep the base verb move." data-fix="We wouldn’t move if this room were larger.">choose</button> if this room were larger.</span></div>
+    <div class="q"><span class="n">5</span><span>Ask for one hypothetical change: <button class="choice-gap" data-choice-gap data-answer="What would you change" data-hint="Begin with What, then would, the subject you, and the base verb change." data-fix="What would you change if you led the project?">choose</button> if you led the project?</span></div>
+    <div class="q"><span class="n">6</span><span>Complete the condition with statement order, not question order: What would you change <button class="choice-gap" data-choice-gap data-answer="if you led" data-hint="Inside the if-clause, keep the subject you before the past form led." data-fix="What would you change if you led the project?">choose</button> the project?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Five reasons a speaker chooses distance</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>speaker’s purpose</th><th>stated context</th><th>Second Conditional</th></tr></thead>
+    <tbody>
+      <tr><td>different present</td><td>The center has one room now.</td><td><span class="ex">If it had two rooms, it would offer more classes.</span></td></tr>
+      <tr><td>remote future</td><td>The speaker sees a full renovation as doubtful.</td><td><span class="ex">If the center expanded next year, it would need more staff.</span></td></tr>
+      <tr><td>free imagination</td><td>No decision or probability estimate is needed.</td><td><span class="ex">If the building could talk, what would it say?</span></td></tr>
+      <tr><td>advice</td><td>The speaker imagines the listener’s position.</td><td><span class="ex">If I were you, I’d test the idea first.</span></td></tr>
+      <tr><td>tactful proposal</td><td>The speaker wants a less direct discussion.</td><td><span class="ex">Would it help if we started smaller?</span></td></tr>
+    </tbody>
+  </table>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched a different present, remote future, free imagination, advice, and tactful proposal to the context that motivates distance.">
+    <h3>Meaning check: identify why the speaker steps back</h3>
+    <div class="choice-bank" aria-label="Second conditional purpose choices"><button class="choice-option" data-choice-option="different present">different present</button><button class="choice-option" data-choice-option="remote future">remote future</button><button class="choice-option" data-choice-option="free imagination">free imagination</button><button class="choice-option" data-choice-option="advice">advice</button><button class="choice-option" data-choice-option="tactful proposal">tactful proposal</button></div>
+    <div class="q"><span class="n">1</span><span>The center has only one room now: <span class="ex">If it had two rooms, it would offer more classes</span> imagines a <button class="choice-gap" data-choice-gap data-answer="different present" data-hint="The stated fact now is one room; the condition imagines two." data-fix="The sentence imagines a different present in which the center has two rooms.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The director says a full renovation next year is doubtful: <span class="ex">If the center expanded, it would need more staff</span> frames a <button class="choice-gap" data-choice-gap data-answer="remote future" data-hint="Use the director’s stated doubtful view of the next-year renovation." data-fix="The director frames the possible next-year expansion as a remote future.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>No probability judgment is needed in <span class="ex">If the building could talk, what would it say?</span> The purpose is <button class="choice-gap" data-choice-gap data-answer="free imagination" data-hint="The question invites a creative answer, not a forecast." data-fix="The talking-building question creates free imagination.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">If I were you, I’d test the idea first</span> imagines the listener’s position to offer <button class="choice-gap" data-choice-gap data-answer="advice" data-hint="The result tells the listener what the speaker recommends." data-fix="If I were you introduces advice through an imagined position.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">Would it help if we started smaller?</span> opens a less direct discussion, so its purpose is a <button class="choice-gap" data-choice-gap data-answer="tactful proposal" data-hint="The question softens a possible recommendation instead of commanding the team." data-fix="Would it help if we started smaller? is a tactful proposal.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>First or Second Conditional? Read the speaker’s stance</h2>
+  <div class="lead-rule"></div>
+  <p>First Conditional presents an open future path and its response: <span class="ex">If the grant arrives Friday, we’ll rent Hall A.</span> Second Conditional deliberately steps back: <span class="ex">If a much larger grant arrived someday, we’d build a studio.</span></p>
+  <p>The difference is not a universal percentage. One speaker may say <span class="ex">If I get the role, I’ll move</span> because the interview is active. Another may say <span class="ex">If I got the role, I’d move</span> because they want to explore the idea from a distance. Grammar reveals the chosen framing, not a verified fact about the future.</p>
+  <table>
+    <thead><tr><th>viewpoint</th><th>condition</th><th>result</th></tr></thead>
+    <tbody>
+      <tr><td>open future path</td><td><span class="ex">if + present form</span></td><td><span class="ex">will / can / might / imperative + base</span></td></tr>
+      <tr><td>imagined or remote path</td><td><span class="ex">if + past form</span></td><td><span class="ex">would / could / might + base</span></td></tr>
+    </tbody>
+  </table>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose an open plan or a deliberately remote frame from the speaker’s stated stance, not from a mechanical probability rule.">
+    <h3>Contrast check: preserve the stated framing</h3>
+    <div class="choice-bank" aria-label="First and second conditional contrast choices"><button class="choice-option" data-choice-option="arrives, we’ll rent">arrives, we’ll rent</button><button class="choice-option" data-choice-option="arrived, we’d build">arrived, we’d build</button><button class="choice-option" data-choice-option="get, I’ll move">get, I’ll move</button><button class="choice-option" data-choice-option="got, I’d move">got, I’d move</button><button class="choice-option" data-choice-option="the speaker’s framing">the speaker’s framing</button></div>
+    <div class="q"><span class="n">1</span><span>The grant result is due Friday, and renting Hall A is the team’s active plan: If the grant <button class="choice-gap" data-choice-gap data-answer="arrives, we’ll rent" data-hint="Use the open First Conditional frame stated in the current plan." data-fix="If the grant arrives on Friday, we’ll rent Hall A.">choose</button> Hall A.</span></div>
+    <div class="q"><span class="n">2</span><span>The director calls a much larger grant a distant dream: If that grant <button class="choice-gap" data-choice-gap data-answer="arrived, we’d build" data-hint="Use a past form and would because the director deliberately frames this as remote." data-fix="If a much larger grant arrived someday, we’d build a studio.">choose</button> a studio.</span></div>
+    <div class="q"><span class="n">3</span><span>The interview is active, and the speaker presents moving as a real response plan: If I <button class="choice-gap" data-choice-gap data-answer="get, I’ll move" data-hint="Use the open frame because the speaker explicitly treats the move as a current plan." data-fix="If I get the role, I’ll move closer to the office.">choose</button> closer to the office.</span></div>
+    <div class="q"><span class="n">4</span><span>The speaker is only exploring a distant possibility: If I <button class="choice-gap" data-choice-gap data-answer="got, I’d move" data-hint="Use the remote frame because the speaker explicitly steps back from the possibility." data-fix="If I got the role, I’d move closer to the office.">choose</button> closer to the office.</span></div>
+    <div class="q"><span class="n">5</span><span>The contrast between the last two accurate sentences mainly communicates <button class="choice-gap" data-choice-gap data-answer="the speaker’s framing" data-hint="The grammar shows how the speaker presents the possibility, not an objectively measured percentage." data-fix="The forms communicate the speaker’s framing of the same possible event.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2><span class="ex">Were</span>, <span class="ex">was</span>, and the advice frame</h2>
+  <div class="lead-rule"></div>
+  <p>In careful hypothetical English, <span class="ex">were</span> can appear with every subject: <span class="ex">If I were, if she were, if the room were</span>. This form is especially common in formal writing and in the conventional advice phrase <span class="ex">If I were you</span>.</p>
+  <p>In natural informal U.S. conversation, many speakers also use <span class="ex">was</span> with <span class="ex">I, he, she</span>, and <span class="ex">it</span>: <span class="ex">If I was more organized, I’d volunteer</span>. Do not label that widespread informal pattern as meaningless or impossible. For careful writing and the fixed advice frame, <span class="ex">were</span> is the safest target.</p>
+  <p>Past <span class="ex">was</span> can also express real uncertainty rather than a Second Conditional: <span class="ex">If Lena was at the meeting yesterday, she heard the announcement.</span> The speaker does not know whether Lena attended; both clauses refer to a possible real past.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used careful were for hypothetical advice and formal distance, recognized informal was, and separated real past uncertainty from a Second Conditional.">
+    <h3>Usage check: follow the stated register and meaning</h3>
+    <div class="choice-bank" aria-label="Were and was usage choices"><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="informal hypothetical speech">informal hypothetical speech</button><button class="choice-option" data-choice-option="real past uncertainty">real past uncertainty</button></div>
+    <div class="q"><span class="n">1</span><span>Use the conventional careful advice frame: If I <button class="choice-gap" data-choice-gap data-answer="were" data-hint="If I were you is the safest conventional form for careful advice." data-fix="If I were you, I’d start with a smaller pilot.">choose</button> you, I’d start with a smaller pilot.</span></div>
+    <div class="q"><span class="n">2</span><span>Use formal written style for a hypothetical building plan: If Hall A <button class="choice-gap" data-choice-gap data-answer="were" data-hint="Careful formal hypothetical style allows were with the singular subject Hall A." data-fix="If Hall A were larger, the center would add a studio.">choose</button> larger, the center would add a studio.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">If I was more organized, I’d volunteer</span>, many U.S. speakers use <span class="ex">was</span> as <button class="choice-gap" data-choice-gap data-answer="informal hypothetical speech" data-hint="The sentence imagines a different present, and the register is explicitly informal." data-fix="If I was more organized is a widespread informal hypothetical pattern in U.S. speech.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">If Lena was at the meeting yesterday, she heard the announcement</span> expresses <button class="choice-gap" data-choice-gap data-answer="real past uncertainty" data-hint="The speaker is unsure whether a real past attendance event happened." data-fix="The sentence expresses real past uncertainty, not an imagined present or future.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose the result: <span class="ex">would</span>, <span class="ex">could</span>, or <span class="ex">might</span></h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>modal result</th><th>speaker’s intended meaning</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">would + base</span></td><td>expected consequence inside the imagined situation</td><td><span class="ex">With more room, we would add a studio.</span></td></tr>
+      <tr><td><span class="ex">could + base</span></td><td>ability or available option inside that situation</td><td><span class="ex">With more room, we could offer recording classes.</span></td></tr>
+      <tr><td><span class="ex">might + base</span></td><td>uncertain possible consequence</td><td><span class="ex">With more room, we might attract new tutors.</span></td></tr>
+      <tr><td><span class="ex">wouldn’t + base</span></td><td>expected negative consequence or absence</td><td><span class="ex">With better soundproofing, neighbors wouldn’t hear the music.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Could</span> may also appear in the condition to imagine ability: <span class="ex">If we could open on Sundays, we would add a weekend class.</span> In every modal result, use the base verb: <span class="ex">would add, could offer, might attract</span>, not <span class="ex">would added</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched expected consequence, available option, uncertain possibility, negative consequence, and imagined ability to the intended modal result.">
+    <h3>Result check: choose the exact modal meaning</h3>
+    <div class="choice-bank" aria-label="Second conditional modal result choices"><button class="choice-option" data-choice-option="would add">would add</button><button class="choice-option" data-choice-option="could offer">could offer</button><button class="choice-option" data-choice-option="might attract">might attract</button><button class="choice-option" data-choice-option="wouldn’t hear">wouldn’t hear</button><button class="choice-option" data-choice-option="could open">could open</button></div>
+    <div class="q"><span class="n">1</span><span>The team treats a studio as its expected choice in the imagined larger building: With more room, it <button class="choice-gap" data-choice-gap data-answer="would add" data-hint="Use would for the expected consequence inside the imagined situation." data-fix="With more room, the center would add a recording studio.">choose</button> a recording studio.</span></div>
+    <div class="q"><span class="n">2</span><span>The larger room would make recording classes an available option: The center <button class="choice-gap" data-choice-gap data-answer="could offer" data-hint="Use could for an ability or option made possible by the imagined room." data-fix="With more room, the center could offer recording classes.">choose</button> recording classes.</span></div>
+    <div class="q"><span class="n">3</span><span>The director is unsure whether new tutors would respond: The center <button class="choice-gap" data-choice-gap data-answer="might attract" data-hint="Use might for an uncertain possible consequence." data-fix="With more room, the center might attract new tutors.">choose</button> new tutors.</span></div>
+    <div class="q"><span class="n">4</span><span>Better soundproofing would prevent a specific problem: Neighbors <button class="choice-gap" data-choice-gap data-answer="wouldn’t hear" data-hint="Use the negative would form for the expected absence of noise outside." data-fix="With better soundproofing, neighbors wouldn’t hear the music.">choose</button> the music.</span></div>
+    <div class="q"><span class="n">5</span><span>The center cannot open Sundays now. Imagine that ability in the condition: If it <button class="choice-gap" data-choice-gap data-answer="could open" data-hint="Use could in the if-clause to imagine an ability the center does not currently have." data-fix="If the center could open on Sundays, it would add a weekend class.">choose</button> on Sundays, it would add a weekend class.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Ask a hypothetical question without scrambling the if-clause</h2>
+  <div class="lead-rule"></div>
+  <p>Put question order in the result clause: <span class="ex">What would you change...?</span> Keep statement order in the condition: <span class="ex">...if you led the project?</span> The same division works with <span class="ex">where, who, how</span>, and yes-or-no questions.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed what, where, who, and yes-or-no hypothetical questions while preserving statement order inside each if-clause.">
+    <h3>Question check: request one clear kind of information</h3>
+    <div class="choice-bank" aria-label="Second conditional question choices"><button class="choice-option" data-choice-option="What would you change">What would you change</button><button class="choice-option" data-choice-option="Where would the team meet">Where would the team meet</button><button class="choice-option" data-choice-option="Who would lead the class">Who would lead the class</button><button class="choice-option" data-choice-option="Would the center stay open">Would the center stay open</button></div>
+    <div class="q"><span class="n">1</span><span>Ask for one project feature: <button class="choice-gap" data-choice-gap data-answer="What would you change" data-hint="Use What, then would, the subject you, and the base verb change." data-fix="What would you change if you led the project?">choose</button> if you led the project?</span></div>
+    <div class="q"><span class="n">2</span><span>Ask for a place under a closed-building scenario: <button class="choice-gap" data-choice-gap data-answer="Where would the team meet" data-hint="Use Where before would and keep the subject team before the base verb meet." data-fix="Where would the team meet if this building closed?">choose</button> if this building closed?</span></div>
+    <div class="q"><span class="n">3</span><span>Ask for a person under an imagined evening schedule: <button class="choice-gap" data-choice-gap data-answer="Who would lead the class" data-hint="Who requests the person; would lead builds the imagined result." data-fix="Who would lead the class if it started at 8:00 p.m.?">choose</button> if it started at 8:00 p.m.?</span></div>
+    <div class="q"><span class="n">4</span><span>Ask a yes-or-no question about an imagined lower-rent result: <button class="choice-gap" data-choice-gap data-answer="Would the center stay open" data-hint="Begin with Would, then the subject center and base verb stay." data-fix="Would the center stay open if rent were lower?">choose</button> if rent were lower?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: weak <span class="ex">would</span>, linked questions, and contrast</h2>
+  <div class="lead-rule"></div>
+  <div class="two-col">
+    <div>
+      <h3>Let message words carry the beats</h3>
+      <p><span class="ex">Would</span> often contracts after a subject: <span class="ex">I’d /aɪd/, you’d /jud/, we’d /wid/, they’d /ðeɪd/</span>. In <span class="ex">We’d ADD a STUdio</span>, the result verb and new noun carry stronger beats than the contraction.</p>
+      <p>After <span class="ex">’d</span>, a base verb points to <span class="ex">would</span>: <span class="ex">We’d add</span>. A past participle points to <span class="ex">had</span>: <span class="ex">We’d added the chairs before noon</span>. The following verb form and context resolve the contraction.</p>
+    </div>
+    <div>
+      <h3>Link without losing the condition</h3>
+      <p>In quick U.S. speech, <span class="ex">What would you do?</span> may sound like /wʌt wədʒə ˈdu/. <span class="ex">If I</span> commonly links as /ɪfaɪ/. These are listening targets; a careful full form remains natural.</p>
+      <p>Stress the corrected viewpoint when needed: <span class="ex">If the grant ARRIVES, we’ll RENT the hall</span> for the open plan; <span class="ex">If a larger grant ARRIVED, we’d BUILD a studio</span> for the remote scenario.</p>
+    </div>
+  </div>
+
+  <section data-lesson-extension="Tutor-read open and remote framing, linked hypothetical question, advice, modal result, and contraction-meaning listening check">
+    <h2>Listen for stance before opening the transcript</h2>
+    <div class="lead-rule"></div>
+    <p>Your tutor reads each line once naturally and once in short thought groups. Decide how the speaker frames the condition and what the modal result contributes.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard remote framing, a linked hypothetical question, tactful advice, an available option, and the difference between would and had in contracted forms.">
+      <h3>Listening check: recover the imagined relationship</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The speaker frames the larger grant as remote." data-hint="Listen for the past form arrived and contracted we’d build in a future scenario." data-fix="The speaker frames the larger grant as remote."><p class="quiz-question">1. How does the first speaker frame the larger grant?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The speaker frames the larger grant as remote.">The speaker frames the larger grant as remote.</button><button class="quiz-option" data-quiz-option="The speaker confirms that the grant arrived yesterday.">The speaker confirms that the grant arrived yesterday.</button><button class="quiz-option" data-quiz-option="The speaker guarantees the grant tomorrow.">The speaker guarantees the grant tomorrow.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="what action the listener imagines taking" data-hint="Listen for the linked What would you do and the closed-venue condition." data-fix="The question asks what action the listener imagines taking if the venue closed."><p class="quiz-question">2. What information does the linked question request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="what action the listener imagines taking">what action the listener imagines taking</button><button class="quiz-option" data-quiz-option="when the venue definitely closed yesterday">when the venue definitely closed yesterday</button><button class="quiz-option" data-quiz-option="who has already purchased the venue">who has already purchased the venue</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Start with a smaller pilot." data-hint="Listen for If I were you and the contracted advice result I’d start." data-fix="The advice is to start with a smaller pilot."><p class="quiz-question">3. What advice does the third line give?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Start with a smaller pilot.">Start with a smaller pilot.</button><button class="quiz-option" data-quiz-option="Cancel every future project.">Cancel every future project.</button><button class="quiz-option" data-quiz-option="Spend the entire budget immediately.">Spend the entire budget immediately.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Recording classes would become an available option." data-hint="Listen for could offer, which presents an available option rather than a guaranteed decision." data-fix="With more room, recording classes would become an available option."><p class="quiz-question">4. What does <span class="ex">could offer</span> communicate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Recording classes would become an available option.">Recording classes would become an available option.</button><button class="quiz-option" data-quiz-option="Recording classes would become compulsory.">Recording classes would become compulsory.</button><button class="quiz-option" data-quiz-option="The center offered the classes yesterday.">The center offered the classes yesterday.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The first ’d means would; the second ’d means had." data-hint="Listen to the form after each contraction: base add versus participle added." data-fix="In We’d add, ’d means would; in we’d added, ’d means had."><p class="quiz-question">5. What does <span class="ex">’d</span> mean in the two final phrases?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The first ’d means would; the second ’d means had.">The first ’d means would; the second ’d means had.</button><button class="quiz-option" data-quiz-option="Both contractions can only mean did.">Both contractions can only mean did.</button><button class="quiz-option" data-quiz-option="Both phrases are commands about tomorrow.">Both phrases are commands about tomorrow.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">If a larger grant ARRIVED, we’d BUILD a studio.</span> Evidence: past-form distance for a remote future scenario.</li>
+        <li><span class="ex">What would you DO if the venue CLOSED?</span> Evidence: linked /wədʒə/ and a requested imagined action.</li>
+        <li><span class="ex">If I were YOU, I’d START with a smaller PILOT.</span> Evidence: conventional advice frame and contracted result.</li>
+        <li><span class="ex">If we had more ROOM, we could OFFER recording classes.</span> Evidence: could presents an available option.</li>
+        <li><span class="ex">With more room, we’d ADD a studio. By noon, we’d ADDED all the chairs.</span> Evidence: base <span class="ex">add</span> resolves <span class="ex">’d</span> as <span class="ex">would</span>; participle <span class="ex">added</span> resolves it as <span class="ex">had</span>.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read one complete planning update</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Riverside studio decision, Thursday afternoon</h3>
+    <p><span class="ex">The team will learn on Friday whether its current grant application succeeded. If the grant arrives, it will rent Hall A for a six-week pilot. The current budget is $18,000, which is not enough for a recording booth. If the team had twice that budget, it would build one, and it could offer audio classes. Lena thinks a smaller pilot is safer. She tells Maya, “If I were you, I’d test the schedule before buying equipment.” The building manager says Sunday access is not available now. If the center could open on Sundays next year, it might add one weekend class.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the open Friday plan, imagined larger budget, available audio-class option, and advice to test the schedule from the update.">
+    <h3>Reading check: use only the planning update</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="It will rent Hall A for a six-week pilot." data-hint="The second sentence gives the planned response if the current grant succeeds." data-fix="If the grant arrives, the team will rent Hall A for a six-week pilot."><p class="quiz-question">1. What is the team’s open plan if the grant arrives?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="It will rent Hall A for a six-week pilot.">It will rent Hall A for a six-week pilot.</button><button class="quiz-option" data-quiz-option="It will immediately buy the entire building.">It will immediately buy the entire building.</button><button class="quiz-option" data-quiz-option="It will cancel the grant application.">It will cancel the grant application.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="$36,000" data-hint="Twice the stated current budget of $18,000 is $36,000." data-fix="The imagined budget is $36,000, twice the current $18,000."><p class="quiz-question">2. How large is the imagined budget that would support a recording booth?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="$36,000">$36,000</button><button class="quiz-option" data-quiz-option="$18,000">$18,000</button><button class="quiz-option" data-quiz-option="$9,000">$9,000</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Audio classes would become an available option." data-hint="The update uses could offer after the imagined larger budget." data-fix="With twice the budget, audio classes would become an available option."><p class="quiz-question">3. What would the larger budget make possible, without guaranteeing that choice?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Audio classes would become an available option.">Audio classes would become an available option.</button><button class="quiz-option" data-quiz-option="Every resident would be required to attend.">Every resident would be required to attend.</button><button class="quiz-option" data-quiz-option="Sunday access would already exist.">Sunday access would already exist.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Test the schedule before buying equipment." data-hint="Read the direct quotation introduced as Lena’s advice to Maya." data-fix="Lena advises Maya to test the schedule before buying equipment."><p class="quiz-question">4. What does Lena advise Maya to do first?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Test the schedule before buying equipment.">Test the schedule before buying equipment.</button><button class="quiz-option" data-quiz-option="Open on Sunday without permission.">Open on Sunday without permission.</button><button class="quiz-option" data-quiz-option="Reject the current grant before Friday.">Reject the current grant before Friday.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build a hypothetical question and careful advice</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="what would the team do if the grant did not arrive" data-hint="Begin with What would the team do, then use statement order and did not plus arrive in the if-clause." data-fix="What would the team do if the grant did not arrive?" data-success-message="Correct. The result clause uses question order, while the if-clause keeps the grant before did not arrive.">
+    <h3>Build 1: ask about an imagined failed application</h3><p class="tile-target">The application is still open. Temporarily imagine that the grant does not arrive and ask for the team’s response.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="grant">grant</button><button class="tile" data-build-tile="team">team</button><button class="tile" data-build-tile="not">not</button><button class="tile" data-build-tile="what">What</button><button class="tile" data-build-tile="arrive">arrive</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="if">if</button><button class="tile" data-build-tile="do">do</button><button class="tile" data-build-tile="did">did</button><button class="tile" data-build-tile="would">would</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="if I were the coordinator I would start with a pilot" data-hint="Begin with If I were the coordinator, then build the result with I would plus the base verb start." data-fix="If I were the coordinator, I would start with a pilot." data-success-message="Correct. Were creates the careful imagined position, and would start gives the advice result.">
+    <h3>Build 2: give advice from an imagined position</h3><p class="tile-target">Use careful hypothetical style to say what you recommend as the fictional coordinator.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="pilot">pilot</button><button class="tile" data-build-tile="coordinator">coordinator</button><button class="tile" data-build-tile="if">If</button><button class="tile" data-build-tile="would">would</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="with">with</button><button class="tile" data-build-tile="start">start</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="a">a</button><button class="tile" data-build-tile="were">were</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair clause or modal form</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="would have" data-hint="The team does not have more space now; a neutral Second Conditional puts the past form in the if-clause." data-fix="If we had more space, we’d add a recording booth." data-why="Had creates distance from the current space, while would belongs in the imagined result. Would have here would not express the ordinary condition." data-success-message="Correct. Had belongs in the neutral imagined condition, while would add belongs in its result.">
+    <h3>Repair 1: keep ordinary <span class="ex">would</span> in the result</h3><p>Tap the verb phrase that incorrectly places <span class="ex">would</span> in the neutral condition.</p><div class="spot-options"><button class="error-choice" data-error-choice="if">If</button><button class="error-choice" data-error-choice="we">we</button><button class="error-choice" data-error-choice="would have">would have</button><button class="error-choice" data-error-choice="space">more space,</button><button class="error-choice" data-error-choice="add">we’d add</button><button class="error-choice" data-error-choice="booth">a recording booth.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="moved" data-hint="Would requires a base verb in the imagined result." data-fix="If the venue closed next month, the team would move to Hall A." data-why="The modal would already carries the conditional meaning, so the lexical verb stays in its base form move." data-success-message="Correct. Move is the base verb required after would in the imagined result.">
+    <h3>Repair 2: use the base verb after <span class="ex">would</span></h3><p>Tap the result verb that incorrectly uses a past form after <span class="ex">would</span>.</p><div class="spot-options"><button class="error-choice" data-error-choice="if">If</button><button class="error-choice" data-error-choice="venue">the venue</button><button class="error-choice" data-error-choice="closed">closed next month,</button><button class="error-choice" data-error-choice="team">the team</button><button class="error-choice" data-error-choice="would">would</button><button class="error-choice" data-error-choice="moved">moved</button><button class="error-choice" data-error-choice="hall">to Hall A.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="you would" data-hint="Question order places would before the subject you in the result clause." data-fix="What would you do if the grant did not arrive?" data-why="The result clause is the question: What would you do? The if-clause keeps ordinary statement order: if the grant did not arrive." data-success-message="Correct. Would moves before you in the question, while the if-clause keeps statement order.">
+    <h3>Repair 3: put question order in the right clause</h3><p>Tap the two-word sequence that reverses the subject and modal incorrectly.</p><div class="spot-options"><button class="error-choice" data-error-choice="what">What</button><button class="error-choice" data-error-choice="you would">you would</button><button class="error-choice" data-error-choice="do">do</button><button class="error-choice" data-error-choice="if">if</button><button class="error-choice" data-error-choice="grant">the grant</button><button class="error-choice" data-error-choice="did">did not arrive?</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing personal choices</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real income, budget, employer, career plans, housing, immigration status, family, health, schedule, location, political views, relationships, education record, or personal regrets. Use the fictional Riverside center. Real details are optional.</p>
+  <div class="prompt-card"><b>Different present:</b> The center has one room. Imagine it had three rooms. State one expected consequence, one available option, and one uncertain possibility.</div>
+  <div class="prompt-card"><b>Remote future:</b> The director sees a citywide expansion as doubtful. Explain what the center would need and what it might offer if expansion happened.</div>
+  <div class="prompt-card"><b>Advice:</b> Maya is considering buying equipment before testing the schedule. Use <span class="ex">If I were you</span> and give a reason.</div>
+  <div class="prompt-card"><b>Tactful proposal:</b> The pilot feels too large. Ask <span class="ex">Would it help if...?</span>, then invite one alternative.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: lead a 75–90 second fictional planning discussion</h3>
+    <p>Begin with one open First Conditional plan. Then explore one different present and one remote future with Second Conditional forms. Include one <span class="ex">would</span> consequence, one <span class="ex">could</span> option, one <span class="ex">might</span> possibility, one tactful piece of advice, and one follow-up question. Explain why each condition is open or deliberately distant.</p>
+    <p><b>Evidence check:</b> Can the listener recover the speaker’s stance, the condition and result, the exact modal meaning, and whether <span class="ex">were</span> or <span class="ex">was</span> fits the chosen register?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You preserved open versus distant framing, selected a result modal for its exact meaning, and treated were and informal was accurately.">
+    <h3>Final check: defend the speaker’s choices</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="If the current grant arrives Friday, we’ll rent Hall A." data-hint="The result is due Friday, and the team has an active response plan, so preserve the open frame." data-fix="If the current grant arrives Friday, we’ll rent Hall A."><p class="quiz-question">1. Which sentence presents the current grant as an open future path?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="If the current grant arrives Friday, we’ll rent Hall A.">If the current grant arrives Friday, we’ll rent Hall A.</button><button class="quiz-option" data-quiz-option="If the grant would arrive, we rented Hall A tomorrow.">If the grant would arrive, we rented Hall A tomorrow.</button><button class="quiz-option" data-quiz-option="If the grant had arrives, we’d renting Hall A.">If the grant had arrives, we’d renting Hall A.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="If we had more room, we could offer recording classes." data-hint="The context asks for an available option, so use could plus the base verb offer." data-fix="If we had more room, we could offer recording classes."><p class="quiz-question">2. Which sentence presents recording classes as an available option in the imagined larger space?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="If we had more room, we could offer recording classes.">If we had more room, we could offer recording classes.</button><button class="quiz-option" data-quiz-option="If we would have room, recording classes were compulsory.">If we would have room, recording classes were compulsory.</button><button class="quiz-option" data-quiz-option="If we have room yesterday, we could offered classes.">If we have room yesterday, we could offered classes.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="If I were you is the safest careful advice form; If I was you also occurs in informal speech." data-hint="Separate the careful target from a widespread informal U.S. pattern instead of calling the informal form impossible." data-fix="If I were you is the safest careful advice form; If I was you also occurs in informal speech."><p class="quiz-question">3. Which statement accurately describes the advice frame?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="If I were you is the safest careful advice form; If I was you also occurs in informal speech.">If I were you is the safest careful advice form; If I was you also occurs in informal speech.</button><button class="quiz-option" data-quiz-option="If I was you has no meaning in any variety of English.">If I was you has no meaning in any variety of English.</button><button class="quiz-option" data-quiz-option="If I were you describes a finished event yesterday.">If I were you describes a finished event yesterday.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what distance does the speaker create?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">The First Conditional keeps the path open by...</span> <span class="ex">The Second Conditional creates distance by...</span> <span class="ex">The past form does not mean...</span> <span class="ex">I choose could when...</span> <span class="ex">I choose might when...</span> <span class="ex">Were is safest when...</span></p>
+    <p>Create two accurate versions of one future event. In the first, present it as an active open plan. In the second, present it as a distant scenario. Explain the change in stance without inventing a probability percentage.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day speaker stance, were and was register, and modal-result retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Name the speaker’s stance and the result meaning before selecting a form.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the open-versus-distant contrast, the careful and informal were/was distinction, and could for an available imagined option.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The first presents an open plan; the second presents the same event from greater distance." data-hint="Compare arrives plus will with arrived plus would as choices of speaker stance." data-fix="The first presents an open plan; the second presents the same event from greater distance."><p class="quiz-question">1. Compare <span class="ex">If the grant arrives, we’ll rent</span> and <span class="ex">If the grant arrived, we’d rent</span>. Which explanation is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The first presents an open plan; the second presents the same event from greater distance.">The first presents an open plan; the second presents the same event from greater distance.</button><button class="quiz-option" data-quiz-option="The second sentence must describe a finished grant yesterday.">The second sentence must describe a finished grant yesterday.</button><button class="quiz-option" data-quiz-option="The grammar proves an exact probability percentage.">The grammar proves an exact probability percentage.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Were is the safest careful target; was is widespread in informal hypothetical speech." data-hint="Distinguish careful usage from natural informal U.S. variation." data-fix="Were is the safest careful target; was is widespread in informal hypothetical speech."><p class="quiz-question">2. What is accurate about <span class="ex">If I were more organized</span> and informal <span class="ex">If I was more organized</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Were is the safest careful target; was is widespread in informal hypothetical speech.">Were is the safest careful target; was is widespread in informal hypothetical speech.</button><button class="quiz-option" data-quiz-option="Was can never express hypothetical meaning.">Was can never express hypothetical meaning.</button><button class="quiz-option" data-quiz-option="Were always refers to a certain future.">Were always refers to a certain future.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="If the center had more room, it could offer recording classes." data-hint="The prompt asks for an available option, not a guaranteed decision or uncertain prediction." data-fix="If the center had more room, it could offer recording classes."><p class="quiz-question">3. Which sentence presents recording classes as an available option in an imagined larger center?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="If the center had more room, it could offer recording classes.">If the center had more room, it could offer recording classes.</button><button class="quiz-option" data-quiz-option="If the center would had room, it could offered classes.">If the center would had room, it could offered classes.</button><button class="quiz-option" data-quiz-option="If the center has room yesterday, it must offer classes tomorrow.">If the center has room yesterday, it must offer classes tomorrow.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

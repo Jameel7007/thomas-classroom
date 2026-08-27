@@ -1,16 +1,32 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-import { transferLanguages } from "../data/site-content";
+import LanguageTransferGuide from "../components/languages/LanguageTransferGuide.astro";
+import { transferCounts, transferLanguages } from "../data/language-transfer.mjs";
+import "../styles/languages.css";
+
+const counts = transferCounts();
+const canonical = new URL("/languages/", Astro.site);
+const guideId = `${canonical.href}#language-transfer-guide`;
+interface TransferSchemaLanguage { slug: string; name: string; note: string }
+const guideSchema = {
+  "@type": "ItemList",
+  "@id": guideId,
+  name: "First-language transfer guides for English learners",
+  description: "Contrastive Spanish, Portuguese, and Turkish guidance linked to targeted A0–B2 English lessons.",
+  numberOfItems: transferLanguages.length,
+  itemListElement: transferLanguages.map((language: TransferSchemaLanguage, index: number) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: `${language.name} to English transfer guide`,
+    description: language.note,
+    url: `${canonical.href}#transfer-${language.slug}`,
+  })),
+};
 ---
-<SiteLayout title="Language Transfer · Thomas’s Classroom" description="Explore common first-language transfer patterns from Spanish, Portuguese, and Turkish into English, with targeted lesson directions." heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, and practice the exact decision." current="languages">
+<SiteLayout title="Language Transfer · Thomas’s Classroom" description="Compare 27 high-value Spanish, Portuguese, and Turkish transfer patterns with clear English decisions, tutor prompts, examples, and targeted A0–B2 lessons." heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, rebuild the intended meaning, and practice the exact decision." current="languages" mainEntityId={guideId} additionalStructuredData={[guideSchema]}>
   <section class="tab-page">
     <p class="tab-overline">L1 → English</p><h2 class="tab-title">Your first language is evidence.</h2>
-    <p class="tab-lede">Transfer errors are not random failures. They often reveal a logical pattern from another language—and therefore point directly toward a useful English lesson.</p>
-    <div class="language-list">
-      {transferLanguages.map((language) => <article class="language-panel">
-        <h2>{language.name}</h2><p>{language.note}</p>
-        <div class="transfer-grid">{language.examples.map(([source, issue, lesson]) => <div class="transfer-card"><span class="transfer-source">{source}</span><h3>{issue}</h3><p class="transfer-lesson">Target: {lesson}</p></div>)}</div>
-      </article>)}
-    </div>
+    <p class="tab-lede">Transfer errors are not random failures. They often reveal a logical pattern from another language—and therefore point directly toward a useful English decision. This guide turns that evidence into explanation, production, and targeted lesson practice.</p>
+    <LanguageTransferGuide languages={transferLanguages} counts={counts} />
   </section>
 </SiteLayout>

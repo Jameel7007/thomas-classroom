@@ -1,403 +1,337 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Verb + infinitive / -ing · A2 Grammar · Curriculum Map",
+  "title": "Verb + infinitive / -ing · A2 Grammar",
   "slug": "verb-infinitive-ing",
   "level": "A2",
   "topic": "Verb + infinitive / -ing",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Put two verbs together with confidence: I want to go home , She enjoys working from home , We decided to move , and I don’t mind waiting.",
+  "description": "Build common verb-complement patterns, identify who performs the second action, control negation and prepositional to, and interpret pattern-based meaning changes.",
   "sequence": 11,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "prerequisites": ["a1/present-simple", "a1/present-continuous", "a1/hobbies-and-free-time"],
+  "related": ["b1/gerunds-vs-infinitives"],
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Lexical complement patterns, subjects and objects, negation, prepositional to, changed meanings, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 11</p>
-  <h1>Verb + infinitive or <em>-ing</em></h1>
-  <p class="standfirst">Put two verbs together with confidence: <span class="ex">I want to go home</span>, <span class="ex">She enjoys working from home</span>, <span class="ex">We decided to move</span>, and <span class="ex">I don’t mind waiting.</span></p>
+  <h1>Verb + infinitive or <em>-ing: pattern, participant, and meaning</em></h1>
+  <p class="standfirst">Build the whole message, not only the second verb: <span class="ex">Maya plans to teach. She enjoys teaching. She asked Leo to test the projector. She decided not to cancel. The team looks forward to welcoming visitors.</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">verb patterns</span>
-    <span class="tag">want to go · enjoy going</span>
-    <span class="tag">goals, hobbies, requests</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">to + base · verb-ing</span>
+    <span class="tag">person + to · not to · preposition + -ing</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Watch what happens after want and enjoy.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Find the two verb families.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, and build the right second verb.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about your real hobbies, goals, and plans.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Find the stored pattern and the performer of each action.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Separate infinitive <em>to</em> from prepositional <em>to</em>.</span></div>
+    <div class="flow-step"><b>Build</b><span>Control objects, negation, questions, and meaning changes.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional workshop-planning update and answer follow-ups.</span></div>
   </div>
 
-  <p class="note-line">When one verb follows another, the first verb decides the shape of the second: <span class="ex">want to go</span>, but <span class="ex">enjoy going</span>. Speakers store these shapes as chunks, and this lesson helps you do the same.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can use common <span class="ex">verb + to + base</span> and <span class="ex">verb + -ing</span> chunks; add a person who performs the second action; place negation accurately; distinguish infinitive <span class="ex">to</span> from prepositional <span class="ex">to</span>; and interpret useful meaning contrasts with <span class="ex">stop, remember</span>, and <span class="ex">try</span>.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="cooking">cooking</button>
-      <button class="choice-option" data-choice-option="cook">cook</button>
-      <button class="choice-option" data-choice-option="works">works</button>
-      <button class="choice-option" data-choice-option="work">work</button>
-      <button class="choice-option" data-choice-option="are going to">are going to</button>
-      <button class="choice-option" data-choice-option="going to">going to</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I like <button class="choice-gap" data-choice-gap data-answer="cooking" data-placeholder="choose">choose</button> dinner for friends on weekends. &nbsp;<span class="contraction">(like + -ing, A1 free time)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Marco <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> in a clinic. &nbsp;<span class="contraction">(present simple, A1)</span></span></div>
-    <div class="q"><span class="n">3</span><span>We <button class="choice-gap" data-choice-gap data-answer="are going to" data-placeholder="choose">choose</button> visit my parents in July. &nbsp;<span class="contraction">(be going to, A2)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved -ing spelling, third-person agreement, and a planned future form.">
+    <h3>Three checks from earlier lessons</h3>
+    <p class="choice-hint">Use the active-now context, singular subject, and prior plan.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices"><button class="choice-option" data-choice-option="writing">writing</button><button class="choice-option" data-choice-option="writeing">writeing</button><button class="choice-option" data-choice-option="works">works</button><button class="choice-option" data-choice-option="work">work</button><button class="choice-option" data-choice-option="is going to">is going to</button><button class="choice-option" data-choice-option="going to">going to</button></div>
+    <div class="q"><span class="n">1</span><span>Leo is in the middle of the action now: He is <button class="choice-gap" data-choice-gap data-answer="writing" data-hint="Write drops final e before -ing: writing." data-fix="Leo is writing the equipment list now." data-placeholder="choose">choose</button> the equipment list now.</span></div>
+    <div class="q"><span class="n">2</span><span>The singular subject projector takes present-simple agreement: The projector <button class="choice-gap" data-choice-gap data-answer="works" data-hint="A singular present-simple subject takes works." data-fix="The projector works after the restart." data-placeholder="choose">choose</button> after the restart.</span></div>
+    <div class="q"><span class="n">3</span><span>Maya formed this plan yesterday and still intends it: She <button class="choice-gap" data-choice-gap data-answer="is going to" data-hint="The prior plan uses be going to; singular she requires is." data-fix="She is going to teach an evening workshop." data-placeholder="choose">choose</button> teach an evening workshop.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice before the rule</h2>
+  <h2>Notice six jobs inside one plan</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>One person, one plan</h3>
-    <p><span class="ex">"I want to change jobs. I’ve decided to look for something new. I enjoy working with people, and I don’t mind traveling. I hope to find something by the summer."</span></p>
+    <h3>Linden Community Center workshop plan</h3>
+    <p><b>Chosen action:</b> <span class="ex">Maya plans to teach an evening workshop.</span></p>
+    <p><b>Activity as experience:</b> <span class="ex">She enjoys teaching adults.</span></p>
+    <p><b>Another performer:</b> <span class="ex">She asked Leo to test the projector.</span></p>
+    <p><b>Negative chosen action:</b> <span class="ex">She decided not to cancel the session.</span></p>
+    <p><b>Preposition before an activity:</b> <span class="ex">The team looks forward to welcoming visitors.</span></p>
+    <p><b>Activity ended:</b> <span class="ex">Leo stopped testing at six.</span></p>
     <ul>
-      <li>After <strong>want</strong>, <strong>decide</strong>, and <strong>hope</strong>, what shape does the second verb take?</li>
-      <li>After <strong>enjoy</strong> and <strong>mind</strong>, what shape does the second verb take?</li>
-      <li>Which verb decides the pattern: the first one or the second one?</li>
+      <li>Which patterns use <span class="ex">to + base</span>, and which use <span class="ex">verb-ing</span>?</li>
+      <li>Who will test the projector?</li>
+      <li>Does the second <span class="ex">to</span> in <span class="ex">looks forward to welcoming</span> behave like infinitive <span class="ex">to</span>?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: choose the pattern</h3>
-    <p class="choice-hint">Read the first verb. It decides the shape of the second verb.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="to go">to go</button>
-      <button class="choice-option" data-choice-option="going">going</button>
-      <button class="choice-option" data-choice-option="to work">to work</button>
-      <button class="choice-option" data-choice-option="working">working</button>
-      <button class="choice-option" data-choice-option="to learn">to learn</button>
-      <button class="choice-option" data-choice-option="learning">learning</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I want <button class="choice-gap" data-choice-gap data-answer="to go" data-placeholder="choose">choose</button> home early today.</span></div>
-    <div class="q"><span class="n">2</span><span>She enjoys <button class="choice-gap" data-choice-gap data-answer="working" data-placeholder="choose">choose</button> the night shift.</span></div>
-    <div class="q"><span class="n">3</span><span>We decided <button class="choice-gap" data-choice-gap data-answer="to learn" data-placeholder="choose">choose</button> Spanish together.</span></div>
-    <div class="q"><span class="n">4</span><span>He doesn’t mind <button class="choice-gap" data-choice-gap data-answer="going" data-placeholder="choose">choose</button> to the far office on Fridays.</span></div>
-    <div class="q"><span class="n">5</span><span>They hope <button class="choice-gap" data-choice-gap data-answer="to work" data-placeholder="choose">choose</button> for a bigger company next year.</span></div>
-    <div class="q"><span class="n">6</span><span>My Spanish isn’t perfect, but I keep <button class="choice-gap" data-choice-gap data-answer="learning" data-placeholder="choose">choose</button> new words every week.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified a to-infinitive, -ing complement, person plus infinitive, negative infinitive, prepositional to, and ended activity.">
+    <h3>Discovery check: identify the pattern’s job</h3>
+    <div class="choice-bank" aria-label="Verb pattern job choices"><button class="choice-option" data-choice-option="to-infinitive complement">to-infinitive complement</button><button class="choice-option" data-choice-option="-ing complement">-ing complement</button><button class="choice-option" data-choice-option="person plus to-infinitive">person plus to-infinitive</button><button class="choice-option" data-choice-option="negative to-infinitive">negative to-infinitive</button><button class="choice-option" data-choice-option="preposition plus -ing">preposition plus -ing</button><button class="choice-option" data-choice-option="ended activity">ended activity</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">plans to teach</span>, <span class="ex">plan</span> selects a <button class="choice-gap" data-choice-gap data-answer="to-infinitive complement" data-hint="Plan is stored with to plus a base verb for the planned action." data-fix="Plans to teach contains a to-infinitive complement." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">enjoys teaching</span>, <span class="ex">enjoy</span> selects an <button class="choice-gap" data-choice-gap data-answer="-ing complement" data-hint="Enjoy is stored with an -ing form for the enjoyed activity." data-fix="Enjoys teaching contains an -ing complement." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">asked Leo to test</span>, Leo performs the testing, so the pattern is <button class="choice-gap" data-choice-gap data-answer="person plus to-infinitive" data-hint="The person Leo comes before to test and names the second action’s performer." data-fix="Asked Leo to test uses person plus to-infinitive." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>In <span class="ex">decided not to cancel</span>, Maya made a decision to keep the session, so the pattern is a <button class="choice-gap" data-choice-gap data-answer="negative to-infinitive" data-hint="Not comes before to cancel to negate the chosen second action." data-fix="Decided not to cancel contains a negative to-infinitive." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>In <span class="ex">looks forward to welcoming</span>, <span class="ex">to</span> belongs to the expression <span class="ex">look forward to</span>, so the pattern is <button class="choice-gap" data-choice-gap data-answer="preposition plus -ing" data-hint="Here to is a preposition, and the following verb takes -ing." data-fix="Looks forward to welcoming uses preposition plus -ing." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>In <span class="ex">stopped testing at six</span>, testing ended at six, so <span class="ex">testing</span> names the <button class="choice-gap" data-choice-gap data-answer="ended activity" data-hint="Stop plus -ing means the named activity ends." data-fix="Stopped testing presents testing as the ended activity." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: two verb families</h2>
+  <h2>Get to the root: store the whole pattern with the verb</h2>
   <div class="lead-rule"></div>
-  <p>Some first verbs are followed by <span class="ex">to</span> + base verb. Others are followed by the <span class="ex">-ing</span> form. Learn each verb together with its pattern.</p>
-
-  <h3>Family 1: verb + to + base verb</h3>
+  <p>A first verb allows one or more shapes for the second verb or phrase that follows it. Learn the first verb with a complete chunk and meaning: <span class="ex">plan to open, enjoy teaching, ask Maya to wait, look forward to meeting</span>.</p>
   <table>
-    <thead><tr><th>verb</th><th>chunk</th><th>example</th></tr></thead>
+    <thead><tr><th>common pattern</th><th>useful A2 verbs or expressions</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>want</b></td><td>want to go</td><td><span class="contraction">I want to go home early.</span></td></tr>
-      <tr><td><b>need</b></td><td>need to buy</td><td><span class="contraction">We need to buy a gift.</span></td></tr>
-      <tr><td><b>decide</b></td><td>decide to move</td><td><span class="contraction">She decided to move downtown.</span></td></tr>
-      <tr><td><b>hope</b></td><td>hope to find</td><td><span class="contraction">I hope to find a quieter apartment.</span></td></tr>
-      <tr><td><b>plan</b></td><td>plan to stay</td><td><span class="contraction">They plan to stay for a week.</span></td></tr>
-      <tr><td><b>learn</b></td><td>learn to drive</td><td><span class="contraction">He’s learning to drive.</span></td></tr>
-      <tr><td><b>would like</b></td><td>would like to book</td><td><span class="contraction">I’d like to book a table.</span></td></tr>
+      <tr><td><span class="ex">verb + to + base</span></td><td>want, need, decide, hope, plan, learn, agree</td><td><span class="ex">They agreed to help.</span></td></tr>
+      <tr><td><span class="ex">verb + verb-ing</span></td><td>avoid, enjoy, finish, keep, mind, practice</td><td><span class="ex">They finished checking the room.</span></td></tr>
+      <tr><td><span class="ex">verb + person + to + base</span></td><td>ask, tell, want, would like</td><td><span class="ex">Maya asked Leo to test it.</span></td></tr>
+      <tr><td><span class="ex">preposition + verb-ing</span></td><td>interested in, good at, thanks for, look forward to</td><td><span class="ex">We look forward to meeting you.</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">A meaning tendency can help memory, but it cannot safely predict an unfamiliar verb. Goals often appear with <span class="ex">to</span>, and experiences often appear with <span class="ex">-ing</span>, but <span class="ex">avoid making</span> can describe a future goal and <span class="ex">learn to drive</span> can describe an experienced activity. Check and store the actual pattern.</p>
+
+  <h3>Let the first verb carry tense, agreement, questions, and main negation</h3>
+  <table>
+    <thead><tr><th>job</th><th>pattern</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>person and tense</td><td>change the first verb; keep the complement form</td><td><span class="ex">She plans to teach. She planned to teach.</span></td></tr>
+      <tr><td>question</td><td>build the question around the first verb</td><td><span class="ex">Does she plan to teach?</span></td></tr>
+      <tr><td>main negative</td><td>negate the first verb</td><td><span class="ex">She does not plan to cancel.</span></td></tr>
+    </tbody>
+  </table>
+  <p>Do not add tense or agreement again to the second verb: <span class="ex">She wants to go</span>, not <span class="ex">she wants to goes</span>. An <span class="ex">-ing</span> complement does not need <span class="ex">be</span>: <span class="ex">She enjoys teaching</span>, not <span class="ex">she enjoys is teaching</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You controlled to-infinitive and -ing chunks, first-verb question form, continued practice, desired action, and a future avoidance goal.">
+    <h3>Drill 1: complete the stored core pattern</h3>
+    <div class="choice-bank" aria-label="Core verb pattern choices"><button class="choice-option" data-choice-option="to leave">to leave</button><button class="choice-option" data-choice-option="leaving">leaving</button><button class="choice-option" data-choice-option="checking">checking</button><button class="choice-option" data-choice-option="to check">to check</button><button class="choice-option" data-choice-option="plan to join">plan to join</button><button class="choice-option" data-choice-option="plans to joins">plans to joins</button><button class="choice-option" data-choice-option="keep practicing">keep practicing</button><button class="choice-option" data-choice-option="keep to practice">keep to practice</button><button class="choice-option" data-choice-option="to reserve">to reserve</button><button class="choice-option" data-choice-option="reserving">reserving</button><button class="choice-option" data-choice-option="touching">touching</button><button class="choice-option" data-choice-option="to touch">to touch</button></div>
+    <div class="q"><span class="n">1</span><span>Leo wants an earlier departure, so he wants <button class="choice-gap" data-choice-gap data-answer="to leave" data-hint="Want takes to plus a base verb for the desired action." data-fix="Leo wants to leave by six." data-placeholder="choose">choose</button> by six.</span></div>
+    <div class="q"><span class="n">2</span><span>The team completes the whole room check before lunch: They finish <button class="choice-gap" data-choice-gap data-answer="checking" data-hint="Finish takes the -ing form for the completed activity." data-fix="They finish checking the room before lunch." data-placeholder="choose">choose</button> the room before lunch.</span></div>
+    <div class="q"><span class="n">3</span><span>Ask about Maya’s current plan. After <span class="ex">Does Maya</span>, use the base form of the first and second verbs: Does Maya <button class="choice-gap" data-choice-gap data-answer="plan to join" data-hint="Does carries the agreement, so use plan; infinitive to is followed by base join." data-fix="Does Maya plan to join the session?" data-placeholder="choose">choose</button> the session?</span></div>
+    <div class="q"><span class="n">4</span><span>The tutor requests continued repeated practice: Please <button class="choice-gap" data-choice-gap data-answer="keep practicing" data-hint="Keep takes an -ing complement for continued activity." data-fix="Please keep practicing the introduction." data-placeholder="choose">choose</button> the introduction.</span></div>
+    <div class="q"><span class="n">5</span><span>The caller expresses a polite desire for an action: I’d like <button class="choice-gap" data-choice-gap data-answer="to reserve" data-hint="When would like introduces a desired action, use to plus the base verb." data-fix="I’d like to reserve the room, please." data-placeholder="choose">choose</button> the room, please.</span></div>
+    <div class="q"><span class="n">6</span><span>The safety goal is to prevent future contact with the hot surface: Avoid <button class="choice-gap" data-choice-gap data-answer="touching" data-hint="Avoid takes an -ing form even when the avoided action is in the future." data-fix="Avoid touching the hot surface." data-placeholder="choose">choose</button> the hot surface.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Name the second performer and place negation precisely</h2>
+  <div class="lead-rule"></div>
+  <p>With <span class="ex">ask, tell, want</span>, and action uses of <span class="ex">would like</span>, a person can appear before the to-infinitive. That person performs the second action.</p>
+  <table>
+    <thead><tr><th>message</th><th>pattern</th><th>performer of second action</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">Maya plans to test it.</span></td><td>same subject + to-infinitive</td><td>Maya</td></tr>
+      <tr><td><span class="ex">Maya asked Leo to test it.</span></td><td>verb + person + to-infinitive</td><td>Leo</td></tr>
+      <tr><td><span class="ex">Maya told Leo not to open it.</span></td><td>verb + person + not + to-infinitive</td><td>Leo avoids opening</td></tr>
     </tbody>
   </table>
 
-  <h3>Family 2: verb + -ing</h3>
+  <p>Main-clause negation and complement negation do not say the same thing:</p>
   <table>
-    <thead><tr><th>verb</th><th>chunk</th><th>example</th></tr></thead>
+    <thead><tr><th>sentence</th><th>meaning</th></tr></thead>
     <tbody>
-      <tr><td><b>enjoy</b></td><td>enjoy reading</td><td><span class="contraction">I enjoy reading before bed.</span></td></tr>
-      <tr><td><b>finish</b></td><td>finish working</td><td><span class="contraction">She finishes working at six.</span></td></tr>
-      <tr><td><b>keep</b></td><td>keep practicing</td><td><span class="contraction">Keep practicing a little every day.</span></td></tr>
-      <tr><td><b>mind</b></td><td>don’t mind waiting</td><td><span class="contraction">I don’t mind waiting.</span></td></tr>
-      <tr><td><b>practice</b></td><td>practice speaking</td><td><span class="contraction">We practice speaking English in class.</span></td></tr>
+      <tr><td><span class="ex">Maya did not decide to cancel.</span></td><td>there was no decision to cancel; another outcome may still be open</td></tr>
+      <tr><td><span class="ex">Maya decided not to cancel.</span></td><td>there was a decision, and its chosen action was to keep the session</td></tr>
     </tbody>
   </table>
 
-  <h2>Get to the root: the first verb decides</h2>
-  <div class="lead-rule"></div>
-  <p>Why do we say <span class="ex">want to go</span> but <span class="ex">enjoy going</span>? The second verb does not choose its own shape. The first verb controls it. This information belongs to the first verb, so we learn it with the verb, not as a separate rule.</p>
-  <p>There is still a helpful tendency. Verbs that point forward to a goal usually take <span class="ex">to</span>: you <span class="ex">want to</span>, <span class="ex">hope to</span>, <span class="ex">plan to</span>, and <span class="ex">decide to</span> do things you have not done yet, and <span class="ex">to</span> works like an arrow toward that action. Verbs about the activity itself usually take <span class="ex">-ing</span>: you <span class="ex">enjoy</span>, <span class="ex">finish</span>, <span class="ex">keep</span>, or <span class="ex">practice</span> an activity that is real and present, and the <span class="ex">-ing</span> form names that activity like a thing.</p>
-  <div class="thinking-card">
-    <h3>Feel the arrow</h3>
-    <p><span class="ex">I want to swim.</span> The swim is still ahead of you, a goal.</p>
-    <p><span class="ex">I enjoy swimming.</span> The swimming is the experience itself, already part of your life.</p>
+  <h3>Two kinds of <em>to</em></h3>
+  <p>Infinitive <span class="ex">to</span> is followed by a base verb: <span class="ex">plan to meet</span>. Prepositional <span class="ex">to</span> belongs to an expression and follows the same pattern as other prepositions. If a verb follows that preposition, use <span class="ex">-ing</span>: <span class="ex">look forward to meeting</span>. The reliable rule is not “every <span class="ex">to</span> takes a base verb.”</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified the second performer, object negation, complement negation, main-clause negation, and two preposition-plus-ing patterns.">
+    <h3>Drill 2: build participant, negation, and preposition meaning</h3>
+    <div class="choice-bank" aria-label="Participant and negation choices"><button class="choice-option" data-choice-option="Leo to test">Leo to test</button><button class="choice-option" data-choice-option="that Leo tests">that Leo tests</button><button class="choice-option" data-choice-option="Leo not to open">Leo not to open</button><button class="choice-option" data-choice-option="Leo to not opening">Leo to not opening</button><button class="choice-option" data-choice-option="not to cancel">not to cancel</button><button class="choice-option" data-choice-option="to not canceling">to not canceling</button><button class="choice-option" data-choice-option="did not decide to cancel">did not decide to cancel</button><button class="choice-option" data-choice-option="decided not cancel">decided not cancel</button><button class="choice-option" data-choice-option="learning">learning</button><button class="choice-option" data-choice-option="to learn">to learn</button><button class="choice-option" data-choice-option="meeting">meeting</button><button class="choice-option" data-choice-option="meet">meet</button></div>
+    <div class="q"><span class="n">1</span><span>Leo, not Maya, will perform the test: Maya asked <button class="choice-gap" data-choice-gap data-answer="Leo to test" data-hint="Put the second performer Leo before to test." data-fix="Maya asked Leo to test the projector." data-placeholder="choose">choose</button> the projector.</span></div>
+    <div class="q"><span class="n">2</span><span>Leo receives an instruction to avoid opening the cabinet: Maya told <button class="choice-gap" data-choice-gap data-answer="Leo not to open" data-hint="The person comes before not to plus the prohibited action." data-fix="Maya told Leo not to open the cabinet." data-placeholder="choose">choose</button> the cabinet.</span></div>
+    <div class="q"><span class="n">3</span><span>Maya made a decision, and the decision was to keep the session: She decided <button class="choice-gap" data-choice-gap data-answer="not to cancel" data-hint="Negate the chosen second action with not before to cancel." data-fix="She decided not to cancel the session." data-placeholder="choose">choose</button> the session.</span></div>
+    <div class="q"><span class="n">4</span><span>The report says no cancellation decision was reached; it does not report a firm decision to keep the session: Maya <button class="choice-gap" data-choice-gap data-answer="did not decide to cancel" data-hint="Negate the first verb decide to say that no decision to cancel was reached." data-fix="Maya did not decide to cancel the session." data-placeholder="choose">choose</button> the session.</span></div>
+    <div class="q"><span class="n">5</span><span>After the preposition <span class="ex">in</span>, the following verb uses <span class="ex">-ing</span>: Leo is interested in <button class="choice-gap" data-choice-gap data-answer="learning" data-hint="When a verb follows the preposition in, use the -ing form." data-fix="Leo is interested in learning about sound systems." data-placeholder="choose">choose</button> about sound systems.</span></div>
+    <div class="q"><span class="n">6</span><span>In <span class="ex">look forward to</span>, <span class="ex">to</span> is a preposition: The team looks forward to <button class="choice-gap" data-choice-gap data-answer="meeting" data-hint="Prepositional to in look forward to is followed by meeting, not the base form meet." data-fix="The team looks forward to meeting the visitors." data-placeholder="choose">choose</button> the visitors.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
+
+  <h2>When both shapes are possible, check the meaning</h2>
+  <div class="lead-rule"></div>
+  <p>Some verbs license both shapes. The result may overlap, or the pattern may change the relationship between the two actions.</p>
+  <table>
+    <thead><tr><th>verb group</th><th>useful distinction</th><th>examples</th></tr></thead>
+    <tbody>
+      <tr><td>like, love, hate, prefer</td><td><span class="ex">-ing</span> often foregrounds experience or enjoyment; <span class="ex">to</span> can foreground a habit, choice, or considered action. Many contexts overlap.</td><td><span class="ex">I like swimming. I like to check the doors before leaving.</span></td></tr>
+      <tr><td>start, begin, continue</td><td>both forms are often possible with little practical difference</td><td><span class="ex">It started raining. It started to rain.</span></td></tr>
+      <tr><td>would like + action</td><td>desired action uses <span class="ex">to + base</span></td><td><span class="ex">I’d like to reserve a room.</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">Do not force a difference where context does not support one, and do not claim the forms are always identical. Learn a complete sentence, the speaker’s purpose, and any contrast together.</p>
+
+  <h3>Three high-value meaning contrasts</h3>
+  <table>
+    <thead><tr><th>pattern</th><th>relationship between actions</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">stop doing</span></td><td>end the named activity</td><td><span class="ex">Leo stopped testing at six.</span></td></tr>
+      <tr><td><span class="ex">stop to do</span></td><td>pause another activity in order to do this new action</td><td><span class="ex">Leo stopped to answer the phone.</span></td></tr>
+      <tr><td><span class="ex">remember to do</span></td><td>remember a responsibility, then perform it</td><td><span class="ex">He remembered to lock the cabinet.</span></td></tr>
+      <tr><td><span class="ex">remember doing</span></td><td>have a memory of a past action</td><td><span class="ex">He remembers locking the cabinet.</span></td></tr>
+      <tr><td><span class="ex">try to do</span></td><td>make an effort to achieve the action</td><td><span class="ex">He tried to restart the projector.</span></td></tr>
+      <tr><td><span class="ex">try doing</span></td><td>use the action as a possible method or experiment</td><td><span class="ex">He tried restarting the projector.</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished an ended activity, a purpose after pausing, a completed responsibility, a past memory, an effort, and an experimental method.">
+    <h3>Drill 3: choose the relationship between two actions</h3>
+    <div class="choice-bank" aria-label="Meaning contrast choices"><button class="choice-option" data-choice-option="stopped testing">stopped testing</button><button class="choice-option" data-choice-option="stopped to test">stopped to test</button><button class="choice-option" data-choice-option="stopped to answer">stopped to answer</button><button class="choice-option" data-choice-option="stopped answering">stopped answering</button><button class="choice-option" data-choice-option="remembered to lock">remembered to lock</button><button class="choice-option" data-choice-option="remembered locking">remembered locking</button><button class="choice-option" data-choice-option="remembers locking">remembers locking</button><button class="choice-option" data-choice-option="remembers to lock">remembers to lock</button><button class="choice-option" data-choice-option="tried to restart">tried to restart</button><button class="choice-option" data-choice-option="tried restarting">tried restarting</button></div>
+    <div class="q"><span class="n">1</span><span>At 6:00, Leo ended the projector test and went home: He <button class="choice-gap" data-choice-gap data-answer="stopped testing" data-hint="Stop plus -ing names the activity that ended." data-fix="Leo stopped testing at six." data-placeholder="choose">choose</button> at six.</span></div>
+    <div class="q"><span class="n">2</span><span>While testing, Leo heard the phone, paused the test, and answered it: He <button class="choice-gap" data-choice-gap data-answer="stopped to answer" data-hint="Stop plus to-infinitive names the new purpose after pausing another action." data-fix="Leo stopped to answer the phone." data-placeholder="choose">choose</button> the phone.</span></div>
+    <div class="q"><span class="n">3</span><span>The cabinet is secure because Leo did not forget the responsibility: He <button class="choice-gap" data-choice-gap data-answer="remembered to lock" data-hint="Remember to do means the responsibility was remembered and performed." data-fix="Leo remembered to lock the cabinet." data-placeholder="choose">choose</button> the cabinet.</span></div>
+    <div class="q"><span class="n">4</span><span>Today Leo can picture yesterday’s past locking action in his memory: He <button class="choice-gap" data-choice-gap data-answer="remembers locking" data-hint="Remember doing presents a memory of a past action." data-fix="Leo remembers locking the cabinet yesterday." data-placeholder="choose">choose</button> the cabinet yesterday.</span></div>
+    <div class="q"><span class="n">5</span><span>Leo made an effort to restart the projector, but it did not respond: He <button class="choice-gap" data-choice-gap data-answer="tried to restart" data-hint="Try to do focuses on the effort to achieve an action." data-fix="Leo tried to restart the projector, but it did not respond." data-placeholder="choose">choose</button> the projector.</span></div>
+    <div class="q"><span class="n">6</span><span>Maya suggested one possible solution, so Leo used a restart as an experiment: He <button class="choice-gap" data-choice-gap data-answer="tried restarting" data-hint="Try doing presents the action as a possible method or experiment." data-fix="Leo tried restarting the projector, and the picture returned." data-placeholder="choose">choose</button> the projector, and the picture returned.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
   <div class="note">
-    <h3>Learn the chunk, not the rule</h3>
-    <p>Store the pattern inside the verb: <span class="ex">want to go</span>, <span class="ex">need to buy</span>, <span class="ex">hope to find</span>, <span class="ex">enjoy working</span>, <span class="ex">keep practicing</span>, <span class="ex">don’t mind waiting</span>. This course teaches chunks like <span class="ex">there is</span> and <span class="ex">do you</span> for the same reason: your memory holds whole pieces better than abstract rules. When you meet a new verb, learn one full sentence with it, and the pattern comes for free.</p>
+    <h3>Sound natural: weaken infinitive <em>to</em>, keep <em>-ing</em> nasal, and stress the contrast</h3>
+    <p>Infinitive <span class="ex">to</span> is commonly weak /tə/: <span class="ex">plan to teach /ˈplæn tə ˈtitʃ/</span>, <span class="ex">I’d like to reserve /aɪd ˈlaɪk tə rɪˈzɝv/</span>. The action usually carries the strongest beat.</p>
+    <p>In fast casual U.S. speech, <span class="ex">want to</span> can sound like /ˈwɑnə/: <span class="ex">I want to leave</span>. Keep the standard spelling. Do not use that reduction to remove a person: <span class="ex">I want Leo to leave</span> needs Leo before <span class="ex">to leave</span>.</p>
+    <p>The <span class="ex">-ing</span> ending finishes with /ɪŋ/, not a separate hard /g/: <span class="ex">working /ˈwɝkɪŋ/</span>. Stress can expose a meaning contrast: <span class="ex">He stopped <strong>WORK</strong>ing</span>, but <span class="ex">He stopped to <strong>AN</strong>swer</span>.</p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: choose the second verb</h3>
-    <p class="choice-hint">Read the first verb, then choose the form that follows it.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="to take">to take</button>
-      <button class="choice-option" data-choice-option="taking">taking</button>
-      <button class="choice-option" data-choice-option="to move">to move</button>
-      <button class="choice-option" data-choice-option="moving">moving</button>
-      <button class="choice-option" data-choice-option="to cook">to cook</button>
-      <button class="choice-option" data-choice-option="cooking">cooking</button>
-      <button class="choice-option" data-choice-option="to call">to call</button>
-      <button class="choice-option" data-choice-option="calling">calling</button>
+  <section data-lesson-extension="Tutor-read core complement, second performer, complement negation, prepositional to, stopped activity, and experimental try listening check">
+    <h2>Listen for pattern, participant, and relationship</h2>
+    <div class="lead-rule"></div>
+    <p class="note-line"><b>Tutor-read listening:</b> Keep the transcript closed. Read each item once naturally and once more after the learner chooses. Do not isolate <span class="ex">to</span> or <span class="ex">-ing</span> from its complete message.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a core complement, second performer, negative chosen action, prepositional to, ended activity, and experimental method.">
+      <h3>Six listening decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Maya has the plan, and Maya will teach." data-hint="Plans to teach has one subject for both actions." data-fix="Maya has the plan, and Maya will teach."><p class="quiz-question">1. Who plans, and who will teach in the first message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya has the plan, and Maya will teach.">Maya has the plan, and Maya will teach.</button><button class="quiz-option" data-quiz-option="Maya has the plan, but Leo will teach.">Maya has the plan, but Leo will teach.</button><button class="quiz-option" data-quiz-option="Leo has the plan, and Maya will teach.">Leo has the plan, and Maya will teach.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Leo will test the projector." data-hint="In asked Leo to test, the person before the infinitive performs the test." data-fix="Leo will test the projector."><p class="quiz-question">2. Who performs the test in the second message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Leo will test the projector.">Leo will test the projector.</button><button class="quiz-option" data-quiz-option="Maya will test the projector.">Maya will test the projector.</button><button class="quiz-option" data-quiz-option="The visitors will test the projector.">The visitors will test the projector.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="She made a decision to keep the session." data-hint="Decided not to cancel reports a decision whose chosen action keeps the session." data-fix="She made a decision to keep the session."><p class="quiz-question">3. What does the third message say about Maya’s decision?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She made a decision to keep the session.">She made a decision to keep the session.</button><button class="quiz-option" data-quiz-option="She reached no decision about the session.">She reached no decision about the session.</button><button class="quiz-option" data-quiz-option="She decided to cancel the session.">She decided to cancel the session.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="to is a preposition, and welcoming is an -ing form" data-hint="Look forward to is followed by a noun or -ing form; its to is prepositional." data-fix="To is a preposition, and welcoming is an -ing form."><p class="quiz-question">4. How does the fourth message use <span class="ex">to</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="to is a preposition, and welcoming is an -ing form">to is a preposition, and welcoming is an -ing form</button><button class="quiz-option" data-quiz-option="to is an infinitive marker before the base verb welcome">to is an infinitive marker before the base verb welcome</button><button class="quiz-option" data-quiz-option="to introduces Leo as the performer">to introduces Leo as the performer</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The testing ended at six." data-hint="Stopped testing names the activity that ended." data-fix="The testing ended at six."><p class="quiz-question">5. What ended in the fifth message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The testing ended at six.">The testing ended at six.</button><button class="quiz-option" data-quiz-option="Leo paused another action in order to begin testing.">Leo paused another action in order to begin testing.</button><button class="quiz-option" data-quiz-option="The workshop ended before testing began.">The workshop ended before testing began.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="He used restarting as one possible solution." data-hint="Tried restarting presents the restart as an experimental method." data-fix="He used restarting as one possible solution."><p class="quiz-question">6. What role does restarting have in the sixth message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="He used restarting as one possible solution.">He used restarting as one possible solution.</button><button class="quiz-option" data-quiz-option="He remembered a past restart.">He remembered a past restart.</button><button class="quiz-option" data-quiz-option="He ended the restart permanently.">He ended the restart permanently.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="q"><span class="n">1</span><span>I want <button class="choice-gap" data-choice-gap data-answer="to take" data-placeholder="choose">choose</button> a day off next week.</span></div>
-    <div class="q"><span class="n">2</span><span>She enjoys <button class="choice-gap" data-choice-gap data-answer="taking" data-placeholder="choose">choose</button> pictures of the city at night.</span></div>
-    <div class="q"><span class="n">3</span><span>We plan <button class="choice-gap" data-choice-gap data-answer="to move" data-placeholder="choose">choose</button> to a bigger apartment next year.</span></div>
-    <div class="q"><span class="n">4</span><span>He doesn’t mind <button class="choice-gap" data-choice-gap data-answer="cooking" data-placeholder="choose">choose</button> dinner on weeknights.</span></div>
-    <div class="q"><span class="n">5</span><span>I need <button class="choice-gap" data-choice-gap data-answer="to call" data-placeholder="choose">choose</button> the dentist and change my appointment.</span></div>
-    <div class="q"><span class="n">6</span><span>My neighbor keeps <button class="choice-gap" data-choice-gap data-answer="calling" data-placeholder="choose">choose</button> me about the parking space.</span></div>
-    <div class="q"><span class="n">7</span><span>He’s learning <button class="choice-gap" data-choice-gap data-answer="to cook" data-placeholder="choose">choose</button> Thai food.</span></div>
-    <div class="q"><span class="n">8</span><span>They finished <button class="choice-gap" data-choice-gap data-answer="moving" data-placeholder="choose">choose</button> into the new apartment on Saturday.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">Maya plans to teach the evening workshop.</span> Evidence target: one subject for planning and teaching.</li>
+        <li><span class="ex">Maya asked Leo to test the projector.</span> Evidence target: Leo performs the second action.</li>
+        <li><span class="ex">Maya decided not to cancel the session.</span> Evidence target: a decision whose chosen action keeps the session.</li>
+        <li><span class="ex">The team looks forward to welcoming the visitors.</span> Evidence target: prepositional <span class="ex">to</span> plus <span class="ex">-ing</span>.</li>
+        <li><span class="ex">Leo stopped testing at six.</span> Evidence target: the testing activity ended.</li>
+        <li><span class="ex">Leo tried restarting the projector, and the picture returned.</span> Evidence target: restart used as an experimental method.</li>
+      </ol>
+    </details>
+  </section>
 
-  <h2>Both forms, same meaning: like, love, hate, start</h2>
-  <div class="lead-rule"></div>
-  <p>A small group of verbs accepts both patterns with no real change in meaning. Choose either form. American English often prefers <span class="ex">to</span> after these verbs, but both are natural.</p>
-  <table>
-    <thead><tr><th>verb</th><th>-ing form</th><th>to + verb</th></tr></thead>
-    <tbody>
-      <tr><td><b>like</b></td><td>I like cooking.</td><td>I like to cook.</td></tr>
-      <tr><td><b>love</b></td><td>She loves running.</td><td>She loves to run.</td></tr>
-      <tr><td><b>hate</b></td><td>I hate waiting.</td><td>I hate to wait.</td></tr>
-      <tr><td><b>start</b></td><td>It started raining.</td><td>It started to rain.</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Would like: the polite want</h3>
-  <p><span class="ex">Would like</span> is the polite version of <span class="ex">want</span>, and it always takes <span class="ex">to</span> + verb: <span class="ex">I’d like to book a table for eight.</span> <span class="ex">I’d like to change my appointment.</span> You met this politeness at A1 when ordering food; now you can attach any verb to it.</p>
-  <p class="note-line">Careful: <span class="ex">like</span> can take both forms, but <span class="ex">would like</span> only takes <span class="ex">to</span> + verb. Say <span class="ex">I’d like to cook</span>, never <span class="ex">I’d like cooking</span>.</p>
-
-  <div class="note">
-    <h3>After a preposition, always -ing</h3>
-    <p>One dependable rule: after a preposition, a verb takes the <span class="ex">-ing</span> form. <span class="ex">She’s good at cooking.</span> <span class="ex">I’m interested in learning Japanese.</span> <span class="ex">Thanks for waiting.</span></p>
-  </div>
-
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type the second verb</h3>
-    <p class="choice-hint">Use the verb in parentheses. Type <b>to + verb</b> or the <b>-ing</b> form.</p>
-    <div class="q"><span class="n">1</span><span>I’d like <input class="answer-input" data-answer="to book" aria-label="answer 1" /> a table for two, please. &nbsp;<span class="contraction">(book)</span></span></div>
-    <div class="q"><span class="n">2</span><span>She wants <input class="answer-input" data-answer="to get" aria-label="answer 2" /> better at English. &nbsp;<span class="contraction">(get)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I’m interested in <input class="answer-input" data-answer="learning" aria-label="answer 3" /> Japanese. &nbsp;<span class="contraction">(learn)</span></span></div>
-    <div class="q"><span class="n">4</span><span>He’s good at <input class="answer-input" data-answer="solving" aria-label="answer 4" /> problems quickly. &nbsp;<span class="contraction">(solve)</span></span></div>
-    <div class="q"><span class="n">5</span><span>We don’t mind <input class="answer-input" data-answer="waiting" aria-label="answer 5" /> a little longer. &nbsp;<span class="contraction">(wait)</span></span></div>
-    <div class="q"><span class="n">6</span><span>They decided <input class="answer-input" data-answer="to start" aria-label="answer 6" /> a small business. &nbsp;<span class="contraction">(start)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Read and choose</h2>
+  <h2>Read the fictional technical update</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message about evening plans</h3>
-    <p><span class="ex">"Hi Dana! Quick update on my evenings. I’ve decided to take a photography course at the community center. I enjoy taking pictures, and I want to get better at night shots. The class meets on Tuesdays, and I plan to go for a practice walk every Saturday. One problem: I keep forgetting to practice during the week. I don’t mind studying after work, but I need to organize my time. Would you like to join me on Saturday?"</span></p>
+    <h3>Linden workshop message at 5:30</h3>
+    <p><span class="ex">Maya still plans to teach tonight. She asked Leo to test the projector before six. Leo enjoys solving technical problems, but the screen stayed dark. He tried to restart the projector twice, but it did not respond. Then Maya suggested a different method. Leo tried reconnecting one cable, and the picture returned. He remembered to lock the equipment cabinet afterward. The team decided not to cancel, and everyone looks forward to welcoming the visitors.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed real plans built from verb patterns.">
-    <h3>Drill 3: read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the second performer, effort, experimental method, completed responsibility, and decision in the fictional update.">
+    <h3>Reading check: use only the update</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="take a photography course">
-        <p class="quiz-question">1. What has the writer decided to do?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="take a photography course">take a photography course</button><button class="quiz-option" data-quiz-option="buy a new camera">buy a new camera</button><button class="quiz-option" data-quiz-option="teach an evening class">teach an evening class</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="practice during the week">
-        <p class="quiz-question">2. What does the writer keep forgetting to do?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="practice during the week">practice during the week</button><button class="quiz-option" data-quiz-option="go to the Tuesday class">go to the Tuesday class</button><button class="quiz-option" data-quiz-option="study after work">study after work</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="join the Saturday practice walk">
-        <p class="quiz-question">3. What would the writer like Dana to do?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="join the Saturday practice walk">join the Saturday practice walk</button><button class="quiz-option" data-quiz-option="organize the writer’s time">organize the writer’s time</button><button class="quiz-option" data-quiz-option="take pictures at night">take pictures at night</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="Leo" data-hint="Maya asked Leo to test, so Leo is the person before the to-infinitive." data-fix="Leo performs the projector test."><p class="quiz-question">1. Who performs the projector test?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Leo">Leo</button><button class="quiz-option" data-quiz-option="Maya">Maya</button><button class="quiz-option" data-quiz-option="the visitors">the visitors</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Restarting was an effort that failed; reconnecting was an experimental method that worked." data-hint="Compare tried to restart with tried reconnecting and their reported results." data-fix="Restarting was an effort that failed; reconnecting was an experimental method that worked."><p class="quiz-question">2. How do the two <span class="ex">try</span> patterns function in the update?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Restarting was an effort that failed; reconnecting was an experimental method that worked.">Restarting was an effort that failed; reconnecting was an experimental method that worked.</button><button class="quiz-option" data-quiz-option="Both patterns describe memories of finished actions.">Both patterns describe memories of finished actions.</button><button class="quiz-option" data-quiz-option="Both patterns mean Leo ended an activity.">Both patterns mean Leo ended an activity.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="He locked the equipment cabinet." data-hint="Remembered to lock reports that Leo remembered and performed the responsibility." data-fix="He locked the equipment cabinet."><p class="quiz-question">3. What did Leo successfully remember to do?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="He locked the equipment cabinet.">He locked the equipment cabinet.</button><button class="quiz-option" data-quiz-option="He canceled the workshop.">He canceled the workshop.</button><button class="quiz-option" data-quiz-option="He welcomed the visitors at 5:30.">He welcomed the visitors at 5:30.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="They made a decision to keep the workshop." data-hint="Decided not to cancel reports a decision whose chosen action keeps the event." data-fix="They made a decision to keep the workshop."><p class="quiz-question">4. What does the final decision mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="They made a decision to keep the workshop.">They made a decision to keep the workshop.</button><button class="quiz-option" data-quiz-option="They reached no decision.">They reached no decision.</button><button class="quiz-option" data-quiz-option="They decided to cancel the workshop.">They decided to cancel the workshop.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="i would like to book a table">
-    <h3>Drill 4: build the polite request</h3>
-    <p class="tile-target">Build the sentence. Would like always takes to + verb.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="table">table</button>
-      <button class="tile" data-build-tile="would">would</button>
-      <button class="tile" data-build-tile="to">to</button>
-      <button class="tile" data-build-tile="i">I</button>
-      <button class="tile" data-build-tile="book">book</button>
-      <button class="tile" data-build-tile="a">a</button>
-      <button class="tile" data-build-tile="like">like</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="she enjoys working from home">
-    <h3>Drill 5: build the -ing sentence</h3>
-    <p class="tile-target">Build the sentence. Enjoy takes the -ing form.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="working">working</button>
-      <button class="tile" data-build-tile="home">home</button>
-      <button class="tile" data-build-tile="she">She</button>
-      <button class="tile" data-build-tile="from">from</button>
-      <button class="tile" data-build-tile="enjoys">enjoys</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
+  <h2>Build the participant and preposition patterns</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="to run" data-fix="I enjoy running in the mornings." data-why="After enjoy, use the -ing form. Say I enjoy running, not I enjoy to run.">
-    <h3>Drill 6: after enjoy</h3>
-    <p>Tap the part that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="enjoy">I enjoy</button>
-      <button class="error-choice" data-error-choice="to run">to run</button>
-      <button class="error-choice" data-error-choice="in the">in the</button>
-      <button class="error-choice" data-error-choice="mornings">mornings.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="maya asked leo to test the projector" data-hint="Put Leo between asked and to test because Leo performs the second action." data-fix="Maya asked Leo to test the projector." data-success-message="Correct. Leo stands before to test and performs the projector test.">
+    <h3>Drill 4: name the second performer</h3><p class="tile-target">Report that Maya made the request and Leo performs the test.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="projector">projector</button><button class="tile" data-build-tile="asked">asked</button><button class="tile" data-build-tile="leo">Leo</button><button class="tile" data-build-tile="maya">Maya</button><button class="tile" data-build-tile="test">test</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="to">to</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="learning" data-fix="She wants to learn French this year." data-why="After want, use to + verb. Say she wants to learn, not she wants learning.">
-    <h3>Drill 7: after want</h3>
-    <p>Tap the part that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="she">She</button>
-      <button class="error-choice" data-error-choice="wants">wants</button>
-      <button class="error-choice" data-error-choice="learning">learning</button>
-      <button class="error-choice" data-error-choice="french">French</button>
-      <button class="error-choice" data-error-choice="this year">this year.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="the team looks forward to welcoming visitors" data-hint="Keep look forward to as one expression, then use welcoming after prepositional to." data-fix="The team looks forward to welcoming visitors." data-success-message="Correct. To belongs to look forward to, so the following verb is welcoming.">
+    <h3>Drill 5: recognize prepositional <em>to</em></h3><p class="tile-target">Report the team’s positive expectation about welcoming visitors.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="welcoming">welcoming</button><button class="tile" data-build-tile="forward">forward</button><button class="tile" data-build-tile="team">team</button><button class="tile" data-build-tile="visitors">visitors</button><button class="tile" data-build-tile="looks">looks</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="to">to</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair three different errors</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="to solve" data-hint="Enjoy takes an -ing complement for the enjoyed activity." data-fix="Leo enjoys solving technical problems." data-why="Use solving after enjoy; to solve is not the stored complement in this meaning." data-success-message="Correct. Enjoy takes the -ing complement solving.">
+    <h3>Drill 6: repair the core complement</h3><p>The note describes an activity Leo likes: <span class="ex">Leo enjoys to solve technical problems.</span> Tap the complement that does not follow <span class="ex">enjoy</span>.</p><div class="spot-options"><button class="error-choice" data-error-choice="leo">Leo</button><button class="error-choice" data-error-choice="enjoys">enjoys</button><button class="error-choice" data-error-choice="to solve">to solve</button><button class="error-choice" data-error-choice="problems">technical problems</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="test" data-hint="The person Leo needs to before the base verb test." data-fix="Maya wants Leo to test the projector." data-why="Want plus a second performer uses person plus to-infinitive: wants Leo to test." data-success-message="Correct. The second performer pattern requires Leo to test.">
+    <h3>Drill 7: connect the second performer</h3><p>Maya wants Leo, not herself, to perform the action: <span class="ex">Maya wants Leo test the projector.</span> Tap the part that is missing its connector.</p><div class="spot-options"><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="wants">wants</button><button class="error-choice" data-error-choice="leo">Leo</button><button class="error-choice" data-error-choice="test">test</button><button class="error-choice" data-error-choice="projector">the projector</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="to work" data-hint="The report means the work ended at six, not that Leo paused another action in order to work." data-fix="Leo stopped working at six." data-why="Stop plus -ing names the activity that ended; stop to work would introduce work as a new purpose after pausing something else." data-success-message="Correct. The ended activity uses stopped working.">
+    <h3>Drill 8: preserve the relationship between actions</h3><p>The report means Leo ended work at six: <span class="ex">Leo stopped to work at six.</span> Tap the complement that creates the wrong relationship.</p><div class="spot-options"><button class="error-choice" data-error-choice="leo">Leo</button><button class="error-choice" data-error-choice="stopped">stopped</button><button class="error-choice" data-error-choice="to work">to work</button><button class="error-choice" data-error-choice="six">at six</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 8: say it, then reveal</h3>
-    <p>Read the cue, say the full sentence aloud, then reveal only after you answer.</p>
+    <h3>Oral transforms: keep performer, pattern, and meaning</h3>
+    <p>Say each complete sentence before revealing it. Follow the requested relationship.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> I run in the park. Use enjoy.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I enjoy running in the park.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> She wants a new job. Add the verb find.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>She wants to find a new job.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> We speak English in class. Use practice.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>We practice speaking English in class.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> He waits for the bus. Use doesn’t mind.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>He doesn’t mind waiting for the bus.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> They will move next year. Use plan.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>They plan to move next year.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> I want to book a table for two. Make it polite with would like.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I’d like to book a table for two.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> Maya has a plan. Maya will teach. Combine with <span class="ex">plan</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Maya plans to teach.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> Leo solves technical problems and enjoys the activity. Use <span class="ex">enjoy</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Leo enjoys solving technical problems.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> Maya made the request. Leo will wait. Use <span class="ex">ask</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Maya asked Leo to wait.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Maya made a decision to keep the session. Use <span class="ex">decide</span> and <span class="ex">cancel</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Maya decided not to cancel the session.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> Leo ended the testing. Use <span class="ex">stop</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Leo stopped testing.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> A restart is one possible solution. Use experimental <span class="ex">try</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Try restarting the projector.</strong></p></div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Communicate: brief a fictional workshop team</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your free time:</b> Say five true sentences about your hobbies with <span class="ex">enjoy</span>, <span class="ex">love</span>, and <span class="ex">like</span>. <span class="ex">I enjoy walking in the evening. I love cooking for friends.</span></div>
-  <div class="prompt-card"><b>Your goals:</b> Say three true sentences about this year with <span class="ex">want to</span>, <span class="ex">hope to</span>, and <span class="ex">plan to</span>. <span class="ex">I want to improve my English. I plan to visit my sister.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask three questions with these patterns, then ask one follow-up. <span class="ex">Do you enjoy teaching online? What do you want to learn next?</span></div>
-  <div class="prompt-card"><b>Polite requests:</b> You are at a restaurant or a hotel. Make three requests with <span class="ex">I’d like to</span>. <span class="ex">I’d like to book a table for eight. I’d like to pay by card.</span></div>
-  <div class="prompt-card"><b>Habits, good and bad:</b> Say two true things with <span class="ex">keep</span> and two with <span class="ex">don’t mind</span>. <span class="ex">I keep forgetting to drink water. I don’t mind working late on Thursdays.</span></div>
+  <p class="note-line">You never need to disclose your real work, school, home, location, schedule, goals, hobbies, abilities, performance, health, finances, family, relationships, travel, mistakes, habits, or plans. Use the Linden workshop, invent a neutral event, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Prepare the roles:</b> Choose a fictional coordinator, technician, greeter, and visitor. Decide who plans, enjoys, requests, avoids, and looks forward to each action.</div>
+  <div class="prompt-card"><b>Final production: give a 45–60 second fictional workshop update.</b> Include one <span class="ex">to + base</span> chunk, one <span class="ex">-ing</span> chunk, one person plus to-infinitive, one complement negation, one preposition plus <span class="ex">-ing</span>, and one accurate <span class="ex">stop, remember</span>, or <span class="ex">try</span> contrast.</div>
+  <div class="prompt-card"><b>Meaning check:</b> Ask the listener who performs two actions and what relationship one complement expresses. Then reformulate one sentence when the listener changes the intended meaning.</div>
 
-  <h2>Reflect</h2>
+  <h2>Final check</h2>
+  <div class="lead-rule"></div>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled a core -ing complement, second performer, prepositional to, and an ended-activity meaning contrast.">
+    <h3>Four decisions with one defensible target</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Leo enjoys solving technical problems." data-hint="Enjoy takes an -ing complement for the enjoyed activity." data-fix="Leo enjoys solving technical problems."><p class="quiz-question">1. The message describes an activity Leo likes. Which sentence uses the stored complement after <span class="ex">enjoy</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Leo enjoys solving technical problems.">Leo enjoys solving technical problems.</button><button class="quiz-option" data-quiz-option="Leo enjoys to solve technical problems.">Leo enjoys to solve technical problems.</button><button class="quiz-option" data-quiz-option="Leo enjoys solve technical problems.">Leo enjoys solve technical problems.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Maya asked Leo to test the projector." data-hint="Leo is the requested performer, so put Leo before to test." data-fix="Maya asked Leo to test the projector."><p class="quiz-question">2. Maya makes the request, but Leo performs the test. Which sentence names both roles accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya asked Leo to test the projector.">Maya asked Leo to test the projector.</button><button class="quiz-option" data-quiz-option="Maya asked to Leo test the projector.">Maya asked to Leo test the projector.</button><button class="quiz-option" data-quiz-option="Maya asked Leo testing the projector.">Maya asked Leo testing the projector.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The team looks forward to welcoming visitors." data-hint="To is a preposition in look forward to, so a following verb takes -ing." data-fix="The team looks forward to welcoming visitors."><p class="quiz-question">3. Which sentence correctly treats <span class="ex">to</span> as part of the expression <span class="ex">look forward to</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The team looks forward to welcoming visitors.">The team looks forward to welcoming visitors.</button><button class="quiz-option" data-quiz-option="The team looks forward to welcome visitors.">The team looks forward to welcome visitors.</button><button class="quiz-option" data-quiz-option="The team looks forward welcoming to visitors.">The team looks forward welcoming to visitors.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Leo stopped testing at six." data-hint="Stop plus -ing names the activity that ended." data-fix="Leo stopped testing at six."><p class="quiz-question">4. The report means the testing activity ended at six. Which sentence preserves that relationship?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Leo stopped testing at six.">Leo stopped testing at six.</button><button class="quiz-option" data-quiz-option="Leo stopped to test at six.">Leo stopped to test at six.</button><button class="quiz-option" data-quiz-option="Leo stopped test at six.">Leo stopped test at six.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect and retrieve</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Say the system back</h3>
-    <p>Complete this aloud: “After want, need, decide, hope, and plan, I use ______ + verb. After enjoy, finish, keep, and mind, I use the ______ form. After a preposition, the verb always ends in ______. With like, love, hate, and start, ______ forms are correct.”</p>
-    <p>Then say one sentence about a goal, one about a hobby, and one polite request from your real life.</p>
+    <h3>Explain the decision path without looking back</h3>
+    <p>Which pattern does the first verb take? Who performs the second action? Is the sentence negating the first decision or the chosen action? Is <span class="ex">to</span> an infinitive marker or a preposition? If both forms are possible, what relationship does the context require?</p>
   </div>
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the stored pattern, performer, negation scope, kind of <span class="ex">to</span>, or meaning relationship that still feels slow.</p>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can choose between to + verb and -ing after the most common A2 verbs.">
-    <h3>Final quiz: verb patterns in real sentences</h3>
-    <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="to go">
-        <p class="quiz-question">1. I want ___ home early.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="to go">to go</button><button class="quiz-option" data-quiz-option="going">going</button><button class="quiz-option" data-quiz-option="go">go</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="listening">
-        <p class="quiz-question">2. She enjoys ___ to podcasts.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="listening">listening</button><button class="quiz-option" data-quiz-option="to listen">to listen</button><button class="quiz-option" data-quiz-option="listen">listen</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="to rent">
-        <p class="quiz-question">3. We’ve decided ___ a bigger apartment.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="to rent">to rent</button><button class="quiz-option" data-quiz-option="renting">renting</button><button class="quiz-option" data-quiz-option="rent">rent</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="working">
-        <p class="quiz-question">4. He doesn’t mind ___ on weekends.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="working">working</button><button class="quiz-option" data-quiz-option="to work">to work</button><button class="quiz-option" data-quiz-option="work">work</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="replying">
-        <p class="quiz-question">5. Thanks for ___ so quickly.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="replying">replying</button><button class="quiz-option" data-quiz-option="to reply">to reply</button><button class="quiz-option" data-quiz-option="reply">reply</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="I’d like">
-        <p class="quiz-question">6. ___ to see the menu, please.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I’d like">I’d like</button><button class="quiz-option" data-quiz-option="I’m liking">I’m liking</button><button class="quiz-option" data-quiz-option="I enjoy">I enjoy</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="practicing">
-        <p class="quiz-question">7. Keep ___! Your English gets better every week.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="practicing">practicing</button><button class="quiz-option" data-quiz-option="to practice">to practice</button><button class="quiz-option" data-quiz-option="practice">practice</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="She wants to learn French.">
-        <p class="quiz-question">8. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="She wants to learn French.">She wants to learn French.</button><button class="quiz-option" data-quiz-option="She wants learning French.">She wants learning French.</button><button class="quiz-option" data-quiz-option="She enjoys to learn French.">She enjoys to learn French.</button></div>
-      </div>
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day core complement, second performer, and prepositional-to retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved the -ing complement, person plus to-infinitive, and prepositional-to pattern.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day verb pattern choices"><button class="choice-option" data-choice-option="solving">solving</button><button class="choice-option" data-choice-option="to solve">to solve</button><button class="choice-option" data-choice-option="Leo to test">Leo to test</button><button class="choice-option" data-choice-option="to Leo test">to Leo test</button><button class="choice-option" data-choice-option="welcoming">welcoming</button><button class="choice-option" data-choice-option="welcome">welcome</button></div>
+      <div class="q"><span class="n">1</span><span>The activity itself is enjoyable to Leo: Leo enjoys <button class="choice-gap" data-choice-gap data-answer="solving" data-hint="Enjoy takes an -ing complement: solving." data-fix="Leo enjoys solving technical problems." data-placeholder="choose">choose</button> technical problems.</span></div>
+      <div class="q"><span class="n">2</span><span>Maya requests the action, but Leo performs it: Maya asked <button class="choice-gap" data-choice-gap data-answer="Leo to test" data-hint="Put the second performer Leo before to test." data-fix="Maya asked Leo to test the projector." data-placeholder="choose">choose</button> the projector.</span></div>
+      <div class="q"><span class="n">3</span><span>Here <span class="ex">to</span> is part of the expression <span class="ex">look forward to</span>: The team looks forward to <button class="choice-gap" data-choice-gap data-answer="welcoming" data-hint="Prepositional to is followed by the -ing form welcoming." data-fix="The team looks forward to welcoming visitors." data-placeholder="choose">choose</button> visitors.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+  </section>
 </main>
 </LessonPage>
-

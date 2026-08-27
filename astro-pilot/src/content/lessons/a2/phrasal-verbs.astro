@@ -1,420 +1,299 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Phrasal verbs · A2 Vocabulary · Curriculum Map",
+  "title": "Phrasal verbs · A2 Vocabulary",
   "slug": "phrasal-verbs",
   "level": "A2",
   "topic": "Phrasal verbs (common)",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "In English, a verb plus a small word often makes a completely new meaning: wake up , turn off , find out . Learn each pair as one chunk , the way you learned get up in your daily r",
+  "description": "Use common multiword verbs by meaning, object pattern, context, register, and spoken form instead of memorizing disconnected particle lists.",
   "sequence": 19,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "prerequisites": ["a1/object-pronouns", "a1/imperatives", "a2/past-simple", "a2/technology-and-devices"],
+  "related": ["a2/travel-and-transport"],
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Meaning transparency, tense, three object patterns, polysemy, register, U.S. spoken form, listening, clarification, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 19</p>
-  <h1>Phrasal <em>verbs</em></h1>
-  <p class="standfirst">In English, a verb plus a small word often makes a completely new meaning: <span class="ex">wake up</span>, <span class="ex">turn off</span>, <span class="ex">find out</span>. Learn each pair as <strong>one chunk</strong>, the way you learned <span class="ex">get up</span> in your daily routines lesson, and everyday English starts to sound natural: <span class="ex">I wake up at six</span>, <span class="ex">Can you pick me up at eight?</span>, <span class="ex">Please fill out this form</span>.</p>
+  <h1>Phrasal verbs: <em>store meaning and pattern together</em></h1>
+  <p class="standfirst">A multiword verb is useful only when you know what the whole chunk means in context, whether it needs an object, where that object goes, and how the verb changes for time. Learn <span class="ex">turn something off</span>, <span class="ex">look for something</span>, and <span class="ex">show up</span> as different patterns, not as one rule about a small word.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">verb + small word</span>
-    <span class="tag">learn whole chunks</span>
-    <span class="tag">12 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">meaning · tense · object pattern</span>
+    <span class="tag">turn it off · look for it · show up</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read one busy morning.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Verb + small word = new meaning.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, and build chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Tell your routine and give instructions.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Match six chunks to six jobs in one handoff.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Separate no-object, movable-object, and fixed patterns.</span></div>
+    <div class="flow-step"><b>Build</b><span>Choose meaning, tense, object position, and register.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional workshop handoff and clarify meaning.</span></div>
   </div>
 
-  <p class="note-line">You already know the small words: <span class="ex">up</span>, <span class="ex">off</span>, <span class="ex">on</span>, <span class="ex">out</span>, <span class="ex">back</span>, <span class="ex">down</span>. Together with a verb, they make one new idea. Always say the two words together: <span class="ex">get up</span>, not just <span class="ex">get</span>.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can treat a common multiword verb as one meaning unit; change its main verb for tense while keeping the particle stable; distinguish chunks used without an object, separable chunks, and chunks that stay together; place noun and pronoun objects accurately; use context to select among multiple meanings; choose a neutral or more official alternative when needed; hear stress and linking; and clarify an unfamiliar meaning.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="get">get</button>
-      <button class="choice-option" data-choice-option="gets">gets</button>
-      <button class="choice-option" data-choice-option="it">it</button>
-      <button class="choice-option" data-choice-option="its">its</button>
-      <button class="choice-option" data-choice-option="sit">sit</button>
-      <button class="choice-option" data-choice-option="sits">sits</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="get" data-placeholder="choose">choose</button> up at seven every morning. &nbsp;<span class="contraction">(A1 · daily routines · get up was already there)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I love this song. Play <button class="choice-gap" data-choice-gap data-answer="it" data-placeholder="choose">choose</button> again, please. &nbsp;<span class="contraction">(A1 · object pronouns)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Please <button class="choice-gap" data-choice-gap data-answer="sit" data-placeholder="choose">choose</button> down; the meeting is starting. &nbsp;<span class="contraction">(A1 · imperatives)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved past simple, the base verb after did, and an imperative with an object pronoun.">
+    <h3>Three earlier patterns</h3>
+    <p class="choice-hint">Use past simple for yesterday, the base verb after <span class="ex">did</span>, and the base verb at the start of an imperative.</p>
+    <div class="choice-bank" aria-label="Earlier pattern choices"><button class="choice-option" data-choice-option="picked">picked</button><button class="choice-option" data-choice-option="call">call</button><button class="choice-option" data-choice-option="Write">Write</button><button class="choice-option" data-choice-option="pick">pick</button><button class="choice-option" data-choice-option="called">called</button><button class="choice-option" data-choice-option="Wrote">Wrote</button></div>
+    <div class="q"><span class="n">1</span><span>The collection happened yesterday: Maya <button class="choice-gap" data-choice-gap data-answer="picked" data-hint="Use the regular past form before up for a finished collection yesterday." data-fix="Maya picked the supply boxes up yesterday.">choose</button> the supply boxes up yesterday.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">Did</span> already carries past time: Did Leo <button class="choice-gap" data-choice-gap data-answer="call" data-hint="Use the base verb after did; the particle back does not change." data-fix="Did Leo call the coordinator back?">choose</button> the coordinator back?</span></div>
+    <div class="q"><span class="n">3</span><span>The direct instruction begins with the base verb: <button class="choice-gap" data-choice-gap data-answer="Write" data-hint="Begin an affirmative imperative with the base verb Write." data-fix="Write the room number down.">choose</button> the room number down.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Six chunks you can picture</h2>
-  <div class="lead-rule"></div>
-  <p>Say each one aloud in a sentence about you: <span class="ex">I wake up at six.</span> <span class="ex">I go out on Fridays.</span></p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/alarm-clock.svg" alt="" loading="lazy" /></span><span class="nm">wake up</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tshirt.svg" alt="" loading="lazy" /></span><span class="nm">put on</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/laptop.svg" alt="" loading="lazy" /></span><span class="nm">turn on</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/phone.svg" alt="" loading="lazy" /></span><span class="nm">pick up</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wastebasket.svg" alt="" loading="lazy" /></span><span class="nm">throw away</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/door.svg" alt="" loading="lazy" /></span><span class="nm">go out</span></div>
-  </div>
-
-  <h2>Notice before the rule</h2>
+  <h2>Notice six chunks doing six different jobs</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read one busy morning</h3>
-    <p><span class="ex">“I wake up at six and get up at 6:15. I put on my clothes and turn on the coffee machine. At seven I go out. In the evening I come back, take off my shoes, and turn off my phone.”</span></p>
+    <h3>Harbor workshop handoff</h3>
+    <p><span class="ex">“Please <strong>pick up</strong> the supply box at the front desk and <strong>write down</strong> room 204. <strong>Look for</strong> the blue sign-in sheets in the cabinet, then <strong>turn on</strong> the projector. The coordinator left a message, so <strong>call her back</strong>. After the workshop, <strong>throw away</strong> only the unused blank paper.”</span></p>
     <ul>
-      <li>Look at <span class="ex">get up</span>. You know <span class="ex">get</span> and you know <span class="ex">up</span>, but together they mean <strong>leave your bed</strong>. Does <span class="ex">get</span> alone mean that?</li>
-      <li>Compare <span class="ex">turn on</span> and <span class="ex">turn off</span>. The verb is the same. Which word changes the meaning?</li>
-      <li>Count the pairs of verb + small word in this little story. How many can you find?</li>
+      <li>Which chunk means collect? Which one means record information?</li>
+      <li>Which chunks mean search, activate, return a call, and discard?</li>
+      <li>Which chunks have an object between their two parts? Which one stays together before its object?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: finish each chunk</h3>
-    <p class="choice-hint">The verb carries the action; the small word completes the meaning. Choose the small word that finishes each chunk.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="up">up</button>
-      <button class="choice-option" data-choice-option="on">on</button>
-      <button class="choice-option" data-choice-option="off">off</button>
-      <button class="choice-option" data-choice-option="out">out</button>
-      <button class="choice-option" data-choice-option="back">back</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I wake <button class="choice-gap" data-choice-gap data-answer="up" data-placeholder="choose">choose</button> at six. &nbsp;<span class="contraction">(stop sleeping)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I put <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> my jacket before work. &nbsp;<span class="contraction">(clothes go on your body)</span></span></div>
-    <div class="q"><span class="n">3</span><span>She takes <button class="choice-gap" data-choice-gap data-answer="off" data-placeholder="choose">choose</button> her shoes at the door. &nbsp;<span class="contraction">(remove them)</span></span></div>
-    <div class="q"><span class="n">4</span><span>We go <button class="choice-gap" data-choice-gap data-answer="out" data-placeholder="choose">choose</button> on Friday nights. &nbsp;<span class="contraction">(leave home for fun)</span></span></div>
-    <div class="q"><span class="n">5</span><span>He comes <button class="choice-gap" data-choice-gap data-answer="back" data-placeholder="choose">choose</button> home at seven. &nbsp;<span class="contraction">(returns)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Turn <button class="choice-gap" data-choice-gap data-answer="off" data-placeholder="choose">choose</button> the lights when you leave. &nbsp;<span class="contraction">(stop them)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched pick up, write down, look for, turn on, call back, and throw away to six distinct handoff jobs.">
+    <h3>Discovery check: identify the job of each chunk</h3>
+    <div class="choice-bank" aria-label="Phrasal-verb job choices"><button class="choice-option" data-choice-option="collect an item">collect an item</button><button class="choice-option" data-choice-option="record information">record information</button><button class="choice-option" data-choice-option="search for something">search for something</button><button class="choice-option" data-choice-option="activate equipment">activate equipment</button><button class="choice-option" data-choice-option="return a phone call">return a phone call</button><button class="choice-option" data-choice-option="discard something">discard something</button></div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Pick up the supply box at the front desk</span> means <button class="choice-gap" data-choice-gap data-answer="collect an item" data-hint="The box is waiting at a named place for Maya to receive it." data-fix="Pick up the supply box means collect an item.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">Write down room 204</span> means <button class="choice-gap" data-choice-gap data-answer="record information" data-hint="The room number should be written so it is not forgotten." data-fix="Write down room 204 means record information.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">Look for the blue sheets</span> means <button class="choice-gap" data-choice-gap data-answer="search for something" data-hint="The sheets are not yet located, so the person tries to find them." data-fix="Look for the blue sheets means search for something.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">Turn on the projector</span> means <button class="choice-gap" data-choice-gap data-answer="activate equipment" data-hint="The projector is off and needs to start operating." data-fix="Turn on the projector means activate equipment.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">Call the coordinator back</span> means <button class="choice-gap" data-choice-gap data-answer="return a phone call" data-hint="The coordinator called first and left a message." data-fix="Call the coordinator back means return a phone call.">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span><span class="ex">Throw away the unused paper</span> means <button class="choice-gap" data-choice-gap data-answer="discard something" data-hint="Only blank paper no longer needed goes into the correct waste container." data-fix="Throw away the unused paper means discard something.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: verb + small word = one new verb</h2>
+  <h2>Get to the root: store four facts, not two words</h2>
   <div class="lead-rule"></div>
-  <p>A phrasal verb is a normal verb (<span class="ex">get, turn, put, take</span>) plus a small word (<span class="ex">up, off, on, out, back, down</span>). Together they mean something new. Don’t translate the two parts separately; learn the pair as <strong>one piece of vocabulary</strong>, exactly like a single word.</p>
-  <p><strong>Morning and home.</strong> The chunks of your daily routine:</p>
+  <p>For each multiword verb, store the whole chunk, its meaning in one context, its object pattern, and a complete example. A particle such as <span class="ex">up, off, out</span>, or <span class="ex">back</span> can show a physical direction, a result, or a meaning that is difficult to predict.</p>
   <table>
-    <thead><tr><th>chunk <span class="contraction">meaning</span></th><th>hear it in a sentence</th></tr></thead>
+    <thead><tr><th>chunk</th><th>meaning in this context</th><th>object pattern</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>wake up</b> &nbsp;<span class="contraction">stop sleeping</span></td><td>I wake up at six, but I stay in bed.</td></tr>
-      <tr><td><b>get up</b> &nbsp;<span class="contraction">leave your bed</span></td><td>I get up at 6:15 and make coffee.</td></tr>
-      <tr><td><b>put on</b> &nbsp;<span class="contraction">place clothes on your body</span></td><td>Put on a warm jacket; it’s cold.</td></tr>
-      <tr><td><b>take off</b> &nbsp;<span class="contraction">remove clothes</span></td><td>He takes off his shoes at the door.</td></tr>
-      <tr><td><b>turn on / turn off</b> &nbsp;<span class="contraction">start / stop a light or machine</span></td><td>Turn on the laptop. Turn off the lights.</td></tr>
+      <tr><td><span class="ex">show up</span></td><td>arrive</td><td>used without an object here</td><td><span class="ex">Maya showed up at 5:30.</span></td></tr>
+      <tr><td><span class="ex">turn off</span></td><td>stop equipment operating</td><td>separable</td><td><span class="ex">Turn the projector off. Turn it off.</span></td></tr>
+      <tr><td><span class="ex">look for</span></td><td>try to find</td><td>stays together before the object</td><td><span class="ex">Look for the sheets. Look for them.</span></td></tr>
+      <tr><td><span class="ex">take off</span></td><td>remove clothing or leave the ground</td><td>pattern changes with meaning</td><td><span class="ex">Take your coat off. The plane took off.</span></td></tr>
     </tbody>
   </table>
-  <p><strong>Out and about.</strong> Moving around the city:</p>
+  <p>The main verb carries tense and agreement; the particle stays the same: <span class="ex">call back · calls back · called back · is calling back</span>. After <span class="ex">did / didn’t</span>, return the main verb to its base form: <span class="ex">Did she call back? She didn’t call back.</span></p>
+  <div class="note">
+    <h3>A practical label, not a false grammar rule</h3>
+    <p>This lesson uses <span class="ex">phrasal verb</span> as a learner-friendly label for common verb-particle and fixed verb-preposition chunks. Some grammar books label combinations such as <span class="ex">look for</span> or <span class="ex">wait for</span> differently. The useful A2 question is the same: What does the whole chunk mean here, and where does its object go?</p>
+  </div>
+
+  <h2>Pattern 1: no object in the meaning used here</h2>
+  <div class="lead-rule"></div>
+  <p>These chunks form a complete idea without a direct object in the meanings below. A following time, place, or manner phrase is not a movable object: <span class="ex">showed up at 5:30 · came back after lunch</span>.</p>
   <table>
-    <thead><tr><th>chunk <span class="contraction">meaning</span></th><th>hear it in a sentence</th></tr></thead>
-    <tbody>
-      <tr><td><b>go out</b> &nbsp;<span class="contraction">leave home, often for fun</span></td><td>We go out for dinner on Fridays.</td></tr>
-      <tr><td><b>come back</b> &nbsp;<span class="contraction">return</span></td><td>She comes back from work at six.</td></tr>
-      <tr><td><b>get on / get off</b> &nbsp;<span class="contraction">enter / leave a bus or train</span></td><td>Get on the 42 bus and get off at Central Station.</td></tr>
-      <tr><td><b>pick up</b> &nbsp;<span class="contraction">collect someone in a car</span></td><td>I’ll pick you up at eight.</td></tr>
-    </tbody>
-  </table>
-  <p><strong>Work and life admin.</strong> Forms, plans, and information:</p>
-  <table>
-    <thead><tr><th>chunk <span class="contraction">meaning</span></th><th>hear it in a sentence</th></tr></thead>
-    <tbody>
-      <tr><td><b>find out</b> &nbsp;<span class="contraction">learn a fact</span></td><td>I need to find out the schedule.</td></tr>
-      <tr><td><b>fill out</b> &nbsp;<span class="contraction">complete a form</span></td><td>Please fill out this form at the desk.</td></tr>
-      <tr><td><b>write down</b> &nbsp;<span class="contraction">write it so you remember</span></td><td>Write down the address before you forget it.</td></tr>
-      <tr><td><b>look for</b> &nbsp;<span class="contraction">try to find</span></td><td>I’m looking for my keys.</td></tr>
-      <tr><td><b>give up</b> &nbsp;<span class="contraction">stop trying, stop a habit</span></td><td>He gave up sugar last month.</td></tr>
-      <tr><td><b>throw away</b> &nbsp;<span class="contraction">put it in the trash</span></td><td>Throw away those old papers.</td></tr>
-    </tbody>
+    <thead><tr><th>base chunk</th><th>past form</th><th>meaning used here</th></tr></thead>
+    <tbody><tr><td><span class="ex">get up</span></td><td><span class="ex">got up</span></td><td>leave bed</td></tr><tr><td><span class="ex">go out</span></td><td><span class="ex">went out</span></td><td>leave home, often socially</td></tr><tr><td><span class="ex">come back</span></td><td><span class="ex">came back</span></td><td>return</td></tr><tr><td><span class="ex">sit down</span></td><td><span class="ex">sat down</span></td><td>move into a seated position</td></tr><tr><td><span class="ex">show up</span></td><td><span class="ex">showed up</span></td><td>arrive, often when expected</td></tr><tr><td><span class="ex">grow up</span></td><td><span class="ex">grew up</span></td><td>develop from childhood to adulthood</td></tr></tbody>
   </table>
 
-  <div class="thinking-card">
-    <h3>Where does the small word go?</h3>
-    <p>Often you have a choice. <span class="ex">Turn off the light</span> and <span class="ex">turn the light off</span> are both correct.</p>
-    <p>With a pronoun (<span class="ex">it, me, her, them</span>), there is no choice. The pronoun goes <strong>in the middle</strong>: <span class="ex">turn it off</span>, <span class="ex">pick me up</span>, <span class="ex">write them down</span>. Never <span class="ex">turn off it</span>, never <span class="ex">pick up me</span>.</p>
-    <p>One chunk stays together: <span class="ex">look for</span>. Say <span class="ex">look for my keys</span>, <span class="ex">look for them</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You changed the main verb for six finished events while keeping up, out, back, and down stable.">
+    <h3>Drill 1: choose the finished no-object chunk</h3>
+    <div class="choice-bank" aria-label="No-object chunk choices"><button class="choice-option" data-choice-option="got up">got up</button><button class="choice-option" data-choice-option="went out">went out</button><button class="choice-option" data-choice-option="came back">came back</button><button class="choice-option" data-choice-option="sat down">sat down</button><button class="choice-option" data-choice-option="showed up">showed up</button><button class="choice-option" data-choice-option="grew up">grew up</button></div>
+    <div class="q"><span class="n">1</span><span>Leo left his bed at 6:30 yesterday: He <button class="choice-gap" data-choice-gap data-answer="got up" data-hint="Use the irregular past of get plus the stable particle up." data-fix="Leo got up at 6:30 yesterday.">choose</button> at 6:30.</span></div>
+    <div class="q"><span class="n">2</span><span>Maya left home for dinner with friends on Friday: She <button class="choice-gap" data-choice-gap data-answer="went out" data-hint="Use the irregular past of go for the social meaning of go out." data-fix="Maya went out for dinner on Friday.">choose</button> for dinner.</span></div>
+    <div class="q"><span class="n">3</span><span>Leo returned from lunch at 1:00: He <button class="choice-gap" data-choice-gap data-answer="came back" data-hint="Use the irregular past of come plus back to report a return." data-fix="Leo came back from lunch at 1:00.">choose</button> at 1:00.</span></div>
+    <div class="q"><span class="n">4</span><span>The chair was empty, and Maya moved into a seated position: She <button class="choice-gap" data-choice-gap data-answer="sat down" data-hint="Use the irregular past of sit plus down." data-fix="Maya sat down in the empty chair.">choose</button> in the chair.</span></div>
+    <div class="q"><span class="n">5</span><span>The workshop expected Leo at 5:30, and he arrived exactly then: He <button class="choice-gap" data-choice-gap data-answer="showed up" data-hint="Show up means arrive, often at an expected event." data-fix="Leo showed up at 5:30.">choose</button> at 5:30.</span></div>
+    <div class="q"><span class="n">6</span><span>Maya spent her childhood in Phoenix: She <button class="choice-gap" data-choice-gap data-answer="grew up" data-hint="Use the irregular past of grow plus up for childhood development." data-fix="Maya grew up in Phoenix.">choose</button> in Phoenix.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: put the pronoun in the middle</h3>
-    <p class="choice-hint">Pronouns like <b>it</b> and <b>me</b> go in the middle of the chunk, never after it.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="it off">it off</button>
-      <button class="choice-option" data-choice-option="off it">off it</button>
-      <button class="choice-option" data-choice-option="me up">me up</button>
-      <button class="choice-option" data-choice-option="up me">up me</button>
-      <button class="choice-option" data-choice-option="it out">it out</button>
-      <button class="choice-option" data-choice-option="out it">out it</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>The music is very loud. Please turn <button class="choice-gap" data-choice-gap data-answer="it off" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(it = the music)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My flight lands at ten. Can you pick <button class="choice-gap" data-choice-gap data-answer="me up" data-placeholder="choose">choose</button> at the airport? &nbsp;<span class="contraction">(collect me in a car)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Here’s the registration form. Fill <button class="choice-gap" data-choice-gap data-answer="it out" data-placeholder="choose">choose</button> before Friday. &nbsp;<span class="contraction">(it = the form)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Choose the chunk</h2>
+  <h2>Pattern 2: a separable chunk has two noun positions</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2: choose the small word</h3>
-    <p class="choice-hint">Say the whole chunk aloud each time: <b>get up</b>, <b>put on</b>, <b>write down</b>. The cue in parentheses tells you the meaning.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="up">up</button>
-      <button class="choice-option" data-choice-option="on">on</button>
-      <button class="choice-option" data-choice-option="off">off</button>
-      <button class="choice-option" data-choice-option="out">out</button>
-      <button class="choice-option" data-choice-option="back">back</button>
-      <button class="choice-option" data-choice-option="down">down</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I get <button class="choice-gap" data-choice-gap data-answer="up" data-placeholder="choose">choose</button> at seven and make breakfast. &nbsp;<span class="contraction">(leave the bed)</span></span></div>
-    <div class="q"><span class="n">2</span><span>She put <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> her coat and left. &nbsp;<span class="contraction">(clothes)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Get <button class="choice-gap" data-choice-gap data-answer="off" data-placeholder="choose">choose</button> the bus at the last stop. &nbsp;<span class="contraction">(leave the bus)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Can you pick me <button class="choice-gap" data-choice-gap data-answer="up" data-placeholder="choose">choose</button> at eight? &nbsp;<span class="contraction">(collect me in a car)</span></span></div>
-    <div class="q"><span class="n">5</span><span>He went <button class="choice-gap" data-choice-gap data-answer="out" data-placeholder="choose">choose</button> with friends on Saturday night. &nbsp;<span class="contraction">(left home for fun)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Write <button class="choice-gap" data-choice-gap data-answer="down" data-placeholder="choose">choose</button> the address before you forget it. &nbsp;<span class="contraction">(on paper)</span></span></div>
-    <div class="q"><span class="n">7</span><span>I’m going to lunch. I’ll come <button class="choice-gap" data-choice-gap data-answer="back" data-placeholder="choose">choose</button> at two. &nbsp;<span class="contraction">(return)</span></span></div>
-    <div class="q"><span class="n">8</span><span>Please fill <button class="choice-gap" data-choice-gap data-answer="out" data-placeholder="choose">choose</button> this form at the desk. &nbsp;<span class="contraction">(complete it)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <p>With these meanings, a short noun can follow the particle or sit between the verb and particle: <span class="ex">turn off the projector · turn the projector off</span>. A personal pronoun must go in the middle: <span class="ex">turn it off</span>, not <span class="ex">turn off it</span>.</p>
+  <table>
+    <thead><tr><th>chunk and meaning</th><th>noun object</th><th>pronoun object</th></tr></thead>
+    <tbody><tr><td><span class="ex">turn on</span>: activate</td><td><span class="ex">turn on the projector · turn the projector on</span></td><td><span class="ex">turn it on</span></td></tr><tr><td><span class="ex">pick up</span>: collect</td><td><span class="ex">pick up the boxes · pick the boxes up</span></td><td><span class="ex">pick them up</span></td></tr><tr><td><span class="ex">write down</span>: record</td><td><span class="ex">write down the number · write the number down</span></td><td><span class="ex">write it down</span></td></tr><tr><td><span class="ex">fill out</span>: complete a form</td><td><span class="ex">fill out the form · fill the form out</span></td><td><span class="ex">fill it out</span></td></tr><tr><td><span class="ex">throw away</span>: discard</td><td><span class="ex">throw away the paper · throw the paper away</span></td><td><span class="ex">throw it away</span></td></tr><tr><td><span class="ex">call back</span>: return a call</td><td><span class="ex">call the coordinator back</span></td><td><span class="ex">call her back</span></td></tr></tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You placed six pronoun objects between the main verb and particle in separable chunks.">
+    <h3>Drill 2: place the pronoun inside the chunk</h3>
+    <div class="choice-bank" aria-label="Separable chunk choices"><button class="choice-option" data-choice-option="turned it on">turned it on</button><button class="choice-option" data-choice-option="picked them up">picked them up</button><button class="choice-option" data-choice-option="wrote it down">wrote it down</button><button class="choice-option" data-choice-option="filled it out">filled it out</button><button class="choice-option" data-choice-option="threw them away">threw them away</button><button class="choice-option" data-choice-option="called her back">called her back</button></div>
+    <div class="q"><span class="n">1</span><span>The projector was off; <span class="ex">it</span> replaces the projector: Maya <button class="choice-gap" data-choice-gap data-answer="turned it on" data-hint="Put it between turned and on." data-fix="Maya turned it on.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Two boxes were waiting; <span class="ex">them</span> replaces the boxes: Leo <button class="choice-gap" data-choice-gap data-answer="picked them up" data-hint="Put them between picked and up." data-fix="Leo picked them up at the front desk.">choose</button> at the front desk.</span></div>
+    <div class="q"><span class="n">3</span><span>Room 204 was easy to forget; <span class="ex">it</span> replaces the room number: Maya <button class="choice-gap" data-choice-gap data-answer="wrote it down" data-hint="Put it between wrote and down." data-fix="Maya wrote it down.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The fictional form was complete; <span class="ex">it</span> replaces the form: Leo <button class="choice-gap" data-choice-gap data-answer="filled it out" data-hint="Put it between filled and out." data-fix="Leo filled it out.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The two unused blank sheets were no longer needed; <span class="ex">them</span> replaces the sheets: Maya <button class="choice-gap" data-choice-gap data-answer="threw them away" data-hint="Put them between threw and away." data-fix="Maya threw them away in the paper-recycling bin.">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>The coordinator called first; <span class="ex">her</span> replaces the coordinator: Leo <button class="choice-gap" data-choice-gap data-answer="called her back" data-hint="Put her between called and back." data-fix="Leo called her back.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 3: type the small word</h3>
-    <p class="choice-hint">Type <b>up</b>, <b>on</b>, <b>off</b>, <b>out</b>, <b>back</b>, or <b>down</b>. Each one is used exactly once.</p>
-    <div class="q"><span class="n">1</span><span>My alarm rings at six, but I don’t get <input class="answer-input" data-answer="up" aria-label="answer 1" /> until 6:30. &nbsp;<span class="contraction">(leave the bed)</span></span></div>
-    <div class="q"><span class="n">2</span><span>It’s cold today. Put <input class="answer-input" data-answer="on" aria-label="answer 2" /> a warm jacket. &nbsp;<span class="contraction">(clothes)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I don’t know the price. I need to find <input class="answer-input" data-answer="out" aria-label="answer 3" />. &nbsp;<span class="contraction">(learn the fact)</span></span></div>
-    <div class="q"><span class="n">4</span><span>The movie is starting. Turn <input class="answer-input" data-answer="off" aria-label="answer 4" /> your phone. &nbsp;<span class="contraction">(stop it)</span></span></div>
-    <div class="q"><span class="n">5</span><span>She’s in Chicago this week. She comes <input class="answer-input" data-answer="back" aria-label="answer 5" /> on Sunday. &nbsp;<span class="contraction">(returns)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Write <input class="answer-input" data-answer="down" aria-label="answer 6" /> the Wi-Fi password so you remember it. &nbsp;<span class="contraction">(on paper)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Build the sentence</h2>
+  <h2>Pattern 3: keep the chunk together before its object</h2>
   <div class="lead-rule"></div>
+  <p>Other common combinations keep the verb and following preposition or particle together. The noun or pronoun comes after the whole chunk: <span class="ex">look for the sheets · look for them</span>, not <span class="ex">look them for</span>.</p>
+  <table>
+    <thead><tr><th>chunk</th><th>meaning used here</th><th>noun and pronoun pattern</th></tr></thead>
+    <tbody><tr><td><span class="ex">look for</span></td><td>try to find</td><td><span class="ex">look for the sheets · look for them</span></td></tr><tr><td><span class="ex">wait for</span></td><td>stay until someone or something arrives</td><td><span class="ex">wait for Maya · wait for her</span></td></tr><tr><td><span class="ex">listen to</span></td><td>pay attention to sound</td><td><span class="ex">listen to the message · listen to it</span></td></tr><tr><td><span class="ex">look after</span></td><td>take care of</td><td><span class="ex">look after the guest · look after him</span></td></tr><tr><td><span class="ex">get on</span></td><td>board a bus, train, or similar vehicle</td><td><span class="ex">get on the bus · get on it</span></td></tr><tr><td><span class="ex">get off</span></td><td>leave a bus, train, or similar vehicle</td><td><span class="ex">get off the bus · get off it</span></td></tr></tbody>
+  </table>
 
-  <div class="tile-game" data-tile-builder data-answer="can you pick me up at eight">
-    <h3>Drill 4: build the request</h3>
-    <p class="tile-target">You need a ride to the airport at 8:00. Build the question, then say it. Where does <span class="ex">me</span> go?</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="up">up</button>
-      <button class="tile" data-build-tile="can">Can</button>
-      <button class="tile" data-build-tile="me">me</button>
-      <button class="tile" data-build-tile="pick">pick</button>
-      <button class="tile" data-build-tile="eight">eight</button>
-      <button class="tile" data-build-tile="you">you</button>
-      <button class="tile" data-build-tile="at">at</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept look for, wait for, listen to, look after, get on, and get off together before their pronoun objects.">
+    <h3>Drill 3: keep the fixed chunk together</h3>
+    <div class="choice-bank" aria-label="Fixed chunk choices"><button class="choice-option" data-choice-option="looked for them">looked for them</button><button class="choice-option" data-choice-option="waited for her">waited for her</button><button class="choice-option" data-choice-option="listened to it">listened to it</button><button class="choice-option" data-choice-option="looked after him">looked after him</button><button class="choice-option" data-choice-option="got on it">got on it</button><button class="choice-option" data-choice-option="got off it">got off it</button></div>
+    <div class="q"><span class="n">1</span><span>The blue sheets were missing, and <span class="ex">them</span> replaces the sheets: Maya <button class="choice-gap" data-choice-gap data-answer="looked for them" data-hint="Keep looked for together before them." data-fix="Maya looked for them in the cabinet.">choose</button> in the cabinet.</span></div>
+    <div class="q"><span class="n">2</span><span>Leo stayed at the entrance until Maya arrived; <span class="ex">her</span> replaces Maya: He <button class="choice-gap" data-choice-gap data-answer="waited for her" data-hint="Keep waited for together before her." data-fix="Leo waited for her at the entrance.">choose</button> at the entrance.</span></div>
+    <div class="q"><span class="n">3</span><span>The coordinator’s message contained the room change; <span class="ex">it</span> replaces the message: Maya <button class="choice-gap" data-choice-gap data-answer="listened to it" data-hint="Keep listened to together before it." data-fix="Maya listened to it twice.">choose</button> twice.</span></div>
+    <div class="q"><span class="n">4</span><span>A fictional guest needed help finding the room; <span class="ex">him</span> replaces the guest: Leo <button class="choice-gap" data-choice-gap data-answer="looked after him" data-hint="Keep looked after together before him." data-fix="Leo looked after him until the coordinator arrived.">choose</button> until the coordinator arrived.</span></div>
+    <div class="q"><span class="n">5</span><span>The Harbor shuttle arrived, and <span class="ex">it</span> replaces the shuttle: Maya <button class="choice-gap" data-choice-gap data-answer="got on it" data-hint="For this vehicle meaning, place it after got on." data-fix="Maya got on it at the main entrance.">choose</button> at the main entrance.</span></div>
+    <div class="q"><span class="n">6</span><span>The shuttle reached the workshop, and <span class="ex">it</span> still replaces the shuttle: Maya <button class="choice-gap" data-choice-gap data-answer="got off it" data-hint="For leaving the vehicle, place it after got off." data-fix="Maya got off it at the workshop.">choose</button> at the workshop.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="please fill out this form">
-    <h3>Drill 5: build the instruction</h3>
-    <p class="tile-target">You work at a front desk. A visitor needs to register. Build the polite instruction, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="form">form</button>
-      <button class="tile" data-build-tile="please">Please</button>
-      <button class="tile" data-build-tile="out">out</button>
-      <button class="tile" data-build-tile="this">this</button>
-      <button class="tile" data-build-tile="fill">fill</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
+  <h2>Let context select the meaning and register</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="off it" data-fix="Please turn it off before the meeting." data-why="The pronoun it goes in the middle of the chunk: turn it off, never turn off it.">
-    <h3>Drill 6: the pronoun in the wrong place</h3>
-    <p>Tap the part that is wrong. Where does a pronoun live inside a chunk?</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="please">Please</button>
-      <button class="error-choice" data-error-choice="turn">turn</button>
-      <button class="error-choice" data-error-choice="off it">off it</button>
-      <button class="error-choice" data-error-choice="before">before</button>
-      <button class="error-choice" data-error-choice="the">the</button>
-      <button class="error-choice" data-error-choice="meeting">meeting.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <p>One written chunk can have more than one meaning and sometimes more than one object pattern. Store a separate example for each meaning you need.</p>
+  <table>
+    <thead><tr><th>chunk</th><th>meaning 1</th><th>meaning 2</th></tr></thead>
+    <tbody><tr><td><span class="ex">pick up</span></td><td><span class="ex">pick the box up</span>: lift it</td><td><span class="ex">pick up the box at the desk</span>: collect it</td></tr><tr><td><span class="ex">take off</span></td><td><span class="ex">take your coat off</span>: remove it</td><td><span class="ex">the plane took off</span>: left the ground</td></tr><tr><td><span class="ex">turn down</span></td><td><span class="ex">turn the music down</span>: reduce the level</td><td><span class="ex">turn the invitation down</span>: reject it</td></tr></tbody>
+  </table>
+  <p>If context is unclear, ask: <span class="ex">Do you mean lift the box or collect it from the desk?</span> Clarifying the intended meaning is better than guessing from the particle.</p>
+  <div class="note">
+    <h3>Register: common does not mean careless</h3>
+    <p>Many phrasal verbs are neutral in everyday U.S. English: <span class="ex">fill out a form, turn off the projector, call someone back</span>. A more official text may use <span class="ex">complete the form, power off the equipment, return the call</span>. <span class="ex">Put off</span> and <span class="ex">postpone</span> can both mean move something to a later time, but tone and collocation differ. Do not replace every phrasal verb mechanically; follow the context and the wording of an official instruction.</p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="about" data-fix="I need to find out the schedule." data-why="The chunk is find out: two words that work as one verb. Find alone is not enough, and about does not complete it.">
-    <h3>Drill 7: half a chunk</h3>
-    <p>Tap the word that is wrong. Which small word completes <span class="ex">find</span> when you want to learn a fact?</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="i">I</button>
-      <button class="error-choice" data-error-choice="need">need</button>
-      <button class="error-choice" data-error-choice="to">to</button>
-      <button class="error-choice" data-error-choice="find">find</button>
-      <button class="error-choice" data-error-choice="about">about</button>
-      <button class="error-choice" data-error-choice="the">the</button>
-      <button class="error-choice" data-error-choice="schedule">schedule.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="note">
+    <h3>Sound natural: stress meaning, not a memorized particle rule</h3>
+    <p>The particle often carries a clear result beat in separable chunks: <span class="ex">turn it <strong>OFF</strong> · pick them <strong>UP</strong> · write it <strong>DOWN</strong></span>. In fixed combinations, the preposition may be lighter: <span class="ex"><strong>LOOK</strong> for it · <strong>WAIT</strong> for her · <strong>LISTEN</strong> to it</span>. Actual stress changes when the speaker corrects or contrasts information.</p>
+    <p>Link short pronouns into the chunk: <span class="ex">turn_it_OFF · pick_them_UP · write_it_DOWN · look_for_it</span>. Keep the final consonants audible so <span class="ex">pick</span> does not become <span class="ex">pig</span> and <span class="ex">back</span> does not become <span class="ex">bag</span>.</p>
+    <p>In connected U.S. speech, <span class="ex">Can you pick it up?</span> may begin /kənjə/, and <span class="ex">Did you write it down?</span> may begin /dɪdʒə/. Stress the correction: <span class="ex">Turn it <strong>OFF</strong>, not <strong>DOWN</strong>.</span></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 8: swap the thing for a pronoun, then say it</h3>
-    <p>Say the new sentence aloud with <span class="ex">it</span>, <span class="ex">her</span>, or <span class="ex">them</span> before you reveal. Remember where the pronoun goes.</p>
-    <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> Turn off the TV. &nbsp;→&nbsp; use a pronoun</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Turn it off.</strong></p>
+  <section data-lesson-extension="Tutor-read collection, object placement, fixed chunk, polysemy, register, and clarification listening check">
+    <h2>Listen for meaning and object pattern</h2>
+    <div class="lead-rule"></div>
+    <p class="note-line"><b>Tutor-read listening:</b> Keep the transcript closed. Read each item once naturally and once after the learner chooses. Preserve the stressed correction in item 4.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard collection, separable and fixed object patterns, a flight meaning, a level reduction, an official alternative, and precise clarification.">
+      <h3>Six context decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="collect the box from the front desk" data-hint="The box is waiting under the learner’s name at a collection point." data-fix="Pick the box up at the front desk means collect the box there."><p class="quiz-question">1. What does <span class="ex">pick the box up</span> mean in this message?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="collect the box from the front desk">collect the box from the front desk</button><button class="quiz-option" data-quiz-option="throw the box into the trash">throw the box into the trash</button><button class="quiz-option" data-quiz-option="open and complete the box">open and complete the box</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The pronoun goes between turn and on." data-hint="Listen for the short object it inside the separable chunk." data-fix="In Turn it on, the pronoun goes between turn and on."><p class="quiz-question">2. Where is the pronoun in <span class="ex">Turn it on</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The pronoun goes between turn and on.">The pronoun goes between turn and on.</button><button class="quiz-option" data-quiz-option="The pronoun goes after the whole chunk.">The pronoun goes after the whole chunk.</button><button class="quiz-option" data-quiz-option="The sentence has no pronoun.">The sentence has no pronoun.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="look for them" data-hint="Listen for a fixed search chunk followed by the pronoun." data-fix="The speaker says Look for them in the blue folder."><p class="quiz-question">3. Which complete pattern does the speaker use for the missing forms?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="look for them">look for them</button><button class="quiz-option" data-quiz-option="look them for">look them for</button><button class="quiz-option" data-quiz-option="look for out them">look for out them</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="reduce the volume" data-hint="The correction contrasts OFF with DOWN, so the music should continue more quietly." data-fix="Turn the music down means reduce the volume, not stop it completely."><p class="quiz-question">4. The tutor says, <span class="ex">Turn it DOWN, not OFF.</span> What result is required?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="reduce the volume">reduce the volume</button><button class="quiz-option" data-quiz-option="stop the music completely">stop the music completely</button><button class="quiz-option" data-quiz-option="reject an invitation">reject an invitation</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The plane left the ground at 9:10." data-hint="This take off has an airplane subject and no clothing object." data-fix="The plane took off means the plane left the ground."><p class="quiz-question">5. What happened at 9:10?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The plane left the ground at 9:10.">The plane left the ground at 9:10.</button><button class="quiz-option" data-quiz-option="A passenger removed the plane.">A passenger removed the plane.</button><button class="quiz-option" data-quiz-option="The plane rejected a meeting.">The plane rejected a meeting.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Does put off mean move the meeting to a later time?" data-hint="The official notice says postpone, so ask whether put off has the same time-change meaning." data-fix="Does put off mean move the meeting to a later time?"><p class="quiz-question">6. An official message says, <span class="ex">Postpone the meeting.</span> Which question checks <span class="ex">put off</span> as the everyday equivalent?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Does put off mean move the meeting to a later time?">Does put off mean move the meeting to a later time?</button><button class="quiz-option" data-quiz-option="Does put off mean throw the meeting away?">Does put off mean throw the meeting away?</button><button class="quiz-option" data-quiz-option="Does put off mean turn the meeting down in volume?">Does put off mean turn the meeting down in volume?</button></div></div>
       </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> Put on your jacket. &nbsp;→&nbsp; use a pronoun</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Put it on.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> Pick up Maria at eight. &nbsp;→&nbsp; use a pronoun</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Pick her up at eight.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> Fill out the form. &nbsp;→&nbsp; use a pronoun</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Fill it out.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> Write down the numbers. &nbsp;→&nbsp; use a pronoun</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Write them down.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> Turn on the lights. &nbsp;→&nbsp; use a pronoun</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Turn them on.</strong></p>
-      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-  </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol><li><span class="ex">The supply box is waiting under your name. Pick it up at the front desk.</span> Evidence: collection meaning.</li><li><span class="ex">The projector is off. Please turn it on.</span> Evidence: pronoun inside a separable chunk.</li><li><span class="ex">The forms are missing. Look for them in the blue folder.</span> Evidence: fixed chunk before pronoun.</li><li><span class="ex">The music is too loud. Turn it DOWN, not OFF.</span> Evidence: reduce, not stop.</li><li><span class="ex">The plane took off at nine ten.</span> Evidence: leave the ground.</li><li><span class="ex">The official notice says postpone the meeting. Does put off mean move it to a later time?</span> Evidence: register and clarification.</li></ol>
+    </details>
+  </section>
 
-  <h2>Read and choose</h2>
+  <h2>Read one complete workshop handoff</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message from Dana</h3>
-    <p>Dana texts a coworker after a chaotic morning.</p>
-    <p><span class="ex">“Sorry I’m late! What a morning. I woke up late, got up in a hurry, and put on yesterday’s shirt. Then I couldn’t find my keys, so I looked for them for ten minutes. They were in my coat. I ran out, got on the wrong bus, and had to get off at the mall and wait for the next one. Can you pick me up tomorrow? I give up on buses.”</span></p>
+    <h3>Harbor handoff 19</h3>
+    <p><span class="ex">Show up at the Harbor workshop at 5:30. A supply box will be waiting under the name Rivera at the front desk; pick it up and take it to room 204. Write the room number down before you leave the desk. Look for the blue sign-in sheets in the locked cabinet after the authorized coordinator opens it. Turn the projector on and listen to the test message. The coordinator called this afternoon, so call her back through the official workshop number. At the end, turn the projector off. Throw only unused blank paper away; give completed forms to the coordinator.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed a very bad morning, chunk by chunk.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered arrival, collection, fixed search, separable equipment, and record-handling instructions from one handoff.">
+    <h3>Reading check: use only handoff 19</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="her keys">
-        <p class="quiz-question">1. What did Dana look for?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="her keys">her keys</button><button class="quiz-option" data-quiz-option="her shirt">her shirt</button><button class="quiz-option" data-quiz-option="her bus card">her bus card</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="at the mall">
-        <p class="quiz-question">2. Where did Dana get off the wrong bus?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="at the mall">at the mall</button><button class="quiz-option" data-quiz-option="at the office">at the office</button><button class="quiz-option" data-quiz-option="at her street">at her street</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="someone to pick her up">
-        <p class="quiz-question">3. What does Dana want tomorrow?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="someone to pick her up">someone to pick her up</button><button class="quiz-option" data-quiz-option="a new alarm clock">a new alarm clock</button><button class="quiz-option" data-quiz-option="a different shirt">a different shirt</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="at 5:30" data-hint="The opening sentence gives the expected arrival time after Show up." data-fix="The helper should show up at 5:30."><p class="quiz-question">1. When should the helper show up?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="at 5:30">at 5:30</button><button class="quiz-option" data-quiz-option="at 2:04">at 2:04</button><button class="quiz-option" data-quiz-option="after the workshop ends">after the workshop ends</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the supply box" data-hint="The second sentence names the item waiting under Rivera at the front desk." data-fix="The helper should pick up the supply box."><p class="quiz-question">2. What should the helper pick up?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the supply box">the supply box</button><button class="quiz-option" data-quiz-option="the locked cabinet">the locked cabinet</button><button class="quiz-option" data-quiz-option="the completed forms">the completed forms</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="after the authorized coordinator opens the cabinet" data-hint="The search instruction includes an authorization condition." data-fix="The helper should look for the sheets after the authorized coordinator opens the cabinet."><p class="quiz-question">3. When may the helper look for the blue sheets?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="after the authorized coordinator opens the cabinet">after the authorized coordinator opens the cabinet</button><button class="quiz-option" data-quiz-option="after forcing the locked cabinet open">after forcing the locked cabinet open</button><button class="quiz-option" data-quiz-option="after taking completed forms home">after taking completed forms home</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Throw away only unused blank paper." data-hint="The final instruction separates blank paper from completed forms." data-fix="Throw away only unused blank paper; give completed forms to the coordinator."><p class="quiz-question">4. Which disposal instruction is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Throw away only unused blank paper.">Throw away only unused blank paper.</button><button class="quiz-option" data-quiz-option="Throw every completed form away.">Throw every completed form away.</button><button class="quiz-option" data-quiz-option="Take all workshop records home.">Take all workshop records home.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Build a separable and a fixed pattern</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your morning in chunks:</b> Tell the story of your morning using at least five phrasal verbs. <span class="ex">I wake up at six, get up at 6:15, put on my clothes, turn on the coffee machine, and go out at seven.</span></div>
-  <div class="prompt-card"><b>Interview the teacher:</b> Ask about their routine with phrasal verbs, then report one answer back. <span class="ex">What time do you wake up? Do you go out on weekends? When do you come back?</span></div>
-  <div class="prompt-card"><b>Give instructions:</b> You are leaving the classroom or office last. Tell the teacher what to turn on and turn off. <span class="ex">Please turn off the projector and the lights. Turn on the hallway light.</span></div>
-  <div class="prompt-card"><b>A recent form:</b> Describe a form you filled out recently: at a bank, a clinic, a delivery app. <span class="ex">Last month I filled out a form at the bank. I wrote down my address and phone number.</span></div>
-  <div class="prompt-card"><b>Something you gave up:</b> Talk about a habit you stopped, and why. <span class="ex">I gave up sugar in January. The first two weeks were hard.</span></div>
+  <div class="tile-game" data-tile-builder data-answer="please write the room number down" data-hint="Place the noun object after write and before down in this valid separable order." data-fix="Please write the room number down." data-success-message="Correct. The noun object sits inside the separable chunk write down.">
+    <h3>Drill 4: build the recording instruction</h3><p class="tile-target">The visitor may forget room 204 and needs to record it.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="down">down</button><button class="tile" data-build-tile="number">number</button><button class="tile" data-build-tile="please">Please</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="room">room</button><button class="tile" data-build-tile="write">write</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="i looked for them near the front desk" data-hint="Keep looked for together, then place the pronoun them and the location after it." data-fix="I looked for them near the front desk." data-success-message="Correct. Looked for stays together before the pronoun them.">
+    <h3>Drill 5: build the fixed search pattern</h3><p class="tile-target">The speaker searched for the missing sheets near the front desk.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="them">them</button><button class="tile" data-build-tile="desk">desk</button><button class="tile" data-build-tile="looked">looked</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="near">near</button><button class="tile" data-build-tile="for">for</button><button class="tile" data-build-tile="front">front</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
 
-  <h2>Reflect</h2>
+  <h2>Notice and repair the pattern or meaning</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="off it" data-hint="The pronoun must sit between the main verb and particle in this separable chunk." data-fix="Please turn it off after the workshop." data-why="Turn off is separable in this meaning. With the pronoun it, use turn it off." data-success-message="Correct. The pronoun belongs inside the separable chunk turn it off.">
+    <h3>Drill 6: repair the separable pronoun</h3><p>Tap the part that puts <span class="ex">it</span> after the whole chunk.</p><div class="spot-options"><button class="error-choice" data-error-choice="please">Please</button><button class="error-choice" data-error-choice="turn">turn</button><button class="error-choice" data-error-choice="off it">off it</button><button class="error-choice" data-error-choice="after">after</button><button class="error-choice" data-error-choice="the-workshop">the workshop.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="them for" data-hint="Look for must stay together before its pronoun object." data-fix="Maya looked for them in the cabinet." data-why="Use look for them, not look them for. This fixed combination does not follow the separable-pronoun pattern." data-success-message="Correct. Look for stays together before them.">
+    <h3>Drill 7: repair the fixed chunk</h3><p>Tap the part that splits <span class="ex">look for</span> around a pronoun.</p><div class="spot-options"><button class="error-choice" data-error-choice="maya">Maya</button><button class="error-choice" data-error-choice="looked">looked</button><button class="error-choice" data-error-choice="them for">them for</button><button class="error-choice" data-error-choice="in">in</button><button class="error-choice" data-error-choice="the-cabinet">the cabinet.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="it" data-hint="With an airplane subject, take off means leave the ground and has no object." data-fix="The plane took off at 9:10." data-why="The flight meaning is intransitive here: the plane took off. Take it off would mean remove an object such as a coat." data-success-message="Correct. The airplane meaning is The plane took off, with no object.">
+    <h3>Drill 8: repair the flight meaning</h3><p>Tap the word that incorrectly adds an object to the airplane meaning.</p><div class="spot-options"><button class="error-choice" data-error-choice="the-plane">The plane</button><button class="error-choice" data-error-choice="took">took</button><button class="error-choice" data-error-choice="it">it</button><button class="error-choice" data-error-choice="off">off</button><button class="error-choice" data-error-choice="at-nine-ten">at 9:10.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing real records or routines</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real home, workplace, route, travel time, phone number, address, form data, password, health information, habits, family, or daily schedule. Use the fictional Harbor workshop. Real details are optional.</p>
+  <div class="prompt-card"><b>Fictional setup:</b> Show up at 5:30, pick a supply box up, write room 204 down, look for blue sheets, and turn the projector on.</div>
+  <div class="prompt-card"><b>Object-pattern check:</b> Replace <span class="ex">the supply box</span> and <span class="ex">the blue sheets</span> with pronouns. Say <span class="ex">pick it up</span> but <span class="ex">look for them</span>, and explain why.</div>
+  <div class="prompt-card"><b>Meaning clarification:</b> Someone says <span class="ex">Pick it up</span> without context. Ask whether to lift it, collect it, or answer a ringing phone.</div>
+  <div class="prompt-card"><b>Fictional closing:</b> Turn the projector off, call the coordinator back, throw only unused blank paper away, and give completed forms to the coordinator.</div>
+
+  <h2>Final production and check</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Explain the system</h3>
-    <p>Complete this aloud: “A phrasal verb is a verb plus a small word, and together they make a ______ meaning. I learn the two words as one ______. With a pronoun, the small word comes after it: turn it ______, pick me ______.”</p>
-    <p>Then say two true sentences about today using two different chunks from this lesson.</p>
+    <h3>Final production: give a 45–60 second fictional workshop handoff</h3>
+    <p>Use the Harbor cards. Include one chunk used without an object, two separable chunks with pronouns, one fixed chunk with a pronoun, one past form, one register alternative, and one question that clarifies a context-dependent meaning.</p>
+    <p><b>Evidence check:</b> Can the listener identify each intended result, recover every object, and hear why its position is accurate?</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can use everyday phrasal verbs as whole chunks: at home, on the move, and at work.">
-    <h3>Final quiz: choose the right chunk</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You protected noun flexibility, pronoun placement, fixed chunks, context-dependent meaning, and register.">
+    <h3>Final check: choose the accurate pattern and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="wake">
-        <p class="quiz-question">1. I ___ up at 6:30, but I stay in bed and read until 7:00.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="wake">wake</button><button class="quiz-option" data-quiz-option="get">get</button><button class="quiz-option" data-quiz-option="put">put</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Put">
-        <p class="quiz-question">2. It’s cold outside. ___ on your coat.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Put">Put</button><button class="quiz-option" data-quiz-option="Take">Take</button><button class="quiz-option" data-quiz-option="Turn">Turn</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Take">
-        <p class="quiz-question">3. ___ off your shoes at the door, please.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Take">Take</button><button class="quiz-option" data-quiz-option="Put">Put</button><button class="quiz-option" data-quiz-option="Go">Go</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="go">
-        <p class="quiz-question">4. We ___ out for dinner every Friday.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="go">go</button><button class="quiz-option" data-quiz-option="come">come</button><button class="quiz-option" data-quiz-option="get">get</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="off">
-        <p class="quiz-question">5. Get ___ the bus at Central Station; the office is across the street.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="off">off</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="out">out</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="out">
-        <p class="quiz-question">6. Please fill ___ this form and sign at the bottom.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="out">out</button><button class="quiz-option" data-quiz-option="up">up</button><button class="quiz-option" data-quiz-option="down">down</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="find out">
-        <p class="quiz-question">7. I don’t know when the meeting starts. I need to ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="find out">find out</button><button class="quiz-option" data-quiz-option="fill out">fill out</button><button class="quiz-option" data-quiz-option="give up">give up</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Turn it off.">
-        <p class="quiz-question">8. Your phone is ringing in the meeting. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Turn it off.">Turn it off.</button><button class="quiz-option" data-quiz-option="Turn off it.">Turn off it.</button><button class="quiz-option" data-quiz-option="It turn off.">It turn off.</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="Turn off the projector or turn the projector off." data-hint="A short noun has both positions in this separable meaning." data-fix="Turn off the projector or turn the projector off."><p class="quiz-question">1. Which statement gives both valid positions for the noun <span class="ex">the projector</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Turn off the projector or turn the projector off.">Turn off the projector or turn the projector off.</button><button class="quiz-option" data-quiz-option="Turn the projector for or turn for the projector.">Turn the projector for or turn for the projector.</button><button class="quiz-option" data-quiz-option="The noun can never appear in either sentence.">The noun can never appear in either sentence.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Turn it off, but look for it." data-hint="Put it inside the separable chunk, but after the fixed search chunk." data-fix="Turn it off, but look for it."><p class="quiz-question">2. Which pair places the pronoun accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Turn it off, but look for it.">Turn it off, but look for it.</button><button class="quiz-option" data-quiz-option="Turn off it, but look it for.">Turn off it, but look it for.</button><button class="quiz-option" data-quiz-option="It turn off, but for look it.">It turn off, but for look it.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The plane took off, so it left the ground." data-hint="With the plane as subject and no clothing object, take off means depart into the air." data-fix="The plane took off, so it left the ground."><p class="quiz-question">3. Which sentence states the flight meaning?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The plane took off, so it left the ground.">The plane took off, so it left the ground.</button><button class="quiz-option" data-quiz-option="The plane took its coat off.">The plane took its coat off.</button><button class="quiz-option" data-quiz-option="The plane turned an invitation down.">The plane turned an invitation down.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The notice says complete the form; in everyday U.S. English, fill out the form is also natural." data-hint="Keep the official wording while recognizing the neutral everyday U.S. alternative." data-fix="The notice says complete the form; in everyday U.S. English, fill out the form is also natural."><p class="quiz-question">4. Which statement handles register without a false ban?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The notice says complete the form; in everyday U.S. English, fill out the form is also natural.">The notice says complete the form; in everyday U.S. English, fill out the form is also natural.</button><button class="quiz-option" data-quiz-option="Every phrasal verb is careless and always wrong.">Every phrasal verb is careless and always wrong.</button><button class="quiz-option" data-quiz-option="Every official instruction must use only phrasal verbs.">Every official instruction must use only phrasal verbs.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
+
+  <h2>Reflect: meaning, time, object, or register?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the storage system</h3>
+    <p>Complete these ideas aloud: <span class="ex">The main verb changes for...</span> <span class="ex">A separable noun can...</span> <span class="ex">A separable pronoun must...</span> <span class="ex">Look for stays...</span> <span class="ex">Take off can mean...</span></p>
+    <p>Then choose one unfamiliar multiword verb from a trusted dictionary and record its context-specific meaning, object pattern, example, and register instead of copying only its two words.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day separable pronoun, fixed search, and flight-meaning retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Explain the object pattern or context-selected meaning before choosing.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained separable pronoun placement, fixed look-for order, and the no-object flight meaning of take off.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Please turn it off." data-hint="The pronoun it belongs between the separable main verb and particle." data-fix="Please turn it off."><p class="quiz-question">1. The projector is on, and <span class="ex">it</span> replaces the noun. Which instruction is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Please turn it off.">Please turn it off.</button><button class="quiz-option" data-quiz-option="Please turn off it.">Please turn off it.</button><button class="quiz-option" data-quiz-option="Please it turn off.">Please it turn off.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Maya looked for them in the cabinet." data-hint="Keep looked for together before the pronoun them." data-fix="Maya looked for them in the cabinet."><p class="quiz-question">2. The sheets were missing, and <span class="ex">them</span> replaces the noun. Which report is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya looked for them in the cabinet.">Maya looked for them in the cabinet.</button><button class="quiz-option" data-quiz-option="Maya looked them for in the cabinet.">Maya looked them for in the cabinet.</button><button class="quiz-option" data-quiz-option="Maya for looked them in the cabinet.">Maya for looked them in the cabinet.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The plane took off at 9:10." data-hint="An airplane subject selects the leave-the-ground meaning, which has no object here." data-fix="The plane took off at 9:10."><p class="quiz-question">3. Which sentence reports that the plane left the ground?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The plane took off at 9:10.">The plane took off at 9:10.</button><button class="quiz-option" data-quiz-option="The plane took it off at 9:10.">The plane took it off at 9:10.</button><button class="quiz-option" data-quiz-option="The plane took off it at 9:10.">The plane took off it at 9:10.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

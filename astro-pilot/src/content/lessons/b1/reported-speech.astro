@@ -1,19 +1,337 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Reported speech (statements) · B1 Grammar · Curriculum Map",
+  "title": "Reported speech (statements) · B1 Grammar",
   "slug": "reported-speech",
   "level": "B1",
   "topic": "Reported speech (statements)",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Reported speech (statements).",
+  "status": "ready",
+  "description": "Report statements accurately by controlling say and tell, speaker and listener reference, time and place viewpoint, and purposeful rather than mechanical backshift.",
   "sequence": 6,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a2/past-simple", "b1/past-perfect", "a1/object-pronouns"],
+  "related": ["b2/reported-speech", "b1/media-and-news"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 58,
+    "revisionSummary": "Say and tell, reference, time and place viewpoint, common and optional backshift, reporting stance, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 6</p>
+  <h1>Reported speech: <em>rebuild the viewpoint, preserve the meaning</em></h1>
+  <p class="standfirst">Reported speech passes a message from one speaking situation into another. Keep track of who originally spoke, who originally listened, when and where the message was said, and when and where it is being reported. Backshift is a common viewpoint choice after a past reporting verb, not a command to change every tense mechanically.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">said (that) · told someone (that)</span>
+    <span class="tag">speaker · listener · time · place</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Map the original and reporting situations.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose reporting frame and backshift.</span></div>
+    <div class="flow-step"><b>Rebuild</b><span>Adjust reference only when the viewpoint changes.</span></div>
+    <div class="flow-step"><b>Use</b><span>Relay a fictional message accurately and neutrally.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can distinguish exact quotation from reported meaning; use <span class="ex">said (that) + clause</span>, <span class="ex">told + person + (that) + clause</span>, and <span class="ex">said to + person</span> accurately; map original and new speaker-listener reference; adjust pronouns, possessives, time words, place words, and demonstratives when their reference changes; use common backshifts; recognize legitimate no-backshift and Past Simple alternatives; interpret <span class="ex">’d</span> from the following verb; and relay a statement without adding certainty, doubt, or a promise that the original speaker did not express.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved the past form was, the past perfect chunk had finished, and the modal would before moving a message to a later viewpoint.">
+    <h3>Reactivate three common shifts</h3>
+    <p class="choice-hint">The prompt explicitly asks for the form normally used in a careful later report.</p>
+    <div class="choice-bank" aria-label="Reported speech foundation choices"><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="had finished">had finished</button><button class="choice-option" data-choice-option="would">would</button><button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="has finish">has finish</button><button class="choice-option" data-choice-option="will">will</button></div>
+    <div class="q"><span class="n">1</span><span>For the common later-report shift <span class="ex">am / is → <button class="choice-gap" data-choice-gap data-answer="was" data-hint="Move present singular be one step back for the requested later viewpoint." data-fix="The common shift is am or is to was.">choose</button></span>.</span></div>
+    <div class="q"><span class="n">2</span><span>For a completed result before the report, <span class="ex">have finished → <button class="choice-gap" data-choice-gap data-answer="had finished" data-hint="Present Perfect commonly shifts to Past Perfect after a past reporting verb." data-fix="The common shift is have finished to had finished.">choose</button></span>.</span></div>
+    <div class="q"><span class="n">3</span><span>For a later promise viewed from a past reporting point, <span class="ex">will → <button class="choice-gap" data-choice-gap data-answer="would" data-hint="Would is the common reported form of will after a past reporting verb." data-fix="The common shift is will to would.">choose</button></span>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice two speaking situations</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Original message: Monday, 8:00 a.m., Harbor Station</h3>
+    <p><b>Speaker:</b> Mina. <b>Listener:</b> Alex.</p>
+    <p><span class="ex">Mina: “I’m running late. My train was canceled this morning. I can join the meeting online today. I’ll call you tomorrow. This blue folder is here with me.”</span></p>
+    <h3>Alex’s report: Monday, 3:00 p.m., Riverside Office</h3>
+    <p><b>Reporter:</b> Alex. <b>New listener:</b> Jordan.</p>
+    <p><span class="ex">Alex: “Mina said she was running late. She said her train had been canceled that morning. She told me she could join the meeting online that day. She said she would call me the next day. She said that blue folder was there with her.”</span></p>
+    <ul>
+      <li>Which words change because <span class="ex">I</span> and <span class="ex">my</span> originally refer to Mina?</li>
+      <li>Which words change because <span class="ex">you</span> originally refers to Alex?</li>
+      <li>Which time and place expressions need a new reference point at 3:00 p.m.?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You mapped Mina as she, Mina’s possession as her, the original morning and next day, and the station location as there.">
+    <h3>Discovery check: follow each original reference</h3>
+    <div class="choice-bank" aria-label="Reported viewpoint discovery choices"><button class="choice-option" data-choice-option="she">she</button><button class="choice-option" data-choice-option="her">her</button><button class="choice-option" data-choice-option="that morning">that morning</button><button class="choice-option" data-choice-option="the next day">the next day</button><button class="choice-option" data-choice-option="there">there</button></div>
+    <div class="q"><span class="n">1</span><span>Original <span class="ex">I</span> refers to Mina, so Alex reports Mina as <button class="choice-gap" data-choice-gap data-answer="she" data-hint="Choose the third-person subject pronoun that refers to Mina." data-fix="Mina said she was running late.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Original <span class="ex">my train</span> means Mina’s train, so Alex says <button class="choice-gap" data-choice-gap data-answer="her" data-hint="Choose the possessive adjective that continues to refer to Mina." data-fix="Mina said her train had been canceled.">choose</button> train.</span></div>
+    <div class="q"><span class="n">3</span><span>Original <span class="ex">this morning</span> is the Monday morning before Alex’s 3:00 report, so it becomes <button class="choice-gap" data-choice-gap data-answer="that morning" data-hint="Use that morning to identify the morning of the original message from the later point." data-fix="She said her train had been canceled that morning.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Original <span class="ex">tomorrow</span> is Tuesday relative to Mina’s Monday message, so Alex reports <button class="choice-gap" data-choice-gap data-answer="the next day" data-hint="Use the next day for the day after the original Monday message." data-fix="She said she would call me the next day.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Original <span class="ex">here</span> means Harbor Station, but Alex is now at Riverside Office, so it becomes <button class="choice-gap" data-choice-gap data-answer="there" data-hint="Use there for the original station location viewed from a different place." data-fix="She said the folder was there with her.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: report meaning from a new viewpoint</h2>
+  <div class="lead-rule"></div>
+  <p>A direct quotation presents words as the speaker’s exact wording and uses quotation marks: <span class="ex">Mina said, “I’m running late.”</span> Reported speech usually paraphrases the message without quotation marks: <span class="ex">Mina said she was running late.</span> A responsible report preserves the relevant meaning, but it does not pretend that a paraphrase is a word-for-word transcript.</p>
+  <p>Before changing any word, map five roles: the original speaker, original listener, original time and place, reporter, and new listener. A pronoun or reference word changes only when the new speaking situation requires a different form.</p>
+
+  <table>
+    <thead><tr><th>reporting frame</th><th>form</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>report a statement</td><td><span class="ex">said + (that) + clause</span></td><td><span class="ex">Mina said that she was late.</span></td></tr>
+      <tr><td>name the listener</td><td><span class="ex">told + person + (that) + clause</span></td><td><span class="ex">Mina told Alex that she was late.</span></td></tr>
+      <tr><td>introduce direct words</td><td><span class="ex">said to + person, “...”</span></td><td><span class="ex">Mina said to Alex, “I’m late.”</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">That</span> is optional in many conversational statement reports: <span class="ex">She said she was late</span> and <span class="ex">She said that she was late</span> are both standard. Do not use <span class="cross">said me</span> or <span class="cross">told that</span> without a named listener in this pattern.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used said before a clause, told before a named listener, said to before direct words, and optional that accurately.">
+    <h3>Reporting-frame check: is the listener named?</h3>
+    <div class="choice-bank" aria-label="Say and tell choices"><button class="choice-option" data-choice-option="said that she was late">said that she was late</button><button class="choice-option" data-choice-option="told Alex that she was late">told Alex that she was late</button><button class="choice-option" data-choice-option="said to Alex">said to Alex</button><button class="choice-option" data-choice-option="told us that the train was delayed">told us that the train was delayed</button><button class="choice-option" data-choice-option="said she could join online">said she could join online</button></div>
+    <div class="q"><span class="n">1</span><span>No listener follows the reporting verb: Mina <button class="choice-gap" data-choice-gap data-answer="said that she was late" data-hint="Use said plus an optional that-clause when no person directly follows the verb." data-fix="Mina said that she was late.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Name Alex as the listener directly after the verb: Mina <button class="choice-gap" data-choice-gap data-answer="told Alex that she was late" data-hint="Tell requires the listener Alex before the content clause." data-fix="Mina told Alex that she was late.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Introduce Mina’s exact quoted words to Alex: Mina <button class="choice-gap" data-choice-gap data-answer="said to Alex" data-hint="Use said to before a person when a direct quotation follows." data-fix="Mina said to Alex, “I’m late.”">choose</button>, “I’m late.”</span></div>
+    <div class="q"><span class="n">4</span><span>The reporter names the group that received the information: Mina <button class="choice-gap" data-choice-gap data-answer="told us that the train was delayed" data-hint="Use told plus the listener us before the content." data-fix="Mina told us that the train was delayed.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Omit optional <span class="ex">that</span> in a natural conversational report with no named listener after <span class="ex">said</span>: Mina <button class="choice-gap" data-choice-gap data-answer="said she could join online" data-hint="Said can be followed directly by the reported clause when that is omitted." data-fix="Mina said she could join online.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Backshift builds a later viewpoint</h2>
+  <div class="lead-rule"></div>
+  <p>After a past reporting verb such as <span class="ex">said</span> or <span class="ex">told</span>, English commonly moves the original verb one step back. This backshift places the original message inside the reporter’s later past viewpoint. It does not mean the original speaker used the past, and it does not automatically mean the report is false.</p>
+  <table>
+    <thead><tr><th>original message</th><th>common later report</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>Present Simple</td><td>Past Simple</td><td><span class="ex">“I work here.” → She said she worked there.</span></td></tr>
+      <tr><td>Present Continuous</td><td>Past Continuous</td><td><span class="ex">“I’m waiting.” → She said she was waiting.</span></td></tr>
+      <tr><td>Present Perfect</td><td>Past Perfect</td><td><span class="ex">“I’ve sent it.” → She said she had sent it.</span></td></tr>
+      <tr><td>Past Simple</td><td>Past Perfect, often</td><td><span class="ex">“The train left.” → She said the train had left.</span></td></tr>
+      <tr><td><span class="ex">can / will</span></td><td><span class="ex">could / would</span></td><td><span class="ex">“I can help.” → She said she could help.</span></td></tr>
+      <tr><td>Past Perfect, <span class="ex">could, would</span></td><td>normally unchanged</td><td><span class="ex">“I had left.” → She said she had left.</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed common later-report shifts for a state, ongoing activity, completed result, earlier event, ability, and future intention.">
+    <h3>Backshift check: use the requested careful later viewpoint</h3>
+    <div class="choice-bank" aria-label="Reported speech backshift choices"><button class="choice-option" data-choice-option="was ready">was ready</button><button class="choice-option" data-choice-option="was waiting">was waiting</button><button class="choice-option" data-choice-option="had sent the form">had sent the form</button><button class="choice-option" data-choice-option="had left at eight">had left at eight</button><button class="choice-option" data-choice-option="could join online">could join online</button><button class="choice-option" data-choice-option="would call the next day">would call the next day</button></div>
+    <div class="q"><span class="n">1</span><span>Original Monday message: <span class="ex">“I am ready.”</span> Later report: Mina said she <button class="choice-gap" data-choice-gap data-answer="was ready" data-hint="Present am commonly shifts to past was after said." data-fix="Mina said she was ready.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Original: <span class="ex">“I’m waiting.”</span> Later report: She said she <button class="choice-gap" data-choice-gap data-answer="was waiting" data-hint="Present Continuous am waiting commonly shifts to Past Continuous was waiting." data-fix="She said she was waiting.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Original: <span class="ex">“I’ve sent the form.”</span> Later report: She said she <button class="choice-gap" data-choice-gap data-answer="had sent the form" data-hint="Present Perfect have sent commonly shifts to Past Perfect had sent." data-fix="She said she had sent the form.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Original event happened before the later report: <span class="ex">“The train left at eight.”</span> Use the careful form that explicitly marks the earlier layer: She said the train <button class="choice-gap" data-choice-gap data-answer="had left at eight" data-hint="Use Past Perfect to mark the departure as earlier than the past reporting point." data-fix="She said the train had left at eight.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Original: <span class="ex">“I can join online.”</span> Later report: She said she <button class="choice-gap" data-choice-gap data-answer="could join online" data-hint="Can commonly shifts to could after the past reporting verb." data-fix="She said she could join online.">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>Original Monday promise: <span class="ex">“I’ll call tomorrow.”</span> Later report: She said she <button class="choice-gap" data-choice-gap data-answer="would call the next day" data-hint="Will shifts to would, and tomorrow becomes the next day from the later viewpoint." data-fix="She said she would call the next day.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Rebuild people reference before changing tense</h2>
+  <div class="lead-rule"></div>
+  <p>Pronouns do not follow a memorized conversion table. They follow people. In Mina’s message to Alex, original <span class="ex">I / my</span> refers to Mina and original <span class="ex">you / your</span> refers to Alex. When Alex reports the message to Jordan, Mina becomes <span class="ex">she / her</span>, while Alex refers to himself as <span class="ex">I / me / my</span>.</p>
+  <div class="thinking-card">
+    <h3>Original message from Mina to Alex</h3>
+    <p><span class="ex">“I will send you my notes. You can share them with your team.”</span></p>
+    <p><b>New situation:</b> Alex reports Mina’s message to Jordan.</p>
+  </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept Mina as she and her while Alex became me, I, and my in his own report.">
+    <h3>Reference check: name the person behind each pronoun</h3>
+    <div class="choice-bank" aria-label="Reported pronoun reference choices"><button class="choice-option" data-choice-option="she">she</button><button class="choice-option" data-choice-option="me">me</button><button class="choice-option" data-choice-option="her">her</button><button class="choice-option" data-choice-option="I">I</button><button class="choice-option" data-choice-option="my">my</button></div>
+    <div class="q"><span class="n">1</span><span>Original <span class="ex">I</span> is Mina, so Alex reports: Mina said <button class="choice-gap" data-choice-gap data-answer="she" data-hint="Use she because the original speaker Mina is now a third person in Alex’s report." data-fix="Mina said she would send the notes.">choose</button> would send the notes.</span></div>
+    <div class="q"><span class="n">2</span><span>Original <span class="ex">you</span> is Alex, and Alex is now the reporter: Mina said she would send <button class="choice-gap" data-choice-gap data-answer="me" data-hint="Alex refers to himself as the object me in his own report." data-fix="Mina said she would send me the notes.">choose</button> the notes.</span></div>
+    <div class="q"><span class="n">3</span><span>Original <span class="ex">my notes</span> belongs to Mina: Alex says <button class="choice-gap" data-choice-gap data-answer="her" data-hint="Use her because the notes belong to Mina." data-fix="Mina said she would send me her notes.">choose</button> notes.</span></div>
+    <div class="q"><span class="n">4</span><span>Original <span class="ex">You can share them</span> addresses Alex. Alex reports his own ability: She said <button class="choice-gap" data-choice-gap data-answer="I" data-hint="Alex uses subject I to refer to himself as the person who can share the notes." data-fix="She said I could share the notes.">choose</button> could share them.</span></div>
+    <div class="q"><span class="n">5</span><span>Original <span class="ex">your team</span> means Alex’s team. Alex says <button class="choice-gap" data-choice-gap data-answer="my" data-hint="Alex uses my for the team associated with himself." data-fix="She said I could share them with my team.">choose</button> team.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Adjust time, place, and demonstratives only when reference changes</h2>
+  <div class="lead-rule"></div>
+  <p>Reference words are not replaced automatically. Ask what day, place, or object each word identifies in the original message and whether the new listener can recover it. If a message is reported in the same place and moment, <span class="ex">here</span> or <span class="ex">today</span> may still fit. In the Monday 3:00 Riverside report, the original morning, day, next day, station, and nearby folder require new labels.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You rebuilt the original morning, day, following day, station location, and folder reference from Alex’s later office viewpoint.">
+    <h3>Reference-word check: preserve the original point</h3>
+    <div class="choice-bank" aria-label="Reported time place and demonstrative choices"><button class="choice-option" data-choice-option="that morning">that morning</button><button class="choice-option" data-choice-option="that day">that day</button><button class="choice-option" data-choice-option="the next day">the next day</button><button class="choice-option" data-choice-option="there">there</button><button class="choice-option" data-choice-option="that blue folder">that blue folder</button></div>
+    <div class="q"><span class="n">1</span><span>Mina’s Monday 8:00 <span class="ex">this morning</span> becomes <button class="choice-gap" data-choice-gap data-answer="that morning" data-hint="Identify the morning of the original message from the later reporting point." data-fix="She said the train had been canceled that morning.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Mina’s <span class="ex">today</span> means Monday, the original-message day, so Alex reports <button class="choice-gap" data-choice-gap data-answer="that day" data-hint="Use that day for the day Mina called today in the original message." data-fix="She said she could join online that day.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Mina’s Monday <span class="ex">tomorrow</span> means Tuesday, so Alex reports <button class="choice-gap" data-choice-gap data-answer="the next day" data-hint="Use the next day for Tuesday relative to the Monday message." data-fix="She said she would call the next day.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Mina’s <span class="ex">here</span> means Harbor Station, but Alex reports from Riverside Office, so he says <button class="choice-gap" data-choice-gap data-answer="there" data-hint="Use there for a place different from the reporter’s current office." data-fix="She said the folder was there with her.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Mina’s <span class="ex">this blue folder</span> is not physically near Alex at the office, so he reports <button class="choice-gap" data-choice-gap data-answer="that blue folder" data-hint="Use that to identify the object that was near Mina in the original station context." data-fix="She said that blue folder was there with her.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Backshift is common, not automatic</h2>
+  <div class="lead-rule"></div>
+  <p>Use the current viewpoint when the reporting verb is present: <span class="ex">Mina says she is running late</span>. After a past reporting verb, backshift is the common neutral choice for a past report: <span class="ex">Mina said she was running late</span>.</p>
+  <p>A reporter may keep a present form for information that is still true and deliberately presented as current: <span class="ex">The guide said the museum closes at six</span>. Backshifted <span class="ex">closed at six</span> can also be grammatical; it simply places the information inside the past report. Likewise, informal U.S. English may keep Past Simple when the event order is already clear: <span class="ex">Mina said the train was canceled that morning</span>. Past Perfect <span class="ex">had been canceled</span> marks the earlier layer more explicitly. Do not pretend that one grammatical viewpoint is always an error.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched present reporting, neutral later backshift, current-fact framing, explicit earlier-event marking, and genuine Past Simple versus Past Perfect optionality.">
+    <h3>Viewpoint check: follow the stated reporting purpose</h3>
+    <div class="choice-bank" aria-label="Reported speech optional backshift choices"><button class="choice-option" data-choice-option="is running late">is running late</button><button class="choice-option" data-choice-option="was running late">was running late</button><button class="choice-option" data-choice-option="closes at six">closes at six</button><button class="choice-option" data-choice-option="had been canceled">had been canceled</button><button class="choice-option" data-choice-option="both forms can be grammatical with different viewpoint marking">both forms can be grammatical with different viewpoint marking</button></div>
+    <div class="q"><span class="n">1</span><span>Alex reports Mina’s live 8:00 message at 8:05 with present <span class="ex">says</span>: Mina says she <button class="choice-gap" data-choice-gap data-answer="is running late" data-hint="The reporting verb is present and the delay is current at 8:05, so keep the present form." data-fix="Mina says she is running late.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Alex gives a neutral later summary at 3:00 with past <span class="ex">said</span>: Mina said she <button class="choice-gap" data-choice-gap data-answer="was running late" data-hint="Use the common backshift to place the temporary situation inside the past report." data-fix="Mina said she was running late.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The museum schedule is still current, and Alex deliberately presents it as a current fact: The guide said the museum <button class="choice-gap" data-choice-gap data-answer="closes at six" data-hint="The prompt requests a still-current schedule presented from the reporter’s present viewpoint." data-fix="The guide said the museum closes at six.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The cancellation happened before Mina’s 8:00 message. Use the careful form that explicitly marks this earlier layer: Mina said her train <button class="choice-gap" data-choice-gap data-answer="had been canceled" data-hint="Past Perfect explicitly locates the cancellation before the past reporting point." data-fix="Mina said her train had been canceled that morning.">choose</button> that morning.</span></div>
+    <div class="q"><span class="n">5</span><span>For <span class="ex">Mina said the train was canceled / had been canceled that morning</span>, the accurate explanation is that <button class="choice-gap" data-choice-gap data-answer="both forms can be grammatical with different viewpoint marking" data-hint="Past Simple can remain when order is clear; Past Perfect marks the earlier layer more explicitly." data-fix="Both forms can be grammatical with different viewpoint marking.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Do not add a quotation, promise, or doubt</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Said</span> is a relatively neutral reporting verb. <span class="ex">Promised</span> adds a commitment; <span class="ex">claimed</span> can suggest that the reporter is not fully endorsing the statement. Use quotation marks only when presenting exact words. If you know only the meaning, report the content without manufacturing an exact quote.</p>
+  <p>This lesson reports statements. Reported questions and commands use different structures, so do not force the statement pattern onto them. The later B2 lesson expands the system.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose neutral paraphrase, exact quotation, a genuine promise, and neutral attribution without adding unsupported doubt.">
+    <h3>Accuracy check: preserve the original speech act</h3>
+    <div class="choice-bank" aria-label="Reporting accuracy choices"><button class="choice-option" data-choice-option="Mina said that the train was delayed">Mina said that the train was delayed</button><button class="choice-option" data-choice-option="Mina said, “The train is delayed.”">Mina said, “The train is delayed.”</button><button class="choice-option" data-choice-option="promised to send the form by five">promised to send the form by five</button><button class="choice-option" data-choice-option="said the office opened at nine">said the office opened at nine</button></div>
+    <div class="q"><span class="n">1</span><span>You know the message’s meaning but not Mina’s exact words. Use a neutral paraphrase: <button class="choice-gap" data-choice-gap data-answer="Mina said that the train was delayed" data-hint="Omit quotation marks because the wording is not known exactly." data-fix="Mina said that the train was delayed.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>A recording confirms Mina’s exact sentence. Present it as direct speech: <button class="choice-gap" data-choice-gap data-answer="Mina said, “The train is delayed.”" data-hint="Use quotation marks because the prompt confirms the exact wording." data-fix="Mina said, “The train is delayed.”">choose</button></span></div>
+    <div class="q"><span class="n">3</span><span>Mina explicitly committed herself with <span class="ex">“I promise I’ll send the form by five.”</span> It is accurate to report that she <button class="choice-gap" data-choice-gap data-answer="promised to send the form by five" data-hint="The original explicitly contains a promise, so promised preserves that speech act." data-fix="Mina promised to send the form by five.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The reporter wants neutral attribution and has no reason to signal doubt: Mina <button class="choice-gap" data-choice-gap data-answer="said the office opened at nine" data-hint="Use said rather than claimed when the purpose is neutral attribution." data-fix="Mina said the office opened at nine.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: <span class="ex">said</span>, weak <span class="ex">that</span>, and contracted <span class="ex">’d</span></h2>
+  <div class="lead-rule"></div>
+  <div class="two-col">
+    <div>
+      <h3>Reduce the reporting frame</h3>
+      <p><span class="ex">Said</span> is /sɛd/, not a spelling-based /seɪd/. <span class="ex">Told</span> is /toʊld/. In connected U.S. speech, optional <span class="ex">that</span> is often weak /ðət/ or omitted: <span class="ex">She said (that) she was LATE</span>. The new message normally carries stronger stress than the reporting frame.</p>
+      <p>Common chunks link smoothly: <span class="ex">said she</span> /sɛd ʃi/ and <span class="ex">told me</span> /toʊld mi/. A small or omitted <span class="ex">that</span> does not change statement meaning.</p>
+    </div>
+    <div>
+      <h3>Use the following verb to resolve <span class="ex">’d</span></h3>
+      <p>Before a base verb, <span class="ex">’d</span> can represent <span class="ex">would</span>: <span class="ex">she’d call</span>. Before a past participle, it can represent <span class="ex">had</span>: <span class="ex">she’d left</span>, <span class="ex">she’d sent the form</span>. Time context and the following verb reveal the meaning.</p>
+      <p>Listen for information stress: <span class="ex">She said she’d call on TUESday, not MONday.</span> Stress changes with the correction; it is not fixed permanently on one word.</p>
+    </div>
+  </div>
+
+  <section data-lesson-extension="Tutor-read say-versus-tell frame, backshifted state, earlier canceled event, reported future, and would-versus-had contraction listening check">
+    <h2>Listen for the reporting frame and following verb</h2>
+    <div class="lead-rule"></div>
+    <p>Your tutor reads each line once naturally and once in short thought groups. Use the listener pattern, reporting time, time words, and verb after <span class="ex">’d</span>.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a named listener after told, a backshifted state, an explicitly earlier event, a reported future, and would-versus-had contraction evidence.">
+      <h3>Listening check: recover the complete report</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Alex is the listener named after told." data-hint="Listen for told Alex before the content clause." data-fix="Alex is the listener named after told."><p class="quiz-question">1. In the first line, what role does Alex have?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Alex is the listener named after told.">Alex is the listener named after told.</button><button class="quiz-option" data-quiz-option="Alex is the train that was canceled.">Alex is the train that was canceled.</button><button class="quiz-option" data-quiz-option="Alex is an optional time expression.">Alex is an optional time expression.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Mina’s original current delay is viewed from the later report." data-hint="Listen for said she was running late after the original I’m running late." data-fix="Mina’s original current delay is viewed from the later report."><p class="quiz-question">2. What does <span class="ex">Mina said she was running late</span> do?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Mina’s original current delay is viewed from the later report.">Mina’s original current delay is viewed from the later report.</button><button class="quiz-option" data-quiz-option="It proves that Mina never experienced a delay.">It proves that Mina never experienced a delay.</button><button class="quiz-option" data-quiz-option="It reports a future train schedule.">It reports a future train schedule.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The cancellation occurred before the past reporting point." data-hint="Listen for had been canceled, which explicitly marks an earlier layer." data-fix="The cancellation occurred before the past reporting point."><p class="quiz-question">3. What time relation does <span class="ex">had been canceled</span> mark?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The cancellation occurred before the past reporting point.">The cancellation occurred before the past reporting point.</button><button class="quiz-option" data-quiz-option="The cancellation will happen after tomorrow.">The cancellation will happen after tomorrow.</button><button class="quiz-option" data-quiz-option="The cancellation and report are general daily habits.">The cancellation and report are general daily habits.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="a call planned for the day after the original message" data-hint="Listen for would call and the next day." data-fix="The report describes a call planned for the day after the original message."><p class="quiz-question">4. What does the fourth line report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a call planned for the day after the original message">a call planned for the day after the original message</button><button class="quiz-option" data-quiz-option="a call completed before the original message">a call completed before the original message</button><button class="quiz-option" data-quiz-option="a permanent prohibition on calling">a permanent prohibition on calling</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The first ’d means would; the second ’d means had." data-hint="Use the following forms: base call after the first contraction and participle sent after the second." data-fix="In she’d call, ’d means would; in she’d sent, ’d means had."><p class="quiz-question">5. What does <span class="ex">’d</span> mean in <span class="ex">she’d call</span> and <span class="ex">she’d sent</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The first ’d means would; the second ’d means had.">The first ’d means would; the second ’d means had.</button><button class="quiz-option" data-quiz-option="Both contractions mean did.">Both contractions mean did.</button><button class="quiz-option" data-quiz-option="Both contractions mean should.">Both contractions mean should.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">Mina TOLD Alex that the TRAIN was deLAYED.</span> Evidence: <span class="ex">told + listener Alex + clause</span>.</li>
+        <li><span class="ex">Mina said she was running LATE.</span> Evidence: original present temporary state viewed through a later past report.</li>
+        <li><span class="ex">She said her train had been CANceled that MORning.</span> Evidence: Past Perfect explicitly places cancellation before the report.</li>
+        <li><span class="ex">She said she would CALL the NEXT DAY.</span> Evidence: original future relative to the message becomes <span class="ex">would</span> plus adjusted day.</li>
+        <li><span class="ex">She’d CALL on Tuesday. She’d SENT the form on Monday.</span> Evidence: base <span class="ex">call</span> resolves <span class="ex">’d</span> as <span class="ex">would</span>; participle <span class="ex">sent</span> resolves it as <span class="ex">had</span>.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read one complete message relay</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Alex’s 3:00 p.m. project note</h3>
+    <p><span class="ex">Mina said she was running late because her train had been canceled that morning. She told me she could join the planning meeting online that day. She said she would bring the signed forms the next day. She also said the Harbor Station café closes at seven. I kept the present form because the schedule is still current and useful to the team.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the cause of the delay, Alex as listener, the form-delivery day, and the stated reason for current-schedule framing.">
+    <h3>Reading check: use only Alex’s note</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Her train had been canceled that morning." data-hint="The first sentence gives the cause after because." data-fix="Mina was late because her train had been canceled that morning."><p class="quiz-question">1. Why was Mina running late?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Her train had been canceled that morning.">Her train had been canceled that morning.</button><button class="quiz-option" data-quiz-option="She had forgotten the meeting date.">She had forgotten the meeting date.</button><button class="quiz-option" data-quiz-option="The café had closed permanently.">The café had closed permanently.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Alex, the writer of the note." data-hint="In Alex’s own note, me refers to Alex." data-fix="Mina told Alex, the writer of the note, that she could join online."><p class="quiz-question">2. Who does <span class="ex">me</span> refer to in <span class="ex">She told me</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Alex, the writer of the note.">Alex, the writer of the note.</button><button class="quiz-option" data-quiz-option="Mina’s train.">Mina’s train.</button><button class="quiz-option" data-quiz-option="Every reader of the website.">Every reader of the website.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the day after Mina’s original message" data-hint="The next day is measured from the original message day." data-fix="Mina said she would bring the forms the day after her original message."><p class="quiz-question">3. When did Mina say she would bring the forms?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the day after Mina’s original message">the day after Mina’s original message</button><button class="quiz-option" data-quiz-option="the day before Mina’s original message">the day before Mina’s original message</button><button class="quiz-option" data-quiz-option="at an unspecified time ten years later">at an unspecified time ten years later</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Alex deliberately presents the still-current schedule as useful now." data-hint="The final sentence explicitly explains why Alex kept the present form." data-fix="Alex keeps closes because he deliberately presents the still-current schedule as useful now."><p class="quiz-question">4. Why does the note keep <span class="ex">closes</span> rather than require <span class="ex">closed</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Alex deliberately presents the still-current schedule as useful now.">Alex deliberately presents the still-current schedule as useful now.</button><button class="quiz-option" data-quiz-option="Backshift is impossible after said.">Backshift is impossible after said.</button><button class="quiz-option" data-quiz-option="The café is a person named Alex.">The café is a person named Alex.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build a listener report and a later promise</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="Mina told Alex that she could join online" data-hint="Begin with Mina, use told before the listener Alex, and report can as could after the past reporting verb." data-fix="Mina told Alex that she could join online." data-success-message="Correct. Told takes listener Alex directly, and could carries the reported ability.">
+    <h3>Build 1: name the listener</h3><p class="tile-target">Report Mina’s message with Alex as the person who received it.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="online">online</button><button class="tile" data-build-tile="that">that</button><button class="tile" data-build-tile="mina">Mina</button><button class="tile" data-build-tile="could">could</button><button class="tile" data-build-tile="alex">Alex</button><button class="tile" data-build-tile="join">join</button><button class="tile" data-build-tile="told">told</button><button class="tile" data-build-tile="she">she</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="she said she would call me the next day" data-hint="Use said before the clause, change original you to reporter Alex’s me, and rebuild tomorrow as the next day." data-fix="She said she would call me the next day." data-success-message="Correct. Would reports the original future, me keeps Alex as listener, and the next day preserves the original tomorrow.">
+    <h3>Build 2: keep person and time reference clear</h3><p class="tile-target">Alex reports Mina’s Monday words, “I’ll call you tomorrow.”</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="she">She</button><button class="tile" data-build-tile="next">next</button><button class="tile" data-build-tile="me">me</button><button class="tile" data-build-tile="day">day</button><button class="tile" data-build-tile="would">would</button><button class="tile" data-build-tile="said">said</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="call">call</button><button class="tile" data-build-tile="she">she</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the reporting viewpoint</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="said" data-hint="The listener me follows the reporting verb directly, so use told." data-fix="Mina told me that she was late." data-why="Tell takes a listener directly; say would require Mina said that she was late or Mina said to me that she was late." data-success-message="Correct. Told me preserves the named listener in the required pattern.">
+    <h3>Repair 1: choose the listener frame</h3><p>Tap the reporting verb that cannot take <span class="ex">me</span> directly here.</p><div class="spot-options"><button class="error-choice" data-error-choice="mina">Mina</button><button class="error-choice" data-error-choice="said">said</button><button class="error-choice" data-error-choice="me">me</button><button class="error-choice" data-error-choice="late">that she was late.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="my" data-hint="The folder belongs to original speaker Mina, not reporter Alex." data-fix="Mina said she would bring her folder." data-why="When Alex reports Mina’s words, Mina is she and her possessions use her." data-success-message="Correct. Her keeps the folder connected to original speaker Mina.">
+    <h3>Repair 2: preserve ownership</h3><p>Alex is reporting Mina’s words, “I will bring my folder.” Tap the possessive that points to the wrong person.</p><div class="spot-options"><button class="error-choice" data-error-choice="mina">Mina said</button><button class="error-choice" data-error-choice="she">she would bring</button><button class="error-choice" data-error-choice="my">my</button><button class="error-choice" data-error-choice="folder">folder.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="yesterday" data-hint="Mina’s original yesterday is Sunday; Alex’s Tuesday yesterday would mean Monday." data-fix="Mina said she had sent the forms the day before." data-why="The day before preserves the day preceding Mina’s original Monday message." data-success-message="Correct. The day before keeps the original Sunday reference after the report moves to Tuesday.">
+    <h3>Repair 3: preserve the original day</h3><p>Mina spoke Monday: “I sent the forms yesterday.” Alex reports Tuesday. Tap the time word that now points to the wrong day.</p><div class="spot-options"><button class="error-choice" data-error-choice="mina">Mina said</button><button class="error-choice" data-error-choice="sent">she had sent</button><button class="error-choice" data-error-choice="forms">the forms</button><button class="error-choice" data-error-choice="yesterday">yesterday.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing private messages</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to report a real private conversation, employer message, client statement, family discussion, medical detail, legal issue, travel problem, password, address, schedule, conflict, promise, or opinion. Use Mina, Alex, Jordan, Harbor Station, and Riverside Office. Real details are optional.</p>
+  <div class="prompt-card"><b>Original situation:</b> Mina speaks to Alex on Monday at Harbor Station. Create a four-part fictional statement with a current situation, completed event, ability, and future intention.</div>
+  <div class="prompt-card"><b>New situation:</b> Alex reports later from Riverside Office to Jordan. State the reporting time and place before rebuilding pronouns and references.</div>
+  <div class="prompt-card"><b>Viewpoint control:</b> Use one common backshift, one explicit earlier Past Perfect layer, one modal shift, and one justified still-current form.</div>
+  <div class="prompt-card"><b>Accuracy:</b> Use <span class="ex">said</span> neutrally, <span class="ex">told + listener</span> once, and do not invent an exact quote, promise, or doubt.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: relay a 75–90 second fictional message</h3>
+    <p>Use the supplied people and places. First state who spoke to whom, when, and where. Report a current situation, a completed earlier event, an ability, a future intention, and one still-current general fact. Use both <span class="ex">said</span> and <span class="ex">told + listener</span>. Rebuild every pronoun, possessive, day, and place reference. End by explaining one backshift and one deliberate no-backshift choice.</p>
+    <p><b>Evidence check:</b> Can the listener identify every person behind each pronoun, recover the original time and place, distinguish earlier event from later report, hear whether <span class="ex">’d</span> means <span class="ex">would</span> or <span class="ex">had</span>, and tell which details came from the original speaker rather than the reporter?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You preserved listener pattern, explicit earlier time, and still-current framing instead of changing every form mechanically.">
+    <h3>Final check: defend the reported viewpoint</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Mina told Alex that she was running late." data-hint="The sentence names listener Alex directly, so tell must precede him." data-fix="Mina told Alex that she was running late."><p class="quiz-question">1. Which sentence uses the named-listener pattern accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Mina told Alex that she was running late.">Mina told Alex that she was running late.</button><button class="quiz-option" data-quiz-option="Mina said Alex that she was running late.">Mina said Alex that she was running late.</button><button class="quiz-option" data-quiz-option="Mina told that she was running late.">Mina told that she was running late.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Mina said her train had been canceled that morning." data-hint="Use her for Mina’s train, Past Perfect for the explicitly earlier event, and that morning for the original Monday morning." data-fix="Mina said her train had been canceled that morning."><p class="quiz-question">2. Which careful later report preserves person and earlier-event time?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Mina said her train had been canceled that morning.">Mina said her train had been canceled that morning.</button><button class="quiz-option" data-quiz-option="Mina said my train has canceled tomorrow.">Mina said my train has canceled tomorrow.</button><button class="quiz-option" data-quiz-option="Mina told her train was cancel this morning.">Mina told her train was cancel this morning.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The guide said the museum closes at six." data-hint="The prompt requests the still-current schedule presented as useful now." data-fix="The guide said the museum closes at six."><p class="quiz-question">3. Which report deliberately keeps a currently valid schedule in the present?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The guide said the museum closes at six.">The guide said the museum closes at six.</button><button class="quiz-option" data-quiz-option="The guide said the museum closing at six yesterday tomorrow.">The guide said the museum closing at six yesterday tomorrow.</button><button class="quiz-option" data-quiz-option="The guide told that the museum close at six.">The guide told that the museum close at six.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: whose viewpoint does each word serve?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">Said is followed by...</span> <span class="ex">Told is followed by...</span> <span class="ex">I change a pronoun when...</span> <span class="ex">I change a time word when...</span> <span class="ex">Backshift is common when...</span> <span class="ex">I may keep a present form when...</span></p>
+    <p>Create a direct quotation and a responsible paraphrase of one fictional message. Explain why only the exact version uses quotation marks and whether the paraphrase adds any stance.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day say-tell frame, optional backshift, and person-time reference retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Map speaker, listener, original time, and reporting time before selecting an answer.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the told-listener frame, genuine backshift optionality, and the original speaker and day reference.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Mina told Alex that she was late." data-hint="A named listener follows tell directly; say would need said to Alex or no direct listener." data-fix="Mina told Alex that she was late."><p class="quiz-question">1. Which sentence accurately names Alex as the listener?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Mina told Alex that she was late.">Mina told Alex that she was late.</button><button class="quiz-option" data-quiz-option="Mina said Alex that she was late.">Mina said Alex that she was late.</button><button class="quiz-option" data-quiz-option="Mina told that Alex she was late.">Mina told that Alex she was late.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Both can be grammatical; had been canceled marks the earlier layer more explicitly." data-hint="When event order is clear, informal Past Simple may remain; Past Perfect makes the earlier relationship explicit." data-fix="Both can be grammatical; had been canceled marks the earlier layer more explicitly."><p class="quiz-question">2. What is accurate about <span class="ex">Mina said the train was canceled / had been canceled that morning</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Both can be grammatical; had been canceled marks the earlier layer more explicitly.">Both can be grammatical; had been canceled marks the earlier layer more explicitly.</button><button class="quiz-option" data-quiz-option="Past Simple is never possible after said.">Past Simple is never possible after said.</button><button class="quiz-option" data-quiz-option="Past Perfect changes the cancellation into a future event.">Past Perfect changes the cancellation into a future event.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Mina said she would bring her folder the next day." data-hint="Original I and my refer to Mina; original tomorrow is the day after her message." data-fix="Mina said she would bring her folder the next day."><p class="quiz-question">3. Alex later reports Mina’s words, “I’ll bring my folder tomorrow.” Which report preserves person and day reference?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Mina said she would bring her folder the next day.">Mina said she would bring her folder the next day.</button><button class="quiz-option" data-quiz-option="Mina said I will bring my folder yesterday.">Mina said I will bring my folder yesterday.</button><button class="quiz-option" data-quiz-option="Mina told she would bring your folder today.">Mina told she would bring your folder today.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

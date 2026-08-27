@@ -2,404 +2,439 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Food and drink · A1 Vocabulary · Curriculum Map",
+  "title": "Food and drink · A1 Vocabulary",
   "slug": "food-and-drink",
   "level": "A1",
   "topic": "Food & drink",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Order in a cafe, shop for groceries, talk about your meals. Learn the everyday food and drink words, then choose a / an for one thing you can count and some / any for an amount: a ",
+  "description": "Use practical food and drink vocabulary to discuss meals, order in a café, shop for groceries, and talk about quantities.",
   "sequence": 14,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a1/some-any-with-countable-and-uncountable-nouns", "a0/articles-a-an"],
+  "related": ["a1/daily-routines-and-telling-the-time", "a1/some-any-with-countable-and-uncountable-nouns", "a2/quantifiers-much-many-a-lot-of"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Food countability viewpoints, portions, meal chunks, preference versus ordering, U.S. service exchanges, connected speech, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 14</p>
   <h1>Food &amp; <em>drink</em></h1>
-  <p class="standfirst">Order in a cafe, shop for groceries, talk about your meals. Learn the everyday food and drink words, then choose <strong>a / an</strong> for one thing you can count and <strong>some / any</strong> for an amount: <span class="ex">a sandwich</span>, <span class="ex">an apple</span>, <span class="ex">some water</span>, <span class="ex">Is there any milk?</span></p>
+  <p class="standfirst">Choose the language frame that fits the serving you mean. Compare <span class="ex">some coffee</span>, <span class="ex">a coffee</span>, and <span class="ex">a cup of coffee</span>. Then use natural U.S. English to state a preference, place an order, check availability, and choose <span class="ex">for here</span> or <span class="ex">to go</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">countable / uncountable</span>
-    <span class="tag">a · an · some · any</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">countable views and amount views</span>
+    <span class="tag">portions · orders · some / any</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read a short cafe order.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Things you count vs. amounts you don't.</span></div>
-    <div class="flow-step"><b>Build</b><span>Sort, choose, and build chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Order food and talk about meals.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Compare items, amounts, and servings.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose a frame from the intended meaning.</span></div>
+    <div class="flow-step"><b>Build</b><span>Use portions and complete service exchanges.</span></div>
+    <div class="flow-step"><b>Use</b><span>Run a fictional lunch-counter role-play.</span></div>
   </div>
 
-  <p class="note-line">Three meals a day: <span class="ex">breakfast</span> (morning), <span class="ex">lunch</span> (midday), <span class="ex">dinner</span> (evening). To order politely, use <span class="ex">I'd like…</span>, <span class="ex">Can I have…?</span>, and answer <span class="ex">Would you like…?</span></p>
+  <p class="note-line">Meal words often form article-free routine chunks: <span class="ex">have breakfast</span>, <span class="ex">have lunch</span>, and <span class="ex">have dinner</span>. People eat at different times and may use different meal names, so these are language chunks, not a required daily schedule.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a role pattern, a clock phrase, and an article chosen from the first sound.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="as">as</button>
-      <button class="choice-option" data-choice-option="at">at</button>
-      <button class="choice-option" data-choice-option="half past">half past</button>
-      <button class="choice-option" data-choice-option="quarter to">quarter to</button>
-      <button class="choice-option" data-choice-option="a">a</button>
-      <button class="choice-option" data-choice-option="an">an</button>
+      <button class="choice-option" data-choice-option="as">as</button><button class="choice-option" data-choice-option="for">for</button>
+      <button class="choice-option" data-choice-option="half past">half past</button><button class="choice-option" data-choice-option="quarter to">quarter to</button>
+      <button class="choice-option" data-choice-option="a">a</button><button class="choice-option" data-choice-option="an">an</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Luis works <button class="choice-gap" data-choice-gap data-answer="as" data-placeholder="choose">choose</button> a chef. &nbsp;<span class="contraction">(previous lesson · job)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I have lunch at 12:30 — <button class="choice-gap" data-choice-gap data-answer="half past" data-placeholder="choose">choose</button> twelve. &nbsp;<span class="contraction">(older lesson · telling the time)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Mina is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> accountant. &nbsp;<span class="contraction">(common contrast · a or an)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The profile labels Luis’s role “cook”: Luis works <button class="choice-gap" data-choice-gap data-answer="as" data-hint="As introduces a person’s role." data-fix="Luis works as a cook." data-placeholder="choose">choose</button> a cook. <span class="contraction">(jobs and workplaces)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The lunch card shows 12:30: Lunch is at <button class="choice-gap" data-choice-gap data-answer="half past" data-hint="Thirty minutes after twelve is half past twelve." data-fix="Lunch is at half past twelve." data-placeholder="choose">choose</button> twelve. <span class="contraction">(telling the time)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The staff card gives Mina’s role: Mina is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Accountant begins with a vowel sound, so use an." data-fix="Mina is an accountant." data-placeholder="choose">choose</button> accountant. <span class="contraction">(a or an)</span></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Meet the food</h2>
+  <h2>Meet the food and drink</h2>
   <div class="lead-rule"></div>
-  <p>Everyday food and drinks. Say each one aloud with <span class="ex">I like…</span> or <span class="ex">I don’t like…</span></p>
+  <p>This is an optional word bank, not a required diet or shopping list. Say a complete neutral chunk such as <span class="ex">an apple</span>, <span class="ex">some rice</span>, or <span class="ex">a bowl of soup</span>. The adult beverage words are optional and never required in practice.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bread.svg" alt="" loading="lazy" /></span><span class="nm">bread</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cheese.svg" alt="" loading="lazy" /></span><span class="nm">cheese</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/apple.svg" alt="" loading="lazy" /></span><span class="nm">apple</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/banana.svg" alt="" loading="lazy" /></span><span class="nm">banana</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/egg.svg" alt="" loading="lazy" /></span><span class="nm">eggs</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rice.svg" alt="" loading="lazy" /></span><span class="nm">rice</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/salad.svg" alt="" loading="lazy" /></span><span class="nm">salad</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sandwich.svg" alt="" loading="lazy" /></span><span class="nm">sandwich</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chicken-leg.svg" alt="" loading="lazy" /></span><span class="nm">chicken</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/coffee.svg" alt="" loading="lazy" /></span><span class="nm">coffee</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tea.svg" alt="" loading="lazy" /></span><span class="nm">tea</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/milk.svg" alt="" loading="lazy" /></span><span class="nm">milk</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/water.svg" alt="" loading="lazy" /></span><span class="nm">water</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/orange.svg" alt="" loading="lazy" /></span><span class="nm">orange</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lemon.svg" alt="" loading="lazy" /></span><span class="nm">lemon</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/strawberry.svg" alt="" loading="lazy" /></span><span class="nm">strawberry</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/grapes.svg" alt="" loading="lazy" /></span><span class="nm">grapes</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/watermelon.svg" alt="" loading="lazy" /></span><span class="nm">watermelon</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pineapple.svg" alt="" loading="lazy" /></span><span class="nm">pineapple</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pear.svg" alt="" loading="lazy" /></span><span class="nm">pear</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tomato.svg" alt="" loading="lazy" /></span><span class="nm">tomato</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/carrot.svg" alt="" loading="lazy" /></span><span class="nm">carrot</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/potato.svg" alt="" loading="lazy" /></span><span class="nm">potato</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/onion.svg" alt="" loading="lazy" /></span><span class="nm">onion</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cucumber.svg" alt="" loading="lazy" /></span><span class="nm">cucumber</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/broccoli.svg" alt="" loading="lazy" /></span><span class="nm">broccoli</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mushroom.svg" alt="" loading="lazy" /></span><span class="nm">mushroom</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/meat.svg" alt="" loading="lazy" /></span><span class="nm">meat</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pasta.svg" alt="" loading="lazy" /></span><span class="nm">pasta</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pizza.svg" alt="" loading="lazy" /></span><span class="nm">pizza</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hamburger.svg" alt="" loading="lazy" /></span><span class="nm">hamburger</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fries.svg" alt="" loading="lazy" /></span><span class="nm">french fries</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/soup.svg" alt="" loading="lazy" /></span><span class="nm">soup</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cake.svg" alt="" loading="lazy" /></span><span class="nm">cake</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cookie.svg" alt="" loading="lazy" /></span><span class="nm">cookie</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chocolate.svg" alt="" loading="lazy" /></span><span class="nm">chocolate</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ice-cream.svg" alt="" loading="lazy" /></span><span class="nm">ice cream</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/juice.svg" alt="" loading="lazy" /></span><span class="nm">juice</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/beer.svg" alt="" loading="lazy" /></span><span class="nm">beer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wine.svg" alt="" loading="lazy" /></span><span class="nm">wine</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/soda.svg" alt="" loading="lazy" /></span><span class="nm">soda</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bread.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">bread</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cheese.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cheese</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/apple.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">apple</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/banana.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">banana</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/egg.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">egg</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rice.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">rice</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/salad.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">salad</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sandwich.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">sandwich</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chicken-leg.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">chicken</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/coffee.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">coffee</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tea.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">tea</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/milk.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">milk</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/water.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">water</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/orange.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">orange</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lemon.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">lemon</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/strawberry.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">strawberry</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/grapes.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">grapes</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/watermelon.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">watermelon</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pineapple.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">pineapple</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pear.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">pear</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tomato.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">tomato</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/carrot.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">carrot</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/potato.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">potato</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/onion.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">onion</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cucumber.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cucumber</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/broccoli.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">broccoli</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mushroom.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">mushroom</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/meat.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">meat</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pasta.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">pasta</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pizza.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">pizza</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hamburger.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">hamburger</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fries.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">french fries</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/soup.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">soup</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cake.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cake</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cookie.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cookie</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chocolate.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">chocolate</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ice-cream.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">ice cream</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/juice.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">juice</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/beer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">beer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wine.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">wine</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/soda.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">soda</span></div>
   </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read the cafe order</h3>
-    <p><span class="ex">"Good morning. I'd like <strong>a sandwich</strong> and <strong>an apple</strong>, please. And can I have <strong>some water</strong> and <strong>a coffee</strong>? — Sorry, we don't have <strong>any juice</strong> today."</span></p>
+    <h3>A fictional lunch-counter order</h3>
+    <p><span class="ex">“Hi. I’d like a sandwich and an apple, please. Can I have some water, too?”</span><br /><span class="ex">“Of course. Would you like a cup or a bottle of water?”</span></p>
     <ul>
-      <li>Look at <span class="ex">a sandwich</span> and <span class="ex">an apple</span>. Both mean <strong>one</strong> item you can count. Why is one <span class="ex">a</span> and the other <span class="ex">an</span>?</li>
-      <li>Now look at <span class="ex">some water</span>. Why don't we say <span class="ex">a water</span>? Can you count water the way you count sandwiches?</li>
-      <li>The cafe says <span class="ex">we don't have any juice</span>. In this <strong>negative</strong> sentence, which little word replaces <span class="ex">some</span>?</li>
+      <li>Which phrases present one complete menu item? Which phrase presents an unspecified amount?</li>
+      <li>Why does <span class="ex">an apple</span> use <span class="ex">an</span>? Say the first sound in <em>apple</em>.</li>
+      <li>The server asks for a unit: <span class="ex">a cup</span> or <span class="ex">a bottle</span>. What does that unit let us count?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the cue, then choose</h3>
-    <p class="choice-hint">If you can count it (one item), use <b>a / an</b>. If it's an amount, use <b>some</b>. Choose <b>an</b> before a, e, i, o, u sounds.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="a">a</button>
-      <button class="choice-option" data-choice-option="an">an</button>
-      <button class="choice-option" data-choice-option="some">some</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I'd like <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> sandwich. &nbsp;<span class="contraction">(one item · count it)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Can I have <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> apple? &nbsp;<span class="contraction">(one item · starts with a vowel sound)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I'd like <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> water. &nbsp;<span class="contraction">(an amount · can't count it)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Can I have <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> rice? &nbsp;<span class="contraction">(an amount · can't count it)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected an item, amount, or menu serving from the meaning in each fictional order.">
+    <h3>Discovery check: choose the frame that matches the order</h3>
+    <p class="choice-hint">Use <b>a/an</b> for one countable item or named menu serving. Use <b>some</b> when the order presents an unspecified amount.</p>
+    <div class="choice-bank" aria-label="Food frame choices"><button class="choice-option" data-choice-option="a">a</button><button class="choice-option" data-choice-option="an">an</button><button class="choice-option" data-choice-option="some">some</button></div>
+    <div class="q"><span class="n">1</span><span>The ticket lists one complete sandwich: I’d like <button class="choice-gap" data-choice-gap data-answer="a" data-hint="One sandwich is a singular countable item and begins with /s/." data-fix="I’d like a sandwich." data-placeholder="choose">choose</button> sandwich.</span></div>
+    <div class="q"><span class="n">2</span><span>The ticket lists one whole apple: Can I have <button class="choice-gap" data-choice-gap data-answer="an" data-hint="One apple is countable and begins with a vowel sound." data-fix="Can I have an apple?" data-placeholder="choose">choose</button> apple?</span></div>
+    <div class="q"><span class="n">3</span><span>The meeting table has a pitcher, and the guest wants an unspecified amount: I’d like <button class="choice-gap" data-choice-gap data-answer="some" data-hint="The pitcher provides an amount of water, not a named serving." data-fix="I’d like some water." data-placeholder="choose">choose</button> water.</span></div>
+    <div class="q"><span class="n">4</span><span>The plate needs an unspecified amount beside the vegetables: Can I have <button class="choice-gap" data-choice-gap data-answer="some" data-hint="Rice is presented as an amount on the plate." data-fix="Can I have some rice?" data-placeholder="choose">choose</button> rice?</span></div>
+    <div class="q"><span class="n">5</span><span>The menu sells one prepared side salad: I’d like <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Here salad means one complete menu serving." data-fix="I’d like a salad." data-placeholder="choose">choose</button> salad.</span></div>
+    <div class="q"><span class="n">6</span><span>The cafe menu uses “coffee” for one cup-sized serving: I’d like <button class="choice-gap" data-choice-gap data-answer="a" data-hint="In this service context, a coffee means one menu serving." data-fix="I’d like a coffee." data-placeholder="choose">choose</button> coffee.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: count it or measure it</h2>
+  <h2>Get to the root: countability is a language viewpoint</h2>
   <div class="lead-rule"></div>
-  <p>Some foods come in <strong>single items you can count</strong>: <span class="ex">one apple, two apples, three eggs</span>. We call these <strong>countable</strong>. Use <span class="ex">a / an</span> for one of them.</p>
-  <p>Other foods are an <strong>amount or mass you don't count one by one</strong>: <span class="ex">water, rice, cheese, bread</span>. We call these <strong>uncountable</strong>. Use <span class="ex">some</span> for an amount, not <span class="ex">a / an</span>.</p>
+  <p>English does not label the physical food once and for all. The noun frame shows how the speaker wants the listener to see it: as one whole item, an amount, or a measured serving.</p>
   <table>
-    <thead><tr><th>countable <span class="contraction">use a / an</span></th><th>uncountable <span class="contraction">use some</span></th></tr></thead>
+    <thead><tr><th>viewpoint</th><th>language frame</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>a sandwich</b> &nbsp;<span class="contraction">one, two sandwiches</span></td><td><b>some bread</b> &nbsp;<span class="contraction">not a bread</span></td></tr>
-      <tr><td><b>an apple</b> &nbsp;<span class="contraction">one, two apples</span></td><td><b>some rice</b> &nbsp;<span class="contraction">not a rice</span></td></tr>
-      <tr><td><b>an egg</b> &nbsp;<span class="contraction">one, two eggs</span></td><td><b>some water</b> &nbsp;<span class="contraction">not a water</span></td></tr>
-      <tr><td><b>a coffee</b> &nbsp;<span class="contraction">= one cup, in a cafe</span></td><td><b>some cheese</b> &nbsp;<span class="contraction">not a cheese</span></td></tr>
+      <tr><td><b>one countable item</b></td><td><b>a/an + singular noun</b></td><td><span class="ex">a sandwich · an egg</span></td></tr>
+      <tr><td><b>two or more items</b></td><td><b>number + plural noun</b></td><td><span class="ex">two sandwiches · three eggs</span></td></tr>
+      <tr><td><b>an unspecified amount</b></td><td><b>some + amount noun</b></td><td><span class="ex">some bread · some rice</span></td></tr>
+      <tr><td><b>a measured or service unit</b></td><td><b>a/an + unit + of + food</b></td><td><span class="ex">a slice of bread · a bowl of rice</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line">The dedicated <a href="/lessons/a1/some-any-with-countable-and-uncountable-nouns/">some and any lesson</a> teaches the full quantity system. This lesson applies that system to portions, menus, and service conversations.</p>
+
+  <h3>The same food can enter different frames</h3>
+  <table>
+    <thead><tr><th>food</th><th>amount or substance</th><th>countable serving or whole</th></tr></thead>
+    <tbody>
+      <tr><td><b>coffee</b></td><td><span class="ex">some coffee</span></td><td><span class="ex">a coffee · two coffees</span> in a service context</td></tr>
+      <tr><td><b>cake</b></td><td><span class="ex">some cake</span></td><td><span class="ex">a cake · a slice of cake</span></td></tr>
+      <tr><td><b>pizza</b></td><td><span class="ex">some pizza</span></td><td><span class="ex">a pizza · a slice of pizza</span></td></tr>
+      <tr><td><b>salad</b></td><td><span class="ex">some salad</span></td><td><span class="ex">a salad</span> as one prepared serving</td></tr>
+      <tr><td><b>chicken</b></td><td><span class="ex">some chicken</span> as food</td><td><span class="ex">a chicken</span> as one animal</td></tr>
+    </tbody>
+  </table>
+  <p>Meaning comes before the article. Do not memorize <em>coffee is uncountable</em> or <em>salad is countable</em> as an absolute rule. Ask what the speaker is presenting in this situation.</p>
+
+  <h3>Useful portions and containers</h3>
+  <table>
+    <thead><tr><th>unit</th><th>natural chunk</th><th>what it counts</th></tr></thead>
+    <tbody>
+      <tr><td><b>piece / slice</b></td><td><span class="ex">a piece of bread · a slice of pizza</span></td><td>one separated part</td></tr>
+      <tr><td><b>bowl</b></td><td><span class="ex">a bowl of soup · two bowls of rice</span></td><td>the serving container</td></tr>
+      <tr><td><b>cup / glass</b></td><td><span class="ex">a cup of coffee · a glass of water</span></td><td>one drink serving</td></tr>
+      <tr><td><b>bottle / can / carton</b></td><td><span class="ex">a bottle of water · a can of soda · a carton of milk</span></td><td>one package</td></tr>
+    </tbody>
+  </table>
+  <p>Pluralize the unit, not the amount noun: <span class="ex">two slices of bread</span>, <span class="ex">three cups of coffee</span>, and <span class="ex">four bottles of water</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each order now uses the exact item number, portion, or container stated on its ticket.">
+    <h3>Portion check: complete the ticket</h3>
+    <div class="choice-bank" aria-label="Portion choices">
+      <button class="choice-option" data-choice-option="a piece of">a piece of</button><button class="choice-option" data-choice-option="a bowl of">a bowl of</button>
+      <button class="choice-option" data-choice-option="a bottle of">a bottle of</button><button class="choice-option" data-choice-option="two">two</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The ticket requests one individual piece, not a whole loaf: <button class="choice-gap" data-choice-gap data-answer="a piece of" data-hint="A piece makes one countable unit from the amount noun bread." data-fix="The ticket requests a piece of bread." data-placeholder="choose">choose</button> bread.</span></div>
+    <div class="q"><span class="n">2</span><span>The menu serves rice in one bowl: <button class="choice-gap" data-choice-gap data-answer="a bowl of" data-hint="The bowl is the one countable serving unit." data-fix="The ticket requests a bowl of rice." data-placeholder="choose">choose</button> rice.</span></div>
+    <div class="q"><span class="n">3</span><span>The cooler ticket requests one sealed water container: <button class="choice-gap" data-choice-gap data-answer="a bottle of" data-hint="A sealed water container is a bottle of water." data-fix="The ticket requests a bottle of water." data-placeholder="choose">choose</button> water.</span></div>
+    <div class="q"><span class="n">4</span><span>The order card shows the number 2 before a countable menu item: <button class="choice-gap" data-choice-gap data-answer="two" data-hint="Use the stated number and the plural noun sandwiches." data-fix="The ticket requests two sandwiches." data-placeholder="choose">choose</button> sandwiches.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Preference or request? One small sound changes the action</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>form</th><th>meaning</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><b>I like + food</b></td><td>general preference</td><td><span class="ex">I like coffee.</span></td></tr>
+      <tr><td><b>I’d like + order</b></td><td>present polite request; <span class="ex">I’d = I would</span></td><td><span class="ex">I’d like a coffee, please.</span></td></tr>
+      <tr><td><b>Can I have + order?</b></td><td>ordinary polite request</td><td><span class="ex">Can I have a glass of water?</span></td></tr>
+      <tr><td><b>Would you like + offer?</b></td><td>offer something to another person</td><td><span class="ex">Would you like some tea?</span></td></tr>
+    </tbody>
+  </table>
+  <p>For an offer, natural short responses are <span class="ex">Yes, please</span> and <span class="ex">No, thank you</span>. At a U.S. counter, staff may ask <span class="ex">For here or to go?</span> Answer <span class="ex">For here, please</span> or <span class="ex">To go, please</span>.</p>
+
+  <div class="thinking-card">
+    <h3>A compact counter exchange</h3>
+    <p><span class="ex">Customer: Hi. I’d like a vegetable sandwich and a bottle of water, please.</span><br /><span class="ex">Server: Of course. Would you like some fruit?</span><br /><span class="ex">Customer: No, thank you. That’s all.</span><br /><span class="ex">Server: For here or to go?</span><br /><span class="ex">Customer: To go, please.</span></p>
+  </div>
 
   <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li>Why <span class="ex">an apple</span> but <span class="ex">a sandwich</span>? Use <span class="ex">an</span> before a vowel sound: <span class="ex">an apple, an egg, an orange</span>. Use <span class="ex">a</span> before a consonant sound: <span class="ex">a sandwich, a coffee, a banana</span>.</li>
-      <li>Use <span class="ex">any</span> in most neutral questions and negatives: <span class="ex">Is there any milk? There isn't any juice.</span> In offers and requests, <span class="ex">some</span> is common: <span class="ex">Would you like some coffee? Can I have some water?</span></li>
-      <li>In a cafe we can say <span class="ex">a coffee</span> or <span class="ex">a water</span> to mean <strong>one cup / one bottle</strong>. But to talk about the drink in general, use <span class="ex">some water</span>, <span class="ex">some coffee</span>.</li>
-    </ul>
+    <h3>Sound natural: contraction, linking, and information stress</h3>
+    <p><span class="ex">I’d</span> is one syllable /aɪd/. Keep the opening light and make the order clear: <span class="ex">I’d like a <strong>SAND</strong>wich, please.</span> In connected U.S. speech, <span class="ex">Can I</span> often links closely, and <span class="ex">Would you</span> can sound like <span class="ex">wouldja</span>. These are listening guides, not spellings to write.</p>
+    <p>Link the portion as one chunk: <span class="ex">a-cup-of <strong>COF</strong>fee · a-bottle-of <strong>WA</strong>ter</span>. Keep plural endings audible: <span class="ex">drinks</span> ends /s/, <span class="ex">eggs</span> ends /z/, and <span class="ex">sandwiches</span> adds a final syllable /ɪz/.</p>
+    <p>Stress the changed choice in a repair: <span class="ex">No <strong>MILK</strong>, please</span> or <span class="ex">For <strong>HERE</strong>, please</span>. Common food pronunciations include <span class="ex"><strong>VEJ</strong>-tuh-buhl</span>, <span class="ex"><strong>CHOC</strong>-lit</span>, and <span class="ex"><strong>BREK</strong>-fuhst</span>.</p>
   </div>
 
-  <h2>some / any in statements, questions, and negatives</h2>
-  <div class="lead-rule"></div>
-  <p>Use <span class="ex">some</span> in plain statements. Use <span class="ex">any</span> in most neutral questions and negatives:</p>
-  <p><span class="ex">There is <strong>some</strong> milk. &nbsp; · &nbsp; Is there <strong>any</strong> milk? &nbsp; · &nbsp; There isn't <strong>any</strong> milk.</span></p>
-  <p>In offers and requests, use <span class="ex">some</span> when you are offering something or asking for an amount: <span class="ex">Would you like <strong>some</strong> coffee? Can I have <strong>some</strong> water?</span></p>
-  <p>And remember the verb: one uncountable amount takes <span class="ex">is</span>; plural countable items take <span class="ex">are</span>: <span class="ex">There is some rice. There are some apples.</span></p>
+  <section data-lesson-extension="Tutor-read preference, order, portion, amount, and U.S. service-choice listening check">
+    <h2>Listen: what does the speaker mean?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once with natural U.S. rhythm and once more slowly. Listen for the contraction, serving unit, and final service choice. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished a preference, current order, specified cup, unspecified amount, and here-or-go choices.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Food service listening meanings">
+        <button class="choice-option" data-choice-option="general preference">general preference</button><button class="choice-option" data-choice-option="current order">current order</button>
+        <button class="choice-option" data-choice-option="one specified cup">one specified cup</button><button class="choice-option" data-choice-option="an unspecified amount">an unspecified amount</button>
+        <button class="choice-option" data-choice-option="for here">for here</button><button class="choice-option" data-choice-option="to go">to go</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 states a <button class="choice-gap" data-choice-gap data-answer="general preference" data-hint="I like without would describes a general preference." data-fix="I like coffee: general preference." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 makes a <button class="choice-gap" data-choice-gap data-answer="current order" data-hint="I’d like contains would and makes a polite request now." data-fix="I’d like a coffee, please: current order." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 requests <button class="choice-gap" data-choice-gap data-answer="one specified cup" data-hint="The speaker names one cup as the serving unit." data-fix="Can I have one cup of coffee: one specified cup." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 requests <button class="choice-gap" data-choice-gap data-answer="an unspecified amount" data-hint="Some coffee gives an amount without naming a unit." data-fix="Can I have some coffee: an unspecified amount." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 selects <button class="choice-gap" data-choice-gap data-answer="for here" data-hint="For here means the customer will stay and eat there." data-fix="For here, please: the customer will eat there." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 selects <button class="choice-gap" data-choice-gap data-answer="to go" data-hint="To go means the customer will take the order away." data-fix="To go, please: the customer will take the order away." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">I like coffee.</span></li>
+        <li><span class="ex">I’d like a coffee, please.</span></li>
+        <li><span class="ex">Can I have one cup of coffee?</span></li>
+        <li><span class="ex">Can I have some coffee?</span></li>
+        <li><span class="ex">For here, please.</span></li>
+        <li><span class="ex">To go, please.</span></li>
+      </ol>
+      <p>Keep the service frame light and stress the preference, order, unit, or location choice that carries the new information.</p>
+    </details>
+  </section>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose some or any</h3>
-    <p class="choice-hint">Statement, offer, or request → usually <b>some</b>. Neutral question or negative → usually <b>any</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="some">some</button>
-      <button class="choice-option" data-choice-option="any">any</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>There is <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> bread on the table. &nbsp;<span class="contraction">(statement)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Can I have <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose" data-hint="This is a request for an amount, so use some." data-fix="some">choose</button> coffee, please? &nbsp;<span class="contraction">(request)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Sorry, we don't have <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> juice today. &nbsp;<span class="contraction">(negative)</span></span></div>
-    <div class="q"><span class="n">4</span><span>I bought <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> vegetables at the market. &nbsp;<span class="contraction">(statement)</span></span></div>
-    <div class="q"><span class="n">5</span><span>Do we need <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> milk for breakfast? &nbsp;<span class="contraction">(question)</span></span></div>
-    <div class="q"><span class="n">6</span><span>There aren't <button class="choice-gap" data-choice-gap data-answer="any" data-placeholder="choose">choose</button> eggs in the fridge. &nbsp;<span class="contraction">(negative)</span></span></div>
-    <div class="q"><span class="n">7</span><span>Would you like <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> fruit? &nbsp;<span class="contraction">(offer)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+  <h2>Some and any in a food-service context</h2>
+  <div class="lead-rule"></div>
+  <p>Choose from the speaker’s meaning, not punctuation alone. <span class="ex">Some</span> can present an existing amount, an expected offer, or a requested amount. <span class="ex">Any</span> keeps a neutral inventory question open or contributes zero quantity after a negative.</p>
+  <p><span class="ex">There is some soup. · Is there any soup? · There isn’t any soup. · Would you like some soup? · Can I have some soup?</span></p>
+  <p>Match the verb to the noun frame: <span class="ex">There is some rice</span> but <span class="ex">There are two sandwiches</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected some or any from existing, open, zero, offer, request, and plural-quantity meanings.">
+    <h3>Drill 1: choose some or any from the stated situation</h3>
+    <div class="choice-bank" aria-label="Some or any choices"><button class="choice-option" data-choice-option="some">some</button><button class="choice-option" data-choice-option="any">any</button></div>
+    <div class="q"><span class="n">1</span><span>The inventory card confirms bread is on the table: There is <button class="choice-gap" data-choice-gap data-answer="some" data-hint="The card confirms an existing amount, so present it with some." data-fix="There is some bread on the table." data-placeholder="choose">choose</button> bread on the table.</span></div>
+    <div class="q"><span class="n">2</span><span>The server has not checked the refrigerator yet: Is there <button class="choice-gap" data-choice-gap data-answer="any" data-hint="A neutral inventory question with an open answer uses any." data-fix="Is there any milk in the refrigerator?" data-placeholder="choose">choose</button> milk in the refrigerator?</span></div>
+    <div class="q"><span class="n">3</span><span>The sold-out sign confirms zero juice: We don’t have <button class="choice-gap" data-choice-gap data-answer="any" data-hint="After the negative don’t have, any contributes zero quantity." data-fix="We don’t have any juice today." data-placeholder="choose">choose</button> juice today.</span></div>
+    <div class="q"><span class="n">4</span><span>The server presents fruit that is available: Would you like <button class="choice-gap" data-choice-gap data-answer="some" data-hint="The offer presents fruit as available, so use some." data-fix="Would you like some fruit?" data-placeholder="choose">choose</button> fruit?</span></div>
+    <div class="q"><span class="n">5</span><span>The customer requests an amount from the pitcher: Can I have <button class="choice-gap" data-choice-gap data-answer="some" data-hint="A request for an amount commonly uses some." data-fix="Can I have some water, please?" data-placeholder="choose">choose</button> water, please?</span></div>
+    <div class="q"><span class="n">6</span><span>The receipt confirms several countable items: We ordered <button class="choice-gap" data-choice-gap data-answer="some" data-hint="The receipt confirms an existing plural quantity, so use some." data-fix="We ordered some sandwiches." data-placeholder="choose">choose</button> sandwiches.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Build the meaning, then the sentence</h2>
+  <h2>Build the meaning, then the order</h2>
   <div class="lead-rule"></div>
-
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — sort each food: countable or uncountable?</h3>
-    <p class="tile-target">Tap a food word, then tap the box where it belongs</p>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each food or drink now has the exact portion or container named on its fictional menu card.">
+    <h3>Drill 2: match each menu item to its stated unit</h3>
+    <p class="tile-target">Tap a complete portion chunk, then tap the menu card that describes it.</p>
     <div class="tile-bank">
-      <button class="tile" data-tile="apple">apple</button>
-      <button class="tile" data-tile="water">water</button>
-      <button class="tile" data-tile="egg">egg</button>
-      <button class="tile" data-tile="rice">rice</button>
-      <button class="tile" data-tile="sandwich">sandwich</button>
-      <button class="tile" data-tile="cheese">cheese</button>
+      <button class="tile" data-tile="slice of bread">slice of bread</button><button class="tile" data-tile="bowl of soup">bowl of soup</button><button class="tile" data-tile="cup of coffee">cup of coffee</button><button class="tile" data-tile="bottle of water">bottle of water</button><button class="tile" data-tile="carton of milk">carton of milk</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="apple" data-placeholder="countable · one apple, two apples">countable · one apple, two apples</button>
-      <button class="slot" data-slot="egg" data-placeholder="countable · one egg, two eggs">countable · one egg, two eggs</button>
-      <button class="slot" data-slot="sandwich" data-placeholder="countable · one sandwich, two sandwiches">countable · one sandwich, two sandwiches</button>
-      <button class="slot" data-slot="water" data-placeholder="uncountable · some water, not a water">uncountable · some water, not a water</button>
-      <button class="slot" data-slot="rice" data-placeholder="uncountable · some rice, not a rice">uncountable · some rice, not a rice</button>
-      <button class="slot" data-slot="cheese" data-placeholder="uncountable · some cheese, not a cheese">uncountable · some cheese, not a cheese</button>
+      <button class="slot" data-slot="slice of bread" data-hint="The card describes one flat cut piece from a loaf." data-fix="One flat cut piece from a loaf: slice of bread." data-placeholder="one flat cut piece from a loaf">one flat cut piece from a loaf</button>
+      <button class="slot" data-slot="bowl of soup" data-hint="The card names a bowl as the soup container." data-fix="Soup served in one bowl: bowl of soup." data-placeholder="soup served in one bowl">soup served in one bowl</button>
+      <button class="slot" data-slot="cup of coffee" data-hint="The card names a cup as the coffee serving." data-fix="Coffee served in one cup: cup of coffee." data-placeholder="coffee served in one cup">coffee served in one cup</button>
+      <button class="slot" data-slot="bottle of water" data-hint="The card describes one sealed bottle containing water." data-fix="Water in one sealed bottle: bottle of water." data-placeholder="water in one sealed bottle">water in one sealed bottle</button>
+      <button class="slot" data-slot="carton of milk" data-hint="The card describes milk in one carton package." data-fix="Milk in one carton package: carton of milk." data-placeholder="milk in one carton package">milk in one carton package</button>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-tiles>Check</button>
-      <button class="lesson-btn" data-reset-tiles>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-tiles>Check</button><button class="lesson-btn" data-reset-tiles>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="i'd like a coffee">
-    <h3>Drill 3 — build the order</h3>
-    <p class="tile-target">You want one cup of coffee in a cafe. Build the polite order, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="coffee">coffee</button>
-      <button class="tile" data-build-tile="i'd">I'd</button>
-      <button class="tile" data-build-tile="a">a</button>
-      <button class="tile" data-build-tile="like">like</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="i'd like a sandwich please" data-hint="Begin with the contraction I’d, add like, name one sandwich with a, and close with please." data-fix="I’d like a sandwich, please." data-success-message="Correct. I’d like makes a present polite request, and a presents one complete sandwich.">
+    <h3>Drill 3: build the current order</h3>
+    <p class="tile-target">The customer wants one sandwich now. Build the polite order.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="sandwich">sandwich</button><button class="tile" data-build-tile="i'd">I’d</button><button class="tile" data-build-tile="please">please</button><button class="tile" data-build-tile="a">a</button><button class="tile" data-build-tile="like">like</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="there is some bread">
-    <h3>Drill 4 — build the sentence with an amount</h3>
-    <p class="tile-target">Bread is uncountable, so use <span class="ex">is</span> and <span class="ex">some</span>. Build the sentence.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="bread">bread</button>
-      <button class="tile" data-build-tile="there">There</button>
-      <button class="tile" data-build-tile="some">some</button>
-      <button class="tile" data-build-tile="is">is</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="can i have a glass of water" data-hint="Begin with Can I have, use a glass as the serving unit, and connect it to water with of." data-fix="Can I have a glass of water?" data-success-message="Correct. Can I have makes the request, and a glass of turns water into one countable serving.">
+    <h3>Drill 4: build the portion request</h3>
+    <p class="tile-target">The customer requests one glass-sized serving of water. Build the question.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="water">water</button><button class="tile" data-build-tile="can">Can</button><button class="tile" data-build-tile="glass">glass</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="of">of</button><button class="tile" data-build-tile="have">have</button><button class="tile" data-build-tile="a">a</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="a" data-fix="Can I have some rice?" data-why="Rice is uncountable, so we don't use a. Use some for an amount: some rice.">
-    <h3>Drill 5 — count it or not?</h3>
-    <p>Tap the word that is wrong. <span class="ex">Rice</span> is an amount, not a single item.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="can">Can</button>
-      <button class="error-choice" data-error-choice="i">I</button>
-      <button class="error-choice" data-error-choice="have">have</button>
-      <button class="error-choice" data-error-choice="a">a</button>
-      <button class="error-choice" data-error-choice="rice">rice?</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="like" data-hint="The customer is ordering one coffee now, not describing a general preference." data-fix="I’d like a coffee, please." data-why="I like states a general preference. I’d like, meaning I would like, makes a polite present request.">
+    <h3>Drill 5: preference or present order?</h3>
+    <p>The customer is at the counter ordering now: “I like a coffee, please.” Tap the word that needs the contraction <span class="ex">’d</span> before it.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="like">like</button><button class="error-choice" data-error-choice="a">a</button><button class="error-choice" data-error-choice="coffee">coffee, please.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="is" data-fix="There are some apples." data-why="Apples is plural and countable, so the verb is are, not is. There are some apples.">
-    <h3>Drill 6 — match the verb to the food</h3>
-    <p>Tap the word that is wrong. <span class="ex">Apples</span> are countable and plural.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="there">There</button>
-      <button class="error-choice" data-error-choice="is">is</button>
-      <button class="error-choice" data-error-choice="some">some</button>
-      <button class="error-choice" data-error-choice="apples">apples.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="breads" data-hint="The ticket requests two individual pieces, so count the unit piece rather than bread." data-fix="The order needs two pieces of bread." data-why="Bread is an amount noun in this meaning. To count individual parts, pluralize the unit: two pieces of bread.">
+    <h3>Drill 6: count the unit</h3>
+    <p>The ticket requests two individual pieces: “The order needs two breads.” Tap the noun to replace.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="order">The order</button><button class="error-choice" data-error-choice="needs">needs</button><button class="error-choice" data-error-choice="two">two</button><button class="error-choice" data-error-choice="breads">breads.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — add the right word, then say it</h3>
-    <p>Say the new phrase aloud first, choosing <span class="ex">a</span>, <span class="ex">an</span>, or <span class="ex">some</span>. Reveal only after you answer.</p>
+    <h3>Oral transform: change the viewpoint or social action</h3>
+    <p>Say each complete response aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> apple &nbsp;→&nbsp; one item (count it)</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>an apple</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> water &nbsp;→&nbsp; an amount</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>some water</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> sandwich &nbsp;→&nbsp; one item (count it)</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>a sandwich</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> cheese &nbsp;→&nbsp; an amount</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>some cheese</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> There is some milk. &nbsp;→&nbsp; make it a question</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Is there any milk?</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> coffee · general preference</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I like coffee.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> coffee · one current order</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I’d like a coffee, please.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> bread · two individual parts</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>two pieces of bread</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> water · one sealed container</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>a bottle of water</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> Would you like some fruit? · accept politely</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Yes, please.</strong></p></div>
     </div>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Read a fictional order ticket</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A lunch order</h3>
-    <p><span class="ex">“Lunch order for the office: two chicken sandwiches, one green salad, and a bowl of rice. For drinks, three coffees and a bottle of water. No milk in one of the coffees, please.”</span></p>
+    <h3>Table 4</h3>
+    <p><span class="ex">One vegetable sandwich and a bowl of tomato soup. One cup of coffee with milk. One bottle of water, no ice. The sandwich is for here. The soup and both drinks are to go.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real food order.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You identified the sandwich quantity, soup portion, and exact items marked to go.">
+    <h3>Read, then choose the exact ticket information</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="two">
-        <p class="quiz-question">1. How many sandwiches are in the order?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="three">three</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="one" data-hint="The first word on the ticket gives the sandwich quantity." data-fix="The ticket orders one vegetable sandwich.">
+        <p class="quiz-question">1. How many sandwiches are on the ticket?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="coffee and water">
-        <p class="quiz-question">2. What are the drinks?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="coffee and water">coffee and water</button><button class="quiz-option" data-quiz-option="tea and milk">tea and milk</button><button class="quiz-option" data-quiz-option="juice and water">juice and water</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="a bowl" data-hint="The ticket names the container directly before of tomato soup." data-fix="The soup portion is a bowl of tomato soup.">
+        <p class="quiz-question">2. What serving unit does the ticket use for the soup?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a bowl">a bowl</button><button class="quiz-option" data-quiz-option="a cup">a cup</button><button class="quiz-option" data-quiz-option="a bottle">a bottle</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="milk">
-        <p class="quiz-question">3. What does one coffee not have?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="milk">milk</button><button class="quiz-option" data-quiz-option="sugar">sugar</button><button class="quiz-option" data-quiz-option="water">water</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="the soup, coffee, and water" data-hint="The last sentence says the soup and both drinks are to go." data-fix="The soup, coffee, and water are to go.">
+        <p class="quiz-question">3. Which items will the customer take away?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the soup, coffee, and water">the soup, coffee, and water</button><button class="quiz-option" data-quiz-option="the sandwich only">the sandwich only</button><button class="quiz-option" data-quiz-option="every item">every item</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it safely and flexibly</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Order in a cafe:</b> Role-play with the teacher. The teacher is the server. Order food and a drink politely. <span class="ex">I'd like a sandwich and an apple, please. Can I have some water?</span></div>
-  <div class="prompt-card"><b>Take the order:</b> Now you are the server. Ask and respond. <span class="ex">Hi, would you like a coffee or some tea? — Sorry, we don't have any juice today.</span></div>
-  <div class="prompt-card"><b>Your three meals:</b> Say what you usually eat and drink. <span class="ex">For breakfast I have some bread and a coffee. For lunch I have a salad. For dinner I have some rice and chicken.</span></div>
-  <div class="prompt-card"><b>Likes and dislikes:</b> Name foods you like and don't like, in full sentences. <span class="ex">I like fish and vegetables. I don't like soup. I really like fruit.</span></div>
-  <div class="prompt-card"><b>Check the fridge:</b> Look in your fridge (real or imagined) and report. <span class="ex">There is some cheese and some milk. There are some eggs. There isn't any juice.</span></div>
+  <p class="note-line">You never need to disclose your real diet, meals, health, allergies, religion, finances, shopping, refrigerator, home, or body. Use the fictional menu and order cards, invent details, or share personal preferences only when you freely choose.</p>
+  <div class="prompt-card"><b>Menu viewpoint:</b> The fictional menu has sandwiches, soup, cake, coffee, and water. Present each as an item, amount, or portion: <span class="ex">a sandwich · a bowl of soup · a slice of cake · a cup of coffee · a bottle of water</span>.</div>
+  <div class="prompt-card"><b>Preference and request:</b> Choose one fictional drink. First state a general preference with <span class="ex">I like</span>. Then place one current order with <span class="ex">I’d like</span>.</div>
+  <div class="prompt-card"><b>Offer and response:</b> The server offers fruit, soup, or coffee. Accept one with <span class="ex">Yes, please</span> and decline another with <span class="ex">No, thank you</span>.</div>
+  <div class="prompt-card"><b>Inventory change:</b> A sold-out card removes one item. Ask a neutral <span class="ex">any</span> question, give a zero-quantity answer, and offer an available alternative with <span class="ex">some</span>.</div>
+  <div class="prompt-card"><b>Final production: run a fictional lunch-counter exchange for 45–60 seconds.</b> Include a greeting, one countable item, one portion or container, one <span class="ex">some/any</span> exchange, an offer and response, <span class="ex">for here or to go</span>, and a polite close.</div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Explain the choice</h3>
-    <p>Complete this aloud: “For one item I can count, I use <strong>a</strong> or <strong>an</strong>. For an amount in a statement, offer, or request, I often use ______. In most neutral questions and negatives, I use ______. I use <strong>an</strong> before a ______ sound.”</p>
-    <p>Then say one true sentence about what you eat for breakfast and one about a food you don't like.</p>
+    <h3>Say the system back</h3>
+    <p>Complete this aloud: “A food noun can show one item, an ______, or a measured ______. <span class="ex">I like</span> states a general ______, but <span class="ex">I’d like</span> makes a present polite ______.”</p>
+    <p>Then explain the difference between <span class="ex">some coffee</span>, <span class="ex">a coffee</span>, and <span class="ex">a cup of coffee</span>, and answer <span class="ex">For here or to go?</span> in two ways.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can name everyday foods and drinks and choose a, an, some, or any in statements, neutral questions, negatives, offers, and requests.">
-    <h3>Final quiz — choose the right word</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You chose food frames from meaning and completed natural preference, order, quantity, and service exchanges.">
+    <h3>Final quiz: choose from meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="an">
-        <p class="quiz-question">1. I'd like ___ egg for breakfast.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="some">some</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="I like coffee." data-hint="A general preference uses I like without would." data-fix="I like coffee states a general preference.">
+        <p class="quiz-question">1. The speaker is describing a general preference, not ordering now. Which sentence fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I like coffee.">I like coffee.</button><button class="quiz-option" data-quiz-option="I’d like a coffee.">I’d like a coffee.</button><button class="quiz-option" data-quiz-option="Can I have a coffee?">Can I have a coffee?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="some">
-        <p class="quiz-question">2. Can I have ___ water, please?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="some">some</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="Egg is one countable item and begins with a vowel sound." data-fix="The ticket requests an egg.">
+        <p class="quiz-question">2. The ticket requests one whole item: I’d like ___ egg.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="some">some</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a">
-        <p class="quiz-question">3. She is eating ___ sandwich.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button><button class="quiz-option" data-quiz-option="some">some</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="some" data-hint="The pitcher provides an unspecified amount of water." data-fix="Can I have some water from the pitcher?">
+        <p class="quiz-question">3. The customer wants an unspecified amount from a pitcher: Can I have ___ water?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="any">
-        <p class="quiz-question">4. Is there ___ milk in the fridge?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="a">a</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="any" data-hint="The server has not checked, so this is a neutral open inventory question." data-fix="Is there any milk in the refrigerator?">
+        <p class="quiz-question">4. The answer is not known yet: Is there ___ milk in the refrigerator?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="a">a</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="any">
-        <p class="quiz-question">5. Sorry, we don't have ___ juice today.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="an">an</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="some" data-hint="The server presents fruit as an available offer." data-fix="Would you like some fruit?">
+        <p class="quiz-question">5. The fruit is available and the server offers it: Would you like ___ fruit?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="some">some</button><button class="quiz-option" data-quiz-option="any">any</button><button class="quiz-option" data-quiz-option="an">an</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="uncountable">
-        <p class="quiz-question">6. Which word is uncountable (use <em>some</em>, not <em>a</em>)?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="countable">apple</button><button class="quiz-option" data-quiz-option="uncountable">rice</button><button class="quiz-option" data-quiz-option="countable2">sandwich</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="two slices of bread" data-hint="Count the individual slice units and keep bread in its amount form." data-fix="The ticket requests two slices of bread.">
+        <p class="quiz-question">6. The ticket requests two individual cut pieces. Which phrase is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="two slices of bread">two slices of bread</button><button class="quiz-option" data-quiz-option="two breads">two breads</button><button class="quiz-option" data-quiz-option="two slice of bread">two slice of bread</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="There are some apples.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="There are some apples.">There are some apples.</button><button class="quiz-option" data-quiz-option="There is some apples.">There is some apples.</button><button class="quiz-option" data-quiz-option="There are a apples.">There are a apples.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="There are two sandwiches." data-hint="Two sandwiches is plural, so the existence verb is are." data-fix="There are two sandwiches.">
+        <p class="quiz-question">7. The receipt lists two countable items. Which sentence matches it?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="There are two sandwiches.">There are two sandwiches.</button><button class="quiz-option" data-quiz-option="There is two sandwiches.">There is two sandwiches.</button><button class="quiz-option" data-quiz-option="There are two sandwich.">There are two sandwich.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I'd like some coffee.">
-        <p class="quiz-question">8. You want coffee in general (not one cup). Which is best?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I'd like some coffee.">I'd like some coffee.</button><button class="quiz-option" data-quiz-option="I'd like an coffee.">I'd like an coffee.</button><button class="quiz-option" data-quiz-option="I'd like any coffee.">I'd like any coffee.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="For here, please." data-hint="For here means the customer will stay and eat at the cafe." data-fix="For here, please.">
+        <p class="quiz-question">8. The server asks “For here or to go?” The customer will stay. Which answer fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="For here, please.">For here, please.</button><button class="quiz-option" data-quiz-option="To go, please.">To go, please.</button><button class="quiz-option" data-quiz-option="I like here.">I like here.</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check quiz</button><button class="lesson-btn" data-reset-quiz>Reset quiz</button></div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the viewpoint, portion, request, or service response that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day food, portion, and service retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved the preference-request contrast, one-serving frame, and neutral inventory use of any.">
+      <h3>Choose the missing food-service language</h3>
+      <div class="choice-bank" aria-label="Next-day food-service choices">
+        <button class="choice-option" data-choice-option="like">like</button><button class="choice-option" data-choice-option="’d like">’d like</button>
+        <button class="choice-option" data-choice-option="a">a</button><button class="choice-option" data-choice-option="some">some</button>
+        <button class="choice-option" data-choice-option="any">any</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The customer is placing one order now: I<button class="choice-gap" data-choice-gap data-answer="’d like" data-hint="A present polite order uses I’d like, with would contracted to ’d." data-fix="I’d like a salad, please." data-placeholder="choose">choose</button> a salad, please.</span></div>
+      <div class="q"><span class="n">2</span><span>The cafe menu uses coffee to mean one serving: Can I have <button class="choice-gap" data-choice-gap data-answer="a" data-hint="In this service context, a coffee means one menu serving." data-fix="Can I have a coffee?" data-placeholder="choose">choose</button> coffee?</span></div>
+      <div class="q"><span class="n">3</span><span>The inventory has not been checked: Is there <button class="choice-gap" data-choice-gap data-answer="any" data-hint="A neutral open inventory question uses any." data-fix="Is there any soup?" data-placeholder="choose">choose</button> soup?</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="breads" data-hint="The order requests two individual slices, so count the unit slice rather than bread." data-fix="The order needs two slices of bread." data-why="Bread stays in its amount form after of. The countable unit is plural: two slices of bread.">
+      <h3>Repair the portion</h3>
+      <p>The ticket requests two individual slices: “The order needs two breads.” Tap the noun to replace.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="order">The order</button><button class="error-choice" data-error-choice="needs">needs</button><button class="error-choice" data-error-choice="two">two</button><button class="error-choice" data-error-choice="breads">breads.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, create a safe fictional order with one whole item, one portion or container, an unavailable item, an offered alternative, and a for-here or to-go answer.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>I’d like a sandwich and a bottle of water, please. We don’t have any sandwiches. Would you like some soup? Yes, please. Can I have a bowl of soup? To go, please.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

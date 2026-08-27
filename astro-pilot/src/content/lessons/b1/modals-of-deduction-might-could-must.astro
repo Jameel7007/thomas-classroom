@@ -1,19 +1,321 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Modals of deduction: might, could, must · B1 Grammar · Curriculum Map",
+  "title": "Modals of deduction: might, could, must · B1 Grammar",
   "slug": "modals-of-deduction-might-could-must",
   "level": "B1",
   "topic": "Modals of deduction: might, could, must",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Modals of deduction: might, could, must.",
+  "status": "ready",
+  "description": "Calibrate present conclusions from stated evidence using must for a strong positive inference, cannot for a strong negative inference, and might or could for live possibilities.",
   "sequence": 8,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a1/can-for-ability-and-permission", "a2/modals-should-must-have-to", "a1/present-continuous"],
+  "related": ["b2/modals-of-past-speculation", "b1/crime-and-society"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 58,
+    "revisionSummary": "Evidence strength, modal form, present state and activity, obligation and ability boundaries, responsible inference, questions, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 8</p>
+  <h1>Modals of deduction: <em>match the claim to the evidence</em></h1>
+  <p class="standfirst">A deduction is a conclusion you build from evidence, not a fact you directly know. Use <span class="ex">must</span> when the available evidence strongly supports one positive explanation, <span class="ex">can’t</span> when reliable evidence strongly rejects an explanation, and <span class="ex">might</span> or <span class="ex">could</span> while more than one explanation remains possible.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">observation → inference</span>
+    <span class="tag">must · can’t · might · could</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Observe</b><span>Separate what is known from what is inferred.</span></div>
+    <div class="flow-step"><b>Calibrate</b><span>Keep one or several explanations alive.</span></div>
+    <div class="flow-step"><b>Build</b><span>Choose state, action, or current activity form.</span></div>
+    <div class="flow-step"><b>Reason</b><span>Present a careful fictional evidence briefing.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can separate an observation from an inference; use <span class="ex">must</span> for a strong positive present conclusion, <span class="ex">can’t</span> for a strong negative present conclusion, and <span class="ex">might / could</span> for possibilities; keep <span class="ex">might not</span> weaker than <span class="ex">can’t</span>; distinguish deduction <span class="ex">must</span> from obligation, deduction <span class="ex">can’t</span> from inability, and possibility <span class="ex">could</span> from ability; build <span class="ex">modal + base form</span> and <span class="ex">modal + be + -ing</span>; ask about a possible explanation naturally; and state the evidence and uncertainty behind a responsible conclusion.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved obligation must, ability can, and present activity is checking before using the same forms for evidence-based conclusions.">
+    <h3>Reactivate three nearby systems</h3>
+    <div class="choice-bank" aria-label="Deduction foundation choices"><button class="choice-option" data-choice-option="must">must</button><button class="choice-option" data-choice-option="can">can</button><button class="choice-option" data-choice-option="is checking">is checking</button><button class="choice-option" data-choice-option="might">might</button><button class="choice-option" data-choice-option="checks">checks</button></div>
+    <div class="q"><span class="n">1</span><span>A posted safety rule creates an obligation: Visitors <button class="choice-gap" data-choice-gap data-answer="must" data-hint="The sign requires this action; it is not a conclusion from evidence." data-fix="Visitors must wear a badge.">choose</button> wear a badge.</span></div>
+    <div class="q"><span class="n">2</span><span>Rina has the skill to operate the sound system: Rina <button class="choice-gap" data-choice-gap data-answer="can" data-hint="Use can for a present ability that the speaker knows." data-fix="Rina can operate the sound system.">choose</button> operate the sound system.</span></div>
+    <div class="q"><span class="n">3</span><span>The tutor can see the action happening on a shared practice screen now: Rina <button class="choice-gap" data-choice-gap data-answer="is checking" data-hint="Use Present Continuous for an activity directly observed now." data-fix="Rina is checking the microphones now.">choose</button> the microphones now.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice the evidence before the modal</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>North Hall, 2:10 p.m.</h3>
+    <p><b>Goal:</b> Coordinator Eli needs to find workshop leader Rina before a 2:15 sound check.</p>
+    <p><b>Recorded observations:</b> Reception marked Rina present at 2:07. Her labeled equipment case is beside Studio A. Two staff members heard someone testing a microphone inside Studio A at 2:09. Studio B was checked at 2:10 and is empty and locked.</p>
+    <p><span class="ex">Rina must be somewhere near Studio A.</span></p>
+    <p><span class="ex">She might be inside the studio, or she could be speaking from the hallway.</span></p>
+    <p><span class="ex">She can’t be in Studio B.</span></p>
+    <ul>
+      <li>Which statements report observations, and which report conclusions?</li>
+      <li>Why does the speaker keep two locations possible after <span class="ex">might</span> and <span class="ex">could</span>?</li>
+      <li>Which checked fact strongly rejects Studio B?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated recorded facts from inferences, kept two live possibilities, and used the checked empty room to reject Studio B.">
+    <h3>Discovery check: fact, inference, and strength</h3>
+    <div class="choice-bank" aria-label="Deduction discovery choices"><button class="choice-option" data-choice-option="an observation">an observation</button><button class="choice-option" data-choice-option="a strong positive inference">a strong positive inference</button><button class="choice-option" data-choice-option="two live possibilities">two live possibilities</button><button class="choice-option" data-choice-option="a strong negative inference">a strong negative inference</button><button class="choice-option" data-choice-option="Studio B was checked and was empty and locked">Studio B was checked and was empty and locked</button></div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Reception marked Rina present at 2:07</span> is presented as <button class="choice-gap" data-choice-gap data-answer="an observation" data-hint="The reception record is directly reported evidence, not Eli’s conclusion." data-fix="The reception record is an observation in this fictional case.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">Rina must be somewhere near Studio A</span> is <button class="choice-gap" data-choice-gap data-answer="a strong positive inference" data-hint="Must shows that the clues strongly support this positive conclusion." data-fix="Must presents a strong positive inference from the converging clues.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">She might be inside, or she could be in the hallway</span> keeps <button class="choice-gap" data-choice-gap data-answer="two live possibilities" data-hint="Neither location has been confirmed or rejected." data-fix="Might and could keep two live possibilities open.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">She can’t be in Studio B</span> is <button class="choice-gap" data-choice-gap data-answer="a strong negative inference" data-hint="Can’t rejects the location because it conflicts with checked evidence." data-fix="Can’t presents a strong negative inference.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The decisive evidence for that negative inference is: <button class="choice-gap" data-choice-gap data-answer="Studio B was checked and was empty and locked" data-hint="Choose the fact that directly conflicts with Rina being inside Studio B at 2:10." data-fix="Studio B was checked and was empty and locked.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: modals show the speaker’s reasoning stance</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Must</span> does not turn an inference into a verified fact. It tells the listener that the speaker sees one positive explanation as strongly supported. <span class="ex">Can’t</span> tells the listener that an explanation conflicts strongly with reliable evidence. <span class="ex">Might</span> and <span class="ex">could</span> keep an explanation possible without committing to it.</p>
+  <p>Do not attach fixed percentages to the modals. Evidence quality, the number of plausible alternatives, and the speaker’s judgment all matter. Two careful speakers can see the same incomplete clues and choose different strengths. A good reasoner states the evidence and is ready to revise the conclusion.</p>
+  <table>
+    <thead><tr><th>reasoning stance</th><th>core form</th><th>contextual example</th></tr></thead>
+    <tbody>
+      <tr><td>strong positive inference</td><td><span class="ex">must + base form</span></td><td><span class="ex">The test sound is coming from Studio A. Someone must be using the microphone.</span></td></tr>
+      <tr><td>live possibility</td><td><span class="ex">might / could + base form</span></td><td><span class="ex">Rina might be inside. She could be in the hallway.</span></td></tr>
+      <tr><td>possible negative</td><td><span class="ex">might not + base form</span></td><td><span class="ex">She might not have her phone with her.</span></td></tr>
+      <tr><td>strong negative inference</td><td><span class="ex">can’t + base form</span></td><td><span class="ex">She can’t be in the checked empty room.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">May</span> is also a standard possibility modal: <span class="ex">Rina may be inside</span>. It is not a core target in this lesson, but it is not wrong in an appropriate context. This page focuses on present conclusions. Past conclusions such as <span class="ex">must have left</span> and <span class="ex">might have forgotten</span> belong to the later past-speculation system.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You built a state, knowledge, possession, and current activity after one modal and kept the base form unchanged.">
+    <h3>Form check: one modal, then the base form</h3>
+    <div class="choice-bank" aria-label="Deduction form choices"><button class="choice-option" data-choice-option="must be">must be</button><button class="choice-option" data-choice-option="might know">might know</button><button class="choice-option" data-choice-option="could have">could have</button><button class="choice-option" data-choice-option="can’t be">can’t be</button><button class="choice-option" data-choice-option="might be checking">might be checking</button><button class="choice-option" data-choice-option="can’t be serving">can’t be serving</button></div>
+    <div class="q"><span class="n">1</span><span>Strong present state from several clues: Rina <button class="choice-gap" data-choice-gap data-answer="must be" data-hint="Use must plus base be for a strong inference about a present state." data-fix="Rina must be nearby.">choose</button> nearby.</span></div>
+    <div class="q"><span class="n">2</span><span>One possible explanation for Eli’s quick route choice: He <button class="choice-gap" data-choice-gap data-answer="might know" data-hint="Use might plus base know for possible present knowledge." data-fix="He might know a shorter route.">choose</button> a shorter route.</span></div>
+    <div class="q"><span class="n">3</span><span>One possible possession; the bag has not been checked: Rina <button class="choice-gap" data-choice-gap data-answer="could have" data-hint="Use could plus base have for a possible present possession." data-fix="Rina could have the spare key.">choose</button> the spare key.</span></div>
+    <div class="q"><span class="n">4</span><span>Strongly rejected present location after Studio B was checked empty: She <button class="choice-gap" data-choice-gap data-answer="can’t be" data-hint="Use can’t plus base be for the rejected present state." data-fix="She can’t be in Studio B.">choose</button> in Studio B.</span></div>
+    <div class="q"><span class="n">5</span><span>Possible activity in progress; voices are audible but not identified: She <button class="choice-gap" data-choice-gap data-answer="might be checking" data-hint="Use might + be + -ing for a possible activity happening now." data-fix="She might be checking the microphones.">choose</button> the microphones.</span></div>
+    <div class="q"><span class="n">6</span><span>Strongly rejected activity now; the locked shop is visibly empty: The owner <button class="choice-gap" data-choice-gap data-answer="can’t be serving" data-hint="Use can’t + be + -ing to reject an activity in progress." data-fix="The owner can’t be serving a customer inside the empty shop.">choose</button> a customer inside.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Calibrate the conclusion, not a memorized percentage</h2>
+  <div class="lead-rule"></div>
+  <p>Use <span class="ex">must</span> when independent clues converge and no serious alternative is currently visible. Use <span class="ex">might</span> or <span class="ex">could</span> when at least one plausible alternative remains. Use <span class="ex">can’t</span> when an explanation conflicts with reliable information. A missing clue alone is rarely a contradiction.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used must for converging positive evidence, might and could for open explanations, might not for a possible negative, and can’t only after a direct contradiction.">
+    <h3>Strength check: what does the evidence actually support?</h3>
+    <div class="choice-bank" aria-label="Deduction strength choices"><button class="choice-option" data-choice-option="must be near Studio A">must be near Studio A</button><button class="choice-option" data-choice-option="might be in the hallway">might be in the hallway</button><button class="choice-option" data-choice-option="could be inside Studio A">could be inside Studio A</button><button class="choice-option" data-choice-option="might not have her phone">might not have her phone</button><button class="choice-option" data-choice-option="can’t be in Studio B">can’t be in Studio B</button><button class="choice-option" data-choice-option="not enough evidence for a strong conclusion">not enough evidence for a strong conclusion</button></div>
+    <div class="q"><span class="n">1</span><span>Rina checked in three minutes ago; her labeled case is by Studio A; test audio came from that area one minute ago. The strongest careful conclusion is that she <button class="choice-gap" data-choice-gap data-answer="must be near Studio A" data-hint="Several recent independent clues converge on the same general area." data-fix="Rina must be near Studio A.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>No one can see whether the voice is inside or just outside the studio. One open possibility is that she <button class="choice-gap" data-choice-gap data-answer="might be in the hallway" data-hint="Use a possibility modal because another location remains live." data-fix="Rina might be in the hallway.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The same incomplete evidence supports another live possibility: She <button class="choice-gap" data-choice-gap data-answer="could be inside Studio A" data-hint="Could keeps the unconfirmed inside location possible." data-fix="She could be inside Studio A.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Rina has not answered one call, but nobody has checked whether her phone is with her. She <button class="choice-gap" data-choice-gap data-answer="might not have her phone" data-hint="One unanswered call supports a possible negative, not a strong impossibility." data-fix="She might not have her phone.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Studio B was checked at 2:10 and is empty and locked. Rina <button class="choice-gap" data-choice-gap data-answer="can’t be in Studio B" data-hint="The direct room check contradicts that location." data-fix="Rina can’t be in Studio B.">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>A different staff member’s coat is on a chair, with no name or current schedule. The coat alone provides <button class="choice-gap" data-choice-gap data-answer="not enough evidence for a strong conclusion" data-hint="The owner and timing are unknown, so do not jump to must." data-fix="The unidentified coat alone is not enough evidence for a strong conclusion.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Separate deduction from obligation, ability, and general possibility</h2>
+  <div class="lead-rule"></div>
+  <p>The modal does not carry one meaning by itself. <span class="ex">Visitors must sign in</span> is a rule; <span class="ex">Rina must be here</span> is an inference. <span class="ex">Rina can use the mixer</span> describes ability; <span class="ex">Rina can’t be in Studio B</span> rejects a present location. Affirmative <span class="ex">can</span> can describe general possibility, as in <span class="ex">The hall can get noisy</span>, but for one uncertain explanation now, use <span class="ex">might</span> or <span class="ex">could</span>.</p>
+  <p>For a clear strong negative deduction in this lesson, use <span class="ex">can’t</span>. <span class="ex">Mustn’t</span> commonly expresses prohibition in U.S. English: <span class="ex">Visitors mustn’t enter</span>. Full <span class="ex">must not</span> can sometimes express a negative inference, but it can be ambiguous; context and intonation matter. This lesson does not label every inferential <span class="ex">must not</span> impossible.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished a conclusion from a rule, ability, general possibility, and prohibition by using the complete context.">
+    <h3>Function check: the surrounding situation decides</h3>
+    <div class="choice-bank" aria-label="Modal function choices"><button class="choice-option" data-choice-option="a strong positive deduction">a strong positive deduction</button><button class="choice-option" data-choice-option="an obligation">an obligation</button><button class="choice-option" data-choice-option="a present ability">a present ability</button><button class="choice-option" data-choice-option="a general possibility">a general possibility</button><button class="choice-option" data-choice-option="a prohibition">a prohibition</button></div>
+    <div class="q"><span class="n">1</span><span>Several fresh clues point to Rina’s location: <span class="ex">She must be near Studio A</span> expresses <button class="choice-gap" data-choice-gap data-answer="a strong positive deduction" data-hint="No one orders Rina to be there; Eli reasons from evidence." data-fix="Must expresses a strong positive deduction here.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>A posted rule says <span class="ex">All visitors must sign in</span>. Here <span class="ex">must</span> expresses <button class="choice-gap" data-choice-gap data-answer="an obligation" data-hint="The sign requires an action rather than inferring a fact." data-fix="Must expresses an obligation in the posted rule.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Eli has watched Rina operate the system successfully: <span class="ex">Rina can use the mixer</span> describes <button class="choice-gap" data-choice-gap data-answer="a present ability" data-hint="The sentence reports what Rina knows how to do." data-fix="Can describes Rina’s present ability.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The hall often becomes noisy during large events: <span class="ex">The hall can get noisy</span> describes <button class="choice-gap" data-choice-gap data-answer="a general possibility" data-hint="This is something that sometimes happens, not one current inference." data-fix="Can expresses a general possibility here.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>A safety sign says <span class="ex">Visitors mustn’t enter the equipment room</span>. In this context, <span class="ex">mustn’t</span> expresses <button class="choice-gap" data-choice-gap data-answer="a prohibition" data-hint="The sign says an action is not allowed." data-fix="Mustn’t expresses a prohibition in this safety rule.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Make evidence strong enough for the claim</h2>
+  <div class="lead-rule"></div>
+  <p>First report the observation precisely. Then ask whether it supports one explanation, several explanations, or a contradiction. Do not treat absence of evidence as evidence of absence: one unanswered call does not prove that a person <span class="ex">can’t</span> be nearby. Do not use stereotypes, appearance, accent, nationality, age, gender, disability, or other identity assumptions as evidence.</p>
+  <p>In work, health, safety, legal, and relationship contexts, label uncertainty and verify before acting. <span class="ex">The message might be delayed</span> is safer than presenting an unsupported technical claim as fact. Grammar cannot make weak evidence responsible.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated observation from inference, preserved alternatives, rejected only a contradiction, and refused an identity-based assumption.">
+    <h3>Evidence check: reason only from what the case supplies</h3>
+    <div class="choice-bank" aria-label="Evidence quality choices"><button class="choice-option" data-choice-option="The room is empty and locked">The room is empty and locked</button><button class="choice-option" data-choice-option="Rina can’t be inside that room">Rina can’t be inside that room</button><button class="choice-option" data-choice-option="The sound might be a microphone test">The sound might be a microphone test</button><button class="choice-option" data-choice-option="We need to verify before using must">We need to verify before using must</button><button class="choice-option" data-choice-option="Identity is not valid evidence">Identity is not valid evidence</button></div>
+    <div class="q"><span class="n">1</span><span>A staff member opens Studio B, checks it, then locks it again. The direct observation is: <button class="choice-gap" data-choice-gap data-answer="The room is empty and locked" data-hint="Choose only what the staff member directly checked." data-fix="The room is empty and locked.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>From that current checked fact, the strong negative inference is: <button class="choice-gap" data-choice-gap data-answer="Rina can’t be inside that room" data-hint="Being inside conflicts directly with the completed room check." data-fix="Rina can’t be inside that room.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>A brief sound comes from Studio A, but its source is not visible. The calibrated conclusion is: <button class="choice-gap" data-choice-gap data-answer="The sound might be a microphone test" data-hint="Other sources remain possible, so keep the explanation tentative." data-fix="The sound might be a microphone test.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>An unlabeled bag sits near the studio, and nobody knows who owns it or when it arrived. <button class="choice-gap" data-choice-gap data-answer="We need to verify before using must" data-hint="The bag does not yet support one strongly preferred owner or location conclusion." data-fix="We need to verify before using must.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>A speaker guesses someone’s job from that person’s accent. The responsible response is: <button class="choice-gap" data-choice-gap data-answer="Identity is not valid evidence" data-hint="An accent does not establish a person’s job." data-fix="Identity is not valid evidence; ask or verify rather than infer.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose a present state, repeated fact, or activity in progress</h2>
+  <div class="lead-rule"></div>
+  <p>Use <span class="ex">modal + be</span> before a noun, adjective, or location: <span class="ex">She might be the trainer. She must be busy. She could be upstairs.</span> Use <span class="ex">modal + base verb</span> for knowledge, possession, or a general action: <span class="ex">She might know the code. She could have the key. She must work nearby.</span> Use <span class="ex">modal + be + -ing</span> for an activity viewed in progress now: <span class="ex">She must be testing the microphone.</span></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched be to a location, a base verb to knowledge and a regular work fact, and be plus -ing to activities in progress now.">
+    <h3>Viewpoint check: what kind of present meaning is inferred?</h3>
+    <div class="choice-bank" aria-label="Present deduction viewpoint choices"><button class="choice-option" data-choice-option="might be upstairs">might be upstairs</button><button class="choice-option" data-choice-option="could know the access code">could know the access code</button><button class="choice-option" data-choice-option="must work at North Hall">must work at North Hall</button><button class="choice-option" data-choice-option="must be working nearby">must be working nearby</button><button class="choice-option" data-choice-option="might be having lunch">might be having lunch</button></div>
+    <div class="q"><span class="n">1</span><span>Possible current location: The elevator record shows several staff went up, but not who. Rina <button class="choice-gap" data-choice-gap data-answer="might be upstairs" data-hint="Use modal + be before a location expression." data-fix="Rina might be upstairs.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Possible present knowledge: Rina helped install the keypad, so she <button class="choice-gap" data-choice-gap data-answer="could know the access code" data-hint="Use could plus base know for possible knowledge." data-fix="Rina could know the access code.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Inference about a regular job, not this exact moment: For six months, Rina has entered North Hall with a staff badge every weekday, used an employee desk, and stayed for the full workday. She <button class="choice-gap" data-choice-gap data-answer="must work at North Hall" data-hint="Use must plus base work for the strongly inferred regular fact." data-fix="Rina must work at North Hall.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Inference about an activity happening at 2:10: Her recent check-in, labeled case, and a live test signal carrying her microphone label all converge. She <button class="choice-gap" data-choice-gap data-answer="must be working nearby" data-hint="Use must + be + -ing for the strongly inferred activity in progress now." data-fix="Rina must be working nearby.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>One possible activity during the noon break; no one has checked: The team <button class="choice-gap" data-choice-gap data-answer="might be having lunch" data-hint="Use might + be + -ing for one unconfirmed activity in progress." data-fix="The team might be having lunch.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Ask about possibilities without turning them into requirements</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Could Rina be in the hallway?</span> and <span class="ex">Might Rina be inside?</span> ask whether an explanation is possible, although <span class="ex">might</span> questions can sound more formal. In everyday conversation, <span class="ex">Do you think Rina might be inside?</span> is natural. <span class="ex">Must Rina be inside?</span> often sounds like a question about necessity, so it is not the clearest everyday way to ask how likely the deduction is.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed an everyday could question, a natural do-you-think question, and avoided an ambiguous necessity reading.">
+    <h3>Question check: ask about an explanation</h3>
+    <div class="choice-bank" aria-label="Deduction question choices"><button class="choice-option" data-choice-option="Could Rina be in the hallway?">Could Rina be in the hallway?</button><button class="choice-option" data-choice-option="Do you think Rina might be inside?">Do you think Rina might be inside?</button><button class="choice-option" data-choice-option="a necessity reading">a necessity reading</button></div>
+    <div class="q"><span class="n">1</span><span>Ask directly whether the hallway is one possible location: <button class="choice-gap" data-choice-gap data-answer="Could Rina be in the hallway?" data-hint="Invert could and Rina, then keep base be." data-fix="Could Rina be in the hallway?">choose</button></span></div>
+    <div class="q"><span class="n">2</span><span>Use a natural conversational frame with <span class="ex">might</span>: <button class="choice-gap" data-choice-gap data-answer="Do you think Rina might be inside?" data-hint="Place the possible explanation after Do you think." data-fix="Do you think Rina might be inside?">choose</button></span></div>
+    <div class="q"><span class="n">3</span><span>Without supporting context, <span class="ex">Must Rina be inside?</span> can invite <button class="choice-gap" data-choice-gap data-answer="a necessity reading" data-hint="Must in a question often asks whether something is required." data-fix="Must Rina be inside? can sound like a question about necessity.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: keep the modal clear and stress the conclusion</h2>
+  <div class="lead-rule"></div>
+  <p>In neutral speech, the modal is often lighter than the conclusion: <span class="ex">She must be near STUdio A</span>, <span class="ex">She might be in the HALLway</span>. Stress moves when you correct the strength: <span class="ex">She MIGHT be inside, but she doesn’t HAVE to be.</span> There is no rule that the same word always receives stress.</p>
+  <p>In connected U.S. speech, the final consonant of a modal may link into <span class="ex">be</span>: <span class="ex">must_be</span>, <span class="ex">might_be</span>, <span class="ex">could_be</span>. The /t/ in <span class="ex">must</span>, <span class="ex">might</span>, and <span class="ex">can’t</span> may be light or unreleased, but the negative meaning of <span class="ex">can’t</span> must remain recoverable from the vowel, context, and stress. Do not add <span class="ex">to</span>: <span class="cross">must to be</span>.</p>
+
+  <section data-lesson-extension="Tutor-read observation, strong positive inference, open possibilities, strong negative inference, and contrastive stress listening check">
+    <details class="reveal-card">
+      <summary>Open the tutor listening check</summary>
+      <div class="reveal-body">
+        <p><b>Tutor:</b> Read each line once naturally, without showing the transcript. Read it a second time only after the learner commits to an answer.</p>
+        <ol>
+          <li><span class="ex">Reception marked Rina present at two OH SEVen.</span></li>
+          <li><span class="ex">She must_be near STUdio A.</span></li>
+          <li><span class="ex">She might_be INside, or she could_be in the HALLway.</span></li>
+          <li><span class="ex">She CAN’T be in Studio B; it’s EMPTY and LOCKED.</span></li>
+          <li><span class="ex">She MIGHT be testing it. I didn’t say she MUST be.</span></li>
+        </ol>
+      </div>
+    </details>
+    <div class="quiz" data-quiz data-success-message="Correct. You separated an observation from conclusions, heard strong and tentative stance, recovered the linked modal plus be form, and followed contrastive stress.">
+      <h3>Listen for evidence, stance, and connected form</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="It reports a recorded observation." data-hint="The first line describes what reception marked, without a deduction modal." data-fix="It reports a recorded observation."><p class="quiz-question">1. What is the discourse job of the first line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="It reports a recorded observation.">It reports a recorded observation.</button><button class="quiz-option" data-quiz-option="It strongly rejects Rina’s location.">It strongly rejects Rina’s location.</button><button class="quiz-option" data-quiz-option="It creates a visitor obligation.">It creates a visitor obligation.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The speaker presents Studio A as strongly supported, not verified." data-hint="Listen for must and the location carrying the main information stress." data-fix="The speaker presents Studio A as strongly supported, not verified."><p class="quiz-question">2. What stance does <span class="ex">must be near Studio A</span> express?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The speaker presents Studio A as strongly supported, not verified.">The speaker presents Studio A as strongly supported, not verified.</button><button class="quiz-option" data-quiz-option="A manager requires Rina to stand there.">A manager requires Rina to stand there.</button><button class="quiz-option" data-quiz-option="The speaker knows the location from direct sight.">The speaker knows the location from direct sight.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Inside and the hallway remain live possibilities." data-hint="Listen for might and could joining two alternative locations." data-fix="Inside and the hallway remain live possibilities."><p class="quiz-question">3. What remains open in the third line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Inside and the hallway remain live possibilities.">Inside and the hallway remain live possibilities.</button><button class="quiz-option" data-quiz-option="Both locations have been directly confirmed.">Both locations have been directly confirmed.</button><button class="quiz-option" data-quiz-option="Both locations are prohibited by a rule.">Both locations are prohibited by a rule.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The checked empty and locked room contradicts the location." data-hint="Listen for the evidence after the semicolon." data-fix="The checked empty and locked room contradicts the location."><p class="quiz-question">4. Why does the speaker use <span class="ex">can’t</span> in the fourth line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The checked empty and locked room contradicts the location.">The checked empty and locked room contradicts the location.</button><button class="quiz-option" data-quiz-option="Rina lacks the physical ability to enter any room.">Rina lacks the physical ability to enter any room.</button><button class="quiz-option" data-quiz-option="The room might contain several people.">The room might contain several people.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Might is corrected as the intended weaker stance; must is rejected." data-hint="Listen for the contrastive stress on might and then must." data-fix="Might is corrected as the intended weaker stance; must is rejected."><p class="quiz-question">5. What does contrastive stress do in the final line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Might is corrected as the intended weaker stance; must is rejected.">Might is corrected as the intended weaker stance; must is rejected.</button><button class="quiz-option" data-quiz-option="It changes testing into a finished past event.">It changes testing into a finished past event.</button><button class="quiz-option" data-quiz-option="It proves every modal always carries stress.">It proves every modal always carries stress.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details class="reveal-card">
+      <summary>Reveal the listening evidence</summary>
+      <div class="reveal-body">
+        <ol>
+          <li>The reception record is the observation. It gives the later inferences an evidence base.</li>
+          <li><span class="ex">Must</span> marks a strong positive inference; Studio A carries the key location information.</li>
+          <li><span class="ex">Might</span> and <span class="ex">could</span> keep two explanations open. Each modal links into base <span class="ex">be</span>.</li>
+          <li><span class="ex">Can’t</span> rejects Studio B because the current checked facts contradict that location.</li>
+          <li>Contrastive stress repairs the reasoning strength: <span class="ex">might</span> is intended and <span class="ex">must</span> is explicitly rejected.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <h2>Read a complete evidence update</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Eli’s 2:11 p.m. fictional update</h3>
+    <p><span class="ex">Reception marked Rina present at 2:07, and her labeled equipment case is beside Studio A. Two staff members heard a microphone test from that area at 2:09, so she must be nearby. She might be testing the wireless microphone inside, or she could be checking its signal from the hallway. She can’t be in Studio B because a staff member checked that room at 2:10 and found it empty and locked. Rina has not answered one call, but that does not prove she is unavailable. She might not have her phone with her. Eli is walking to Studio A to verify the conclusion.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the converging positive evidence, two open explanations, direct contradiction, and deliberately tentative phone conclusion from Eli’s note.">
+    <h3>Reading check: use only the written evidence</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Her recent check-in, labeled case, and the test sound all point to that area." data-hint="The first two sentences provide three separate clues before must." data-fix="Her recent check-in, labeled case, and the test sound all point to that area."><p class="quiz-question">1. Why does Eli say Rina <span class="ex">must be nearby</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Her recent check-in, labeled case, and the test sound all point to that area.">Her recent check-in, labeled case, and the test sound all point to that area.</button><button class="quiz-option" data-quiz-option="A rule requires every person to remain near Studio A.">A rule requires every person to remain near Studio A.</button><button class="quiz-option" data-quiz-option="Eli can see Rina directly inside the studio.">Eli can see Rina directly inside the studio.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="She might be testing inside, or she could be checking the signal from the hallway." data-hint="The third sentence keeps two locations and activities open." data-fix="She might be testing inside, or she could be checking the signal from the hallway."><p class="quiz-question">2. Which two explanations remain possible?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She might be testing inside, or she could be checking the signal from the hallway.">She might be testing inside, or she could be checking the signal from the hallway.</button><button class="quiz-option" data-quiz-option="She is definitely at home or in Studio B.">She is definitely at home or in Studio B.</button><button class="quiz-option" data-quiz-option="She has finished a test that happened last year.">She has finished a test that happened last year.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="A staff member checked Studio B and found it empty and locked." data-hint="Find the because-clause after can’t." data-fix="A staff member checked Studio B and found it empty and locked."><p class="quiz-question">3. What evidence rules out Studio B?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="A staff member checked Studio B and found it empty and locked.">A staff member checked Studio B and found it empty and locked.</button><button class="quiz-option" data-quiz-option="Rina’s case has a printed label.">Rina’s case has a printed label.</button><button class="quiz-option" data-quiz-option="One phone call was not answered.">One phone call was not answered.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="One unanswered call does not eliminate other explanations." data-hint="The final sentences explicitly preserve the missing-phone possibility and require verification." data-fix="One unanswered call does not eliminate other explanations."><p class="quiz-question">4. Why does Eli avoid saying Rina <span class="ex">can’t</span> be available?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="One unanswered call does not eliminate other explanations.">One unanswered call does not eliminate other explanations.</button><button class="quiz-option" data-quiz-option="Can’t is never used for present deductions.">Can’t is never used for present deductions.</button><button class="quiz-option" data-quiz-option="Might not always means a confirmed negative fact.">Might not always means a confirmed negative fact.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build one open possibility and one rejected explanation</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="Rina might be testing the microphone inside Studio A" data-hint="Begin with Rina, use might + be + -ing for one possible current activity, then add the object and location." data-fix="Rina might be testing the microphone inside Studio A." data-success-message="Correct. Might keeps the explanation open, and be testing presents an activity possibly in progress now.">
+    <h3>Build 1: preserve uncertainty</h3><p class="tile-target">Offer one unconfirmed explanation for the sound.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="microphone">microphone</button><button class="tile" data-build-tile="a">A</button><button class="tile" data-build-tile="might">might</button><button class="tile" data-build-tile="rina">Rina</button><button class="tile" data-build-tile="inside">inside</button><button class="tile" data-build-tile="studio">Studio</button><button class="tile" data-build-tile="testing">testing</button><button class="tile" data-build-tile="be">be</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="Rina cannot be in Studio B because the room is empty" data-hint="Begin with Rina, use cannot + base be for the rejected location, and state the checked contradiction after because." data-fix="Rina cannot be in Studio B because the room is empty." data-success-message="Correct. Cannot strongly rejects Studio B, and the because-clause makes the contradictory evidence explicit.">
+    <h3>Build 2: state the contradiction</h3><p class="tile-target">Reject Studio B and include the evidence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="empty">empty</button><button class="tile" data-build-tile="b">B</button><button class="tile" data-build-tile="because">because</button><button class="tile" data-build-tile="rina">Rina</button><button class="tile" data-build-tile="room">room</button><button class="tile" data-build-tile="cannot">cannot</button><button class="tile" data-build-tile="is">is</button><button class="tile" data-build-tile="in">in</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="studio">Studio</button><button class="tile" data-build-tile="be">be</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the reasoning form</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="to" data-hint="A modal is followed directly by the base form be." data-fix="Rina must be near Studio A." data-why="Do not insert to between a modal and its base verb." data-success-message="Correct. Must connects directly to base be.">
+    <h3>Repair 1: remove the infinitive marker</h3><p>Tap the word that does not belong after the modal.</p><div class="spot-options"><button class="error-choice" data-error-choice="rina">Rina</button><button class="error-choice" data-error-choice="must">must</button><button class="error-choice" data-error-choice="to">to</button><button class="error-choice" data-error-choice="be">be near Studio A.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="mustnt" data-hint="The checked empty room provides a strong negative deduction, not a rule that prohibits Rina from being there." data-fix="Rina can’t be in Studio B; it is empty and locked." data-why="Can’t is the clearest strong negative deduction here. Mustn’t commonly expresses prohibition in U.S. English, while full must not can be contextually ambiguous." data-success-message="Correct. Can’t rejects the location from contradictory evidence without changing the meaning into a prohibition.">
+    <h3>Repair 2: distinguish deduction from prohibition</h3><p>Studio B was checked empty and locked. Tap the modal that gives the wrong core meaning for this controlled conclusion.</p><div class="spot-options"><button class="error-choice" data-error-choice="rina">Rina</button><button class="error-choice" data-error-choice="mustnt">mustn’t be</button><button class="error-choice" data-error-choice="studio">in Studio B;</button><button class="error-choice" data-error-choice="empty">it is empty and locked.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="is" data-hint="After might, use base be before the -ing activity." data-fix="Rina might be testing the microphone." data-why="A possible activity in progress uses might + be + -ing, not might + is + -ing." data-success-message="Correct. Might be testing keeps one modal and the complete progressive base form.">
+    <h3>Repair 3: build the current activity</h3><p>Tap the finite form that must return to the base form after <span class="ex">might</span>.</p><div class="spot-options"><button class="error-choice" data-error-choice="rina">Rina</button><button class="error-choice" data-error-choice="might">might</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="testing">testing the microphone.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without investigating a real person</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to infer anything about a real coworker, client, family member, neighbor, health condition, disability, relationship, location, schedule, finances, legal matter, identity, accent, nationality, password, message, or private behavior. Use Rina, Eli, North Hall, and the fictional evidence cards on this page. Real details are optional.</p>
+  <div class="prompt-card"><b>Observation cards:</b> Create five neutral fictional clues about rooms, equipment, schedules, sounds, or written records. Label each observation before drawing a conclusion.</div>
+  <div class="prompt-card"><b>Possibilities:</b> Keep two explanations alive with <span class="ex">might</span> and <span class="ex">could</span>. Say what additional evidence would distinguish them.</div>
+  <div class="prompt-card"><b>Strong conclusions:</b> Use <span class="ex">must</span> only when several clues converge. Use <span class="ex">can’t</span> only when a current reliable fact directly contradicts an explanation.</div>
+  <div class="prompt-card"><b>Responsible close:</b> State one uncertainty, ask one natural possibility question, and explain how you would verify rather than present an inference as fact.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: give a 75–90 second fictional evidence briefing</h3>
+    <p>Present at least four observations about a neutral workshop mystery. Separate the observations from your conclusions. Give two live possibilities with <span class="ex">might</span> and <span class="ex">could</span>, one possible negative with <span class="ex">might not</span>, one strong positive inference with <span class="ex">must</span>, and one strong negative inference with <span class="ex">can’t</span>. Include one state and one activity in progress. End with a natural question and the evidence you would verify next.</p>
+    <p><b>Evidence check:</b> Can the listener name the exact clue behind every conclusion, identify which alternatives remain live, distinguish a contradiction from missing information, recover every modal plus base-form chain, and tell which statement is observation rather than inference?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You calibrated converging evidence with must, an unanswered call with might not, and a direct contradiction with can’t.">
+    <h3>Final check: defend the reasoning strength</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Rina must be near Studio A." data-hint="Three recent independent clues converge on the same general area." data-fix="Rina must be near Studio A."><p class="quiz-question">1. Reception checked Rina in at 2:07, her case is beside Studio A, and staff heard a test there at 2:09. Which conclusion matches the converging evidence?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rina must be near Studio A.">Rina must be near Studio A.</button><button class="quiz-option" data-quiz-option="Rina can’t be anywhere in North Hall.">Rina can’t be anywhere in North Hall.</button><button class="quiz-option" data-quiz-option="A rule says Rina must stand beside the case.">A rule says Rina must stand beside the case.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Rina might not have her phone with her." data-hint="One unanswered call preserves several explanations and does not justify can’t." data-fix="Rina might not have her phone with her."><p class="quiz-question">2. Rina has not answered one call, and nobody has checked her phone. Which conclusion is appropriately tentative?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rina might not have her phone with her.">Rina might not have her phone with her.</button><button class="quiz-option" data-quiz-option="Rina can’t be available for any reason.">Rina can’t be available for any reason.</button><button class="quiz-option" data-quiz-option="Rina must dislike every phone call.">Rina must dislike every phone call.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Rina can’t be in Studio B." data-hint="A current direct check found Studio B empty and locked." data-fix="Rina can’t be in Studio B."><p class="quiz-question">3. A staff member checked Studio B at 2:10 and found it empty and locked. Which conclusion states the contradiction?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rina can’t be in Studio B.">Rina can’t be in Studio B.</button><button class="quiz-option" data-quiz-option="Rina might be visible inside Studio B.">Rina might be visible inside Studio B.</button><button class="quiz-option" data-quiz-option="Rina mustn’t enter any studio as a rule.">Rina mustn’t enter any studio as a rule.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: how strong is the evidence, not just the modal?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">An observation is...</span> <span class="ex">An inference is...</span> <span class="ex">I use must when...</span> <span class="ex">I use can’t when...</span> <span class="ex">I keep might or could when...</span> <span class="ex">Might not differs from can’t because...</span></p>
+    <p>Take one fictional clue and produce three responses: an unsupported overclaim, a calibrated possibility, and a strong conclusion after adding decisive evidence. Explain what changed in the evidence, not only in the modal.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day evidence strength, present activity form, and modal-function retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Name the observation, list any remaining alternatives, and identify a direct contradiction before selecting a modal.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the evidence-strength distinction, the modal plus be plus -ing chain, and the difference between deduction and obligation.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The noise might be a microphone test." data-hint="A sound without a visible source leaves other explanations open." data-fix="The noise might be a microphone test."><p class="quiz-question">1. You hear one brief sound from a closed room, but you cannot identify its source. Which conclusion preserves uncertainty?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The noise might be a microphone test.">The noise might be a microphone test.</button><button class="quiz-option" data-quiz-option="The noise must be Rina testing a microphone.">The noise must be Rina testing a microphone.</button><button class="quiz-option" data-quiz-option="The noise can’t be a microphone test.">The noise can’t be a microphone test.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Rina could be checking the signal." data-hint="A possible activity in progress needs could + be + -ing." data-fix="Rina could be checking the signal."><p class="quiz-question">2. Which sentence accurately presents one possible current activity?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rina could be checking the signal.">Rina could be checking the signal.</button><button class="quiz-option" data-quiz-option="Rina could checking the signal.">Rina could checking the signal.</button><button class="quiz-option" data-quiz-option="Rina could is checking the signal.">Rina could is checking the signal.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Must expresses a strong inference in the first sentence and a rule in the second." data-hint="The fresh clues support a conclusion; the posted notice requires behavior." data-fix="Must expresses a strong inference in the first sentence and a rule in the second."><p class="quiz-question">3. Compare <span class="ex">Her fresh test file is open, so she must be working nearby</span> with <span class="ex">Visitors must sign in</span>. What changes?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Must expresses a strong inference in the first sentence and a rule in the second.">Must expresses a strong inference in the first sentence and a rule in the second.</button><button class="quiz-option" data-quiz-option="Must expresses a rule in both sentences.">Must expresses a rule in both sentences.</button><button class="quiz-option" data-quiz-option="Must expresses a verified fact in both sentences.">Must expresses a verified fact in both sentences.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

@@ -3,14 +3,18 @@ import { lessonCounts } from "../../data/lesson-catalog.mjs";
 import { LESSON_LEVELS } from "../../data/lesson-schema.mjs";
 
 const counts = lessonCounts();
+const levelOptions = [
+  { value: "all", label: "All", hue: undefined },
+  ...LESSON_LEVELS.map((level, index) => ({ value: level, label: level, hue: [28, 70, 150, 245, 305, 345][index] })),
+];
 ---
 <section class="curriculum-finder" data-curriculum-finder hidden aria-labelledby="curriculum-finder-title">
   <div class="finder-heading">
     <div>
       <p class="finder-kicker">Find your next lesson</p>
-      <h2 id="curriculum-finder-title">Search the complete path.</h2>
+      <h2 id="curriculum-finder-title">Find a lesson.</h2>
     </div>
-    <p>Filter the map without losing the level context. “Open now” topics lead to complete interactive lessons.</p>
+    <p>Search by grammar, vocabulary, or real-life topic.</p>
   </div>
 
   <form class="finder-form" data-finder-form role="search">
@@ -22,20 +26,30 @@ const counts = lessonCounts();
       </span>
     </label>
 
-    <label class="finder-field">
-      <span>Level</span>
-      <select name="level" data-finder-level>
-        <option value="all">All levels</option>
-        <option value="A0">A0 · Starter</option>
-        <option value="A1">A1 · Beginner</option>
-        <option value="A2">A2 · Elementary</option>
-        <option value="B1">B1 · Intermediate</option>
-        <option value="B2">B2 · Upper-intermediate</option>
-      </select>
-    </label>
+    <fieldset class="finder-levels">
+      <legend>Browse by level</legend>
+      <div class="finder-level-controls">
+        {levelOptions.map((option) => (
+          <span
+            class:list={["finder-level-option", option.value === "all" && "finder-level-option--all"]}
+            style={option.hue !== undefined ? `--level-filter-accent:oklch(.58 .13 ${option.hue});--level-filter-deep:oklch(.43 .13 ${option.hue});--level-filter-tint:oklch(.92 .065 ${option.hue})` : undefined}
+          >
+            <input
+              type="radio"
+              name="level"
+              id={`finder-level-${option.value}`}
+              value={option.value}
+              data-finder-level
+              checked={option.value === "all"}
+            />
+            <label for={`finder-level-${option.value}`}><span aria-hidden="true"></span>{option.label}</label>
+          </span>
+        ))}
+      </div>
+    </fieldset>
 
-    <label class="finder-field">
-      <span>Content</span>
+    <label class="finder-field finder-type">
+      <span>Lesson type</span>
       <select name="type" data-finder-type>
         <option value="all">Grammar + vocabulary</option>
         <option value="grammar">Grammar</option>
@@ -43,19 +57,25 @@ const counts = lessonCounts();
       </select>
     </label>
 
-    <label class="finder-field">
-      <span>Availability</span>
+    <label class="finder-field finder-show">
+      <span>Show</span>
       <select name="availability" data-finder-availability>
-        <option value="all">Open + planned</option>
-        <option value="ready">Open now</option>
+        <option value="all">All topics</option>
+        <option value="ready">Available now</option>
         <option value="planned">Planned</option>
       </select>
     </label>
   </form>
 
-  <div class="finder-summary">
-    <p data-finder-status aria-live="polite">{counts.total} topics across {LESSON_LEVELS.length} levels · {counts.ready} interactive lessons open now</p>
-    <button type="button" class="finder-reset" data-finder-reset disabled>Clear filters</button>
+  <div class="finder-lower">
+    <details class="cefr-note">
+      <summary>What is CEFR?</summary>
+      <p>CEFR stands for the Common European Framework of Reference for Languages. It is an international scale used to describe language ability, from beginner levels such as A1 to advanced levels such as C1 and C2. This curriculum covers A0 to C1.</p>
+    </details>
+    <div class="finder-summary">
+      <p data-finder-status aria-live="polite">{counts.total} topics across {LESSON_LEVELS.length} levels · {counts.ready} interactive lessons available now</p>
+      <button type="button" class="finder-reset" data-finder-reset disabled>Clear filters</button>
+    </div>
   </div>
 </section>
 
@@ -68,7 +88,7 @@ const counts = lessonCounts();
   if (finder && map) {
     const form = finder.querySelector<HTMLFormElement>("[data-finder-form]");
     const queryInput = finder.querySelector<HTMLInputElement>("[data-finder-query]");
-    const levelSelect = finder.querySelector<HTMLSelectElement>("[data-finder-level]");
+    const levelInputs = Array.from(finder.querySelectorAll<HTMLInputElement>("[data-finder-level]"));
     const typeSelect = finder.querySelector<HTMLSelectElement>("[data-finder-type]");
     const availabilitySelect = finder.querySelector<HTMLSelectElement>("[data-finder-availability]");
     const status = finder.querySelector<HTMLElement>("[data-finder-status]");
@@ -76,8 +96,8 @@ const counts = lessonCounts();
     const levels = Array.from(map.querySelectorAll<HTMLElement>("[data-curriculum-level]"));
     const topics = Array.from(map.querySelectorAll<HTMLElement>("[data-curriculum-topic]"));
 
-    if (form && queryInput && levelSelect && typeSelect && availabilitySelect && status && reset) {
-      const validLevels = new Set(["all", "A0", "A1", "A2", "B1", "B2"]);
+    if (form && queryInput && levelInputs.length && typeSelect && availabilitySelect && status && reset) {
+      const validLevels = new Set(levelInputs.map((input) => input.value));
       const validTypes = new Set(["all", "grammar", "vocabulary"]);
       const validAvailability = new Set(["all", "ready", "planned"]);
       const params = new URLSearchParams(window.location.search);
@@ -86,16 +106,18 @@ const counts = lessonCounts();
       const requestedAvailability = params.get("availability") ?? "all";
 
       queryInput.value = params.get("q") ?? "";
-      levelSelect.value = validLevels.has(requestedLevel) ? requestedLevel : "all";
+      const initialLevel = validLevels.has(requestedLevel) ? requestedLevel : "all";
+      levelInputs.forEach((input) => { input.checked = input.value === initialLevel; });
       typeSelect.value = validTypes.has(requestedType) ? requestedType : "all";
       availabilitySelect.value = validAvailability.has(requestedAvailability) ? requestedAvailability : "all";
       finder.hidden = false;
 
       const updateUrl = () => {
         const nextUrl = new URL(window.location.href);
+        const selectedLevel = levelInputs.find((input) => input.checked)?.value ?? "all";
         const values = {
           q: queryInput.value.trim(),
-          level: levelSelect.value,
+          level: selectedLevel,
           type: typeSelect.value,
           availability: availabilitySelect.value,
         };
@@ -110,7 +132,7 @@ const counts = lessonCounts();
 
       const applyFilters = () => {
         const query = queryInput.value.trim();
-        const selectedLevel = levelSelect.value;
+        const selectedLevel = levelInputs.find((input) => input.checked)?.value ?? "all";
         const selectedType = typeSelect.value;
         const selectedAvailability = availabilitySelect.value;
         const topicFiltering = Boolean(query) || selectedType !== "all" || selectedAvailability !== "all";
@@ -160,8 +182,8 @@ const counts = lessonCounts();
         const hasFilters = Boolean(query) || selectedLevel !== "all" || selectedType !== "all" || selectedAvailability !== "all";
         reset.disabled = !hasFilters;
         status.textContent = hasFilters
-          ? `${visibleCount} ${visibleCount === 1 ? "topic" : "topics"} found across ${visibleLevelCount} ${visibleLevelCount === 1 ? "level" : "levels"} · ${readyCount} open now`
-          : `${topics.length} topics across ${levels.length} levels · ${topics.filter((topic) => topic.dataset.topicAvailability === "ready").length} interactive lessons open now`;
+          ? `${visibleCount} ${visibleCount === 1 ? "topic" : "topics"} found across ${visibleLevelCount} ${visibleLevelCount === 1 ? "level" : "levels"} · ${readyCount} available now`
+          : `${topics.length} topics across ${levels.length} levels · ${topics.filter((topic) => topic.dataset.topicAvailability === "ready").length} interactive lessons available now`;
         map.toggleAttribute("data-no-results", visibleCount === 0);
         updateUrl();
       };

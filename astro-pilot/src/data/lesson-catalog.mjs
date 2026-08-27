@@ -115,6 +115,8 @@ function validateCatalog(catalog) {
   const topicKeys = new Set();
   const sequenceKeys = new Set();
   const assessmentIds = new Set(assessmentRoutes.map((assessment) => assessment.slug));
+  const byId = new Map(catalog.map((lesson) => [lesson.id, lesson]));
+  const rank = new Map(LESSON_LEVELS.map((level, index) => [level, index]));
 
   for (const lesson of catalog) {
     for (const [set, key, label] of [
@@ -129,6 +131,13 @@ function validateCatalog(catalog) {
     for (const assessment of lesson.assessments) {
       if (!assessmentIds.has(assessment)) throw new Error(`${lesson.id}: unknown assessment relationship ${assessment}`);
     }
+    const expectedAssessment = `${lesson.level.toLowerCase()}-exit`;
+    if (lesson.status === "ready" && (lesson.assessments.length !== 1 || lesson.assessments[0] !== expectedAssessment)) {
+      throw new Error(`${lesson.id}: ready lessons must link exactly once to ${expectedAssessment}`);
+    }
+    if (lesson.status === "ready" && lesson.level !== "A0" && lesson.prerequisites.length === 0) {
+      throw new Error(`${lesson.id}: ready ${lesson.level} lessons must identify at least one earlier prerequisite`);
+    }
   }
 
   for (const level of LESSON_LEVELS) {
@@ -140,12 +149,43 @@ function validateCatalog(catalog) {
 
   for (const lesson of catalog) {
     for (const field of ["prerequisites", "related"]) {
+      if (new Set(lesson[field]).size !== lesson[field].length) {
+        throw new Error(`${lesson.id}: ${field} contains duplicate lesson relationships`);
+      }
       for (const reference of lesson[field]) {
         if (!ids.has(reference)) throw new Error(`${lesson.id}: ${field} references unknown lesson ${reference}`);
         if (reference === lesson.id) throw new Error(`${lesson.id}: ${field} cannot reference itself`);
       }
     }
+    for (const reference of lesson.prerequisites) {
+      const prerequisite = byId.get(reference);
+      if (lesson.status === "ready" && prerequisite.status !== "ready") {
+        throw new Error(`${lesson.id}: ready lesson cannot depend on planned prerequisite ${reference}`);
+      }
+      const earlierLevel = rank.get(prerequisite.level) < rank.get(lesson.level);
+      const earlierInLevel = prerequisite.level === lesson.level && prerequisite.sequence < lesson.sequence;
+      if (!earlierLevel && !earlierInLevel) {
+        throw new Error(`${lesson.id}: prerequisite ${reference} must occur earlier in the curriculum path`);
+      }
+    }
   }
+
+  validatePrerequisiteCycles(catalog, byId);
+}
+
+function validatePrerequisiteCycles(catalog, byId) {
+  const state = new Map();
+  const visit = (lesson, path = []) => {
+    const currentState = state.get(lesson.id);
+    if (currentState === "done") return;
+    if (currentState === "visiting") {
+      throw new Error(`Prerequisite cycle detected: ${[...path, lesson.id].join(" → ")}`);
+    }
+    state.set(lesson.id, "visiting");
+    for (const reference of lesson.prerequisites) visit(byId.get(reference), [...path, lesson.id]);
+    state.set(lesson.id, "done");
+  };
+  catalog.forEach((lesson) => visit(lesson));
 }
 
 async function findLessonSources(directory) {

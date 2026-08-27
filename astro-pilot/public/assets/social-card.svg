@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Thomas’s Classroom</title>
+  <desc id="description">English that finally clicks. A complete A0 to B2 learning path for adults.</desc>
+  <rect width="1200" height="630" fill="#f2eadf"/>
+  <path d="M0 0h1200v16H0z" fill="#cb2d2d"/>
+  <path d="M1044 16h156v439h-156z" fill="#cb2d2d"/>
+  <path d="M0 455h1200v175H0z" fill="#181715"/>
+  <g fill="#181715">
+    <text x="72" y="78" font-family="Courier New, monospace" font-size="24" font-weight="700" letter-spacing="3">AMERICAN ENGLISH · A0 → B2</text>
+    <text x="68" y="207" font-family="Georgia, Times New Roman, serif" font-size="100" font-weight="700">Thomas’s</text>
+    <text x="68" y="313" font-family="Georgia, Times New Roman, serif" font-size="100" font-style="italic">Classroom</text>
+  </g>
+  <circle cx="849" cy="285" r="15" fill="#cb2d2d"/>
+  <text x="70" y="398" fill="#4d4943" font-family="Arial, Helvetica, sans-serif" font-size="38">English that finally clicks.</text>
+  <g fill="#f2eadf" font-family="Courier New, monospace" font-size="19" font-weight="700" letter-spacing="1.8">
+    <text x="70" y="519">NOTICE</text>
+    <text x="222" y="519">→</text>
+    <text x="274" y="519">DISCOVER</text>
+    <text x="464" y="519">→</text>
+    <text x="516" y="519">BUILD</text>
+    <text x="640" y="519">→</text>
+    <text x="692" y="519">DRILL</text>
+    <text x="813" y="519">→</text>
+    <text x="865" y="519">COMMUNICATE</text>
+  </g>
+  <text x="70" y="584" fill="#c9c0b5" font-family="Arial, Helvetica, sans-serif" font-size="25">92 interactive grammar and vocabulary lessons for adult learners</text>
+  <g fill="#f2eadf" font-family="Georgia, Times New Roman, serif" font-size="34" font-weight="700" text-anchor="middle">
+    <text x="1122" y="94">A0</text>
+    <text x="1122" y="167">A1</text>
+    <text x="1122" y="240">A2</text>
+    <text x="1122" y="313">B1</text>
+    <text x="1122" y="386">B2</text>
+  </g>
+</svg>

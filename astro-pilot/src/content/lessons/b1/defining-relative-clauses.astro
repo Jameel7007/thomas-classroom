@@ -1,19 +1,330 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Defining relative clauses · B1 Grammar · Curriculum Map",
+  "title": "Defining relative clauses · B1 Grammar",
   "slug": "defining-relative-clauses",
   "level": "B1",
   "topic": "Defining relative clauses",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Defining relative clauses.",
+  "status": "ready",
+  "description": "Identify exactly which person, thing, place, or possession you mean by controlling relative-clause reference, subject and object gaps, omission, and information flow.",
   "sequence": 7,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a0/question-words-what-where-who-how", "a1/there-is-there-are", "a0/subject-pronouns"],
+  "related": ["b2/non-defining-relative-clauses", "b1/work-and-careers"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 58,
+    "revisionSummary": "Reference, subject and object gaps, omission, agreement, who/which/that/whose/where, what boundaries, commas, prepositions, information flow, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 7</p>
+  <h1>Defining relative clauses: <em>attach the clue to the noun</em></h1>
+  <p class="standfirst">A defining relative clause helps a listener identify the exact person, thing, place, or possession you mean. First name a general category, then attach the essential clue directly to it: <span class="ex">the analyst who called</span>, <span class="ex">the file that you sent</span>, <span class="ex">the room where we met</span>.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">noun + identifying clause</span>
+    <span class="tag">subject gap · object gap · zero relative</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Find the noun and the essential clue.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Locate the missing role inside the clause.</span></div>
+    <div class="flow-step"><b>Connect</b><span>Choose, keep, or omit the relative word.</span></div>
+    <div class="flow-step"><b>Use</b><span>Describe a precise fictional shortlist.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can attach an essential identifying clause directly to its noun; use <span class="ex">who</span>, <span class="ex">which</span>, <span class="ex">that</span>, <span class="ex">whose</span>, and <span class="ex">where</span> accurately; distinguish subject and object gaps; omit an object relative word when the structure allows it; keep subject-verb agreement with the noun being identified; avoid repeated pronouns, misplaced clauses, redundant place prepositions, and <span class="ex">what</span> after an expressed noun; recognize more formal preposition patterns; and deliver a connected recommendation whose references remain clear.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recovered a person question, a place question, and the subject pronoun she before replacing repeated information with a relative clause.">
+    <h3>Reactivate the reference tools</h3>
+    <div class="choice-bank" aria-label="Relative clause foundation choices"><button class="choice-option" data-choice-option="who">who</button><button class="choice-option" data-choice-option="where">where</button><button class="choice-option" data-choice-option="she">she</button><button class="choice-option" data-choice-option="what">what</button><button class="choice-option" data-choice-option="it">it</button></div>
+    <div class="q"><span class="n">1</span><span>Ask for a person’s identity: <button class="choice-gap" data-choice-gap data-answer="who" data-hint="Choose the question word that asks about a person." data-fix="Who manages the project?">choose</button> manages the project?</span></div>
+    <div class="q"><span class="n">2</span><span>Ask for a location: <button class="choice-gap" data-choice-gap data-answer="where" data-hint="Choose the question word that asks about a place." data-fix="Where does the team meet?">choose</button> does the team meet?</span></div>
+    <div class="q"><span class="n">3</span><span>Replace <span class="ex">Marta</span> with a subject pronoun: Marta called. <button class="choice-gap" data-choice-gap data-answer="she" data-hint="Marta is one woman and performs the action called." data-fix="Marta called. She left a message.">choose</button> left a message.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice how one clause narrows a category</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Shortlist for a community workshop</h3>
+    <p><b>Coordinator:</b> Nia. <b>Goal:</b> choose one trainer, one projector, and one room from several possible options.</p>
+    <p><span class="ex">Let’s invite the trainer who teaches evening classes.</span></p>
+    <p><span class="ex">Let’s reserve the projector that Omar tested yesterday.</span></p>
+    <p><span class="ex">Let’s use the room where the large tables are stored.</span></p>
+    <p><span class="ex">Let’s call the organization whose volunteers ran last year’s workshop.</span></p>
+    <ul>
+      <li>What general noun comes before each identifying clause?</li>
+      <li>Does <span class="ex">who</span> perform an action, or does another subject follow it?</li>
+      <li>Does <span class="ex">that</span> perform <span class="ex">tested</span>, or does Omar?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You found each noun, matched the reference type, and distinguished the subject gap after trainer from the object gap after projector.">
+    <h3>Discovery check: trace the reference</h3>
+    <div class="choice-bank" aria-label="Defining relative clause discovery choices"><button class="choice-option" data-choice-option="trainer">trainer</button><button class="choice-option" data-choice-option="a person">a person</button><button class="choice-option" data-choice-option="who">who</button><button class="choice-option" data-choice-option="Omar">Omar</button><button class="choice-option" data-choice-option="the organization’s volunteers">the organization’s volunteers</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">the trainer who teaches evening classes</span>, the clause identifies the noun <button class="choice-gap" data-choice-gap data-answer="trainer" data-hint="Look immediately before who." data-fix="The clause who teaches evening classes identifies trainer.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The relative word <span class="ex">who</span> tells the listener that the noun refers to <button class="choice-gap" data-choice-gap data-answer="a person" data-hint="Trainer refers to a human being in this context." data-fix="Who introduces an identifying clause about a person.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In that first clause, <button class="choice-gap" data-choice-gap data-answer="who" data-hint="No other subject appears before teaches." data-fix="Who is the subject of teaches.">choose</button> performs the action <span class="ex">teaches</span>.</span></div>
+    <div class="q"><span class="n">4</span><span>In <span class="ex">the projector that Omar tested</span>, <button class="choice-gap" data-choice-gap data-answer="Omar" data-hint="The named person directly before tested performs the action." data-fix="Omar is the subject of tested; that represents the projector as object.">choose</button> performs <span class="ex">tested</span>.</span></div>
+    <div class="q"><span class="n">5</span><span>In <span class="ex">the organization whose volunteers ran the workshop</span>, <span class="ex">whose volunteers</span> means <button class="choice-gap" data-choice-gap data-answer="the organization’s volunteers" data-hint="Whose expresses the relationship between the organization and its volunteers." data-fix="Whose volunteers means the organization’s volunteers.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: the clause contains one open role</h2>
+  <div class="lead-rule"></div>
+  <p>Start with two ideas that repeat the same referent: <span class="ex">We need a trainer. The trainer teaches evenings.</span> Join them by placing the identifying information after the noun and replacing the repeated role: <span class="ex">We need a trainer who teaches evenings.</span> Inside <span class="ex">who teaches evenings</span>, the subject role is now filled by <span class="ex">who</span>.</p>
+  <p>With an object relative, another subject remains: <span class="ex">Omar tested the projector</span> becomes <span class="ex">the projector that Omar tested</span>. Omar still performs the action. The projector is the unspoken object after <span class="ex">tested</span>. Do not add another <span class="ex">it</span>.</p>
+
+  <table>
+    <thead><tr><th>reference</th><th>common defining pattern</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>person</td><td><span class="ex">who / that</span></td><td><span class="ex">the trainer who teaches evenings</span></td></tr>
+      <tr><td>thing</td><td><span class="ex">which / that</span></td><td><span class="ex">the projector that Omar tested</span></td></tr>
+      <tr><td>possession or association</td><td><span class="ex">whose + noun</span></td><td><span class="ex">the group whose volunteers helped</span></td></tr>
+      <tr><td>place</td><td><span class="ex">where + clause</span></td><td><span class="ex">the room where we store the tables</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">That</span> is common with people and things in defining clauses. <span class="ex">Which</span> is also grammatical for things in defining clauses, although some U.S. editorial styles prefer <span class="ex">that</span>. Choose by grammar, clarity, and the style you are using, not by a false rule that defining <span class="ex">which</span> is impossible.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You placed every clause beside its noun, preserved the real subject, and left exactly one represented role inside each relative clause.">
+    <h3>Clause anatomy: noun, subject, and open role</h3>
+    <div class="choice-bank" aria-label="Relative clause anatomy choices"><button class="choice-option" data-choice-option="who">who</button><button class="choice-option" data-choice-option="that">that</button><button class="choice-option" data-choice-option="the analyst">the analyst</button><button class="choice-option" data-choice-option="we">we</button><button class="choice-option" data-choice-option="directly after the noun">directly after the noun</button><button class="choice-option" data-choice-option="no repeated object">no repeated object</button></div>
+    <div class="q"><span class="n">1</span><span>A person performed <span class="ex">called</span>: The analyst <button class="choice-gap" data-choice-gap data-answer="who" data-hint="Choose the person relative that can be the subject of called." data-fix="The analyst who called left a message.">choose</button> called left a message.</span></div>
+    <div class="q"><span class="n">2</span><span>In that sentence, the grammatical subject of <span class="ex">called</span> refers back to <button class="choice-gap" data-choice-gap data-answer="the analyst" data-hint="Who carries the analyst reference into the clause." data-fix="The analyst is the person who performed called.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>A thing received the action: The form <button class="choice-gap" data-choice-gap data-answer="that" data-hint="Choose the defining relative for a thing; the subject we follows." data-fix="The form that we submitted was accepted.">choose</button> we submitted was accepted.</span></div>
+    <div class="q"><span class="n">4</span><span>Inside <span class="ex">that we submitted</span>, <button class="choice-gap" data-choice-gap data-answer="we" data-hint="The pronoun before submitted performs the action." data-fix="We is the subject; that represents the form as object.">choose</button> performs the action.</span></div>
+    <div class="q"><span class="n">5</span><span>For clear attachment, put the identifying clause <button class="choice-gap" data-choice-gap data-answer="directly after the noun" data-hint="The listener should meet the clue immediately after the noun it identifies." data-fix="Place the relative clause directly after the noun it identifies.">choose</button> it identifies.</span></div>
+    <div class="q"><span class="n">6</span><span>Because <span class="ex">that</span> already represents <span class="ex">the form</span>, the clause <span class="ex">that we submitted</span> needs <button class="choice-gap" data-choice-gap data-answer="no repeated object" data-hint="Do not add it after submitted." data-fix="Say the form that we submitted, with no repeated object.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose a relative word from the reference you need</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Who</span> is the neutral everyday choice for a person. <span class="ex">Which</span> refers to a thing. <span class="ex">That</span> can refer to either in a defining clause. <span class="ex">Whose</span> comes before a noun and expresses possession or a close association. <span class="ex">Where</span> means <span class="ex">in / at that place</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched people, things, possession, and place while keeping agreement with the noun each clause identifies.">
+    <h3>Reference check: use the only option that completes this sentence</h3>
+    <div class="choice-bank" aria-label="Relative word choices"><button class="choice-option" data-choice-option="who">who</button><button class="choice-option" data-choice-option="which">which</button><button class="choice-option" data-choice-option="that">that</button><button class="choice-option" data-choice-option="whose">whose</button><button class="choice-option" data-choice-option="where">where</button><button class="choice-option" data-choice-option="works">works</button><button class="choice-option" data-choice-option="work">work</button></div>
+    <div class="q"><span class="n">1</span><span>The sentence must use the person-specific option, not the more general <span class="ex">that</span>: The tutor <button class="choice-gap" data-choice-gap data-answer="who" data-hint="The prompt asks for the relative word specifically associated with a person." data-fix="The tutor who leads the workshop speaks Spanish.">choose</button> leads the workshop speaks Spanish.</span></div>
+    <div class="q"><span class="n">2</span><span>The sentence must use the thing-specific option, not <span class="ex">that</span>: The tablet <button class="choice-gap" data-choice-gap data-answer="which" data-hint="The prompt asks for the relative word specifically associated with a thing." data-fix="The tablet which has the blue case belongs to Nia.">choose</button> has the blue case belongs to Nia.</span></div>
+    <div class="q"><span class="n">3</span><span>Use the defining relative that works for either a person or a thing: The projector <button class="choice-gap" data-choice-gap data-answer="that" data-hint="That is the shared defining option for people and things." data-fix="The projector that Omar tested is available.">choose</button> Omar tested is available.</span></div>
+    <div class="q"><span class="n">4</span><span>The volunteers belong to the organization: Choose the organization <button class="choice-gap" data-choice-gap data-answer="whose" data-hint="A noun, volunteers, follows the blank and belongs to the organization." data-fix="Choose the organization whose volunteers have first-aid training.">choose</button> volunteers have first-aid training.</span></div>
+    <div class="q"><span class="n">5</span><span>The room is the location of the storage action: Use the room <button class="choice-gap" data-choice-gap data-answer="where" data-hint="Where carries the meaning in the room." data-fix="Use the room where we store the large tables.">choose</button> we store the large tables.</span></div>
+    <div class="q"><span class="n">6</span><span>One tutor agrees with a singular head noun: The tutor who <button class="choice-gap" data-choice-gap data-answer="works" data-hint="The head noun tutor is singular, so the clause verb needs -s." data-fix="The tutor who works evenings is available.">choose</button> evenings is available.</span></div>
+    <div class="q"><span class="n">7</span><span>Several tutors agree with a plural head noun: The tutors who <button class="choice-gap" data-choice-gap data-answer="work" data-hint="The head noun tutors is plural, so use the base form work." data-fix="The tutors who work evenings are available.">choose</button> evenings are available.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Keep a subject relative; an object relative may disappear</h2>
+  <div class="lead-rule"></div>
+  <p>Use the first word after the relative marker as a quick diagnostic. If a finite verb comes next, the relative word is usually the subject and cannot be omitted: <span class="ex">the trainer who teaches evenings</span>. If a separate subject comes next, the relative word is the object and can often be omitted: <span class="ex">the trainer who Nia recommended</span> or <span class="ex">the trainer Nia recommended</span>.</p>
+  <table>
+    <thead><tr><th>inside the clause</th><th>role</th><th>omission</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">who teaches evenings</span></td><td><span class="ex">who</span> is subject</td><td>keep it</td></tr>
+      <tr><td><span class="ex">that Nia recommended</span></td><td><span class="ex">Nia</span> is subject; <span class="ex">that</span> is object</td><td><span class="ex">that</span> may be omitted</td></tr>
+    </tbody>
+  </table>
+  <p>For a person as object, <span class="ex">who</span> is normal in conversation: <span class="ex">the trainer who Nia recommended</span>. <span class="ex">Whom</span> is more formal and survives especially after a fronted preposition. It is not necessary for the everyday object pattern practiced here.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept every subject relative, recognized a separate clause subject, and omitted only object relatives.">
+    <h3>Omission check: inspect what comes next</h3>
+    <div class="choice-bank" aria-label="Relative word omission choices"><button class="choice-option" data-choice-option="must stay">must stay</button><button class="choice-option" data-choice-option="may be omitted">may be omitted</button><button class="choice-option" data-choice-option="the coordinator">the coordinator</button><button class="choice-option" data-choice-option="the projector">the projector</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">the trainer who teaches evenings</span>, <span class="ex">who</span> performs <span class="ex">teaches</span>, so it <button class="choice-gap" data-choice-gap data-answer="must stay" data-hint="A subject relative cannot disappear because the clause would have no subject." data-fix="Keep who: the trainer who teaches evenings.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">the trainer who Nia recommended</span>, Nia performs <span class="ex">recommended</span>, so <span class="ex">who</span> <button class="choice-gap" data-choice-gap data-answer="may be omitted" data-hint="A separate subject, Nia, follows; who is the object." data-fix="Both the trainer who Nia recommended and the trainer Nia recommended are grammatical.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">the projector that stopped working</span>, <span class="ex">that</span> <button class="choice-gap" data-choice-gap data-answer="must stay" data-hint="No separate subject appears before stopped." data-fix="Keep that: the projector that stopped working.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>In <span class="ex">the projector that the coordinator reserved</span>, <button class="choice-gap" data-choice-gap data-answer="the coordinator" data-hint="The noun phrase after that performs reserved." data-fix="The coordinator is the subject of reserved.">choose</button> performs <span class="ex">reserved</span>.</span></div>
+    <div class="q"><span class="n">5</span><span>In that same clause, <span class="ex">that</span> represents <button class="choice-gap" data-choice-gap data-answer="the projector" data-hint="The reserved thing is the projector named before the clause." data-fix="That represents the projector as the object of reserved.">choose</button> as the object.</span></div>
+    <div class="q"><span class="n">6</span><span>Therefore, <span class="ex">the projector the coordinator reserved</span> is possible because object <span class="ex">that</span> <button class="choice-gap" data-choice-gap data-answer="may be omitted" data-hint="The clause keeps its subject the coordinator after omission." data-fix="That may be omitted in the projector the coordinator reserved.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Control <span class="ex">whose</span>, <span class="ex">where</span>, and <span class="ex">what</span></h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Whose</span> is followed by the possessed or associated noun: <span class="ex">the group whose volunteers helped</span>. It can refer to a person, organization, and sometimes a thing when the relationship is natural. <span class="ex">Where</span> already contains a place relationship: <span class="ex">the room where we met</span> means <span class="ex">the room in which we met</span>.</p>
+  <p><span class="ex">What</span> does not normally follow an expressed noun in this pattern. It already means something like <span class="ex">the thing that</span>: say <span class="ex">I understood what Nia meant</span>, but <span class="ex">the point that Nia made</span>. Do not say <span class="cross">the point what Nia made</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used whose before the associated noun, treated where as a place relationship, and kept what away from an already expressed noun.">
+    <h3>Boundary check: do not express the same relationship twice</h3>
+    <div class="choice-bank" aria-label="Whose where and what choices"><button class="choice-option" data-choice-option="whose schedule">whose schedule</button><button class="choice-option" data-choice-option="where">where</button><button class="choice-option" data-choice-option="that">that</button><button class="choice-option" data-choice-option="what">what</button><button class="choice-option" data-choice-option="that we work in">that we work in</button></div>
+    <div class="q"><span class="n">1</span><span>Identify a tutor through that tutor’s schedule: We need a tutor <button class="choice-gap" data-choice-gap data-answer="whose schedule" data-hint="Whose must come before the noun schedule." data-fix="We need a tutor whose schedule includes Saturdays.">choose</button> includes Saturdays.</span></div>
+    <div class="q"><span class="n">2</span><span>Use one complete place relationship with no final preposition: This is the room <button class="choice-gap" data-choice-gap data-answer="where" data-hint="Where already means in that room here." data-fix="This is the room where we work.">choose</button> we work.</span></div>
+    <div class="q"><span class="n">3</span><span>Use the alternative pattern that keeps <span class="ex">in</span> with the verb: This is the room <button class="choice-gap" data-choice-gap data-answer="that we work in" data-hint="When that introduces the room as object of in, retain the preposition at the end." data-fix="This is the room that we work in.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>An expressed noun, <span class="ex">point</span>, comes before the clause: I understood the point <button class="choice-gap" data-choice-gap data-answer="that" data-hint="Use a relative marker after the expressed noun point." data-fix="I understood the point that Nia made.">choose</button> Nia made.</span></div>
+    <div class="q"><span class="n">5</span><span>No noun comes before the clause, and the meaning is <span class="ex">the thing that</span>: I understood <button class="choice-gap" data-choice-gap data-answer="what" data-hint="What can carry the meaning the thing that when no noun is expressed first." data-fix="I understood what Nia meant.">choose</button> Nia meant.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Essential identification usually has no comma break</h2>
+  <div class="lead-rule"></div>
+  <p>A defining clause is part of the noun phrase that identifies the referent. In writing, do not separate it with commas: <span class="ex">The volunteers who completed the safety training can supervise the room.</span> This identifies a subset of the volunteers. Compare <span class="ex">Our four volunteers, who completed the safety training, can supervise the room.</span> The commas present the clause as extra information about all four. That non-defining pattern is developed at B2.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept the essential clue attached without commas and interpreted it as selecting a subset rather than describing everyone.">
+    <h3>Information check: which people does the clause select?</h3>
+    <div class="choice-bank" aria-label="Defining information choices"><button class="choice-option" data-choice-option="no commas">no commas</button><button class="choice-option" data-choice-option="only the volunteers who completed the training">only the volunteers who completed the training</button><button class="choice-option" data-choice-option="the clause is needed to identify the trainer">the clause is needed to identify the trainer</button></div>
+    <div class="q"><span class="n">1</span><span>For the essential identifying meaning, write <span class="ex">The volunteers who completed the training can supervise</span> with <button class="choice-gap" data-choice-gap data-answer="no commas" data-hint="A defining clause stays integrated with its noun in writing." data-fix="Use no commas around who completed the training.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>That sentence gives permission to <button class="choice-gap" data-choice-gap data-answer="only the volunteers who completed the training" data-hint="The clause selects the trained subset of volunteers." data-fix="Only the volunteers who completed the training can supervise.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">Please call the trainer who teaches evenings</span>, the listener needs the clause because <button class="choice-gap" data-choice-gap data-answer="the clause is needed to identify the trainer" data-hint="There is more than one possible trainer, and the schedule distinguishes one." data-fix="The clause identifies which trainer the listener should call.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Place prepositions where the register expects them</h2>
+  <div class="lead-rule"></div>
+  <p>Everyday English often leaves the preposition at the end: <span class="ex">the person I spoke to</span>, <span class="ex">the room that we met in</span>. More formal English can move the preposition before <span class="ex">whom</span> or <span class="ex">which</span>: <span class="ex">the person to whom I spoke</span>, <span class="ex">the room in which we met</span>. Do not put <span class="ex">that</span> after a fronted preposition: <span class="cross">the room in that we met</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched everyday preposition stranding with zero relative, and formal fronted prepositions with whom or which rather than that.">
+    <h3>Register check: preserve the requested style</h3>
+    <div class="choice-bank" aria-label="Relative clause preposition choices"><button class="choice-option" data-choice-option="I spoke to">I spoke to</button><button class="choice-option" data-choice-option="to whom I spoke">to whom I spoke</button><button class="choice-option" data-choice-option="in which we met">in which we met</button></div>
+    <div class="q"><span class="n">1</span><span>Natural conversation with the object relative omitted: Nia is the coordinator <button class="choice-gap" data-choice-gap data-answer="I spoke to" data-hint="Leave to with spoke in the requested conversational pattern." data-fix="Nia is the coordinator I spoke to.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Formal written version with the preposition first: Nia is the coordinator <button class="choice-gap" data-choice-gap data-answer="to whom I spoke" data-hint="After fronted to, use formal object whom for a person." data-fix="Nia is the coordinator to whom I spoke.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Formal written place pattern: The studio <button class="choice-gap" data-choice-gap data-answer="in which we met" data-hint="Use in plus which for the room relationship in the requested formal style." data-fix="The studio in which we met has moved.">choose</button> has moved.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: make the noun and clause one spoken unit</h2>
+  <div class="lead-rule"></div>
+  <p>In a defining phrase, do not announce the relative clause with a strong comma-like pause. Keep the noun and identifying clue in one rhythm group: <span class="ex">the TRAINer who TEACHes EVEning classes</span>. The relative word is usually unstressed because the important information is the noun and the new clue.</p>
+  <p>In conversation, object relatives often lose the relative word completely: <span class="ex">the PROjector Omar TESTed</span>. Link the noun into the following subject rather than inserting a pause. When <span class="ex">that</span> remains, it may be weak /ðət/: <span class="ex">the FILE that you SENT</span>. Keep subject <span class="ex">who</span> or <span class="ex">that</span> audible enough to preserve the clause structure.</p>
+
+  <section data-lesson-extension="Tutor-read listening for reference, omission, stress, rhythm, and preposition register">
+    <details class="reveal-card">
+      <summary>Open the tutor listening check</summary>
+      <div class="reveal-body">
+        <p><b>Tutor:</b> Read each line once naturally, without showing the transcript. Read it a second time only after the learner commits to an answer.</p>
+        <ol>
+          <li><span class="ex">Call the TRAINer who TEACHes EVEning classes.</span></li>
+          <li><span class="ex">The PROjector Omar TESTed is in Room THREE.</span></li>
+          <li><span class="ex">Use the FILE that I SENT this MORning.</span></li>
+          <li><span class="ex">Choose the group whose VOLunteers know FIRST AID.</span></li>
+          <li><span class="ex">She’s the coordinator I SPOKE to, not the one to WHOM I WROTE.</span></li>
+        </ol>
+      </div>
+    </details>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard an integrated subject relative, a zero object relative, weak that, whose association, and a conversational-to-formal preposition contrast.">
+      <h3>Listen for the open role and information focus</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="who is the subject of teaches and must remain" data-hint="No separate subject appears between who and teaches." data-fix="Who is the subject of teaches and must remain."><p class="quiz-question">1. Why can <span class="ex">who</span> not disappear from the first line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="who is the subject of teaches and must remain">who is the subject of teaches and must remain</button><button class="quiz-option" data-quiz-option="evening is a possessive noun after whose">evening is a possessive noun after whose</button><button class="quiz-option" data-quiz-option="the line describes every trainer as extra information">the line describes every trainer as extra information</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Omar is the subject; the projector is the unspoken object of tested." data-hint="Listen for the named person immediately before tested." data-fix="Omar is the subject; the projector is the unspoken object of tested."><p class="quiz-question">2. What is the clause structure in <span class="ex">the projector Omar tested</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Omar is the subject; the projector is the unspoken object of tested.">Omar is the subject; the projector is the unspoken object of tested.</button><button class="quiz-option" data-quiz-option="The projector is the subject, and Omar is a place word.">The projector is the subject, and Omar is a place word.</button><button class="quiz-option" data-quiz-option="Tested has two repeated object pronouns.">Tested has two repeated object pronouns.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="that is present but unstressed; file and sent carry the useful contrast" data-hint="Listen for the weak sound between file and I, then the stronger content words." data-fix="That is present but unstressed; file and sent carry the useful contrast."><p class="quiz-question">3. What happens in <span class="ex">the file that I sent</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="that is present but unstressed; file and sent carry the useful contrast">that is present but unstressed; file and sent carry the useful contrast</button><button class="quiz-option" data-quiz-option="that receives the strongest contrastive stress in every context">that receives the strongest contrastive stress in every context</button><button class="quiz-option" data-quiz-option="sent loses its final consonant and changes to send">sent loses its final consonant and changes to send</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the volunteers are associated with the group" data-hint="Whose connects the group to its volunteers." data-fix="The volunteers are associated with the group."><p class="quiz-question">4. What relationship does <span class="ex">whose volunteers</span> express?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the volunteers are associated with the group">the volunteers are associated with the group</button><button class="quiz-option" data-quiz-option="the group is a room where volunteers meet">the group is a room where volunteers meet</button><button class="quiz-option" data-quiz-option="volunteers replaces the verb choose">volunteers replaces the verb choose</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="I spoke to is conversational; to whom I wrote is more formal." data-hint="Listen to whether the preposition stays at the end or moves before whom." data-fix="I spoke to is conversational; to whom I wrote is more formal."><p class="quiz-question">5. What register contrast appears in the final line?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I spoke to is conversational; to whom I wrote is more formal.">I spoke to is conversational; to whom I wrote is more formal.</button><button class="quiz-option" data-quiz-option="Both phrases are ungrammatical because prepositions are forbidden.">Both phrases are ungrammatical because prepositions are forbidden.</button><button class="quiz-option" data-quiz-option="Whom is the only possible form in all casual conversation.">Whom is the only possible form in all casual conversation.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details class="reveal-card">
+      <summary>Reveal the listening evidence</summary>
+      <div class="reveal-body">
+        <ol>
+          <li><span class="ex">Who</span> is the subject of <span class="ex">teaches</span>, so it stays. The phrase flows as one identifying unit.</li>
+          <li>Omar is the subject of <span class="ex">tested</span>; the projector is its unspoken object. The object relative word is omitted.</li>
+          <li><span class="ex">That</span> is present but weak. The contrastive content falls on <span class="ex">file</span> and <span class="ex">sent</span>.</li>
+          <li><span class="ex">Whose volunteers</span> expresses the group-volunteer association.</li>
+          <li><span class="ex">The coordinator I spoke to</span> is conversational; <span class="ex">the one to whom I wrote</span> uses a more formal fronted preposition.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <h2>Read a shortlist whose references matter</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Nia’s fictional workshop note</h3>
+    <p><span class="ex">We need the trainer who teaches evening classes because the workshop begins at 7:00 p.m. I recommend Lena Ortiz, whose recent sessions received strong accessibility feedback. Please reserve the projector Omar tested on Tuesday, not the older unit that loses its connection after ten minutes. We also need the room where the large tables are stored. The volunteers who completed first-aid training can supervise the activity stations; the other volunteers can welcome guests.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You used only Nia’s note to identify the trainer, possession link, reliable projector, room, and trained volunteer subset.">
+    <h3>Reading check: recover each exact referent</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="the trainer who teaches evening classes" data-hint="The workshop starts at 7:00 p.m., so the first sentence identifies the required schedule." data-fix="Nia needs the trainer who teaches evening classes."><p class="quiz-question">1. Which trainer does Nia’s schedule require?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the trainer who teaches evening classes">the trainer who teaches evening classes</button><button class="quiz-option" data-quiz-option="every trainer in the city">every trainer in the city</button><button class="quiz-option" data-quiz-option="a trainer whose schedule is never mentioned">a trainer whose schedule is never mentioned</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Lena’s recent sessions received the feedback." data-hint="Whose links Lena to her recent sessions." data-fix="Lena’s recent sessions received strong accessibility feedback."><p class="quiz-question">2. What does <span class="ex">whose recent sessions</span> mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lena’s recent sessions received the feedback.">Lena’s recent sessions received the feedback.</button><button class="quiz-option" data-quiz-option="Omar’s projector taught the sessions.">Omar’s projector taught the sessions.</button><button class="quiz-option" data-quiz-option="The room owns Lena.">The room owns Lena.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the projector Omar tested on Tuesday" data-hint="The note contrasts Omar’s tested unit with an older unit that loses its connection." data-fix="Nia asks for the projector Omar tested on Tuesday."><p class="quiz-question">3. Which projector should the team reserve?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the projector Omar tested on Tuesday">the projector Omar tested on Tuesday</button><button class="quiz-option" data-quiz-option="the older unit that loses its connection">the older unit that loses its connection</button><button class="quiz-option" data-quiz-option="any projector without checking it">any projector without checking it</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="only the volunteers who completed first-aid training" data-hint="The defining clause selects the trained subset for supervision." data-fix="Only the volunteers who completed first-aid training can supervise the stations."><p class="quiz-question">4. Who can supervise the activity stations?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="only the volunteers who completed first-aid training">only the volunteers who completed first-aid training</button><button class="quiz-option" data-quiz-option="all guests who enter the building">all guests who enter the building</button><button class="quiz-option" data-quiz-option="only volunteers who did not complete the training">only volunteers who did not complete the training</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build one subject clause and one zero object clause</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="the trainer who teaches evenings is available" data-hint="Begin with the trainer; keep who because it is the subject of teaches, then complete the main clause with is available." data-fix="The trainer who teaches evenings is available." data-success-message="Correct. Who supplies the subject of teaches, and the complete noun phrase controls is available.">
+    <h3>Build 1: keep the subject relative</h3><p class="tile-target">Identify the available trainer by that person’s teaching schedule.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="available">available</button><button class="tile" data-build-tile="trainer">trainer</button><button class="tile" data-build-tile="evenings">evenings</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="is">is</button><button class="tile" data-build-tile="who">who</button><button class="tile" data-build-tile="teaches">teaches</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="the projector Omar tested is in Room Three" data-hint="Begin with the projector, follow it directly with clause subject Omar and verb tested, then finish the main clause. The object relative word is intentionally omitted." data-fix="The projector Omar tested is in Room Three." data-success-message="Correct. Omar remains the subject of tested, and the projector is its understood object without a repeated pronoun.">
+    <h3>Build 2: use a zero object relative</h3><p class="tile-target">Identify the projector by Omar’s test. Omit object <span class="ex">that</span>.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="room">Room</button><button class="tile" data-build-tile="omar">Omar</button><button class="tile" data-build-tile="projector">projector</button><button class="tile" data-build-tile="three">Three</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="tested">tested</button><button class="tile" data-build-tile="in">in</button><button class="tile" data-build-tile="is">is</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the reference</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="which" data-hint="The noun engineer refers to a person in this context." data-fix="The engineer who designed the ramp is presenting today." data-why="Use who or that for a person; which refers to a thing." data-success-message="Correct. Who connects the person engineer to the subject action designed.">
+    <h3>Repair 1: match the human referent</h3><p>Tap the relative word that treats the engineer as a thing.</p><div class="spot-options"><button class="error-choice" data-error-choice="engineer">The engineer</button><button class="error-choice" data-error-choice="which">which</button><button class="error-choice" data-error-choice="designed">designed the ramp</button><button class="error-choice" data-error-choice="today">is presenting today.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="it" data-hint="That already represents the projector as the object of tested." data-fix="The projector that Omar tested works well." data-why="Do not repeat an object with it when the relative word already carries that role." data-success-message="Correct. Removing it leaves one subject, Omar, and one represented object, the projector.">
+    <h3>Repair 2: remove the repeated object</h3><p>Tap the extra object pronoun.</p><div class="spot-options"><button class="error-choice" data-error-choice="projector">The projector</button><button class="error-choice" data-error-choice="that">that</button><button class="error-choice" data-error-choice="omar">Omar tested</button><button class="error-choice" data-error-choice="it">it</button><button class="error-choice" data-error-choice="works">works well.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="in" data-hint="Where already carries the meaning in the room in this sentence." data-fix="This is the room where we store the tables." data-why="Use either the room where we store the tables or the room that we store the tables in, not both place relationships together." data-success-message="Correct. Removing the final in prevents a redundant place relationship.">
+    <h3>Repair 3: express the place relationship once</h3><p>Tap the redundant preposition.</p><div class="spot-options"><button class="error-choice" data-error-choice="room">This is the room</button><button class="error-choice" data-error-choice="where">where</button><button class="error-choice" data-error-choice="we">we store</button><button class="error-choice" data-error-choice="tables">the tables</button><button class="error-choice" data-error-choice="in">in.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing private people or places</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to identify a real employer, coworker, client, family member, address, private room, accessibility need, schedule, safety record, device, organization, or personal relationship. Use Nia, Omar, Lena, the workshop, and the fictional rooms and equipment on this page. Real details are optional.</p>
+  <div class="prompt-card"><b>People:</b> Choose a trainer, coordinator, and volunteer group. Give each one an essential clue using <span class="ex">who</span> or <span class="ex">whose</span>.</div>
+  <div class="prompt-card"><b>Things:</b> Choose one of two projectors and one of two files. Use one subject relative and one zero object relative.</div>
+  <div class="prompt-card"><b>Places:</b> Identify the correct room once with <span class="ex">where</span> and once with <span class="ex">that ... in</span>. Explain why you would not combine both patterns.</div>
+  <div class="prompt-card"><b>Information:</b> Make every clause necessary to choose the referent. Keep it beside its noun and read it without a comma-like pause.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: present a 75–90 second fictional shortlist</h3>
+    <p>Recommend one person, one organization, one thing, and one place for Nia’s workshop. The listener must choose among at least two options in each category. Use <span class="ex">who</span>, one defining <span class="ex">that</span> or <span class="ex">which</span>, <span class="ex">whose + noun</span>, and <span class="ex">where</span>. Include one subject relative that cannot be omitted, one zero object relative, and one verb whose number agrees with the noun it identifies.</p>
+    <p><b>Evidence check:</b> Can the listener identify every exact referent, locate the subject and open role inside each clause, explain one omission, hear one continuous rhythm group, and distinguish the essential clues from optional extra information?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You kept subject who, omitted only object that, and represented the organization-volunteer relationship with whose.">
+    <h3>Final check: defend the identifying structure</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="the technician who repairs the projectors" data-hint="Who performs repairs, so the subject relative must remain." data-fix="Use the technician who repairs the projectors."><p class="quiz-question">1. Which phrase has a required subject relative?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the technician who repairs the projectors">the technician who repairs the projectors</button><button class="quiz-option" data-quiz-option="the technician Nia recommended">the technician Nia recommended</button><button class="quiz-option" data-quiz-option="the projector Omar tested">the projector Omar tested</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The projector the coordinator reserved is available." data-hint="The coordinator remains as subject of reserved, so object that may be omitted." data-fix="The projector the coordinator reserved is available."><p class="quiz-question">2. Which sentence accurately uses a zero object relative?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The projector the coordinator reserved is available.">The projector the coordinator reserved is available.</button><button class="quiz-option" data-quiz-option="The projector stopped working is unavailable.">The projector stopped working is unavailable.</button><button class="quiz-option" data-quiz-option="The projector that the coordinator reserved it is available.">The projector that the coordinator reserved it is available.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the organization whose volunteers completed the training" data-hint="Whose must connect the organization to the associated noun volunteers." data-fix="Use the organization whose volunteers completed the training."><p class="quiz-question">3. Which phrase accurately identifies an organization through its volunteers?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the organization whose volunteers completed the training">the organization whose volunteers completed the training</button><button class="quiz-option" data-quiz-option="the organization who volunteers completed the training">the organization who volunteers completed the training</button><button class="quiz-option" data-quiz-option="the organization where volunteers it completed the training">the organization where volunteers it completed the training</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what exact noun does the clue identify?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">A defining clause is essential when...</span> <span class="ex">I keep the relative word when...</span> <span class="ex">I may omit it when...</span> <span class="ex">Whose is followed by...</span> <span class="ex">Where already means...</span> <span class="ex">I avoid what after a noun because...</span></p>
+    <p>Create one subject relative and one object relative about the same fictional workshop. Underline the subject inside each clause and explain why only one relative word may disappear.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day subject-object gap, where pattern, and reference retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Locate the noun, the subject inside the relative clause, and the role that points back to the noun before selecting an answer.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the subject-object gap distinction, the single place relationship, and the no-repeated-object rule.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The tutor who teaches evenings is available." data-hint="Who is the subject of teaches, so it must remain." data-fix="The tutor who teaches evenings is available."><p class="quiz-question">1. Which sentence keeps the required subject relative?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The tutor who teaches evenings is available.">The tutor who teaches evenings is available.</button><button class="quiz-option" data-quiz-option="The tutor teaches evenings is available.">The tutor teaches evenings is available.</button><button class="quiz-option" data-quiz-option="The tutor who she teaches evenings is available.">The tutor who she teaches evenings is available.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Both are grammatical; where includes the place relationship, while that works with final in." data-hint="Compare where we work with that we work in; each expresses the place relationship once." data-fix="Both are grammatical; where includes the place relationship, while that works with final in."><p class="quiz-question">2. What is accurate about <span class="ex">the room where we work</span> and <span class="ex">the room that we work in</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Both are grammatical; where includes the place relationship, while that works with final in.">Both are grammatical; where includes the place relationship, while that works with final in.</button><button class="quiz-option" data-quiz-option="Only the room where we work in is grammatical.">Only the room where we work in is grammatical.</button><button class="quiz-option" data-quiz-option="Both require what after the noun room.">Both require what after the noun room.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The file Nia sent was clear." data-hint="Nia is the subject of sent; the file is its understood object, so no repeated it is needed." data-fix="The file Nia sent was clear."><p class="quiz-question">3. Which sentence uses a zero object relative without repetition?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The file Nia sent was clear.">The file Nia sent was clear.</button><button class="quiz-option" data-quiz-option="The file sent Nia was clear.">The file sent Nia was clear.</button><button class="quiz-option" data-quiz-option="The file that Nia sent it was clear.">The file that Nia sent it was clear.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

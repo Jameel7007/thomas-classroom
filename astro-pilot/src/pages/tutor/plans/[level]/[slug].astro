@@ -1,0 +1,238 @@
+---
+import SiteLayout from "../../../../layouts/SiteLayout.astro";
+import PilotEvidenceWorksheet from "../../../../components/tutor/PilotEvidenceWorksheet.astro";
+import { assessmentRoutes } from "../../../../data/assessment-routes.mjs";
+import { getLesson, getLessonNavigation, getLessonsForLevel, readyLessons } from "../../../../data/lesson-catalog.mjs";
+import { getLessonQualityReview, LESSON_REVIEW_PILOT_TARGET } from "../../../../data/lesson-schema.mjs";
+import { curriculum } from "../../../../lib/curriculum";
+import { formatPageTitle } from "../../../../lib/page-title.mjs";
+import { buildTutorBrief } from "../../../../lib/tutor-plan.mjs";
+
+interface StructuredLessonModule {
+  page?: { level: string; slug: string };
+  lesson?: unknown;
+}
+interface TutorBrief {
+  source: "native" | "structured";
+  duration: string;
+  coreDuration: string;
+  extensionDuration: string;
+  extensionTitles: string[];
+  outcome: string;
+  principle: string;
+  retrieval: Array<{ prompt: string; answer: string }>;
+  practiceTitles: string[];
+  errors: Array<{ repair: string; why: string }>;
+  production: { title: string; setup: string; prompts: string[]; success: string[] };
+  nextUse: string;
+  sectionHeadings: string[];
+}
+const lessonModules = import.meta.glob<StructuredLessonModule>("../../../../content/lessons/{b1,b2,c1}/*.astro", { eager: true });
+
+export function getStaticPaths() {
+  return readyLessons.map((lesson) => ({
+    params: { level: lesson.level.toLowerCase(), slug: lesson.slug },
+    props: { lessonId: lesson.id },
+  }));
+}
+
+interface Props { lessonId: string }
+interface LessonReference { id: string; topic: string; status: "planned" | "ready" }
+const { lessonId } = Astro.props as Props;
+const lesson = getLesson(lessonId);
+if (!lesson || lesson.status !== "ready") throw new Error(`Tutor plan cannot resolve ready lesson ${lessonId}`);
+const level = curriculum.find((item) => item.code === lesson.level);
+if (!level) throw new Error(`Tutor plan cannot resolve curriculum level ${lesson.level}`);
+const prerequisites: LessonReference[] = lesson.prerequisites.map((id: string) => getLesson(id)).filter((item: unknown): item is LessonReference => Boolean(item));
+const related: LessonReference[] = lesson.related.map((id: string) => getLesson(id)).filter((item: unknown): item is LessonReference => Boolean(item));
+const assessment = assessmentRoutes.find((item) => item.slug === lesson.assessments[0]);
+const { previous, next } = getLessonNavigation(lesson.id);
+const courseLength = getLessonsForLevel(lesson.level).length;
+const planRoute = (item: { id: string }) => `/tutor/plans/${item.id}/`;
+const structuredLesson = Object.values(lessonModules).find((module) =>
+  module.page?.level === lesson.level && module.page?.slug === lesson.slug)?.lesson;
+const brief = buildTutorBrief(lesson, structuredLesson) as TutorBrief;
+const qualityReview = getLessonQualityReview(lesson);
+const needsHumanReview = Boolean(lesson.tutorReviewRequired || (lesson.qualityReview && qualityReview.status !== "reviewed"));
+const documentTitle = formatPageTitle(`${lesson.topic} · Tutor Session Plan`, { maxLength: 90 });
+const stages = [
+  {
+    time: "5 min",
+    name: "Retrieve",
+    purpose: "Activate what the learner already controls and check any prerequisite language.",
+    move: brief.retrieval.length
+      ? `Use these lesson-specific starters: ${brief.retrieval.map((item) => item.prompt).join(" · ")}`
+      : `Open with the first practice route: ${brief.practiceTitles.slice(0, 3).join(" · ")}.`,
+  },
+  {
+    time: "6–8 min",
+    name: "Notice",
+    purpose: "Let the learner observe meaning and form in a small sample before naming the rule.",
+    move: `Keep the noticing conversation anchored to this decision: ${brief.principle}`,
+  },
+  {
+    time: "8–10 min",
+    name: "Discover",
+    purpose: "Connect form, meaning, use, word order, and the nearest useful contrast.",
+    move: `Test the learner’s explanation against this repair: ${brief.errors[0].repair} ${brief.errors[0].why}`,
+  },
+  {
+    time: "12–15 min",
+    name: "Build + drill",
+    purpose: "Move from accurate choices to faster retrieval and sentence construction.",
+    move: `Prioritize these lesson tasks: ${brief.practiceTitles.slice(0, 4).join(" · ")}. Reduce repetitions if needed, but keep the final production time.`,
+  },
+  {
+    time: "12–15 min",
+    name: "Communicate",
+    purpose: "Use the target language for a real adult purpose the learner cannot complete by copying.",
+    move: `${brief.production.title}: ${brief.production.setup}`,
+  },
+  {
+    time: "3–5 min",
+    name: "Reflect",
+    purpose: "Make progress visible and choose one specific next use.",
+    move: brief.nextUse,
+  },
+];
+---
+<SiteLayout
+  title={documentTitle}
+  description={`Printable tutor session plan for the ${lesson.level} ${lesson.topic} lesson, with prerequisites, timing, teaching moves, evidence prompts, and next steps.`}
+  heading={`${lesson.level} Tutor Session Plan`}
+  lede={`Lesson ${lesson.sequence} · ${lesson.category} · ${level.name}`}
+  noindex={true}
+>
+  <section class="tab-page tutor-plan" data-tutor-plan={lesson.id}>
+    <nav class="tutor-breadcrumb" aria-label="Tutor plan breadcrumb"><a href="/tutor/">Tutor guide</a><span aria-hidden="true">/</span><a href={`/tutor/#tutor-${lesson.level}`}>{lesson.level}</a><span aria-hidden="true">/</span><span>{lesson.topic}</span></nav>
+
+    <header class="tutor-plan-header">
+      <div>
+        <p class="tab-overline">Printable one-to-one lesson plan</p>
+        <h2 class="tab-title">{lesson.topic}</h2>
+        <p class="tab-lede">{lesson.description}</p>
+      </div>
+      <div class="tutor-plan-actions">
+        <a class="home-link primary" href={lesson.route} data-learner-lesson>Open learner lesson</a>
+        <button class="home-link tutor-print-button" type="button" data-print-plan>Print this plan</button>
+      </div>
+    </header>
+
+    {needsHumanReview && (
+      <aside
+        class="tutor-review-flag"
+        data-tutor-review-required={lesson.tutorReviewRequired ? "true" : undefined}
+        data-quality-review-status={qualityReview.status}
+        data-learner-pilot-count={String(qualityReview.learnerPilotCount)}
+      >
+        <span class="tutor-card-label">{qualityReview.status === "editorial-review" ? "Editorial QA complete · learner pilots pending" : "Tutor review required"}</span>
+        <p>{qualityReview.revisionSummary}</p>
+        {qualityReview.generatedPedagogy && <p>Generated pedagogy remains provisional until a tutor reviews it in live learner use.</p>}
+        <p><b>Recorded learner pilots:</b> {qualityReview.learnerPilotCount} of {LESSON_REVIEW_PILOT_TARGET} required before the lesson can be marked reviewed.</p>
+      </aside>
+    )}
+
+    <div class="tutor-plan-overview">
+      <article><span class="tutor-card-label">Course position</span><b>{lesson.level} · Lesson {lesson.sequence} of {courseLength}</b><p>{level.blurb}</p></article>
+      <article><span class="tutor-card-label">Prerequisites</span>{prerequisites.length ? <ul>{prerequisites.map((item) => <li><a href={planRoute(item)}>{item.topic}</a></li>)}</ul> : <p>No required previous lesson. Use retrieval to establish the learner’s starting evidence.</p>}</article>
+      <article><span class="tutor-card-label">Related work</span>{related.length
+        ? <ul>{related.map((item) => <li>{item.status === "ready"
+          ? <a href={planRoute(item)}>{item.topic}</a>
+          : <span data-plan-related-planned>{item.topic} · Planned</span>}</li>)}</ul>
+        : <p>No additional related lesson is registered.</p>}</article>
+      <article><span class="tutor-card-label">Level evidence</span>{assessment?.status === "ready"
+        ? <><b>{assessment.title}</b><p>Use after the complete {lesson.level} sequence, not as a lesson quiz.</p><a href={assessment.route} data-plan-assessment>Open diagnostic →</a></>
+        : assessment
+          ? <><b>{assessment.title}</b><p data-plan-assessment-planned>This level diagnostic is planned and will be published after the full sequence is authored and reviewed.</p></>
+          : <p>No linked level diagnostic.</p>}</article>
+      {brief.extensionTitles.length > 0 && <article data-tutor-extension-path><span class="tutor-card-label">Core and extension</span><b>{brief.coreDuration} core</b><p>{brief.extensionDuration ? `${brief.extensionDuration} optional: ` : "Optional: "}{brief.extensionTitles.join(" · ")}</p></article>}
+    </div>
+
+    <section class="tutor-session-section tutor-lesson-brief" aria-labelledby="lesson-brief-title" data-tutor-brief-source={brief.source}>
+      <div class="tutor-section-heading">
+        <p class="tutor-card-label">Derived from this lesson’s source</p>
+        <h2 id="lesson-brief-title">Lesson-specific teaching brief</h2>
+        <p>This is not a second lesson registry. The plan reads the same native content that produces the learner page.</p>
+      </div>
+      <div class="tutor-evidence-grid">
+        <article data-tutor-outcome>
+          <span class="tutor-card-label">Observable outcome</span>
+          <h3>What the learner should do</h3>
+          <p>{brief.outcome}</p>
+        </article>
+        <article data-tutor-principle>
+          <span class="tutor-card-label">Core decision</span>
+          <h3>What must become clear</h3>
+          <p>{brief.principle}</p>
+        </article>
+        <article data-tutor-repairs>
+          <span class="tutor-card-label">Watch and repair</span>
+          <h3>High-value friction points</h3>
+          <ol class="tutor-repair-list">
+            {brief.errors.map((error) => <li class="tutor-repair-item"><b>{error.repair}</b><span>{error.why}</span></li>)}
+          </ol>
+        </article>
+        <article data-tutor-practice>
+          <span class="tutor-card-label">{brief.retrieval.length ? "Retrieval starters" : "Practice route"}</span>
+          <h3>{brief.retrieval.length ? "Ask before explaining" : "Protect these lesson moments"}</h3>
+          {brief.retrieval.length ? (
+            <ol class="tutor-practice-list">
+              {brief.retrieval.map((item) => <li data-tutor-practice-item><b>{item.prompt}</b><span>Expected: {item.answer}</span></li>)}
+            </ol>
+          ) : (
+            <ol class="tutor-practice-list">
+              {brief.practiceTitles.slice(0, 5).map((title) => <li data-tutor-practice-item>{title}</li>)}
+            </ol>
+          )}
+        </article>
+        <article data-tutor-production>
+          <span class="tutor-card-label">Final production</span>
+          <h3>{brief.production.title}</h3>
+          <p>{brief.production.setup}</p>
+          {brief.production.prompts.length > 0 && <ul>{brief.production.prompts.map((prompt) => <li>{prompt}</li>)}</ul>}
+          {brief.production.success.length > 0 && <p class="tutor-success"><b>Listen for:</b> {brief.production.success.join(" · ")}</p>}
+        </article>
+        <article data-tutor-next-use>
+          <span class="tutor-card-label">Next retrieval</span>
+          <h3>Carry this language into the next session</h3>
+          <p>{brief.nextUse}</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tutor-session-section" aria-labelledby="session-sequence-title">
+      <div class="tutor-section-heading"><p class="tutor-card-label">{brief.coreDuration} core working plan</p><h2 id="session-sequence-title">Session sequence</h2><p>Protect the final communication and reflection time. If the learner needs more support, reduce the number of controlled items instead of removing production.</p></div>
+      <ol class="tutor-stage-list">
+        {stages.map((stage) => <li><span class="tutor-stage-time">{stage.time}</span><div><h3>{stage.name}</h3><p>{stage.purpose}</p><p class="tutor-move"><b>Teacher move:</b> {stage.move}</p></div></li>)}
+      </ol>
+    </section>
+
+    <section class="tutor-session-section tutor-evidence" aria-labelledby="evidence-title">
+      <div class="tutor-section-heading"><p class="tutor-card-label">Keep only useful evidence</p><h2 id="evidence-title">After-lesson notes</h2><p>These notes are for deliberate tutor records or printing. Nothing is stored in the learner’s browser.</p></div>
+      <div class="tutor-evidence-grid">
+        <article><h3>The learner can now…</h3><p>Write one observable use of the target language.</p><div class="tutor-writing-lines" aria-hidden="true"></div></article>
+        <article><h3>Still needs support with…</h3><p>Record one repeated error, contrast, or point of hesitation.</p><div class="tutor-writing-lines" aria-hidden="true"></div></article>
+        <article><h3>Next retrieval prompt</h3><p>Write one short prompt the learner will answer at the next session.</p><div class="tutor-writing-lines" aria-hidden="true"></div></article>
+      </div>
+    </section>
+
+    {needsHumanReview && (
+      <PilotEvidenceWorksheet
+        lesson={lesson}
+        review={qualityReview}
+        outcome={brief.outcome}
+        principle={brief.principle}
+        productionSuccess={brief.production.success}
+      />
+    )}
+
+    <nav class="tutor-plan-sequence" aria-label="Tutor plan sequence">
+      {previous ? <a rel="prev" href={planRoute(previous)}><span>← Previous plan</span><b>{previous.topic}</b></a> : <a href="/tutor/"><span>← Planning guide</span><b>All A0–C1 lessons</b></a>}
+      {next ? <a rel="next" href={planRoute(next)}><span>Next plan →</span><b>{next.topic}</b></a> : assessment?.status === "ready" ? <a href={assessment.route}><span>Level complete →</span><b>{assessment.title}</b></a> : null}
+    </nav>
+  </section>
+</SiteLayout>
+
+<script>
+  document.querySelector<HTMLButtonElement>("[data-print-plan]")?.addEventListener("click", () => window.print());
+</script>

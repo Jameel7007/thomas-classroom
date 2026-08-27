@@ -1,0 +1,333 @@
+---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
+import StructuredLesson from "../../../components/lesson/StructuredLesson.astro";
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+
+export const page = defineLesson({
+  "title": "Advanced tense and aspect review · C1 Grammar",
+  "slug": "advanced-tense-and-aspect-review",
+  "level": "C1",
+  "topic": "Advanced tense and aspect review",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
+  "description": "Choose tense and aspect from the speaker’s viewpoint to frame completion, duration, relevance, sequence, and future projection precisely.",
+  "sequence": 1,
+  "prerequisites": ["b2/future-perfect-and-future-continuous", "b2/past-perfect-continuous", "b2/reported-speech"],
+  "related": ["c1/narrative-tenses-and-viewpoint", "c1/advanced-modal-meaning-and-stance"],
+  "assessments": ["c1-exit"],
+  "tutorReviewRequired": true
+});
+
+export const lesson = {
+  duration: "75–90 min",
+  outcome: "Make deliberate tense and aspect choices across a sustained account, then explain how each choice changes the listener’s view of time, completion, duration, and current relevance.",
+  focus: "viewpoint, time reference, and aspect choice",
+  tags: ["simple versus progressive", "perfect viewpoint", "discourse control"],
+  retrieval: [
+    {
+      prompt: "Contrast a completed result with an activity still in progress: write the report / since Monday.",
+      answer: "I’ve written the report shows a completed result. I’ve been writing the report since Monday foregrounds the continuing activity.",
+    },
+    {
+      prompt: "Look back from a past deadline: the team / test the system / for six weeks.",
+      answer: "The team had been testing the system for six weeks before the deadline.",
+    },
+    {
+      prompt: "Project completion forward from now: by next Friday / we / interview / all candidates.",
+      answer: "By next Friday, we will have interviewed all the candidates.",
+    },
+  ],
+  notice: {
+    title: "One project, three viewpoints",
+    setup: "A program director updates a funding partner. The dates are the same, but each verb choice directs attention differently.",
+    samples: [
+      "We launched the mentoring program in 2021, and we have supported more than 600 participants since then.",
+      "We have been tracking long-term outcomes for the past eighteen months, so the evidence is becoming more reliable.",
+      "By next June, we will have been running the program for ten years.",
+    ],
+    questions: [
+      "Which verb presents a finished event at a finished past time?",
+      "Which perfect form foregrounds a result that matters now, and which foregrounds an activity developing through time?",
+      "Why does the final sentence use a future perfect progressive rather than a simple future form?",
+    ],
+    check: {
+      question: "Why does the director say “have been tracking” rather than “tracked”?",
+      answer: "The tracking began earlier, continues around now, and its developing duration matters.",
+      options: [
+        { value: "The tracking began earlier, continues around now, and its developing duration matters." },
+        { value: "The tracking was a single finished action at a stated past time." },
+        { value: "The director is making a prediction with no present evidence." },
+      ],
+      hint: "Follow the activity from its earlier starting point to the current update.",
+    },
+  },
+  discover: {
+    principle: "Tense locates a viewpoint in time. Aspect shows how the speaker chooses to view the situation from that point: as a whole, as unfolding, as prior and relevant, or as prior activity with duration. At C1, accuracy includes choosing the view that serves the message.",
+    formRows: [
+      {
+        label: "simple viewpoint",
+        form: "finite verb in the relevant time frame",
+        example: "The committee rejected the proposal yesterday.",
+      },
+      {
+        label: "progressive viewpoint",
+        form: "be + -ing",
+        example: "The committee is reconsidering the funding model.",
+      },
+      {
+        label: "perfect viewpoint",
+        form: "have + past participle",
+        example: "The committee has approved three revisions.",
+      },
+      {
+        label: "perfect progressive viewpoint",
+        form: "have + been + -ing",
+        example: "The committee has been reviewing the evidence since May.",
+      },
+    ],
+    meaningRows: [
+      {
+        choice: "simple",
+        use: "you present a situation as a whole, a fact, a completed event, or a repeated pattern",
+        example: "She consults for several nonprofits.",
+      },
+      {
+        choice: "progressive",
+        use: "you foreground an unfolding, temporary, changing, or limited situation",
+        example: "She is consulting for a health nonprofit this year.",
+      },
+      {
+        choice: "perfect",
+        use: "you connect an earlier situation to a later viewpoint through result, experience, or sequence",
+        example: "She has advised the organization on three major projects.",
+      },
+      {
+        choice: "perfect progressive",
+        use: "you connect earlier activity to a later viewpoint while foregrounding duration, repetition, or evidence",
+        example: "She has been advising the organization since January.",
+      },
+    ],
+    pronunciation: "Auxiliaries are usually reduced in fluent speech: “we’ve been TRACKing,” “they’d already LEFT,” and “we’ll have FINished.” Stress the information that updates the timeline. Keep an auxiliary strong only when correcting or contrasting: “I HAVE finished it.”",
+    errors: [
+      {
+        wrong: "I work with this client since 2022.",
+        correct: "I have worked with this client since 2022.",
+        why: "Since introduces a starting point connected to now, so the present perfect is needed.",
+      },
+      {
+        wrong: "By Friday, we complete the final review.",
+        correct: "By Friday, we will have completed the final review.",
+        why: "The completion is viewed from a future deadline.",
+      },
+      {
+        wrong: "When the report arrived, they reviewed the data for three weeks.",
+        correct: "When the report arrived, they had been reviewing the data for three weeks.",
+        why: "The reviewing began before the report arrived, and its duration is relevant at that past point.",
+      },
+    ],
+  },
+  reference: {
+    title: "A decision path for difficult choices",
+    intro: "Before choosing a form, identify the time viewpoint and the part of the situation you want the listener to notice.",
+    groups: [
+      {
+        heading: "Locate the viewpoint",
+        items: ["now", "a finished past point", "a future point", "one past event viewed from another"],
+      },
+      {
+        heading: "Choose the view",
+        items: ["whole fact or event", "unfolding or temporary activity", "prior result", "prior duration or repeated activity"],
+      },
+      {
+        heading: "Check the evidence",
+        items: ["finished-time phrase", "since or for phrase", "quantity or result", "visible consequence", "deadline"],
+      },
+    ],
+  },
+  build: [
+    {
+      question: "The laboratory started the trial in January. It is still collecting data. Which update fits both facts?",
+      answer: "The laboratory has been collecting data since January.",
+      options: [
+        { value: "The laboratory has been collecting data since January." },
+        { value: "The laboratory collected data since January." },
+        { value: "The laboratory will collect data since January." },
+      ],
+      hint: "The activity began earlier, continues now, and its duration is central.",
+    },
+    {
+      question: "The audit is tomorrow. All twelve departments are already finished. Which sentence foregrounds the completed result?",
+      answer: "We have audited all twelve departments.",
+      options: [
+        { value: "We have audited all twelve departments." },
+        { value: "We have been auditing all twelve departments." },
+        { value: "We audited all twelve departments tomorrow." },
+      ],
+      hint: "A completed quantity favors the simple perfect.",
+    },
+    {
+      question: "A director explains a temporary arrangement for this quarter, not her permanent role. Which sentence is most precise?",
+      answer: "I’m overseeing the regional office this quarter.",
+      options: [
+        { value: "I’m overseeing the regional office this quarter." },
+        { value: "I oversee the regional office this quarter every day forever." },
+        { value: "I have overseen the regional office next quarter." },
+      ],
+      hint: "The progressive can frame a current role as temporary and limited.",
+    },
+    {
+      question: "At 4:00 yesterday, the analysts discovered the cause. Their investigation had started at 9:00. Which sentence highlights the earlier duration?",
+      answer: "They had been investigating for seven hours when they found the cause.",
+      options: [
+        { value: "They had been investigating for seven hours when they found the cause." },
+        { value: "They are investigating for seven hours when they found the cause." },
+        { value: "They will have investigated before 9:00 yesterday." },
+      ],
+      hint: "Look backward from the discovery and foreground the seven-hour activity.",
+    },
+    {
+      question: "The program’s tenth anniversary is next June. Which sentence measures the activity up to that future point?",
+      answer: "By next June, we will have been running the program for ten years.",
+      options: [
+        { value: "By next June, we will have been running the program for ten years." },
+        { value: "By next June, we ran the program for ten years." },
+        { value: "Next June, we have run the program yesterday." },
+      ],
+      hint: "View an activity’s duration from a future anniversary.",
+    },
+  ],
+  context: {
+    title: "A delayed research partnership",
+    intro: "Read the project lead’s account. Notice how each tense choice organizes evidence around now, an earlier meeting, and a future deadline.",
+    lines: [
+      "Our university began discussing the partnership last fall. By the time the two teams met in February, we had already exchanged three draft agreements and had been negotiating data access for four months.",
+      "Since that meeting, both sides have revised their security procedures. We have been testing the new system with a small group, and the initial results are encouraging.",
+      "The full study starts in September. By then, the technical team will have completed the migration, and the researchers will have been working together for almost a year.",
+    ],
+    questions: [
+      {
+        question: "Which completed activity happened before the February meeting?",
+        answer: "The teams had exchanged three draft agreements.",
+        options: [
+          { value: "The teams had exchanged three draft agreements." },
+          { value: "The full study had started in September." },
+          { value: "The technical team had abandoned the migration." },
+        ],
+        hint: "Look for a completed quantity before the past meeting.",
+      },
+      {
+        question: "Why is “have been testing” appropriate in the second paragraph?",
+        answer: "The test is a current developing activity whose early evidence matters now.",
+        options: [
+          { value: "The test is a current developing activity whose early evidence matters now." },
+          { value: "The test ended at a stated time last fall." },
+          { value: "The test will begin only after September." },
+        ],
+        hint: "Connect the small-group activity to the encouraging results now.",
+      },
+      {
+        question: "What will be complete by September?",
+        answer: "The technical migration",
+        options: [
+          { value: "The technical migration" },
+          { value: "A full year of the study" },
+          { value: "The February meeting" },
+        ],
+        hint: "Distinguish the completed future result from the continuing collaboration.",
+      },
+    ],
+  },
+  builder: {
+    title: "Build the future duration",
+    prompt: "Measure the program’s duration from its next anniversary.",
+    answer: "By next June they will have been running the program for ten years",
+    tiles: ["By", "next", "June", "they", "will", "have", "been", "running", "the", "program", "for", "ten", "years"],
+  },
+  repairs: [
+    {
+      title: "Connect the starting point to now",
+      sentence: "I work here since the office opened.",
+      answer: "work",
+      fix: "I have worked here since the office opened.",
+      why: "The situation began in the past and remains connected to now.",
+      tokens: [
+        { value: "i", label: "I" },
+        { value: "work", label: "work" },
+        { value: "here", label: "here" },
+        { value: "since", label: "since the office opened" },
+      ],
+    },
+    {
+      title: "View completion from the deadline",
+      sentence: "By Friday, we complete the final interviews.",
+      answer: "complete",
+      fix: "By Friday, we will have completed the final interviews.",
+      why: "The interviews are expected to be complete before a future reference point.",
+      tokens: [
+        { value: "friday", label: "By Friday" },
+        { value: "we", label: "we" },
+        { value: "complete", label: "complete" },
+        { value: "interviews", label: "the final interviews" },
+      ],
+    },
+    {
+      title: "Show the earlier duration",
+      sentence: "When the report arrived, they reviewed the data for three weeks.",
+      answer: "reviewed",
+      fix: "When the report arrived, they had been reviewing the data for three weeks.",
+      why: "The review was already in progress before the report arrived, and its duration matters.",
+      tokens: [
+        { value: "when", label: "When the report arrived" },
+        { value: "they", label: "they" },
+        { value: "reviewed", label: "reviewed" },
+        { value: "data", label: "the data" },
+        { value: "weeks", label: "for three weeks" },
+      ],
+    },
+  ],
+  fluency: [
+    {
+      prompt: "Your organization started a project two years ago. It continues now. Give one result and one continuing process.",
+      answer: "We have reached 2,000 users, and we have been improving the service for two years.",
+    },
+    {
+      prompt: "Look back from a past turning point. Explain what had finished and what had been continuing.",
+      answer: "By the time the policy changed, we had completed the pilot and had been collecting feedback for six months.",
+    },
+    {
+      prompt: "Look forward to a deadline. State one completed result and one measured duration.",
+      answer: "By December, we will have opened three offices and will have been operating in the region for five years.",
+    },
+  ],
+  communicate: {
+    title: "The timeline briefing",
+    setup: "Give a two-minute briefing on a real project, career change, research task, or long-term goal. Move from its origin to the present and then to a future milestone. Your listener should be able to reconstruct the timeline without seeing your notes.",
+    roles: [
+      "Speaker: establish three reference points, distinguish results from processes, and make at least one deliberate contrast between two possible aspect choices.",
+      "Listener: draw the timeline, ask what was complete or still developing at each point, and request clarification if a verb choice creates an unclear sequence.",
+    ],
+    prompts: [
+      "When did it begin, and what has changed since then?",
+      "What had already happened by the turning point?",
+      "What had been happening, and for how long?",
+      "What will have changed by the next milestone?",
+    ],
+    success: [
+      "Every tense choice has a clear time reference, even when the reference is understood from context.",
+      "Simple forms foreground facts or results, while progressive forms foreground activity, duration, or temporary limits.",
+      "The account remains coherent across past, present, and future viewpoints.",
+    ],
+  },
+  reflect: {
+    canDo: [
+      "Choose simple, progressive, perfect, and perfect progressive forms for a communicative reason.",
+      "Maintain a clear timeline across several reference points.",
+      "Explain how a different aspect choice would change the listener’s interpretation.",
+    ],
+    nextUse: "Record a ninety-second update about a long-term project. Listen again and identify the viewpoint and aspect purpose of every verb phrase.",
+  },
+};
+---
+
+<LessonPage page={page}><StructuredLesson page={page} lesson={lesson} /></LessonPage>

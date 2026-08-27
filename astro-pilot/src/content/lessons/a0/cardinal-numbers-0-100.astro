@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Cardinal numbers 0–100 · A0 Grammar · Curriculum Map",
+  "title": "Cardinal numbers 0–100 · A0 Grammar",
   "slug": "cardinal-numbers-0-100",
   "level": "A0",
   "topic": "Cardinal numbers 0–100",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Numbers run your day: your age , a price , a phone number , a house number. Learn 0–20 , the tens, and how to join them with a hyphen — twenty-one, forty-five, ninety-nine . The ha",
+  "description": "Understand and say numbers from 0 to 100 for ages, prices, phone numbers, addresses, quantities, and other everyday information.",
   "sequence": 8,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/regular-plural-nouns"
+  ],
+  "related": [
+    "a0/days-months-dates",
+    "a1/daily-routines-and-telling-the-time"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 40,
+    "revisionSummary": "Number meaning, use-specific reading, -teen/-ty stress, relaxed U.S. pronunciation, item context, feedback, timing, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="40–45 minutes" data-extension-duration="10–15 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 08</p>
   <h1>Cardinal numbers <em>0–100</em></h1>
-  <p class="standfirst">Numbers run your day: your <strong>age</strong>, a <strong>price</strong>, a <strong>phone number</strong>, a house number. Learn <span class="ex">0–20</span>, the tens, and how to join them with a hyphen — <span class="ex">twenty-one, forty-five, ninety-nine</span>. The hard part is hearing <span class="ex">thirteen</span> versus <span class="ex">thirty</span>.</p>
+  <p class="standfirst">Numbers run your day: your <strong>age</strong>, a <strong>price</strong>, a <strong>phone number</strong>, and a room or house number. Learn <span class="ex">0–20</span>, the tens, and how to build <span class="ex">21–99</span>. Then make close pairs such as <span class="ex">thirteen</span> and <span class="ex">thirty</span> easy to hear and confirm.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
+    <span class="tag">40–45 min core</span>
     <span class="tag">-teen / -ty</span>
-    <span class="tag">age · prices · numbers</span>
-    <span class="tag">10 interactive tasks</span>
+    <span class="tag">age · prices · digits</span>
+    <span class="tag">10–15 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,24 +51,24 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Age, prices, phone numbers.</span></div>
   </div>
 
-  <p class="note-line">Two spellings to watch all lesson: <span class="ex">forty</span> (not <span class="ex">fourty</span>) and <span class="ex">ninety</span>. We write joined numbers with a hyphen: <span class="ex">twenty-one</span>.</p>
+  <p class="note-line">Three spellings to watch all lesson: <span class="ex">forty</span> (not <span class="ex">fourty</span>), <span class="ex">eighty</span>, and <span class="ex">ninety</span>. From 21 to 99, use a hyphen when the number is not a whole ten: <span class="ex">twenty-one</span>, but <span class="ex">twenty</span>.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Where asks about place, her connects the phone to she, and these agrees with are.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="where">Where</button>
-      <button class="choice-option" data-choice-option="who">Who</button>
+      <button class="choice-option" data-choice-option="where" data-value-label-variant="case">Where</button>
+      <button class="choice-option" data-choice-option="who" data-value-label-variant="case">Who</button>
       <button class="choice-option" data-choice-option="her">her</button>
       <button class="choice-option" data-choice-option="his">his</button>
       <button class="choice-option" data-choice-option="are">are</button>
       <button class="choice-option" data-choice-option="is">is</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="where" data-placeholder="choose">choose</button> are you from? &nbsp;<span class="contraction">(previous lesson · question words)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Maya has a new phone. It is <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> phone. &nbsp;<span class="contraction">(older lesson · possessives)</span></span></div>
-    <div class="q"><span class="n">3</span><span>These <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> my keys. &nbsp;<span class="contraction">(common contrast · one vs. many)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="where" data-hint="The answer will name a place, so choose the place question word." data-fix="Where are you from?" data-placeholder="choose">choose</button> are you from? &nbsp;<span class="contraction">(previous lesson · question words)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Maya uses <span class="ex">she</span>. She has a new phone. It is <button class="choice-gap" data-choice-gap data-answer="her" data-hint="The owner is she; use the possessive adjective connected to she." data-fix="It is her phone." data-placeholder="choose">choose</button> phone. &nbsp;<span class="contraction">(older lesson · possessives)</span></span></div>
+    <div class="q"><span class="n">3</span><span>These <button class="choice-gap" data-choice-gap data-answer="are" data-hint="These and keys both show more than one." data-fix="These are my keys." data-placeholder="choose">choose</button> my keys. &nbsp;<span class="contraction">(common contrast · one vs. many)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -68,25 +82,25 @@ export const page = defineLesson({
     <h3>Two numbers that sound close</h3>
     <p><span class="ex">thir<strong>TEEN</strong> (13) &nbsp; · &nbsp; <strong>THIR</strong>ty (30)</span></p>
     <ul>
-      <li>Say both slowly. Where is the <strong>stress</strong> — the loud part — in <span class="ex">thirteen</span>? Where is it in <span class="ex">thirty</span>?</li>
+      <li>Say both slowly. Where is the <strong>stress</strong>, the loud part, in <span class="ex">thirteen</span>? Where is it in <span class="ex">thirty</span>?</li>
       <li>One word ends in <span class="ex">-teen</span> and one ends in <span class="ex">-ty</span>. Which ending means the smaller number, 13?</li>
       <li>Try the same pair for 14 / 40 and 15 / 50. What stays the same in each pair?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the numeral, then choose the word</h3>
-    <p class="choice-hint">The number in brackets is your cue — pick the word that matches it exactly</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The numeral fixes the meaning: -teen names 13 or 15, while -ty names 30 or 50.">
+    <h3>Discovery check: read the numeral, then choose the word</h3>
+    <p class="choice-hint">The number in brackets is your cue. Pick the word that matches it exactly.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="thirteen">thirteen</button>
       <button class="choice-option" data-choice-option="thirty">thirty</button>
       <button class="choice-option" data-choice-option="fifteen">fifteen</button>
       <button class="choice-option" data-choice-option="fifty">fifty</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I am <button class="choice-gap" data-choice-gap data-answer="thirty" data-placeholder="choose">choose</button> years old. &nbsp;<span class="contraction">(30)</span></span></div>
-    <div class="q"><span class="n">2</span><span>The bus is number <button class="choice-gap" data-choice-gap data-answer="thirteen" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(13)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The ticket costs <button class="choice-gap" data-choice-gap data-answer="fifty" data-placeholder="choose">choose</button> dollars. &nbsp;<span class="contraction">(50)</span></span></div>
-    <div class="q"><span class="n">4</span><span>She is <button class="choice-gap" data-choice-gap data-answer="fifteen" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(15)</span></span></div>
+    <div class="q"><span class="n">1</span><span>I am <button class="choice-gap" data-choice-gap data-answer="thirty" data-hint="30 is a whole ten, so its word ends in -ty." data-fix="I am thirty years old." data-placeholder="choose">choose</button> years old. &nbsp;<span class="contraction">(30)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The bus is number <button class="choice-gap" data-choice-gap data-answer="thirteen" data-hint="13 is between 12 and 14, so its word ends in -teen." data-fix="The bus is number thirteen." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(13)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The ticket costs <button class="choice-gap" data-choice-gap data-answer="fifty" data-hint="50 is a whole ten, so choose the -ty word." data-fix="The ticket costs fifty dollars." data-placeholder="choose">choose</button> dollars. &nbsp;<span class="contraction">(50)</span></span></div>
+    <div class="q"><span class="n">4</span><span>Her age is <button class="choice-gap" data-choice-gap data-answer="fifteen" data-hint="15 is between 14 and 16, so choose the -teen word." data-fix="Her age is fifteen." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(15)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -102,7 +116,7 @@ export const page = defineLesson({
   <p><span class="ex">twenty · thirty · forty · fifty · sixty · seventy · eighty · ninety · one hundred</span></p>
   <p><strong>To make 21–99, join the ten and the one with a hyphen:</strong> &nbsp;<span class="ex">twenty-one (21), thirty-five (35), forty-eight (48), ninety-nine (99)</span>.</p>
 
-  <h3>-teen vs -ty: the table to memorize</h3>
+  <h3>Compare the complete -teen and -ty families</h3>
   <table>
     <thead><tr><th>numeral</th><th>-teen (13–19)</th><th>numeral</th><th>-ty (the tens)</th></tr></thead>
     <tbody>
@@ -111,24 +125,65 @@ export const page = defineLesson({
       <tr><td>15</td><td><b>fif</b>teen</td><td>50</td><td><b>fif</b>ty</td></tr>
       <tr><td>16</td><td><b>six</b>teen</td><td>60</td><td><b>six</b>ty</td></tr>
       <tr><td>17</td><td><b>seven</b>teen</td><td>70</td><td><b>seven</b>ty</td></tr>
+      <tr><td>18</td><td><b>eigh</b>teen</td><td>80</td><td><b>eigh</b>ty</td></tr>
+      <tr><td>19</td><td><b>nine</b>teen</td><td>90</td><td><b>nine</b>ty</td></tr>
     </tbody>
   </table>
 
   <div class="note">
     <h3>Meaning and spelling check</h3>
     <ul>
-      <li>Stress often helps in clear, careful speech: <span class="ex">thir<strong>TEEN</strong></span> usually has stronger stress at the end, while <span class="ex"><strong>THIR</strong>ty</span> usually has stronger stress at the start. The <span class="ex">-teen</span> words mean 13–19; the <span class="ex">-ty</span> words mean the tens: 20, 30, 40, and so on.</li>
-      <li>Is it <span class="ex">fourty</span>? <strong>No.</strong> The number 40 is spelled <span class="ex">forty</span> — drop the <em>u</em> from <em>four</em>.</li>
+      <li>Stress helps in clear, careful speech: by itself, <span class="ex">thir<strong>TEEN</strong></span> usually has stronger stress at the end, while <span class="ex"><strong>THIR</strong>ty</span> has stronger stress at the start. Sentence rhythm or contrast can move the stress, so do not use stress as your only clue. Also listen for the final <span class="ex">n</span> in <span class="ex">-teen</span> and confirm the numeral when the information matters.</li>
+      <li>Is it <span class="ex">fourty</span>? <strong>No.</strong> The number 40 is spelled <span class="ex">forty</span>. Drop the <em>u</em> from <em>four</em>.</li>
       <li>Is it <span class="ex">twenty one</span> with a space? In writing we use a hyphen: <span class="ex">twenty-one</span>. The whole number is one tile when we build it.</li>
       <li>What about 100? Say <span class="ex">one hundred</span> (or just <span class="ex">a hundred</span>).</li>
     </ul>
   </div>
 
+  <div class="note">
+    <h3>One number can be read differently for a different job</h3>
+    <ul>
+      <li><strong>Quantity, age, or price:</strong> read the whole number. <span class="ex">30 clients → thirty clients; $30 → thirty dollars</span>.</li>
+      <li><strong>Phone number or code:</strong> read one digit at a time. <span class="ex">555-0137 → five five five, zero one three seven</span>. In phone numbers, speakers also commonly say <span class="ex">oh</span> for zero.</li>
+      <li><strong>Important information:</strong> say the number, pause, and confirm it. <span class="ex">Did you say thirteen or thirty?</span></li>
+      <li><strong>Boundary:</strong> cardinal numbers answer <span class="ex">how many?</span> or identify a number. Order words such as <span class="ex">first, second, third</span> are ordinal numbers and belong to a later lesson.</li>
+    </ul>
+    <p>In relaxed U.S. speech, the <span class="ex">t</span> in some <span class="ex">-ty</span> words may sound very quick, almost like <span class="ex">d</span>. <span class="ex">Twenty</span> may even sound close to <span class="ex">twenny</span>. Learn the clear form first, then listen for these natural variants without copying them in spelling.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-lesson-extension="Optional tutor-read -teen and -ty listening" data-success-message="Correct. You distinguished all three -teen/-ty pairs from the complete spoken chunks and confirmed the exact number.">
+    <h3>Listen: -teen or -ty?</h3>
+    <p class="choice-hint">Ask your teacher to read the six chunks in order. Listen before you open the transcript, choose the complete number word, and ask for one repetition if needed.</p>
+    <div class="choice-bank" aria-label="Spoken number choices">
+      <button class="choice-option" data-choice-option="thirteen">thirteen</button>
+      <button class="choice-option" data-choice-option="thirty">thirty</button>
+      <button class="choice-option" data-choice-option="fourteen">fourteen</button>
+      <button class="choice-option" data-choice-option="forty">forty</button>
+      <button class="choice-option" data-choice-option="fifteen">fifteen</button>
+      <button class="choice-option" data-choice-option="fifty">fifty</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>room <button class="choice-gap" data-choice-gap data-answer="thirteen" data-hint="Listen for a strong -teen ending and a final n." data-fix="room thirteen" data-placeholder="listen">listen</button></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="thirty" data-hint="Listen for first-syllable stress and no final n." data-fix="thirty dollars" data-placeholder="listen">listen</button> dollars</span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="fourteen" data-hint="Listen for a strong -teen ending and a final n." data-fix="fourteen people" data-placeholder="listen">listen</button> people</span></div>
+    <div class="q"><span class="n">4</span><span>bus number <button class="choice-gap" data-choice-gap data-answer="forty" data-hint="Listen for first-syllable stress and the short -ty ending." data-fix="bus number forty" data-placeholder="listen">listen</button></span></div>
+    <div class="q"><span class="n">5</span><span>gate <button class="choice-gap" data-choice-gap data-answer="fifteen" data-hint="Listen for a strong -teen ending and a final n." data-fix="gate fifteen" data-placeholder="listen">listen</button></span></div>
+    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="fifty" data-hint="Listen for first-syllable stress and the short -ty ending." data-fix="fifty minutes" data-placeholder="listen">listen</button> minutes</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+    <details>
+      <summary>Tutor script and transcript</summary>
+      <p>Read naturally, one chunk at a time: <span class="ex">room thirteen; thirty dollars; fourteen people; bus number forty; gate fifteen; fifty minutes</span>. Repeat once in a different order after the learner checks.</p>
+    </details>
+  </div>
+
   <h2>Read the number, say the number</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 1 — match each numeral to its word</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each numeral matches its complete -teen or -ty word, including the irregular spelling forty.">
+    <h3>Drill 1: match each numeral to its word</h3>
     <p class="tile-target">Tap a numeral, then tap the word that fits it. Watch the -teen / -ty endings.</p>
     <div class="tile-bank">
       <button class="tile" data-tile="13">13</button>
@@ -137,10 +192,10 @@ export const page = defineLesson({
       <button class="tile" data-tile="50">50</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="13" data-placeholder="thirteen">thirteen</button>
-      <button class="slot" data-slot="30" data-placeholder="thirty">thirty</button>
-      <button class="slot" data-slot="40" data-placeholder="forty">forty</button>
-      <button class="slot" data-slot="50" data-placeholder="fifty">fifty</button>
+      <button class="slot" data-slot="13" data-hint="This word ends in -teen and names the number after twelve." data-fix="13 → thirteen" data-placeholder="thirteen">thirteen</button>
+      <button class="slot" data-slot="30" data-hint="This is a whole ten, so the word ends in -ty." data-fix="30 → thirty" data-placeholder="thirty">thirty</button>
+      <button class="slot" data-slot="40" data-hint="This whole ten drops the u from four." data-fix="40 → forty" data-placeholder="forty">forty</button>
+      <button class="slot" data-slot="50" data-hint="This is a whole ten built from five with the spelling fifty." data-fix="50 → fifty" data-placeholder="fifty">fifty</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -149,8 +204,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2 — choose the word for each numeral</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Every written word matches the numeral and its real-life context, including forty, ninety, and the -teen/-ty contrasts.">
+    <h3>Drill 2: choose the word for each numeral</h3>
     <p class="choice-hint">The numeral in brackets is the cue; choose the matching word</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="sixteen">sixteen</button>
@@ -160,12 +215,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="seventy">seventy</button>
       <button class="choice-option" data-choice-option="eighteen">eighteen</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My address is number <button class="choice-gap" data-choice-gap data-answer="sixteen" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(16)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My grandfather is <button class="choice-gap" data-choice-gap data-answer="sixty" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(60)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The jacket costs <button class="choice-gap" data-choice-gap data-answer="forty" data-placeholder="choose">choose</button> dollars. &nbsp;<span class="contraction">($40)</span></span></div>
-    <div class="q"><span class="n">4</span><span>The speed limit is <button class="choice-gap" data-choice-gap data-answer="ninety" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(90)</span></span></div>
-    <div class="q"><span class="n">5</span><span>The meeting room holds <button class="choice-gap" data-choice-gap data-answer="seventy" data-placeholder="choose">choose</button> people. &nbsp;<span class="contraction">(70)</span></span></div>
-    <div class="q"><span class="n">6</span><span>The flight leaves at gate <button class="choice-gap" data-choice-gap data-answer="eighteen" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(18)</span></span></div>
+    <div class="q"><span class="n">1</span><span>I live at <button class="choice-gap" data-choice-gap data-answer="sixteen" data-hint="16 is between 15 and 17, so choose the -teen word." data-fix="I live at sixteen Oak Street." data-placeholder="choose">choose</button> Oak Street. &nbsp;<span class="contraction">(16)</span></span></div>
+    <div class="q"><span class="n">2</span><span>My grandfather is <button class="choice-gap" data-choice-gap data-answer="sixty" data-hint="60 is a whole ten, so choose the -ty word." data-fix="My grandfather is sixty." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(60)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The jacket costs <button class="choice-gap" data-choice-gap data-answer="forty" data-hint="40 drops the u from four." data-fix="The jacket costs forty dollars." data-placeholder="choose">choose</button> dollars. &nbsp;<span class="contraction">($40)</span></span></div>
+    <div class="q"><span class="n">4</span><span>The hotel has <button class="choice-gap" data-choice-gap data-answer="ninety" data-hint="90 is nine tens; its word is spelled with e before -ty." data-fix="The hotel has ninety rooms." data-placeholder="choose">choose</button> rooms. &nbsp;<span class="contraction">(90)</span></span></div>
+    <div class="q"><span class="n">5</span><span>The meeting room holds <button class="choice-gap" data-choice-gap data-answer="seventy" data-hint="70 is a whole ten built from seven." data-fix="The meeting room holds seventy people." data-placeholder="choose">choose</button> people. &nbsp;<span class="contraction">(70)</span></span></div>
+    <div class="q"><span class="n">6</span><span>The flight leaves at gate <button class="choice-gap" data-choice-gap data-answer="eighteen" data-hint="18 is between 17 and 19, so choose the -teen word." data-fix="The flight leaves at gate eighteen." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(18)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -176,8 +231,8 @@ export const page = defineLesson({
   <h2>Build it, then say it</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-builder data-answer="i am twenty-five years old">
-    <h3>Drill 3 — build your age</h3>
+  <div class="tile-game" data-tile-builder data-answer="i am twenty-five years old" data-hint="Start with I am, then place the hyphenated number before years old." data-fix="I am twenty-five years old." data-success-message="Correct. The age sentence uses I am, the hyphenated number twenty-five, and the plural chunk years old.">
+    <h3>Drill 3: build your age</h3>
     <p class="tile-target">You are 25. Build the sentence, then say it aloud. The number is one tile.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="years">years</button>
@@ -194,8 +249,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="the total is forty dollars">
-    <h3>Drill 4 — build the price</h3>
+  <div class="tile-game" data-tile-builder data-answer="the total is forty dollars" data-hint="Start with The total, add is, then use the spelling forty before dollars." data-fix="The total is forty dollars." data-success-message="Correct. The price sentence uses the irregular spelling forty and the plural noun dollars.">
+    <h3>Drill 4: build the price</h3>
     <p class="tile-target">The bill is $40. Build the sentence. Mind the spelling of the number.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="dollars">dollars</button>
@@ -214,8 +269,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="fourty" data-fix="The rent is forty dollars." data-why="The number 40 is spelled forty, with no u — not fourty.">
-    <h3>Drill 5 — fix the spelling</h3>
+  <div class="micro-drill" data-spot-error data-answer="fourty" data-hint="Look only at the spelling of the number 40." data-fix="The rent is forty dollars." data-why="The number 40 is spelled “forty,” with no “u,” not “fourty.”">
+    <h3>Drill 5: fix the spelling</h3>
     <p>Tap the word that is spelled wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="the">The</button>
@@ -227,8 +282,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="thirty" data-fix="My son is thirteen years old." data-why="The cue says 13, so the word is thirteen (-teen), not thirty (30).">
-    <h3>Drill 6 — does the word match the number?</h3>
+  <div class="micro-drill" data-spot-error data-answer="thirty" data-hint="Compare the written word with the numeral cue 13." data-fix="My son is thirteen years old." data-why="The cue says 13, so the word is thirteen (-teen), not thirty (30).">
+    <h3>Drill 6: does the word match the number?</h3>
     <p>The cue is <b>(13)</b>. Tap the number word that does not match it.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="my">My</button>
@@ -239,8 +294,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 7 — say the numeral as a word, then reveal</h3>
+  <div class="micro-drill" data-transform data-lesson-extension="Optional no-choice numeral recall">
+    <h3>Drill 7: say the numeral as a word, then reveal</h3>
     <p>Say the number aloud first. Reveal only after you answer. Watch the hyphen.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -279,10 +334,16 @@ export const page = defineLesson({
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
   <div class="prompt-card"><b>Your age and theirs:</b> Say your real age, then the age of two people in your family. <span class="ex">I am thirty-four. My sister is twenty-nine. My father is sixty-two.</span></div>
-  <div class="prompt-card"><b>Phone number:</b> Say your phone number slowly, one digit at a time. <span class="ex">five — five — five — one — three — seven…</span> Then say it again a little faster.</div>
+  <div class="prompt-card"><b>Fictional phone number:</b> Use a made-up number, not private information. Read <span class="ex">555-0137</span> one digit at a time: <span class="ex">five five five, zero one three seven</span>. Say it again with <span class="ex">oh</span> for zero.</div>
   <div class="prompt-card"><b>Prices at the store:</b> Point at three things and say the price. <span class="ex">This is fifteen dollars. That is forty dollars. The total is fifty-five dollars.</span></div>
-  <div class="prompt-card"><b>Your address:</b> Say your house or apartment number and your floor. <span class="ex">I live at number eighteen. My office is on floor thirteen.</span></div>
-  <div class="prompt-card"><b>Listen and write:</b> The teacher says a number between 0 and 100; you write the numeral. Then you say a number and the teacher writes it. Watch the -teen / -ty pairs.</div>
+  <div class="prompt-card"><b>Room and address numbers:</b> Use real or invented information. <span class="ex">I live at number eighteen. My office is in room thirteen.</span></div>
+  <div class="prompt-card"><b>Listen and write:</b> Your teacher says a number between 0 and 100. Write the numeral. Then say a number for your teacher to write. Watch the <span class="ex">-teen / -ty</span> pairs.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: a one-minute number profile</h3>
+    <p>Without reading the examples, give your teacher five pieces of information: an age, a price, a quantity, a room or address number, and a fictional phone number. Include one <span class="ex">-teen</span> number, one <span class="ex">-ty</span> number, and one joined number such as <span class="ex">forty-two</span>.</p>
+    <p><strong>Success criteria:</strong> the number matches the intended numeral; <span class="ex">-teen</span> and <span class="ex">-ty</span> sound different; a phone number is read digit by digit; and a joined number is written with its hyphen.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -292,40 +353,40 @@ export const page = defineLesson({
     <p>Then spell two tricky numbers from memory: <strong>40</strong> and <strong>90</strong>. Say one true number sentence about your life right now.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great — you can read, say, and spell numbers 0–100, and tell -teen from -ty.">
-    <h3>Final quiz — numbers in real situations</h3>
+  <div class="quiz" data-quiz data-success-message="Great. You can read, say, and spell numbers 0–100, and tell -teen from -ty.">
+    <h3>Final quiz: numbers in real situations</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="thirteen" data-hint="The numeral is 13, so listen for the -teen ending." data-fix="thirteen">
+      <div class="quiz-item" data-quiz-item data-answer="thirteen" data-hint="The numeral is 13, so listen for the -teen ending." data-fix="The bus you need is number thirteen.">
         <p class="quiz-question">1. (13) The bus you need is number ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="thirty">thirty</button><button class="quiz-option" data-quiz-option="thirteen">thirteen</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="forty">
+      <div class="quiz-item" data-quiz-item data-answer="forty" data-hint="The standard spelling of 40 drops the u from four." data-fix="40 → forty">
         <p class="quiz-question">2. Which is the correct spelling of 40?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="fourty">fourty</button><button class="quiz-option" data-quiz-option="forty">forty</button><button class="quiz-option" data-quiz-option="fourdy">fourdy</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="fourteen">fourteen</button><button class="quiz-option" data-quiz-option="forty">forty</button><button class="quiz-option" data-quiz-option="four">four</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="fifty">
+      <div class="quiz-item" data-quiz-item data-answer="fifty" data-hint="The price cue is $50, a whole ten, not $15." data-fix="The total is fifty dollars.">
         <p class="quiz-question">3. ($50) The total is ___ dollars.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="fifteen">fifteen</button><button class="quiz-option" data-quiz-option="fifty">fifty</button><button class="quiz-option" data-quiz-option="five">five</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="twenty-one">
-        <p class="quiz-question">4. (21) She is ___ years old.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="twenty one">twenty one</button><button class="quiz-option" data-quiz-option="twentyone">twentyone</button><button class="quiz-option" data-quiz-option="twenty-one">twenty-one</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="twenty-one" data-hint="Build 21 from twenty plus one and connect the two parts with a hyphen." data-fix="She is twenty-one years old.">
+        <p class="quiz-question">4. (21) She is ___ years old. Which number word matches?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="twenty">twenty</button><button class="quiz-option" data-quiz-option="twenty-two">twenty-two</button><button class="quiz-option" data-quiz-option="twenty-one">twenty-one</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="ninety">
-        <p class="quiz-question">5. (90) The speed limit is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="nineteen">nineteen</button><button class="quiz-option" data-quiz-option="ninety">ninety</button><button class="quiz-option" data-quiz-option="ninty">ninty</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="ninety" data-hint="90 is nine tens, so choose the -ty word rather than 19 or 9." data-fix="The hotel has ninety rooms.">
+        <p class="quiz-question">5. (90) The hotel has ___ rooms.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="nineteen">nineteen</button><button class="quiz-option" data-quiz-option="ninety">ninety</button><button class="quiz-option" data-quiz-option="nine">nine</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="sixteen">
+      <div class="quiz-item" data-quiz-item data-answer="sixteen" data-hint="The apartment cue is 16, the number between 15 and 17." data-fix="My apartment is number sixteen.">
         <p class="quiz-question">6. (16) My apartment is number ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="sixty">sixty</button><button class="quiz-option" data-quiz-option="sixteen">sixteen</button><button class="quiz-option" data-quiz-option="six">six</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="one hundred">
+      <div class="quiz-item" data-quiz-item data-answer="one hundred" data-hint="100 is ten groups of ten, called one hundred." data-fix="100 → one hundred">
         <p class="quiz-question">7. Which words say 100?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="one hundred">one hundred</button><button class="quiz-option" data-quiz-option="ten ten">ten ten</button><button class="quiz-option" data-quiz-option="hundred one">hundred one</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="one hundred">one hundred</button><button class="quiz-option" data-quiz-option="one hundred ten">one hundred ten</button><button class="quiz-option" data-quiz-option="one thousand">one thousand</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="seventy-three">
+      <div class="quiz-item" data-quiz-item data-answer="seventy-three" data-hint="73 is seven tens plus three; keep that order and use a hyphen." data-fix="My grandmother is seventy-three years old.">
         <p class="quiz-question">8. (73) My grandmother is ___ years old.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="seventy-three">seventy-three</button><button class="quiz-option" data-quiz-option="seventeen-three">seventeen-three</button><button class="quiz-option" data-quiz-option="thirty-seven">thirty-seven</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="seventy-three">seventy-three</button><button class="quiz-option" data-quiz-option="thirty-seven">thirty-seven</button><button class="quiz-option" data-quiz-option="seventeen">seventeen</button></div>
       </div>
     </div>
     <div class="drill-actions">
@@ -334,6 +395,57 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then check only the decisions that still feel slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day number retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve the number families, spelling, and use-specific reading from memory.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You recalled the whole tens, the -teen number, the hyphenated joined number, and zero for a written quantity.">
+      <h3>Choose the exact number word from memory</h3>
+      <div class="choice-bank" aria-label="Next-day number choices">
+        <button class="choice-option" data-choice-option="fourteen">fourteen</button>
+        <button class="choice-option" data-choice-option="forty">forty</button>
+        <button class="choice-option" data-choice-option="fifteen">fifteen</button>
+        <button class="choice-option" data-choice-option="fifty">fifty</button>
+        <button class="choice-option" data-choice-option="twenty-eight">twenty-eight</button>
+        <button class="choice-option" data-choice-option="twenty">twenty</button>
+        <button class="choice-option" data-choice-option="zero">zero</button>
+        <button class="choice-option" data-choice-option="oh">oh</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The invoice total is $40. Write <button class="choice-gap" data-choice-gap data-answer="forty" data-hint="40 is a whole ten, so use the -ty word and remember its spelling." data-fix="The invoice total is forty dollars." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>The class has 15 students. Write <button class="choice-gap" data-choice-gap data-answer="fifteen" data-hint="15 is between 14 and 16, so use the -teen word." data-fix="The class has fifteen students." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>The order number is 28. Write <button class="choice-gap" data-choice-gap data-answer="twenty-eight" data-hint="Build 28 from twenty plus eight and connect the parts." data-fix="The order number is twenty-eight." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>On a form, the quantity is 0. Write <button class="choice-gap" data-choice-gap data-answer="zero" data-hint="Oh can replace 0 in a spoken phone number, but the cardinal number word on a form is zero." data-fix="The quantity is zero." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="twenty eight" data-hint="A number from 21 to 99 that is not a whole ten needs one punctuation mark." data-fix="The delivery is at room twenty-eight." data-why="Join the tens and ones with a hyphen: twenty-eight.">
+      <h3>Repair the written number</h3>
+      <p>The delivery is at room twenty eight. Tap the number writing that needs repair.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="the delivery">The delivery</button>
+        <button class="error-choice" data-error-choice="is at room">is at room</button>
+        <button class="error-choice" data-error-choice="twenty eight">twenty eight.</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Say <span class="ex">18</span>, <span class="ex">80</span>, and <span class="ex">56</span> in words. Then read the fictional phone number <span class="ex">555-0180</span> one digit at a time, once with <span class="ex">zero</span> and once with <span class="ex">oh</span>.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Give one price, one quantity, and one room number. Include one <span class="ex">-teen</span> number and one <span class="ex">-ty</span> number. Ask your teacher to repeat one number back so you can confirm it.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

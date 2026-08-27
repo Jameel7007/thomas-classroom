@@ -1,0 +1,337 @@
+---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
+import StructuredLesson from "../../../components/lesson/StructuredLesson.astro";
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+
+export const page = defineLesson({
+  "title": "Narrative tenses and viewpoint · C1 Grammar",
+  "slug": "narrative-tenses-and-viewpoint",
+  "level": "C1",
+  "topic": "Narrative tenses and viewpoint",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
+  "description": "Control foreground, background, sequence, pacing, and narrator viewpoint to tell complex events clearly and shape how listeners interpret them.",
+  "sequence": 2,
+  "prerequisites": ["c1/advanced-tense-and-aspect-review", "b2/past-perfect-continuous"],
+  "related": ["c1/mixed-and-implied-conditionals", "c1/participle-clauses"],
+  "assessments": ["c1-exit"],
+  "tutorReviewRequired": true
+});
+
+export const lesson = {
+  duration: "75–90 min",
+  outcome: "Tell and reformulate a complex event by controlling foreground action, background circumstances, earlier causes, pacing, and the narrator’s distance from the scene.",
+  focus: "narrative sequence, viewpoint, and pacing",
+  tags: ["foreground and background", "earlier causes", "historic present"],
+  retrieval: [
+    {
+      prompt: "Set a background action and interrupt it: drive home / receive an urgent call.",
+      answer: "I was driving home when I received an urgent call.",
+    },
+    {
+      prompt: "Show an earlier cause before a later discovery: someone / disable the alarm / before staff arrived.",
+      answer: "Someone had disabled the alarm before the staff arrived.",
+    },
+    {
+      prompt: "Explain a visible past condition through an earlier activity: exhausted / negotiate all night.",
+      answer: "They were exhausted because they had been negotiating all night.",
+    },
+  ],
+  notice: {
+    title: "The same incident at two distances",
+    setup: "A consultant first gives a formal summary, then retells the decisive moment to a colleague.",
+    samples: [
+      "The inspection began at 8:30. The team had reviewed the safety records beforehand, and engineers were checking the east wing when the power failed.",
+      "So we’re checking the east wing, everything seems normal, and suddenly the lights go out. I turn around, and the lead engineer is already calling security.",
+    ],
+    questions: [
+      "Which version places the main events in a completed past sequence?",
+      "What work do the past perfect and past progressive do in the formal summary?",
+      "How does the shift to the historic present change the listener’s experience of the decisive moment?",
+    ],
+    check: {
+      question: "Why does the formal account use “had reviewed”?",
+      answer: "It marks the record review as complete before the inspection sequence began.",
+      options: [
+        { value: "It marks the record review as complete before the inspection sequence began." },
+        { value: "It shows that the review is happening now as the consultant speaks." },
+        { value: "It presents the review as a future plan after the power failure." },
+      ],
+      hint: "Place the record review before the inspection’s main timeline.",
+    },
+  },
+  discover: {
+    principle: "A strong narrative has a time structure and a viewpoint. Past simple usually advances the foreground sequence. Progressive forms create background or show an event from inside. Perfect forms step farther back to causes and prior stages. A controlled historic present can bring a key scene closer, but the shift needs a clear purpose.",
+    formRows: [
+      {
+        label: "foreground sequence",
+        form: "past simple + past simple",
+        example: "The alarm sounded, and everyone left the building.",
+      },
+      {
+        label: "background in progress",
+        form: "past progressive + when + past simple",
+        example: "Engineers were testing the system when the alarm sounded.",
+      },
+      {
+        label: "earlier layer",
+        form: "past perfect or past perfect progressive",
+        example: "They had replaced a sensor that had been failing intermittently.",
+      },
+      {
+        label: "close-up retelling",
+        form: "historic present in a clearly framed past story",
+        example: "I open the door, and there’s smoke everywhere.",
+      },
+    ],
+    meaningRows: [
+      {
+        choice: "past simple",
+        use: "you move the listener through completed foreground events",
+        example: "She read the message, paused, and called her manager.",
+      },
+      {
+        choice: "past progressive",
+        use: "you establish surrounding activity, temporary circumstances, or an interrupted process",
+        example: "People were leaving while the staff were trying to restore power.",
+      },
+      {
+        choice: "past perfect",
+        use: "you step back from the main timeline to clarify an earlier cause, result, or completed stage",
+        example: "The supplier had sent the wrong component.",
+      },
+      {
+        choice: "historic present",
+        use: "you deliberately bring a vivid turning point closer after the past context is established",
+        example: "Then the client looks at me and says, “We need a new plan.”",
+      },
+    ],
+    pronunciation: "Use intonation to signal narrative structure. Background details often stay in a lower, more even range. Slow slightly before a turning point, then place strong stress on the event that changes the story: “and then the POWER went out.” In a historic-present sequence, keep the verbs clear without stressing every word.",
+    errors: [
+      {
+        wrong: "When I had arrived, everyone left.",
+        correct: "When I arrived, everyone had left.",
+        why: "The arrival is the later reference point. The departure happened before it.",
+      },
+      {
+        wrong: "The meeting was starting at nine and ended at eleven.",
+        correct: "The meeting started at nine and ended at eleven.",
+        why: "Two completed boundary events advance the main timeline, so the past simple is more natural.",
+      },
+      {
+        wrong: "Yesterday I walk into the office, and my manager called me over.",
+        correct: "Yesterday I walked into the office, and my manager called me over.",
+        why: "An unframed switch between present and past creates an accidental viewpoint change.",
+      },
+    ],
+  },
+  reference: {
+    title: "Build a layered narrative",
+    intro: "Assign each detail a job before choosing its tense. Not every detail belongs on the same time layer.",
+    groups: [
+      {
+        heading: "Scene",
+        items: ["where people were", "what was happening", "what the situation looked or felt like"],
+      },
+      {
+        heading: "Sequence",
+        items: ["first decisive event", "response", "consequence", "resolution"],
+      },
+      {
+        heading: "Backstory",
+        items: ["earlier decision", "prior warning", "long-running cause", "information not known at the time"],
+      },
+      {
+        heading: "Viewpoint",
+        items: ["distant report", "participant’s experience", "close-up turning point", "later interpretation"],
+      },
+    ],
+  },
+  build: [
+    {
+      question: "Security arrived at 10:15. The visitors had left at 10:05. Which sentence makes the sequence explicit?",
+      answer: "By the time security arrived, the visitors had left.",
+      options: [
+        { value: "By the time security arrived, the visitors had left." },
+        { value: "By the time security had arrived, the visitors leave." },
+        { value: "Security arrives after the visitors will leave." },
+      ],
+      hint: "Use the past perfect for the event completed before security’s arrival.",
+    },
+    {
+      question: "A speaker wants the negotiation to be background while one phone call changes the situation. Which sentence fits?",
+      answer: "We were discussing the final price when the director called.",
+      options: [
+        { value: "We were discussing the final price when the director called." },
+        { value: "We had discussed the final price tomorrow when the director calls." },
+        { value: "We discussed the final price because the director had been calling next week." },
+      ],
+      hint: "Place the ongoing background in the progressive and the interrupting event in the simple past.",
+    },
+    {
+      question: "A report lists the completed steps that moved an investigation forward. Which sequence is most appropriate?",
+      answer: "The analyst opened the file, compared the signatures, and contacted the bank.",
+      options: [
+        { value: "The analyst opened the file, compared the signatures, and contacted the bank." },
+        { value: "The analyst was opening the file, had compared the signatures, and contacts the bank." },
+        { value: "The analyst had been opening the file while she will contact the bank." },
+      ],
+      hint: "Use a parallel simple-past sequence for completed foreground actions.",
+    },
+    {
+      question: "The story is already clearly set last year. Which sentence uses the historic present for a vivid turning point?",
+      answer: "Then the door opens, and the missing witness walks in.",
+      options: [
+        { value: "Then the door opens, and the missing witness walks in." },
+        { value: "Then the door had opened, and the witness will walk in." },
+        { value: "Then the door was open every day, and the witness walking in." },
+      ],
+      hint: "A deliberate present-tense close-up can make one past scene feel immediate.",
+    },
+    {
+      question: "At the time of the interview, the journalist did not know about an earlier warning. Which sentence adds that later-understood backstory?",
+      answer: "The company had received a warning two weeks earlier, although the journalist did not know that yet.",
+      options: [
+        { value: "The company had received a warning two weeks earlier, although the journalist did not know that yet." },
+        { value: "The company receives a warning two weeks later before the interview." },
+        { value: "The journalist had known a future warning during the interview." },
+      ],
+      hint: "Step back from the interview to the earlier warning while preserving the journalist’s viewpoint.",
+    },
+  ],
+  context: {
+    title: "The missed warning",
+    intro: "Read a journalist’s reconstruction of a transit disruption. The final paragraph briefly moves closer to a passenger’s experience.",
+    lines: [
+      "The first train stopped outside the station at 6:42 a.m. Technicians were monitoring an unstable signal, but controllers believed the line could remain open.",
+      "Investigators later learned that the same signal had failed twice during overnight tests. A maintenance team had been requesting a replacement for several weeks, although senior managers had not classified the issue as urgent.",
+      "At 6:47, a passenger looks up from her phone and notices that every platform display has gone blank. People start asking questions, but no announcement comes. Five minutes later, staff begin moving everyone toward the exits.",
+    ],
+    questions: [
+      {
+        question: "What was in progress when the first train stopped?",
+        answer: "Technicians were monitoring an unstable signal.",
+        options: [
+          { value: "Technicians were monitoring an unstable signal." },
+          { value: "Passengers had already left every station." },
+          { value: "Managers were replacing the entire line." },
+        ],
+        hint: "Find the surrounding technical activity in the first paragraph.",
+      },
+      {
+        question: "What earlier fact did investigators discover later?",
+        answer: "The signal had failed twice during overnight tests.",
+        options: [
+          { value: "The signal had failed twice during overnight tests." },
+          { value: "The signal would first fail the following year." },
+          { value: "The passengers had classified the issue as urgent." },
+        ],
+        hint: "The past perfect marks information from before the main disruption.",
+      },
+      {
+        question: "What is the effect of the historic present in the final paragraph?",
+        answer: "It brings the listener close to the passenger’s experience as the disruption becomes visible.",
+        options: [
+          { value: "It brings the listener close to the passenger’s experience as the disruption becomes visible." },
+          { value: "It proves that the disruption is happening at the exact moment of reading." },
+          { value: "It moves every event into the future." },
+        ],
+        hint: "Compare the report-like distance of the first paragraphs with the close-up passenger scene.",
+      },
+    ],
+  },
+  builder: {
+    title: "Build the earlier cause",
+    prompt: "Clarify what investigators learned after the disruption.",
+    answer: "The signal had failed twice before the morning disruption began",
+    tiles: ["The", "signal", "had", "failed", "twice", "before", "the", "morning", "disruption", "began"],
+  },
+  repairs: [
+    {
+      title: "Put the earlier event in the earlier layer",
+      sentence: "When I had arrived, everyone left.",
+      answer: "had",
+      fix: "When I arrived, everyone had left.",
+      why: "The arrival is the reference point, and the departure was already complete.",
+      tokens: [
+        { value: "when", label: "When" },
+        { value: "i", label: "I" },
+        { value: "had", label: "had arrived" },
+        { value: "everyone", label: "everyone left" },
+      ],
+    },
+    {
+      title: "Advance the completed timeline",
+      sentence: "The meeting was starting at nine and ended at eleven.",
+      answer: "starting",
+      fix: "The meeting started at nine and ended at eleven.",
+      why: "Start and end are completed boundary events in the main sequence.",
+      tokens: [
+        { value: "meeting", label: "The meeting" },
+        { value: "was", label: "was" },
+        { value: "starting", label: "starting" },
+        { value: "nine", label: "at nine" },
+        { value: "ended", label: "and ended at eleven" },
+      ],
+    },
+    {
+      title: "Keep the viewpoint shift deliberate",
+      sentence: "Yesterday I walk into the office, and my manager called me over.",
+      answer: "walk",
+      fix: "Yesterday I walked into the office, and my manager called me over.",
+      why: "Without a clearly framed historic-present retelling, both completed events belong in the past.",
+      tokens: [
+        { value: "yesterday", label: "Yesterday" },
+        { value: "i", label: "I" },
+        { value: "walk", label: "walk" },
+        { value: "office", label: "into the office" },
+        { value: "manager", label: "and my manager called me over" },
+      ],
+    },
+  ],
+  fluency: [
+    {
+      prompt: "Give a neutral two-sentence report: one background activity, one interruption, and one earlier cause.",
+      answer: "The team was preparing the presentation when the system failed. A contractor had changed the settings the night before.",
+    },
+    {
+      prompt: "Retell the turning point as a close-up after clearly establishing that the story happened last year.",
+      answer: "So I open the message, read the first line, and realize the entire schedule has changed.",
+    },
+    {
+      prompt: "Reformulate a dramatic close-up as a formal incident report.",
+      answer: "I opened the message and realized that the entire schedule had changed.",
+    },
+  ],
+  communicate: {
+    title: "Two versions of one event",
+    setup: "Choose a real workplace surprise, travel problem, misunderstanding, or important decision. Tell it once as a concise formal record and once as a participant’s vivid account. Keep the facts stable while changing viewpoint and pacing.",
+    roles: [
+      "Narrator: establish the scene, advance four main events, step back to at least one earlier cause, and decide whether one close-up historic-present moment improves the retelling.",
+      "Editor: track the time layers, identify any accidental tense shifts, and ask how one alternative viewpoint would change the story’s effect.",
+    ],
+    prompts: [
+      "What was already happening when the event began?",
+      "What had happened earlier that no one understood yet?",
+      "Which events move the main sequence forward?",
+      "Where should the listener feel close to or distant from the scene?",
+    ],
+    success: [
+      "Background, foreground, and earlier causes are easy to distinguish.",
+      "Any shift to the historic present is clearly framed and serves a narrative purpose.",
+      "The formal and vivid versions preserve the same factual sequence.",
+    ],
+  },
+  reflect: {
+    canDo: [
+      "Layer foreground events, background activity, and earlier causes clearly.",
+      "Change narrative distance without losing time reference.",
+      "Use stress, pacing, and intonation to guide a listener through a turning point.",
+    ],
+    nextUse: "Tell a ninety-second story twice: first as a factual summary, then as a vivid close-up. Note every tense change and explain its purpose.",
+  },
+};
+---
+
+<LessonPage page={page}><StructuredLesson page={page} lesson={lesson} /></LessonPage>

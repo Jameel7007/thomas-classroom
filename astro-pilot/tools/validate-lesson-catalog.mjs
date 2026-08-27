@@ -2,6 +2,7 @@ import { lessonCatalog, lessonCounts, readyLessons, getLessonNavigation } from "
 
 const counts = lessonCounts();
 const errors = [];
+const prerequisiteCount = readyLessons.reduce((total, lesson) => total + lesson.prerequisites.length, 0);
 
 for (const lesson of readyLessons) {
   const navigation = getLessonNavigation(lesson.id);
@@ -14,4 +15,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Lesson catalog verified: ${lessonCatalog.length} unique records, ${counts.ready} ready routes, ${counts.planned} planned topics, contiguous level sequences, valid references, and generated navigation.`);
+console.log(`Lesson catalog verified: ${lessonCatalog.length} unique records, ${counts.ready} ready routes, ${counts.planned} planned topics, ${prerequisiteCount} ordered acyclic prerequisite links, contiguous level sequences, level diagnostics, valid relationships, and generated navigation.`);

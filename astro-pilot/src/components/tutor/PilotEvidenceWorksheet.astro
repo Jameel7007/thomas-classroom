@@ -1,0 +1,110 @@
+---
+import { LESSON_REVIEW_PILOT_TARGET } from "../../data/lesson-schema.mjs";
+
+interface ReviewEvidence {
+  status: string;
+  generatedPedagogy: boolean;
+  learnerPilotCount: number;
+  revisionSummary: string;
+}
+
+interface Props {
+  lesson: {
+    id: string;
+    level: string;
+    topic: string;
+  };
+  review: ReviewEvidence;
+  outcome: string;
+  principle: string;
+  productionSuccess: string[];
+}
+
+const { lesson, review, outcome, principle, productionSuccess } = Astro.props as Props;
+const recordedPilots = review.learnerPilotCount;
+const remainingPilots = Math.max(0, LESSON_REVIEW_PILOT_TARGET - recordedPilots);
+const nextPilot = Math.min(recordedPilots + 1, LESSON_REVIEW_PILOT_TARGET);
+const successEvidence = productionSuccess.length
+  ? productionSuccess.join(" · ")
+  : "The learner uses the target language independently for a real purpose.";
+---
+
+<section
+  class="tutor-pilot-sheet"
+  id="pilot-evidence"
+  aria-labelledby="pilot-evidence-title"
+  data-pilot-evidence-worksheet
+  data-pilot-lesson-id={lesson.id}
+  data-pilot-recorded={String(recordedPilots)}
+  data-pilot-target={String(LESSON_REVIEW_PILOT_TARGET)}
+  data-pilot-next={String(nextPilot)}
+>
+  <header class="tutor-pilot-head">
+    <div>
+      <p class="tutor-card-label">Anonymous live-lesson evidence</p>
+      <h2 id="pilot-evidence-title">Learner pilot worksheet</h2>
+      <p>{lesson.level} · {lesson.topic}</p>
+    </div>
+    <div class="tutor-pilot-count" aria-label={`${recordedPilots} of ${LESSON_REVIEW_PILOT_TARGET} learner pilots recorded`}>
+      <b>{remainingPilots > 0 ? `Pilot ${nextPilot} of ${LESSON_REVIEW_PILOT_TARGET}` : "Follow-up evidence"}</b>
+      <span>{recordedPilots} recorded · {remainingPilots} remaining</span>
+    </div>
+  </header>
+
+  <aside class="tutor-pilot-privacy" data-pilot-privacy>
+    <b>Keep this anonymous.</b>
+    <span>Do not record a learner’s name, email address, contact details, employer, or other identifying information. This worksheet is never submitted or stored by the website.</span>
+  </aside>
+
+  <div class="tutor-pilot-context" aria-label="Session context">
+    <div><span>Date</span><i aria-hidden="true"></i></div>
+    <div><span>Approximate starting level</span><i aria-hidden="true"></i></div>
+    <div><span>Core lesson time</span><i aria-hidden="true"></i></div>
+  </div>
+
+  <div class="tutor-pilot-grid">
+    <article>
+      <span class="tutor-card-label">Before explaining</span>
+      <h3>Starting evidence</h3>
+      <p>What did the learner already control? What was the first misconception, hesitation, or contrast that mattered?</p>
+      <div class="tutor-writing-lines tutor-writing-lines--pilot" aria-hidden="true"></div>
+    </article>
+    <article>
+      <span class="tutor-card-label">Core decision</span>
+      <h3>Did the principle become clear?</h3>
+      <p>{principle}</p>
+      <div class="tutor-writing-lines tutor-writing-lines--pilot" aria-hidden="true"></div>
+    </article>
+    <article>
+      <span class="tutor-card-label">Feedback test</span>
+      <h3>Did the first hint help?</h3>
+      <p>Record the first item that caused difficulty and whether the contextual hint led to self-correction before the full repair appeared.</p>
+      <div class="tutor-writing-lines tutor-writing-lines--pilot" aria-hidden="true"></div>
+    </article>
+    <article>
+      <span class="tutor-card-label">Independent production</span>
+      <h3>Could the learner do the outcome?</h3>
+      <p>{outcome}</p>
+      <p class="tutor-pilot-listen"><b>Listen for:</b> {successEvidence}</p>
+      <div class="tutor-writing-lines tutor-writing-lines--pilot" aria-hidden="true"></div>
+    </article>
+    <article>
+      <span class="tutor-card-label">Later retrieval</span>
+      <h3>What remained available?</h3>
+      <p>If possible, check before rereading in the next session. Record what returned independently and what still required a cue.</p>
+      <div class="tutor-writing-lines tutor-writing-lines--pilot" aria-hidden="true"></div>
+    </article>
+    <article>
+      <span class="tutor-card-label">Editorial decision</span>
+      <h3>Keep, revise, or investigate?</h3>
+      <p>Note any explanation the tutor still had to supply, the smallest useful revision, and whether another pilot should test the same issue.</p>
+      <div class="tutor-writing-lines tutor-writing-lines--pilot" aria-hidden="true"></div>
+    </article>
+  </div>
+
+  <footer class="tutor-pilot-footer">
+    <p><b>Current canonical state:</b> {review.status}.</p>
+    <p><b>Review focus:</b> {review.revisionSummary}</p>
+    <p>After a real completed session, update the lesson’s canonical <code>qualityReview</code> count and status. Never backfill evidence from memory or mark a lesson reviewed before {LESSON_REVIEW_PILOT_TARGET} pilots and tutor sign-off.</p>
+  </footer>
+</section>

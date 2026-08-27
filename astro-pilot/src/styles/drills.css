@@ -176,7 +176,7 @@
   outline:3px solid var(--d-ink);outline-offset:3px;}
 
 /* ============ 10 · Readable in-drill instructions ========================== */
-.choice-hint,.tile-target{font-family:var(--d-sans);font-size:13.5px;letter-spacing:0;
+.choice-hint,.tile-target{font-family:var(--d-sans);font-size:16px;line-height:1.5;letter-spacing:0;
   text-transform:none;color:var(--d-ink-2);font-weight:500;}
 
 /* ============ Motion ======================================================== */

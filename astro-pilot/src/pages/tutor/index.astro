@@ -1,0 +1,211 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { assessmentRoutes } from "../../data/assessment-routes.mjs";
+import { getLessonsForLevel, readyLessons } from "../../data/lesson-catalog.mjs";
+import { getLessonQualityReview, LESSON_LEVELS, LESSON_REVIEW_PILOT_TARGET } from "../../data/lesson-schema.mjs";
+import { curriculum } from "../../lib/curriculum";
+
+const hues = { A0: 28, A1: 70, A2: 150, B1: 245, B2: 305, C1: 345 };
+const accent = (level: keyof typeof hues) => {
+  const hue = hues[level];
+  return `--accent:oklch(.58 .13 ${hue});--accent-deep:oklch(.46 .13 ${hue});--accent-tint:oklch(.965 .045 ${hue});--accent-soft:oklch(.92 .045 ${hue})`;
+};
+const levels = LESSON_LEVELS.map((code) => ({
+  code,
+  details: curriculum.find((level) => level.code === code),
+  lessons: getLessonsForLevel(code, { status: "ready" }),
+  totalLessons: getLessonsForLevel(code).length,
+  assessment: assessmentRoutes.find((assessment) => assessment.slug === `${code.toLowerCase()}-exit`),
+}));
+const reviewQueue = readyLessons
+  .filter((lesson) => lesson.tutorReviewRequired || (lesson.qualityReview && lesson.qualityReview.status !== "reviewed"))
+  .map((lesson) => ({ lesson, review: getLessonQualityReview(lesson) }));
+const recordedPilotCount = reviewQueue.reduce((total, item) => total + item.review.learnerPilotCount, 0);
+const requiredPilotCount = reviewQueue.length * LESSON_REVIEW_PILOT_TARGET;
+const reviewStatusLabel = (status: string) => ({
+  "editorial-review": "Editorial QA complete",
+  "learner-pilot": "Learner pilot underway",
+  "revision-due": "Revision due",
+  unreviewed: "Tutor review required",
+}[status] ?? "Tutor review required");
+---
+<SiteLayout
+  title="Tutor Planning Guide · A0–C1 · Thomas’s Classroom"
+  description="Plan a Thomas’s Classroom session with the A0–C1 lesson sequence, prerequisites, related lessons, diagnostics, publication status, and printable tutor notes."
+  heading="Tutor Planning Guide"
+  lede="Choose the right lesson, see what connects to it, and walk into a calm one-to-one session with a clear teaching sequence and evidence plan."
+  schemaType="CollectionPage"
+>
+  <section class="tab-page tutor-guide" data-tutor-guide>
+    <div class="tutor-intro-grid">
+      <div>
+        <p class="tab-overline">For live one-to-one teaching</p>
+        <h2 class="tab-title">Plan from evidence, not guesswork.</h2>
+        <p class="tab-lede">Use a diagnostic when the starting point is unclear. Then choose one lesson, open its learner page for the shared screen, and keep its printable plan beside you for timing and notes.</p>
+      </div>
+      <aside class="tutor-start-card" aria-labelledby="tutor-start-title">
+        <p class="tutor-card-label">Before lesson one</p>
+        <h2 id="tutor-start-title">Find the useful starting point.</h2>
+        <p>The quick check gives a fast signal. The placement diagnostic collects broader language, reading, listening, speaking, and writing evidence.</p>
+        <div class="tutor-actions">
+          <a class="home-link primary" href="/assessments/quick-level-check/">10-minute quick check</a>
+          <a class="home-link" href="/assessments/placement-exam/">Full placement diagnostic</a>
+        </div>
+      </aside>
+    </div>
+
+    <ol class="tutor-workflow" aria-label="Tutor planning workflow">
+      <li><span>01</span><div><b>Locate</b><p>Use diagnostic evidence, the current course level, and prerequisites.</p></div></li>
+      <li><span>02</span><div><b>Prepare</b><p>Open the printable plan and identify the real-life production target.</p></div></li>
+      <li><span>03</span><div><b>Teach</b><p>Move from noticing to discovery, practice, communication, and reflection.</p></div></li>
+      <li><span>04</span><div><b>Record</b><p>Keep one can-do, one remaining friction point, and one next-use prompt.</p></div></li>
+    </ol>
+
+    {reviewQueue.length > 0 && (
+      <section class="tutor-review-queue" aria-labelledby="tutor-review-queue-title" data-tutor-review-queue data-review-queue-count={String(reviewQueue.length)}>
+        <div class="tutor-review-queue-head">
+          <div>
+            <p class="tutor-card-label">Human review queue</p>
+            <h2 id="tutor-review-queue-title">Teach, observe, then sign off.</h2>
+            <p>These lessons are available for guided use, but their pedagogy remains provisional until live learner evidence is recorded.</p>
+          </div>
+          <p class="tutor-review-progress"><b>{reviewQueue.length} lessons</b><span>{recordedPilotCount} of {requiredPilotCount} anonymous pilots recorded</span></p>
+        </div>
+        <div class="tutor-review-queue-grid">
+          {reviewQueue.map(({ lesson, review }) => (
+            <a
+              href={`/tutor/plans/${lesson.id}/#pilot-evidence`}
+              data-review-queue-item={lesson.id}
+              data-quality-review-status={review.status}
+              data-pilot-recorded={String(review.learnerPilotCount)}
+            >
+              <span class="tutor-review-level">{lesson.level} · {String(lesson.sequence).padStart(2, "0")}</span>
+              <b>{lesson.topic}</b>
+              <span>{reviewStatusLabel(review.status)} · {review.learnerPilotCount}/{LESSON_REVIEW_PILOT_TARGET} pilots</span>
+            </a>
+          ))}
+        </div>
+        <p class="tutor-review-privacy">Use the printable worksheet in each plan. Record no names or identifying details, and update canonical review metadata only after a real completed session.</p>
+      </section>
+    )}
+
+    <section class="tutor-finder" data-tutor-finder hidden aria-labelledby="tutor-finder-title">
+      <div class="tutor-finder-heading">
+        <div><p class="tutor-card-label">{readyLessons.length} lesson plans</p><h2 id="tutor-finder-title">Find the next session.</h2></div>
+        <p data-tutor-status aria-live="polite">{readyLessons.length} lessons across {LESSON_LEVELS.length} levels</p>
+      </div>
+      <form class="tutor-finder-form" data-tutor-form role="search">
+        <label><span>Search lesson plans</span><input type="search" name="q" placeholder="Try “articles”, “travel”, or “reported speech”" autocomplete="off" data-tutor-query /></label>
+        <label><span>Level</span><select name="level" data-tutor-level-filter><option value="all">All levels</option>{LESSON_LEVELS.map((level) => <option value={level}>{level}</option>)}</select></label>
+        <label><span>Lesson type</span><select name="type" data-tutor-type-filter><option value="all">Grammar + vocabulary</option><option value="grammar">Grammar</option><option value="vocabulary">Vocabulary &amp; topics</option></select></label>
+        <button type="button" class="finder-reset" data-tutor-reset disabled>Clear filters</button>
+      </form>
+    </section>
+
+    <div class="tutor-empty" data-tutor-empty hidden><h2>No planning matches.</h2><p>Clear a filter or search for a broader grammar, vocabulary, or real-life topic.</p></div>
+
+    <div class="tutor-level-list" data-tutor-level-list>
+      {levels.map(({ code, details, lessons, totalLessons, assessment }) => (
+        <section class="tutor-level" id={`tutor-${code}`} style={accent(code as keyof typeof hues)} data-tutor-level={code}>
+          <header class="tutor-level-head">
+            <div><span class="tutor-level-code">{code}</span><span class="tutor-level-name">{details?.name}</span></div>
+            <div>
+              <p class="tutor-card-label">{lessons.length} available plan{lessons.length === 1 ? "" : "s"} · {totalLessons}-topic sequence</p>
+              <h2>{details?.blurb}</h2>
+              {assessment?.status === "ready"
+                ? <a class="tutor-assessment-link" href={assessment.route}>End with the {code} diagnostic <span aria-hidden="true">→</span></a>
+                : assessment
+                  ? <span class="tutor-assessment-planned">Planned: {assessment.title}</span>
+                  : null}
+            </div>
+          </header>
+          <div class="tutor-lesson-grid">
+            {lessons.map((lesson) => (
+              <a
+                class="tutor-lesson-card"
+                href={`/tutor/plans/${lesson.id}/`}
+                data-tutor-lesson={lesson.id}
+                data-tutor-search={`${lesson.topic} ${lesson.description} ${lesson.category}`}
+                data-tutor-type={lesson.contentType}
+              >
+                <span class="tutor-lesson-number">{String(lesson.sequence).padStart(2, "0")}</span>
+                <span class="tutor-lesson-copy"><b>{lesson.topic}</b><span>{lesson.description}</span></span>
+                <span class="tutor-lesson-meta">{lesson.category} · {lesson.prerequisites.length} prerequisite{lesson.prerequisites.length === 1 ? "" : "s"}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</SiteLayout>
+
+<script>
+  const guide = document.querySelector<HTMLElement>("[data-tutor-guide]");
+  const finder = guide?.querySelector<HTMLElement>("[data-tutor-finder]");
+  const form = guide?.querySelector<HTMLFormElement>("[data-tutor-form]");
+  const query = guide?.querySelector<HTMLInputElement>("[data-tutor-query]");
+  const level = guide?.querySelector<HTMLSelectElement>("[data-tutor-level-filter]");
+  const type = guide?.querySelector<HTMLSelectElement>("[data-tutor-type-filter]");
+  const reset = guide?.querySelector<HTMLButtonElement>("[data-tutor-reset]");
+  const status = guide?.querySelector<HTMLElement>("[data-tutor-status]");
+  const empty = guide?.querySelector<HTMLElement>("[data-tutor-empty]");
+
+  if (guide && finder && form && query && level && type && reset && status && empty) {
+    const levelValues = new Set(["all", ...Array.from(level.options).map((option) => option.value)]);
+    const typeValues = new Set(["all", "grammar", "vocabulary"]);
+    const params = new URLSearchParams(window.location.search);
+    const requestedLevel = params.get("level") ?? "all";
+    const requestedType = params.get("type") ?? "all";
+    query.value = params.get("q") ?? "";
+    level.value = levelValues.has(requestedLevel) ? requestedLevel : "all";
+    type.value = typeValues.has(requestedType) ? requestedType : "all";
+    finder.hidden = false;
+
+    const normalize = (value: string) => value.toLocaleLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").trim();
+    const cards = Array.from(guide.querySelectorAll<HTMLElement>("[data-tutor-lesson]"));
+    const levelSections = Array.from(guide.querySelectorAll<HTMLElement>("[data-tutor-level]"));
+
+    const applyFilters = () => {
+      const search = normalize(query.value);
+      let visible = 0;
+      let visibleLevels = 0;
+
+      cards.forEach((card) => {
+        const levelMatch = level.value === "all" || card.dataset.tutorLesson?.startsWith(`${level.value.toLocaleLowerCase()}/`);
+        const typeMatch = type.value === "all" || card.dataset.tutorType === type.value;
+        const searchMatch = !search || normalize(card.dataset.tutorSearch ?? "").includes(search);
+        card.hidden = !(levelMatch && typeMatch && searchMatch);
+        if (!card.hidden) visible += 1;
+      });
+
+      levelSections.forEach((section) => {
+        section.hidden = !Array.from(section.querySelectorAll<HTMLElement>("[data-tutor-lesson]")).some((card) => !card.hidden);
+        if (!section.hidden) visibleLevels += 1;
+      });
+
+      const hasFilters = Boolean(search) || level.value !== "all" || type.value !== "all";
+      reset.disabled = !hasFilters;
+      empty.hidden = visible !== 0;
+      status.textContent = hasFilters
+        ? `${visible} ${visible === 1 ? "lesson" : "lessons"} across ${visibleLevels} ${visibleLevels === 1 ? "level" : "levels"}`
+        : `${cards.length} lessons across ${levelSections.length} levels`;
+
+      const next = new URL(window.location.href);
+      const values = { q: query.value.trim(), level: level.value, type: type.value };
+      Object.entries(values).forEach(([key, value]) => value && value !== "all" ? next.searchParams.set(key, value) : next.searchParams.delete(key));
+      window.history.replaceState({}, "", `${next.pathname}${next.search}${next.hash}`);
+    };
+
+    form.addEventListener("input", applyFilters);
+    form.addEventListener("change", applyFilters);
+    form.addEventListener("submit", (event) => event.preventDefault());
+    reset.addEventListener("click", () => {
+      form.reset();
+      query.value = "";
+      applyFilters();
+      query.focus();
+    });
+    applyFilters();
+  }
+</script>

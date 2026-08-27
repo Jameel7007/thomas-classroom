@@ -13,11 +13,12 @@ const names: Record<string, string> = {
   A2: "Waystage",
   B1: "Threshold",
   B2: "Vantage",
+  C1: "Effective Operational Proficiency",
 };
 ---
-<div class="bar">
+<nav class="bar" aria-label="Lesson context">
   <div class="bar-in">
     <a class="back" href={`/curriculum/#lvl-${level}`}>← Curriculum Map</a>
     <span class="crumb"><b>{level} · {names[level] || "English"}</b> &nbsp;/&nbsp; {category} &nbsp;·&nbsp; {sequence} of {total}</span>
   </div>
-</div>
+</nav>

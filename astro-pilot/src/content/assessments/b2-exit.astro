@@ -1,5 +1,6 @@
 ---
 import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+import AudioControl from "../../components/assessment/AudioControl.astro";
 export const page = {
   "original": "outputs/assessments/b2-exit.html",
   "source": "src/content/assessments/b2-exit.astro",
@@ -7,27 +8,230 @@ export const page = {
   "slug": "b2-exit",
   "title": "B2 End-of-Level Diagnostic",
   "description": "Use this after all B2 lessons to identify any remaining gaps and confirm readiness for advanced independent English work.",
-  "engine": "none",
+  "engine": "assessment",
   "bodyClass": "",
-  "features": [
-    "AssessmentPage",
-    "AssessmentNavigation"
-  ],
-  "contentTextHash": "92968923b317a5ccc4733ecc2b0310e5861bea681013624ecd87ccf164cf5361",
-  "interactionCounts": {},
-  "audioClips": []
+  "features": ["AssessmentPage", "AssessmentNavigation", "AssessmentEngine", "ProgressIndicator", "FeedbackPanel", "MultipleChoiceExercise", "AudioControls"],
+  "contentTextHash": "063125b264bd383e99e0f9fbd273e8a112aa305da67d95bac1817ae6ae47b1b2",
+  "interactionCounts": {
+    "data-assessment": 1, "data-pass": 1, "data-strong": 1, "data-review-label": 1, "data-pass-label": 1, "data-strong-label": 1,
+    "data-review-feedback": 1, "data-pass-feedback": 1, "data-score-text": 1, "data-score-bar": 1, "data-score-label": 1,
+    "data-skill-summary": 1, "data-assessment-item": 22, "data-skill": 22, "data-points": 22, "data-answer": 20,
+    "data-option": 60, "data-voice-clip": 2, "data-speak": 2, "data-credit": 10, "data-check-assessment": 1,
+    "data-reset-assessment": 1, "data-print-assessment": 1, "data-feedback": 1
+  },
+  "audioClips": ["b2-research-briefing", "b2-policy-consultation"]
 };
 ---
 <AssessmentPage page={page}>
 <main class="wrap">
 <a class="back" href="/curriculum/#lvl-B2">Back to curriculum</a>
-<p class="overline">Complete B2 before advancing</p>
+<p class="overline">Demonstrate independent B2 communication</p>
 <h1>B2 End-of-Level Diagnostic</h1>
 <p class="lede">Use this after all B2 lessons to identify any remaining gaps and confirm readiness for advanced independent English work.</p>
+
 <div class="grid">
-<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Language Range</b>Complex grammar, phrasal verbs, discourse markers, and collocation.</li><li><b>Skills</b>Longer listening and reading with inference and attitude questions.</li><li><b>Performance</b>Presentation, discussion, written argument, and communication repair.</li></ul></section>
-<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can argue with reasons and examples.</li><li>Can understand longer texts and speech.</li><li>Can interact naturally enough for many professional and academic situations.</li></ul></section>
+<section class="panel"><h2>Benchmark goal</h2><p>The learner should understand extended argument, interact with spontaneity, explain a viewpoint with advantages and disadvantages, and produce clear detailed language across a broad range of professional, academic, and public topics.</p></section>
+<section class="panel"><h2>Confirm B2 when ready</h2><ul class="rubric"><li>Controls complex time, voice, condition, reporting, and information structure in context.</li><li>Distinguishes evidence, implication, stance, framing, and degree of certainty.</li><li>Sustains organized speech and writing while responding to challenge and qualifying a position.</li></ul></section>
 </div>
-<p class="placeholder">Next build: create a capstone benchmark with a polished progress report for the student.</p>
+
+<section class="assessment" data-assessment data-pass="73" data-strong="88" data-require-live-evidence data-production-min="60" data-listening-min="50" data-evidence-label="More live evidence needed" data-evidence-feedback="The score is high enough, but confirm at least 60% in both speaking and writing and 50% in listening before advancing." data-review-label="B2 still developing" data-pass-label="B2 achieved" data-strong-label="B2 secure" data-review-feedback="The skill profile identifies which B2 abilities need another focused lesson cycle before the learner relies on English independently in demanding contexts." data-pass-feedback="The learner has demonstrated independent B2 communication. Use the skill profile to choose the next emphasis: consolidation, professional specialization, academic work, or progression toward C1.">
+<div class="score-card">
+<div class="score-big"><span>Score</span><b data-score-text>0 / 0</b></div>
+<div>
+<div class="score-meter"><span class="score-fill" data-score-bar></span></div>
+<div class="score-label" data-score-label>Not checked yet</div>
+<p class="score-help">B2 requires converging evidence: accurate language choices, inference in connected input, and independent speaking and writing.</p>
+<div class="skill-summary" data-skill-summary></div>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>1. Control complex time, stance, and information</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="If we had consulted residents earlier, we might have avoided the conflict.">
+<p class="item-kicker">Third conditional</p>
+<div class="reading-text"><p>The council did not consult residents early. A conflict developed that might otherwise have been prevented.</p></div>
+<p class="question">Which sentence reconstructs that unreal past possibility?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="If we had consulted residents earlier, we might have avoided the conflict.">If we had consulted residents earlier, we might have avoided the conflict.</button><button class="choice-btn" data-option="If we would consult earlier, we avoided the conflict.">If we would consult earlier, we avoided the conflict.</button><button class="choice-btn" data-option="If we consulted tomorrow, we might have avoided yesterday.">If we consulted tomorrow, we might have avoided yesterday.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="If she had accepted the fellowship, she would be working in Nairobi now.">
+<p class="item-kicker">Mixed time conditional</p>
+<div class="reading-text"><p>She declined a fellowship last year. As a result, her present workplace is not in Nairobi.</p></div>
+<p class="question">Choose the sentence that links the unreal past decision to its present consequence.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="If she had accepted the fellowship, she would be working in Nairobi now.">If she had accepted the fellowship, she would be working in Nairobi now.</button><button class="choice-btn" data-option="If she accepted it now, she would have worked there last year.">If she accepted it now, she would have worked there last year.</button><button class="choice-btn" data-option="If she had accept it, she will work there now.">If she had accept it, she will work there now.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="had been negotiating">
+<p class="item-kicker">Past process before a past result</p>
+<div class="reading-text"><p>The talks began in January and continued for six months. The two sides finally reached an agreement in July.</p></div>
+<p class="question">They ___ for six months when they finally reached an agreement.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="had been negotiating">had been negotiating</button><button class="choice-btn" data-option="were negotiated">were negotiated</button><button class="choice-btn" data-option="have been negotiate">have been negotiate</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="is being independently reviewed">
+<p class="item-kicker">Progressive passive</p>
+<div class="reading-text"><p>An external panel is reviewing the evidence now. The process is not complete, and the panel matters less than the evidence.</p></div>
+<p class="question">The evidence ___ before publication.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="is being independently reviewed">is being independently reviewed</button><button class="choice-btn" data-option="is independently reviewing">is independently reviewing</button><button class="choice-btn" data-option="has being review independently">has being review independently</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="is believed to have left the country">
+<p class="item-kicker">Passive reporting about an earlier event</p>
+<div class="reading-text"><p>Investigators believe the former director left the country before the inquiry began. The report uses cautious institutional language.</p></div>
+<p class="question">The former director ___ before the inquiry began.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="is believed to have left the country">is believed to have left the country</button><button class="choice-btn" data-option="is believed that left the country">is believed that left the country</button><button class="choice-btn" data-option="believes to have leave the country">believes to have leave the country</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The reviewer asked why the methodology had changed.">
+<p class="item-kicker">Reported question</p>
+<div class="reading-text"><p>During yesterday’s review, she asked, “Why did the methodology change?”</p></div>
+<p class="question">Which report preserves statement word order and the earlier viewpoint?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The reviewer asked why the methodology had changed.">The reviewer asked why the methodology had changed.</button><button class="choice-btn" data-option="The reviewer asked why had the methodology changed.">The reviewer asked why had the methodology changed.</button><button class="choice-btn" data-option="The reviewer asked why did it changed.">The reviewer asked why did it changed.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The pilot, which began in March, will continue until December.">
+<p class="item-kicker">Non-defining relative clause</p>
+<div class="reading-text"><p>There is only one pilot. It began in March. This timing is additional information, not identification.</p></div>
+<p class="question">Choose the correctly punctuated sentence.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The pilot, which began in March, will continue until December.">The pilot, which began in March, will continue until December.</button><button class="choice-btn" data-option="The pilot that, began in March will continue until December.">The pilot that, began in March will continue until December.</button><button class="choice-btn" data-option="The pilot, that began in March will continue, until December.">The pilot, that began in March will continue, until December.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="must have used an outdated dataset">
+<p class="item-kicker">Past deduction from evidence</p>
+<div class="reading-text"><p>Every figure in the analysis matches last year’s database rather than the current one.</p></div>
+<p class="question">The analyst ___.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="must have used an outdated dataset">must have used an outdated dataset</button><button class="choice-btn" data-option="must use an outdated dataset tomorrow">must use an outdated dataset tomorrow</button><button class="choice-btn" data-option="can’t have seen any older figures">can’t have seen any older figures</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="I wish we had tested the system under real conditions.">
+<p class="item-kicker">Past regret</p>
+<div class="reading-text"><p>The team tested only in the laboratory. Problems appeared after launch, and the opportunity for pre-launch field testing is gone.</p></div>
+<p class="question">Which sentence expresses the relevant regret?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="I wish we had tested the system under real conditions.">I wish we had tested the system under real conditions.</button><button class="choice-btn" data-option="I wish we would test it before the past launch.">I wish we would test it before the past launch.</button><button class="choice-btn" data-option="I wish we test it yesterday.">I wish we test it yesterday.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="had the data independently checked">
+<p class="item-kicker">Causative arrangement</p>
+<div class="reading-text"><p>The research team arranged for an external statistician to check the data.</p></div>
+<p class="question">Before publishing, the team ___.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="had the data independently checked">had the data independently checked</button><button class="choice-btn" data-option="had independently checked the data themselves">had independently checked the data themselves</button><button class="choice-btn" data-option="got the data check independently">got the data check independently</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="will have completed">
+<p class="item-kicker">Future completion</p>
+<div class="reading-text"><p>The review deadline is September 30. The committee expects all reviews to be finished before then.</p></div>
+<p class="question">By the end of September, the committee ___ every application.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="will have completed">will have completed</button><button class="choice-btn" data-option="will be complete every">will be complete every</button><button class="choice-btn" data-option="will have been complete">will have been complete</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="What changed the committee's position was the new safety evidence.">
+<p class="item-kicker">Cleft sentence for focus</p>
+<div class="reading-text"><p>The new safety evidence—not political pressure—caused the committee to change its position.</p></div>
+<p class="question">Choose the accurate focused correction.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="What changed the committee's position was the new safety evidence.">What changed the committee’s position was the new safety evidence.</button><button class="choice-btn" data-option="What it changed the committee was the evidence position.">What it changed the committee was the evidence position.</button><button class="choice-btn" data-option="It what changed was the committee evidence.">It what changed was the committee evidence.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>2. Read for argument, evidence, stance, and implication</h2>
+<div class="reading-text"><p><strong>Should the city expand its “cool streets” pilot?</strong></p><p>Last summer, the city covered five blocks with a lighter road surface and added temporary shade structures. Sensors recorded afternoon surface temperatures between four and seven degrees lower than on nearby untreated streets. Shops on the pilot blocks also reported more pedestrians during the hottest hours.</p><p>The findings are promising, but their meaning is limited. The blocks were selected because they already had wide sidewalks, and the study lasted only eight weeks. Lower surface temperature does not automatically mean a similar reduction in the air temperature people experience. In addition, the phrase “cool streets” may imply a complete solution, although heat exposure also depends on housing, trees, work conditions, public transport, and access to water.</p><p>Nevertheless, the pilot justifies a larger comparative trial. The next phase should include different neighborhood designs, measure air temperature and health outcomes, and consult residents about maintenance and use. Expansion should therefore be treated as an evidence-building investment, not proof that one surface treatment can solve urban heat.</p></div>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The surface treatment reduced measured surface temperatures on the five pilot blocks.">
+<p class="item-kicker">Supported finding</p><p class="question">Which conclusion is directly supported by the reported measurements?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The surface treatment reduced measured surface temperatures on the five pilot blocks.">The surface treatment reduced measured surface temperatures on the five pilot blocks.</button><button class="choice-btn" data-option="The treatment eliminated dangerous heat throughout the city.">The treatment eliminated dangerous heat throughout the city.</button><button class="choice-btn" data-option="Every pedestrian’s body temperature fell by seven degrees.">Every pedestrian’s body temperature fell by seven degrees.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The selected blocks and short duration limit how widely the results can be generalized.">
+<p class="item-kicker">Methodological limitation</p><p class="question">Why does the writer resist a citywide conclusion?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The selected blocks and short duration limit how widely the results can be generalized.">The selected blocks and short duration limit how widely the results can be generalized.</button><button class="choice-btn" data-option="The sensors recorded no temperature difference at all.">The sensors recorded no temperature difference at all.</button><button class="choice-btn" data-option="Residents had already rejected every form of shade.">Residents had already rejected every form of shade.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Continue with a broader, better-designed trial while treating the current result as provisional.">
+<p class="item-kicker">Writer’s stance and implication</p><p class="question">Which summary best represents the writer’s final position?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Continue with a broader, better-designed trial while treating the current result as provisional.">Continue with a broader, better-designed trial while treating the current result as provisional.</button><button class="choice-btn" data-option="Abandon all heat interventions because the first study was imperfect.">Abandon all heat interventions because the first study was imperfect.</button><button class="choice-btn" data-option="Adopt the surface treatment everywhere because the phrase “cool streets” proves success.">Adopt the surface treatment everywhere because the phrase “cool streets” proves success.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>3. Listen for qualification, inference, and recommendation</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="The pilot reduced reported delays, but a larger comparison is needed before claiming the tool caused the improvement.">
+<p class="item-kicker">Listen: research briefing</p>
+<p class="question">Play the briefing. Which summary preserves both the result and the speaker’s caution?</p>
+<AudioControl clip="b2-research-briefing" src="/audio/assessments/b2-exit/research-briefing.mp3" text="Our six-week pilot involved four customer-support teams using an automated scheduling tool. Reported response delays fell by eighteen percent, and most staff said routine coordination became easier. However, the busiest team was not included, and managers also changed the shift pattern during the trial. We will therefore compare eight teams over six months before deciding whether the tool itself produced the improvement." label="Play briefing" ariaLabel="Play the B2 research briefing" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The pilot reduced reported delays, but a larger comparison is needed before claiming the tool caused the improvement.">The pilot reduced reported delays, but a larger comparison is needed before claiming the tool caused the improvement.</button><button class="choice-btn" data-option="The tool has proved that every team will eliminate all delays.">The tool has proved that every team will eliminate all delays.</button><button class="choice-btn" data-option="Response delays increased because the shift pattern never changed.">Response delays increased because the shift pattern never changed.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="Run a temporary, independently monitored restriction and revise it if access or local businesses are harmed.">
+<p class="item-kicker">Listen: policy consultation</p>
+<p class="question">Play the consultation summary. Which recommendation balances the concerns that were raised?</p>
+<AudioControl clip="b2-policy-consultation" src="/audio/assessments/b2-exit/policy-consultation.mp3" text="Most speakers supported reducing private traffic around the market, mainly because of safety and air quality. Several shop owners were concerned that older customers and delivery drivers might lose access. Rather than introducing a permanent ban immediately, the panel recommends a three-month weekend restriction, independent monitoring of footfall and air quality, and designated access for mobility services and deliveries. The policy should be revised if the evidence shows serious harm." label="Play consultation" ariaLabel="Play the B2 policy consultation summary" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Run a temporary, independently monitored restriction and revise it if access or local businesses are harmed.">Run a temporary, independently monitored restriction and revise it if access or local businesses are harmed.</button><button class="choice-btn" data-option="Introduce an immediate permanent ban with no exceptions or evaluation.">Introduce an immediate permanent ban with no exceptions or evaluation.</button><button class="choice-btn" data-option="Reject every traffic change because no speaker mentioned safety.">Reject every traffic change because no speaker mentioned safety.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="Admittedly, the evidence is limited. Nevertheless, it justifies a larger trial.">
+<p class="item-kicker">Concession and counterargument</p>
+<div class="reading-text"><p>You want to acknowledge a real limitation without abandoning a proportionate next step.</p></div>
+<p class="question">Which pair of discourse markers makes that logic explicit?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Admittedly, the evidence is limited. Nevertheless, it justifies a larger trial.">Admittedly, the evidence is limited. Nevertheless, it justifies a larger trial.</button><button class="choice-btn" data-option="Consequently, the evidence is limited. In other words, no evidence exists.">Consequently, the evidence is limited. In other words, no evidence exists.</button><button class="choice-btn" data-option="Moreover the evidence limited, despite we abandon it.">Moreover the evidence limited, despite we abandon it.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="The organization will gradually phase out the outdated system.">
+<p class="item-kicker">Phrasal verb, meaning, and register</p>
+<div class="reading-text"><p>The old system will not disappear immediately. Its use will be reduced in stages until it is discontinued.</p></div>
+<p class="question">Choose the accurate professional sentence.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The organization will gradually phase out the outdated system.">The organization will gradually phase out the outdated system.</button><button class="choice-btn" data-option="The organization will phase the outdated system out it.">The organization will phase the outdated system out it.</button><button class="choice-btn" data-option="The outdated system will come across the organization.">The outdated system will come across the organization.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="The group remained outside the building and requested a meeting with officials.">
+<p class="item-kicker">Neutral wording and connotation</p>
+<div class="reading-text"><p>Observers agree on the actions but disagree about whether the group was courageous or troublesome.</p></div>
+<p class="question">Which sentence reports the observable facts with the least built-in evaluation?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The group remained outside the building and requested a meeting with officials.">The group remained outside the building and requested a meeting with officials.</button><button class="choice-btn" data-option="The heroic campaigners courageously defended justice.">The heroic campaigners courageously defended justice.</button><button class="choice-btn" data-option="The troublesome mob aggressively occupied the area.">The troublesome mob aggressively occupied the area.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>4. Teacher-scored independent communication</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Speaking" data-points="5">
+<p class="item-kicker">Speaking task · 5 points</p>
+<div class="reading-text"><p><strong>Evidence review meeting:</strong> A city has funding for one twelve-month pilot: shaded bus stops, free evening language courses, a repair-and-reuse center, or an artificial-intelligence appointment system. The learner recommends one option, evaluates an alternative, responds to counterevidence, and states what evidence would justify continuation.</p></div>
+<p class="question">Award one point for each ability demonstrated independently or after one light prompt.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Sustains a clear three-to-four-minute argument with position, evidence, qualification, comparison, and conclusion.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Responds to two challenging follow-up questions by clarifying, reformulating, conceding, or revising a claim.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses a broad B2 range, including accurate complex clauses and at least two effective information-structure or stance choices.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses precise topic vocabulary, natural collocations, and appropriately calibrated degree rather than vague general language.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Remains coherent, comprehensible, and interactionally responsive without a prepared script or continuous teacher support.</label>
+</div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Writing" data-points="5">
+<p class="item-kicker">Writing task · 5 points</p>
+<div class="reading-text"><p><strong>Write an evidence-based recommendation of 220–280 words.</strong> Address a workplace, education, technology, environment, or community issue. Define the problem, distinguish known evidence from assumptions, compare at least two responses, acknowledge a serious objection, and recommend a proportionate next step with evaluation criteria.</p></div>
+<p class="question">Award one point for each observable quality.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Fulfills the full task with a focused position, relevant evidence, comparison, counterargument, recommendation, and evaluation criteria.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Organizes cohesive paragraphs with precise discourse markers that make concession, result, reformulation, and conclusion easy to follow.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Controls a varied B2 grammatical range, including accurate complex time, passive/reporting, conditional, relative, or emphasis structures where meaningful.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Chooses precise vocabulary, register, degree, and connotation appropriate to an evidence-based professional or academic recommendation.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Produces independent, readable prose with enough lexical and grammatical control that errors rarely distract from nuance or argument.</label>
+</div>
+</article>
+</div>
+</div>
+
+<div class="actions">
+<button class="assessment-btn primary" data-check-assessment>Check assessment</button>
+<button class="assessment-btn" data-reset-assessment>Reset</button>
+<button class="assessment-btn" data-print-assessment>Print summary</button>
+</div>
+<p class="feedback" data-feedback>Complete the sections, then check the assessment.</p>
+</section>
 </main>
 </AssessmentPage>

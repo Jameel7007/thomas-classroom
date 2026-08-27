@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Prepositions of time and place · A1 Grammar · Curriculum Map",
+  "title": "Prepositions of time and place · A1 Grammar",
   "slug": "prepositions-of-time-and-place",
   "level": "A1",
   "topic": "Prepositions of time and place",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Place every plan and every object precisely: at 9:30 , on Monday , in July , at work , on the table , and in the kitchen .",
+  "description": "Choose at, on, and in for points, days, periods, surfaces, areas, activities, addresses, and common transportation and time chunks.",
   "sequence": 7,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/days-months-dates", "a1/there-is-there-are"],
+  "related": ["a1/rooms-and-furniture", "a1/daily-routines-and-telling-the-time", "a2/town-and-directions"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Time/place frames, fixed and zero-preposition chunks, U.S. weekend, address, institution and transport contrasts, spoken linking, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 7</p>
   <h1>Prepositions of <em>time and place</em></h1>
-  <p class="standfirst">Place every plan and every object precisely: <span class="ex">at 9:30</span>, <span class="ex">on Monday</span>, <span class="ex">in July</span>, <span class="ex">at work</span>, <span class="ex">on the table</span>, and <span class="ex">in the kitchen</span>.</p>
+  <p class="standfirst">Choose the frame English uses for a time or place: <span class="ex">at 9:30</span>, <span class="ex">on Monday</span>, <span class="ex">in July</span>, <span class="ex">at work</span>, <span class="ex">on the table</span>, and <span class="ex">in the kitchen</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">at / on / in</span>
     <span class="tag">time and place</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Read one meeting sentence.</span></div>
     <div class="flow-step"><b>Discover</b><span>Sort point, day, and space.</span></div>
     <div class="flow-step"><b>Build</b><span>Choose and type at, on, in.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about your week and your home.</span></div>
+    <div class="flow-step"><b>Use</b><span>Plan a fictional community event.</span></div>
   </div>
 
-  <p class="note-line"><span class="ex">At</span>, <span class="ex">on</span>, and <span class="ex">in</span> are the small words that put times on a clock, days on a calendar, and things in places. You choose by size: a point, a day or surface, or a period or space.</p>
+  <p class="note-line"><span class="ex">At</span>, <span class="ex">on</span>, and <span class="ex">in</span> help the listener build a frame: a point, a day or surface, or a period or space. This picture is a useful starting rule, but English also has conventional chunks such as <span class="ex">at night</span>, <span class="ex">at home</span>, and <span class="ex">on the weekend</span>.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved third-person starts, plural There are, and the zero-frequency adverb never before the main verb.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -52,9 +60,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="There are">There are</button>
       <button class="choice-option" data-choice-option="always">always</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My class <button class="choice-gap" data-choice-gap data-answer="starts" data-placeholder="choose">choose</button> at nine. &nbsp;<span class="contraction">(present simple)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> two meeting rooms on this floor. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I <button class="choice-gap" data-choice-gap data-answer="never" data-placeholder="choose">choose</button> drink coffee at night because I can’t sleep after it. &nbsp;<span class="contraction">(adverbs of frequency)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The fictional class schedule lists a 9:00 start. My class <button class="choice-gap" data-choice-gap data-answer="starts" data-hint="The singular subject my class takes the third-person form starts." data-fix="My class starts at nine." data-placeholder="choose">choose</button> at nine. &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The floor plan introduces two rooms: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Two meeting rooms is plural, so introduce them with There are." data-fix="There are two meeting rooms on this floor." data-placeholder="choose">choose</button> two meeting rooms on this floor. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The fictional drink log shows zero nighttime coffee. I <button class="choice-gap" data-choice-gap data-answer="never" data-hint="Zero occasions supports never before the ordinary verb drink." data-fix="The fictional speaker never drinks coffee at night." data-placeholder="choose">choose</button> drink coffee at night. &nbsp;<span class="contraction">(adverbs of frequency)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -74,7 +82,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Clock points take at, days and surfaces take on, and months, containers, and areas take in.">
     <h3>Discovery check: choose at, on, or in</h3>
     <p class="choice-hint">Ask: is it a point, a day or surface, or a period or space?</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -82,12 +90,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="on">on</button>
       <button class="choice-option" data-choice-option="in">in</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The train leaves <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> 7:15.</span></div>
-    <div class="q"><span class="n">2</span><span>My English class is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> Tuesday.</span></div>
-    <div class="q"><span class="n">3</span><span>Her birthday is <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> March.</span></div>
-    <div class="q"><span class="n">4</span><span>Your phone is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> the desk.</span></div>
-    <div class="q"><span class="n">5</span><span>The tickets are <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> my bag.</span></div>
-    <div class="q"><span class="n">6</span><span>Dana is <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> the bus stop.</span></div>
+    <div class="q"><span class="n">1</span><span>The posted schedule gives one exact departure time. The train leaves <button class="choice-gap" data-choice-gap data-answer="at" data-hint="An exact clock time is treated as a point, so use at." data-fix="The train leaves at 7:15." data-placeholder="choose">choose</button> 7:15.</span></div>
+    <div class="q"><span class="n">2</span><span>The weekly calendar gives one named day. My English class is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="A named day takes on." data-fix="My English class is on Tuesday." data-placeholder="choose">choose</button> Tuesday.</span></div>
+    <div class="q"><span class="n">3</span><span>The fictional profile gives only the birthday month. Her birthday is <button class="choice-gap" data-choice-gap data-answer="in" data-hint="A month is a longer time period, so use in." data-fix="Her birthday is in March." data-placeholder="choose">choose</button> March.</span></div>
+    <div class="q"><span class="n">4</span><span>The device touches the desk’s top surface. Your phone is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="Contact with a surface takes on." data-fix="Your phone is on the desk." data-placeholder="choose">choose</button> the desk.</span></div>
+    <div class="q"><span class="n">5</span><span>The tickets are inside a closed bag. The tickets are <button class="choice-gap" data-choice-gap data-answer="in" data-hint="Something inside a container takes in." data-fix="The tickets are in my fictional bag." data-placeholder="choose">choose</button> my fictional bag.</span></div>
+    <div class="q"><span class="n">6</span><span>Dana is waiting at the mapped pickup point. Dana is <button class="choice-gap" data-choice-gap data-answer="at" data-hint="A bus stop is treated as a point on the route, so use at." data-fix="Dana is at the bus stop." data-placeholder="choose">choose</button> the bus stop.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -97,7 +105,7 @@ export const page = defineLesson({
 
   <h2>The system: time with at, on, and in</h2>
   <div class="lead-rule"></div>
-  <p>For time, choose by the size of the period. The smaller and more exact the time, the more likely it is <span class="ex">at</span>.</p>
+  <p>For time, begin with the size of the frame. The smaller and more exact the time, the more likely it is <span class="ex">at</span>. This is a thinking tool, not a complete law, so keep common expressions as whole chunks.</p>
   <table>
     <thead><tr><th>preposition</th><th>use it with</th><th>examples</th></tr></thead>
     <tbody>
@@ -112,18 +120,18 @@ export const page = defineLesson({
     <p>One sentence, three sizes: <span class="ex">at 9:30</span> is a point on the clock, <span class="ex">on Monday</span> is one square on the calendar, and <span class="ex">in July</span> is a whole month around it. Zoom out, and the preposition changes.</p>
   </div>
   <div class="note">
-    <h3>Three classic exceptions</h3>
-    <p>Memorize these as chunks: <span class="ex">at night</span>, <span class="ex">on the weekend</span> (American English), and <span class="ex">in the morning / in the afternoon / in the evening</span>. Notice the pattern shift: <span class="ex">in the morning</span>, but <span class="ex">on Friday morning</span>, because the named day becomes the organizing unit.</p>
+    <h3>Three conventional time chunks</h3>
+    <p>Learn these as chunks: <span class="ex">at night</span>, <span class="ex">on the weekend</span> in American English, and <span class="ex">in the morning / in the afternoon / in the evening</span>. Notice the pattern shift: <span class="ex">in the morning</span>, but <span class="ex">on Friday morning</span>, because the named day becomes the organizing unit.</p>
   </div>
-  <p class="note-line">No preposition before <span class="ex">this, next, last, every</span>: <span class="ex">this morning, next Friday, last year, every Monday</span>.</p>
+  <p class="note-line">Use no time preposition before <span class="ex">this, next, last, every</span> or before <span class="ex">today, tonight, tomorrow, yesterday</span>: <span class="ex">this morning, next Friday, last year, every Monday, tonight, tomorrow morning</span>.</p>
 
   <h2>The system: place with at, on, and in</h2>
   <div class="lead-rule"></div>
-  <p>For place, ask what picture you see: a point you stop at, a surface or line something sits on, or a space with an inside. With activities and institutions, English treats the location as a functional point: <span class="ex">at work</span>, <span class="ex">at school</span>, <span class="ex">at a meeting</span>. The focus is being there for the activity, not standing inside one exact room.</p>
+  <p>For place, ask what picture the sentence creates: a point you stop at, a surface or line something sits on, or a space with an inside. With activities and institutions, English often treats the location as a functional point: <span class="ex">at work</span>, <span class="ex">at school</span>, <span class="ex">at a meeting</span>. The focus is being there for the activity, not standing inside one exact room.</p>
   <table>
     <thead><tr><th>preposition</th><th>use it with</th><th>examples</th></tr></thead>
     <tbody>
-      <tr><td><b>at</b></td><td>points and activities</td><td>at work, at the bus stop, at a meeting, at the door</td></tr>
+      <tr><td><b>at</b></td><td>points, exact addresses, and activities</td><td>at work, at the bus stop, at 245 Oak Street, at the door</td></tr>
       <tr><td><b>on</b></td><td>surfaces and lines</td><td>on the table, on Main Street, on the second floor, on the wall</td></tr>
       <tr><td><b>in</b></td><td>enclosed spaces and areas</td><td>in the kitchen, in the city, in Mexico, in my bag</td></tr>
     </tbody>
@@ -132,6 +140,16 @@ export const page = defineLesson({
     <h3>Zoom in, and the preposition changes</h3>
     <p><span class="ex">The conference is in Mexico, in Guadalajara, at the convention center, in Room 4, at the front.</span></p>
     <p>There is no contradiction. Each phrase changes the scale of the mental map, from a large container down to a precise point.</p>
+  </div>
+
+  <div class="note">
+    <h3>Street line or exact address?</h3>
+    <p>Use <span class="ex">on</span> for the street as a line or general location: <span class="ex">The café is on Oak Street</span>. Use <span class="ex">at</span> when an exact street number makes the location a point: <span class="ex">The café is at 245 Oak Street</span>. A person can wait <span class="ex">at the café</span> while a sign is <span class="ex">on the café door</span>.</p>
+  </div>
+
+  <div class="note">
+    <h3>Transportation chunks in U.S. English</h3>
+    <p>People normally travel <span class="ex">on a bus, on a train, on a plane</span>, but <span class="ex">in a car, in a taxi</span>. Treat these as conventional chunks, not a perfect physical rule. For location, say <span class="ex">I’m on the bus</span> and <span class="ex">My bag is in the car</span>.</p>
   </div>
 
   <h2>Get to the root: point, surface, container</h2>
@@ -148,7 +166,68 @@ export const page = defineLesson({
   </table>
   <p class="note-line">Prepositions do not translate word for word. Learn combinations as chunks: <span class="ex">at work</span>, <span class="ex">on time</span>, <span class="ex">in bed</span>, <span class="ex">on the weekend</span>.</p>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Same noun, different picture</h3>
+    <table>
+      <thead><tr><th>contrast</th><th>meaning</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ex">at school / in school</span></td><td><span class="ex">At school</span> gives the location or activity. In U.S. English, <span class="ex">in school</span> often means the person is a student.</td></tr>
+        <tr><td><span class="ex">in bed / on the bed</span></td><td><span class="ex">In bed</span> means resting or sleeping there. Something <span class="ex">on the bed</span> touches its surface.</td></tr>
+        <tr><td><span class="ex">on time / in time</span></td><td><span class="ex">On time</span> means at the scheduled time. <span class="ex">In time</span> means early enough before it is too late.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: keep the preposition light and the time or place clear</h3>
+    <p>In neutral speech, <span class="ex">at, on,</span> and <span class="ex">in</span> are usually small linking words. The strongest beat falls on the information that follows: <span class="ex">at <strong>NINE</strong></span>, <span class="ex">on <strong>MON</strong>day</span>, <span class="ex">in <strong>JU</strong>ly</span>, and <span class="ex">in the <strong>KITCH</strong>en</span>.</p>
+    <table>
+      <thead><tr><th>phrase</th><th>natural rhythm</th><th>main information</th></tr></thead>
+      <tbody>
+        <tr><td>at nine</td><td>at-<b>NINE</b></td><td>the exact time</td></tr>
+        <tr><td>on Monday</td><td>on-<b>MON</b>day</td><td>the day</td></tr>
+        <tr><td>in the office</td><td>in-the-<b>OFF</b>ice</td><td>the location</td></tr>
+      </tbody>
+    </table>
+    <p>Do not pause after the preposition. Link it forward as one spoken group: <span class="ex">at-eight</span>, <span class="ex">on-Oak Street</span>, and <span class="ex">in-August</span>. In fast conversation, unstressed <span class="ex">at</span> often has a reduced vowel, approximately <span class="ex">uht</span>, but the following time stays clear.</p>
+    <p>The preposition becomes strong when the frame itself is the contrast: <span class="ex">Meet me <strong>AT</strong> the station, not <strong>IN</strong> the station.</span> The first means the station is our meeting point. The second emphasizes being inside it.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read time, address, and transportation listening check">
+    <h2>Listen: which frame did the speaker choose?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional schedule or location once at a natural speed and once more slowly. Listen for the linked preposition and the complete time or place chunk. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard an exact time, a named day, a month, an exact address, public transportation, and a small-vehicle chunk.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Time and place listening chunks">
+        <button class="choice-option" data-choice-option="at 8:30">at 8:30</button><button class="choice-option" data-choice-option="on Tuesday">on Tuesday</button>
+        <button class="choice-option" data-choice-option="in October">in October</button><button class="choice-option" data-choice-option="at 245 Oak Street">at 245 Oak Street</button>
+        <button class="choice-option" data-choice-option="on the bus">on the bus</button><button class="choice-option" data-choice-option="in a taxi">in a taxi</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 schedules the call <button class="choice-gap" data-choice-gap data-answer="at 8:30" data-hint="Listen for the reduced point preposition linked directly to the exact clock time." data-fix="The call starts at 8:30." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 places the appointment <button class="choice-gap" data-choice-gap data-answer="on Tuesday" data-hint="Listen for on linked to one named day." data-fix="The appointment is on Tuesday." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 places the training period <button class="choice-gap" data-choice-gap data-answer="in October" data-hint="Listen for in linked to the month name." data-fix="The training begins in October." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 gives the exact café location <button class="choice-gap" data-choice-gap data-answer="at 245 Oak Street" data-hint="A numbered address is treated as one point, so listen for at before the number." data-fix="The café is at 245 Oak Street." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 says the fictional speaker is <button class="choice-gap" data-choice-gap data-answer="on the bus" data-hint="Public transportation normally uses the conventional chunk on the bus." data-fix="I’m on the bus now." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 says the fictional visitors arrived <button class="choice-gap" data-choice-gap data-answer="in a taxi" data-hint="A small vehicle normally uses the conventional chunk in a taxi." data-fix="They arrived in a taxi." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">The project call starts at 8:30.</span></li>
+        <li><span class="ex">The appointment is on Tuesday, not Wednesday.</span></li>
+        <li><span class="ex">The training begins in October.</span></li>
+        <li><span class="ex">The café is at 245 Oak Street, on the corner.</span></li>
+        <li><span class="ex">I’m on the bus now, so I’ll call when I arrive.</span></li>
+        <li><span class="ex">The fictional visitors arrived in a taxi.</span></li>
+      </ol>
+      <p>Link each unstressed preposition to the following information. On the second reading, stress the preposition only when it corrects a different frame.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The schedule uses point, day, day-part, and month frames, while the map uses floor, city, stop, and surface frames.">
     <h3>Drill 1: at, on, or in across your day</h3>
     <p class="choice-hint">Read the whole sentence first. Decide time or place, then decide the size of the picture.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -156,14 +235,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="on">on</button>
       <button class="choice-option" data-choice-option="in">in</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The meeting starts <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> 2:30.</span></div>
-    <div class="q"><span class="n">2</span><span>I don’t work <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> Fridays.</span></div>
-    <div class="q"><span class="n">3</span><span>I answer email <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> the morning.</span></div>
-    <div class="q"><span class="n">4</span><span>Our office is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> the fifth floor.</span></div>
-    <div class="q"><span class="n">5</span><span>My parents live <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> Mexico City.</span></div>
-    <div class="q"><span class="n">6</span><span>Wait for me <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> the bus stop.</span></div>
-    <div class="q"><span class="n">7</span><span>The schedule is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> the wall by the door.</span></div>
-    <div class="q"><span class="n">8</span><span>The project ends <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> December.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional calendar gives one exact start time. The meeting starts <button class="choice-gap" data-choice-gap data-answer="at" data-hint="An exact clock time is treated as a point, so use at." data-fix="The meeting starts at 2:30." data-placeholder="choose">choose</button> 2:30.</span></div>
+    <div class="q"><span class="n">2</span><span>The work log shows zero Friday shifts. I don’t work <button class="choice-gap" data-choice-gap data-answer="on" data-hint="A repeated named day still takes on." data-fix="The fictional employee doesn’t work on Fridays." data-placeholder="choose">choose</button> Fridays.</span></div>
+    <div class="q"><span class="n">3</span><span>The communication policy assigns email to the morning period. I answer email <button class="choice-gap" data-choice-gap data-answer="in" data-hint="The conventional day-part chunk is in the morning." data-fix="I answer email in the morning." data-placeholder="choose">choose</button> the morning.</span></div>
+    <div class="q"><span class="n">4</span><span>The building directory lists the office on one level. Our office is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="English treats a floor as a level in a stack, so use on." data-fix="Our office is on the fifth floor." data-placeholder="choose">choose</button> the fifth floor.</span></div>
+    <div class="q"><span class="n">5</span><span>The fictional profile names Mexico City as the containing city. The characters live <button class="choice-gap" data-choice-gap data-answer="in" data-hint="A city is treated as an area around the location, so use in." data-fix="The fictional characters live in Mexico City." data-placeholder="choose">choose</button> Mexico City.</span></div>
+    <div class="q"><span class="n">6</span><span>The transit map marks one pickup point. Wait for the fictional traveler <button class="choice-gap" data-choice-gap data-answer="at" data-hint="A bus stop is treated as a route point, so use at." data-fix="Wait for the fictional traveler at the bus stop." data-placeholder="choose">choose</button> the bus stop.</span></div>
+    <div class="q"><span class="n">7</span><span>The paper schedule touches the wall surface. The schedule is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="Something attached to a surface takes on." data-fix="The schedule is on the wall by the door." data-placeholder="choose">choose</button> the wall by the door.</span></div>
+    <div class="q"><span class="n">8</span><span>The project timeline gives December as the ending month. The project ends <button class="choice-gap" data-choice-gap data-answer="in" data-hint="A month is a longer time period, so use in." data-fix="The project ends in December." data-placeholder="choose">choose</button> December.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -171,15 +250,15 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <div class="practice" data-answer-drill data-success-message="Correct. Each typed preposition matches an exact time, named day, year, street line, container, or activity location.">
     <h3>Drill 2: type at, on, or in</h3>
     <p class="choice-hint">No bank this time. Ask yourself: point, day or surface, or period or space? Then type the word.</p>
-    <div class="q"><span class="n">1</span><span>My shift ends <input class="answer-input" data-answer="at" aria-label="answer 1" /> 6:00.</span></div>
-    <div class="q"><span class="n">2</span><span>The kickoff call is <input class="answer-input" data-answer="on" aria-label="answer 2" /> Monday morning.</span></div>
-    <div class="q"><span class="n">3</span><span>We moved here <input class="answer-input" data-answer="in" aria-label="answer 3" /> 2023.</span></div>
-    <div class="q"><span class="n">4</span><span>The pharmacy is <input class="answer-input" data-answer="on" aria-label="answer 4" /> Main Street.</span></div>
-    <div class="q"><span class="n">5</span><span>My keys are <input class="answer-input" data-answer="in" aria-label="answer 5" /> my coat pocket.</span></div>
-    <div class="q"><span class="n">6</span><span>I’m <input class="answer-input" data-answer="at" aria-label="answer 6" /> work until five, so call me after that.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional shift schedule gives an exact end time. My shift ends <input class="answer-input" data-answer="at" data-hint="An exact clock time is treated as a point, so use at." data-fix="My shift ends at 6:00." aria-label="Time preposition before the exact shift end time 6:00" /> 6:00.</span></div>
+    <div class="q"><span class="n">2</span><span>The calendar names both a day and its morning. The kickoff call is <input class="answer-input" data-answer="on" data-hint="A named day organizes the day part, so use on Monday morning." data-fix="The kickoff call is on Monday morning." aria-label="Time preposition before the named day Monday morning" /> Monday morning.</span></div>
+    <div class="q"><span class="n">3</span><span>The fictional history gives only the move year. The characters moved there <input class="answer-input" data-answer="in" data-hint="A year is a longer time period, so use in." data-fix="The fictional characters moved there in 2023." aria-label="Time preposition before the move year 2023" /> 2023.</span></div>
+    <div class="q"><span class="n">4</span><span>The map gives Main Street as the pharmacy’s general street line, not a numbered address. The pharmacy is <input class="answer-input" data-answer="on" data-hint="A general street location takes on; an exact numbered address would take at." data-fix="The pharmacy is on Main Street." aria-label="Place preposition before Main Street as a general street location" /> Main Street.</span></div>
+    <div class="q"><span class="n">5</span><span>The fictional inventory places the keys inside one pocket. The keys are <input class="answer-input" data-answer="in" data-hint="Something inside a container takes in." data-fix="The keys are in the fictional coat pocket." aria-label="Place preposition before a coat pocket containing the keys" /> the fictional coat pocket.</span></div>
+    <div class="q"><span class="n">6</span><span>The fictional caller gives work as their current activity location. I’m <input class="answer-input" data-answer="at" data-hint="The fixed activity-location chunk is at work." data-fix="I’m at work until five." aria-label="Place preposition before work as an activity location" /> work until five.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -193,18 +272,18 @@ export const page = defineLesson({
     <h3>A team invitation</h3>
     <p><span class="ex">"Hi team! Lunch is on Friday at 1:00 at the Italian place on Fifth Street. We meet in the lobby at 12:45 and walk over together. If you’re running late, come straight to the restaurant. The reservation is under my name, Priya."</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed the times and places in a real invitation.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the lunch day and time, the first meeting place, and the lobby meeting time in the fictional invitation.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="on Friday at 1:00">
+      <div class="quiz-item" data-quiz-item data-answer="on Friday at 1:00" data-hint="The invitation’s first sentence gives the named day followed by the exact lunch time." data-fix="The team lunch is on Friday at 1:00.">
         <p class="quiz-question">1. When is the team lunch?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on Thursday at 1:00">on Thursday at 1:00</button><button class="quiz-option" data-quiz-option="on Friday at 1:00">on Friday at 1:00</button><button class="quiz-option" data-quiz-option="on Friday at 12:00">on Friday at 12:00</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="in the lobby">
+      <div class="quiz-item" data-quiz-item data-answer="in the lobby" data-hint="The second sentence names the enclosed place where the team gathers before walking." data-fix="The team meets first in the lobby.">
         <p class="quiz-question">2. Where does the team meet first?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in the lobby">in the lobby</button><button class="quiz-option" data-quiz-option="at the restaurant">at the restaurant</button><button class="quiz-option" data-quiz-option="on Fifth Street">on Fifth Street</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="at 12:45">
+      <div class="quiz-item" data-quiz-item data-answer="at 12:45" data-hint="The exact time appears immediately after the lobby meeting place." data-fix="The team meets in the lobby at 12:45.">
         <p class="quiz-question">3. What time do they meet in the lobby?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="at 1:00">at 1:00</button><button class="quiz-option" data-quiz-option="at 12:15">at 12:15</button><button class="quiz-option" data-quiz-option="at 12:45">at 12:45</button></div>
       </div>
@@ -216,7 +295,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="the meeting starts at nine on monday">
+  <div class="tile-game" data-tile-builder data-answer="the meeting starts at nine on monday" data-hint="Begin with The meeting starts, attach at to the exact time, and attach on to the named day." data-fix="The meeting starts at nine on Monday." data-success-message="Correct. The schedule attaches at to the exact time nine and on to the named day Monday.">
     <h3>Drill 4: build the schedule sentence</h3>
     <p class="tile-target">Build the sentence. Put the exact time before the day.</p>
     <div class="tile-bank" data-build-bank>
@@ -236,7 +315,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="my office is on the third floor">
+  <div class="tile-game" data-tile-builder data-answer="my office is on the third floor" data-hint="Begin with My office is and use on before the level the third floor." data-fix="My office is on the third floor." data-success-message="Correct. The building location uses on before the floor level.">
     <h3>Drill 5: build the location sentence</h3>
     <p class="tile-target">Build the sentence. A floor is one line in a stack, so it takes on.</p>
     <div class="tile-bank" data-build-bank>
@@ -258,7 +337,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="in" data-fix="I start work at nine o’clock." data-why="A clock time is a point, so it takes at.">
+  <div class="micro-drill" data-spot-error data-answer="in" data-hint="The sentence gives an exact clock time, which requires the point preposition." data-fix="I start work at nine o’clock." data-why="A clock time is a point, so it takes at.">
     <h3>Drill 6: clock times are points</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -270,7 +349,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="at" data-fix="She lives in Chicago." data-why="A city is an area you are inside, so it takes in.">
+  <div class="micro-drill" data-spot-error data-answer="at" data-hint="Chicago is a city area around the fictional resident, not one exact point." data-fix="She lives in Chicago." data-why="A city is an area around the location, so it takes in.">
     <h3>Drill 7: cities are containers</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -287,9 +366,9 @@ export const page = defineLesson({
     <p>Read the cue, say the full sentence with at, on, or in, then reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> My birthday. July.</p>
+        <p class="transform-cue"><b>1</b> The fictional festival. July.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>My birthday is in July.</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>The fictional festival is in July.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>2</b> The meeting. Monday.</p>
@@ -302,72 +381,86 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>The train leaves at 8:15.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> My keys. The kitchen table.</p>
+        <p class="transform-cue"><b>4</b> The staged-picture keys. The kitchen table.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>My keys are on the kitchen table.</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>The keys are on the kitchen table.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> My sister. Work.</p>
+        <p class="transform-cue"><b>5</b> The fictional profile says Priya. Work.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>My sister is at work.</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>Priya is at work.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> We live. Mexico City.</p>
+        <p class="transform-cue"><b>6</b> The fictional couple lives. Mexico City.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>We live in Mexico City.</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>The fictional couple lives in Mexico City.</strong></p>
       </div>
     </div>
   </div>
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your real week:</b> Say five true sentences about your schedule with at, on, and in. <span class="ex">I work on Saturdays. My class starts at 7:00. My vacation is in August.</span></div>
-  <div class="prompt-card"><b>Home tour:</b> Say where five real things are in your home. <span class="ex">The coffee is in the cabinet. The remote is on the sofa.</span></div>
-  <div class="prompt-card"><b>Your address:</b> Describe where you live, from small to large: your floor, your street, your city, your country. <span class="ex">I live on the fourth floor, on Reforma Street, in Guadalajara, in Mexico.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five When or Where questions and listen for at, on, and in in the answers. <span class="ex">When is your next class? Where are your keys right now?</span></div>
-  <div class="prompt-card"><b>A typical Monday:</b> Walk through your Monday with times. <span class="ex">At 6:30 I get up. At noon I have lunch. In the evening I rest.</span></div>
+  <p class="note-line">You never need to disclose your real address, home, belongings, schedule, workplace, school, travel, family, or live location. Use a fictional map, calendar, room image, or public venue whenever you prefer.</p>
+  <div class="prompt-card"><b>Fictional calendar:</b> Place five events at clock times, on named days, and in months or years. Include one expression with no preposition, such as <span class="ex">next Friday</span>.</div>
+  <div class="prompt-card"><b>Staged room image:</b> Place five visible objects at a point, on a surface, or in a container. Explain what picture makes each preposition natural.</div>
+  <div class="prompt-card"><b>Map and address:</b> Put a fictional café on Oak Street and at a numbered address. Add a meeting point at the café and one sign on its door.</div>
+  <div class="prompt-card"><b>Transportation update:</b> Create two fictional messages using <span class="ex">on the bus / train / plane</span> and <span class="ex">in a car / taxi</span>.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: plan a fictional community event</h3>
+    <p>Give a 45–60 second invitation and travel update. Include all six pieces of evidence:</p>
+    <ol>
+      <li>one exact time with <span class="ex">at</span>, one named day with <span class="ex">on</span>, and one longer period with <span class="ex">in</span>;</li>
+      <li>one point, one surface or line, and one containing area;</li>
+      <li>a general street location and an exact numbered address;</li>
+      <li>one public-transport or small-vehicle chunk;</li>
+      <li>one expression with no time preposition, such as <span class="ex">next Saturday</span>;</li>
+      <li>one spoken correction that stresses the preposition: <span class="ex">AT the station, not IN the station</span>.</li>
+    </ol>
+    <p>The listener draws the event on a calendar and map. Revise any phrase that produces a different time or place picture from the one you intended.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
     <p>Complete this aloud: “A point, like a clock time or a bus stop, takes ______. A day, a date, or a surface takes ______. A longer period or a space with an inside takes ______.”</p>
-    <p>Then say one true time sentence and one true place sentence about your life.</p>
+    <p>Then use a fictional calendar and map to say one time sentence, one place sentence, and one close contrast such as <span class="ex">on Oak Street / at 245 Oak Street</span>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can place events and objects with at, on, and in.">
+  <div class="quiz" data-quiz data-success-message="Correct. You matched exact times, days, periods, surfaces, areas, points, and U.S. time chunks to at, on, or in.">
     <h3>Final quiz: at, on, and in</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="at">
-        <p class="quiz-question">1. The bus arrives ___ 7:40.</p>
+      <div class="quiz-item" data-quiz-item data-answer="at" data-hint="The timetable gives one exact clock point." data-fix="The bus arrives at 7:40.">
+        <p class="quiz-question">1. The posted timetable gives an exact time: The bus arrives ___ 7:40.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">2. My interview is ___ Tuesday.</p>
+      <div class="quiz-item" data-quiz-item data-answer="on" data-hint="A named day takes on." data-fix="The fictional interview is on Tuesday.">
+        <p class="quiz-question">2. The fictional calendar gives one named day: The interview is ___ Tuesday.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="at">at</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="in">
-        <p class="quiz-question">3. We travel ___ August.</p>
+      <div class="quiz-item" data-quiz-item data-answer="in" data-hint="A month is a longer time period, so use in." data-fix="The fictional group travels in August.">
+        <p class="quiz-question">3. The fictional itinerary gives only the travel month: The group travels ___ August.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="in">in</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">4. Your cup is ___ the shelf.</p>
+      <div class="quiz-item" data-quiz-item data-answer="on" data-hint="The cup touches the shelf’s top surface." data-fix="The cup is on the shelf.">
+        <p class="quiz-question">4. In a staged image, the cup touches the shelf’s surface: The cup is ___ the shelf.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="at">at</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="in">
-        <p class="quiz-question">5. My brother lives ___ Canada.</p>
+      <div class="quiz-item" data-quiz-item data-answer="in" data-hint="Canada is the containing country area, so use in." data-fix="The fictional character lives in Canada.">
+        <p class="quiz-question">5. A fictional profile gives Canada as the containing country: The character lives ___ Canada.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="on">on</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="at">
-        <p class="quiz-question">6. I’m ___ the front door. Can you open it?</p>
+      <div class="quiz-item" data-quiz-item data-answer="at" data-hint="The front door is the visitor’s current point on the map." data-fix="The fictional visitor says, 'I’m at the front door.'">
+        <p class="quiz-question">6. A fictional visitor gives the front door as a meeting point: “I’m ___ the front door.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="on">on</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="at">
-        <p class="quiz-question">7. I can’t sleep ___ night.</p>
+      <div class="quiz-item" data-quiz-item data-answer="at" data-hint="The conventional general time chunk is at night." data-fix="The fictional sleep note says, 'I can’t sleep at night.'">
+        <p class="quiz-question">7. Complete the conventional general time chunk: “The fictional speaker can’t sleep ___ night.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="on">on</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">8. See you ___ the weekend!</p>
+      <div class="quiz-item" data-quiz-item data-answer="on" data-hint="In the target U.S. variety, the conventional chunk is on the weekend." data-fix="In U.S. English: See you on the weekend!">
+        <p class="quiz-question">8. Complete the target U.S. English chunk: “See you ___ the weekend!”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="at">at</button><button class="quiz-option" data-quiz-option="on">on</button></div>
       </div>
     </div>
@@ -377,6 +470,36 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the time frame, place picture, fixed chunk, or spoken contrast that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day time and place retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an exact time, a street line, a numbered-address point, and a public-transport chunk from explicit contexts.">
+      <h3>Choose at, on, or in from the intended frame</h3>
+      <div class="choice-bank" aria-label="Next-day time and place prepositions">
+        <button class="choice-option" data-choice-option="at">at</button><button class="choice-option" data-choice-option="on">on</button><button class="choice-option" data-choice-option="in">in</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The timetable gives one exact departure: The train leaves <button class="choice-gap" data-choice-gap data-answer="at" data-hint="An exact clock time is a point, so use at." data-fix="The train leaves at 6:20." data-placeholder="choose">choose</button> 6:20.</span></div>
+      <div class="q"><span class="n">2</span><span>The map gives only a general street line: The café is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="A general street location takes on." data-fix="The café is on Oak Street." data-placeholder="choose">choose</button> Oak Street.</span></div>
+      <div class="q"><span class="n">3</span><span>The invitation gives one numbered address: The café is <button class="choice-gap" data-choice-gap data-answer="at" data-hint="A numbered address is treated as an exact point, so use at." data-fix="The café is at 245 Oak Street." data-placeholder="choose">choose</button> 245 Oak Street.</span></div>
+      <div class="q"><span class="n">4</span><span>The fictional traveler is using public transportation: She is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="The conventional public-transport chunk is on the bus." data-fix="She is on the bus." data-placeholder="choose">choose</button> the bus.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="on" data-hint="Next already identifies the time relationship, so English uses no preposition before next Friday." data-fix="The meeting is next Friday." data-why="Use no time preposition before this, next, last, or every.">
+      <h3>Remove the unnecessary time preposition</h3>
+      <p>The fictional calendar says, “The meeting is on next Friday.” Tap the one extra word.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="the">The</button><button class="error-choice" data-error-choice="meeting">meeting</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="on">on</button><button class="error-choice" data-error-choice="next">next Friday.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, place one fictional event in time and on a map. Include an exact time, day, month, street, numbered address, and transportation update.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>The event is at 2:00 on Saturday in August. The venue is on Oak Street. Meet us at 245 Oak Street. Mina is on the bus now.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

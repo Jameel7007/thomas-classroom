@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Days, months, dates · A0 Vocabulary · Curriculum Map",
+  "title": "Days, months, dates · A0 Vocabulary",
   "slug": "days-months-dates",
   "level": "A0",
   "topic": "Days, months, dates",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Run your week and your calendar in English. Name the seven days , the twelve months , and say a date the American way: March 8th . Then book meetings, deadlines, and appointments o",
+  "description": "Name the days and months, understand American-style dates, and use them to discuss meetings, appointments, and deadlines.",
   "sequence": 11,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/cardinal-numbers-0-100",
+    "a0/the-alphabet-and-spelling"
+  ],
+  "related": [
+    "a1/prepositions-of-time-and-place",
+    "a1/daily-routines-and-telling-the-time"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 45,
+    "revisionSummary": "Calendar meaning, U.S. date order, written-versus-spoken dates, international ambiguity, ordinal forms, prepositions, pronunciation, item context, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 11</p>
   <h1>Days, months &amp; <em>dates</em></h1>
-  <p class="standfirst">Run your week and your calendar in English. Name the seven <strong>days</strong>, the twelve <strong>months</strong>, and say a <strong>date</strong> the American way: <span class="ex">March 8th</span>. Then book meetings, deadlines, and appointments out loud.</p>
+  <p class="standfirst">Use a calendar in U.S. English. Name the seven <strong>days</strong> and twelve <strong>months</strong>, distinguish a weekday from a calendar date, and schedule an appointment with clear month–day order: <span class="ex">Tuesday, March 10</span>, spoken <span class="ex">Tuesday, March tenth</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">on / in</span>
-    <span class="tag">days · months · dates</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">U.S. month–day order</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,13 +51,36 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Schedule your real week.</span></div>
   </div>
 
-  <p class="note-line">Days and months always start with a <strong>capital letter</strong> in English: <span class="ex">Monday, Tuesday, January, March</span> — never <span class="ex">monday</span> or <span class="ex">march</span>.</p>
+  <p class="note-line">Days and months always start with a <strong>capital letter</strong> in English: <span class="ex">Monday, Tuesday, January, March</span>. Seasons normally stay lowercase: <span class="ex">spring, summer, fall, winter</span>.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved the number word, the first letter of March, and a clarification request used before confirming calendar information.">
+    <h3>Bring numbers and spelling into the calendar</h3>
+    <p class="choice-hint">Complete each line from an earlier lesson, then say the full calendar exchange.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices">
+      <button class="choice-option" data-choice-option="thirteen">thirteen</button>
+      <button class="choice-option" data-choice-option="thirty">thirty</button>
+      <button class="choice-option" data-choice-option="M">M</button>
+      <button class="choice-option" data-choice-option="N">N</button>
+      <button class="choice-option" data-choice-option="repeat">repeat</button>
+      <button class="choice-option" data-choice-option="spell">spell</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The appointment number is 13: number <button class="choice-gap" data-choice-gap data-answer="thirteen" data-hint="13 ends in -teen; 30 ends in -ty." data-fix="The appointment number is thirteen." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(numbers)</span></span></div>
+    <div class="q"><span class="n">2</span><span>March begins with <button class="choice-gap" data-choice-gap data-answer="M" data-hint="Say the first written letter in March." data-fix="March begins with M as in Mike." data-placeholder="choose">choose</button> as in Mike. &nbsp;<span class="contraction">(alphabet)</span></span></div>
+    <div class="q"><span class="n">3</span><span>You did not hear the date. Ask: “Could you <button class="choice-gap" data-choice-gap data-answer="repeat" data-hint="Ask the speaker to say the same information again." data-fix="Could you repeat the date?" data-placeholder="choose">choose</button> the date?” &nbsp;<span class="contraction">(clarification)</span></span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Read the calendar</h3>
-    <p><span class="ex">Meeting — on Monday &nbsp; · &nbsp; Deadline — on March 8th &nbsp; · &nbsp; Vacation — in July &nbsp; · &nbsp; New office — in 2026</span></p>
+    <p><span class="ex">Meeting: on Monday &nbsp; · &nbsp; Deadline: on March 8th &nbsp; · &nbsp; Vacation: in July &nbsp; · &nbsp; New office: in 2026</span></p>
     <ul>
       <li>Two entries use <span class="ex">on</span> and two use <span class="ex">in</span>. Which words come <strong>after on</strong>? Which words come <strong>after in</strong>?</li>
       <li>One is an exact day. One is an exact date. One is a whole month. One is a whole year. Which is the <strong>biggest</strong> block of time?</li>
@@ -62,19 +99,19 @@ export const page = defineLesson({
       <span class="cal-day">29</span><span class="cal-day">30</span><span class="cal-day">31</span><span class="cal-day cal-empty"></span><span class="cal-day cal-empty"></span><span class="cal-day cal-empty"></span><span class="cal-day cal-empty"></span>
     </div>
   </figure>
-  <p class="cal-cap">The whole month is <span class="ex">March</span> → <span class="ex">in March</span>. One exact date is <span class="ex">March 8th</span> (circled) → <span class="ex">on March 8th</span>. Say it month-first: <span class="ex">March eighth</span>.</p>
+  <p class="cal-cap">The whole month is <span class="ex">March</span> → <span class="ex">in March</span>. One exact date is <span class="ex">March 8</span> or informally <span class="ex">March 8th</span> (circled) → <span class="ex">on March 8th</span>. In speech, say <span class="ex">March eighth</span>.</p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — on or in?</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Exact days and dates take on; whole months and years take in.">
+    <h3>Discovery check: on or in?</h3>
     <p class="choice-hint">Use <b>on</b> for an exact day or date · use <b>in</b> for a month or a year</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="on">on</button>
       <button class="choice-option" data-choice-option="in">in</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The meeting is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> Tuesday. &nbsp;<span class="contraction">(a day)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My birthday is <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> October. &nbsp;<span class="contraction">(a month)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The deadline is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> March 8th. &nbsp;<span class="contraction">(a date)</span></span></div>
-    <div class="q"><span class="n">4</span><span>We moved here <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> 2026. &nbsp;<span class="contraction">(a year)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The meeting is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="Tuesday names one exact day." data-fix="The meeting is on Tuesday." data-placeholder="choose">choose</button> Tuesday. &nbsp;<span class="contraction">(a day)</span></span></div>
+    <div class="q"><span class="n">2</span><span>My birthday is <button class="choice-gap" data-choice-gap data-answer="in" data-hint="October names a whole month, not one exact date." data-fix="My birthday is in October." data-placeholder="choose">choose</button> October. &nbsp;<span class="contraction">(a month)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The deadline is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="March 8th identifies one exact calendar date." data-fix="The deadline is on March 8th." data-placeholder="choose">choose</button> March 8th. &nbsp;<span class="contraction">(a date)</span></span></div>
+    <div class="q"><span class="n">4</span><span>We moved here <button class="choice-gap" data-choice-gap data-answer="in" data-hint="2026 names a whole year." data-fix="We moved here in 2026." data-placeholder="choose">choose</button> 2026. &nbsp;<span class="contraction">(a year)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -87,36 +124,58 @@ export const page = defineLesson({
   <p>Learn the words as a set, then add the little words for time. Here is the full word bank for reference.</p>
 
   <div class="wordlist">
-    <h4 class="wl-head">Days of the week</h4>
+    <h3 class="wl-head">Days of the week</h3>
     <div class="wl-items"><span>Monday</span><span>Tuesday</span><span>Wednesday</span><span>Thursday</span><span>Friday</span><span>Saturday</span><span>Sunday</span></div>
-    <p class="wl-note">The work week is <strong>Monday–Friday</strong>; <strong>Saturday</strong> and <strong>Sunday</strong> are the <strong>weekend</strong>.</p>
+    <p class="wl-note">A common workweek is <strong>Monday–Friday</strong>; <strong>Saturday</strong> and <strong>Sunday</strong> are the <strong>weekend</strong>. Many U.S. calendars display Sunday first, as the calendar above does. This lesson recites Monday first to keep the workweek and weekend together.</p>
   </div>
 
   <div class="wordlist">
-    <h4 class="wl-head">Months of the year</h4>
+    <h3 class="wl-head">Months of the year</h3>
     <div class="wl-items"><span>January</span><span>February</span><span>March</span><span>April</span><span>May</span><span>June</span><span>July</span><span>August</span><span>September</span><span>October</span><span>November</span><span>December</span></div>
   </div>
 
-  <div class="wordlist">
-    <h4 class="wl-head">Seasons</h4>
-    <div class="wl-items"><span>spring</span><span>summer</span><span>autumn / fall</span><span>winter</span></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Day asks for a weekday, date asks for a calendar date, and tomorrow or next Monday normally takes no preposition.">
+    <h3>Meaning check: day, date, or no preposition?</h3>
+    <p class="choice-hint">Use the expected answer to choose the exact question or time phrase.</p>
+    <div class="choice-bank" aria-label="Calendar meaning choices">
+      <button class="choice-option" data-choice-option="day">day</button>
+      <button class="choice-option" data-choice-option="date">date</button>
+      <button class="choice-option" data-choice-option="tomorrow">tomorrow</button>
+      <button class="choice-option" data-choice-option="on tomorrow">on tomorrow</button>
+      <button class="choice-option" data-choice-option="next Monday">next Monday</button>
+      <button class="choice-option" data-choice-option="on next Monday">on next Monday</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The answer is “Tuesday.” Ask: “What <button class="choice-gap" data-choice-gap data-answer="day" data-hint="Tuesday names a weekday." data-fix="What day is it today? It's Tuesday." data-placeholder="choose">choose</button> is it today?”</span></div>
+    <div class="q"><span class="n">2</span><span>The answer is “March 10th.” Ask: “What's the <button class="choice-gap" data-choice-gap data-answer="date" data-hint="March 10th names a numbered calendar date." data-fix="What's the date today? It's March 10th." data-placeholder="choose">choose</button> today?”</span></div>
+    <div class="q"><span class="n">3</span><span>We meet one day after today. Say: “See you <button class="choice-gap" data-choice-gap data-answer="tomorrow" data-hint="Tomorrow already locates the meeting in time." data-fix="See you tomorrow." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="q"><span class="n">4</span><span>This week is busy. The call is on Monday of the following week. Say: “The call is <button class="choice-gap" data-choice-gap data-answer="next Monday" data-hint="Next before a weekday normally takes no on." data-fix="The call is next Monday." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
   </div>
 
   <div class="wordlist">
-    <h4 class="wl-head">Key date words</h4>
+    <h3 class="wl-head">Seasons</h3>
+    <div class="wl-items"><span>spring</span><span>summer</span><span>fall (also autumn)</span><span>winter</span></div>
+  </div>
+
+  <div class="wordlist">
+    <h3 class="wl-head">Key date words</h3>
     <div class="wl-items"><span>today</span><span>tomorrow</span><span>yesterday</span><span>week</span><span>month</span><span>year</span><span>weekend</span><span>birthday</span><span>date</span><span>calendar</span></div>
   </div>
 
   <div class="wordlist">
-    <h4 class="wl-head">Ordinal numbers (for dates)</h4>
+    <h3 class="wl-head">Ordinal numbers (for dates)</h3>
     <div class="wl-items"><span>1st</span><span>2nd</span><span>3rd</span><span>4th</span><span>5th</span><span>6th</span><span>7th</span><span>8th</span><span>9th</span><span>10th</span><span>11th</span><span>12th</span><span>13th</span><span>14th</span><span>15th</span><span>16th</span><span>17th</span><span>18th</span><span>19th</span><span>20th</span><span>21st</span><span>22nd</span><span>23rd</span><span>24th</span><span>25th</span><span>26th</span><span>27th</span><span>28th</span><span>29th</span><span>30th</span><span>31st</span></div>
   </div>
 
   <div class="wordlist">
-    <h4 class="wl-head">Common phrases</h4>
+    <h3 class="wl-head">Common phrases</h3>
     <ul class="wl-phrases">
-      <li>“What day is it?”</li>
-      <li>“What's the date today?”</li>
+      <li>“What day is it today?” → <span class="ex">It's Tuesday.</span></li>
+      <li>“What's the date today?” → <span class="ex">It's March 10th.</span></li>
       <li>“My birthday is in <b>[month]</b>.”</li>
       <li>“See you on <b>[day]</b>.”</li>
     </ul>
@@ -126,24 +185,94 @@ export const page = defineLesson({
     <tbody>
       <tr><td><b>on</b></td><td>an exact day or date</td><td><span class="contraction">on Monday · on March 8th</span></td></tr>
       <tr><td><b>in</b></td><td>a whole month or year</td><td><span class="contraction">in March · in 2026</span></td></tr>
+      <tr><td><b>no preposition</b></td><td>today, tomorrow, yesterday, this, next, or last</td><td><span class="contraction">today · next Monday · last year</span></td></tr>
     </tbody>
   </table>
 
   <div class="note">
-    <h3>Saying the date, American style</h3>
+    <h3>U.S. calendar English: writing, speaking, and checking</h3>
     <ul>
-      <li>We say the <strong>month first</strong>, then the day: <span class="ex">March 8th</span>. We say it as an <strong>ordinal</strong>: <span class="ex">March eighth</span>.</li>
-      <li>Ordinals count position: <span class="ex">first (1st), second (2nd), third (3rd), fourth (4th), fifth (5th)… thirty-first (31st)</span>.</li>
-      <li>To ask the date: <span class="ex">What's the date today?</span> &nbsp;Answer: <span class="ex">It's June 16th.</span></li>
-      <li>Can we say <span class="ex">in Monday</span>? <strong>No.</strong> A day is exact, so use <span class="ex">on Monday</span>.</li>
+      <li><strong>Common U.S. writing:</strong> month first, then the day: <span class="ex">March 8</span>. Informal writing also uses <span class="ex">March 8th</span>.</li>
+      <li><strong>Speech:</strong> pronounce the day as an ordinal: <span class="ex">March eighth</span>, not <span class="ex">March eight</span>.</li>
+      <li><strong>Add a year:</strong> write <span class="ex">March 8, 2026</span> with a comma. Say <span class="ex">March eighth, twenty twenty-six</span>.</li>
+      <li><strong>Numeric order:</strong> in common U.S. use, <span class="ex">3/8/2026</span> means March 8, 2026. In other countries, the same numbers may mean August 3. For international or important information, write the month name and read the date back.</li>
+      <li><strong>Day or date?</strong> <span class="ex">What day is it today?</span> asks for a weekday. <span class="ex">What's the date today?</span> asks for a calendar date.</li>
+      <li><strong>No extra preposition:</strong> say <span class="ex">See you tomorrow</span> and <span class="ex">See you next Monday</span>, not <span class="ex">on tomorrow</span> or <span class="ex">on next Monday</span>.</li>
     </ul>
   </div>
+
+  <div class="note">
+    <h3>Ordinal endings for the days of a month</h3>
+    <p>The ending follows the spoken ordinal. Most dates use <span class="ex">-th</span>, but remember the main families:</p>
+    <ul>
+      <li><span class="ex">1st first · 2nd second · 3rd third</span></li>
+      <li><span class="ex">4th fourth · 5th fifth · 8th eighth · 9th ninth · 12th twelfth</span></li>
+      <li><span class="ex">11th eleventh · 12th twelfth · 13th thirteenth</span> are exceptions to the final digit pattern.</li>
+      <li>The pattern returns in <span class="ex">21st twenty-first · 22nd twenty-second · 23rd twenty-third · 31st thirty-first</span>.</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: hear the strong part of the calendar word</h3>
+    <p>Most day names begin with a clear beat and finish with a light <span class="ex">day</span>. Some month and date words do not sound exactly the way every letter looks.</p>
+    <table>
+      <thead><tr><th>word</th><th>say it in parts</th><th>what to notice</th></tr></thead>
+      <tbody>
+        <tr><td>Monday · Tuesday</td><td><span class="ex"><strong>MON</strong>-day · <strong>TOOZ</strong>-day</span></td><td>in common U.S. speech, the first part is stronger</td></tr>
+        <tr><td>Wednesday</td><td><span class="ex"><strong>WENZ</strong>-day</span></td><td>it has two spoken parts; the middle letters are not heard separately</td></tr>
+        <tr><td>July · September</td><td><span class="ex">ju-<strong>LY</strong> · sep-<strong>TEM</strong>-ber</span></td><td>the strong beat is later in the word</td></tr>
+        <tr><td>13th · 30th</td><td><span class="ex">thir-<strong>TEENTH</strong> · <strong>THIR</strong>-ti-eth</span></td><td>the stress helps the listener hear the correct date</td></tr>
+      </tbody>
+    </table>
+    <p>For endings such as <span class="ex">fourth</span>, <span class="ex">eighth</span>, and <span class="ex">tenth</span>, place the tongue gently between the teeth and let the air out for <span class="ex">th</span>. Say the full date as one chunk: <span class="ex"><strong>MARCH EIGHTH</strong></span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read day and date listening check">
+    <h2>Hear the calendar information</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the script closed while you listen. Your teacher reads each line once, then once more. Choose the exact day, month, or date you hear.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated similar day names, month stress, and ordinal date forms in six short schedule messages.">
+      <h3>Listening check: complete the schedule</h3>
+      <div class="choice-bank" aria-label="Listening calendar choices">
+        <button class="choice-option" data-choice-option="Tuesday">Tuesday</button>
+        <button class="choice-option" data-choice-option="Thursday">Thursday</button>
+        <button class="choice-option" data-choice-option="Wednesday">Wednesday</button>
+        <button class="choice-option" data-choice-option="Friday">Friday</button>
+        <button class="choice-option" data-choice-option="June">June</button>
+        <button class="choice-option" data-choice-option="July">July</button>
+        <button class="choice-option" data-choice-option="13th">13th</button>
+        <button class="choice-option" data-choice-option="30th">30th</button>
+        <button class="choice-option" data-choice-option="May 5th">May 5th</button>
+        <button class="choice-option" data-choice-option="May 15th">May 15th</button>
+        <button class="choice-option" data-choice-option="March 8th">March 8th</button>
+        <button class="choice-option" data-choice-option="August 3rd">August 3rd</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The appointment is on <button class="choice-gap" data-choice-gap data-answer="Tuesday" data-hint="Listen for the common U.S. opening sound “TOOZ.”" data-fix="The appointment is on Tuesday." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>The class is on <button class="choice-gap" data-choice-gap data-answer="Wednesday" data-hint="Listen for two spoken parts: WENZ-day." data-fix="The class is on Wednesday." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>The vacation begins in <button class="choice-gap" data-choice-gap data-answer="July" data-hint="Listen for the strong second beat: ju-LY." data-fix="The vacation begins in July." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>The deadline is on March <button class="choice-gap" data-choice-gap data-answer="13th" data-hint="Listen for the strong -teenth ending rather than first-syllable stress in thirtieth." data-fix="The deadline is on March 13th, spoken March thirteenth." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>The call is on <button class="choice-gap" data-choice-gap data-answer="May 15th" data-hint="Listen for fifteenth, not fifth." data-fix="The call is on May 15th, spoken May fifteenth." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>The U.S. date is <button class="choice-gap" data-choice-gap data-answer="March 8th" data-hint="Listen for March first and eighth second." data-fix="The U.S. date is March 8th, spoken March eighth." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <details class="note">
+      <summary>Tutor script · open only after the learner answers</summary>
+      <p>Read naturally without showing the words: <span class="ex">1. The appointment is on Tuesday. 2. The class is on Wednesday. 3. The vacation begins in July. 4. The deadline is on March thirteenth. 5. The call is on May fifteenth. 6. The U.S. date is March eighth.</span></p>
+      <p>For a second round, change one item and ask the learner to correct the written schedule.</p>
+    </details>
+  </section>
 
   <h2>Match the calendar words</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 1 — match each word to its place on the calendar</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Monday and Friday mark the common U.S. workweek, while January and December mark the first and last months.">
+    <h3>Drill 1: match each word to its place on the calendar</h3>
     <p class="tile-target">Tap a word, then tap the fact that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="monday">Monday</button>
@@ -152,10 +281,10 @@ export const page = defineLesson({
       <button class="tile" data-tile="december">December</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="monday" data-placeholder="first day of the work week">first day of the work week</button>
-      <button class="slot" data-slot="friday" data-placeholder="last day of the work week">last day of the work week</button>
-      <button class="slot" data-slot="january" data-placeholder="month 1 of the year">month 1 of the year</button>
-      <button class="slot" data-slot="december" data-placeholder="month 12 of the year">month 12 of the year</button>
+      <button class="slot" data-slot="monday" data-hint="A common U.S. workweek begins after Sunday." data-fix="Monday → first day of the common workweek" data-placeholder="first day of a common workweek">first day of a common workweek</button>
+      <button class="slot" data-slot="friday" data-hint="A common U.S. workweek ends before Saturday." data-fix="Friday → last day of the common workweek" data-placeholder="last day of a common workweek">last day of a common workweek</button>
+      <button class="slot" data-slot="january" data-hint="This month starts a new calendar year." data-fix="January → month 1" data-placeholder="month 1 of the year">month 1 of the year</button>
+      <button class="slot" data-slot="december" data-hint="This month ends the calendar year." data-fix="December → month 12" data-placeholder="month 12 of the year">month 12 of the year</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -167,8 +296,8 @@ export const page = defineLesson({
   <h2>Choose the right word</h2>
   <div class="lead-rule"></div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2 — read the cue, choose the day or month</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You placed Wednesday and Saturday in the week and February and July in the year.">
+    <h3>Drill 2: read the cue, choose the day or month</h3>
     <p class="choice-hint">The hint in brackets tells you exactly which word fits</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="Wednesday">Wednesday</button>
@@ -176,10 +305,10 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="February">February</button>
       <button class="choice-option" data-choice-option="July">July</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The meeting is on <button class="choice-gap" data-choice-gap data-answer="Wednesday" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the day between Tuesday and Thursday)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I relax on <button class="choice-gap" data-choice-gap data-answer="Saturday" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the day after Friday)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The deadline is in <button class="choice-gap" data-choice-gap data-answer="February" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the second month, the short one)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Our vacation is in <button class="choice-gap" data-choice-gap data-answer="July" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the seventh month, after June)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The meeting is on <button class="choice-gap" data-choice-gap data-answer="Wednesday" data-hint="Move one day forward from Tuesday or one day back from Thursday." data-fix="The meeting is on Wednesday." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the day between Tuesday and Thursday)</span></span></div>
+    <div class="q"><span class="n">2</span><span>I relax on <button class="choice-gap" data-choice-gap data-answer="Saturday" data-hint="Choose the weekend day immediately after Friday." data-fix="I relax on Saturday." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the day after Friday)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The deadline is in <button class="choice-gap" data-choice-gap data-answer="February" data-hint="Choose the month between January and March." data-fix="The deadline is in February." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the second month, the short one)</span></span></div>
+    <div class="q"><span class="n">4</span><span>Our vacation is in <button class="choice-gap" data-choice-gap data-answer="July" data-hint="Choose the seventh month, immediately after June." data-fix="Our vacation is in July." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the seventh month, after June)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -190,8 +319,8 @@ export const page = defineLesson({
   <h2>Build the week and the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-builder data-answer="monday tuesday wednesday thursday friday saturday sunday">
-    <h3>Drill 3 — put the seven days in order</h3>
+  <div class="tile-game" data-tile-builder data-answer="monday tuesday wednesday thursday friday saturday sunday" data-hint="Start with Monday, continue through the five-day workweek, then add Saturday and Sunday." data-fix="Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday." data-success-message="Correct. You built the Monday-first teaching sequence through the workweek and weekend.">
+    <h3>Drill 3: put the seven days in order</h3>
     <p class="tile-target">Start with Monday. Build the full week, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="thursday">Thursday</button>
@@ -210,8 +339,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="my meeting is on monday">
-    <h3>Drill 4 — build the schedule sentence</h3>
+  <div class="tile-game" data-tile-builder data-answer="my meeting is on monday" data-hint="Begin with My meeting, add is, then use on before the exact day." data-fix="My meeting is on Monday." data-success-message="Correct. The schedule sentence uses on because Monday is one exact day.">
+    <h3>Drill 4: build the schedule sentence</h3>
     <p class="tile-target">An exact day, so use <span class="ex">on</span>. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="on">on</button>
@@ -230,8 +359,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="in" data-fix="The meeting is on Monday." data-why="Monday is an exact day, so use on, not in. We keep in for a whole month or year.">
-    <h3>Drill 5 — on or in?</h3>
+  <div class="micro-drill" data-spot-error data-answer="in" data-hint="Find the preposition before the exact weekday Monday." data-fix="The meeting is on Monday." data-why="Monday is an exact day, so use on, not in. We keep in for a whole month or year.">
+    <h3>Drill 5: on or in?</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="meeting">meeting</button>
@@ -242,8 +371,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="on" data-fix="My birthday is in March." data-why="March is a whole month, so use in, not on. We keep on for an exact day or date like March 8th.">
-    <h3>Drill 6 — a day or a month?</h3>
+  <div class="micro-drill" data-spot-error data-answer="on" data-hint="Find the preposition before the whole month March." data-fix="My birthday is in March." data-why="March is a whole month, so use in, not on. We keep on for an exact day or date like March 8th.">
+    <h3>Drill 6: a day or a month?</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="birthday">birthday</button>
@@ -255,7 +384,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — say the date out loud, then reveal</h3>
+    <h3>Drill 7: say the date out loud, then reveal</h3>
     <p>Say the American date aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -290,20 +419,20 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>A class schedule message</h3>
-    <p><span class="ex">“Welcome! The English class is on Tuesday, May 5. There is a small test on Friday. There is no class on June 12, it is a holiday. See you next week!”</span></p>
+    <p><span class="ex">“Welcome! The English class is on Tuesday, May 5. There is a small test on Friday. There is no class on June 12 because it is a holiday. See you next week!”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood days and dates in a real message.">
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the Tuesday class, Friday test, and June 12 cancellation in the schedule message.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="on Tuesday">
+      <div class="quiz-item" data-quiz-item data-answer="on Tuesday" data-hint="The first schedule sentence gives the class weekday." data-fix="The English class is on Tuesday, May 5.">
         <p class="quiz-question">1. When is the class?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on Tuesday">on Tuesday</button><button class="quiz-option" data-quiz-option="on Friday">on Friday</button><button class="quiz-option" data-quiz-option="on Monday">on Monday</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a test">
+      <div class="quiz-item" data-quiz-item data-answer="a test" data-hint="The second schedule sentence says what happens on Friday." data-fix="There is a small test on Friday.">
         <p class="quiz-question">2. What happens on Friday?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a test">a test</button><button class="quiz-option" data-quiz-option="a holiday">a holiday</button><button class="quiz-option" data-quiz-option="a party">a party</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="no class">
+      <div class="quiz-item" data-quiz-item data-answer="no class" data-hint="The third schedule sentence explains the June 12 holiday." data-fix="There is no class on June 12 because it is a holiday.">
         <p class="quiz-question">3. What happens on June 12?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="no class">no class</button><button class="quiz-option" data-quiz-option="a test">a test</button><button class="quiz-option" data-quiz-option="a new class">a new class</button></div>
       </div>
@@ -317,11 +446,18 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your weekly schedule:</b> Say one thing you do each workday. <span class="ex">On Monday I have a team meeting. On Friday I finish early.</span></div>
-  <div class="prompt-card"><b>Your birthday:</b> Tell the teacher your birthday and your month. <span class="ex">My birthday is on June 16th. It's in June.</span></div>
+  <div class="note"><strong>Privacy:</strong> you do not need to share your real birth date, appointments, or work schedule. Use invented information whenever you prefer.</div>
+  <div class="prompt-card"><b>A weekly schedule:</b> Say one real or invented activity for three workdays. <span class="ex">On Monday I have a team meeting. On Friday I finish early.</span></div>
+  <div class="prompt-card"><b>An invented birthday:</b> Give a month and an exact date. <span class="ex">My birthday is on June 16th. It's in June.</span></div>
   <div class="prompt-card"><b>Book an appointment:</b> Role-play with the teacher. <span class="ex">I'd like an appointment on Wednesday.</span> &nbsp;<span class="ex">Is March 8th okay?</span></div>
   <div class="prompt-card"><b>A deadline:</b> Pick a real or invented deadline and say it. <span class="ex">The report is due on Thursday.</span> &nbsp;<span class="ex">The project ends in December.</span></div>
   <div class="prompt-card"><b>What's the date?</b> Take turns. One person asks <span class="ex">What's the date today?</span> The other answers with a full date, then asks back.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: book and confirm an appointment</h3>
+    <p>Use this fictional March 2026 calendar. The available appointments are <span class="ex">Tuesday, March 10</span> and <span class="ex">Thursday, March 12</span>. One person offers a date. The other accepts or asks for the second date. Ask for one repetition, then read back and confirm the final day and date. Switch roles.</p>
+    <p><strong>Success criteria:</strong> distinguish the weekday from the calendar date; use <span class="ex">on</span> before the exact date; put the month first; pronounce the day as an ordinal; and finish with an accurate read-back.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -332,37 +468,37 @@ export const page = defineLesson({
   </div>
 
   <div class="quiz" data-quiz data-success-message="Great. You can name the days and months, choose on or in, and say a date the American way.">
-    <h3>Final quiz — days, months, dates</h3>
+    <h3>Final quiz: days, months, dates</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="on">
+      <div class="quiz-item" data-quiz-item data-answer="on" data-hint="Friday is one exact weekday." data-fix="The meeting is on Friday.">
         <p class="quiz-question">1. The meeting is ___ Friday.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="in">
+      <div class="quiz-item" data-quiz-item data-answer="in" data-hint="August names a whole month." data-fix="My vacation is in August.">
         <p class="quiz-question">2. My vacation is ___ August.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
+      <div class="quiz-item" data-quiz-item data-answer="on" data-hint="March 8th identifies one exact date." data-fix="The deadline is on March 8th.">
         <p class="quiz-question">3. The deadline is ___ March 8th.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Wednesday">
+      <div class="quiz-item" data-quiz-item data-answer="Wednesday" data-hint="Move one day forward from Tuesday." data-fix="Wednesday comes between Tuesday and Thursday.">
         <p class="quiz-question">4. Which day comes between Tuesday and Thursday?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Monday">Monday</button><button class="quiz-option" data-quiz-option="Wednesday">Wednesday</button><button class="quiz-option" data-quiz-option="Saturday">Saturday</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="June">
+      <div class="quiz-item" data-quiz-item data-answer="June" data-hint="July is month 7, so choose month 6." data-fix="June comes immediately before July.">
         <p class="quiz-question">5. Which month comes right before July?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="May">May</button><button class="quiz-option" data-quiz-option="June">June</button><button class="quiz-option" data-quiz-option="August">August</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="March 8th">
+      <div class="quiz-item" data-quiz-item data-answer="March eighth" data-hint="In common U.S. numeric order, the first number is the month; pronounce the day as an ordinal." data-fix="3/8 → March eighth in common U.S. speech.">
         <p class="quiz-question">6. How do we say the date 3/8 in American style?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="March 8th">March 8th</button><button class="quiz-option" data-quiz-option="8th March">8th March</button><button class="quiz-option" data-quiz-option="8 of March">8 of March</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="March eighth">March eighth</button><button class="quiz-option" data-quiz-option="August third">August third</button><button class="quiz-option" data-quiz-option="March third">March third</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="My birthday is in October.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="My birthday is in October.">My birthday is in October.</button><button class="quiz-option" data-quiz-option="My birthday is on October.">My birthday is on October.</button><button class="quiz-option" data-quiz-option="My birthday is in october.">My birthday is in october.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="My birthday is in October." data-hint="You know only a whole month, not an exact date or weekday." data-fix="My birthday is in October.">
+        <p class="quiz-question">7. You know only the birth month, October. Which sentence reports exactly that information?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="My birthday is in October.">My birthday is in October.</button><button class="quiz-option" data-quiz-option="My birthday is on October 12th.">My birthday is on October 12th.</button><button class="quiz-option" data-quiz-option="My birthday is on Monday.">My birthday is on Monday.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="January">
+      <div class="quiz-item" data-quiz-item data-answer="January" data-hint="Choose month 1, immediately before February." data-fix="January is the first month of the year.">
         <p class="quiz-question">8. Which is the first month of the year?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="January">January</button><button class="quiz-option" data-quiz-option="March">March</button><button class="quiz-option" data-quiz-option="December">December</button></div>
       </div>
@@ -373,6 +509,58 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then practice only the calendar decisions that still feel slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day calendar retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve the preposition, date order, ordinal, and question meaning from memory.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You recalled the day/date questions, exact-date preposition, U.S. numeric order, and no-preposition next Monday form.">
+      <h3>Choose the exact calendar form</h3>
+      <div class="choice-bank" aria-label="Next-day calendar choices">
+        <button class="choice-option" data-choice-option="day">day</button>
+        <button class="choice-option" data-choice-option="date">date</button>
+        <button class="choice-option" data-choice-option="on">on</button>
+        <button class="choice-option" data-choice-option="in">in</button>
+        <button class="choice-option" data-choice-option="March 8th">March 8th</button>
+        <button class="choice-option" data-choice-option="August 3rd">August 3rd</button>
+        <button class="choice-option" data-choice-option="next Monday">next Monday</button>
+        <button class="choice-option" data-choice-option="on next Monday">on next Monday</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>To ask for Tuesday, say: “What <button class="choice-gap" data-choice-gap data-answer="day" data-hint="Tuesday is a weekday, not a numbered calendar date." data-fix="What day is it today? It's Tuesday." data-placeholder="choose">choose</button> is it today?”</span></div>
+      <div class="q"><span class="n">2</span><span>The appointment is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="March 10th is one exact calendar date." data-fix="The appointment is on March 10th." data-placeholder="choose">choose</button> March 10th.</span></div>
+      <div class="q"><span class="n">3</span><span>In common U.S. numeric order, 3/8 is <button class="choice-gap" data-choice-gap data-answer="March 8th" data-hint="The first number names the month; 3 is March." data-fix="3/8 → March 8th in common U.S. order." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>The call is <button class="choice-gap" data-choice-gap data-answer="next Monday" data-hint="Next before a weekday does not take on." data-fix="The call is next Monday." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="on" data-hint="Tomorrow already locates the event in time and does not need a preposition." data-fix="The appointment is tomorrow." data-why="Use no preposition before today, tomorrow, or yesterday. Use on before an exact named day or date, such as on Tuesday.">
+      <h3>Repair the time phrase</h3>
+      <p>The appointment is on tomorrow. Tap the unnecessary word.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="appointment">appointment</button>
+        <button class="error-choice" data-error-choice="is">is</button>
+        <button class="error-choice" data-error-choice="on">on</button>
+        <button class="error-choice" data-error-choice="tomorrow">tomorrow</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Say the weekday before Thursday, the month after June, and the U.S. date <span class="ex">10/31</span>. Then ask once for the weekday and once for the calendar date.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Offer an invented appointment on one weekday and exact date. Ask your teacher to repeat it, then read back and confirm the month, ordinal day, and year.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

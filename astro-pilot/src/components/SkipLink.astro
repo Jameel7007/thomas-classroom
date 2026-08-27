@@ -1,0 +1,23 @@
+---
+interface Props {
+  target: string;
+  label?: string;
+  className?: string;
+}
+
+const { target, label = "Skip to main content", className = "page-skip" } = Astro.props;
+---
+<a class={className} href={`#${target}`}>{label}</a>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>(".page-skip, .skip-link, .home-skip").forEach((link) => {
+    const focusTarget = () => {
+      const target = link.hash ? document.querySelector<HTMLElement>(link.hash) : null;
+      if (target) window.setTimeout(() => target.focus(), 0);
+    };
+    link.addEventListener("click", focusTarget);
+    link.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") focusTarget();
+    });
+  });
+</script>

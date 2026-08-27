@@ -1,0 +1,19 @@
+{
+  "provider": "ElevenLabs",
+  "modelId": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "defaultVoice": "teacher",
+  "voices": {
+    "teacher": {
+      "environmentVariable": "ELEVENLABS_VOICE_TEACHER",
+      "fallbackEnvironmentVariable": "ELEVENLABS_VOICE_ID"
+    }
+  },
+  "voiceSettings": {
+    "stability": 0.58,
+    "similarity_boost": 0.78,
+    "style": 0.12,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  }
+}

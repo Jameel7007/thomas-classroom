@@ -1,436 +1,315 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Past-time expressions · A2 Vocabulary · Curriculum Map",
+  "title": "Past-time expressions · A2 Vocabulary",
   "slug": "past-time-expressions",
   "level": "A2",
   "topic": "Past-time expressions",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Put every past event on the line from now backward. Three small families do most of the work: yesterday morning , last night , two years ago . Learn how each family behaves, then a",
+  "description": "Locate, order, and connect past events with clear reference times, finished points, durations, sequence markers, and natural U.S. spoken forms.",
   "sequence": 15,
-  "prerequisites": [],
+  "prerequisites": ["a2/past-simple", "a2/past-continuous", "a2/present-perfect", "a0/days-months-dates"],
   "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Reference time, ago-before-earlier, last and the last, sequence, duration, overlap, tense compatibility, U.S. usage, spoken form, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 15</p>
-  <h1>Past-time <em>expressions</em></h1>
-  <p class="standfirst">Put every past event on the line from now backward. Three small families do most of the work: <span class="ex">yesterday morning</span>, <span class="ex">last night</span>, <span class="ex">two years ago</span>. Learn how each family behaves, then answer the question every past-simple conversation asks: <span class="ex">When did it happen?</span></p>
+  <h1>Past-time expressions: <em>build a timeline your listener can follow</em></h1>
+  <p class="standfirst">A past-time expression does more than answer <span class="ex">When?</span> It can establish the reference time, locate one event, measure a duration, show overlap, or order several events. Choose that job first, then choose the expression and tense viewpoint.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">yesterday · last · ago</span>
-    <span class="tag">when + past simple</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">point · duration · sequence · overlap</span>
+    <span class="tag">ago · before · earlier</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read four sentences about last month.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Three families: yesterday, last, ago.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, and build sentences.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about your week and your past.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Find five time jobs in one event update.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Anchor every expression to a reference time.</span></div>
+    <div class="flow-step"><b>Build</b><span>Locate, measure, order, and connect events.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional event timeline and repair ambiguity.</span></div>
   </div>
 
-  <p class="note-line">This is the vocabulary partner of your past simple lesson. Every expression here answers one question: <span class="ex">When did it happen?</span> <span class="ex">Yesterday</span> looks one day back, <span class="ex">last week</span> names the week before this one, and <span class="ex">two years ago</span> counts back from now.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can establish a clear past reference time; distinguish a finished point from duration, sequence, and overlap; use <span class="ex">ago</span>, <span class="ex">before</span>, and <span class="ex">earlier</span> accurately; distinguish <span class="ex">last week</span> from <span class="ex">the last week</span>; combine time expressions naturally with past simple, past continuous, and present perfect; and clarify an ambiguous date or sequence.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="moved">moved</button>
-      <button class="choice-option" data-choice-option="move">move</button>
-      <button class="choice-option" data-choice-option="at">at</button>
-      <button class="choice-option" data-choice-option="in">in</button>
-      <button class="choice-option" data-choice-option="Wednesday">Wednesday</button>
-      <button class="choice-option" data-choice-option="Monday">Monday</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>Last year we <button class="choice-gap" data-choice-gap data-answer="moved" data-placeholder="choose">choose</button> to a new apartment. &nbsp;<span class="contraction">(previous grammar lesson · past simple)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My English class starts <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> six o’clock. &nbsp;<span class="contraction">(A1 · prepositions of time)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The day after Tuesday is <button class="choice-gap" data-choice-gap data-answer="Wednesday" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(A0 · days of the week)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a finished event, an open past scene, and a continuing situation viewed from now.">
+    <h3>Three tense viewpoints from earlier lessons</h3>
+    <p class="choice-hint">Use past simple for the completed call, past continuous for the scene open at 3:00, and present perfect for the situation continuing to now.</p>
+    <div class="choice-bank" aria-label="Tense retrieval choices"><button class="choice-option" data-choice-option="called">called</button><button class="choice-option" data-choice-option="was driving">was driving</button><button class="choice-option" data-choice-option="has worked">has worked</button><button class="choice-option" data-choice-option="was calling">was calling</button><button class="choice-option" data-choice-option="drove">drove</button><button class="choice-option" data-choice-option="worked">worked</button></div>
+    <div class="q"><span class="n">1</span><span>The call was one completed event yesterday: Mara <button class="choice-gap" data-choice-gap data-answer="called" data-hint="Choose the past-simple form for one completed call." data-fix="Mara called at 3:00 yesterday." data-placeholder="choose">choose</button> at 3:00 yesterday.</span></div>
+    <div class="q"><span class="n">2</span><span>The speaker opens the driving scene at exactly 3:00 yesterday: At 3:00 yesterday, Mara <button class="choice-gap" data-choice-gap data-answer="was driving" data-hint="Choose was plus verb-ing to view the activity in progress at the reference point." data-fix="At 3:00 yesterday, Mara was driving home." data-placeholder="choose">choose</button> home.</span></div>
+    <div class="q"><span class="n">3</span><span>The job began in 2023 and continues now: Mara <button class="choice-gap" data-choice-gap data-answer="has worked" data-hint="Choose has plus the past participle because the situation continues from 2023 to now." data-fix="Mara has worked here since 2023." data-placeholder="choose">choose</button> here since 2023.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Four anchors in past time</h2>
-  <div class="lead-rule"></div>
-  <p>Four pictures, four distances into the past. Say each one aloud in a full sentence: <span class="ex">I checked my email an hour ago.</span></p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunrise.svg" alt="" loading="lazy" /></span><span class="nm">yesterday morning</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/moon.svg" alt="" loading="lazy" /></span><span class="nm">last night</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/clock.svg" alt="" loading="lazy" /></span><span class="nm">an hour ago</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/calendar.svg" alt="" loading="lazy" /></span><span class="nm">in 2020</span></div>
-  </div>
-
-  <h2>Notice before the rule</h2>
+  <h2>Notice five time jobs in one update</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read Marta’s update</h3>
-    <p><span class="ex">“I started this job <strong>two years ago</strong>. <strong>Last month</strong> my team moved to a new office, and <strong>yesterday morning</strong> we had our first meeting there. It went well, so <strong>last night</strong> I slept very well.”</span></p>
+    <h3>Riverside workshop update</h3>
+    <p><span class="ex">“The workshop opened <strong>last Saturday</strong>. We arrived <strong>at 8:00</strong>, and visitors entered <strong>an hour later</strong>. <strong>While the first group was touring the studio</strong>, the second group waited outside <strong>for fifteen minutes</strong>. We closed <strong>at 4:00</strong>. <strong>By then</strong>, 120 people had visited.”</span></p>
     <ul>
-      <li>Look at <span class="ex">two years ago</span>. Where does <span class="ex">ago</span> sit: before the time or after it? Is that the same in your language?</li>
-      <li>Marta says <span class="ex">last month</span>, not <span class="ex">the last month</span>. Which little word disappears after <span class="ex">last</span>?</li>
-      <li>She says <span class="ex">yesterday morning</span> but <span class="ex">last night</span>. Why not <span class="ex">yesterday night</span>? English simply never says it.</li>
+      <li>Which phrase establishes the calendar day for the whole update?</li>
+      <li>Which expressions locate points, order a later event, measure a duration, and show overlap?</li>
+      <li>What does <span class="ex">then</span> refer to in <span class="ex">By then</span>?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: read the cue, then choose</h3>
-    <p class="choice-hint">Parts of yesterday take <b>yesterday</b>. Whole past periods take <b>last</b>, with no <b>the</b>. To count back from now, put <b>ago</b> after the time.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="yesterday">yesterday</button>
-      <button class="choice-option" data-choice-option="last">last</button>
-      <button class="choice-option" data-choice-option="the last">the last</button>
-      <button class="choice-option" data-choice-option="ago">ago</button>
-      <button class="choice-option" data-choice-option="before">before</button>
-      <button class="choice-option" data-choice-option="in">in</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I saw Dana <button class="choice-gap" data-choice-gap data-answer="yesterday" data-placeholder="choose">choose</button> morning. &nbsp;<span class="contraction">(the morning of the day before today)</span></span></div>
-    <div class="q"><span class="n">2</span><span>We watched a movie <button class="choice-gap" data-choice-gap data-answer="last" data-placeholder="choose">choose</button> night. &nbsp;<span class="contraction">(not yesterday night)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I started this job two years <button class="choice-gap" data-choice-gap data-answer="ago" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(after the time, not before it)</span></span></div>
-    <div class="q"><span class="n">4</span><span>I was really busy <button class="choice-gap" data-choice-gap data-answer="last" data-placeholder="choose">choose</button> week. &nbsp;<span class="contraction">(no the)</span></span></div>
-    <div class="q"><span class="n">5</span><span>She graduated <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> 2021. &nbsp;<span class="contraction">(year · A1 preposition)</span></span></div>
-    <div class="q"><span class="n">6</span><span>He called me an hour <button class="choice-gap" data-choice-gap data-answer="ago" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(count back from now)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified the reference day, two event points, sequence, duration, and overlap.">
+    <h3>Discovery check: identify each time job</h3>
+    <div class="choice-bank" aria-label="Time job choices"><button class="choice-option" data-choice-option="reference day">reference day</button><button class="choice-option" data-choice-option="event point">event point</button><button class="choice-option" data-choice-option="later sequence">later sequence</button><button class="choice-option" data-choice-option="duration">duration</button><button class="choice-option" data-choice-option="overlap">overlap</button><button class="choice-option" data-choice-option="reference back">reference back</button></div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Last Saturday</span> establishes the report’s <button class="choice-gap" data-choice-gap data-answer="reference day" data-hint="This phrase places the whole update on one named calendar day." data-fix="Last Saturday is the reference day for the update." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">At 8:00</span> locates the arrival at an <button class="choice-gap" data-choice-gap data-answer="event point" data-hint="A clock time answers exactly when the arrival happened." data-fix="At 8:00 is the arrival’s event point." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">An hour later</span> places the visitor entry in a <button class="choice-gap" data-choice-gap data-answer="later sequence" data-hint="Later orders this event after the 8:00 arrival." data-fix="An hour later marks a later event in the sequence." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">For fifteen minutes</span> measures the wait’s <button class="choice-gap" data-choice-gap data-answer="duration" data-hint="For plus an amount of time answers how long the wait lasted." data-fix="For fifteen minutes gives the duration of the wait." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">While the first group was touring</span> shows <button class="choice-gap" data-choice-gap data-answer="overlap" data-hint="While connects two situations happening during the same period." data-fix="While the first group was touring marks overlap with the second group’s wait." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>In <span class="ex">By then</span>, <span class="ex">then</span> points back to the already stated 4:00 closing time, so it provides <button class="choice-gap" data-choice-gap data-answer="reference back" data-hint="Then recovers an earlier time from the shared context instead of naming a new time." data-fix="By then refers back to the 4:00 closing time." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: three families</h2>
+  <h2>Get to the root: every expression needs a reference time</h2>
   <div class="lead-rule"></div>
-  <p>The <strong>yesterday family</strong> names the day before today and its parts. It works alone, with no preposition:</p>
+  <p>A time expression is understood from a <strong>reference time</strong>. The reference may be the moment of speaking, a calendar point, or another event already established in the conversation.</p>
   <table>
-    <thead><tr><th>the yesterday family</th><th>meaning</th></tr></thead>
+    <thead><tr><th>reference</th><th>expression</th><th>interpretation</th></tr></thead>
     <tbody>
-      <tr><td><b>yesterday</b></td><td>the day before today</td></tr>
-      <tr><td><b>yesterday morning</b></td><td>the early part of that day</td></tr>
-      <tr><td><b>yesterday afternoon</b></td><td>the middle part of that day</td></tr>
-      <tr><td><b>yesterday evening</b></td><td>the late part of that day &nbsp;<span class="contraction">for the night, say last night</span></td></tr>
-      <tr><td><b>the day before yesterday</b></td><td>two days back from today</td></tr>
+      <tr><td>the moment of speaking</td><td><span class="ex">two days ago</span></td><td>measure two days backward from now</td></tr>
+      <tr><td>the current calendar period</td><td><span class="ex">yesterday · last week · last year</span></td><td>locate the period before today, this week, or this year</td></tr>
+      <tr><td>a stated calendar point</td><td><span class="ex">on May 12 · at 8:00 · in 2022</span></td><td>locate an event with increasing precision</td></tr>
+      <tr><td>another past event</td><td><span class="ex">two days before the opening · an hour later</span></td><td>measure backward or forward from that event</td></tr>
+      <tr><td>shared discourse context</td><td><span class="ex">earlier · later · then · by then</span></td><td>recover a time the speakers can already identify</td></tr>
     </tbody>
   </table>
-  <p>The <strong>last family</strong> names the most recent complete period: the night, week, month, or year just before this one. There is <strong>no the</strong>: <span class="ex">last week</span>, never <span class="ex">the last week</span>.</p>
+  <p class="note-line"><span class="ex">Ago</span> and <span class="ex">before</span> are not interchangeable. <span class="ex">The team arrived two days ago</span> measures from the speaking moment. <span class="ex">The team arrived two days before the opening</span> measures from the opening. <span class="ex">Earlier</span> works only when the context makes its reference clear.</p>
+
+  <h2>Locate a finished point precisely</h2>
+  <div class="lead-rule"></div>
   <table>
-    <thead><tr><th>the last family</th><th>meaning</th></tr></thead>
+    <thead><tr><th>expression family</th><th>natural pattern</th><th>important boundary</th></tr></thead>
     <tbody>
-      <tr><td><b>last night</b></td><td>the night before today &nbsp;<span class="contraction">this replaces yesterday night</span></td></tr>
-      <tr><td><b>last week</b></td><td>the week before this one</td></tr>
-      <tr><td><b>last month</b></td><td>the month before this one</td></tr>
-      <tr><td><b>last year</b></td><td>the year before this one</td></tr>
-      <tr><td><b>last Monday</b></td><td>the most recent Monday before today</td></tr>
+      <tr><td>the day before today</td><td><span class="ex">yesterday · yesterday morning · yesterday afternoon · yesterday evening</span></td><td>Ordinary U.S. English says <span class="ex">last night</span>, not <span class="ex">yesterday night</span>.</td></tr>
+      <tr><td>the preceding calendar period</td><td><span class="ex">last night · last week · last month · last year</span></td><td>There is no article in this calendar meaning.</td></tr>
+      <tr><td>distance backward from now</td><td><span class="ex">an hour ago · three weeks ago · a long time ago</span></td><td>Put <span class="ex">ago</span> after the measured time.</td></tr>
+      <tr><td>year, month, season</td><td><span class="ex">in 2022 · in May · in the winter</span></td><td>Use <span class="ex">in</span> for the broad container.</td></tr>
+      <tr><td>day or date</td><td><span class="ex">on Monday · on May 12</span></td><td>Use <span class="ex">on</span> for the calendar surface.</td></tr>
+      <tr><td>clock point</td><td><span class="ex">at 8:00 · at noon · at midnight</span></td><td>Use <span class="ex">at</span> for the point.</td></tr>
     </tbody>
   </table>
-  <p>The <strong>ago family</strong> measures distance back from now. Name the amount of time, then add <span class="ex">ago</span>. <strong>Ago always comes after the time</strong>, never before it:</p>
+  <p><span class="ex">Last week</span> means the calendar week before the current one. <span class="ex">The last week</span> is grammatical when <span class="ex">last</span> means final or a measured period: <span class="ex">the last week of the course</span> or <span class="ex">I have been busy for the last week</span>. Do not delete <span class="ex">the</span> when that different meaning is intended.</p>
+  <p><span class="ex">Last Monday</span> can be unclear near a week boundary because speakers do not always calculate it identically. For a booking, deadline, or record, use the date: <span class="ex">Monday, May 12</span>. Clarity is more important than defending one interpretation.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected expressions from the speaking moment, another past event, a calendar period, a precise date, and a clock point.">
+    <h3>Drill 1: choose the reference and precision</h3>
+    <div class="choice-bank" aria-label="Past reference choices"><button class="choice-option" data-choice-option="ago">ago</button><button class="choice-option" data-choice-option="before">before</button><button class="choice-option" data-choice-option="last">last</button><button class="choice-option" data-choice-option="the last">the last</button><button class="choice-option" data-choice-option="on">on</button><button class="choice-option" data-choice-option="at">at</button></div>
+    <div class="q"><span class="n">1</span><span>The speaker is calling now and measures three hours backward from this moment: The power returned three hours <button class="choice-gap" data-choice-gap data-answer="ago" data-hint="Use ago when the amount is measured backward from the speaking moment." data-fix="The power returned three hours ago." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The opening was Saturday, and the delivery came two days earlier than that event: The delivery came two days <button class="choice-gap" data-choice-gap data-answer="before" data-hint="Use before when another past event is the reference point." data-fix="The delivery came two days before the opening." data-placeholder="choose">choose</button> the opening.</span></div>
+    <div class="q"><span class="n">3</span><span>The speaker means the calendar week before the current week: We tested the lights <button class="choice-gap" data-choice-gap data-answer="last" data-hint="Use last with no article for the preceding calendar week." data-fix="We tested the lights last week." data-placeholder="choose">choose</button> week.</span></div>
+    <div class="q"><span class="n">4</span><span>The speaker means the final week of a four-week course: We practiced presentations during <button class="choice-gap" data-choice-gap data-answer="the last" data-hint="Use the last when last means final inside a defined period." data-fix="We practiced presentations during the last week of the course." data-placeholder="choose">choose</button> week of the course.</span></div>
+    <div class="q"><span class="n">5</span><span>The event record gives the exact date, May 12: The workshop opened <button class="choice-gap" data-choice-gap data-answer="on" data-hint="Use on before a specific day or date." data-fix="The workshop opened on May 12." data-placeholder="choose">choose</button> May 12.</span></div>
+    <div class="q"><span class="n">6</span><span>The first visitor entered at the clock point 9:00: The first visitor entered <button class="choice-gap" data-choice-gap data-answer="at" data-hint="Use at before a clock time." data-fix="The first visitor entered at 9:00." data-placeholder="choose">choose</button> 9:00.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Order events and keep the reference clear</h2>
+  <div class="lead-rule"></div>
+  <p>Use <span class="ex">first, then, after that, later</span>, and <span class="ex">finally</span> to guide the listener through a sequence. These words do not supply a date by themselves. Establish the reference first: <span class="ex">Last Saturday, we opened at 8:00. First, we checked the rooms. Then, we unlocked the doors.</span></p>
   <table>
-    <thead><tr><th>the ago family</th><th>meaning</th></tr></thead>
+    <thead><tr><th>relationship</th><th>form</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>an hour ago</b></td><td>one hour back from now</td></tr>
-      <tr><td><b>two days ago</b></td><td>two days back from now &nbsp;<span class="contraction">not before two days</span></td></tr>
-      <tr><td><b>three weeks ago</b></td><td>three weeks back from now</td></tr>
-      <tr><td><b>a long time ago</b></td><td>far back, exact distance unknown</td></tr>
+      <tr><td>next event</td><td><span class="ex">then · after that · later</span></td><td><span class="ex">We checked the rooms. Then we opened the doors.</span></td></tr>
+      <tr><td>event after a noun</td><td><span class="ex">after + noun</span></td><td><span class="ex">After lunch, the second session began.</span></td></tr>
+      <tr><td>event after a clause</td><td><span class="ex">after + subject + verb</span></td><td><span class="ex">After the visitors left, we cleaned the room.</span></td></tr>
+      <tr><td>earlier event</td><td><span class="ex">before + noun or clause</span></td><td><span class="ex">We tested the sound before the talk began.</span></td></tr>
+      <tr><td>final event</td><td><span class="ex">finally · in the end</span></td><td><span class="ex">Finally, we locked the doors.</span></td></tr>
     </tbody>
   </table>
+  <p><span class="ex">An hour later</span> means one hour after the established reference event. <span class="ex">An hour before</span> needs an understood or stated later reference. If the listener could ask “before what?” or “later than what?”, name the event.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You ordered the event log and kept every before, later, and after reference recoverable.">
+    <h3>Drill 2: connect the event sequence</h3>
+    <div class="choice-bank" aria-label="Sequence choices"><button class="choice-option" data-choice-option="First">First</button><button class="choice-option" data-choice-option="Then">Then</button><button class="choice-option" data-choice-option="an hour later">an hour later</button><button class="choice-option" data-choice-option="before the doors opened">before the doors opened</button><button class="choice-option" data-choice-option="After the last visitor left">After the last visitor left</button><button class="choice-option" data-choice-option="Finally">Finally</button></div>
+    <div class="q"><span class="n">1</span><span>The Saturday report begins with the earliest task: <button class="choice-gap" data-choice-gap data-answer="First" data-hint="Use First to mark the opening event in the ordered report." data-fix="First, the team checked every room." data-placeholder="choose">choose</button>, the team checked every room.</span></div>
+    <div class="q"><span class="n">2</span><span>The sound check immediately followed the room check: <button class="choice-gap" data-choice-gap data-answer="Then" data-hint="Use Then for the next event after the established first event." data-fix="Then, the technician tested the sound." data-placeholder="choose">choose</button>, the technician tested the sound.</span></div>
+    <div class="q"><span class="n">3</span><span>The team arrived at 8:00, and the visitors entered at 9:00: The team arrived at 8:00. <button class="choice-gap" data-choice-gap data-answer="an hour later" data-hint="Measure one hour forward from the stated 8:00 arrival." data-fix="The team arrived at 8:00. An hour later, the visitors entered." data-placeholder="choose">choose</button>, the visitors entered.</span></div>
+    <div class="q"><span class="n">4</span><span>The sound test happened earlier than the 9:00 opening: The technician tested the sound <button class="choice-gap" data-choice-gap data-answer="before the doors opened" data-hint="Name the later reference event after before so the relationship is complete." data-fix="The technician tested the sound before the doors opened." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Cleaning began only when the final visitor had gone: <button class="choice-gap" data-choice-gap data-answer="After the last visitor left" data-hint="Use After plus the complete clause that sets the cleaning start point." data-fix="After the last visitor left, the team cleaned the room." data-placeholder="choose">choose</button>, the team cleaned the room.</span></div>
+    <div class="q"><span class="n">6</span><span>Locking the doors was the last event in the report: <button class="choice-gap" data-choice-gap data-answer="Finally" data-hint="Use Finally to signal the closing event in the sequence." data-fix="Finally, the manager locked the doors." data-placeholder="choose">choose</button>, the manager locked the doors.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Separate point, duration, endpoint, and overlap</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>time job</th><th>use</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>duration</td><td><span class="ex">for + amount of time</span></td><td><span class="ex">The talk lasted for forty minutes.</span></td></tr>
+      <tr><td>two boundaries</td><td><span class="ex">from + start + to + end</span></td><td><span class="ex">The desk was open from 9:00 to 4:00.</span></td></tr>
+      <tr><td>continuing endpoint</td><td><span class="ex">until + endpoint</span></td><td><span class="ex">We waited until noon.</span></td></tr>
+      <tr><td>deadline or limit</td><td><span class="ex">by + point</span></td><td><span class="ex">Please finish by noon.</span> means no later than noon.</td></tr>
+      <tr><td>inside a period</td><td><span class="ex">during + noun phrase</span></td><td><span class="ex">The lights failed during the talk.</span></td></tr>
+      <tr><td>two situations overlap</td><td><span class="ex">while + clause</span></td><td><span class="ex">The lights failed while Maya was speaking.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">During</span> takes a noun phrase, not a complete clause: <span class="ex">during the talk</span>. <span class="ex">While</span> introduces a clause with a subject and verb: <span class="ex">while Maya was speaking</span>. Neither word automatically chooses past simple or past continuous. The intended viewpoint chooses the tense.</p>
+  <p>A duration does not tell us whether a situation continues now. <span class="ex">I worked there for two years</span> is a finished past period when context says the job ended. <span class="ex">I have worked here for two years</span> connects the same duration to now. Likewise, <span class="ex">this morning</span> can be an open or closed reporting period depending on the speaking time and intended viewpoint.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished duration, boundaries, endpoint, deadline, noun-phrase period, and clause overlap without treating the expression as a tense trigger.">
+    <h3>Drill 3: choose the time relationship</h3>
+    <div class="choice-bank" aria-label="Duration and overlap choices"><button class="choice-option" data-choice-option="for">for</button><button class="choice-option" data-choice-option="from">from</button><button class="choice-option" data-choice-option="until">until</button><button class="choice-option" data-choice-option="by">by</button><button class="choice-option" data-choice-option="during">during</button><button class="choice-option" data-choice-option="while">while</button></div>
+    <div class="q"><span class="n">1</span><span>The wait lasted fifteen minutes, and the sentence gives only its length: We waited <button class="choice-gap" data-choice-gap data-answer="for" data-hint="Use for before an amount that measures duration." data-fix="We waited for fifteen minutes." data-placeholder="choose">choose</button> fifteen minutes.</span></div>
+    <div class="q"><span class="n">2</span><span>The information desk opened at 9:00 and closed at 4:00: It was open <button class="choice-gap" data-choice-gap data-answer="from" data-hint="Use from to introduce the start boundary before to 4:00." data-fix="It was open from 9:00 to 4:00." data-placeholder="choose">choose</button> 9:00 to 4:00.</span></div>
+    <div class="q"><span class="n">3</span><span>The team continued waiting and stopped at noon: The team waited <button class="choice-gap" data-choice-gap data-answer="until" data-hint="Use until for an activity continuing up to its endpoint." data-fix="The team waited until noon." data-placeholder="choose">choose</button> noon.</span></div>
+    <div class="q"><span class="n">4</span><span>The forms could arrive earlier, but noon was the latest acceptable time: Please send the forms <button class="choice-gap" data-choice-gap data-answer="by" data-hint="Use by for a deadline meaning no later than that point." data-fix="Please send the forms by noon." data-placeholder="choose">choose</button> noon.</span></div>
+    <div class="q"><span class="n">5</span><span>The lights failed inside the event named by the noun phrase <span class="ex">the talk</span>: The lights failed <button class="choice-gap" data-choice-gap data-answer="during" data-hint="Use during before the noun phrase the talk." data-fix="The lights failed during the talk." data-placeholder="choose">choose</button> the talk.</span></div>
+    <div class="q"><span class="n">6</span><span>The light failure happened during the clause <span class="ex">Maya was speaking</span>: The lights failed <button class="choice-gap" data-choice-gap data-answer="while" data-hint="Use while before a clause containing a subject and verb." data-fix="The lights failed while Maya was speaking." data-placeholder="choose">choose</button> Maya was speaking.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
 
   <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li><span class="ex">Yesterday</span> points at one specific day. <span class="ex">Last week</span> points at one specific period. <span class="ex">Two days ago</span> doesn’t name anything; it <strong>measures</strong> backward from this moment.</li>
-      <li>The families can describe the same moment: if today is Wednesday, <span class="ex">the day before yesterday</span>, <span class="ex">last Monday</span>, and <span class="ex">two days ago</span> can all point at the same day.</li>
-      <li>All three families work alone: no <span class="ex">in</span>, no <span class="ex">on</span>, no <span class="ex">at</span>, and no <span class="ex">the</span> before <span class="ex">last</span>.</li>
-    </ul>
+    <h3>Sound natural: stress the reference and link the frame</h3>
+    <p><span class="ex">Yesterday</span> is /ˈjɛstɚdeɪ/. The first syllable is strongest. <span class="ex">Ago</span> is /əˈgoʊ/: its first vowel is weak and its second syllable is strong. Say <span class="ex">a week ago</span> as one group: /ə ˈwik əˈgoʊ/.</p>
+    <p>In <span class="ex">last week</span> and <span class="ex">last night</span>, connect the consonants without inserting a vowel. In fast U.S. speech, the /t/ may be lightly released, but the phrase must remain recognizable. <span class="ex">For</span> is often weak /fɚ/ before a duration: <span class="ex">for fifteen minutes</span>.</p>
+    <p>In a neutral question, <span class="ex">did you</span> may link as /ˈdɪdʒə/: <span class="ex">When did you arrive?</span> Keep the information word and event strong. To repair a date, use contrastive stress: <span class="ex">It was <strong>TWO weeks ago</strong>, not last week.</span></p>
+    <p>Chunk a sequence at event boundaries: <span class="ex">Last Saturday | we arrived at eight | an hour later, the doors opened | and after the last visitor left | we cleaned the room.</span></p>
   </div>
 
-  <h2>A timeline you can point to</h2>
-  <div class="lead-rule"></div>
-  <p>Read the timeline from top to bottom: each row is one step further into the past. Point at a row and say a true sentence about it.</p>
-  <table>
-    <thead><tr><th>how far back</th><th>what to say</th></tr></thead>
-    <tbody>
-      <tr><td><b>earlier today</b></td><td>this morning · an hour ago · at nine o’clock</td></tr>
-      <tr><td><b>one day back</b></td><td>yesterday · yesterday morning · yesterday afternoon · last night</td></tr>
-      <tr><td><b>two days back</b></td><td>the day before yesterday · two days ago</td></tr>
-      <tr><td><b>earlier this week or last week</b></td><td>last Monday · three days ago · last week</td></tr>
-      <tr><td><b>months back</b></td><td>last month · three weeks ago · in May</td></tr>
-      <tr><td><b>years back</b></td><td>last year · two years ago · in 2020 · a long time ago</td></tr>
-    </tbody>
-  </table>
-
-  <h2>in, on, at still work in the past</h2>
-  <div class="lead-rule"></div>
-  <p>Your A1 prepositions of time did not retire. They mark past time at exactly the same jobs:</p>
-  <div class="note">
-    <h3>The old jobs, unchanged</h3>
-    <ul>
-      <li><span class="ex">in</span> + year or month: <span class="ex">She graduated <strong>in 2021</strong>. We met <strong>in May</strong>.</span></li>
-      <li><span class="ex">on</span> + date or day: <span class="ex">My interview was <strong>on May 12</strong>. He arrived <strong>on Monday</strong>.</span></li>
-      <li><span class="ex">at</span> + clock time: <span class="ex">The movie started <strong>at eight o’clock</strong>.</span></li>
-      <li>But the three families work alone: <span class="ex">last week</span> (not <span class="ex">in last week</span>), <span class="ex">yesterday</span> (not <span class="ex">on yesterday</span>).</li>
-    </ul>
-  </div>
-
-  <h2>Where does the time expression go?</h2>
-  <div class="lead-rule"></div>
-  <p>Time expressions usually come <strong>at the end</strong> of the sentence: <span class="ex">We watched a movie <strong>last night</strong>. I sent the report <strong>an hour ago</strong>.</span></p>
-  <p>To set the scene, move the expression <strong>to the front, with a comma</strong>: <span class="ex"><strong>Last night,</strong> we watched a movie. <strong>Two years ago,</strong> we moved here.</span></p>
-  <p>To ask about past time, use <span class="ex">when</span> with the past simple: <span class="ex"><strong>When did</strong> you move here? <strong>When did</strong> she call?</span> A short answer can be just the time expression: <span class="ex">Two years ago. Last night.</span></p>
-
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: choose the right word</h3>
-    <p class="choice-hint"><b>yesterday</b>, <b>last</b>, and <b>ago</b> work alone. Keep <b>in</b> for years and months, <b>on</b> for dates and days, <b>at</b> for clock times.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="yesterday">yesterday</button>
-      <button class="choice-option" data-choice-option="last">last</button>
-      <button class="choice-option" data-choice-option="ago">ago</button>
-      <button class="choice-option" data-choice-option="in">in</button>
-      <button class="choice-option" data-choice-option="on">on</button>
-      <button class="choice-option" data-choice-option="at">at</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I called my sister <button class="choice-gap" data-choice-gap data-answer="last" data-placeholder="choose">choose</button> night. &nbsp;<span class="contraction">(the night before today)</span></span></div>
-    <div class="q"><span class="n">2</span><span>We met ten years <button class="choice-gap" data-choice-gap data-answer="ago" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(count back from now)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Did you watch the game <button class="choice-gap" data-choice-gap data-answer="yesterday" data-placeholder="choose">choose</button> afternoon? &nbsp;<span class="contraction">(part of the day before today)</span></span></div>
-    <div class="q"><span class="n">4</span><span>She finished college <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> 2019. &nbsp;<span class="contraction">(year)</span></span></div>
-    <div class="q"><span class="n">5</span><span>My interview was <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> May 12. &nbsp;<span class="contraction">(exact date)</span></span></div>
-    <div class="q"><span class="n">6</span><span>The movie started <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> eight o’clock. &nbsp;<span class="contraction">(clock time)</span></span></div>
-    <div class="q"><span class="n">7</span><span>He sold his car a month <button class="choice-gap" data-choice-gap data-answer="ago" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(after the time)</span></span></div>
-    <div class="q"><span class="n">8</span><span>I was in Miami <button class="choice-gap" data-choice-gap data-answer="last" data-placeholder="choose">choose</button> week. &nbsp;<span class="contraction">(the week before this one · no the)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Build the sentence</h2>
-  <div class="lead-rule"></div>
-
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type the missing word</h3>
-    <p class="choice-hint">One word per gap. Decide first which family the sentence needs, then type.</p>
-    <div class="q"><span class="n">1</span><span>I didn’t sleep well <input class="answer-input" data-answer="last" aria-label="answer 1" /> night.</span></div>
-    <div class="q"><span class="n">2</span><span>We talked about it the day before <input class="answer-input" data-answer="yesterday" aria-label="answer 2" />.</span></div>
-    <div class="q"><span class="n">3</span><span>She moved to Chicago six months <input class="answer-input" data-answer="ago" aria-label="answer 3" />.</span></div>
-    <div class="q"><span class="n">4</span><span><input class="answer-input" data-answer="When" aria-label="answer 4" /> did you start your job?</span></div>
-    <div class="q"><span class="n">5</span><span>He was born <input class="answer-input" data-answer="in" aria-label="answer 5" /> 1998.</span></div>
-    <div class="q"><span class="n">6</span><span>I sent you the email an hour <input class="answer-input" data-answer="ago" aria-label="answer 6" />.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="we moved here two years ago">
-    <h3>Drill 3: build the answer to “When did you move here?”</h3>
-    <p class="tile-target">Count back from now, and remember where <span class="ex">ago</span> goes. Build the sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="ago">ago</button>
-      <button class="tile" data-build-tile="we">We</button>
-      <button class="tile" data-build-tile="two">two</button>
-      <button class="tile" data-build-tile="moved">moved</button>
-      <button class="tile" data-build-tile="years">years</button>
-      <button class="tile" data-build-tile="here">here</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="i saw her last friday">
-    <h3>Drill 4: build the sentence with the last family</h3>
-    <p class="tile-target">The most recent Friday before today. No <span class="ex">the</span>, no <span class="ex">on</span>. Build it, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="friday">Friday</button>
-      <button class="tile" data-build-tile="saw">saw</button>
-      <button class="tile" data-build-tile="i">I</button>
-      <button class="tile" data-build-tile="last">last</button>
-      <button class="tile" data-build-tile="her">her</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
-  <div class="lead-rule"></div>
-  <p>Two classic errors travel with this vocabulary in almost every language. Learn the repairs as chunks:</p>
-  <table>
-    <thead><tr><th>don’t say</th><th>say</th></tr></thead>
-    <tbody>
-      <tr><td><b>yesterday night</b></td><td><b>last night</b> &nbsp;<span class="contraction">the night belongs to the last family</span></td></tr>
-      <tr><td><b>before two days</b></td><td><b>two days ago</b> &nbsp;<span class="contraction">ago comes after the time</span></td></tr>
-      <tr><td><b>the last week</b></td><td><b>last week</b> &nbsp;<span class="contraction">no the</span></td></tr>
-      <tr><td><b>on yesterday</b></td><td><b>yesterday</b> &nbsp;<span class="contraction">no preposition</span></td></tr>
-    </tbody>
-  </table>
-
-  <div class="micro-drill" data-spot-error data-answer="yesterday" data-fix="I called you last night." data-why="English has yesterday morning, yesterday afternoon, and yesterday evening, but not yesterday night. For the night before today, say last night.">
-    <h3>Drill 5: repair the night</h3>
-    <p>Tap the word that is wrong, then say the corrected sentence aloud.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="i">I</button>
-      <button class="error-choice" data-error-choice="called">called</button>
-      <button class="error-choice" data-error-choice="you">you</button>
-      <button class="error-choice" data-error-choice="yesterday">yesterday</button>
-      <button class="error-choice" data-error-choice="night">night.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
-  </div>
-
-  <div class="micro-drill" data-spot-error data-answer="before" data-fix="She left an hour ago." data-why="To measure back from now, name the time first and put ago after it: an hour ago, two days ago. Before does not do this job in English.">
-    <h3>Drill 6: repair the measurement</h3>
-    <p>Tap the word that is wrong, then say the corrected sentence aloud.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="she">She</button>
-      <button class="error-choice" data-error-choice="left">left</button>
-      <button class="error-choice" data-error-choice="before">before</button>
-      <button class="error-choice" data-error-choice="an">an</button>
-      <button class="error-choice" data-error-choice="hour">hour.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
-  </div>
-
-  <div class="micro-drill" data-transform>
-    <h3>Drill 7: move it, then answer it</h3>
-    <p>Say the full new sentence aloud first. Reveal only after you answer.</p>
-    <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> We watched a movie last night. &nbsp;→&nbsp; move the time expression to the front</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Last night, we watched a movie.</strong></p>
+  <section data-lesson-extension="Tutor-read reference point, relative sequence, duration, deadline, overlap, and continuing-to-now listening check">
+    <h2>Listen for the time relationship</h2>
+    <div class="lead-rule"></div>
+    <p class="note-line"><b>Tutor-read listening:</b> Keep the transcript closed. Read each item once naturally and once more after the learner chooses. Preserve weak forms and connected speech, but keep the contrasting time information audible.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a speaking-time measurement, past-event reference, finished duration, deadline, overlap, and duration continuing to now.">
+      <h3>Six timeline decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="three hours before the call" data-hint="Listen for whether the speaker measures from now or from the later call." data-fix="The delivery arrived three hours before the call."><p class="quiz-question">1. When did the delivery arrive relative to the call?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="three hours before the call">three hours before the call</button><button class="quiz-option" data-quiz-option="three hours ago from now">three hours ago from now</button><button class="quiz-option" data-quiz-option="three hours after the call">three hours after the call</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="an hour later" data-hint="Listen for the event that follows the 8:00 arrival." data-fix="The doors opened an hour later, at 9:00."><p class="quiz-question">2. How is the 9:00 opening related to the 8:00 arrival?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="an hour later">an hour later</button><button class="quiz-option" data-quiz-option="an hour before">an hour before</button><button class="quiz-option" data-quiz-option="for an hour">for an hour</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The repair took forty minutes and finished." data-hint="Listen for for plus a duration in a completed past report." data-fix="The repair took forty minutes and finished."><p class="quiz-question">3. What does the speaker report about the repair?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The repair took forty minutes and finished.">The repair took forty minutes and finished.</button><button class="quiz-option" data-quiz-option="The repair will begin in forty minutes.">The repair will begin in forty minutes.</button><button class="quiz-option" data-quiz-option="The repair has continued for forty years.">The repair has continued for forty years.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="no later than noon" data-hint="Listen for by, which sets the latest acceptable point." data-fix="The forms must arrive no later than noon."><p class="quiz-question">4. What is the deadline for the forms?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="no later than noon">no later than noon</button><button class="quiz-option" data-quiz-option="continuously until noon">continuously until noon</button><button class="quiz-option" data-quiz-option="exactly after noon">exactly after noon</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The lights failed during Maya’s talk." data-hint="Listen for two situations whose times overlap." data-fix="The lights failed while Maya was speaking."><p class="quiz-question">5. Which relationship does the sentence express?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The lights failed during Maya’s talk.">The lights failed during Maya’s talk.</button><button class="quiz-option" data-quiz-option="The lights failed before Maya began.">The lights failed before Maya began.</button><button class="quiz-option" data-quiz-option="Maya spoke after the lights returned.">Maya spoke after the lights returned.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The work began two years ago and continues now." data-hint="Listen for has worked and for, which connect the duration to now." data-fix="She has worked there for two years, so the work continues now."><p class="quiz-question">6. What time boundary does the speaker intend?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The work began two years ago and continues now.">The work began two years ago and continues now.</button><button class="quiz-option" data-quiz-option="The two-year job finished before now.">The two-year job finished before now.</button><button class="quiz-option" data-quiz-option="The job will start two years from now.">The job will start two years from now.</button></div></div>
       </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> Two years ago, we moved here. &nbsp;→&nbsp; move the time expression to the end</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>We moved here two years ago.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> When did you see Maria? &nbsp;→&nbsp; the most recent Friday</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I saw her last Friday.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> When did the meeting start? &nbsp;→&nbsp; 9:00</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>It started at nine o’clock.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> When was Leo born? &nbsp;→&nbsp; 1998</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>He was born in 1998.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> When did they arrive? &nbsp;→&nbsp; one hour back from now</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>They arrived an hour ago.</strong></p>
-      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-  </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">The delivery arrived three hours before I called you.</span> Evidence target: <span class="ex">before</span> measured from another past event, not from now.</li>
+        <li><span class="ex">We arrived at eight, and the doors opened an hour later.</span> Evidence target: forward sequence from an established point.</li>
+        <li><span class="ex">The repair took forty minutes, and everything worked after that.</span> Evidence target: completed duration.</li>
+        <li><span class="ex">Please send the forms by noon.</span> Evidence target: deadline rather than continued activity.</li>
+        <li><span class="ex">The lights failed while Maya was speaking.</span> Evidence target: overlap.</li>
+        <li><span class="ex">She has worked there for two years, and she still enjoys it.</span> Evidence target: duration continuing to now.</li>
+      </ol>
+    </details>
+  </section>
 
-  <h2>Read and choose</h2>
+  <h2>Read one complete event record</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Catching up with Nadia</h3>
-    <p><span class="ex">“Hi Tomas! Sorry for the slow reply. It was a crazy month. We moved to a new apartment three weeks ago, and last week I started a new job downtown. Yesterday morning I had my first big meeting, and last night we finally unpacked the last box. The day before yesterday my parents visited to see the place. Let’s get coffee soon. Are you free on Friday?”</span></p>
+    <h3>Riverside workshop log</h3>
+    <p><span class="ex">The workshop took place on Saturday, May 12. The team arrived at 8:00. An hour later, the doors opened. During the first session, a projector stopped working. The technician repaired it in twenty minutes while the presenter answered questions. After the final session ended at 3:30, the team spoke with visitors for thirty minutes. By 4:15, everyone had left and the doors were locked.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed a real catching-up message across three weeks of past time.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the date, relative opening time, overlapping repair, and final event boundary from the workshop record.">
+    <h3>Reading check: use only the event log</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="three weeks ago">
-        <p class="quiz-question">1. When did Nadia move to the new apartment?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="three weeks ago">three weeks ago</button><button class="quiz-option" data-quiz-option="last week">last week</button><button class="quiz-option" data-quiz-option="yesterday morning">yesterday morning</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="she started a new job">
-        <p class="quiz-question">2. What did Nadia do last week?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="she started a new job">She started a new job.</button><button class="quiz-option" data-quiz-option="she had her first big meeting">She had her first big meeting.</button><button class="quiz-option" data-quiz-option="she unpacked the last box">She unpacked the last box.</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="last night">
-        <p class="quiz-question">3. When did they unpack the last box?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="last night">last night</button><button class="quiz-option" data-quiz-option="the day before yesterday">the day before yesterday</button><button class="quiz-option" data-quiz-option="three weeks ago">three weeks ago</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="Saturday, May 12" data-hint="The first sentence gives both the day and date." data-fix="The workshop took place on Saturday, May 12."><p class="quiz-question">1. What exact date anchors the whole record?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Saturday, May 12">Saturday, May 12</button><button class="quiz-option" data-quiz-option="Friday, May 11">Friday, May 11</button><button class="quiz-option" data-quiz-option="Saturday, June 12">Saturday, June 12</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="9:00" data-hint="The team arrived at 8:00 and the doors opened one hour later." data-fix="The doors opened at 9:00."><p class="quiz-question">2. At what clock time did the doors open?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="9:00">9:00</button><button class="quiz-option" data-quiz-option="8:00">8:00</button><button class="quiz-option" data-quiz-option="8:20">8:20</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The presenter answered questions during the repair." data-hint="The while clause names the activity that overlapped the technician’s work." data-fix="The presenter answered questions while the technician repaired the projector."><p class="quiz-question">3. What happened at the same time as the projector repair?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The presenter answered questions during the repair.">The presenter answered questions during the repair.</button><button class="quiz-option" data-quiz-option="The final session ended during the repair.">The final session ended during the repair.</button><button class="quiz-option" data-quiz-option="The doors opened during the repair.">The doors opened during the repair.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="By 4:15, everyone had left and the doors were locked." data-hint="The final sentence states the completed status at the last time point." data-fix="By 4:15, everyone had left and the doors were locked."><p class="quiz-question">4. Which statement gives the record’s final time boundary and status?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="By 4:15, everyone had left and the doors were locked.">By 4:15, everyone had left and the doors were locked.</button><button class="quiz-option" data-quiz-option="At 3:30, the doors opened for the first visitors.">At 3:30, the doors opened for the first visitors.</button><button class="quiz-option" data-quiz-option="For 4:15, everyone waited outside.">For 4:15, everyone waited outside.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Build clear timeline statements</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Last week in three sentences:</b> Say three true sentences about last week, each with a different time expression. <span class="ex">Last week I worked a lot. On Wednesday I had a long meeting. Last Friday I saw my parents.</span></div>
-  <div class="prompt-card"><b>Your starting point:</b> Say when you started your job or your studies, two ways: once with the ago family and once with a year. <span class="ex">I started my job three years ago. I started in 2023.</span></div>
-  <div class="prompt-card"><b>Interview the teacher:</b> Ask the teacher three questions with <span class="ex">When did you…?</span> and listen for the time expression in each answer. <span class="ex">When did you move to your city? When did you start teaching? When did you last travel?</span></div>
-  <div class="prompt-card"><b>Yesterday, hour by hour:</b> Walk through your day yesterday from morning to night. <span class="ex">At seven o’clock I woke up. Yesterday morning I answered emails. Yesterday afternoon I met a client. Last night I cooked dinner.</span></div>
-  <div class="prompt-card"><b>A long time ago:</b> Tell a short childhood memory. Start with <span class="ex">A long time ago…</span> and use at least two more past-time expressions as the story moves.</div>
+  <div class="tile-game" data-tile-builder data-answer="the delivery arrived two days before the workshop" data-hint="Begin with the event, then measure backward from the stated workshop reference." data-fix="The delivery arrived two days before the workshop." data-success-message="Correct. Before measures the delivery time from the later workshop event.">
+    <h3>Drill 4: build a relative past reference</h3><p class="tile-target">The workshop is the reference point. The delivery came two days earlier.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="workshop">workshop</button><button class="tile" data-build-tile="days">days</button><button class="tile" data-build-tile="arrived">arrived</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="before">before</button><button class="tile" data-build-tile="two">two</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="delivery">delivery</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
 
-  <h2>Reflect</h2>
+  <div class="tile-game" data-tile-builder data-answer="while maya was speaking the lights failed" data-hint="Put the while clause first, add a comma pause, and then give the shorter event." data-fix="While Maya was speaking, the lights failed." data-success-message="Correct. The while clause opens the speaking scene and the light failure occurs inside it.">
+    <h3>Drill 5: build an overlap</h3><p class="tile-target">Maya’s talk was in progress when the shorter light failure happened.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="lights">lights</button><button class="tile" data-build-tile="speaking">speaking</button><button class="tile" data-build-tile="failed">failed</button><button class="tile" data-build-tile="maya">Maya</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="while">While</button><button class="tile" data-build-tile="was">was</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair time-reference errors</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="before" data-hint="The speaker measures backward from the present moment, not from another past event." data-fix="The technician called ten minutes ago." data-why="Ago follows a measured duration and counts backward from now. Before needs another understood or stated reference point." data-success-message="Correct. Ten minutes ago measures backward from the speaking moment.">
+    <h3>Drill 6: repair the speaking-time measurement</h3><p>The speaker is calling now. Tap the word that makes the reference wrong.</p><div class="spot-options"><button class="error-choice" data-error-choice="the">The</button><button class="error-choice" data-error-choice="technician">technician</button><button class="error-choice" data-error-choice="called">called</button><button class="error-choice" data-error-choice="ten">ten</button><button class="error-choice" data-error-choice="minutes">minutes</button><button class="error-choice" data-error-choice="before">before.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="during" data-hint="A complete clause follows the connector: the presenter was speaking." data-fix="The lights failed while the presenter was speaking." data-why="Use while before a clause with a subject and verb. Use during before a noun phrase such as during the presentation." data-success-message="Correct. While introduces the overlapping clause the presenter was speaking.">
+    <h3>Drill 7: repair the overlap connector</h3><p>Tap the connector that cannot introduce the complete clause.</p><div class="spot-options"><button class="error-choice" data-error-choice="the">The</button><button class="error-choice" data-error-choice="lights">lights</button><button class="error-choice" data-error-choice="failed">failed</button><button class="error-choice" data-error-choice="during">during</button><button class="error-choice" data-error-choice="presenter">the presenter</button><button class="error-choice" data-error-choice="was-speaking">was speaking.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="last" data-hint="The course is a defined four-week period, and this means its final week." data-fix="We gave presentations during the last week of the course." data-why="Use the last when last means final inside a defined period. Use last week without the when you mean the calendar week before this one." data-success-message="Correct. The final week of a defined course is the last week of the course.">
+    <h3>Drill 8: repair the final-period meaning</h3><p>The course lasted four weeks. Tap the word before <span class="ex">week</span> that needs an article.</p><div class="spot-options"><button class="error-choice" data-error-choice="we">We</button><button class="error-choice" data-error-choice="gave">gave</button><button class="error-choice" data-error-choice="presentations">presentations</button><button class="error-choice" data-error-choice="during">during</button><button class="error-choice" data-error-choice="last">last</button><button class="error-choice" data-error-choice="week">week of the course.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without disclosing private information</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real work, home, schedule, travel, health, family, or personal history. Use the fictional event record below. Real details are optional.</p>
+  <div class="prompt-card"><b>Fictional event card:</b> Harbor Skills Day took place on Saturday, June 8. The team arrived at 8:15. The doors opened 45 minutes later. During the first session, the sound stopped for ten minutes while the host answered questions. The final session ended at 3:30. Visitors stayed until 4:00. By 4:20, the team had locked the building.</div>
+  <div class="prompt-card"><b>Timeline map:</b> Sort the card into five jobs: reference date, clock points, relative sequence, duration or endpoint, and overlap. Explain why each expression has that job.</div>
+  <div class="prompt-card"><b>Clarify an ambiguity:</b> A listener says, <span class="ex">“So the sound stopped ten minutes ago?”</span> Repair the reference: <span class="ex">“No. It stopped for ten minutes during the first session.”</span></div>
+  <div class="prompt-card"><b>Viewpoint switch:</b> Change <span class="ex">The host answered questions for ten minutes</span> into an open scene containing a shorter event: <span class="ex">While the host was answering questions, the sound returned.</span></div>
+
+  <h2>Final production and check</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Explain the system</h3>
-    <p>Complete this aloud: “For the night before today, I say ______. After <strong>last</strong> I never add the word ______. The word <strong>ago</strong> comes ______ the time: two years ______. For years I use <strong>in</strong>, for dates I use ______, and for clock times I use ______.”</p>
-    <p>Then answer with a real time expression: <span class="ex">When did you start learning English?</span></p>
+    <h3>Final production: give a 45–60 second fictional event timeline</h3>
+    <p>Use the Harbor Skills Day card or invent another fictional public event. Include one exact date, two clock points, one expression measured from another event, one duration or endpoint, one overlap, and at least three sequence markers. Finish by clarifying one deliberately ambiguous expression such as <span class="ex">earlier</span> or <span class="ex">last Monday</span>.</p>
+    <p><b>Evidence check:</b> Can the listener reconstruct the order and time relationships without guessing? If not, name the missing reference point.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can place past events with yesterday, last, and ago, keep in, on, and at for years, dates, and clock times, and answer When did you…? naturally.">
-    <h3>Final quiz: choose the right expression</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You located events from now and from another past event, distinguished a deadline from an endpoint, and selected tense from viewpoint rather than from a magic time word.">
+    <h3>Final check: protect the timeline meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="last">
-        <p class="quiz-question">1. I saw that movie ___ night.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="last">last</button><button class="quiz-option" data-quiz-option="yesterday">yesterday</button><button class="quiz-option" data-quiz-option="ago">ago</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="ago">
-        <p class="quiz-question">2. We got married ten years ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="ago">ago</button><button class="quiz-option" data-quiz-option="before">before</button><button class="quiz-option" data-quiz-option="last">last</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="yesterday">
-        <p class="quiz-question">3. I had coffee with Dan ___ morning.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="yesterday">yesterday</button><button class="quiz-option" data-quiz-option="last">last</button><button class="quiz-option" data-quiz-option="ago">ago</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="in">
-        <p class="quiz-question">4. She started her new job ___ 2022.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="at">at</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">5. My interview was ___ May 12.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="at">at</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="When did you move here?">
-        <p class="quiz-question">6. Which question is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="When did you move here?">When did you move here?</button><button class="quiz-option" data-quiz-option="When you moved here?">When you moved here?</button><button class="quiz-option" data-quiz-option="When did you moved here?">When did you moved here?</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="I was in Rome last week.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I was in Rome last week.">I was in Rome last week.</button><button class="quiz-option" data-quiz-option="I was in Rome the last week.">I was in Rome the last week.</button><button class="quiz-option" data-quiz-option="I was in Rome in last week.">I was in Rome in last week.</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Last night">
-        <p class="quiz-question">8. ___, we stayed home and watched a movie.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Last night">Last night</button><button class="quiz-option" data-quiz-option="Yesterday night">Yesterday night</button><button class="quiz-option" data-quiz-option="The last night">The last night</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="two days before the opening" data-hint="The opening, not the speaking moment, is the reference point." data-fix="The materials arrived two days before the opening."><p class="quiz-question">1. The opening was Saturday, and the materials arrived Thursday. Which expression states that relationship without depending on today?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="two days before the opening">two days before the opening</button><button class="quiz-option" data-quiz-option="two days ago">two days ago</button><button class="quiz-option" data-quiz-option="for two days">for two days</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Please send the report by 4:00." data-hint="The report may arrive earlier, but 4:00 is the latest acceptable point." data-fix="Please send the report by 4:00."><p class="quiz-question">2. Which sentence sets a deadline rather than an activity continuing to 4:00?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Please send the report by 4:00.">Please send the report by 4:00.</button><button class="quiz-option" data-quiz-option="Please work on the report until 4:00.">Please work on the report until 4:00.</button><button class="quiz-option" data-quiz-option="Please work on the report for 4:00.">Please work on the report for 4:00.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="While the visitors were waiting, the doors opened." data-hint="The waiting is the open scene and the door opening is the shorter event inside it." data-fix="While the visitors were waiting, the doors opened."><p class="quiz-question">3. Which sentence presents one event inside an open past scene?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="While the visitors were waiting, the doors opened.">While the visitors were waiting, the doors opened.</button><button class="quiz-option" data-quiz-option="During the visitors were waiting, the doors opened.">During the visitors were waiting, the doors opened.</button><button class="quiz-option" data-quiz-option="For the visitors waited, the doors opened.">For the visitors waited, the doors opened.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The time expression locates the scene; the tense shows its viewpoint." data-hint="At 3:00 can accompany either a completed event or an activity viewed in progress." data-fix="The time expression locates the scene; the tense shows its viewpoint."><p class="quiz-question">4. Compare <span class="ex">At 3:00, Maya called</span> and <span class="ex">At 3:00, Maya was driving</span>. What is the best explanation?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The time expression locates the scene; the tense shows its viewpoint.">The time expression locates the scene; the tense shows its viewpoint.</button><button class="quiz-option" data-quiz-option="At 3:00 always requires past simple.">At 3:00 always requires past simple.</button><button class="quiz-option" data-quiz-option="At 3:00 always requires past continuous.">At 3:00 always requires past continuous.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
+
+  <h2>Reflect: can your listener rebuild the timeline?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the system without the tables</h3>
+    <p>Complete these ideas aloud: <span class="ex">Ago measures from...</span> <span class="ex">Before measures from...</span> <span class="ex">For gives...</span> <span class="ex">By gives...</span> <span class="ex">During is followed by...</span> <span class="ex">While is followed by...</span></p>
+    <p>Then identify one expression in your final timeline that could be misunderstood. Replace it with an exact date, clock time, duration, or named reference event.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading any rule.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day reference time, duration, and overlap retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the lesson. Explain the reference for each answer before you check.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the ago-before distinction, the last-week meaning contrast, and the during-while form boundary.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="The package arrived two days before the event." data-hint="The event is the reference point, so measure backward from it." data-fix="The package arrived two days before the event."><p class="quiz-question">1. The event was on Friday, and the package arrived on Wednesday. Which sentence keeps the relationship correct no matter when you speak?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The package arrived two days before the event.">The package arrived two days before the event.</button><button class="quiz-option" data-quiz-option="The package arrived two days ago.">The package arrived two days ago.</button><button class="quiz-option" data-quiz-option="The package arrived for two days.">The package arrived for two days.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the final week of the course" data-hint="The article marks last as final inside a defined course." data-fix="The last week of the course means the course’s final week."><p class="quiz-question">2. What does <span class="ex">the last week of the course</span> mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the final week of the course">the final week of the course</button><button class="quiz-option" data-quiz-option="automatically the previous calendar week">automatically the previous calendar week</button><button class="quiz-option" data-quiz-option="one week measured from now">one week measured from now</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="during the talk and while Maya was speaking" data-hint="During takes the noun phrase; while takes the complete clause." data-fix="Say during the talk and while Maya was speaking."><p class="quiz-question">3. Which pair uses both overlap frames accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="during the talk and while Maya was speaking">during the talk and while Maya was speaking</button><button class="quiz-option" data-quiz-option="while the talk and during Maya was speaking">while the talk and during Maya was speaking</button><button class="quiz-option" data-quiz-option="for the talk and ago Maya was speaking">for the talk and ago Maya was speaking</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

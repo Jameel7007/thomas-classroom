@@ -6,11 +6,15 @@ Restore checkpoint: `94ee098` (`Checkpoint Astro compatibility migration`)
 Post-migration authoring update: lesson metadata now lives once in each lesson
 source file and is validated through `lesson-schema.mjs` and
 `lesson-catalog.mjs`. One dynamic static-route entry generates all ready lesson
-URLs, while metadata-only Astro files register planned B1/B2 topics.
+URLs. The original 54-page migration was subsequently expanded with 38
+native-authored B1 and B2 lessons, bringing the canonical curriculum to 92
+ready lessons with no planned-only records.
 
 ## Completion status
 
-- 54 of 54 canonical lessons are direct, editable Astro source.
+- 54 of 54 original lessons were migrated to direct, editable Astro source.
+- 38 additional B1 and B2 lessons were authored natively; all 92 canonical
+  A0–B2 topics are now ready.
 - 7 of 7 assessments and placement checks are direct, editable Astro source.
 - Homepage, curriculum, print curriculum, About, Languages, Blog, and Dictionary are native Astro pages.
 - The old static `outputs/` implementation, runtime HTML adapter, raw HTML imports, asset adapter, and one-time migration tools were removed after validation.
@@ -38,7 +42,12 @@ URLs, while metadata-only Astro files register planned B1/B2 topics.
 | New Astro section | `src/pages/blog.astro` | `/blog/` | SiteLayout, site-content |
 | New Astro section | `src/pages/dictionary.astro` | `/dictionary/` | SiteLayout, site-content |
 
-## Complete lesson and assessment inventory
+## Original migration inventory
+
+The table below maps every original lesson and assessment page to its native
+replacement. The 38 later B1/B2 lessons had no legacy source page; their native
+source, route, sequence, and relationships are registered in the canonical
+lesson catalog and validated on every build.
 
 | Original page | Native content source | Public route | Reusable components / engine features |
 |---|---|---|---|
@@ -97,10 +106,10 @@ URLs, while metadata-only Astro files register planned B1/B2 topics.
 | `outputs/lessons/a2/verb-infinitive-ing.html` | `src/content/lessons/a2/verb-infinitive-ing.astro` | `/lessons/a2/verb-infinitive-ing/` | LessonPage, LessonNavigation, LessonExerciseEngine, MultipleChoiceExercise, RevealCard, SentenceCorrection, FeedbackPanel, SentenceBuilder |
 | `outputs/lessons/a2/will-for-predictions-and-offers.html` | `src/content/lessons/a2/will-for-predictions-and-offers.astro` | `/lessons/a2/will-for-predictions-and-offers/` | LessonPage, LessonNavigation, LessonExerciseEngine, MultipleChoiceExercise, RevealCard, SentenceCorrection, FeedbackPanel, SentenceBuilder |
 | `outputs/assessments/a0-exit.html` | `src/content/assessments/a0-exit.astro` | `/assessments/a0-exit/` | AssessmentPage, AssessmentNavigation, AssessmentEngine, ProgressIndicator, FeedbackPanel, MultipleChoiceExercise, AudioControls |
-| `outputs/assessments/a1-exit.html` | `src/content/assessments/a1-exit.astro` | `/assessments/a1-exit/` | AssessmentPage, AssessmentNavigation |
-| `outputs/assessments/a2-exit.html` | `src/content/assessments/a2-exit.astro` | `/assessments/a2-exit/` | AssessmentPage, AssessmentNavigation |
-| `outputs/assessments/b1-exit.html` | `src/content/assessments/b1-exit.astro` | `/assessments/b1-exit/` | AssessmentPage, AssessmentNavigation |
-| `outputs/assessments/b2-exit.html` | `src/content/assessments/b2-exit.astro` | `/assessments/b2-exit/` | AssessmentPage, AssessmentNavigation |
+| `outputs/assessments/a1-exit.html` | `src/content/assessments/a1-exit.astro` | `/assessments/a1-exit/` | AssessmentPage, AssessmentNavigation, AssessmentEngine, ProgressIndicator, FeedbackPanel, MultipleChoiceExercise, AudioControls |
+| `outputs/assessments/a2-exit.html` | `src/content/assessments/a2-exit.astro` | `/assessments/a2-exit/` | AssessmentPage, AssessmentNavigation, AssessmentEngine, ProgressIndicator, FeedbackPanel, MultipleChoiceExercise, AudioControls |
+| `outputs/assessments/b1-exit.html` | `src/content/assessments/b1-exit.astro` | `/assessments/b1-exit/` | AssessmentPage, AssessmentNavigation, AssessmentEngine, ProgressIndicator, FeedbackPanel, MultipleChoiceExercise, AudioControls |
+| `outputs/assessments/b2-exit.html` | `src/content/assessments/b2-exit.astro` | `/assessments/b2-exit/` | AssessmentPage, AssessmentNavigation, AssessmentEngine, ProgressIndicator, FeedbackPanel, MultipleChoiceExercise, AudioControls |
 | `outputs/assessments/placement-exam.html` | `src/content/assessments/placement-exam.astro` | `/assessments/placement-exam/` | AssessmentPage, AssessmentNavigation, AssessmentEngine, ProgressIndicator, FeedbackPanel, MultipleChoiceExercise |
 | `outputs/assessments/quick-level-check.html` | `src/content/assessments/quick-level-check.astro` | `/assessments/quick-level-check/` | AssessmentPage, AssessmentNavigation, QuickCheckEngine, ProgressIndicator, FeedbackPanel, AudioControls |
 
@@ -109,15 +118,14 @@ URLs, while metadata-only Astro files register planned B1/B2 topics.
 Final `npm run build` result:
 
 - Astro diagnostics: 0 errors, 0 warnings.
-- Static generation: 68 canonical pages.
-- Generated HTML outputs including redirects: 132.
-- Canonical lessons validated: 54.
+- Static generation: 203 Astro pages.
+- Generated HTML outputs including redirects: 305.
+- Canonical lessons validated: 92.
 - Assessments validated: 7.
-- Local links and asset references validated: 884.
-- Audio references validated against the private voice-script inventory: 2.
+- Audio references validated against the private voice-script inventory: 10.
 - Every canonical route has a direct-refresh `index.html` output.
-- Exact learner-visible content fingerprints match for all 61 migrated lesson/assessment pages.
-- Interaction attribute counts match for all 61 migrated lesson/assessment pages.
+- Exact learner-visible content fingerprints and interaction counts are enforced
+  for all learner-facing lessons and assessments.
 - Historical lesson and assessment `.html` redirects exist, including the old some/any alias.
 - Compatibility scan confirms no iframe, legacy adapter, raw HTML loader, or injected document fragment.
 - `server.mjs` passes Node syntax validation and serves only the Astro production build.
@@ -126,15 +134,14 @@ Final `npm run build` result:
 
 | Format | Representative route | Result |
 |---|---|---|
-| Homepage | `/` | Loader, counters, curriculum links, and animated theme transition work. |
+| Homepage | `/` | Loader, counters, booking and curriculum links, editorial transitions, and responsive navigation work. |
 | A0 special grammar styling | `/lessons/a0/the-verb-to-be/` | Preserved IBM Plex/Newsreader treatment remains isolated to this page. |
 | A0 vocabulary + illustrations + reveal + correction | `/lessons/a0/animals/` | 30 illustration references, vocabulary layout, reveal state, ARIA state, and incorrect correction feedback verified. |
 | A1 complete grammar lesson | `/lessons/a1/present-simple/` | Choice gaps, correct feedback, incorrect feedback, status live region, page navigation, and style isolation verified. |
 | A2 complex grammar lesson | `/lessons/a2/present-perfect/` | Answer, choice, tile, correction, reveal, quiz, and previous/next navigation structures verified. |
 | Quick diagnostic | `/assessments/quick-level-check/` | Answer selection and question progress from 1 to 2 verified. |
-| Scored level diagnostic | `/assessments/a0-exit/` | Correct, incorrect, missing, score, outcome, feedback, and seven-row skill profile verified. |
+| Scored level diagnostic | `/assessments/a2-exit/` | Correct, incorrect, missing, score, outcome, result focus, feedback, static-audio fallback, reset, and seven-row skill profile are covered by the release browser gate. |
 | Placement exam | `/assessments/placement-exam/` | 58 items, A0–B2 ladder, seven skill areas, teacher evidence, and result analysis fields verified. |
-| Existing planned diagnostic stub | `/assessments/a1-exit/` | Original placeholder scope preserved as native source. |
 | Mobile lesson and curriculum | `/lessons/a1/present-simple/`, `/curriculum/` | Responsive type, hidden compact crumb, reduced padding, contained tables, and navigation verified at a narrow viewport. |
 | Historical URLs | `/lessons/a1/present-simple.html`, `/assessments/quick-level-check.html` | Both redirect to their clean routes and render the correct pages. |
 
@@ -144,6 +151,9 @@ No browser console errors were present during representative QA.
 
 No existing lesson or assessment interaction was intentionally removed or replaced with a static approximation. The controls, answer logic, feedback, explanations, reveal behavior, animations, scoring, result records, teacher mode, print/copy behavior, and browser speech fallback remain in the native engines.
 
-Two ElevenLabs-backed assessment controls retain their approved clip IDs and `data-speak` fallback. Actual ElevenLabs playback still requires the existing server-side API key and voice configuration; credentials were not available during migration QA, so remote audio generation was validated structurally rather than by generating a paid clip.
+Assessment listening controls retain their approved clip IDs and `data-speak` fallback. Playback now uses pre-generated static MP3 files; ElevenLabs credentials are authoring-only and are never required or exposed by the production website.
 
-The A1, A2, B1, and B2 exit diagnostic pages remain planning stubs because their original pages were stubs. This is preserved source content, not a migration omission.
+All five exit diagnostics are now complete learner-facing assessments with
+connected reading, listening references, controlled language evidence,
+teacher-scored speaking and writing, skill profiles, actionable outcomes, and
+shareable result records. No diagnostic planning stub remains.

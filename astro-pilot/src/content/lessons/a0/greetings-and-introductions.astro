@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Greetings and introductions · A0 Vocabulary · Curriculum Map",
+  "title": "Greetings and introductions · A0 Vocabulary",
   "slug": "greetings-and-introductions",
   "level": "A0",
   "topic": "Greetings & introductions",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "The first ten seconds of every meeting. Say hello , give your name, and reply politely. Good morning. My name is Ana. Nice to meet you. A few clean chunks open almost any conversat",
+  "description": "Open a conversation naturally by greeting someone, giving your name, asking for theirs, and responding politely when you meet.",
   "sequence": 9,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/question-words-what-where-who-how"
+  ],
+  "related": [
+    "a0/countries-and-nationalities",
+    "a1/jobs-and-workplaces"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 42,
+    "revisionSummary": "Social purpose, U.S. workplace register, first-versus-repeat meetings, connected speech, item context, feedback, timing, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 09</p>
   <h1>Greetings &amp; <em>introductions</em></h1>
-  <p class="standfirst">The first ten seconds of every meeting. Say <span class="ex">hello</span>, give your name, and reply politely. <span class="ex">Good morning. My name is Ana. Nice to meet you.</span> A few clean chunks open almost any conversation at work or online.</p>
+  <p class="standfirst">Open a first conversation with four useful moves: greet, give your name, respond, and leave. Then adjust the same moves for a friend, a coworker, a client, a phone call, or a second meeting. <span class="ex">Good morning. I’m Ana. Nice to meet you.</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">hello / goodbye</span>
-    <span class="tag">formal / informal</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">familiar / more formal</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -39,26 +53,50 @@ export const page = defineLesson({
 
   <p class="note-line">We learn these as whole chunks, not single words: <span class="ex">Nice to meet you · My name is… · How are you? · See you later.</span> Say each one as one smooth phrase.</p>
 
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. I agrees with am, What asks for a name, and How combines with are to ask about someone’s condition.">
+    <h3>Retrieve the grammar inside a greeting</h3>
+    <p class="choice-hint">Use earlier lessons. Complete each full line, then say it smoothly.</p>
+    <div class="choice-bank" aria-label="Earlier grammar choices">
+      <button class="choice-option" data-choice-option="am">am</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+      <button class="choice-option" data-choice-option="are">are</button>
+      <button class="choice-option" data-choice-option="what" data-value-label-variant="case">What</button>
+      <button class="choice-option" data-choice-option="where" data-value-label-variant="case">Where</button>
+      <button class="choice-option" data-choice-option="how" data-value-label-variant="case">How</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="am" data-hint="The subject is I." data-fix="I am Ana." data-placeholder="choose">choose</button> Ana.</span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="what" data-hint="The answer will be a name, so choose the thing-information question word." data-fix="What is your name?" data-placeholder="choose">choose</button> is your name?</span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="how" data-hint="This greeting asks about the person’s condition, not a place." data-fix="How are you?" data-placeholder="choose">choose</button> are you?</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
   <h2>Meet the moments</h2>
   <div class="lead-rule"></div>
   <p>A wave, a handshake, and the right words for the time of day.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wave.svg" alt="" loading="lazy" /></span><span class="nm">Hi!</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/handshake.svg" alt="" loading="lazy" /></span><span class="nm">Nice to meet you</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunrise.svg" alt="" loading="lazy" /></span><span class="nm">Good morning</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunny.svg" alt="" loading="lazy" /></span><span class="nm">Good afternoon</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunset.svg" alt="" loading="lazy" /></span><span class="nm">Good evening</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/moon.svg" alt="" loading="lazy" /></span><span class="nm">Good night</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/speech-balloon.svg" alt="" loading="lazy" /></span><span class="nm">How are you?</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/thumbs-up.svg" alt="" loading="lazy" /></span><span class="nm">Fine, thanks!</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/folded-hands.svg" alt="" loading="lazy" /></span><span class="nm">Thank you</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wave.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Hi!</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/handshake.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Nice to meet you</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunrise.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Good morning</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunny.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Good afternoon</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunset.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Good evening</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/moon.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Good night</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/speech-balloon.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">How are you?</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/thumbs-up.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">I'm good, thanks!</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/folded-hands.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">Thank you</span></div>
   </div>
+  <p class="note-line">Use <span class="ex">Good evening</span> when you arrive or greet someone later in the day. Use <span class="ex">Good night</span> when you leave late or go to bed.</p>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>A first meeting at work</h3>
-    <p><span class="ex">— Good morning. My name is Ana. &nbsp; — Hi, Ana. I'm Daniel. Nice to meet you. &nbsp; — Nice to meet you too. How are you? &nbsp; — Fine, thanks. And you?</span></p>
+    <p><span class="ex">Ana: Good morning. My name is Ana. &nbsp; Daniel: Hi, Ana. I'm Daniel. Nice to meet you. &nbsp; Ana: Nice to meet you too. How are you? &nbsp; Daniel: I'm good, thanks. How about you?</span></p>
     <ul>
       <li>Which words do they use to <strong>greet</strong> each other at the start?</li>
       <li>How does each person <strong>give a name</strong>? You can see two ways. What are they?</li>
@@ -66,8 +104,8 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the cue, then choose</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Morning, afternoon, and evening open conversations at those times, while goodbye closes the conversation.">
+    <h3>Discovery check: read the cue, then choose</h3>
     <p class="choice-hint">The time in brackets tells you which greeting fits</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="Good morning">Good morning</button>
@@ -75,10 +113,10 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Good evening">Good evening</button>
       <button class="choice-option" data-choice-option="Goodbye">Goodbye</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Good morning" data-placeholder="choose">choose</button>, everyone. Let's start the meeting. &nbsp;<span class="contraction">(8 a.m.)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Good afternoon" data-placeholder="choose">choose</button>. Thanks for the call. &nbsp;<span class="contraction">(2 p.m.)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Good evening" data-placeholder="choose">choose</button>. Welcome to the hotel. &nbsp;<span class="contraction">(7 p.m.)</span></span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Goodbye" data-placeholder="choose">choose</button>. See you tomorrow. &nbsp;<span class="contraction">(leaving)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Good morning" data-hint="It is 8 a.m. and the meeting is starting." data-fix="Good morning, everyone. Let’s start the meeting." data-placeholder="choose">choose</button>, everyone. Let's start the meeting. &nbsp;<span class="contraction">(8 a.m.)</span></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Good afternoon" data-hint="It is 2 p.m. and the call is beginning." data-fix="Good afternoon. Thank you for joining the call." data-placeholder="choose">choose</button>. Thank you for joining the call. &nbsp;<span class="contraction">(2 p.m.)</span></span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Good evening" data-hint="It is 7 p.m. and the guest is arriving." data-fix="Good evening. Welcome to the hotel." data-placeholder="choose">choose</button>. Welcome to the hotel. &nbsp;<span class="contraction">(7 p.m.)</span></span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Goodbye" data-hint="The conversation is ending, so choose a leaving expression." data-fix="Goodbye. See you tomorrow." data-placeholder="choose">choose</button>. See you tomorrow. &nbsp;<span class="contraction">(leaving)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -91,65 +129,117 @@ export const page = defineLesson({
   <p>A short meeting has four quick moments. Learn one chunk for each:</p>
   <p><strong>1. Greet.</strong> &nbsp;Informal: <span class="ex">Hi · Hello</span>. &nbsp;By time of day: <span class="ex">Good morning · Good afternoon · Good evening</span>.</p>
   <p><strong>2. Give your name.</strong> &nbsp;<span class="ex">My name is Ana.</span> &nbsp;or the short way: <span class="ex">I'm Ana.</span></p>
-  <p><strong>3. Reply.</strong> &nbsp;<span class="ex">Nice to meet you.</span> → <span class="ex">Nice to meet you too.</span> &nbsp;<span class="ex">How are you?</span> → <span class="ex">Fine, thanks. And you?</span></p>
+  <p><strong>3. Respond.</strong> &nbsp;<span class="ex">Nice to meet you.</span> → <span class="ex">Nice to meet you too.</span> &nbsp;<span class="ex">How are you?</span> → <span class="ex">I'm good, thanks. How about you?</span></p>
   <p><strong>4. Leave.</strong> &nbsp;Informal: <span class="ex">Bye · See you later</span>. &nbsp;Neutral: <span class="ex">Goodbye</span>.</p>
   <table>
-    <thead><tr><th></th><th>informal (a coworker, a friend)</th><th>more formal (a client, your boss)</th></tr></thead>
+    <thead><tr><th></th><th>casual or familiar</th><th>neutral or more formal</th></tr></thead>
     <tbody>
-      <tr><td><b>greet</b></td><td><b>Hi</b> &nbsp;<span class="contraction">Hi, Daniel.</span></td><td><b>Good morning</b> &nbsp;<span class="contraction">Good morning, Mr. Lopez.</span></td></tr>
+      <tr><td><b>greet</b></td><td><b>Hi</b> &nbsp;<span class="contraction">Hi, Daniel.</span></td><td><b>Hello / Good morning</b> &nbsp;<span class="contraction">Good morning, Ms. Reyes.</span></td></tr>
       <tr><td><b>name</b></td><td><b>I'm</b> &nbsp;<span class="contraction">I'm Ana.</span></td><td><b>My name is</b> &nbsp;<span class="contraction">My name is Ana Reyes.</span></td></tr>
       <tr><td><b>leave</b></td><td><b>Bye</b> &nbsp;<span class="contraction">Bye! See you later.</span></td><td><b>Goodbye</b> &nbsp;<span class="contraction">Goodbye. Have a good day.</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line">U.S. workplaces vary. <span class="ex">Hi</span> and first names may be normal even with a manager or client. Listen to how the other person introduces themself and follow that choice. Use <span class="ex">Mr.</span> or <span class="ex">Ms.</span> plus a last name when the person uses that title or the setting expects it.</p>
+
+  <div class="note">
+    <h3>First meeting or meeting again?</h3>
+    <p>Use <span class="ex">Nice to meet you</span> when you meet someone for the first time. Later, use <span class="ex">Nice to see you</span> or <span class="ex">Good to see you again</span>. The other person can reply with <span class="ex">You too</span> or repeat the full phrase.</p>
+    <p>Time-of-day boundaries are approximate and differ by place and workplace. The examples on this page use clear times such as 8 a.m., 2 p.m., and 7 p.m. When you are unsure, <span class="ex">Hello</span> works at any time.</p>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: give the important word the clear beat</h3>
+    <p>Do not say every word with the same strength. In a greeting, the name, feeling, or new information is clear. The small words join it as one smooth phrase.</p>
+    <table>
+      <thead><tr><th>chunk</th><th>natural rhythm</th><th>what to notice</th></tr></thead>
+      <tbody>
+        <tr><td>give your name</td><td><span class="contraction">I’m <strong>AN</strong>a.</span></td><td><span class="ex">I’m</span> is one short syllable</td></tr>
+        <tr><td>meet someone</td><td><span class="contraction">Nice to <strong>MEET</strong> you.</span></td><td><span class="ex">to</span> is light; <span class="ex">meet</span> is clear</td></tr>
+        <tr><td>ask and reply</td><td><span class="contraction">How are you? I’m <strong>GOOD</strong>, thanks. How about <strong>YOU</strong>?</span></td><td>the reply and the return question carry the message</td></tr>
+        <tr><td>leave</td><td><span class="contraction">See you <strong>LA</strong>ter.</span></td><td>say the whole goodbye as one friendly chunk</td></tr>
+      </tbody>
+    </table>
+    <p>Listen for the full chunk, not separate words. In relaxed U.S. speech, <span class="ex">Nice to meet you</span> may sound close to <span class="ex">Nice tuh meetcha</span>, and <span class="ex">How are you?</span> may sound close to <span class="ex">How-er-ya?</span>. These are listening guides, not new spellings. Use the clear forms when you speak, then let them become smoother naturally.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-lesson-extension="Optional tutor-read greeting-purpose listening" data-success-message="Correct. You identified arrival, leaving, first and later meetings, and familiar versus more formal greeting choices from complete spoken chunks.">
+    <h3>Listen: what is the speaker doing?</h3>
+    <p class="choice-hint">Ask your teacher to read the six chunks in order. Choose the social purpose before opening the transcript.</p>
+    <div class="choice-bank" aria-label="Greeting purpose choices">
+      <button class="choice-option" data-choice-option="arriving">arriving</button>
+      <button class="choice-option" data-choice-option="leaving">leaving</button>
+      <button class="choice-option" data-choice-option="first meeting">first meeting</button>
+      <button class="choice-option" data-choice-option="meeting again">meeting again</button>
+      <button class="choice-option" data-choice-option="casual or familiar">casual or familiar</button>
+      <button class="choice-option" data-choice-option="more formal">more formal</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The speaker is <button class="choice-gap" data-choice-gap data-answer="arriving" data-hint="Listen for a welcome at the beginning of a visit." data-fix="Good evening. Welcome to the hotel. → arriving" data-placeholder="listen">listen</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The speaker is <button class="choice-gap" data-choice-gap data-answer="leaving" data-hint="Listen for a late goodbye and a future meeting." data-fix="Good night. See you tomorrow. → leaving" data-placeholder="listen">listen</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>This is a <button class="choice-gap" data-choice-gap data-answer="first meeting" data-hint="Listen for the phrase used when two people learn each other’s names for the first time." data-fix="I’m Daniel. Nice to meet you. → first meeting" data-placeholder="listen">listen</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>This is a <button class="choice-gap" data-choice-gap data-answer="meeting again" data-hint="Listen for again and the phrase used after the first meeting." data-fix="Nice to see you again. → meeting again" data-placeholder="listen">listen</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The relationship sounds <button class="choice-gap" data-choice-gap data-answer="casual or familiar" data-hint="Listen for the relaxed greeting What’s up?" data-fix="Hey, what’s up? → casual or familiar" data-placeholder="listen">listen</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>The setting sounds <button class="choice-gap" data-choice-gap data-answer="more formal" data-hint="Listen for a title, a full name, and Hello." data-fix="Hello, Ms. Reyes. My name is Ana Silva. → more formal" data-placeholder="listen">listen</button>.</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+    <details>
+      <summary>Tutor script and transcript</summary>
+      <p>Read naturally, one chunk at a time: <span class="ex">Good evening. Welcome to the hotel. / Good night. See you tomorrow. / Hi, I’m Daniel. Nice to meet you. / Hi, Ana. Nice to see you again. / Hey, what’s up? / Hello, Ms. Reyes. My name is Ana Silva.</span></p>
+    </details>
+  </div>
 
   <div class="note">
     <h3>Meaning check</h3>
     <ul>
-      <li>With a new client, is <span class="ex">Hey, what's up?</span> a good start? <strong>No.</strong> It is very informal. Use <span class="ex">Good morning</span> or <span class="ex">Hello</span>, and a last name: <span class="ex">Mr. Lopez · Ms. Reyes</span>.</li>
+      <li>With a new client in a formal first meeting, is <span class="ex">Hey, what's up?</span> the safest start? <strong>No.</strong> It is very informal. Start with <span class="ex">Hello</span> or a time-of-day greeting, then follow the name the client uses.</li>
       <li>Do we say <span class="ex">I am name is Ana</span>? <strong>No.</strong> Choose one: <span class="ex">My name is Ana</span> <em>or</em> <span class="ex">I'm Ana</span>.</li>
-      <li>Someone says <span class="ex">How are you?</span> What do you say? <strong>Reply, then ask back:</strong> <span class="ex">Fine, thanks. And you?</span></li>
+      <li>Someone says <span class="ex">How are you?</span> in a brief greeting. <strong>Reply, then ask back:</strong> <span class="ex">I'm good, thanks. How about you?</span> or <span class="ex">I'm okay, thanks. And you?</span>. A close friend who asks with concern may want a longer, real answer.</li>
     </ul>
   </div>
 
-  <h2>Casual greetings with friends</h2>
-  <div class="lead-rule"></div>
-  <p>With friends, English gets more relaxed. These all mean the same thing — a friendly <span class="ex">Hi! How are you?</span> — and the easy reply is almost always <span class="ex">Not much.</span> or <span class="ex">Hey!</span></p>
-  <table>
-    <thead><tr><th>casual greeting</th><th>it means</th><th>easy reply</th></tr></thead>
-    <tbody>
-      <tr><td><b>What's up?</b></td><td>Hi! How are you?</td><td><span class="contraction">Not much. You?</span></td></tr>
-      <tr><td><b>What's going on?</b></td><td>Hi! How are you?</td><td><span class="contraction">Not much. / Hey!</span></td></tr>
-      <tr><td><b>What's happening?</b></td><td>Hi! How are you?</td><td><span class="contraction">Not much. / Hi!</span></td></tr>
-      <tr><td><b>How's it going?</b></td><td>How are you?</td><td><span class="contraction">Good, thanks. You?</span></td></tr>
-      <tr><td><b>Hey! &middot; Hi there!</b></td><td>Hi!</td><td><span class="contraction">Hey! / Hi!</span></td></tr>
-    </tbody>
-  </table>
-  <div class="note">
-    <h3>Two quick tips</h3>
-    <ul>
-      <li><span class="ex">What's up?</span> is usually <strong>not</strong> a real question. Don't explain your whole day — just say <span class="ex">Not much. You?</span></li>
-      <li>These are <strong>very informal</strong>. Great with friends and close coworkers, but with a new client or your boss, start with <span class="ex">Hello</span> or <span class="ex">Good morning</span>.</li>
-    </ul>
-  </div>
+  <section data-lesson-extension="Optional casual greetings and replies">
+    <h2>Casual greetings with friends</h2>
+    <div class="lead-rule"></div>
+    <p>With friends, English gets more relaxed. In a greeting context, these expressions can work like a friendly <span class="ex">Hi! How are you?</span>. Some can also be real questions when the speaker genuinely wants to know what is happening, so listen to the situation.</p>
+    <table>
+      <thead><tr><th>casual greeting</th><th>it means</th><th>easy reply</th></tr></thead>
+      <tbody>
+        <tr><td><b>What's up?</b></td><td>Hi! How are you?</td><td><span class="contraction">Not much. You?</span></td></tr>
+        <tr><td><b>What's going on?</b></td><td>Often: What is happening?</td><td><span class="contraction">Explain the situation.</span></td></tr>
+        <tr><td><b>What's happening?</b></td><td>Usually: What is happening?</td><td><span class="contraction">Explain the situation.</span></td></tr>
+        <tr><td><b>How's it going?</b></td><td>How are you?</td><td><span class="contraction">Good, thanks. You?</span></td></tr>
+        <tr><td><b>Hey! &middot; Hi there!</b></td><td>Hi!</td><td><span class="contraction">Hey! / Hi!</span></td></tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <h3>Two quick tips</h3>
+      <ul>
+        <li><span class="ex">What's up?</span> is often a greeting, and <span class="ex">Not much. You?</span> is an easy reply. If the speaker looks concerned or something is clearly happening, it can be a real question.</li>
+        <li>These are <strong>very informal</strong>. They work with friends and some close coworkers. Before you know a workplace’s style, <span class="ex">Hello</span> or <span class="ex">Good morning</span> is a safe start. If a manager or client uses <span class="ex">Hi</span> and a first name, follow their lead.</li>
+      </ul>
+    </div>
+  </section>
 
   <h2>Pick the natural reply</h2>
   <div class="lead-rule"></div>
   <p>Each line has a normal answer. Keep the pairs together:</p>
-  <p><span class="ex">Nice to meet you. → Nice to meet you too.</span><br /><span class="ex">How are you? → Fine, thanks. And you?</span></p>
+  <p><span class="ex">Nice to meet you. → Nice to meet you too.</span><br /><span class="ex">How are you? → I'm good, thanks. How about you?</span></p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose the best reply</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each response matches the speaker’s social move: first meeting, brief check-in, familiar introduction, or leaving.">
+    <h3>Drill 1: choose the best reply</h3>
     <p class="choice-hint">The cue in brackets tells you the situation</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="Nice to meet you too">Nice to meet you too</button>
-      <button class="choice-option" data-choice-option="Fine, thanks">Fine, thanks</button>
+      <button class="choice-option" data-choice-option="I'm good, thanks">I'm good, thanks</button>
       <button class="choice-option" data-choice-option="Hi, Daniel">Hi, Daniel</button>
       <button class="choice-option" data-choice-option="Goodbye">Goodbye</button>
     </div>
-    <div class="q"><span class="n">1</span><span>— Nice to meet you. &nbsp;— <button class="choice-gap" data-choice-gap data-answer="Nice to meet you too" data-placeholder="choose">choose</button>. <span class="contraction">(reply to a new client)</span></span></div>
-    <div class="q"><span class="n">2</span><span>— How are you? &nbsp;— <button class="choice-gap" data-choice-gap data-answer="Fine, thanks" data-placeholder="choose">choose</button>. And you? <span class="contraction">(reply on a call)</span></span></div>
-    <div class="q"><span class="n">3</span><span>— Hi, I'm Daniel. &nbsp;— <button class="choice-gap" data-choice-gap data-answer="Hi, Daniel" data-placeholder="choose">choose</button>. I'm Ana. <span class="contraction">(greet back, informal)</span></span></div>
-    <div class="q"><span class="n">4</span><span>— See you tomorrow. &nbsp;— <button class="choice-gap" data-choice-gap data-answer="Goodbye" data-placeholder="choose">choose</button>. Have a good day. <span class="contraction">(end of the meeting)</span></span></div>
+    <div class="q"><span class="n">1</span><span>Speaker A: Nice to meet you. &nbsp; Speaker B: <button class="choice-gap" data-choice-gap data-answer="Nice to meet you too" data-hint="They are meeting for the first time, and Speaker A used Nice to meet you." data-fix="Nice to meet you too." data-placeholder="choose">choose</button>. <span class="contraction">(reply to a new client)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Speaker A: How are you? &nbsp; Speaker B: <button class="choice-gap" data-choice-gap data-answer="I'm good, thanks" data-hint="Give a short condition reply before returning the question." data-fix="I'm good, thanks. How about you?" data-placeholder="choose">choose</button>. How about you? <span class="contraction">(brief reply on a call)</span></span></div>
+    <div class="q"><span class="n">3</span><span>Daniel: Hi, I'm Daniel. &nbsp; Ana: <button class="choice-gap" data-choice-gap data-answer="Hi, Daniel" data-hint="Greet Daniel by name before giving your own name." data-fix="Hi, Daniel. I'm Ana." data-placeholder="choose">choose</button>. I'm Ana. <span class="contraction">(greet back, familiar)</span></span></div>
+    <div class="q"><span class="n">4</span><span>Speaker A: See you tomorrow. &nbsp; Speaker B: <button class="choice-gap" data-choice-gap data-answer="Goodbye" data-hint="The meeting is ending, so choose another leaving expression." data-fix="Goodbye. Have a good day." data-placeholder="choose">choose</button>. Have a good day. <span class="contraction">(end of the meeting)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -160,20 +250,20 @@ export const page = defineLesson({
   <h2>Build the pairs, then the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each line to its natural reply</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. The replies now match one explicit purpose each: return a first-meeting phrase, answer a check-in, give your name, or leave.">
+    <h3>Drill 2: match each line to its natural reply</h3>
     <p class="tile-target">Tap a line, then tap the reply that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="meet">Nice to meet you.</button>
       <button class="tile" data-tile="how">How are you?</button>
-      <button class="tile" data-tile="name">My name is Ana.</button>
-      <button class="tile" data-tile="bye">See you later!</button>
+      <button class="tile" data-tile="name">Hello. My name is Ana. What's your name?</button>
+      <button class="tile" data-tile="bye">I have to leave now. See you later!</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="meet" data-placeholder="Nice to meet you too.">Nice to meet you too.</button>
-      <button class="slot" data-slot="how" data-placeholder="Fine, thanks. And you?">Fine, thanks. And you?</button>
-      <button class="slot" data-slot="name" data-placeholder="Hi, Ana. I'm Daniel.">Hi, Ana. I'm Daniel.</button>
-      <button class="slot" data-slot="bye" data-placeholder="Bye! See you.">Bye! See you.</button>
+      <button class="slot" data-slot="meet" data-hint="Return the same first-meeting phrase and add too." data-fix="Nice to meet you. → Nice to meet you too." data-placeholder="Nice to meet you too.">Nice to meet you too.</button>
+      <button class="slot" data-slot="how" data-hint="Answer briefly, thank the speaker, and ask back." data-fix="How are you? → I'm good, thanks. How about you?" data-placeholder="I'm good, thanks. How about you?">I'm good, thanks. How about you?</button>
+      <button class="slot" data-slot="name" data-hint="Ana directly asks for the other person’s name." data-fix="What's your name? → Hi, Ana. I'm Daniel." data-placeholder="Hi, Ana. I'm Daniel.">Hi, Ana. I'm Daniel.</button>
+      <button class="slot" data-slot="bye" data-hint="The speaker says they must leave and uses See you later." data-fix="See you later! → Bye! See you." data-placeholder="Bye! See you.">Bye! See you.</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -182,8 +272,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="nice to meet you">
-    <h3>Drill 3 — build the reply</h3>
+  <div class="tile-game" data-tile-builder data-answer="nice to meet you" data-hint="Start with Nice, then use the chunk to meet you." data-fix="Nice to meet you." data-success-message="Correct. Nice to meet you is the complete first-meeting response, with meet carrying the clearest beat.">
+    <h3>Drill 3: build the reply</h3>
     <p class="tile-target">A new coworker just told you their name. Build the line, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="meet">meet</button>
@@ -199,8 +289,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="my name is ana">
-    <h3>Drill 4 — give your name (the full way)</h3>
+  <div class="tile-game" data-tile-builder data-answer="my name is ana" data-hint="Start with My name, add is, and finish with Ana." data-fix="My name is Ana." data-success-message="Correct. My name is Ana gives the speaker’s own name in a complete neutral introduction.">
+    <h3>Drill 4: give your name (the full way)</h3>
     <p class="tile-target">Introduce yourself to a client. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="name">name</button>
@@ -216,8 +306,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="this is my colleague daniel">
-    <h3>Drill 5 — introduce a third person</h3>
+  <div class="tile-game" data-tile-builder data-answer="this is my colleague daniel" data-hint="Start with This is, then identify the relationship and the person’s name." data-fix="This is my colleague Daniel." data-success-message="Correct. This is my colleague Daniel introduces a third person rather than naming the speaker.">
+    <h3>Drill 5: introduce a third person</h3>
     <p class="tile-target">On a video call, introduce your coworker Daniel. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="colleague">colleague</button>
@@ -236,8 +326,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="are" data-fix="My name is Ana." data-why="Name is singular, so the verb is is, not are.">
-    <h3>Drill 6 — fix the introduction</h3>
+  <div class="micro-drill" data-spot-error data-answer="are" data-hint="Find the verb that must agree with the singular noun name." data-fix="My name is Ana." data-why="Name is singular, so the verb is is, not are.">
+    <h3>Drill 6: fix the introduction</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="my">My</button>
@@ -248,8 +338,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="morning" data-fix="Good evening. Welcome to the hotel." data-why="It is 8 p.m., so the time-of-day greeting is Good evening, not Good morning.">
-    <h3>Drill 7 — match the time of day</h3>
+  <div class="micro-drill" data-spot-error data-answer="morning" data-hint="The guest is arriving at 8 p.m., not 8 a.m." data-fix="Good evening. Welcome to the hotel." data-why="It is 8 p.m., so the time-of-day greeting is Good evening, not Good morning.">
+    <h3>Drill 7: match the time of day</h3>
     <p>It is 8 p.m. Tap the word that does not fit the time.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="good">Good</button>
@@ -261,8 +351,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 8 — give the natural reply, then say it</h3>
+  <div class="micro-drill" data-transform data-lesson-extension="Optional no-choice greeting responses">
+    <h3>Drill 8: give the natural reply, then say it</h3>
     <p>Say the reply aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -273,7 +363,7 @@ export const page = defineLesson({
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>2</b> How are you? &nbsp;→&nbsp; reply, then ask back</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Fine, thanks. And you?</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>I'm good, thanks. How about you?</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>3</b> Hi, I'm Daniel. &nbsp;→&nbsp; greet back and give your name</p>
@@ -281,7 +371,7 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>Hi, Daniel. I'm Ana.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> (8 a.m., to your boss) &nbsp;→&nbsp; greet by time of day</p>
+        <p class="transform-cue"><b>4</b> (8 a.m., opening a formal event) &nbsp;→&nbsp; greet by time of day</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>Good morning.</strong></p>
       </div>
@@ -297,20 +387,20 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>A first hello at work</h3>
-    <p><span class="ex">“Good morning, Mr. Silva. How are you?” “Fine, thanks. And you?” “Very well. This is my coworker, Ana.” “Nice to meet you, Ana!” “Nice to meet you too.”</span></p>
+    <p><span class="ex">“Good morning, Mr. Silva. How are you?” “I'm good, thanks. How about you?” “Very well. This is my coworker, Ana.” “Nice to meet you, Ana!” “Nice to meet you too.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real first meeting.">
+  <div class="quiz" data-quiz data-success-message="Correct. The greeting shows morning, identifies Ana as a coworker, and uses the matching first-meeting reply.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="in the morning">
+      <div class="quiz-item" data-quiz-item data-answer="in the morning" data-hint="The first two words name the time-of-day greeting." data-fix="Good morning shows that the conversation happens in the morning.">
         <p class="quiz-question">1. When does this conversation happen?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in the morning">in the morning</button><button class="quiz-option" data-quiz-option="in the evening">in the evening</button><button class="quiz-option" data-quiz-option="at night">at night</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a coworker">
+      <div class="quiz-item" data-quiz-item data-answer="a coworker" data-hint="The speaker says This is my coworker, Ana." data-fix="Ana is a coworker.">
         <p class="quiz-question">2. Who is Ana?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a coworker">a coworker</button><button class="quiz-option" data-quiz-option="a teacher">a teacher</button><button class="quiz-option" data-quiz-option="a sister">a sister</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Nice to meet you too.">
+      <div class="quiz-item" data-quiz-item data-answer="Nice to meet you too." data-hint="Return the same first-meeting phrase and add too." data-fix="Nice to meet you. → Nice to meet you too.">
         <p class="quiz-question">3. What is the natural reply to “Nice to meet you”?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Nice to meet you too.">Nice to meet you too.</button><button class="quiz-option" data-quiz-option="Fine, thanks.">Fine, thanks.</button><button class="quiz-option" data-quiz-option="Goodbye.">Goodbye.</button></div>
       </div>
@@ -328,48 +418,54 @@ export const page = defineLesson({
   <div class="prompt-card"><b>On a video call:</b> The call starts at 9 a.m. Greet the group and say your name clearly. <span class="ex">Good morning, everyone. My name is…</span></div>
   <div class="prompt-card"><b>Introduce a colleague:</b> Introduce a third person to the group. <span class="ex">This is my colleague, Daniel. Daniel, this is Ms. Reyes.</span></div>
   <div class="prompt-card"><b>On the phone:</b> Answer and start a call politely. <span class="ex">Hello, this is Ana. &nbsp;Good afternoon. How are you?</span></div>
-  <div class="prompt-card"><b>End and leave:</b> Close the conversation two ways — with a coworker, then with a client. <span class="ex">Bye! See you later. &nbsp;Goodbye. Have a good day.</span></div>
+  <div class="prompt-card"><b>End and leave:</b> Close the conversation two ways: with a coworker, then with a client. <span class="ex">Bye! See you later. &nbsp;Goodbye. Have a good day.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: two 45-second meetings</h3>
+    <p>Role-play two complete conversations. First, meet a new coworker in a familiar workplace. Second, meet a new client in a more formal setting. In each conversation, greet, give your name, respond to the other name, ask and answer <span class="ex">How are you?</span>, introduce one third person, and leave.</p>
+    <p><strong>Success criteria:</strong> the greeting fits the moment; the first-meeting phrase is accurate; the level of formality stays consistent; and at least one multiword chunk is spoken with a clear beat and smooth connection.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Run the four moments</h3>
-    <p>Say a full first meeting aloud, in order: “______ (greet). My name is ______. ______ (reply to a name). ______ (ask how someone is). ______ (leave).”</p>
+    <p>Say a full first meeting aloud, in order: “______ (greet). My name is ______. ______ (reply after the other person gives a name). ______ (ask how someone is). ______ (leave).”</p>
     <p>Then do it twice: once <strong>informal</strong> with a coworker, once <strong>more formal</strong> with a client. Notice which words you change.</p>
   </div>
 
   <div class="quiz" data-quiz data-success-message="Excellent. You can greet, give your name, reply, and say goodbye in formal and informal situations.">
-    <h3>Final quiz — choose the best line</h3>
+    <h3>Final quiz: choose the best line</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Good morning">
+      <div class="quiz-item" data-quiz-item data-answer="Good morning" data-hint="The meeting begins at 8 a.m." data-fix="Good morning, everyone. Let's begin.">
         <p class="quiz-question">1. (a meeting at 8 a.m.) ___, everyone. Let's begin.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Good morning">Good morning</button><button class="quiz-option" data-quiz-option="Good evening">Good evening</button><button class="quiz-option" data-quiz-option="Goodbye">Goodbye</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Nice to meet you too.">
-        <p class="quiz-question">2. — Nice to meet you. — ___</p>
+      <div class="quiz-item" data-quiz-item data-answer="Nice to meet you too." data-hint="Speaker B should return the first-meeting phrase." data-fix="Nice to meet you too.">
+        <p class="quiz-question">2. Speaker A: Nice to meet you. Speaker B: ___</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Nice to meet you too.">Nice to meet you too.</button><button class="quiz-option" data-quiz-option="Fine, thanks.">Fine, thanks.</button><button class="quiz-option" data-quiz-option="See you later.">See you later.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Fine, thanks. And you?">
-        <p class="quiz-question">3. — How are you? — ___</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Fine, thanks. And you?">Fine, thanks. And you?</button><button class="quiz-option" data-quiz-option="My name is Ana.">My name is Ana.</button><button class="quiz-option" data-quiz-option="Goodbye.">Goodbye.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="I'm good, thanks. How about you?" data-hint="Give a brief condition reply, thank the person, and ask back." data-fix="I'm good, thanks. How about you?">
+        <p class="quiz-question">3. Speaker A: How are you? Speaker B: ___</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I'm good, thanks. How about you?">I'm good, thanks. How about you?</button><button class="quiz-option" data-quiz-option="My name is Ana.">My name is Ana.</button><button class="quiz-option" data-quiz-option="Goodbye.">Goodbye.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="My name is Ana.">
-        <p class="quiz-question">4. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="My name is Ana.">My name is Ana.</button><button class="quiz-option" data-quiz-option="I am name is Ana.">I am name is Ana.</button><button class="quiz-option" data-quiz-option="Me name Ana.">Me name Ana.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="My name is Ana." data-hint="The client asks for the speaker’s own name, so use My name is plus the name." data-fix="Client: What's your name? Ana: My name is Ana.">
+        <p class="quiz-question">4. You are Ana. A client asks, “What's your name?” Which reply gives your name?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="My name is Ana.">My name is Ana.</button><button class="quiz-option" data-quiz-option="This is Ana.">This is Ana.</button><button class="quiz-option" data-quiz-option="Nice to meet you, Ana.">Nice to meet you, Ana.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Good morning, Mr. Lopez.">
-        <p class="quiz-question">5. (greeting a new client) Which is best?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Good morning, Mr. Lopez." data-hint="This is the beginning of a formal first meeting in the morning." data-fix="Good morning, Mr. Lopez.">
+        <p class="quiz-question">5. A new client introduces himself as Mr. Lopez at a morning meeting. Which greeting follows his choice?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Good morning, Mr. Lopez.">Good morning, Mr. Lopez.</button><button class="quiz-option" data-quiz-option="Hey, what's up?">Hey, what's up?</button><button class="quiz-option" data-quiz-option="See you!">See you!</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="This is my colleague, Daniel.">
+      <div class="quiz-item" data-quiz-item data-answer="This is my colleague, Daniel." data-hint="Introduce Daniel as a third person, not as the speaker." data-fix="This is my colleague, Daniel.">
         <p class="quiz-question">6. (introducing a third person on a call) ___</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="This is my colleague, Daniel.">This is my colleague, Daniel.</button><button class="quiz-option" data-quiz-option="I'm my colleague Daniel.">I'm my colleague Daniel.</button><button class="quiz-option" data-quiz-option="Nice to meet you, Daniel.">Nice to meet you, Daniel.</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="This is my colleague, Daniel.">This is my colleague, Daniel.</button><button class="quiz-option" data-quiz-option="I'm Daniel.">I'm Daniel.</button><button class="quiz-option" data-quiz-option="Nice to meet you, Daniel.">Nice to meet you, Daniel.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Goodbye. Have a good day.">
+      <div class="quiz-item" data-quiz-item data-answer="Goodbye. Have a good day." data-hint="The call is ending, so choose a neutral leaving expression." data-fix="Goodbye. Have a good day.">
         <p class="quiz-question">7. (ending a call with a client) ___</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Goodbye. Have a good day.">Goodbye. Have a good day.</button><button class="quiz-option" data-quiz-option="Good morning.">Good morning.</button><button class="quiz-option" data-quiz-option="Nice to meet you.">Nice to meet you.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Good evening">
+      <div class="quiz-item" data-quiz-item data-answer="Good evening" data-hint="The guest is arriving at 7 p.m., so use an evening greeting rather than a leaving phrase." data-fix="Good evening. We have a reservation.">
         <p class="quiz-question">8. (arriving at a hotel at 7 p.m.) ___. We have a reservation.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Good evening">Good evening</button><button class="quiz-option" data-quiz-option="Good morning">Good morning</button><button class="quiz-option" data-quiz-option="Good afternoon">Good afternoon</button></div>
       </div>
@@ -380,6 +476,55 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then repeat only the social moves that still feel slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day greeting retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve the greeting from the moment and relationship, not from a memorized list.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated arrival from leaving and first meetings from later meetings in four complete situations.">
+      <h3>Choose the social move from memory</h3>
+      <div class="choice-bank" aria-label="Next-day greeting choices">
+        <button class="choice-option" data-choice-option="Good evening">Good evening</button>
+        <button class="choice-option" data-choice-option="Good night">Good night</button>
+        <button class="choice-option" data-choice-option="Nice to meet you">Nice to meet you</button>
+        <button class="choice-option" data-choice-option="Nice to see you again">Nice to see you again</button>
+        <button class="choice-option" data-choice-option="I'm good, thanks">I'm good, thanks</button>
+        <button class="choice-option" data-choice-option="My name is Ana">My name is Ana</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>You arrive at a hotel at 7 p.m. Say <button class="choice-gap" data-choice-gap data-answer="Good evening" data-hint="You are arriving in the evening, not leaving." data-fix="Good evening. We have a reservation." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>You leave a friend late at night. Say <button class="choice-gap" data-choice-gap data-answer="Good night" data-hint="This phrase closes a late conversation or comes before sleep." data-fix="Good night. See you tomorrow." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>A coworker gives you their name for the first time. Say <button class="choice-gap" data-choice-gap data-answer="Nice to meet you" data-hint="This is the first meeting." data-fix="Nice to meet you." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>You meet the same coworker the next week. Say <button class="choice-gap" data-choice-gap data-answer="Nice to see you again" data-hint="You already know this person, so use see and again." data-fix="Nice to see you again." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="good night" data-hint="The guest is arriving at 7 p.m.; one phrase normally closes the evening instead." data-fix="Good evening. Welcome to the hotel." data-why="Good evening greets someone who is arriving later in the day. Good night normally closes a late conversation or comes before sleep.">
+      <h3>Repair the moment</h3>
+      <p>A hotel employee greets an arriving guest at 7 p.m.: “Good night. Welcome to the hotel.” Tap the greeting that does not fit.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="good night">Good night.</button>
+        <button class="error-choice" data-error-choice="welcome">Welcome</button>
+        <button class="error-choice" data-error-choice="to the hotel">to the hotel.</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Give a complete reply to <span class="ex">How are you?</span>. Introduce yourself. Introduce a colleague. Then end the same conversation politely.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Role-play the beginning and end of one first meeting. Include a greeting, both names, <span class="ex">Nice to meet you</span>, a brief <span class="ex">How are you?</span> exchange, and a leaving phrase.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

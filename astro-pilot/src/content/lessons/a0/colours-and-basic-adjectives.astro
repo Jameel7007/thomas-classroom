@@ -2,33 +2,47 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Colors and basic adjectives · A0 Vocabulary · Curriculum Map",
+  "title": "Colors and basic adjectives · A0 Vocabulary",
   "slug": "colours-and-basic-adjectives",
   "level": "A0",
-  "topic": "Colours & basic adjectives",
+  "topic": "Colors & basic adjectives",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Describe the things around you. A color or a quality word is an adjective : red , new , big . In English the adjective goes before the noun — a red car , not a car red — or after t",
+  "description": "Describe everyday people and things with colors and basic adjectives, placing the adjective correctly before a noun or after be.",
   "sequence": 12,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/articles-a-an",
+    "a0/regular-plural-nouns"
+  ],
+  "related": [
+    "a0/this-that-these-those",
+    "a1/clothes-and-shopping"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 45,
+    "revisionSummary": "Adjective meaning and position, be agreement, article choice, adjective order, color accessibility, relative meanings, U.S. usage, pronunciation, item context, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 12</p>
   <h1>Colors &amp; basic <em>adjectives</em></h1>
-  <p class="standfirst">Describe the things around you. A color or a quality word is an <strong>adjective</strong>: <span class="ex">red</span>, <span class="ex">new</span>, <span class="ex">big</span>. In English the adjective goes <strong>before</strong> the noun — <span class="ex">a red car</span>, not <span class="ex">a car red</span> — or <strong>after</strong> the verb <em>be</em>: <span class="ex">The car is red.</span></p>
+  <p class="standfirst">Identify and describe everyday things with a color and a useful quality: <span class="ex">a small black notebook</span> or <span class="ex">The notebook is small and black.</span> Place the adjective correctly, keep it unchanged with plural nouns, and add another identifier when color alone is not enough.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">colors</span>
-    <span class="tag">opposites</span>
-    <span class="tag">word order</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">colors and qualities</span>
+    <span class="tag">two adjective positions</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -38,22 +52,45 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Describe your phone, car, and city.</span></div>
   </div>
 
-  <p class="note-line">An adjective in English never adds <span class="ex">-s</span>. We say <span class="ex">two red cars</span>, never <span class="ex">two reds cars</span>. The noun can be plural; the adjective stays the same.</p>
+  <p class="note-line">A descriptive adjective does not change for a plural noun. Say <span class="ex">one red car</span> and <span class="ex">two red cars</span>. The noun changes to <span class="ex">cars</span>; the adjective stays <span class="ex">red</span>.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an before a vowel sound, plural -s on the noun, and are with the plural subject these chairs.">
+    <h3>Bring articles, plurals, and <em>be</em> into a description</h3>
+    <p class="choice-hint">Use earlier lessons. Complete each full description, then say it aloud.</p>
+    <div class="choice-bank" aria-label="Earlier grammar choices">
+      <button class="choice-option" data-choice-option="a">a</button>
+      <button class="choice-option" data-choice-option="an">an</button>
+      <button class="choice-option" data-choice-option="car">car</button>
+      <button class="choice-option" data-choice-option="cars">cars</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+      <button class="choice-option" data-choice-option="are">are</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>This is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Old begins with a vowel sound, and the article comes immediately before old." data-fix="This is an old jacket." data-placeholder="choose">choose</button> old jacket. &nbsp;<span class="contraction">(articles)</span></span></div>
+    <div class="q"><span class="n">2</span><span>I can see two red <button class="choice-gap" data-choice-gap data-answer="cars" data-hint="Two requires a plural noun, so add -s to car, not red." data-fix="I can see two red cars." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(plurals)</span></span></div>
+    <div class="q"><span class="n">3</span><span>These chairs <button class="choice-gap" data-choice-gap data-answer="are" data-hint="These chairs is a plural noun phrase, so use the plural form of be." data-fix="These chairs are new." data-placeholder="choose">choose</button> new. &nbsp;<span class="contraction">(be agreement)</span></span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Two phrases — one is right</h3>
-    <p><span class="ex">a red car &nbsp; · &nbsp; a car red</span> &nbsp;&nbsp;|&nbsp;&nbsp; <span class="ex">The phone is new. &nbsp; · &nbsp; The new phone is.</span></p>
+    <h3>Two pairs: one phrase in each pair is right</h3>
+    <p><span class="ex">a red car &nbsp; · &nbsp; a car red</span> &nbsp;&nbsp;|&nbsp;&nbsp; <span class="ex">The phone is new. &nbsp; · &nbsp; The phone new.</span></p>
     <ul>
-      <li>In <strong>a red car</strong>, where does the color word go — <strong>before</strong> or <strong>after</strong> the thing (the car)?</li>
+      <li>In <strong>a red car</strong>, where does the color word go: <strong>before</strong> or <strong>after</strong> the thing (the car)?</li>
       <li>In <strong>The phone is new</strong>, the adjective comes after one short word. Which word is it?</li>
-      <li>So an adjective lives in two homes: right <strong>before a noun</strong>, or right <strong>after <em>be</em></strong>. Which two phrases above sound wrong to you?</li>
+      <li>For the adjectives in this lesson, there are two useful positions: right <strong>before a noun</strong>, or right <strong>after <em>be</em></strong>. Which two phrases above need repair?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — choose the color the cue describes</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The contexts identify the conventional color words green, blue, white, red, and black.">
+    <h3>Discovery check: choose the color the cue describes</h3>
     <p class="choice-hint">The hint in brackets describes the color of a real object</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="red">red</button>
@@ -62,11 +99,11 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="white">white</button>
       <button class="choice-option" data-choice-option="black">black</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The grass in the park is <button class="choice-gap" data-choice-gap data-answer="green" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the color of grass)</span></span></div>
-    <div class="q"><span class="n">2</span><span>A clear sky in summer is <button class="choice-gap" data-choice-gap data-answer="blue" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the color of the sky)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Fresh snow is <button class="choice-gap" data-choice-gap data-answer="white" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the color of snow)</span></span></div>
-    <div class="q"><span class="n">4</span><span>A stop sign on the street is <button class="choice-gap" data-choice-gap data-answer="red" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the color of a stop sign)</span></span></div>
-    <div class="q"><span class="n">5</span><span>Coffee with no milk is almost <button class="choice-gap" data-choice-gap data-answer="black" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(the color of dark coffee)</span></span></div>
+    <div class="q"><span class="n">1</span><span>Healthy spring grass in bright daylight usually looks <button class="choice-gap" data-choice-gap data-answer="green" data-hint="Choose the conventional color word for healthy grass." data-fix="Healthy spring grass usually looks green." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(healthy grass)</span></span></div>
+    <div class="q"><span class="n">2</span><span>A cloudless daytime sky usually looks <button class="choice-gap" data-choice-gap data-answer="blue" data-hint="Choose the conventional color word for a clear daytime sky." data-fix="A cloudless daytime sky usually looks blue." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(clear daytime sky)</span></span></div>
+    <div class="q"><span class="n">3</span><span>Fresh, clean snow in daylight appears <button class="choice-gap" data-choice-gap data-answer="white" data-hint="Choose the conventional color word for clean snow." data-fix="Fresh, clean snow appears white." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(clean snow)</span></span></div>
+    <div class="q"><span class="n">4</span><span>A standard U.S. STOP sign is <button class="choice-gap" data-choice-gap data-answer="red" data-hint="Choose the required background color of a standard U.S. STOP sign." data-fix="A standard U.S. STOP sign is red." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(U.S. road sign)</span></span></div>
+    <div class="q"><span class="n">5</span><span>Coffee with no milk is called <button class="choice-gap" data-choice-gap data-answer="black" data-hint="English uses this conventional color word for coffee without milk." data-fix="Coffee without milk is called black coffee." data-placeholder="choose">choose</button> coffee. &nbsp;<span class="contraction">(the usual phrase)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -76,7 +113,7 @@ export const page = defineLesson({
 
   <h2>The words: colors and opposites</h2>
   <div class="lead-rule"></div>
-  <p>Common colors for describing things around you. Each panel shows the real color:</p>
+  <p>These panels pair a representative color with its written name. Screens, lighting, and people can show or perceive a shade differently, so learn the word and not only the swatch.</p>
   <div class="swatch-grid" aria-label="Color swatches">
     <div class="swatch"><span class="sw" style="background:#E03131" aria-hidden="true"></span><span class="nm">red</span></div>
     <div class="swatch"><span class="sw" style="background:#1971C2" aria-hidden="true"></span><span class="nm">blue</span></div>
@@ -98,6 +135,12 @@ export const page = defineLesson({
     <div class="swatch"><span class="sw" style="background:#842029" aria-hidden="true"></span><span class="nm">maroon</span></div>
   </div>
 
+  <div class="note">
+    <h3>Color helps identify; it should not be the only clue</h3>
+    <p>For directions, safety, or finding an object, add another visible or spoken identifier. Say <span class="ex">the red button on the right</span>, <span class="ex">the small blue bag</span>, or <span class="ex">the green folder labeled “Invoices.”</span> This helps when a shade looks different on another screen or when a person does not distinguish the same colors.</p>
+    <p>This course uses the U.S. spelling <span class="ex">gray</span>. In other varieties of English, you may also see the alternative spelling with <span class="ex">e</span> before <span class="ex">y</span>.</p>
+  </div>
+
   <div class="lead-rule" style="margin-top:2.4rem"></div>
   <p>Now add seven common quality words. Each one has an opposite:</p>
   <table>
@@ -114,19 +157,85 @@ export const page = defineLesson({
   </table>
 
   <div class="note">
-    <h3>Two rules to keep</h3>
-    <ul>
-      <li><strong>Before the noun:</strong> the adjective goes first. <span class="ex">a red car</span>, <span class="ex">a big office</span>, <span class="ex">a new phone</span> — never <span class="ex">a car red</span>.</li>
-      <li><strong>After <em>be</em>:</strong> <span class="ex">The car is red. My phone is new. The coffee is hot.</span></li>
-      <li><strong>No <em>-s</em> on the adjective:</strong> <span class="ex">two red cars</span>, never <span class="ex">two reds cars</span>.</li>
-    </ul>
+    <h3>Some quality words need a comparison</h3>
+    <p><span class="ex">Big, small, fast, slow, cheap</span>, and <span class="ex">expensive</span> depend on the situation. A $900 watch is expensive for a buyer with a $100 budget, but the same price may not be expensive in every comparison.</p>
+    <p><span class="ex">Cheap</span> means low in price, but it can also suggest low quality. <span class="ex">Inexpensive</span> is the more neutral choice when you mean only “not expensive.”</p>
   </div>
+
+  <div class="note">
+    <h3>Sound natural: find the strong part of the word</h3>
+    <p>Short colors such as <span class="ex">red</span>, <span class="ex">blue</span>, and <span class="ex">green</span> have one beat. Longer words have one part that sounds stronger.</p>
+    <table>
+      <thead><tr><th>word</th><th>say it in parts</th><th>what to notice</th></tr></thead>
+      <tbody>
+        <tr><td>orange</td><td><span class="ex"><strong>OR</strong>-ange</span></td><td>two spoken parts; the first is strong</td></tr>
+        <tr><td>purple</td><td><span class="ex"><strong>PUR</strong>-ple</span></td><td>two spoken parts; the second is light</td></tr>
+        <tr><td>turquoise</td><td><span class="ex"><strong>TUR</strong>-quoise</span></td><td>the last part sounds like “koyz”</td></tr>
+        <tr><td>beige</td><td><span class="ex">“bayzh”</span></td><td>one syllable; it has the vowel in day and the soft final sound in vision</td></tr>
+        <tr><td>expensive</td><td><span class="ex">ex-<strong>PEN</strong>-sive</span></td><td>the middle part is strong</td></tr>
+      </tbody>
+    </table>
+    <p>In a neutral adjective-and-noun chunk, keep the words together and the noun often carries the clearest beat: <span class="ex">a red <strong>CAR</strong> · a purple <strong>BAG</strong> · an expensive <strong>WATCH</strong></span>. Contrast can move the beat: <span class="ex">a <strong>RED</strong> car, not a blue one.</span></p>
+  </div>
+
+  <div class="note">
+    <h3>Four patterns to keep</h3>
+    <ul>
+      <li><strong>Before the noun:</strong> the adjective goes first. <span class="ex">a red car</span>, <span class="ex">a big office</span>, <span class="ex">a new phone</span>, not <span class="ex">a car red</span>.</li>
+      <li><strong>After <em>be</em>:</strong> choose <em>be</em> for the subject, then keep the adjective unchanged: <span class="ex">The car is red. The cars are red.</span></li>
+      <li><strong>Article before the whole description:</strong> choose <span class="ex">a</span> or <span class="ex">an</span> from the next sound: <span class="ex">a new watch · an old watch · an expensive watch.</span></li>
+      <li><strong>Two adjectives:</strong> before a noun, use <span class="ex">a small black notebook</span>. After <em>be</em>, connect both qualities with <span class="ex">and</span>: <span class="ex">The notebook is small and black.</span></li>
+      <li><strong>No plural ending on the adjective:</strong> <span class="ex">two red cars</span>, not <span class="ex">two reds cars</span>.</li>
+    </ul>
+    <p>English has a larger adjective-order system. For this A0 lesson, practice <strong>size, age, or opinion + color + noun</strong>: <span class="ex">a small black notebook · a new blue phone · an expensive silver watch.</span></p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read color and adjective listening check">
+    <h2>Hear the description</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the script closed while you listen. Your teacher reads each line once, then once more. Choose the exact adjective or color phrase you hear.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished six useful color, size, temperature, price, and shade descriptions in complete noun phrases.">
+      <h3>Listening check: complete the description</h3>
+      <div class="choice-bank" aria-label="Listening adjective choices">
+        <button class="choice-option" data-choice-option="green">green</button>
+        <button class="choice-option" data-choice-option="gray">gray</button>
+        <button class="choice-option" data-choice-option="black">black</button>
+        <button class="choice-option" data-choice-option="blue">blue</button>
+        <button class="choice-option" data-choice-option="small">small</button>
+        <button class="choice-option" data-choice-option="big">big</button>
+        <button class="choice-option" data-choice-option="cold">cold</button>
+        <button class="choice-option" data-choice-option="hot">hot</button>
+        <button class="choice-option" data-choice-option="expensive">expensive</button>
+        <button class="choice-option" data-choice-option="inexpensive">inexpensive</button>
+        <button class="choice-option" data-choice-option="dark blue">dark blue</button>
+        <button class="choice-option" data-choice-option="light blue">light blue</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>She has a <button class="choice-gap" data-choice-gap data-answer="green" data-hint="Listen for the final /n/ in green; gray has no final /n/." data-fix="She has a green bag." data-placeholder="listen">listen</button> bag.</span></div>
+      <div class="q"><span class="n">2</span><span>It is a <button class="choice-gap" data-choice-gap data-answer="black" data-hint="Listen for black before phone, not blue." data-fix="It is a black phone." data-placeholder="listen">listen</button> phone.</span></div>
+      <div class="q"><span class="n">3</span><span>We work in a <button class="choice-gap" data-choice-gap data-answer="small" data-hint="Listen for small, the opposite of big." data-fix="We work in a small office." data-placeholder="listen">listen</button> office.</span></div>
+      <div class="q"><span class="n">4</span><span>He wants <button class="choice-gap" data-choice-gap data-answer="cold" data-hint="Listen for cold, the opposite of hot." data-fix="He wants cold water." data-placeholder="listen">listen</button> water.</span></div>
+      <div class="q"><span class="n">5</span><span>That is an <button class="choice-gap" data-choice-gap data-answer="expensive" data-hint="Listen for ex-PEN-sive beginning directly with ex; inexpensive has an extra in- at the beginning." data-fix="That is an expensive watch." data-placeholder="listen">listen</button> watch.</span></div>
+      <div class="q"><span class="n">6</span><span>I need the <button class="choice-gap" data-choice-gap data-answer="dark blue" data-hint="Listen for dark before blue, not light." data-fix="I need the dark blue shirt." data-placeholder="listen">listen</button> shirt.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <details class="note">
+      <summary>Tutor script · open only after the learner answers</summary>
+      <p>Read naturally: <span class="ex">1. She has a green bag. 2. It is a black phone. 3. We work in a small office. 4. He wants cold water. 5. That is an expensive watch. 6. I need the dark blue shirt.</span></p>
+      <p>For a contrast round, replace each answer with the paired distractor and ask the learner to identify the changed word.</p>
+    </details>
+  </section>
 
   <h2>Match the opposites</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 1 — match each word to its opposite</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Small, old, cold, and expensive complete the four opposite pairs used in this lesson.">
+    <h3>Drill 1: match each word to its opposite</h3>
     <p class="tile-target">Tap a word, then tap the opposite that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="small">small</button>
@@ -135,10 +244,10 @@ export const page = defineLesson({
       <button class="tile" data-tile="expensive">expensive</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="small" data-placeholder="opposite of big">opposite of big</button>
-      <button class="slot" data-slot="old" data-placeholder="opposite of new">opposite of new</button>
-      <button class="slot" data-slot="cold" data-placeholder="opposite of hot">opposite of hot</button>
-      <button class="slot" data-slot="expensive" data-placeholder="opposite of cheap">opposite of cheap</button>
+      <button class="slot" data-slot="small" data-hint="Choose the size word that contrasts with big." data-fix="big ↔ small" data-placeholder="opposite of big">opposite of big</button>
+      <button class="slot" data-slot="old" data-hint="Choose the age word that contrasts with new." data-fix="new ↔ old" data-placeholder="opposite of new">opposite of new</button>
+      <button class="slot" data-slot="cold" data-hint="Choose the temperature word that contrasts with hot." data-fix="hot ↔ cold" data-placeholder="opposite of hot">opposite of hot</button>
+      <button class="slot" data-slot="expensive" data-hint="Choose the price word that contrasts with cheap." data-fix="cheap ↔ expensive" data-placeholder="opposite of cheap">opposite of cheap</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -150,8 +259,8 @@ export const page = defineLesson({
   <h2>Choose the quality word</h2>
   <div class="lead-rule"></div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2 — choose the adjective the cue describes</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each adjective follows an explicit age, budget, temperature, size, or travel-time comparison.">
+    <h3>Drill 2: choose the adjective the cue describes</h3>
     <p class="choice-hint">The hint in brackets points to one clear answer</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="big">big</button>
@@ -160,11 +269,11 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="expensive">expensive</button>
       <button class="choice-option" data-choice-option="fast">fast</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I bought this phone yesterday, so it is <button class="choice-gap" data-choice-gap data-answer="new" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not old)</span></span></div>
-    <div class="q"><span class="n">2</span><span>The watch costs $900, so it is <button class="choice-gap" data-choice-gap data-answer="expensive" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not cheap)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The coffee just came off the machine, so it is <button class="choice-gap" data-choice-gap data-answer="hot" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not cold)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Our office has forty rooms, so it is very <button class="choice-gap" data-choice-gap data-answer="big" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not small)</span></span></div>
-    <div class="q"><span class="n">5</span><span>The express train reaches the city in ten minutes, so it is <button class="choice-gap" data-choice-gap data-answer="fast" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not slow)</span></span></div>
+    <div class="q"><span class="n">1</span><span>I bought this phone yesterday, so it is <button class="choice-gap" data-choice-gap data-answer="new" data-hint="The purchase happened yesterday, not years ago." data-fix="I bought this phone yesterday, so it is new." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not old)</span></span></div>
+    <div class="q"><span class="n">2</span><span>My watch budget is $100, but this watch costs $900, so it is <button class="choice-gap" data-choice-gap data-answer="expensive" data-hint="Compare the $900 price with the buyer's $100 budget." data-fix="For this buyer, the $900 watch is expensive." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(far above the budget)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The coffee just came out of the machine, so it is <button class="choice-gap" data-choice-gap data-answer="hot" data-hint="Fresh coffee from the machine has a high temperature." data-fix="The coffee just came out of the machine, so it is hot." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not cold)</span></span></div>
+    <div class="q"><span class="n">4</span><span>Most offices nearby have five rooms. Our office has forty rooms, so it is very <button class="choice-gap" data-choice-gap data-answer="big" data-hint="Compare forty rooms with the nearby offices that have five." data-fix="Compared with the nearby offices, our forty-room office is very big." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(larger than nearby offices)</span></span></div>
+    <div class="q"><span class="n">5</span><span>For the same route, the local train takes forty minutes and the express takes ten. The express is <button class="choice-gap" data-choice-gap data-answer="fast" data-hint="Compare ten minutes with forty minutes for the same route." data-fix="For the same route, the ten-minute express train is fast." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(not slow)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -174,10 +283,10 @@ export const page = defineLesson({
 
   <h2>Word order: put the adjective in its home</h2>
   <div class="lead-rule"></div>
-  <p>When you stack two adjectives, the order is <strong>size or opinion + color + noun</strong>: <span class="ex">a small black notebook</span>, <span class="ex">a big red car</span>. Build these aloud after you finish each one.</p>
+  <p>For the combinations in this lesson, use <strong>size or quality + color + noun</strong>: <span class="ex">a small black notebook</span>, <span class="ex">a big red car</span>. Build these aloud after you finish each one.</p>
 
-  <div class="tile-game" data-tile-builder data-answer="a small black notebook">
-    <h3>Drill 3 — build the phrase</h3>
+  <div class="tile-game" data-tile-builder data-answer="a small black notebook" data-hint="Begin with a, place size before color, and finish with the noun." data-fix="a small black notebook" data-success-message="Correct. Before the noun, the A0 order is article + size + color + noun.">
+    <h3>Drill 3: build the phrase</h3>
     <p class="tile-target">A notebook on your desk: small, and black. Build the phrase, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="black">black</button>
@@ -193,8 +302,27 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="the office is big">
-    <h3>Drill 4 — build with <em>be</em></h3>
+  <div class="tile-game" data-tile-builder data-answer="the notebook is small and black" data-hint="Begin with The notebook is, then connect the two qualities with and." data-fix="The notebook is small and black." data-success-message="Correct. After be, and connects the two qualities small and black.">
+    <h3>Drill 4: describe the same notebook after <em>be</em></h3>
+    <p class="tile-target">The notebook has both qualities. Build the complete sentence, then say it.</p>
+    <div class="tile-bank" data-build-bank>
+      <button class="tile" data-build-tile="black">black</button>
+      <button class="tile" data-build-tile="the">The</button>
+      <button class="tile" data-build-tile="and">and</button>
+      <button class="tile" data-build-tile="notebook">notebook</button>
+      <button class="tile" data-build-tile="small">small</button>
+      <button class="tile" data-build-tile="is">is</button>
+    </div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-build>Check</button>
+      <button class="lesson-btn" data-reset-build>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer="the office is big" data-hint="Begin with The office, add is, and place the adjective after be." data-fix="The office is big." data-success-message="Correct. Big comes after is when the noun phrase The office is the subject.">
+    <h3>Drill 5: build with <em>be</em></h3>
     <p class="tile-target">Now put the adjective after <em>be</em>. The office is large. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="big">big</button>
@@ -210,9 +338,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="i have a new phone">
-    <h3>Drill 5 — build the sentence</h3>
-    <p class="tile-target">Talk about your phone: it is new. Build the sentence, then say it.</p>
+  <div class="tile-game" data-tile-builder data-answer="i have a new phone" data-hint="Begin with I have, then place the article and adjective before the noun." data-fix="I have a new phone." data-success-message="Correct. A new phone keeps the article and adjective together before the noun.">
+    <h3>Drill 6: build the sentence</h3>
+    <p class="tile-target">Use an invented phone: it is new. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="phone">phone</button>
       <button class="tile" data-build-tile="i">I</button>
@@ -230,9 +358,9 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="red" data-fix="a red car" data-why="The adjective goes before the noun, so red comes before car: a red car, not a car red.">
-    <h3>Drill 6 — fix the word order</h3>
-    <p>Tap the word that is in the wrong place.</p>
+  <div class="micro-drill" data-spot-error data-answer="red" data-hint="Find the color adjective that appears after the noun car." data-fix="a red car" data-why="The adjective goes before the noun, so red comes before car: a red car, not a car red.">
+    <h3>Drill 7: fix the word order</h3>
+    <p>Tap the adjective that must move before the noun.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="a">a</button>
       <button class="error-choice" data-error-choice="car">car</button>
@@ -241,8 +369,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="greens" data-fix="two green doors" data-why="An adjective never takes -s. The noun is plural (doors), but the adjective stays green, not greens.">
-    <h3>Drill 7 — fix the adjective</h3>
+  <div class="micro-drill" data-spot-error data-answer="greens" data-hint="Two makes the noun doors plural; check whether the color adjective should also change." data-fix="two green doors" data-why="A descriptive adjective does not take plural -s. The noun is plural (doors), but the adjective stays green, not greens.">
+    <h3>Drill 8: fix the adjective</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="two">two</button>
@@ -253,7 +381,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 8 — fix the order, then say it</h3>
+    <h3>Drill 9: fix the order, then say it</h3>
     <p>Say the correct phrase or sentence aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -290,18 +418,18 @@ export const page = defineLesson({
     <h3>A new office</h3>
     <p><span class="ex">“My new office is nice. The walls are white and the door is brown. I have a big black desk and two green chairs. My favorite thing is the small red lamp.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood colors in a real description.">
+  <div class="quiz" data-quiz data-success-message="Correct. You identified the white walls, two green chairs, and small red lamp from the office description.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="white">
+      <div class="quiz-item" data-quiz-item data-answer="white" data-hint="The second sentence describes both the walls and the door." data-fix="The walls are white.">
         <p class="quiz-question">1. What color are the walls?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="white">white</button><button class="quiz-option" data-quiz-option="brown">brown</button><button class="quiz-option" data-quiz-option="black">black</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="two">
+      <div class="quiz-item" data-quiz-item data-answer="two" data-hint="The third sentence gives the number immediately before green chairs." data-fix="The office has two green chairs.">
         <p class="quiz-question">2. How many green chairs are there?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the lamp">
+      <div class="quiz-item" data-quiz-item data-answer="the lamp" data-hint="The final noun phrase is the small red lamp." data-fix="The lamp is red.">
         <p class="quiz-question">3. What is red?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the lamp">the lamp</button><button class="quiz-option" data-quiz-option="the desk">the desk</button><button class="quiz-option" data-quiz-option="the door">the door</button></div>
       </div>
@@ -315,53 +443,60 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your phone:</b> Describe the phone in your hand. <span class="ex">My phone is black. It is new. It is a good phone.</span> Use a color and one quality word.</div>
-  <div class="prompt-card"><b>Your car or your bike:</b> Say two things about it. <span class="ex">My car is white. It is small and fast.</span> If you have no car, describe a bus or train you take.</div>
-  <div class="prompt-card"><b>Your clothes today:</b> Look down and name three things you are wearing. <span class="ex">I have a blue shirt, black shoes, and a brown jacket.</span></div>
-  <div class="prompt-card"><b>Your office or home:</b> Describe one room. <span class="ex">My office is big. The chairs are gray. The desk is old.</span></div>
-  <div class="prompt-card"><b>Your city:</b> Tell the teacher about your city with adjectives. <span class="ex">My city is big and expensive. The buses are slow. The parks are green.</span></div>
+  <div class="note"><strong>Choice and privacy:</strong> you do not need to describe your possessions, clothes, home, or appearance. Use a classroom object, a picture, or invented information whenever you prefer.</div>
+  <div class="prompt-card"><b>A phone in a picture:</b> Describe it with one color and one quality. <span class="ex">The phone is black and new. It is a new black phone.</span></div>
+  <div class="prompt-card"><b>A vehicle:</b> Choose a real or invented car, bike, bus, or train. Compare it with another vehicle. <span class="ex">The bus is big and slow. The bike is small and fast.</span></div>
+  <div class="prompt-card"><b>Clothes in a picture:</b> Name three items and add a second identifier to one. <span class="ex">I can see a blue shirt, black shoes, and the brown jacket on the left.</span></div>
+  <div class="prompt-card"><b>A room:</b> Describe a real, pictured, or invented room. <span class="ex">The office is big. The chairs are gray. The old desk is near the door.</span></div>
+  <div class="prompt-card"><b>A city:</b> Compare two features with an explicit reference point. <span class="ex">The downtown buses are slow at 5 p.m. The north park is big compared with the other parks.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: identify the lost item</h3>
+    <p>Use three fictional lost-and-found items: <span class="ex">a small black notebook labeled “A,” a big blue bag by the window, and two old gray keys on the desk.</span> Describe one item without naming it. Your partner identifies it and reads the full description back. Then switch.</p>
+    <p><strong>Success criteria:</strong> use both adjective positions; keep adjectives unchanged with plural nouns; use size or age before color; connect two qualities after <em>be</em> with <span class="ex">and</span>; and include a label or location so color is not the only clue.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Explain the choice</h3>
-    <p>Complete this aloud: “An adjective goes ______ the noun, like <strong>a ____ car</strong>. It also comes after the word ______, like <strong>The car is ____</strong>. An adjective never adds ______, so I say <strong>two red cars</strong>.”</p>
-    <p>Then say one true sentence about something <strong>near</strong> you using a color, and one using a quality word like <em>big</em>, <em>new</em>, or <em>good</em>.</p>
+    <p>Complete this aloud: “For the words in this lesson, an adjective can go ______ the noun, like <strong>a ____ car</strong>. It can also come after ______, like <strong>The car is ____</strong>. A descriptive adjective does not change for a ______ noun, so I say <strong>two red cars</strong>.”</p>
+    <p>Then say one real or invented sentence about something <strong>near</strong> you using a color, and one using a quality word like <em>big</em>, <em>new</em>, or <em>good</em>.</p>
   </div>
 
   <div class="quiz" data-quiz data-success-message="Great. You can place an adjective before a noun and after be, and you know the colors and common opposites.">
-    <h3>Final quiz — colors, opposites, and word order</h3>
+    <h3>Final quiz: colors, opposites, and word order</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="a red car">
-        <p class="quiz-question">1. Which phrase is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="a red car" data-hint="Before a noun, place the color adjective between the article and noun." data-fix="a red car">
+        <p class="quiz-question">1. Which phrase has the article, color adjective, and noun in standard order?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a red car">a red car</button><button class="quiz-option" data-quiz-option="a car red">a car red</button><button class="quiz-option" data-quiz-option="a reds car">a reds car</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="old">
+      <div class="quiz-item" data-quiz-item data-answer="old" data-hint="Choose the age word that contrasts with new." data-fix="new ↔ old">
         <p class="quiz-question">2. What is the opposite of <em>new</em>?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="old">old</button><button class="quiz-option" data-quiz-option="small">small</button><button class="quiz-option" data-quiz-option="cold">cold</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="two green doors">
+      <div class="quiz-item" data-quiz-item data-answer="two green doors" data-hint="Two makes door plural, while the adjective green stays unchanged." data-fix="two green doors">
         <p class="quiz-question">3. Which is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="two green doors">two green doors</button><button class="quiz-option" data-quiz-option="two greens doors">two greens doors</button><button class="quiz-option" data-quiz-option="two door greens">two door greens</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="expensive">
-        <p class="quiz-question">4. The watch costs $900. It is ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="expensive" data-hint="Compare the $900 price with the buyer's $100 budget." data-fix="For this buyer, the watch is expensive.">
+        <p class="quiz-question">4. My watch budget is $100, but this watch costs $900. For me, it is ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="cheap">cheap</button><button class="quiz-option" data-quiz-option="expensive">expensive</button><button class="quiz-option" data-quiz-option="short">short</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="The coffee is hot.">
-        <p class="quiz-question">5. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="The coffee is hot.">The coffee is hot.</button><button class="quiz-option" data-quiz-option="The hot coffee is.">The hot coffee is.</button><button class="quiz-option" data-quiz-option="The coffee hot is.">The coffee hot is.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="The coffee is hot." data-hint="A complete description places is between the subject and adjective." data-fix="The coffee is hot.">
+        <p class="quiz-question">5. The coffee just came out of the machine. Which complete sentence places the adjective after <em>be</em>?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="The coffee is hot.">The coffee is hot.</button><button class="quiz-option" data-quiz-option="The coffee hot.">The coffee hot.</button><button class="quiz-option" data-quiz-option="The coffee hot is.">The coffee hot is.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a small black notebook">
+      <div class="quiz-item" data-quiz-item data-answer="a small black notebook" data-hint="For this lesson's pattern, size comes before color, and both come before the noun." data-fix="a small black notebook">
         <p class="quiz-question">6. Which order is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a small black notebook">a small black notebook</button><button class="quiz-option" data-quiz-option="a black small notebook">a black small notebook</button><button class="quiz-option" data-quiz-option="a notebook small black">a notebook small black</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="white">
-        <p class="quiz-question">7. Fresh snow is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="white">white</button><button class="quiz-option" data-quiz-option="brown">brown</button><button class="quiz-option" data-quiz-option="orange">orange</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="The notebook is small and black." data-hint="The subject is one notebook with both qualities, so use is and connect the adjectives with and." data-fix="The notebook is small and black.">
+        <p class="quiz-question">7. One notebook has both qualities: small and black. Which sentence reports exactly that?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="The notebook is small and black.">The notebook is small and black.</button><button class="quiz-option" data-quiz-option="The notebook is small or black.">The notebook is small or black.</button><button class="quiz-option" data-quiz-option="The notebooks are small and black.">The notebooks are small and black.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="slow">
-        <p class="quiz-question">8. The bus takes a long time. It is ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="slow" data-hint="For the same route, sixty minutes is longer than twenty minutes." data-fix="Compared with the express bus, the local bus is slow.">
+        <p class="quiz-question">8. For the same route, the express bus takes 20 minutes and the local bus takes 60. The local bus is ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="fast">fast</button><button class="quiz-option" data-quiz-option="slow">slow</button><button class="quiz-option" data-quiz-option="big">big</button></div>
       </div>
     </div>
@@ -371,6 +506,57 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then practice only the description patterns that still feel slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day adjective retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve article choice, plural agreement, two-adjective order, and the pattern after <em>be</em>.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You recalled an before old, unchanged black with a plural noun, and after be, and size before color.">
+      <h3>Choose the exact description from memory</h3>
+      <div class="choice-bank" aria-label="Next-day adjective choices">
+        <button class="choice-option" data-choice-option="a">a</button>
+        <button class="choice-option" data-choice-option="an">an</button>
+        <button class="choice-option" data-choice-option="black">black</button>
+        <button class="choice-option" data-choice-option="blacks">blacks</button>
+        <button class="choice-option" data-choice-option="and">and</button>
+        <button class="choice-option" data-choice-option="or">or</button>
+        <button class="choice-option" data-choice-option="small black">small black</button>
+        <button class="choice-option" data-choice-option="black small">black small</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>This is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Old begins with a vowel sound." data-fix="This is an old watch." data-placeholder="choose">choose</button> old watch.</span></div>
+      <div class="q"><span class="n">2</span><span>Those are two <button class="choice-gap" data-choice-gap data-answer="black" data-hint="The plural ending belongs on bags; the color adjective stays unchanged." data-fix="Those are two black bags." data-placeholder="choose">choose</button> bags.</span></div>
+      <div class="q"><span class="n">3</span><span>The notebook is small <button class="choice-gap" data-choice-gap data-answer="and" data-hint="Both qualities are true, so connect them with and." data-fix="The notebook is small and black." data-placeholder="choose">choose</button> black.</span></div>
+      <div class="q"><span class="n">4</span><span>I found a <button class="choice-gap" data-choice-gap data-answer="small black" data-hint="Before the noun, place size before color." data-fix="I found a small black notebook." data-placeholder="choose">choose</button> notebook.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="is" data-hint="The subject cars is plural, so check the form of be." data-fix="The cars are red." data-why="Use are with the plural subject the cars. The adjective red does not change.">
+      <h3>Repair the agreement</h3>
+      <p>The cars is red. Tap the form of <em>be</em> that does not agree with the plural subject.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="cars">cars</button>
+        <button class="error-choice" data-error-choice="is">is</button>
+        <button class="error-choice" data-error-choice="red">red</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Describe one invented singular object before a noun, then after <em>be</em>. Make it plural and change only the article, noun, and form of <em>be</em>. Keep both adjectives unchanged.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Describe one fictional lost item with a size or age, a color, and a label or location. Ask your teacher to identify it, then confirm the complete noun phrase.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

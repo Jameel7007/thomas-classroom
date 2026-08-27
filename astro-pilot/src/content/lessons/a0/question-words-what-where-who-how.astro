@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Question words · A0 Grammar · Curriculum Map",
+  "title": "Question words · A0 Grammar",
   "slug": "question-words-what-where-who-how",
   "level": "A0",
   "topic": "Question words: what, where, who, how",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Four small words open almost every conversation. Use what for a thing, where for a place, who for a person, and how for a feeling or a way. Then keep the order simple: question wor",
+  "description": "Ask useful beginner questions with what, where, who, and how, choosing the word that matches a thing, place, person, or way.",
   "sequence": 7,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/possessive-adjectives"
+  ],
+  "related": [
+    "a0/greetings-and-introductions",
+    "a1/present-simple"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 31,
+    "revisionSummary": "Information type, be-question scope and order, natural answer-question pairs, sentence capitalization, contextual feedback, intonation, timing, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="40–45 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 07</p>
   <h1>Question words: <em>what, where, who, how</em></h1>
-  <p class="standfirst">Four small words open almost every conversation. Use <span class="ex">what</span> for a thing, <span class="ex">where</span> for a place, <span class="ex">who</span> for a person, and <span class="ex">how</span> for a feeling or a way. Then keep the order simple: <strong>question word + <em>be</em> + subject</strong>.</p>
+  <p class="standfirst">Four small words help open many basic conversations. Use <span class="ex">what</span> for a thing, <span class="ex">where</span> for a place, <span class="ex">who</span> for a person, and <span class="ex">how</span> for a feeling or a way. Then keep the order simple: <strong>question word + <em>be</em> + subject</strong>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
+    <span class="tag">≈ 40–45 min</span>
     <span class="tag">what / where / who / how</span>
     <span class="tag">with <em>be</em></span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">answer type → question</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,13 +51,13 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Meet, ask, and make small talk.</span></div>
   </div>
 
-  <p class="note-line">We stay with the verb <span class="ex">be</span> here: <span class="ex">am / is / are</span>. You already use it — now you put a question word in front of it.</p>
+  <p class="note-line">We stay with the verb <span class="ex">be</span> here: <span class="ex">am / is / are</span>. You already use it. Now you put a question word in front of it.</p>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>An answer, then its question</h3>
-    <p><span class="ex">What is your job? &nbsp; — I'm a nurse.</span><br /><span class="ex">Where are you from? &nbsp; — I'm from Peru.</span><br /><span class="ex">Who is that man? &nbsp; — He's my manager.</span><br /><span class="ex">How are you? &nbsp; — Fine, thanks.</span></p>
+    <p><span class="ex">What is your job? &nbsp; I'm a nurse.</span><br /><span class="ex">Where are you from? &nbsp; I'm from Peru.</span><br /><span class="ex">Who is that? &nbsp; That's my manager.</span><br /><span class="ex">How are you? &nbsp; Fine, thanks.</span></p>
     <ul>
       <li>One answer is a <strong>thing</strong>, one is a <strong>place</strong>, one is a <strong>person</strong>, and one is a <strong>feeling</strong>. Which question word goes with each?</li>
       <li>Look at the order of every question. Which word comes <strong>first</strong>? Which word comes <strong>second</strong>?</li>
@@ -51,19 +65,19 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the answer, then choose the question word</h3>
-    <p class="choice-hint">The answer in brackets is the cue. What kind of thing is it — a thing, a place, a person, or a feeling?</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The answers identify a place for Where, job information for What, a person for Who, and a feeling for How.">
+    <h3>Discovery check: read the answer, then choose the question word</h3>
+    <p class="choice-hint">The answer in brackets is the cue. What kind of thing is it: a thing, a place, a person, or a feeling?</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="what">what</button>
-      <button class="choice-option" data-choice-option="where">where</button>
-      <button class="choice-option" data-choice-option="who">who</button>
-      <button class="choice-option" data-choice-option="how">how</button>
+      <button class="choice-option" data-choice-option="What">What</button>
+      <button class="choice-option" data-choice-option="Where">Where</button>
+      <button class="choice-option" data-choice-option="Who">Who</button>
+      <button class="choice-option" data-choice-option="How">How</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="where" data-placeholder="choose">choose</button> are you from? &nbsp;<span class="contraction">(Answer: I'm from Peru.)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="what" data-placeholder="choose">choose</button> is your job? &nbsp;<span class="contraction">(Answer: I'm a teacher.)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="who" data-placeholder="choose">choose</button> is that woman? &nbsp;<span class="contraction">(Answer: She's my boss.)</span></span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="how" data-placeholder="choose">choose</button> are you today? &nbsp;<span class="contraction">(Answer: Fine, thanks.)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Where" data-hint="The answer gives a country, which is a place." data-fix="Where are you from?" data-placeholder="choose">choose</button> are you from? &nbsp;<span class="contraction">(Answer: I'm from Peru.)</span></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="What" data-hint="The answer gives job information, not a person’s identity." data-fix="What is your job?" data-placeholder="choose">choose</button> is your job? &nbsp;<span class="contraction">(Answer: I'm a teacher.)</span></span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Who" data-hint="The answer identifies a person." data-fix="Who is that?" data-placeholder="choose">choose</button> is that? &nbsp;<span class="contraction">(Answer: That's my boss.)</span></span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="How" data-hint="The answer describes a feeling or condition." data-fix="How are you today?" data-placeholder="choose">choose</button> are you today? &nbsp;<span class="contraction">(Answer: Fine, thanks.)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -89,10 +103,16 @@ export const page = defineLesson({
   <p><span class="ex">Where &nbsp;·&nbsp; are &nbsp;·&nbsp; you</span> &nbsp;→&nbsp; <span class="ex">Where are you from?</span><br /><span class="ex">What &nbsp;·&nbsp; is &nbsp;·&nbsp; your job</span> &nbsp;→&nbsp; <span class="ex">What is your job?</span></p>
 
   <div class="note">
+    <h3>This pattern is for <em>be</em></h3>
+    <p>Use this lesson’s order when the verb is <span class="ex">am, is,</span> or <span class="ex">are</span>: <span class="ex">Where is the office?</span> Do not add <span class="ex">be</span> before an action word such as <span class="ex">work</span>: not <span class="ex">Where are you work?</span> The natural question is <span class="ex">Where do you work?</span>, a later question pattern.</p>
+    <p><span class="ex">What is your job?</span> is clear. In everyday U.S. English, people also often ask <span class="ex">What do you do?</span> You will learn that action-verb pattern with the present simple.</p>
+  </div>
+
+  <div class="note">
     <h3>Meaning check</h3>
     <ul>
       <li>Can we say <span class="ex">Who are you from?</span> for a place? <strong>No.</strong> <em>Who</em> asks about a person. For a place we say <span class="ex">Where are you from?</span></li>
-      <li>Can we say <span class="ex">Where is your name?</span> <strong>No.</strong> A name is information, a thing — so we use <span class="ex">What is your name?</span></li>
+      <li>When you meet someone and want the person to tell you their name, ask <span class="ex">What is your name?</span> The question <span class="ex">Where is your name?</span> asks about the location of a written name.</li>
       <li>What does <span class="ex">How are you?</span> ask for? A <strong>feeling</strong> or condition, not a place. The answer is <span class="ex">Fine, thanks.</span> or <span class="ex">I'm tired.</span></li>
     </ul>
   </div>
@@ -100,23 +120,50 @@ export const page = defineLesson({
   <h2>Useful fixed questions</h2>
   <div class="lead-rule"></div>
   <p>Keep these whole. They open most first conversations:</p>
-  <p><span class="ex">What's your name? &nbsp; · &nbsp; Where are you from?</span><br /><span class="ex">Who is that woman? &nbsp; · &nbsp; How are you? — Fine, thanks.</span></p>
+  <p><span class="ex">What's your name? &nbsp; · &nbsp; Where are you from?</span><br /><span class="ex">Who is that woman? &nbsp; · &nbsp; How are you? Fine, thanks.</span></p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose the question word</h3>
+  <div class="note">
+    <h3>Sound natural: say the question as one complete thought</h3>
+    <p>Link the question word to <span class="ex">is</span> or <span class="ex">are</span>. Make the information you want clear, and let your voice fall gently at the end.</p>
+    <table>
+      <thead><tr><th>question</th><th>natural rhythm</th></tr></thead>
+      <tbody>
+        <tr><td>What is your name?</td><td>What’s your <b>NAME</b>?</td></tr>
+        <tr><td>Where are you from?</td><td>Where-are-you <b>FROM</b>?</td></tr>
+        <tr><td>Who is that?</td><td>Who-is <b>THAT</b>?</td></tr>
+        <tr><td>How are you?</td><td>How-are-<b>YOU</b>?</td></tr>
+      </tbody>
+    </table>
+    <p>These questions ask for information, so they usually end with a falling voice, not the rising voice of many yes/no questions. Notice that <span class="ex">who</span> begins with an <em>h</em> sound; the written <em>w</em> is silent.</p>
+  </div>
+
+  <div class="thinking-card" data-lesson-extension="Optional tutor-read intonation contrast">
+    <h3>Listen for the question type</h3>
+    <p>Look away from the script. Your tutor reads each pair. Say “information” for the question with <span class="ex">what</span> or <span class="ex">where</span>, and “yes or no” for the other question. Then repeat the information question with a gentle fall.</p>
+    <details>
+      <summary>Tutor script and listening key</summary>
+      <ol>
+        <li><span class="ex">What is your name?</span> (information, falling) · <span class="ex">Is your name Ana?</span> (yes or no, often rising)</li>
+        <li><span class="ex">Where is the meeting?</span> (information, falling) · <span class="ex">Is the meeting upstairs?</span> (yes or no, often rising)</li>
+      </ol>
+    </details>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each short answer makes the missing information type clear: information, place, person, or condition.">
+    <h3>Drill 1: choose the question word</h3>
     <p class="choice-hint">Read the short answer in brackets. It tells you a thing, a place, a person, or a feeling.</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="what">what</button>
-      <button class="choice-option" data-choice-option="where">where</button>
-      <button class="choice-option" data-choice-option="who">who</button>
-      <button class="choice-option" data-choice-option="how">how</button>
+      <button class="choice-option" data-choice-option="What">What</button>
+      <button class="choice-option" data-choice-option="Where">Where</button>
+      <button class="choice-option" data-choice-option="Who">Who</button>
+      <button class="choice-option" data-choice-option="How">How</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="what" data-placeholder="choose">choose</button> is your phone number? <span class="contraction">(Answer: It's 555-0199.)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="where" data-placeholder="choose">choose</button> is the meeting? <span class="contraction">(Answer: In room 3.)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="who" data-placeholder="choose">choose</button> is your teacher? <span class="contraction">(Answer: Mr. Diaz.)</span></span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="how" data-placeholder="choose">choose</button> is your mother? <span class="contraction">(Answer: She's well, thanks.)</span></span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="where" data-placeholder="choose">choose</button> are your colleagues? <span class="contraction">(Answer: At lunch.)</span></span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="what" data-placeholder="choose">choose</button> is your last name? <span class="contraction">(Answer: It's Romano.)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="What" data-hint="The answer gives number information." data-fix="What is your phone number?" data-placeholder="choose">choose</button> is your phone number? <span class="contraction">(Answer: It's 555-0199.)</span></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Where" data-hint="Room 3 is a place." data-fix="Where is the meeting?" data-placeholder="choose">choose</button> is the meeting? <span class="contraction">(Answer: In room 3.)</span></span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Who" data-hint="Mr. Diaz identifies a person." data-fix="Who is your teacher?" data-placeholder="choose">choose</button> is your teacher? <span class="contraction">(Answer: Mr. Diaz.)</span></span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="How" data-hint="Well describes a person’s condition." data-fix="How is your mother?" data-placeholder="choose">choose</button> is your mother? <span class="contraction">(Answer: She's well, thanks.)</span></span></div>
+    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="Where" data-hint="At lunch gives the colleagues’ location." data-fix="Where are your colleagues?" data-placeholder="choose">choose</button> are your colleagues? <span class="contraction">(Answer: At lunch.)</span></span></div>
+    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="What" data-hint="Romano gives name information, not a location." data-fix="What is your last name?" data-placeholder="choose">choose</button> is your last name? <span class="contraction">(Answer: It's Romano.)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -127,8 +174,8 @@ export const page = defineLesson({
   <h2>Build the meaning, then the question</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each word to what it asks about</h3>
+  <div class="tile-game" data-tile-game data-lesson-extension="Optional information-type matching" data-success-message="Correct. What asks for information, where for a place, who for a person, and how for a condition or way.">
+    <h3>Drill 2: match each word to what it asks about</h3>
     <p class="tile-target">Tap a question word, then tap the meaning that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="what">what</button>
@@ -137,10 +184,10 @@ export const page = defineLesson({
       <button class="tile" data-tile="how">how</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="what" data-placeholder="a thing or information">a thing or information</button>
-      <button class="slot" data-slot="where" data-placeholder="a place">a place</button>
-      <button class="slot" data-slot="who" data-placeholder="a person">a person</button>
-      <button class="slot" data-slot="how" data-placeholder="a feeling or a way">a feeling or a way</button>
+      <button class="slot" data-slot="what" data-hint="Use this word for a name, number, thing, or other information." data-fix="what → a thing or information" data-placeholder="a thing or information">a thing or information</button>
+      <button class="slot" data-slot="where" data-hint="Use this word when the answer is a location." data-fix="where → a place" data-placeholder="a place">a place</button>
+      <button class="slot" data-slot="who" data-hint="Use this word when the answer identifies a person." data-fix="who → a person" data-placeholder="a person">a person</button>
+      <button class="slot" data-slot="how" data-hint="Use this word for a condition, feeling, or way." data-fix="how → a feeling or a way" data-placeholder="a feeling or a way">a feeling or a way</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -149,8 +196,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="where are you from">
-    <h3>Drill 3 — build the question</h3>
+  <div class="tile-game" data-tile-builder data-answer="where are you from" data-hint="Begin with the place question word, then put are before you." data-fix="Where are you from?" data-success-message="Correct. The question asks for a place, and are comes before the subject you.">
+    <h3>Drill 3: build the question</h3>
     <p class="tile-target">You meet someone new and want their country. Build the question, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="you">you</button>
@@ -166,8 +213,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="what is your job">
-    <h3>Drill 4 — build the question</h3>
+  <div class="tile-game" data-tile-builder data-answer="what is your job" data-hint="Begin with the information question word, then put is before your job." data-fix="What is your job?" data-success-message="Correct. The question asks for job information, and is comes before the subject phrase your job.">
+    <h3>Drill 4: build the question</h3>
     <p class="tile-target">You want to know the person's work. Build the question.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="job">job</button>
@@ -183,8 +230,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="how are you today">
-    <h3>Drill 5 — build the question</h3>
+  <div class="tile-game" data-tile-builder data-answer="how are you today" data-hint="Begin with the condition question word, then put are before you." data-fix="How are you today?" data-success-message="Correct. How asks about the listener’s condition, and are comes before you.">
+    <h3>Drill 5: build the question</h3>
     <p class="tile-target">You greet a coworker in the morning. Build the question.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="today">today</button>
@@ -202,8 +249,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="who" data-fix="Where are you from?" data-why="From asks for a place, so use where, not who. Who asks about a person.">
-    <h3>Drill 6 — fix the question word</h3>
+  <div class="micro-drill" data-spot-error data-answer="who" data-hint="The answer is a country, so check whether the first word asks for a place." data-fix="Where are you from?" data-why="From asks for a place, so use where, not who. Who asks about a person.">
+    <h3>Drill 6: fix the question word</h3>
     <p>Tap the word that is wrong. The answer is a country.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="who">Who</button>
@@ -214,8 +261,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="where" data-fix="What is your name?" data-why="A name is information — a thing — so use what, not where. Where asks for a place.">
-    <h3>Drill 7 — fix the question word</h3>
+  <div class="micro-drill" data-spot-error data-answer="where" data-hint="The answer gives name information, not the location of written text." data-fix="What is your name?" data-why="A name is information, so use “what,” not “where.” “Where” asks for a place.">
+    <h3>Drill 7: fix the question word</h3>
     <p>Tap the word that is wrong. The answer is a name.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="where">Where</button>
@@ -226,8 +273,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 8 — read the answer, then say the question</h3>
+  <div class="micro-drill" data-transform data-lesson-extension="Optional answer-to-question oral recall">
+    <h3>Drill 8: read the answer, then say the question</h3>
     <p>The answer is given. Say the question aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -251,7 +298,7 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>How are you?</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> It's Ana. &nbsp;→&nbsp; ask for the name</p>
+        <p class="transform-cue"><b>5</b> My name is Ana. &nbsp;→&nbsp; ask for the name</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>What is your name?</strong></p>
       </div>
@@ -261,10 +308,19 @@ export const page = defineLesson({
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
   <div class="prompt-card"><b>First introductions:</b> Imagine you just met someone at a conference. Ask all four questions in order: <span class="ex">What's your name? &nbsp; Where are you from? &nbsp; What is your job? &nbsp; How are you?</span></div>
-  <div class="prompt-card"><b>Point and ask:</b> Look at a photo of people (real or invented). For each face, ask the teacher: <span class="ex">Who is that? &nbsp; Who is that woman?</span> Then give the answer.</div>
+  <div class="prompt-card"><b>Point and ask:</b> Look at a photo of people (real or invented). For each person, ask the teacher: <span class="ex">Who is that?</span> Then give the answer.</div>
   <div class="prompt-card"><b>Lost in a new city:</b> You need a place. Ask the teacher for directions to three places: <span class="ex">Where is the station? &nbsp; Where is the hotel? &nbsp; Where is the bank?</span></div>
-  <div class="prompt-card"><b>Small talk at work:</b> Greet a coworker and keep it going. <span class="ex">How are you today?</span> &nbsp;<span class="ex">— Fine, thanks. And you?</span> Then ask one more question with <em>what</em> or <em>where</em>.</div>
-  <div class="prompt-card"><b>Information gap:</b> The teacher thinks of a person, a place, and a thing. The student asks questions with <em>what / where / who / how</em> until each one is clear. Switch roles and repeat.</div>
+  <div class="prompt-card"><b>Small talk at work:</b> Greet a coworker and keep it going. <span class="ex">How are you today?</span> &nbsp;<span class="ex">Fine, thanks. And you?</span> Then ask one more question with <em>what</em> or <em>where</em>.</div>
+  <div class="prompt-card"><b>Information gap:</b> Your teacher gives one short answer at a time about a thing, a place, a person, or a feeling. Ask the matching complete question without seeing the teacher’s question card. Switch roles and repeat.</div>
+  <div class="thinking-card">
+    <h3>Success check</h3>
+    <ul>
+      <li>Ask one clear question with each of the four question words.</li>
+      <li>Match the question word to the answer type you need.</li>
+      <li>Put <span class="ex">am, is,</span> or <span class="ex">are</span> before the subject.</li>
+      <li>Say each information question as one thought with a gentle fall.</li>
+    </ul>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -275,38 +331,38 @@ export const page = defineLesson({
   </div>
 
   <div class="quiz" data-quiz data-success-message="Excellent. You can choose what, where, who, or how by the kind of answer you want, and keep the word order with be.">
-    <h3>Final quiz — choose the right question word</h3>
+    <h3>Final quiz: choose the right question word</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="where">
+      <div class="quiz-item" data-quiz-item data-answer="where" data-hint="Mexico is a place." data-fix="Where are you from?">
         <p class="quiz-question">1. (Answer: I'm from Mexico.) ___ are you from?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="what">what</button><button class="quiz-option" data-quiz-option="where">where</button><button class="quiz-option" data-quiz-option="who">who</button><button class="quiz-option" data-quiz-option="how">how</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="what">
+      <div class="quiz-item" data-quiz-item data-answer="what" data-hint="Doctor gives job information." data-fix="What is your job?">
         <p class="quiz-question">2. (Answer: I'm a doctor.) ___ is your job?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="what">what</button><button class="quiz-option" data-quiz-option="where">where</button><button class="quiz-option" data-quiz-option="who">who</button><button class="quiz-option" data-quiz-option="how">how</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="who">
-        <p class="quiz-question">3. (Answer: She's my colleague.) ___ is that woman?</p>
+      <div class="quiz-item" data-quiz-item data-answer="who" data-hint="The answer identifies a person." data-fix="Who is that?">
+        <p class="quiz-question">3. (Answer: That's my colleague.) ___ is that?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="what">what</button><button class="quiz-option" data-quiz-option="where">where</button><button class="quiz-option" data-quiz-option="who">who</button><button class="quiz-option" data-quiz-option="how">how</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="how">
+      <div class="quiz-item" data-quiz-item data-answer="how" data-hint="Fine describes the listener’s condition." data-fix="How are you?">
         <p class="quiz-question">4. (Answer: Fine, thanks.) ___ are you?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="what">what</button><button class="quiz-option" data-quiz-option="where">where</button><button class="quiz-option" data-quiz-option="who">who</button><button class="quiz-option" data-quiz-option="how">how</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="what">
-        <p class="quiz-question">5. (Answer: It's Ana Romano.) ___ is your name?</p>
+      <div class="quiz-item" data-quiz-item data-answer="what" data-hint="The answer gives name information." data-fix="What is your name?">
+        <p class="quiz-question">5. (Answer: My name is Ana Romano.) ___ is your name?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="what">what</button><button class="quiz-option" data-quiz-option="where">where</button><button class="quiz-option" data-quiz-option="who">who</button><button class="quiz-option" data-quiz-option="how">how</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="where">
+      <div class="quiz-item" data-quiz-item data-answer="where" data-hint="Room 3 on the second floor is a location." data-fix="Where is the meeting?">
         <p class="quiz-question">6. (Answer: In room 3, on the second floor.) ___ is the meeting?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="what">what</button><button class="quiz-option" data-quiz-option="where">where</button><button class="quiz-option" data-quiz-option="who">who</button><button class="quiz-option" data-quiz-option="how">how</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Where are you from?">
-        <p class="quiz-question">7. Which question is correct for a place?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Where are you from?">Where are you from?</button><button class="quiz-option" data-quiz-option="Who are you from?">Who are you from?</button><button class="quiz-option" data-quiz-option="What are you from?">What are you from?</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Where is the meeting room?" data-hint="With be, place is before the subject: question word + is + the meeting room." data-fix="Where is the meeting room?">
+        <p class="quiz-question">7. You want the location of the meeting room. Which question has the correct order?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Where the meeting room is?">Where the meeting room is?</button><button class="quiz-option" data-quiz-option="Where is the meeting room?">Where is the meeting room?</button><button class="quiz-option" data-quiz-option="Where are the meeting room?">Where are the meeting room?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="What is your name?">
-        <p class="quiz-question">8. Which question is correct for a name?</p>
+      <div class="quiz-item" data-quiz-item data-answer="What is your name?" data-hint="A name is information, so begin with What and put is before your name." data-fix="What is your name?">
+        <p class="quiz-question">8. You meet someone and want to learn the person’s name. Which question is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="What is your name?">What is your name?</button><button class="quiz-option" data-quiz-option="Where is your name?">Where is your name?</button><button class="quiz-option" data-quiz-option="How is your name?">How is your name?</button></div>
       </div>
     </div>
@@ -316,6 +372,63 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <div class="prompt-card"><b>Next use:</b> tomorrow, return to the <a href="#next-day-retrieval">five-minute retrieval check</a> before you reread the four answer types.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day question-word retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Come back tomorrow. Read each short answer, then choose the question word and say the full question.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. Reception gives a place for Where, Maya identifies a person for Who, and tired gives a condition for How.">
+      <h3>Choose from memory</h3>
+      <p class="choice-hint">Tap each gap, then choose the question word</p>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="What">What</button>
+        <button class="choice-option" data-choice-option="Where">Where</button>
+        <button class="choice-option" data-choice-option="Who">Who</button>
+        <button class="choice-option" data-choice-option="How">How</button>
+      </div>
+      <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Where" data-hint="At reception is a place." data-fix="Where is your manager?" data-placeholder="choose">choose</button> is your manager? &nbsp;<span class="contraction">(Answer: At reception.)</span></span></div>
+      <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Who" data-hint="Maya identifies a person." data-fix="Who is the new analyst?" data-placeholder="choose">choose</button> is the new analyst? &nbsp;<span class="contraction">(Answer: Maya.)</span></span></div>
+      <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="How" data-hint="Tired describes the speaker’s condition." data-fix="How are you?" data-placeholder="choose">choose</button> are you? &nbsp;<span class="contraction">(Answer: I'm tired.)</span></span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="what" data-hint="The answer gives the restroom’s location." data-fix="Where is the restroom?" data-why="Down the hall is a place, so use where, not what.">
+      <h3>Repair from memory</h3>
+      <p>The answer is “Down the hall.” Tap the wrong word.</p>
+      <p class="ex">What is the restroom?</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="what">What</button>
+        <button class="error-choice" data-error-choice="is">is</button>
+        <button class="error-choice" data-error-choice="restroom">restroom?</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without notes</h3>
+      <p>Build and say the question before you reveal it.</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>1</b> what + is + your email address</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>What is your email address?</strong></p>
+        </div>
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>2</b> where + are + your keys</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>Where are your keys?</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-card"><b>Thirty-second response:</b> imagine you meet a new coworker. Ask one natural question with each of <span class="ex">what, where, who,</span> and <span class="ex">how</span>.</div>
+  </section>
 </main>
 </LessonPage>
-

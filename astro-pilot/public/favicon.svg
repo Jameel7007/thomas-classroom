@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>Thomas’s Classroom</title>
+  <rect width="32" height="32" rx="7" fill="#111111"/>
+  <path d="M7 7h17v4.5h-6.1V24h-4.8V11.5H7z" fill="#ECE8E1"/>
+  <circle cx="24" cy="23.5" r="4" fill="#FF3B1F"/>
+</svg>

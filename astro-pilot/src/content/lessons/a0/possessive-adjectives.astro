@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Possessive adjectives · A0 Grammar · Curriculum Map",
+  "title": "Possessive adjectives · A0 Grammar",
   "slug": "possessive-adjectives",
   "level": "A0",
   "topic": "Possessive adjectives (my, your, his…)",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "One small word shows who owns something: my phone, your email, her office, their car . Each subject pronoun has a partner — I → my , she → her , they → their — and it always sits b",
+  "description": "Use my, your, his, her, its, our, and their before a noun to show who owns or is connected to a person or thing.",
   "sequence": 6,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/subject-pronouns",
+    "a0/this-that-these-those"
+  ],
+  "related": [
+    "a0/regular-plural-nouns",
+    "a1/object-pronouns"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 37,
+    "revisionSummary": "Ownership versus connection, owner reference, singular their, possessive-versus-contraction contrasts, item context, feedback, timing, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="40–45 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 06</p>
   <h1>Possessive <em>adjectives</em></h1>
-  <p class="standfirst">One small word shows who owns something: <span class="ex">my phone, your email, her office, their car</span>. Each subject pronoun has a partner — <span class="ex">I → my</span>, <span class="ex">she → her</span>, <span class="ex">they → their</span> — and it always sits <strong>before</strong> the noun.</p>
+  <p class="standfirst">One small word shows who owns or is connected to a person or thing: <span class="ex">my phone, your manager, her office, their client</span>. Each subject pronoun has a partner, such as <span class="ex">I → my</span>, <span class="ex">she → her</span>, and <span class="ex">they → their</span>. It always sits <strong>before</strong> the noun.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">who owns it?</span>
+    <span class="tag">≈ 40–45 min</span>
+    <span class="tag">ownership + connection</span>
     <span class="tag">before the noun</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">pronoun → possessive</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,35 +51,38 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Describe people, jobs, and things.</span></div>
   </div>
 
-  <p class="note-line">A possessive adjective never changes for one thing or many: <span class="ex">my book / my books</span>, <span class="ex">her client / her clients</span>. The owner decides the word, not the thing owned.</p>
+  <p class="note-line">A possessive adjective never changes for one thing or many: <span class="ex">my book / my books</span>, <span class="ex">her client / her clients</span>. The person, group, or thing connected to the noun decides the word, not the noun after it.</p>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Who owns it?</h3>
+    <h3>Whose side is it connected to?</h3>
     <p><span class="ex">I have a phone. &nbsp;→&nbsp; This is my phone.</span><br /><span class="ex">She has an office. &nbsp;→&nbsp; This is her office.</span><br /><span class="ex">They have a car. &nbsp;→&nbsp; This is their car.</span></p>
     <ul>
-      <li>One word changed in each pair: <strong>I → my</strong>, <strong>she → her</strong>, <strong>they → their</strong>. What job does the new word do?</li>
-      <li>Where does it sit — before the noun, or after it?</li>
+      <li>One word changed in each pair: <strong>I → my</strong>, <strong>she → her</strong>, <strong>they → their</strong>. What connection does the new word show?</li>
+      <li>Where does it sit: before the noun, or after it?</li>
       <li>Does the word for "phone, office, car" change? What stays the same?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read who owns it, then choose</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each possessive word matches the person, group, or thing connected to the noun that follows it.">
+    <h3>Discovery check: read who owns it, then choose</h3>
     <p class="choice-hint">The hint in brackets tells you the owner</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="my">my</button>
       <button class="choice-option" data-choice-option="your">your</button>
       <button class="choice-option" data-choice-option="his">his</button>
       <button class="choice-option" data-choice-option="her">her</button>
+      <button class="choice-option" data-choice-option="its">its</button>
       <button class="choice-option" data-choice-option="our">our</button>
       <button class="choice-option" data-choice-option="their">their</button>
     </div>
-    <div class="q"><span class="n">1</span><span>This is <button class="choice-gap" data-choice-gap data-answer="my" data-placeholder="choose">choose</button> phone. &nbsp;<span class="contraction">(it belongs to me)</span></span></div>
-    <div class="q"><span class="n">2</span><span>That is <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> office. &nbsp;<span class="contraction">(it belongs to Elena)</span></span></div>
-    <div class="q"><span class="n">3</span><span>This is <button class="choice-gap" data-choice-gap data-answer="his" data-placeholder="choose">choose</button> desk. &nbsp;<span class="contraction">(it belongs to Daniel)</span></span></div>
-    <div class="q"><span class="n">4</span><span>This is <button class="choice-gap" data-choice-gap data-answer="their" data-placeholder="choose">choose</button> car. &nbsp;<span class="contraction">(it belongs to my parents)</span></span></div>
+    <div class="q"><span class="n">1</span><span>This is <button class="choice-gap" data-choice-gap data-answer="my" data-hint="The phone belongs to the speaker, so begin with the I → my pair." data-fix="my phone" data-placeholder="choose">choose</button> phone. &nbsp;<span class="contraction">(it belongs to me)</span></span></div>
+    <div class="q"><span class="n">2</span><span>That is <button class="choice-gap" data-choice-gap data-answer="her" data-hint="Elena uses she, so use the she → her pair." data-fix="her office" data-placeholder="choose">choose</button> office. &nbsp;<span class="contraction">(Elena uses she)</span></span></div>
+    <div class="q"><span class="n">3</span><span>This is <button class="choice-gap" data-choice-gap data-answer="his" data-hint="Daniel uses he, so use the he → his pair." data-fix="his desk" data-placeholder="choose">choose</button> desk. &nbsp;<span class="contraction">(Daniel uses he)</span></span></div>
+    <div class="q"><span class="n">4</span><span>A new client left a message. I do not know the client’s gender. This is <button class="choice-gap" data-choice-gap data-answer="their" data-hint="Use the they → their pair when one person’s gender is not known or relevant." data-fix="their message" data-placeholder="choose">choose</button> message.</span></div>
+    <div class="q"><span class="n">5</span><span>You have a coffee. This is <button class="choice-gap" data-choice-gap data-answer="your" data-hint="I am speaking to you, so use the you → your pair." data-fix="your coffee" data-placeholder="choose">choose</button> coffee.</span></div>
+    <div class="q"><span class="n">6</span><span>The company has a new logo. This is <button class="choice-gap" data-choice-gap data-answer="its" data-hint="The logo belongs to one company, so use the it → its pair." data-fix="its logo" data-placeholder="choose">choose</button> logo.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -85,7 +102,7 @@ export const page = defineLesson({
       <tr><td><b>she</b></td><td><b>her</b></td><td><span class="contraction">her office</span></td></tr>
       <tr><td><b>it</b></td><td><b>its</b></td><td><span class="contraction">its name</span></td></tr>
       <tr><td><b>we</b></td><td><b>our</b></td><td><span class="contraction">our team</span></td></tr>
-      <tr><td><b>they</b></td><td><b>their</b></td><td><span class="contraction">their car</span></td></tr>
+      <tr><td><b>they</b></td><td><b>their</b></td><td><span class="contraction">their car · their name</span> (many people or one person)</td></tr>
     </tbody>
   </table>
 
@@ -93,31 +110,78 @@ export const page = defineLesson({
     <h3>Meaning check</h3>
     <ul>
       <li>Does the possessive go before or after the noun? <strong>Before:</strong> <span class="ex">my manager</span>, never <span class="ex">manager my</span>.</li>
-      <li>Is it <span class="ex">his</span> or <span class="ex">her</span>? Look at the <strong>owner</strong>, not the thing. Daniel's office is <span class="ex">his office</span>; Elena's car is <span class="ex">her car</span>.</li>
+      <li>Is it <span class="ex">his</span> or <span class="ex">her</span>? Look at the person connected to the noun, not the noun itself. Daniel uses he, so say <span class="ex">his office</span>. Elena uses she, so say <span class="ex">her car</span>.</li>
       <li>Does the word change for one or many? <strong>No.</strong> <span class="ex">my book</span> and <span class="ex">my books</span> both use <em>my</em>.</li>
+      <li><span class="ex">Their</span> can connect one person or many people to a noun: <span class="ex">My parents sold their car.</span> <span class="ex">Someone left their phone.</span></li>
     </ul>
+  </div>
+
+  <div class="note">
+    <h3>Possessive word or contraction?</h3>
+    <p>The possessive word sits before a noun. The contraction contains the verb <span class="ex">are</span> or <span class="ex">is</span>.</p>
+    <table>
+      <thead><tr><th>before a noun</th><th>subject + verb</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ex">your phone</span></td><td><span class="ex">you’re early</span> = you are early</td></tr>
+        <tr><td><span class="ex">its name</span></td><td><span class="ex">it’s new</span> = it is new</td></tr>
+        <tr><td><span class="ex">their office</span></td><td><span class="ex">they’re upstairs</span> = they are upstairs</td></tr>
+      </tbody>
+    </table>
+    <p>In ordinary speech, each pair can sound the same. Use the sentence job to choose the written form: noun next means <span class="ex">your, its, their</span>.</p>
+  </div>
+
+  <div class="thinking-card" data-lesson-extension="Optional same-sound listening check">
+    <h3>Same sound, different sentence job</h3>
+    <p>Look away from the script. Your tutor reads each pair. Say “possessive” when a noun follows and “subject plus verb” when the phrase contains <span class="ex">are</span> or <span class="ex">is</span>.</p>
+    <details>
+      <summary>Tutor script and answers</summary>
+      <ol>
+        <li><span class="ex">Your phone is here.</span> (possessive) · <span class="ex">You’re early.</span> (you are)</li>
+        <li><span class="ex">Its name is Luna.</span> (possessive) · <span class="ex">It’s new.</span> (it is)</li>
+        <li><span class="ex">Their office is upstairs.</span> (possessive) · <span class="ex">They’re upstairs.</span> (they are)</li>
+      </ol>
+    </details>
   </div>
 
   <h2>From pronoun to possessive</h2>
   <div class="lead-rule"></div>
-  <p>Keep the pairs together. Say each one aloud: <span class="ex">I — my, you — your, he — his, she — her, we — our, they — their.</span></p>
+  <p>Keep the pairs together. Say each one aloud: <span class="ex">I → my, you → your, he → his, she → her, it → its, we → our, they → their.</span></p>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 1 — match each pronoun to its possessive</h3>
+  <div class="note">
+    <h3>Sound natural: keep the owner word with its noun</h3>
+    <p>A possessive adjective and its noun make one chunk. In a neutral sentence, the noun usually carries the strongest beat.</p>
+    <table>
+      <thead><tr><th>chunk</th><th>natural rhythm</th></tr></thead>
+      <tbody>
+        <tr><td>my phone</td><td>my <b>PHONE</b></td></tr>
+        <tr><td>her office</td><td>her <b>OFF</b>ice</td></tr>
+        <tr><td>our team</td><td>our <b>TEAM</b></td></tr>
+        <tr><td>their car</td><td>their <b>CAR</b></td></tr>
+      </tbody>
+    </table>
+    <p>Do not pause between the two words. Make the owner word strong only when you correct ownership: <span class="ex">It’s <strong>MY</strong> phone, not your phone.</span> In ordinary American speech, <span class="ex">your</span> and <span class="ex">their</span> are usually quick one-syllable words.</p>
+  </div>
+
+  <div class="tile-game" data-tile-game data-lesson-extension="Optional pronoun-pair matching" data-success-message="Correct. You matched I, you, he, she, it, we, and they with my, your, his, her, its, our, and their.">
+    <h3>Drill 1: match each pronoun to its possessive</h3>
     <p class="tile-target">Tap a possessive word, then tap the pronoun it belongs to</p>
     <div class="tile-bank">
       <button class="tile" data-tile="i">my</button>
+      <button class="tile" data-tile="you">your</button>
       <button class="tile" data-tile="he">his</button>
       <button class="tile" data-tile="she">her</button>
+      <button class="tile" data-tile="it">its</button>
       <button class="tile" data-tile="we">our</button>
       <button class="tile" data-tile="they">their</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="i" data-placeholder="I">I</button>
-      <button class="slot" data-slot="he" data-placeholder="he">he</button>
-      <button class="slot" data-slot="she" data-placeholder="she">she</button>
-      <button class="slot" data-slot="we" data-placeholder="we">we</button>
-      <button class="slot" data-slot="they" data-placeholder="they">they</button>
+      <button class="slot" data-slot="i" data-hint="The speaker says I." data-fix="I → my" data-placeholder="I">I</button>
+      <button class="slot" data-slot="you" data-hint="The speaker says you to the listener." data-fix="you → your" data-placeholder="you">you</button>
+      <button class="slot" data-slot="he" data-hint="Use this subject with his." data-fix="he → his" data-placeholder="he">he</button>
+      <button class="slot" data-slot="she" data-hint="Use this subject with her." data-fix="she → her" data-placeholder="she">she</button>
+      <button class="slot" data-slot="it" data-hint="Use this subject with its." data-fix="it → its" data-placeholder="it">it</button>
+      <button class="slot" data-slot="we" data-hint="This subject includes the speaker and other people." data-fix="we → our" data-placeholder="we">we</button>
+      <button class="slot" data-slot="they" data-hint="This subject can mean other people or one person whose gender is not stated." data-fix="they → their" data-placeholder="they">they</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -126,18 +190,18 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2 — his or her? Look at the owner</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. His follows a person who uses he, and her follows a person who uses she; the noun does not decide the word.">
+    <h3>Drill 2: his or her? Look at the owner</h3>
     <p class="choice-hint">The name in brackets tells you who owns it</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="his">his</button>
       <button class="choice-option" data-choice-option="her">her</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Daniel is reading <button class="choice-gap" data-choice-gap data-answer="his" data-placeholder="choose">choose</button> email. &nbsp;<span class="contraction">(Daniel = he)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Elena is in <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> office. &nbsp;<span class="contraction">(Elena = she)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Mr. Lopez is with <button class="choice-gap" data-choice-gap data-answer="his" data-placeholder="choose">choose</button> client. &nbsp;<span class="contraction">(Mr. Lopez = he)</span></span></div>
-    <div class="q"><span class="n">4</span><span>My manager is on <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> phone. &nbsp;<span class="contraction">(my manager, Sofia = she)</span></span></div>
-    <div class="q"><span class="n">5</span><span>The new coworker, Marco, lost <button class="choice-gap" data-choice-gap data-answer="his" data-placeholder="choose">choose</button> keys. &nbsp;<span class="contraction">(Marco = he)</span></span></div>
+    <div class="q"><span class="n">1</span><span>Daniel is reading <button class="choice-gap" data-choice-gap data-answer="his" data-hint="Daniel uses he, so use the he → his pair." data-fix="his email" data-placeholder="choose">choose</button> email. &nbsp;<span class="contraction">(Daniel uses he)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Elena is in <button class="choice-gap" data-choice-gap data-answer="her" data-hint="Elena uses she, so use the she → her pair." data-fix="her office" data-placeholder="choose">choose</button> office. &nbsp;<span class="contraction">(Elena uses she)</span></span></div>
+    <div class="q"><span class="n">3</span><span>Mr. Lopez is with <button class="choice-gap" data-choice-gap data-answer="his" data-hint="Mr. Lopez uses he, so use his before client." data-fix="his client" data-placeholder="choose">choose</button> client. &nbsp;<span class="contraction">(Mr. Lopez uses he)</span></span></div>
+    <div class="q"><span class="n">4</span><span>My manager Sofia is on <button class="choice-gap" data-choice-gap data-answer="her" data-hint="Sofia uses she, so use her before phone." data-fix="her phone" data-placeholder="choose">choose</button> phone. &nbsp;<span class="contraction">(Sofia uses she)</span></span></div>
+    <div class="q"><span class="n">5</span><span>The new coworker Marco lost <button class="choice-gap" data-choice-gap data-answer="his" data-hint="Marco uses he, so use his before keys, even though keys is plural." data-fix="his keys" data-placeholder="choose">choose</button> keys. &nbsp;<span class="contraction">(Marco uses he)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -148,8 +212,8 @@ export const page = defineLesson({
   <h2>Build the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-builder data-answer="this is her laptop">
-    <h3>Drill 3 — build the sentence</h3>
+  <div class="tile-game" data-tile-builder data-answer="this is her laptop" data-hint="Begin with This is, then place the possessive before laptop." data-fix="This is her laptop." data-success-message="Correct. Her comes directly before laptop because Elena uses she and the laptop is connected to her.">
+    <h3>Drill 3: build the sentence</h3>
     <p class="tile-target">The laptop belongs to Elena. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="laptop">laptop</button>
@@ -165,8 +229,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="their office is upstairs">
-    <h3>Drill 4 — build the sentence</h3>
+  <div class="tile-game" data-tile-builder data-answer="their office is upstairs" data-hint="Begin with the sales team’s possessive word, then add office is upstairs." data-fix="Their office is upstairs." data-success-message="Correct. Their comes before office because the office belongs to the sales team, a they group.">
+    <h3>Drill 4: build the sentence</h3>
     <p class="tile-target">The office belongs to the sales team. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="office">office</button>
@@ -184,8 +248,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="he" data-fix="His phone is new." data-why="Before a noun we use the possessive his, not the subject pronoun he.">
-    <h3>Drill 5 — pronoun or possessive?</h3>
+  <div class="micro-drill" data-spot-error data-answer="he" data-hint="Phone needs a word before it that shows its connection to Daniel." data-fix="His phone is new." data-why="Before a noun we use the possessive his, not the subject pronoun he.">
+    <h3>Drill 5: pronoun or possessive?</h3>
     <p>Tap the word that is wrong. The phone belongs to Daniel.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="he">He</button>
@@ -196,9 +260,9 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="we" data-fix="Our car is fast." data-why="Before a noun we use the possessive our, not the subject pronoun we.">
-    <h3>Drill 6 — pronoun or possessive?</h3>
-    <p>Tap the word that is wrong. The car belongs to you and your family.</p>
+  <div class="micro-drill" data-spot-error data-answer="we" data-hint="Car needs the possessive partner of we before it." data-fix="Our car is fast." data-why="Before a noun we use the possessive our, not the subject pronoun we.">
+    <h3>Drill 6: pronoun or possessive?</h3>
+    <p>You are speaking about the car that belongs to you and your family. Tap the wrong word.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="we">We</button>
       <button class="error-choice" data-error-choice="car">car</button>
@@ -208,21 +272,20 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="her" data-fix="Marco is with his client." data-why="Marco is a man, so the owner word is his. Look at the owner, not the thing.">
-    <h3>Drill 7 — his or her?</h3>
-    <p>Tap the word that is wrong. Marco is a man.</p>
+  <div class="micro-drill" data-spot-error data-answer="it's" data-hint="A noun comes next, so the sentence needs a possessive word, not it is." data-fix="The app changed its name." data-why="Its shows the app’s connection to the name. It’s means it is.">
+    <h3>Drill 7: its or it’s?</h3>
+    <p>Tap the word that is wrong.</p>
     <div class="spot-options">
-      <button class="error-choice" data-error-choice="marco">Marco</button>
-      <button class="error-choice" data-error-choice="is">is</button>
-      <button class="error-choice" data-error-choice="with">with</button>
-      <button class="error-choice" data-error-choice="her">her</button>
-      <button class="error-choice" data-error-choice="client">client.</button>
+      <button class="error-choice" data-error-choice="app">app</button>
+      <button class="error-choice" data-error-choice="changed">changed</button>
+      <button class="error-choice" data-error-choice="it's">it’s</button>
+      <button class="error-choice" data-error-choice="name">name.</button>
     </div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 8 — change the pronoun, then say it</h3>
+  <div class="micro-drill" data-transform data-lesson-extension="Optional no-choice pronoun transformation">
+    <h3>Drill 8: change the pronoun, then say it</h3>
     <p>Say the possessive aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -256,10 +319,19 @@ export const page = defineLesson({
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
   <div class="prompt-card"><b>Your desk:</b> Name four things at your desk with <span class="ex">my</span>. <span class="ex">This is my phone. These are my notes. That is my coffee.</span></div>
-  <div class="prompt-card"><b>Your team:</b> Tell me about three coworkers. Use <span class="ex">his</span> and <span class="ex">her</span> for their jobs and things. <span class="ex">Daniel is on his client call. Elena is in her office. This is her email.</span></div>
+  <div class="prompt-card"><b>Your team:</b> Tell me about three coworkers. Use <span class="ex">his</span>, <span class="ex">her</span>, or <span class="ex">their</span> for their jobs, relationships, and things. <span class="ex">Daniel is on a call with his client. Elena is in her office. Alex uses they and is with their manager.</span></div>
   <div class="prompt-card"><b>Your family:</b> Describe two family members and what they own. <span class="ex">My sister is a nurse. Her car is small. My parents have a dog. Their dog is friendly.</span></div>
   <div class="prompt-card"><b>Our place:</b> Describe your workplace or home with <span class="ex">our</span>. <span class="ex">This is our office. Our team is small. Our meeting room is upstairs.</span></div>
-  <div class="prompt-card"><b>Whose is it? (info gap):</b> The teacher names a person; the student answers with the possessive. <span class="ex">Teacher: Daniel, keys. → Student: These are his keys.</span> Continue with new people and things.</div>
+  <div class="prompt-card"><b>Whose is it? (info gap):</b> Your teacher names a person and an object. Answer with the possessive: <span class="ex">Daniel, keys. → These are his keys.</span> Continue with new people and things.</div>
+  <div class="thinking-card">
+    <h3>Success check</h3>
+    <ul>
+      <li>Use at least four different possessive words before nouns.</li>
+      <li>Choose from the person, group, or thing connected to the noun.</li>
+      <li>Use <span class="ex">their</span> for one person when gender is not known or relevant.</li>
+      <li>Keep <span class="ex">its</span> separate from <span class="ex">it’s = it is</span>.</li>
+    </ul>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -269,40 +341,48 @@ export const page = defineLesson({
     <p>Then say one true sentence about something <strong>you</strong> own and one about something <strong>a coworker or family member</strong> owns, using <em>his</em>, <em>her</em>, or <em>their</em>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can match each pronoun to its possessive and put it before the noun.">
-    <h3>Final quiz — choose the owner word</h3>
+  <div class="quiz" data-quiz data-success-message="Excellent. You matched each reference with its possessive word, placed it before the noun, and separated its from it’s.">
+    <h3>Final quiz: choose the owner word</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="my">
+      <div class="quiz-item" data-quiz-item data-answer="my" data-hint="The phone belongs to the speaker, so use the I → my pair." data-fix="my phone">
         <p class="quiz-question">1. (it belongs to me) This is ___ phone.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="my">my</button><button class="quiz-option" data-quiz-option="your">your</button><button class="quiz-option" data-quiz-option="his">his</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="her">
+      <div class="quiz-item" data-quiz-item data-answer="her" data-hint="Elena uses she, so choose the she → her pair." data-fix="her office">
         <p class="quiz-question">2. (Elena = she) She is in ___ office.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="his">his</button><button class="quiz-option" data-quiz-option="her">her</button><button class="quiz-option" data-quiz-option="their">their</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="his">
+      <div class="quiz-item" data-quiz-item data-answer="his" data-hint="Daniel uses he, so choose the he → his pair." data-fix="his email">
         <p class="quiz-question">3. (Daniel = he) Daniel is reading ___ email.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="her">her</button><button class="quiz-option" data-quiz-option="his">his</button><button class="quiz-option" data-quiz-option="its">its</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="their">
+      <div class="quiz-item" data-quiz-item data-answer="their" data-hint="The sales team is a they group." data-fix="their meeting room">
         <p class="quiz-question">4. (the sales team = they) This is ___ meeting room.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="our">our</button><button class="quiz-option" data-quiz-option="your">your</button><button class="quiz-option" data-quiz-option="their">their</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="our">
-        <p class="quiz-question">5. (you and your team = we) ___ team is small.</p>
+      <div class="quiz-item" data-quiz-item data-answer="our" data-hint="The speaker is inside the team, so the group includes we." data-fix="Our team is small.">
+        <p class="quiz-question">5. You are speaking as a member of the team. ___ team is small.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="our">our</button><button class="quiz-option" data-quiz-option="their">their</button><button class="quiz-option" data-quiz-option="my">my</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="His office is upstairs.">
-        <p class="quiz-question">6. Which sentence is correct? (the office belongs to Marco)</p>
+      <div class="quiz-item" data-quiz-item data-answer="His office is upstairs." data-hint="Marco uses he. The possessive must come before office." data-fix="His office is upstairs.">
+        <p class="quiz-question">6. Which sentence is correct? (the office belongs to Marco, who uses he)</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="His office is upstairs.">His office is upstairs.</button><button class="quiz-option" data-quiz-option="He office is upstairs.">He office is upstairs.</button><button class="quiz-option" data-quiz-option="Office his is upstairs.">Office his is upstairs.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="my books">
+      <div class="quiz-item" data-quiz-item data-answer="my books" data-hint="The speaker still uses my when more than one book follows." data-fix="my books">
         <p class="quiz-question">7. I have more than one book. Which is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="my books">my books</button><button class="quiz-option" data-quiz-option="mine books">mine books</button><button class="quiz-option" data-quiz-option="my book's">my book's</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="your">
+      <div class="quiz-item" data-quiz-item data-answer="your" data-hint="I am speaking directly to you, so use the you → your pair." data-fix="your coffee">
         <p class="quiz-question">8. (I am talking to you) Is this ___ coffee?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="my">my</button><button class="quiz-option" data-quiz-option="your">your</button><button class="quiz-option" data-quiz-option="their">their</button></div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="their" data-hint="The caller is one person, but the person’s gender is not known." data-fix="their message">
+        <p class="quiz-question">9. A delivery driver called, but you do not know the driver’s gender. This is ___ message.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="his">his</button><button class="quiz-option" data-quiz-option="its">its</button><button class="quiz-option" data-quiz-option="their">their</button></div>
+      </div>
+      <div class="quiz-item" data-quiz-item data-answer="its" data-hint="A noun comes after the gap, so use the company’s possessive word, not it is." data-fix="its name">
+        <p class="quiz-question">10. The company changed ___ name after the merger.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="it">it</button><button class="quiz-option" data-quiz-option="it’s">it’s</button><button class="quiz-option" data-quiz-option="its">its</button></div>
       </div>
     </div>
     <div class="drill-actions">
@@ -311,6 +391,63 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <div class="prompt-card"><b>Next use:</b> tomorrow, return to the <a href="#next-day-retrieval">five-minute retrieval check</a> before you reread the pronoun pairs.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day possessive retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Come back tomorrow. Read the relationship first, then choose the word before the noun.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. Your points to the listener, its points to one app, and singular their points to one caller whose gender is not known.">
+      <h3>Choose from memory</h3>
+      <p class="choice-hint">Tap each gap, then choose the possessive word</p>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="my">my</button>
+        <button class="choice-option" data-choice-option="your">your</button>
+        <button class="choice-option" data-choice-option="its">its</button>
+        <button class="choice-option" data-choice-option="our">our</button>
+        <button class="choice-option" data-choice-option="their">their</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>I am speaking directly to you: “What is <button class="choice-gap" data-choice-gap data-answer="your" data-hint="The question is for the listener, so use the you → your pair." data-fix="your name" data-placeholder="choose">choose</button> name?”</span></div>
+      <div class="q"><span class="n">2</span><span>The app has a new icon. This is <button class="choice-gap" data-choice-gap data-answer="its" data-hint="One app is an it, and a noun follows the gap." data-fix="its new icon" data-placeholder="choose">choose</button> new icon.</span></div>
+      <div class="q"><span class="n">3</span><span>A caller left a number, but I do not know the caller’s gender. This is <button class="choice-gap" data-choice-gap data-answer="their" data-hint="Use the they → their pair for one person whose gender is not known." data-fix="their number" data-placeholder="choose">choose</button> number.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="we" data-hint="Office needs the possessive partner of we before it." data-fix="Our office is small." data-why="Before a noun, use our, not the subject pronoun we.">
+      <h3>Repair from memory</h3>
+      <p class="ex">We office is small.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="we">We</button>
+        <button class="error-choice" data-error-choice="office">office</button>
+        <button class="error-choice" data-error-choice="small">small.</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without notes</h3>
+      <p>Say the complete chunk before you reveal it.</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>1</b> I → ___ password</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>my password</strong></p>
+        </div>
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>2</b> she → ___ manager</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>her manager</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-card"><b>Thirty-second response:</b> describe one thing connected to you, one thing connected to another person, and one thing connected to your group. Use three different possessive words.</div>
+  </section>
 </main>
 </LessonPage>
-

@@ -2,394 +2,370 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Past continuous · A2 Grammar · Curriculum Map",
+  "title": "Past continuous · A2 Grammar",
   "slug": "past-continuous",
   "level": "A2",
   "topic": "Past continuous",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Describe what was happening at a past moment and set the scene for real stories: I was working at nine , Were you sleeping? , and I was cooking when the phone rang.",
+  "description": "Use the past continuous to show a situation in progress at a past reference point, set a scene, and relate it to completed events.",
   "sequence": 2,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a2/past-simple", "a1/present-continuous", "a1/was-were"],
+  "related": ["a2/past-time-expressions", "b1/past-perfect", "c1/narrative-tenses-and-viewpoint"],
   "assessments": [
     "a2-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Open past viewpoint, form, spelling, past-simple contrast, state and activity meanings, when/while/during, spoken form, listening, feedback, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 2</p>
   <h1>Past continuous <em>was / were doing</em></h1>
-  <p class="standfirst">Describe what was happening at a past moment and set the scene for real stories: <span class="ex">I was working at nine</span>, <span class="ex">Were you sleeping?</span>, and <span class="ex">I was cooking when the phone rang.</span></p>
+  <p class="standfirst">Open a past scene at one reference point: <span class="ex">At six, the team was finishing a report. Rina was checking the figures when the lights went out.</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">past actions in progress</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">open scene · bounded event</span>
     <span class="tag">was / were + verb-ing</span>
-    <span class="tag">when / while</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Compare one long action with one short action.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Build was and were with verb-ing.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose forms, join clauses with when and while, and fix errors.</span></div>
-    <div class="flow-step"><b>Use</b><span>Tell what was really happening in your day.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Open a scene at exactly 6:00 p.m.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Separate situations in progress from whole events.</span></div>
+    <div class="flow-step"><b>Build</b><span>Control form, viewpoint, connectors, and spoken rhythm.</span></div>
+    <div class="flow-step"><b>Use</b><span>Reconstruct a fictional power-outage report.</span></div>
   </div>
 
-  <p class="note-line">The past continuous paints the background of a story. It shows what was already in progress when something else happened.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can describe what was in progress at a past reference point, report the completed events around it, and ask for a missing scene detail.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="was">was</button>
-      <button class="choice-option" data-choice-option="were">were</button>
-      <button class="choice-option" data-choice-option="is">is</button>
-      <button class="choice-option" data-choice-option="are">are</button>
-      <button class="choice-option" data-choice-option="finished">finished</button>
-      <button class="choice-option" data-choice-option="finish">finish</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>We <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> at the office late last night. &nbsp;<span class="contraction">(was / were)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Right now, she <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> talking to a client. &nbsp;<span class="contraction">(present continuous)</span></span></div>
-    <div class="q"><span class="n">3</span><span>They <button class="choice-gap" data-choice-gap data-answer="finished" data-placeholder="choose">choose</button> the project last Friday. &nbsp;<span class="contraction">(past simple)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a completed past action, past-be agreement, and the present-continuous frame.">
+    <h3>Three checks from earlier lessons</h3>
+    <p class="choice-hint">Use the stated time and the complete verb system.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices"><button class="choice-option" data-choice-option="finished">finished</button><button class="choice-option" data-choice-option="finish">finish</button><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="does">does</button></div>
+    <div class="q"><span class="n">1</span><span>The report marks the task complete last Friday: The team <button class="choice-gap" data-choice-gap data-answer="finished" data-hint="Last Friday is a finished past frame, so use the past form finished." data-fix="The team finished the report last Friday." data-placeholder="choose">choose</button> the report last Friday.</span></div>
+    <div class="q"><span class="n">2</span><span>The report locates several people in the office yesterday: They <button class="choice-gap" data-choice-gap data-answer="were" data-hint="The plural subject they takes were for a past state." data-fix="They were in the office yesterday." data-placeholder="choose">choose</button> in the office yesterday.</span></div>
+    <div class="q"><span class="n">3</span><span>The live camera shows one person now: Rina <button class="choice-gap" data-choice-gap data-answer="is" data-hint="A present action in progress uses is plus checking." data-fix="Rina is checking the figures now." data-placeholder="choose">choose</button> checking the figures now.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice before the rule</h2>
+  <h2>Notice one scene and the events around it</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>One evening, three actions</h3>
-    <p><span class="ex">"Last night at nine, Marta was cooking dinner. Her phone rang. She turned off the stove and answered."</span></p>
+    <h3>Harbor Center power report</h3>
+    <p><span class="ex">At 5:55 p.m., the staff members were finishing the monthly report. At 6:00, the lights went out. Rina was checking the figures, and Lee was saving the file. The generator started at 6:10. The team finished the report at 6:30.</span></p>
     <ul>
-      <li>Which action was already in progress at nine?</li>
-      <li>Which actions started and finished quickly?</li>
-      <li>Which two words work together in <span class="ex">was cooking</span>?</li>
+      <li>Which situations were open and already in progress at 6:00?</li>
+      <li>Which verbs move the event sequence forward?</li>
+      <li>Does <span class="ex">was checking</span> tell us whether Rina finished checking later?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: choose the pattern</h3>
-    <p class="choice-hint">Use the subject to choose <b>was</b> or <b>were</b>, and remember the verb-ing form.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="was">was</button>
-      <button class="choice-option" data-choice-option="were">were</button>
-      <button class="choice-option" data-choice-option="wasn’t">wasn’t</button>
-      <button class="choice-option" data-choice-option="weren’t">weren’t</button>
-      <button class="choice-option" data-choice-option="working">working</button>
-      <button class="choice-option" data-choice-option="worked">worked</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> watching the news at ten.</span></div>
-    <div class="q"><span class="n">2</span><span>They <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> waiting for the bus.</span></div>
-    <div class="q"><span class="n">3</span><span>He was <button class="choice-gap" data-choice-gap data-answer="working" data-placeholder="choose">choose</button> on the report at midnight.</span></div>
-    <div class="q"><span class="n">4</span><span>It <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> raining at seven this morning.</span></div>
-    <div class="q"><span class="n">5</span><span>She <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-placeholder="choose">choose</button> listening, so she missed the question.</span></div>
-    <div class="q"><span class="n">6</span><span>We <button class="choice-gap" data-choice-gap data-answer="weren’t" data-placeholder="choose">choose</button> sleeping; we were still at the office.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated the open 6:00 scene from the bounded events that moved the report forward.">
+    <h3>Discovery check: choose the camera view</h3>
+    <p class="choice-hint">Use continuous forms to open the scene at the reference point and past simple for each complete event.</p>
+    <div class="choice-bank" aria-label="Scene and event choices"><button class="choice-option" data-choice-option="were finishing">were finishing</button><button class="choice-option" data-choice-option="went out">went out</button><button class="choice-option" data-choice-option="was checking">was checking</button><button class="choice-option" data-choice-option="was saving">was saving</button><button class="choice-option" data-choice-option="started">started</button><button class="choice-option" data-choice-option="finished">finished</button></div>
+    <div class="q"><span class="n">1</span><span>The camera opens at 5:55 while the work is in progress: The staff members <button class="choice-gap" data-choice-gap data-answer="were finishing" data-hint="The plural subject staff members is inside an ongoing situation at 5:55." data-fix="The staff members were finishing the monthly report at 5:55." data-placeholder="choose">choose</button> the monthly report.</span></div>
+    <div class="q"><span class="n">2</span><span>The outage log records one complete event at 6:00: The lights <button class="choice-gap" data-choice-gap data-answer="went out" data-hint="The report treats the loss of power as one bounded event." data-fix="The lights went out at 6:00." data-placeholder="choose">choose</button> at 6:00.</span></div>
+    <div class="q"><span class="n">3</span><span>The camera shows Rina in the middle of a task at that moment: She <button class="choice-gap" data-choice-gap data-answer="was checking" data-hint="The task is open at the 6:00 reference point." data-fix="Rina was checking the figures." data-placeholder="choose">choose</button> the figures.</span></div>
+    <div class="q"><span class="n">4</span><span>The same camera shows Lee inside another task: He <button class="choice-gap" data-choice-gap data-answer="was saving" data-hint="Lee’s file task is also in progress at the reference point." data-fix="Lee was saving the file." data-placeholder="choose">choose</button> the file.</span></div>
+    <div class="q"><span class="n">5</span><span>The log records the generator’s complete start event at 6:10: It <button class="choice-gap" data-choice-gap data-answer="started" data-hint="The start is presented as one bounded event at 6:10." data-fix="The generator started at 6:10." data-placeholder="choose">choose</button> at 6:10.</span></div>
+    <div class="q"><span class="n">6</span><span>The task log marks the report complete at 6:30: The team <button class="choice-gap" data-choice-gap data-answer="finished" data-hint="The report reached its completed endpoint at 6:30." data-fix="The team finished the report at 6:30." data-placeholder="choose">choose</button> the report then.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: was / were + verb-ing</h2>
+  <h2>Get to the root: open the past scene at a reference point</h2>
   <div class="lead-rule"></div>
-  <p>Use <span class="ex">was</span> with <strong>I / he / she / it</strong>. Use <span class="ex">were</span> with <strong>you / we / they</strong>. The main verb always takes <span class="ex">-ing</span>.</p>
+  <p>The past continuous places the listener inside a situation that was in progress at a past reference point. At that point, the speaker does not show the situation’s beginning or endpoint. This is an <b>open viewpoint</b>. The past simple normally presents an event as a bounded whole and moves a report forward.</p>
   <table>
-    <thead><tr><th></th><th>I / he / she / it</th><th>you / we / they</th></tr></thead>
+    <thead><tr><th>speaker’s view</th><th>example</th><th>message</th></tr></thead>
     <tbody>
-      <tr><td><b>positive</b></td><td>I was working.</td><td>They were working.</td></tr>
-      <tr><td><b>negative</b></td><td>She wasn’t working.</td><td>We weren’t working.</td></tr>
-      <tr><td><b>question</b></td><td>Was he working?</td><td>Were you working?</td></tr>
+      <tr><td>inside the situation at 6:00</td><td><span class="ex">At six, Rina was checking the figures.</span></td><td>checking was in progress then</td></tr>
+      <tr><td>whole completed task</td><td><span class="ex">Rina checked every figure and signed the page.</span></td><td>the task is presented as bounded</td></tr>
+      <tr><td>scene around an event</td><td><span class="ex">The staff members were working when the lights went out.</span></td><td>an open scene surrounds the event</td></tr>
+      <tr><td>two open situations</td><td><span class="ex">Rina was calling while Lee was checking the panel.</span></td><td>both were in progress together</td></tr>
     </tbody>
   </table>
-  <p class="note-line">Short answers: <span class="ex">Yes, I was. / No, they weren’t.</span> Do not repeat the verb-ing form in a short answer.</p>
-
-  <h3>Why was and were do the grammar work</h3>
-  <p>You already know this logic. In the present simple, <span class="ex">do / does</span> carries the grammar. With possession, <span class="ex">have / has</span> carries it. Here, <span class="ex">was / were</span> is the moving part: it agrees with the subject, moves in front for questions, and combines with <span class="ex">not</span>. The verb-ing form never changes.</p>
-  <div class="thinking-card">
-    <h3>Follow the moving part</h3>
-    <p><span class="ex">She was sleeping. → Was she sleeping? → She wasn’t sleeping.</span></p>
-    <p>Only <span class="ex">was</span> moves or becomes negative. This is why <span class="ex">Did you were sleeping?</span> mixes two different systems and is not the target form.</p>
-  </div>
-
-  <h2>Get to the root: in progress at a past moment</h2>
-  <div class="lead-rule"></div>
-  <p>The past continuous points at a past moment and says: at that moment, the action was already happening. It had started, and it had not finished. That is why it is perfect for painting the background of a story.</p>
-  <table>
-    <thead><tr><th>use</th><th>example</th><th>meaning</th></tr></thead>
-    <tbody>
-      <tr><td><b>in progress at a past time</b></td><td>At nine, I was driving home.</td><td>The drive had started and had not finished at nine.</td></tr>
-      <tr><td><b>setting the scene</b></td><td>The sun was shining, and people were walking to work.</td><td>This describes the situation around a story.</td></tr>
-      <tr><td><b>two parallel actions</b></td><td>I was cooking while he was setting the table.</td><td>Both long actions were in progress together.</td></tr>
-    </tbody>
-  </table>
-  <p class="note-line">You already know the verb-ing spelling from the present continuous: <span class="ex">make → making</span>, <span class="ex">sit → sitting</span>, <span class="ex">study → studying</span>.</p>
-
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: choose was, were, or the verb-ing form</h3>
-    <p class="choice-hint">Read the subject first. Then choose the word that completes the past continuous.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="was">was</button>
-      <button class="choice-option" data-choice-option="were">were</button>
-      <button class="choice-option" data-choice-option="wasn’t">wasn’t</button>
-      <button class="choice-option" data-choice-option="weren’t">weren’t</button>
-      <button class="choice-option" data-choice-option="making">making</button>
-      <button class="choice-option" data-choice-option="made">made</button>
-      <button class="choice-option" data-choice-option="having">having</button>
-      <button class="choice-option" data-choice-option="had">had</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>At nine last night, I <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> still working at my desk.</span></div>
-    <div class="q"><span class="n">2</span><span>The kids <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> sleeping, so we spoke quietly.</span></div>
-    <div class="q"><span class="n">3</span><span>Sorry, I <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-placeholder="choose">choose</button> listening. Can you say that again?</span></div>
-    <div class="q"><span class="n">4</span><span>At six, she was <button class="choice-gap" data-choice-gap data-answer="making" data-placeholder="choose">choose</button> dinner for her parents.</span></div>
-    <div class="q"><span class="n">5</span><span>We were <button class="choice-gap" data-choice-gap data-answer="having" data-placeholder="choose">choose</button> coffee on the balcony at sunrise.</span></div>
-    <div class="q"><span class="n">6</span><span>It <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> snowing at seven this morning.</span></div>
-    <div class="q"><span class="n">7</span><span>They <button class="choice-gap" data-choice-gap data-answer="weren’t" data-placeholder="choose">choose</button> working yesterday; the office was closed.</span></div>
-    <div class="q"><span class="n">8</span><span>You <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> sitting next to me at the meeting, remember?</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>The heart of it: background plus interruption</h2>
-  <div class="lead-rule"></div>
-  <p>Real stories combine both past tenses. The past continuous is the long background action. The past simple is the short action that happens inside it. <span class="ex">When</span> and <span class="ex">while</span> join the two parts.</p>
-  <table>
-    <thead><tr><th>part</th><th>tense</th><th>example</th></tr></thead>
-    <tbody>
-      <tr><td><b>background (longer action)</b></td><td>past continuous</td><td>I was cooking dinner.</td></tr>
-      <tr><td><b>interruption (shorter action)</b></td><td>past simple</td><td>The phone rang.</td></tr>
-      <tr><td><b>joined with when</b></td><td>both together</td><td>I was cooking when the phone rang.</td></tr>
-      <tr><td><b>joined with while</b></td><td>both together</td><td>While I was cooking, the phone rang.</td></tr>
-    </tbody>
-  </table>
-
-  <div class="thinking-card">
-    <h3>One moment, two camera angles</h3>
-    <p><span class="ex">"While I was cooking, the phone rang."</span><br /><span class="ex">"I was cooking when the phone rang."</span></p>
-    <p>Both sentences describe the same moment. <span class="ex">While</span> sits next to the long background action. <span class="ex">When</span> usually introduces the short interruption. Choose the joining word that matches the clause next to it.</p>
-  </div>
+  <p class="note-line">The past continuous does not promise that the situation finished later. It only keeps the situation open at the chosen reference point.</p>
 
   <div class="note">
-    <h3>Verbs that stay simple</h3>
-    <p>State verbs like <span class="ex">know</span>, <span class="ex">want</span>, <span class="ex">need</span>, and <span class="ex">understand</span> describe states, not activities. They do not normally take the continuous. Say <span class="ex">I knew the answer</span> and <span class="ex">I wanted coffee</span>, not <span class="ex">I was knowing</span> or <span class="ex">I was wanting</span>.</p>
+    <h3>Duration does not choose the tense</h3>
+    <p>A long event can be presented as a completed whole: <span class="ex">Maya worked at the center for ten years, and the job ended last year.</span> A brief repeated signal can be open at one moment: <span class="ex">At exactly six, the warning light was flashing.</span> Choose the viewpoint, not a “long action” or “short action” label.</p>
+    <p>An event inside a scene is not always an interruption. It may simply occur during the scene: <span class="ex">The staff members were working when the generator started.</span></p>
   </div>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type was, were, wasn’t, or weren’t</h3>
-    <p class="choice-hint">Use <b>was</b> with I, he, she, it. Use <b>were</b> with you, we, they. Short answers never repeat the verb-ing form.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Were" aria-label="answer 1" /> you sleeping when I called?</span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Was" aria-label="answer 2" /> it raining when you left home?</span></div>
-    <div class="q"><span class="n">3</span><span>She <input class="answer-input" data-answer="was" aria-label="answer 3" /> cooking when the phone rang.</span></div>
-    <div class="q"><span class="n">4</span><span>We <input class="answer-input" data-answer="were" aria-label="answer 4" /> watching a movie when the lights went out.</span></div>
-    <div class="q"><span class="n">5</span><span>Were you sleeping? No, I <input class="answer-input" data-answer="wasn’t" aria-label="answer 5" />. I was reading.</span></div>
-    <div class="q"><span class="n">6</span><span>They <input class="answer-input" data-answer="weren’t" aria-label="answer 6" /> listening, so they missed the announcement.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
+  <h2>Build the form: was or were plus verb-ing</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>purpose</th><th>I / he / she / it</th><th>you / we / they</th></tr></thead>
+    <tbody>
+      <tr><td>positive</td><td><span class="ex">Rina was checking.</span></td><td><span class="ex">They were working.</span></td></tr>
+      <tr><td>negative</td><td><span class="ex">She wasn’t waiting.</span></td><td><span class="ex">They weren’t waiting.</span></td></tr>
+      <tr><td>question</td><td><span class="ex">Was Rina checking?</span></td><td><span class="ex">Were they working?</span></td></tr>
+      <tr><td>short answer</td><td><span class="ex">Yes, she was.</span></td><td><span class="ex">No, they weren’t.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">Was</span> or <span class="ex">were</span> carries subject agreement, moves before the subject in a question, and combines with <span class="ex">not</span>. Do not add <span class="ex">did</span>: say <span class="ex">Were they working?</span>, not <span class="ex">Did they were working?</span></p>
+
+  <div class="note">
+    <h3>Retrieve verb-ing spelling precisely</h3>
+    <p><span class="ex">work → working · make → making · sit → sitting · open → opening · lie → lying</span></p>
+    <p>Drop final silent <span class="ex">e</span> in <span class="ex">making</span>. Double a final consonant after a short stressed vowel in <span class="ex">sitting</span>, but not in unstressed <span class="ex">opening</span>. Change final <span class="ex">ie</span> to <span class="ex">y</span> in <span class="ex">lying</span>. Common U.S. spelling uses one <span class="ex">l</span> in <span class="ex">traveling</span>.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You controlled subject agreement, polarity, question order, and two important -ing spellings.">
+    <h3>Drill 1: complete the scene form</h3>
+    <div class="choice-bank" aria-label="Past-continuous form choices"><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="weren’t">weren’t</button><button class="choice-option" data-choice-option="wasn’t">wasn’t</button><button class="choice-option" data-choice-option="Was">Was</button><button class="choice-option" data-choice-option="Were">Were</button><button class="choice-option" data-choice-option="sitting">sitting</button><button class="choice-option" data-choice-option="lying">lying</button></div>
+    <div class="q"><span class="n">1</span><span>The camera shows several staff members at 6:00: They <button class="choice-gap" data-choice-gap data-answer="were" data-hint="The plural subject they takes were in the past continuous." data-fix="They were working at 6:00." data-placeholder="choose">choose</button> working.</span></div>
+    <div class="q"><span class="n">2</span><span>The camera shows one warning light: It <button class="choice-gap" data-choice-gap data-answer="was" data-hint="The singular subject it takes was." data-fix="It was flashing." data-placeholder="choose">choose</button> flashing.</span></div>
+    <div class="q"><span class="n">3</span><span>The exterior camera confirms no visitors were outside: They <button class="choice-gap" data-choice-gap data-answer="weren’t" data-hint="A plural negative uses weren’t plus waiting." data-fix="They weren’t waiting outside." data-placeholder="choose">choose</button> waiting outside.</span></div>
+    <div class="q"><span class="n">4</span><span>The activity log says Rina was using the computer, not the phone: She <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-hint="A singular negative uses wasn’t plus using." data-fix="She wasn’t using the phone." data-placeholder="choose">choose</button> using the phone.</span></div>
+    <div class="q"><span class="n">5</span><span>The manager asks yes or no about Rina: <button class="choice-gap" data-choice-gap data-answer="Was" data-hint="A singular past-continuous question begins Was." data-fix="Was Rina checking the figures?" data-placeholder="choose">choose</button> Rina checking the figures?</span></div>
+    <div class="q"><span class="n">6</span><span>The manager asks about several staff members: <button class="choice-gap" data-choice-gap data-answer="Were" data-hint="A plural past-continuous question begins Were." data-fix="Were the staff members finishing the report?" data-placeholder="choose">choose</button> the staff members finishing the report?</span></div>
+    <div class="q"><span class="n">7</span><span>At six, Lee was seated in a chair: He was <button class="choice-gap" data-choice-gap data-answer="sitting" data-hint="Sit doubles final t before -ing after its short stressed vowel." data-fix="Lee was sitting near the computer." data-placeholder="choose">choose</button> near the computer.</span></div>
+    <div class="q"><span class="n">8</span><span>The floor camera shows one cable flat on the floor: It was <button class="choice-gap" data-choice-gap data-answer="lying" data-hint="Lie changes final ie to y before -ing." data-fix="A cable was lying on the floor." data-placeholder="choose">choose</button> on the floor.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Choose viewpoint before choosing a connector</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">While</span> most naturally introduces an ongoing clause: <span class="ex">While Rina was calling, Lee was checking the panel.</span> <span class="ex">When</span> can introduce a bounded event or an ongoing situation: <span class="ex">The screen went dark when the lights went out. When the team was working, the building was quiet.</span></p>
+  <p><span class="ex">During</span> is followed by a noun phrase, not a complete subject-verb clause: <span class="ex">during the outage</span>, but <span class="ex">while the power was out</span>. A connector helps organize clauses; it does not select a tense automatically.</p>
+
+  <div class="note">
+    <h3>State or activity? Meaning comes first</h3>
+    <p>In neutral everyday English, basic state meanings normally stay simple: <span class="ex">Rina had a key. Lee knew the code. They needed more light.</span> Do not use <span class="ex">was having</span> for possession or <span class="ex">was knowing</span> for knowledge.</p>
+    <p>The same verb can enter an activity meaning: <span class="ex">Rina was having lunch</span> means eating or experiencing the meal. <span class="ex">Lee was thinking about the problem</span> describes an active mental process. Choose from the intended meaning, not from a permanent verb blacklist.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose an open or bounded viewpoint from evidence and matched while to a clause and during to a noun.">
+    <h3>Drill 2: use the stated camera or log view</h3>
+    <div class="choice-bank" aria-label="Viewpoint and connector choices"><button class="choice-option" data-choice-option="was checking">was checking</button><button class="choice-option" data-choice-option="checked">checked</button><button class="choice-option" data-choice-option="worked">worked</button><button class="choice-option" data-choice-option="was flashing">was flashing</button><button class="choice-option" data-choice-option="while">while</button><button class="choice-option" data-choice-option="during">during</button></div>
+    <div class="q"><span class="n">1</span><span>The camera freezes at exactly 6:00 in the middle of Rina’s task: She <button class="choice-gap" data-choice-gap data-answer="was checking" data-hint="The task is open at the exact camera reference point." data-fix="At exactly 6:00, Rina was checking the figures." data-placeholder="choose">choose</button> the figures.</span></div>
+    <div class="q"><span class="n">2</span><span>The checklist marks every figure complete and signed at 5:50: Rina <button class="choice-gap" data-choice-gap data-answer="checked" data-hint="The task is presented as a completed whole before 6:00." data-fix="Rina checked every figure and signed the page at 5:50." data-placeholder="choose">choose</button> every figure.</span></div>
+    <div class="q"><span class="n">3</span><span>Maya’s ten-year job ended last year, so the whole period is bounded: She <button class="choice-gap" data-choice-gap data-answer="worked" data-hint="A long duration can use past simple when the speaker presents the finished period as a whole." data-fix="Maya worked at the center for ten years." data-placeholder="choose">choose</button> there for ten years.</span></div>
+    <div class="q"><span class="n">4</span><span>The 6:00 camera shows the warning light repeatedly turning on and off: It <button class="choice-gap" data-choice-gap data-answer="was flashing" data-hint="The repeated signal is open and in progress at the reference point." data-fix="At 6:00, the warning light was flashing." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Both clauses describe activities in progress together: <button class="choice-gap" data-choice-gap data-answer="while" data-hint="While naturally introduces the ongoing calling clause." data-fix="While Rina was calling maintenance, Lee was checking the panel." data-placeholder="choose">choose</button> Rina was calling maintenance, Lee was checking the panel.</span></div>
+    <div class="q"><span class="n">6</span><span>The next words form the noun phrase <b>the outage</b>: The emergency lights stayed on <button class="choice-gap" data-choice-gap data-answer="during" data-hint="During is followed by the noun phrase the outage." data-fix="The emergency lights stayed on during the outage." data-placeholder="choose">choose</button> the outage.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: keep the scene light and the event clear</h2>
+  <div class="lead-rule"></div>
+  <p>In relaxed U.S. English, <span class="ex">was</span> often reduces to /wəz/ and <span class="ex">were</span> often reduces to /wɚ/ inside a statement. The activity and new event carry stronger stress: <span class="ex">Rina was <strong>CHECK</strong>ing when the lights went <strong>OUT</strong>.</span></p>
+  <p>Keep <span class="ex">-ing</span> as one final nasal sound, without adding a separate hard <span class="ex">g</span>. Link a question smoothly: <span class="ex">What-were-you <strong>DO</strong>ing?</span> A short pause after an opening <span class="ex">while</span> or <span class="ex">when</span> clause helps the listener hear the scene boundary.</p>
+
+  <section data-lesson-extension="Tutor-read open-scene, bounded-event, polarity, question, state, and parallel-action listening check">
+    <h2>Listen: scene, event, or state?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once naturally and once more slowly. Listen for viewpoint, polarity, question order, and state versus activity meaning. Open the script only after checking.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard an open scene, a bounded event, polarity, question order, a state, and parallel actions.">
+      <h3>Tutor-read listening check</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="checking was in progress at six" data-hint="Was checking opens Rina’s task at the 6:00 reference point." data-fix="At six, Rina was checking the figures, so the task was in progress then.">
+          <p class="quiz-question">1. What viewpoint does Clip 1 give?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="checking was in progress at six">checking was in progress at six</button><button class="quiz-option" data-quiz-option="checking finished before six">checking finished before six</button><button class="quiz-option" data-quiz-option="checking normally happens at six">checking normally happens at six</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the task was complete at 5:50" data-hint="Checked every figure and signed the page presents the task as a bounded whole." data-fix="Rina checked every figure and signed the page at 5:50, so the task was complete then.">
+          <p class="quiz-question">2. What does Clip 2 establish?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the task was complete at 5:50">the task was complete at 5:50</button><button class="quiz-option" data-quiz-option="the task was in progress at six">the task was in progress at six</button><button class="quiz-option" data-quiz-option="the task happens every day">the task happens every day</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the warning light was repeatedly on and off" data-hint="Was flashing presents the repeated signal in progress." data-fix="The warning light was flashing, so it was repeatedly turning on and off.">
+          <p class="quiz-question">3. What was happening in Clip 3?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the warning light was repeatedly on and off">the warning light was repeatedly on and off</button><button class="quiz-option" data-quiz-option="the warning light stayed off">the warning light stayed off</button><button class="quiz-option" data-quiz-option="the warning light flashed once and stopped">the warning light flashed once and stopped</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the staff members were not waiting outside" data-hint="Listen for weren’t before waiting." data-fix="The staff members weren’t waiting outside.">
+          <p class="quiz-question">4. What does Clip 4 report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the staff members were not waiting outside">the staff members were not waiting outside</button><button class="quiz-option" data-quiz-option="the staff members were waiting outside">the staff members were waiting outside</button><button class="quiz-option" data-quiz-option="the visitors were not inside">the visitors were not inside</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="whether Lee was saving the file" data-hint="Was Lee saving the file requests yes or no about his ongoing task." data-fix="Was Lee saving the file? asks whether that task was in progress.">
+          <p class="quiz-question">5. What information does Clip 5 request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="whether Lee was saving the file">whether Lee was saving the file</button><button class="quiz-option" data-quiz-option="why Lee saved the file">why Lee saved the file</button><button class="quiz-option" data-quiz-option="when Lee finished the file">when Lee finished the file</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="Rina was calling while Lee was checking" data-hint="While connects two activities that were in progress together." data-fix="Rina was calling maintenance while Lee was checking the panel.">
+          <p class="quiz-question">6. Which two activities were in progress together in Clip 6?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rina was calling while Lee was checking">Rina was calling while Lee was checking</button><button class="quiz-option" data-quiz-option="Rina called after Lee checked">Rina called after Lee checked</button><button class="quiz-option" data-quiz-option="Lee called while Rina checked">Lee called while Rina checked</button></div>
+        </div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">At six, Rina was checking the figures.</span></li>
+        <li><span class="ex">Rina checked every figure and signed the page at 5:50.</span></li>
+        <li><span class="ex">The warning light was flashing.</span></li>
+        <li><span class="ex">The staff members weren’t waiting outside.</span></li>
+        <li><span class="ex">Was Lee saving the file?</span></li>
+        <li><span class="ex">While Rina was calling maintenance, Lee was checking the panel.</span></li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read a connected outage report</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message about last night</h3>
-    <p><span class="ex">"Hi Dana! You missed the excitement at the office yesterday. Around six, we were finishing the monthly report when the lights went out. Everyone was talking at once, and Leo was looking for a flashlight when the power came back on. We were only sitting in the dark for ten minutes, but after that, nobody was working. We packed up and went home."</span></p>
+    <h3>What the cameras and event log showed</h3>
+    <p><span class="ex">At 5:55, the staff members were finishing a monthly report. Rina was checking the last page while Lee was saving the file. At 6:00, the lights went out and the screen went dark. The emergency lights came on immediately. While Rina was calling maintenance, Lee checked the electrical panel. The generator started at 6:10, and the team finished the report at 6:30.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed a real story told with both past tenses.">
-    <h3>Drill 3: read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You located the open scene, the first bounded event, and Lee’s activity during the call.">
+    <h3>Read, then choose the exact evidence</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="finishing the report">
-        <p class="quiz-question">1. What were they doing when the lights went out?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="finishing the report">finishing the report</button><button class="quiz-option" data-quiz-option="going home">going home</button><button class="quiz-option" data-quiz-option="having lunch">having lunch</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="finishing a monthly report" data-hint="The opening sentence states what the staff members were doing at 5:55." data-fix="At 5:55, the staff members were finishing a monthly report.">
+        <p class="quiz-question">1. What was in progress at 5:55?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="finishing a monthly report">finishing a monthly report</button><button class="quiz-option" data-quiz-option="starting the generator">starting the generator</button><button class="quiz-option" data-quiz-option="leaving the building">leaving the building</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Leo">
-        <p class="quiz-question">2. Who was looking for a flashlight?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Leo">Leo</button><button class="quiz-option" data-quiz-option="Dana">Dana</button><button class="quiz-option" data-quiz-option="the writer">the writer</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="the lights went out" data-hint="The first bounded event at 6:00 is stated before the screen went dark." data-fix="At 6:00, the lights went out first.">
+        <p class="quiz-question">2. Which bounded event does the report mention first at 6:00?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the lights went out">the lights went out</button><button class="quiz-option" data-quiz-option="the generator started">the generator started</button><button class="quiz-option" data-quiz-option="the report finished">the report finished</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="ten minutes">
-        <p class="quiz-question">3. How long were they sitting in the dark?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="ten minutes">ten minutes</button><button class="quiz-option" data-quiz-option="an hour">an hour</button><button class="quiz-option" data-quiz-option="all evening">all evening</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="he checked the electrical panel" data-hint="The while sentence states Lee’s action during Rina’s maintenance call." data-fix="While Rina was calling maintenance, Lee checked the electrical panel.">
+        <p class="quiz-question">3. What did Lee do while Rina was calling maintenance?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="he checked the electrical panel">he checked the electrical panel</button><button class="quiz-option" data-quiz-option="he called maintenance">he called maintenance</button><button class="quiz-option" data-quiz-option="he finished the report">he finished the report</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she was reading when the phone rang">
-    <h3>Drill 4: build the story sentence</h3>
-    <p class="tile-target">Build the sentence. Background action first, then the interruption.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="rang">rang</button>
-      <button class="tile" data-build-tile="she">She</button>
-      <button class="tile" data-build-tile="when">when</button>
-      <button class="tile" data-build-tile="reading">reading</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="was">was</button>
-      <button class="tile" data-build-tile="phone">phone</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="were you sleeping at midnight">
-    <h3>Drill 5: build the question</h3>
-    <p class="tile-target">Build the question. Remember: were moves in front of the subject.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="sleeping">sleeping</button>
-      <button class="tile" data-build-tile="at">at</button>
-      <button class="tile" data-build-tile="were">Were</button>
-      <button class="tile" data-build-tile="midnight">midnight</button>
-      <button class="tile" data-build-tile="you">you</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
+  <h2>Build the scene and event relationship</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="work" data-fix="I was working at nine last night." data-why="After was or were, the main verb needs -ing: was working.">
-    <h3>Drill 6: after was and were</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="i">I</button>
-      <button class="error-choice" data-error-choice="was">was</button>
-      <button class="error-choice" data-error-choice="work">work</button>
-      <button class="error-choice" data-error-choice="nine">at nine</button>
-      <button class="error-choice" data-error-choice="night">last night.</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="rina was checking the figures at six" data-hint="Begin with Rina, add was checking, then the object and reference time." data-fix="Rina was checking the figures at six." data-success-message="Correct. The sentence opens Rina’s activity at the exact six o’clock reference point.">
+    <h3>Drill 3: build the open scene</h3>
+    <p class="tile-target">The 6:00 camera shows Rina in the middle of the task.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="figures">figures</button><button class="tile" data-build-tile="rina">Rina</button><button class="tile" data-build-tile="at">at</button><button class="tile" data-build-tile="checking">checking</button><button class="tile" data-build-tile="six">six</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="was">was</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer="the screen went dark while lee was saving the file" data-hint="Begin with the screen event, then add while plus Lee’s ongoing file activity." data-fix="The screen went dark while Lee was saving the file." data-success-message="Correct. The bounded screen event is related to Lee’s open file-saving situation with while.">
+    <h3>Drill 4: build the event inside the scene</h3>
+    <p class="tile-target">The screen event happened during Lee’s ongoing task.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="saving">saving</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="dark">dark</button><button class="tile" data-build-tile="screen">screen</button><button class="tile" data-build-tile="file">file</button><button class="tile" data-build-tile="was">was</button><button class="tile" data-build-tile="went">went</button><button class="tile" data-build-tile="while">while</button><button class="tile" data-build-tile="lee">Lee</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair three high-value errors</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="check" data-hint="After was, the activity verb needs its -ing form." data-fix="Rina was checking the figures at six." data-why="Past continuous is was or were plus verb-ing, so check must become checking." data-success-message="Correct. You restored the required verb-ing form after was.">
+    <h3>Drill 5: complete the two-part verb</h3>
+    <p>The camera report says, “Rina was check the figures at six.” Tap the word to repair.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="rina">Rina</button><button class="error-choice" data-error-choice="was">was</button><button class="error-choice" data-error-choice="check">check</button><button class="error-choice" data-error-choice="figures">the figures at six.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="did" data-fix="Were you sleeping?" data-why="Past continuous questions move was or were in front of the subject. There is no did in this system.">
-    <h3>Drill 7: one system at a time</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="did">Did</button>
-      <button class="error-choice" data-error-choice="you">you</button>
-      <button class="error-choice" data-error-choice="were">were</button>
-      <button class="error-choice" data-error-choice="sleeping">sleeping?</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="did" data-hint="A past-continuous question moves Were before the subject and does not add did." data-fix="Were the staff members working at six?" data-why="Were already carries past tense and agreement in this continuous question, so did would mix two systems." data-success-message="Correct. You removed did and used the independent were-plus-working question system.">
+    <h3>Drill 6: keep one question system</h3>
+    <p>The manager asks, “Did the staff members were working at six?” Tap the word to remove.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="did">Did</button><button class="error-choice" data-error-choice="staff">the staff members</button><button class="error-choice" data-error-choice="were">were</button><button class="error-choice" data-error-choice="working">working at six?</button></div>
+    <p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="during-clause" data-hint="During needs a noun phrase; a complete subject-verb clause uses while or when." data-fix="While the team was working, the building was quiet." data-why="The team was working is a clause, so while can introduce it. During would need a noun phrase such as during the work session." data-success-message="Correct. You matched while to the complete ongoing clause.">
+    <h3>Drill 7: connector plus noun or clause?</h3>
+    <p>The report says, “During the team was working, the building was quiet.” Tap the opening to repair.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="during-clause">During the team was working,</button><button class="error-choice" data-error-choice="building">the building</button><button class="error-choice" data-error-choice="was">was</button><button class="error-choice" data-error-choice="quiet">quiet.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 8: say it, then reveal</h3>
-    <p>Read the cue, say the full sentence aloud, then reveal only after you answer.</p>
+    <h3>Oral transform: change the viewpoint, not the facts</h3>
+    <p>Say every response before revealing it.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> I was watching a movie. Change to she.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>She was watching a movie.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> She was working late. Ask the question.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Was she working late?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> They were sleeping. Make it negative.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>They weren’t sleeping.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> Were you driving at ten? Answer yes.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Yes, I was.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> I was cooking. The phone rang. Join them with when.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I was cooking when the phone rang.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> I was cooking. The phone rang. Join them with while.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>While I was cooking, the phone rang.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> Rina checked the figures. Open the task at 6:00.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>At 6:00, Rina was checking the figures.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> Lee was saving the file. Make it negative.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Lee wasn’t saving the file.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> The staff members were working. Ask about 6:00.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Were the staff members working at 6:00?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Rina had a key. Explain why the basic possession meaning stays simple.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Had describes possession as a state here, so the neutral form is Rina had a key.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> Rina was calling. Lee was checking. Connect two ongoing activities.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>While Rina was calling, Lee was checking the panel.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> The lights went out. The team was working. Put the bounded event first.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>The lights went out while the team was working.</strong></p></div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it: reconstruct a fictional incident</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Yesterday at three times:</b> Say what you were doing at three moments yesterday. <span class="ex">At seven, I was making coffee. At nine, I was answering emails.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask three <span class="ex">What were you doing at…?</span> questions. Listen and ask one follow-up question. <span class="ex">What were you doing at eight last night?</span></div>
-  <div class="prompt-card"><b>Set the scene:</b> Describe the start of your morning like the opening of a story: the weather, the street, the people. <span class="ex">The sun was shining. My neighbors were leaving for work.</span></div>
-  <div class="prompt-card"><b>A real interruption:</b> Tell about a time something interrupted you. Use <span class="ex">when</span>. <span class="ex">I was taking a shower when someone knocked on the door.</span></div>
-  <div class="prompt-card"><b>Same moment, two people:</b> Describe what you and another person were doing at the same moment. Use <span class="ex">while</span>. <span class="ex">While I was cooking, my brother was setting the table.</span></div>
+  <p class="note-line">You never need to disclose your real work, study, home, location, schedule, travel, family, relationships, finances, devices, health, emergencies, or difficult experiences. Use the fictional outage evidence, invent a public event, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Freeze the camera:</b> At 5:55 and 6:00, describe three activities already in progress. Include one negative and one question.</div>
+  <div class="prompt-card"><b>Move the report forward:</b> Add three bounded events from the log. Explain why duration alone does not select either tense.</div>
+  <div class="prompt-card"><b>Connect the evidence:</b> Use one <span class="ex">while + clause</span>, one flexible <span class="ex">when</span> clause, and one <span class="ex">during + noun phrase</span>.</div>
+  <div class="prompt-card"><b>Final production: give a fictional power-outage report for 45–60 seconds.</b> Establish one exact reference time; describe at least three open situations; add three bounded events in order; include a negative or question; use <span class="ex">while</span> or <span class="ex">when</span> accurately; and end with one unresolved detail for the listener to ask about.</div>
 
-  <h2>Reflect</h2>
+  <h2>Final check</h2>
   <div class="lead-rule"></div>
-  <div class="thinking-card">
-    <h3>Say the system back</h3>
-    <p>Complete this aloud: “For an action in progress in the past, I use ______ or ______ plus the ______ form. For a question, ______ moves in front of the subject. A short interruption inside the background uses the past ______.”</p>
-    <p>Then say one background sentence, one question, and one full story sentence with <span class="ex">when</span> about your real week.</p>
-  </div>
-
-  <div class="quiz" data-quiz data-success-message="Great. You can describe past moments in progress, set the scene, and tell a story with when and while.">
-    <h3>Final quiz: past continuous forms and meaning</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled open viewpoint, bounded events, form, state meaning, and clause connectors.">
+    <h3>Eight decisions from a new incident report</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="was">
-        <p class="quiz-question">1. At ten last night, I ___ still working.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="am">am</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="was checking" data-hint="The camera freezes in the middle of Maya’s task at exactly 8:00." data-fix="At exactly 8:00, Maya was checking the doors.">
+        <p class="quiz-question">1. The camera freezes at exactly 8:00 while Maya’s task is open: She ___ the doors.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="was checking">was checking</button><button class="quiz-option" data-quiz-option="checked">checked</button><button class="quiz-option" data-quiz-option="checks">checks</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="were">
-        <p class="quiz-question">2. They ___ waiting outside when we arrived.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="did">did</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="checked" data-hint="The log marks the door check complete at 8:05." data-fix="Maya checked every door and signed the log at 8:05.">
+        <p class="quiz-question">2. The log marks the whole task complete at 8:05: Maya ___ every door and signed the page.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="checked">checked</button><button class="quiz-option" data-quiz-option="was checking">was checking</button><button class="quiz-option" data-quiz-option="is checking">is checking</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Were">
-        <p class="quiz-question">3. ___ you sleeping when I called?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Were">Were</button><button class="quiz-option" data-quiz-option="Was">Was</button><button class="quiz-option" data-quiz-option="Did">Did</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="were" data-hint="The plural subject they takes were before waiting." data-fix="They were waiting near the entrance.">
+        <p class="quiz-question">3. The camera shows two visitors at that moment: They ___ waiting near the entrance.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="did">did</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="was">
-        <p class="quiz-question">4. Were you driving at ten? Yes, I ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="did">did</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Were the visitors waiting?" data-hint="A plural past-continuous question moves Were before the subject." data-fix="Were the visitors waiting?">
+        <p class="quiz-question">4. Which question asks whether the visitors’ wait was in progress?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Were the visitors waiting?">Were the visitors waiting?</button><button class="quiz-option" data-quiz-option="Did the visitors were waiting?">Did the visitors were waiting?</button><button class="quiz-option" data-quiz-option="Were the visitors wait?">Were the visitors wait?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="wasn’t">
-        <p class="quiz-question">5. He ___ paying attention, so he missed his stop.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="wasn’t">wasn’t</button><button class="quiz-option" data-quiz-option="weren’t">weren’t</button><button class="quiz-option" data-quiz-option="didn’t">didn’t</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="wasn’t listening" data-hint="One person in a negative ongoing situation takes wasn’t plus listening." data-fix="Lee wasn’t listening when the announcement began.">
+        <p class="quiz-question">5. The report says Lee missed the announcement because the activity was not in progress: He ___ when it began.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="wasn’t listening">wasn’t listening</button><button class="quiz-option" data-quiz-option="didn’t listening">didn’t listening</button><button class="quiz-option" data-quiz-option="weren’t listening">weren’t listening</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="when">
-        <p class="quiz-question">6. I was cooking ___ the phone rang.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="when">when</button><button class="quiz-option" data-quiz-option="while">while</button><button class="quiz-option" data-quiz-option="during">during</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="knew" data-hint="Basic knowledge is a state here, so neutral everyday English uses past simple knew." data-fix="Rina knew the access code.">
+        <p class="quiz-question">6. The report describes possession of information, not an active thinking process: Rina ___ the access code.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="knew">knew</button><button class="quiz-option" data-quiz-option="was knowing">was knowing</button><button class="quiz-option" data-quiz-option="was know">was know</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I knew the answer.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I knew the answer.">I knew the answer.</button><button class="quiz-option" data-quiz-option="I was knowing the answer.">I was knowing the answer.</button><button class="quiz-option" data-quiz-option="I was know the answer.">I was know the answer.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="during" data-hint="The outage is a noun phrase, so during can introduce it." data-fix="The emergency lights stayed on during the outage.">
+        <p class="quiz-question">7. The next words form the noun phrase <b>the outage</b>: The emergency lights stayed on ___ the outage.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="during">during</button><button class="quiz-option" data-quiz-option="while">while</button><button class="quiz-option" data-quiz-option="when">when</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="While I was cooking, the phone rang.">
-        <p class="quiz-question">8. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="While I was cooking, the phone rang.">While I was cooking, the phone rang.</button><button class="quiz-option" data-quiz-option="While I cooking, the phone rang.">While I cooking, the phone rang.</button><button class="quiz-option" data-quiz-option="While I was cook, the phone rang.">While I was cook, the phone rang.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="when" data-hint="The alarm rang once as a bounded event, so when naturally introduces it in this report." data-fix="Maya was checking the doors when the alarm rang once at 8:02.">
+        <p class="quiz-question">8. The log records one alarm ring at 8:02: Maya was checking the doors ___ the alarm rang once.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="when">when</button><button class="quiz-option" data-quiz-option="during">during</button><button class="quiz-option" data-quiz-option="because">because</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check quiz</button><button class="lesson-btn" data-reset-quiz>Reset quiz</button></div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <h2>Reflect and plan the next use</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Can you do this without the page?</h3>
+    <p>Explain why <span class="ex">Maya worked there for ten years</span> can be past simple even though it is long, while <span class="ex">The light was flashing at six</span> can be continuous even though each flash is brief. Then contrast one open scene with one bounded event.</p>
+    <p>Choose your next use: retell the outage with fewer notes, ask three camera-detail questions, or complete the retrieval below tomorrow.</p>
+  </div>
+
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the viewpoint, form, state meaning, connector, or spoken pattern that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day open-scene and bounded-event retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an open scene, a bounded event, and neutral past-simple state meaning.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day viewpoint choices"><button class="choice-option" data-choice-option="was checking">was checking</button><button class="choice-option" data-choice-option="checked">checked</button><button class="choice-option" data-choice-option="went out">went out</button><button class="choice-option" data-choice-option="was going out">was going out</button><button class="choice-option" data-choice-option="knew">knew</button><button class="choice-option" data-choice-option="was knowing">was knowing</button></div>
+      <div class="q"><span class="n">1</span><span>The camera freezes at exactly six inside Rina’s task: She <button class="choice-gap" data-choice-gap data-answer="was checking" data-hint="The activity is open at the reference point." data-fix="At six, Rina was checking the figures." data-placeholder="choose">choose</button> the figures.</span></div>
+      <div class="q"><span class="n">2</span><span>The outage log records one bounded event at 6:00: The lights <button class="choice-gap" data-choice-gap data-answer="went out" data-hint="The report treats the power loss as one complete event." data-fix="The lights went out at 6:00." data-placeholder="choose">choose</button> at 6:00.</span></div>
+      <div class="q"><span class="n">3</span><span>The report describes knowledge as a state: Lee <button class="choice-gap" data-choice-gap data-answer="knew" data-hint="Basic knowledge normally stays simple in neutral everyday English." data-fix="Lee knew the access code." data-placeholder="choose">choose</button> the access code.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="did" data-hint="A past-continuous question begins Were and needs no did." data-fix="Were the staff members working at six?" data-why="Were already carries tense and agreement, so adding did mixes two question systems." data-success-message="Correct. You removed did and restored the past-continuous question system.">
+      <h3>Repair one high-risk question</h3>
+      <p>The manager asks, “Did the staff members were working at six?” Tap the word to remove.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="did">Did</button><button class="error-choice" data-error-choice="staff">the staff members</button><button class="error-choice" data-error-choice="were">were</button><button class="error-choice" data-error-choice="working">working at six?</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, give one open past scene, one bounded event, one negative, one past-continuous question, one state meaning, and one accurate <span class="ex">while</span>, <span class="ex">when</span>, or <span class="ex">during</span> connection.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Rina was checking the figures. The lights went out. Lee wasn’t saving the file. Were the staff members working? Rina had a key. The screen went dark while Lee was working.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

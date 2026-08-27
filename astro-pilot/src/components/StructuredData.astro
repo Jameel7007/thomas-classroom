@@ -1,0 +1,13 @@
+---
+interface Props {
+  nodes: Record<string, unknown>[];
+}
+
+const { nodes } = Astro.props;
+const payload = {
+  "@context": "https://schema.org",
+  "@graph": nodes,
+};
+const json = JSON.stringify(payload).replaceAll("<", "\\u003c");
+---
+<script is:inline type="application/ld+json" set:html={json} />

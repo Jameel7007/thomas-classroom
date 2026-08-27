@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "imperatives · A1 Grammar · Curriculum Map",
+  "title": "Imperatives · A1 Grammar",
   "slug": "imperatives",
   "level": "A1",
   "topic": "Imperatives",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Give directions, instructions, warnings, and friendly suggestions: Turn left at the bank , Please take a seat , and Let’s start .",
+  "description": "Build positive and negative imperatives for directions, instructions, requests, and warnings, and use let’s for suggestions.",
   "sequence": 10,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/classroom-objects", "a1/can-for-ability-and-permission"],
+  "related": ["a1/object-pronouns", "a1/daily-routines-and-telling-the-time", "a2/town-and-directions"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Base/negative forms, understood and explicit you, please/request choices, do not, let's/let me, sequence, U.S. rhythm, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 10</p>
   <h1>Instructions with the <em>imperative</em></h1>
   <p class="standfirst">Give directions, instructions, warnings, and friendly suggestions: <span class="ex">Turn left at the bank</span>, <span class="ex">Please take a seat</span>, and <span class="ex">Let’s start</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">instructions and directions</span>
     <span class="tag">don’t and let’s</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Follow a friend’s real directions.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Follow fictional arrival directions.</span></div>
     <div class="flow-step"><b>Discover</b><span>Find the missing subject.</span></div>
     <div class="flow-step"><b>Build</b><span>Make negatives, polite requests, and suggestions.</span></div>
-    <div class="flow-step"><b>Use</b><span>Guide a real person step by step.</span></div>
+    <div class="flow-step"><b>Use</b><span>Guide a fictional visitor step by step.</span></div>
   </div>
 
   <p class="note-line">Imperatives are everyday grammar for directions, instructions, recipes, warnings, and plans. They are the fastest way to help another person do something.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an object form, a present ability limit, and a two-reference place relation.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -52,9 +60,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="between">between</button>
       <button class="choice-option" data-choice-option="next to">next to</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Ana sent the report early, so I called <button class="choice-gap" data-choice-gap data-answer="her" data-placeholder="choose">choose</button> to say thanks. &nbsp;<span class="contraction">(object pronouns)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Marco <button class="choice-gap" data-choice-gap data-answer="can’t" data-placeholder="choose">choose</button> drive, so he takes the bus to work. &nbsp;<span class="contraction">(can)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The pharmacy is <button class="choice-gap" data-choice-gap data-answer="between" data-placeholder="choose">choose</button> the bank and the café, in the middle of the block. &nbsp;<span class="contraction">(prepositions of place)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The profile introduces Ana with <span class="ex">she</span>: Ana sent the report early, so I called <button class="choice-gap" data-choice-gap data-answer="her" data-hint="After called, the stated subject form she changes to the object form her." data-fix="Ana sent the report early, so I called her to say thanks." data-placeholder="choose">choose</button> to say thanks. &nbsp;<span class="contraction">(object pronouns)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Marco’s fictional profile reports no driving ability: Marco <button class="choice-gap" data-choice-gap data-answer="can’t" data-hint="No driving ability requires the negative modal can’t before the base verb drive." data-fix="Marco can’t drive, so he takes the bus to work." data-placeholder="choose">choose</button> drive, so he takes the bus to work. &nbsp;<span class="contraction">(can)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The map places the pharmacy in the middle, with the bank on one side and the café on the other: It is <button class="choice-gap" data-choice-gap data-answer="between" data-hint="One place in the middle of two named reference points takes between." data-fix="The pharmacy is between the bank and the café." data-placeholder="choose">choose</button> the bank and the café. &nbsp;<span class="contraction">(prepositions of place)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -65,7 +73,7 @@ export const page = defineLesson({
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A friend’s directions</h3>
+    <h3>Fictional arrival directions</h3>
     <p><span class="ex">"Turn left on Main Street. Don’t park in front of the building. Call me when you arrive."</span></p>
     <ul>
       <li>Where is the subject in these sentences?</li>
@@ -74,7 +82,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The route and contact reasons make each positive or negative action necessary.">
     <h3>Discovery check: choose the pattern</h3>
     <p class="choice-hint">Every instruction starts with the verb. Read the reason after the gap, then choose the positive or negative chunk.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -83,12 +91,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Call">Call</button>
       <button class="choice-option" data-choice-option="Don’t call">Don’t call</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Turn" data-placeholder="choose">choose</button> right at the supermarket, and the office is on your left.</span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t turn" data-placeholder="choose">choose</button> left on Oak Street; it’s closed for repairs.</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Call" data-placeholder="choose">choose</button> me when you arrive, and I’ll open the gate.</span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t call" data-placeholder="choose">choose</button> me after ten tonight; I go to bed early.</span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="Call" data-placeholder="choose">choose</button> the restaurant and ask for a table by the window.</span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t turn" data-placeholder="choose">choose</button> into the parking garage; it’s for residents only.</span></div>
+    <div class="q"><span class="n">1</span><span>The route requires a right at the supermarket: <button class="choice-gap" data-choice-gap data-answer="Turn" data-hint="The route requires the action, so use the positive base-verb chunk Turn." data-fix="Turn right at the supermarket, and the office is on your left." data-placeholder="choose">choose</button> right at the supermarket, and the office is on your left.</span></div>
+    <div class="q"><span class="n">2</span><span>Oak Street is closed for repairs: <button class="choice-gap" data-choice-gap data-answer="Don’t turn" data-hint="The closed street makes the left turn an action to avoid." data-fix="Don’t turn left on Oak Street; it’s closed for repairs." data-placeholder="choose">choose</button> left on Oak Street.</span></div>
+    <div class="q"><span class="n">3</span><span>The fictional host must open a locked gate after the visitor arrives: <button class="choice-gap" data-choice-gap data-answer="Call" data-hint="The host needs the arrival signal, so use the positive instruction Call." data-fix="Call me when you arrive, and I’ll open the gate." data-placeholder="choose">choose</button> me when you arrive.</span></div>
+    <div class="q"><span class="n">4</span><span>The fictional host’s quiet hours begin at ten: <button class="choice-gap" data-choice-gap data-answer="Don’t call" data-hint="The time restriction makes calling after ten an action to avoid." data-fix="Don’t call me after ten tonight; I go to bed early." data-placeholder="choose">choose</button> me after ten tonight.</span></div>
+    <div class="q"><span class="n">5</span><span>The group needs a reservation by the window: <button class="choice-gap" data-choice-gap data-answer="Call" data-hint="Getting the reservation requires the positive action Call." data-fix="Call the restaurant and ask for a table by the window." data-placeholder="choose">choose</button> the restaurant and ask for a table by the window.</span></div>
+    <div class="q"><span class="n">6</span><span>The garage sign says residents only: <button class="choice-gap" data-choice-gap data-answer="Don’t turn" data-hint="The access restriction makes entering the garage an action to avoid." data-fix="Don’t turn into the parking garage; it’s for residents only." data-placeholder="choose">choose</button> into the parking garage.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -98,21 +106,21 @@ export const page = defineLesson({
 
   <h2>The system: the base verb does everything</h2>
   <div class="lead-rule"></div>
-  <p>An imperative starts with the <strong>base verb</strong> and has no written subject. <span class="ex">Don’t</span> makes it negative, <span class="ex">please</span> makes it polite, and <span class="ex">let’s</span> turns it into a shared plan.</p>
+  <p>An ordinary imperative starts with the <strong>base verb</strong> and usually has no written subject. <span class="ex">Don’t</span> makes it negative, <span class="ex">please</span> can soften it, and <span class="ex">let’s</span> turns it into a shared plan.</p>
   <table>
     <thead><tr><th>purpose</th><th>pattern</th><th>example</th></tr></thead>
     <tbody>
       <tr><td><b>positive instruction</b></td><td>base verb, no subject</td><td>Turn left at the light.</td></tr>
       <tr><td><b>negative</b></td><td>don’t + base verb</td><td>Don’t park here.</td></tr>
-      <tr><td><b>polite</b></td><td>please at the start or the end</td><td>Please wait here. Wait here, please.</td></tr>
+      <tr><td><b>softened</b></td><td>please at the start or the end</td><td>Please wait here. Wait here, please.</td></tr>
       <tr><td><b>suggestion with us</b></td><td>let’s + base verb</td><td>Let’s take a break.</td></tr>
     </tbody>
   </table>
   <p class="note-line">The verb never changes. No <span class="ex">-s</span>, no <span class="ex">-ing</span>, and no <span class="ex">to</span>: say <span class="ex">Don’t worry</span>, not <span class="ex">Don’t to worry</span>.</p>
 
-  <h2>Get to the root: the hidden subject is always you</h2>
+  <h2>Get to the root: an ordinary imperative addresses you</h2>
   <div class="lead-rule"></div>
-  <p>An imperative begins with the base verb because the subject <span class="ex">you</span> is understood from the situation. The speaker is directing the words at the listener: <span class="ex">(You) open the file</span>. English leaves <span class="ex">you</span> unspoken because it is already obvious. This is also why there is never a <span class="ex">-s</span> ending: <span class="ex">she opens</span> agrees with <span class="ex">she</span>, but an imperative always speaks to <span class="ex">you</span>, so there is nothing for the verb to agree with.</p>
+  <p>An ordinary imperative begins with the base verb because <span class="ex">you</span>, the listener or listeners, is understood from the situation: <span class="ex">(You) open the file</span>. English normally leaves <span class="ex">you</span> unspoken because the addressee is already obvious. This is why there is no third-person <span class="ex">-s</span>: <span class="ex">she opens</span> is a statement about her, but <span class="ex">Open the file</span> directly addresses the listener.</p>
   <div class="thinking-card">
     <h3>Why context is essential</h3>
     <p><span class="ex">Turn left.</span> can be helpful directions. <span class="ex">Take one tablet with food.</span> can be medical instructions. <span class="ex">Don’t move.</span> can be a warning. The grammar is the same; purpose, relationship, and tone determine how the listener understands it.</p>
@@ -128,8 +136,14 @@ export const page = defineLesson({
       <tr><td>emphasize</td><td>do + base verb</td><td>Do come in. Do be careful.</td></tr>
     </tbody>
   </table>
+  <p class="note-line"><span class="ex">Don’t</span> is the normal conversational negative. Signs, formal rules, and especially firm warnings may use full <span class="ex">Do not</span>: <span class="ex">Do not enter</span>. Positive <span class="ex">do</span> adds warmth or insistence rather than ordinary form: <span class="ex">Do come in</span> can sound warmly encouraging; <span class="ex">Do be careful</span> strongly emphasizes the warning.</p>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>When you is spoken</h3>
+    <p>An explicit <span class="ex">you</span> is possible when the speaker contrasts listeners or adds emphasis: <span class="ex">You wait here; Marco, come with me.</span> It can sound strong, so it is not the neutral default. Words that name the addressee sit outside the core instruction: <span class="ex">Maya, open the file</span> and <span class="ex">Everyone, take a seat</span>.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each workplace, test, reception, reminder, or support context points to one natural imperative chunk.">
     <h3>Drill 1: choose the natural chunk</h3>
     <p class="choice-hint">Read the whole line first. Then choose the chunk that fits the situation.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -138,14 +152,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Don’t worry">Don’t worry</button>
       <button class="choice-option" data-choice-option="Don’t forget">Don’t forget</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="Take" data-placeholder="choose">choose</button> the elevator to the fifth floor.</span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t worry" data-placeholder="choose">choose</button> about the test; you’re ready.</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Ask" data-placeholder="choose">choose</button> the receptionist for a visitor badge.</span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t forget" data-placeholder="choose">choose</button> your password; you’ll need it every morning.</span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="Take" data-placeholder="choose">choose</button> a seat; the doctor will call you soon.</span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="Ask" data-placeholder="choose">choose</button> me if anything is unclear.</span></div>
-    <div class="q"><span class="n">7</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t forget" data-placeholder="choose">choose</button> to save the file before you close it.</span></div>
-    <div class="q"><span class="n">8</span><span><button class="choice-gap" data-choice-gap data-answer="Don’t worry" data-placeholder="choose">choose</button> if you make a mistake; everyone does at first.</span></div>
+    <div class="q"><span class="n">1</span><span>The building guide says the office is on the fifth floor: <button class="choice-gap" data-choice-gap data-answer="Take" data-hint="The route requires using the elevator, and Take fits the travel chunk take the elevator." data-fix="Take the elevator to the fifth floor." data-placeholder="choose">choose</button> the elevator to the fifth floor.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional learner is prepared but anxious: <button class="choice-gap" data-choice-gap data-answer="Don’t worry" data-hint="The supportive message tells the learner to stop worrying, not to remember or ask something." data-fix="Don’t worry about the test; you’re ready." data-placeholder="choose">choose</button> about the test; you’re ready.</span></div>
+    <div class="q"><span class="n">3</span><span>The visitor needs a badge from the receptionist: <button class="choice-gap" data-choice-gap data-answer="Ask" data-hint="The visitor must request the badge from a person, so use Ask." data-fix="Ask the receptionist for a visitor badge." data-placeholder="choose">choose</button> the receptionist for a visitor badge.</span></div>
+    <div class="q"><span class="n">4</span><span>The password is required every morning: <button class="choice-gap" data-choice-gap data-answer="Don’t forget" data-hint="The reminder tells the listener to remember a necessary item." data-fix="Don’t forget your password; you’ll need it every morning." data-placeholder="choose">choose</button> your password.</span></div>
+    <div class="q"><span class="n">5</span><span>The clinic receptionist directs a waiting patient to a chair: <button class="choice-gap" data-choice-gap data-answer="Take" data-hint="The conventional welcoming instruction is Take a seat." data-fix="Take a seat; the doctor will call you soon." data-placeholder="choose">choose</button> a seat; the doctor will call you soon.</span></div>
+    <div class="q"><span class="n">6</span><span>The trainer invites clarification questions: <button class="choice-gap" data-choice-gap data-answer="Ask" data-hint="If something is unclear, the listener should ask the trainer." data-fix="Ask me if anything is unclear." data-placeholder="choose">choose</button> me if anything is unclear.</span></div>
+    <div class="q"><span class="n">7</span><span>Closing the file without saving would lose the work: <button class="choice-gap" data-choice-gap data-answer="Don’t forget" data-hint="The risk makes this a reminder to remember the saving step." data-fix="Don’t forget to save the file before you close it." data-placeholder="choose">choose</button> to save the file before you close it.</span></div>
+    <div class="q"><span class="n">8</span><span>The trainer normalizes first attempts: <button class="choice-gap" data-choice-gap data-answer="Don’t worry" data-hint="The supportive message tells the learner not to be anxious about a possible mistake." data-fix="Don’t worry if you make a mistake; everyone does at first." data-placeholder="choose">choose</button> if you make a mistake.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -167,30 +181,81 @@ export const page = defineLesson({
   </table>
   <div class="thinking-card">
     <h3>When imperatives are friendly</h3>
-    <p>Imperatives are normal and warm for directions, instructions, offers, and encouragement: <span class="ex">Take a seat. Have some coffee. Don’t worry.</span> Nobody hears these as orders.</p>
-    <p>For a request to a stranger or your boss, soften it: add <span class="ex">please</span>, or turn it into a question with <span class="ex">Can you…?</span> from the <a href="/lessons/a1/can-for-ability-and-permission/">can lesson</a>. <span class="ex">Can you send me the file, please?</span></p>
+    <p>Imperatives are normal and can sound warm for directions, instructions, offers, and encouragement: <span class="ex">Take a seat. Have some coffee. Don’t worry.</span> A clear helpful context and a warm voice make these social actions different from an order.</p>
+    <p>For a request to a stranger or manager, soften it: add <span class="ex">please</span>, or turn it into a question with <span class="ex">Can you…?</span> from the <a href="/lessons/a1/can-for-ability-and-permission/">can lesson</a>. <span class="ex">Can you send me the file, please?</span></p>
   </div>
-  <p class="note-line"><span class="ex">Please</span> can go at the beginning or end. Voice and facial expression still matter; one polite word cannot repair an angry tone.</p>
+  <p class="note-line"><span class="ex">Please</span> can go at the beginning or end, but it does not automatically make every command appropriate. Relationship, choice, urgency, voice, and facial expression still matter. When the listener can reasonably refuse, <span class="ex">Can you…?</span> often gives a request more room than an imperative.</p>
+
+  <div class="note">
+    <h3>Sound natural: intonation tells the listener how to receive the imperative</h3>
+    <p>The grammar may stay identical while the voice changes the social message. Keep the action and the key information clear; use a calm, warm voice for help and a stronger fall for an urgent warning.</p>
+    <table>
+      <thead><tr><th>purpose</th><th>spoken model</th><th>voice</th></tr></thead>
+      <tbody>
+        <tr><td>helpful direction</td><td><b>TURN</b> left at the <b>BANK</b>.</td><td>clear and calm</td></tr>
+        <tr><td>polite request</td><td>Please send the <b>FILE</b>.</td><td>warm, not clipped</td></tr>
+        <tr><td>urgent warning</td><td><b>DON’T TOUCH</b> that!</td><td>strong stress and a firm fall</td></tr>
+        <tr><td>shared suggestion</td><td>Let’s <b>START</b>.</td><td>inclusive and encouraging</td></tr>
+      </tbody>
+    </table>
+    <p>A bare imperative with a flat, hard voice can sound like an order. A calm rhythm, useful context, and an appropriate <span class="ex">please</span> or <span class="ex">Can you…?</span> often matter more than adding extra words.</p>
+    <p>In neutral U.S. speech, <span class="ex">don’t</span> is one compact beat /doʊnt/. Before a consonant, its final <span class="ex">t</span> may be light or unreleased, as in <span class="ex">Don’t move</span>, but the negative meaning must remain clear. <span class="ex">Let’s</span> sounds /lets/; keep the final <span class="ex">s</span> audible so the complete chunk remains clear. In writing, the apostrophe and sentence structure distinguish <span class="ex">let’s</span> from the ordinary verb <span class="ex">lets</span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read imperative purpose, politeness, and intonation check">
+    <h2>Listen: what social action did the speaker perform?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once with natural U.S. rhythm and once more slowly. Use the situation, form, and voice to identify the social action. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished a neutral instruction, friendly offer, polite request, urgent warning, shared suggestion, and negative shared suggestion.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Imperative listening purposes">
+        <button class="choice-option" data-choice-option="neutral instruction">neutral instruction</button><button class="choice-option" data-choice-option="friendly offer">friendly offer</button>
+        <button class="choice-option" data-choice-option="polite request">polite request</button><button class="choice-option" data-choice-option="urgent warning">urgent warning</button>
+        <button class="choice-option" data-choice-option="shared suggestion">shared suggestion</button><button class="choice-option" data-choice-option="negative shared suggestion">negative shared suggestion</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 gives a screen user a <button class="choice-gap" data-choice-gap data-answer="neutral instruction" data-hint="A standard interface step directly tells the user which button to select." data-fix="Select Continue: neutral instruction." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 gives a guest a <button class="choice-gap" data-choice-gap data-answer="friendly offer" data-hint="Have some coffee presents something enjoyable to the guest in a warm voice." data-fix="Have some coffee: friendly offer." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 makes a <button class="choice-gap" data-choice-gap data-answer="polite request" data-hint="Can you and please frame the action as a request that the coworker can answer." data-fix="Can you send me the file, please: polite request." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 delivers an <button class="choice-gap" data-choice-gap data-answer="urgent warning" data-hint="Strong stress and immediate danger make Don’t touch that a warning." data-fix="Don’t touch that: urgent warning." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 makes a <button class="choice-gap" data-choice-gap data-answer="shared suggestion" data-hint="Let’s includes the speaker and listener in the proposed break." data-fix="Let’s take a break: shared suggestion." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 makes a <button class="choice-gap" data-choice-gap data-answer="negative shared suggestion" data-hint="Let’s not proposes that the group avoid one plan together." data-fix="Let’s not drive tonight: negative shared suggestion." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">Select Continue.</span></li>
+        <li><span class="ex">Have some coffee.</span></li>
+        <li><span class="ex">Can you send me the file, please?</span></li>
+        <li><span class="ex">Don’t touch that!</span></li>
+        <li><span class="ex">Let’s take a break.</span></li>
+        <li><span class="ex">Let’s not drive tonight.</span></li>
+      </ol>
+      <p>Use calm, level delivery for the screen instruction, warmth for the offer and suggestion, room for an answer in the request, and a firm falling warning only for the immediate danger.</p>
+    </details>
+  </section>
 
   <h3>Let’s: the imperative for shared plans</h3>
   <p><span class="ex">Let’s + base verb</span> suggests a plan that includes the speaker and the listener together: <span class="ex">Let’s take a break. Let’s meet at the café at noon.</span> The listener can agree or suggest something else, so it feels like an invitation, not a command.</p>
+  <p class="note-line">The apostrophe matters: <span class="ex">let’s</span> means <span class="ex">let us</span> in a suggestion, while <span class="ex">lets</span> is an ordinary present-simple verb meaning “allows”: <span class="ex">The app lets us change the language.</span></p>
   <div class="note">
     <h3>Useful special forms</h3>
-    <p><span class="ex">Let me…</span> offers the speaker’s action: <span class="ex">Let me help you.</span> <span class="ex">Let’s not…</span> makes a negative shared suggestion: <span class="ex">Let’s not be late.</span> Adding <span class="ex">you</span> is unusual and often emphatic or contrastive: <span class="ex">You wait here; Marco, come with me.</span></p>
+    <p><span class="ex">Let me…</span> often offers or announces the speaker’s action: <span class="ex">Let me help you</span> and <span class="ex">Let me check</span>. In some situations it asks permission: <span class="ex">Let me try</span>. <span class="ex">Let’s not…</span> makes a negative shared suggestion: <span class="ex">Let’s not be late.</span> Adding <span class="ex">you</span> is unusual and often emphatic or contrastive: <span class="ex">You wait here; Marco, come with me.</span></p>
   </div>
 
   <h3>Build clear procedures</h3>
   <p>Good instructions divide a process into manageable actions and show the order. Use sequencing words such as <span class="ex">first, next, then, after that, finally</span>: <span class="ex">First, open the app. Then select “Settings.” Finally, save your changes.</span> Keep one main action in each step when clarity matters.</p>
 
-  <div class="practice" data-answer-drill>
+  <div class="practice" data-answer-drill data-success-message="Correct. You used the base verb for positive instructions and Don’t plus the base verb for negative instructions, including be.">
     <h3>Drill 2: type the first word of the instruction</h3>
     <p class="choice-hint">Type the base verb with no ending and no <b>to</b>, or type <b>Don’t</b> for a negative. Use the cue in parentheses.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Write" aria-label="answer 1" /> your name at the top of the form. &nbsp;<span class="contraction">(to write)</span></span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Don’t" aria-label="answer 2" /> forget your badge tomorrow. &nbsp;<span class="contraction">(make it negative)</span></span></div>
-    <div class="q"><span class="n">3</span><span><input class="answer-input" data-answer="Take" aria-label="answer 3" /> the first exit after the bridge. &nbsp;<span class="contraction">(to take)</span></span></div>
-    <div class="q"><span class="n">4</span><span><input class="answer-input" data-answer="Don’t" aria-label="answer 4" /> be late; the meeting starts at nine. &nbsp;<span class="contraction">(negative with be)</span></span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Ask" aria-label="answer 5" /> the waiter for the check. &nbsp;<span class="contraction">(to ask)</span></span></div>
-    <div class="q"><span class="n">6</span><span><input class="answer-input" data-answer="Don’t" aria-label="answer 6" /> park in front of the entrance. &nbsp;<span class="contraction">(make it negative)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The practice form needs the sample code at the top: <input class="answer-input" data-answer="Write" data-hint="A positive instruction begins directly with the base verb Write." data-fix="Write the sample code at the top of the form." aria-label="First word of a positive instruction to put a sample code on a form" /> the sample code at the top of the form. &nbsp;<span class="contraction">(to write)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The visitor must bring the badge tomorrow: <input class="answer-input" data-answer="Don’t" data-hint="The reminder tells the visitor not to forget, so begin with Don’t." data-fix="Don’t forget your badge tomorrow." aria-label="First word of a negative reminder about a visitor badge" /> forget your badge tomorrow. &nbsp;<span class="contraction">(make it negative)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The route card identifies the first exit after the bridge: <input class="answer-input" data-answer="Take" data-hint="A positive direction begins directly with the base verb Take." data-fix="Take the first exit after the bridge." aria-label="First word of a positive route instruction about an exit" /> the first exit after the bridge. &nbsp;<span class="contraction">(to take)</span></span></div>
+    <div class="q"><span class="n">4</span><span>The fictional meeting starts exactly at nine: <input class="answer-input" data-answer="Don’t" data-hint="A negative instruction with be uses Don’t be, not Don’t is." data-fix="Don’t be late; the meeting starts at nine." aria-label="First word of a negative instruction with be before a meeting" /> be late; the meeting starts at nine. &nbsp;<span class="contraction">(negative with be)</span></span></div>
+    <div class="q"><span class="n">5</span><span>The fictional customer is ready to pay: <input class="answer-input" data-answer="Ask" data-hint="A positive instruction begins directly with the base verb Ask." data-fix="Ask the server for the check." aria-label="First word of a positive restaurant instruction to request the check" /> the server for the check. &nbsp;<span class="contraction">(to ask)</span></span></div>
+    <div class="q"><span class="n">6</span><span>The posted safety sign keeps the entrance clear: <input class="answer-input" data-answer="Don’t" data-hint="The sign prohibits parking, so begin with the negative Don’t." data-fix="Don’t park in front of the entrance." aria-label="First word of a negative parking instruction at an entrance" /> park in front of the entrance. &nbsp;<span class="contraction">(make it negative)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -201,21 +266,21 @@ export const page = defineLesson({
   <h2>Read and choose</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Arrival instructions from your host</h3>
-    <p><span class="ex">"Welcome! Take the elevator to the third floor. Don’t use the stairs door; it locks behind you. Leave your coat in the closet on the right. Text me when you’re here, and I’ll come out to meet you."</span></p>
+    <h3>Fictional conference arrival instructions</h3>
+    <p><span class="ex">"Welcome! Take the elevator to the third floor. Don’t use the stairwell door; it locks behind you. Leave the visitor coat in the closet on the right. Text the host when you’re here, and they’ll come out to meet you."</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed real instructions correctly.">
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the fictional arrival route, safety restriction, and contact step.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="in the elevator">
+      <div class="quiz-item" data-quiz-item data-answer="by elevator" data-hint="The first instruction says to take the elevator to the third floor." data-fix="The guest goes up by elevator.">
         <p class="quiz-question">1. How does the guest go up to the third floor?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="in the elevator">in the elevator</button><button class="quiz-option" data-quiz-option="up the stairs">up the stairs</button><button class="quiz-option" data-quiz-option="with the host">with the host</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="by elevator">by elevator</button><button class="quiz-option" data-quiz-option="up the stairs">up the stairs</button><button class="quiz-option" data-quiz-option="with the host">with the host</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="It locks behind you.">
-        <p class="quiz-question">2. Why shouldn’t the guest use the stairs door?</p>
+      <div class="quiz-item" data-quiz-item data-answer="It locks behind you." data-hint="The negative instruction is followed immediately by the danger of being locked out." data-fix="The guest should not use the stairwell door because it locks behind them.">
+        <p class="quiz-question">2. Why shouldn’t the guest use the stairwell door?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="It locks behind you.">It locks behind you.</button><button class="quiz-option" data-quiz-option="It’s too slow.">It’s too slow.</button><button class="quiz-option" data-quiz-option="It’s on the third floor.">It’s on the third floor.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Send a text message.">
+      <div class="quiz-item" data-quiz-item data-answer="Send a text message." data-hint="The final instruction tells the visitor to text the host after arriving." data-fix="After arriving, the guest should send the host a text message.">
         <p class="quiz-question">3. What should the guest do after arriving?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Send a text message.">Send a text message.</button><button class="quiz-option" data-quiz-option="Knock on the door.">Knock on the door.</button><button class="quiz-option" data-quiz-option="Call the office.">Call the office.</button></div>
       </div>
@@ -227,7 +292,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="don’t forget your keys">
+  <div class="tile-game" data-tile-builder data-answer="don’t forget your keys" data-hint="Begin with the negative Don’t, keep forget in the base form, and finish with your keys." data-fix="Don’t forget your keys." data-success-message="Correct. Don’t carries the negative grammar, and forget stays in the base form.">
     <h3>Drill 4: build the friendly reminder</h3>
     <p class="tile-target">Build the reminder. Don’t carries the negative; the verb stays bare.</p>
     <div class="tile-bank" data-build-bank>
@@ -244,7 +309,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="let’s meet at the café at noon">
+  <div class="tile-game" data-tile-builder data-answer="let’s meet at the café at noon" data-hint="Begin with Let’s, add the base verb meet, then give the place and exact time." data-fix="Let’s meet at the café at noon." data-success-message="Correct. Let’s plus the base verb meet proposes one plan for the speaker and listener together.">
     <h3>Drill 5: build the suggestion</h3>
     <p class="tile-target">Build the plan. Let’s includes both of you.</p>
     <div class="tile-bank" data-build-bank>
@@ -266,9 +331,9 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="you" data-fix="Turn left at the bank." data-why="An instruction drops the subject; the listener already knows it means you.">
+  <div class="micro-drill" data-spot-error data-answer="you" data-hint="The requested target is a neutral direction with no contrast between listeners, so the understood subject stays unspoken." data-fix="Turn left at the bank." data-why="A neutral ordinary imperative normally leaves the understood listener you unspoken. Explicit you remains possible for contrast or emphasis.">
     <h3>Drill 6: drop the extra subject</h3>
-    <p>A friend asks for directions and hears this. Tap the word that is wrong.</p>
+    <p>Rewrite “You turn left at the bank” as the neutral, unmarked direction with no contrast between listeners. Tap the one extra word.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="you">You</button>
       <button class="error-choice" data-error-choice="turn">turn</button>
@@ -278,9 +343,9 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="to" data-fix="Don’t worry about the report." data-why="After don’t, use the base verb directly, with no to.">
+  <div class="micro-drill" data-spot-error data-answer="to" data-hint="Don’t is followed directly by the base verb worry, without infinitive to." data-fix="Don’t worry about the report." data-why="After don’t, use the base verb directly, with no to.">
     <h3>Drill 7: keep the verb bare after don’t</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>The supportive message should say “Don’t worry about the report.” Tap the extra word in “Don’t to worry about the report.”</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="don’t">Don’t</button>
       <button class="error-choice" data-error-choice="to">to</button>
@@ -300,12 +365,12 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>Don’t park here.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> Your coworker is worried about tomorrow’s interview. Tell them not to be nervous.</p>
+        <p class="transform-cue"><b>2</b> A fictional coworker is worried about tomorrow’s interview. Tell them not to be nervous.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>Don’t be nervous.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> Help me. Soften it for your boss.</p>
+        <p class="transform-cue"><b>3</b> Help me. Soften it for a fictional manager.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>Can you help me, please?</strong></p>
       </div>
@@ -329,53 +394,68 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Directions to your door:</b> Guide the teacher from the nearest bus stop or metro station to your front door. <span class="ex">Turn left… Go straight… Don’t take the first entrance.</span></div>
-  <div class="prompt-card"><b>In the kitchen:</b> Teach a dish you really cook, step by step. <span class="ex">First, chop the onions. Then add the rice. Don’t cover the pan yet.</span></div>
-  <div class="prompt-card"><b>Advice for a new student:</b> Give four pieces of advice to someone starting English lessons. <span class="ex">Don’t worry about mistakes. Ask questions. Practice a little every day.</span></div>
-  <div class="prompt-card"><b>Phone help:</b> Explain how to do one thing on a phone: connect to Wi-Fi, change the language, or share a photo. <span class="ex">Open Settings. Tap… Don’t forget to save.</span></div>
-  <div class="prompt-card"><b>Make a plan with let’s:</b> Plan a free afternoon with a friend. Make three suggestions. <span class="ex">Let’s meet at noon. Let’s try the new café. Let’s not stay out late.</span></div>
+  <p class="note-line">You never need to disclose your real home, route, cooking, devices, contacts, schedule, workplace, health, or travel plans. Use the fictional map, interface card, community center, or conference scenario below whenever you prefer.</p>
+  <div class="prompt-card"><b>Map route:</b> Guide a fictional visitor from the station to a public venue. Use three ordered positive steps and one route to avoid.</div>
+  <div class="prompt-card"><b>Interface card:</b> Explain how to change one setting on an invented app. Keep one main action in each step and finish with a saving instruction.</div>
+  <div class="prompt-card"><b>Safety station:</b> Give one calm rule and one urgent warning. Deliver the grammar accurately while changing the strength of your voice.</div>
+  <div class="prompt-card"><b>Request choice:</b> Turn <span class="ex">Send me the file</span> into an appropriate request to a fictional coworker who can reasonably refuse.</div>
+  <div class="prompt-card"><b>Shared plan:</b> Make two fictional event suggestions with <span class="ex">let’s</span> and one shared action to avoid with <span class="ex">let’s not</span>.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: orient a fictional conference visitor</h3>
+    <p>Give a 45–60 second arrival and welcome message. Include all six pieces of evidence:</p>
+    <ol>
+      <li>three ordered positive instructions with <span class="ex">first, next,</span> and <span class="ex">finally</span>;</li>
+      <li>one negative safety instruction with <span class="ex">don’t</span> or formal <span class="ex">do not</span>;</li>
+      <li>one warm offer or encouragement;</li>
+      <li>one request with <span class="ex">Can you…?</span> because the listener has a real choice;</li>
+      <li>one shared suggestion with <span class="ex">let’s</span> and one with <span class="ex">let’s not</span>;</li>
+      <li>three distinct deliveries: calm instruction, warm welcome, and firm urgent warning.</li>
+    </ol>
+    <p>The listener follows the route on a fictional map and labels each social action. Revise any step whose form, order, or voice creates a different action from the one you intended.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
-    <p>Complete this aloud: “An instruction starts with the ______ verb, and the hidden subject is always ______. For the negative, I start with ______. To sound polite, I add ______ at the start or the end. For a shared plan, I start with ______.”</p>
-    <p>Then give one real direction, one warning with don’t, and one suggestion with let’s.</p>
+    <p>Complete this aloud: “An ordinary instruction starts with the ______ verb and normally leaves the listener ______ unspoken. For the negative, I start with ______. I can soften an instruction with ______, but a request question may give more choice. For a shared plan, I start with ______.”</p>
+    <p>Then use a fictional map to give one calm direction, one urgent warning with <span class="ex">don’t</span>, and one inclusive suggestion with <span class="ex">let’s</span>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can give clear, friendly instructions with the right tone.">
+  <div class="quiz" data-quiz data-success-message="Correct. You matched base and negative forms, shared suggestions, request choices, understood subjects, offers, and supportive instructions to explicit contexts.">
     <h3>Final quiz: imperative form and tone</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Close">
-        <p class="quiz-question">1. ___ the window, please. It’s cold in here.</p>
+      <div class="quiz-item" data-quiz-item data-answer="Close" data-hint="A positive imperative begins with the base verb Close, not an inflected or infinitive form." data-fix="Close the window, please. It’s cold in here.">
+        <p class="quiz-question">1. The fictional host makes a softened positive request because the room is cold: ___ the window, please.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Close">Close</button><button class="quiz-option" data-quiz-option="Closes">Closes</button><button class="quiz-option" data-quiz-option="To close">To close</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Don’t be">
-        <p class="quiz-question">2. ___ late tomorrow; the client arrives at nine.</p>
+      <div class="quiz-item" data-quiz-item data-answer="Don’t be" data-hint="A negative imperative with be uses Don’t be." data-fix="Don’t be late tomorrow; the client arrives at nine.">
+        <p class="quiz-question">2. The fictional client arrives exactly at nine: ___ late tomorrow.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Don’t be">Don’t be</button><button class="quiz-option" data-quiz-option="Don’t is">Don’t is</button><button class="quiz-option" data-quiz-option="Not be">Not be</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Let’s order lunch.">
-        <p class="quiz-question">3. Choose the shared suggestion.</p>
+      <div class="quiz-item" data-quiz-item data-answer="Let’s order lunch." data-hint="Let’s plus a base verb includes the speaker and listener in one proposed plan." data-fix="Let’s order lunch.">
+        <p class="quiz-question">3. Two coworkers are choosing a plan together. Which line is a shared suggestion?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Let’s order lunch.">Let’s order lunch.</button><button class="quiz-option" data-quiz-option="Order us lunch.">Order us lunch.</button><button class="quiz-option" data-quiz-option="We ordering lunch.">We ordering lunch.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Can you help me with this report, please?">
-        <p class="quiz-question">4. Which is the polite way to ask your boss for help?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Can you help me with this report, please?" data-hint="The manager can reasonably accept or refuse, so a request question gives more room than a bare command." data-fix="Can you help me with this report, please?">
+        <p class="quiz-question">4. A fictional employee asks a manager who can reasonably accept or refuse. Which line is the appropriate request?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Can you help me with this report, please?">Can you help me with this report, please?</button><button class="quiz-option" data-quiz-option="Help me with this report.">Help me with this report.</button><button class="quiz-option" data-quiz-option="You help me now.">You help me now.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="you">
-        <p class="quiz-question">5. “Turn left at the light.” Who is the hidden subject?</p>
+      <div class="quiz-item" data-quiz-item data-answer="you" data-hint="An ordinary imperative directly addresses the listener or listeners, understood as you." data-fix="In Turn left at the light, the understood addressee is you.">
+        <p class="quiz-question">5. In the ordinary direction “Turn left at the light,” who is the understood addressee?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="you">you</button><button class="quiz-option" data-quiz-option="we">we</button><button class="quiz-option" data-quiz-option="the street">the street</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Text">
-        <p class="quiz-question">6. ___ me when you land.</p>
+      <div class="quiz-item" data-quiz-item data-answer="Text" data-hint="A positive instruction begins with the base verb Text." data-fix="Text the fictional host when the plane lands.">
+        <p class="quiz-question">6. A fictional arrival card gives a positive contact step: ___ the host when the plane lands.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Text">Text</button><button class="quiz-option" data-quiz-option="Texts">Texts</button><button class="quiz-option" data-quiz-option="To text">To text</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Have some coffee.">
-        <p class="quiz-question">7. Which one is a friendly offer?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Have some coffee." data-hint="In a warm host-and-guest context, Have some coffee offers the drink directly." data-fix="Have some coffee.">
+        <p class="quiz-question">7. A fictional host speaks warmly to a guest. Which line functions as a friendly offer?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Have some coffee.">Have some coffee.</button><button class="quiz-option" data-quiz-option="You will have coffee.">You will have coffee.</button><button class="quiz-option" data-quiz-option="Having coffee.">Having coffee.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="worry">
-        <p class="quiz-question">8. Don’t ___ about small mistakes.</p>
+      <div class="quiz-item" data-quiz-item data-answer="worry" data-hint="After Don’t, use the base verb worry with no to or -ing." data-fix="Don’t worry about small mistakes.">
+        <p class="quiz-question">8. Complete the supportive negative instruction: Don’t ___ about small mistakes.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="worry">worry</button><button class="quiz-option" data-quiz-option="to worry">to worry</button><button class="quiz-option" data-quiz-option="worrying">worrying</button></div>
       </div>
     </div>
@@ -385,6 +465,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the form, social action, sequence, or spoken delivery that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day imperative retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a positive instruction, negative warning, shared suggestion, and request question from explicit social contexts.">
+      <h3>Choose the opening that performs the intended action</h3>
+      <div class="choice-bank" aria-label="Next-day imperative and request openings">
+        <button class="choice-option" data-choice-option="Open">Open</button><button class="choice-option" data-choice-option="Don’t">Don’t</button>
+        <button class="choice-option" data-choice-option="Let’s">Let’s</button><button class="choice-option" data-choice-option="Can you">Can you</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The interface gives one neutral positive step: <button class="choice-gap" data-choice-gap data-answer="Open" data-hint="A neutral positive instruction begins directly with the base verb Open." data-fix="Open the Settings menu." data-placeholder="choose">choose</button> the Settings menu.</span></div>
+      <div class="q"><span class="n">2</span><span>An exposed wire creates immediate danger: <button class="choice-gap" data-choice-gap data-answer="Don’t" data-hint="The urgent warning prohibits touching, so begin with Don’t." data-fix="Don’t touch the wire." data-placeholder="choose">choose</button> touch the wire.</span></div>
+      <div class="q"><span class="n">3</span><span>The speaker proposes one group plan: <button class="choice-gap" data-choice-gap data-answer="Let’s" data-hint="A shared suggestion that includes the speaker and listener begins with Let’s." data-fix="Let’s meet in the lobby." data-placeholder="choose">choose</button> meet in the lobby.</span></div>
+      <div class="q"><span class="n">4</span><span>A fictional coworker can reasonably refuse the request: <button class="choice-gap" data-choice-gap data-answer="Can you" data-hint="A request question gives the coworker room to answer, so begin with Can you." data-fix="Can you send me the link, please?" data-placeholder="choose">choose</button> send me the link, please?</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="Lets" data-hint="The shared suggestion is the contraction of let us, so it needs an apostrophe before s." data-fix="Let’s take a break." data-why="Let’s means let us. Lets without an apostrophe is the present-simple verb meaning allows.">
+      <h3>Repair the shared-suggestion spelling</h3>
+      <p>The team message intends <span class="ex">let us</span>: “Lets take a break.” Tap the one word that needs an apostrophe.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="Lets">Lets</button><button class="error-choice" data-error-choice="take">take</button><button class="error-choice" data-error-choice="a">a</button><button class="error-choice" data-error-choice="break">break.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, give a fictional visitor one positive direction, one negative safety instruction, one warm offer, one request question, and one shared suggestion.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Take the elevator to the second floor. Don’t use the stairwell door. Have some coffee. Can you sign this sample form, please? Let’s meet in the lobby at ten.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

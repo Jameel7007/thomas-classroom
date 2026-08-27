@@ -10,27 +10,33 @@ Follow it. If anything here and AGENTS.md ever conflict, AGENTS.md wins.
 ## Quick orientation
 
 - **What this is:** a premium static web curriculum (CEFR A0 -> B2) for one-on-one
-  English tutoring, shown live over screen share. The shipped site lives in
-  [outputs/](outputs/); [work/](work/) holds the original design handoff bundle.
-- **Run it:** `node server.mjs`, then open
-  `http://localhost:8090/English%20Curriculum%20Map.html`. There is no build step
-  and no `package.json` -- the map uses React + Babel from a CDN, transpiled in the
-  browser. Don't open the HTML files directly; use the server.
-- **Audio (optional):** copy `.env.example` to `.env` and add ElevenLabs keys. See
+  English tutoring, shown live over screen share. The active site is the fully
+  native Astro 7 project in [astro-pilot/](astro-pilot/). The deleted static-HTML
+  and React/Babel compatibility implementation must not be recreated.
+- **Run development:** `cd astro-pilot && npm install && npm run dev`, then open
+  `http://localhost:4321/`.
+- **Build and preview:** from `astro-pilot/`, run `npm run build`, then
+  `npm run serve`. The local server serves `dist/`, applies the generated
+  historical redirects, and uses the branded static 404.
+- **Socket-free preview check:** `npm run preview:validate` verifies the local
+  server contract without opening a port or launching a browser.
+- **Audio authoring (optional):** copy `.env.example` to `.env`, add local ElevenLabs keys, and generate static MP3 files. See
   [ELEVENLABS.md](ELEVENLABS.md). Never put an API key in HTML or browser JS.
 
 ## Before you start
 
-- Keep user-facing deliverables in [outputs/](outputs/).
-- Reuse shared lesson styles/scripts ([outputs/lessons/lesson.css](outputs/lessons/lesson.css),
-  [outputs/lessons/lesson.js](outputs/lessons/lesson.js)) and the assessment engine
-  ([outputs/assessments/assessment.js](outputs/assessments/assessment.js)); don't hardcode one-off drills.
-- Match new lesson filenames to the slug helper in
-  [outputs/components.jsx](outputs/components.jsx) so map links resolve.
-- Preserve the current static implementation; don't migrate to Astro/MDX unless asked.
+- Keep user-facing work in [astro-pilot/](astro-pilot/).
+- Reuse the lesson and assessment components, styles, and interaction engines
+  under `astro-pilot/src/`; do not hardcode one-off drill systems.
+- Add lesson metadata and content in one native file under
+  `astro-pilot/src/content/lessons/{level}/`. The canonical catalog derives
+  routes, curriculum registration, redirects, and sequencing.
+- Preserve the current native Astro/MDX architecture and never add legacy HTML
+  passthrough, runtime document loaders, iframes, or client-side compilers.
 
 ## After frontend changes
 
 - Verify the page loads and check the browser console for errors.
 - Test any changed interactions and confirm new lesson links resolve from the map.
 - Keep the design calm and readable at screen-share distance.
+- Run `npm run check` and `npm run build` from `astro-pilot/`.

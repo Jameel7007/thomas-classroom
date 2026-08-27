@@ -1,11 +1,48 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-import { blogPosts } from "../data/site-content";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort((a, b) =>
+  b.data.published.getTime() - a.data.published.getTime());
+const canonical = new URL("/blog/", Astro.site);
+const articleListId = `${canonical.href}#field-notes`;
+const articleList = {
+  "@type": "ItemList",
+  "@id": articleListId,
+  name: "Thomas’s Classroom field notes",
+  numberOfItems: posts.length,
+  itemListOrder: "https://schema.org/ItemListOrderDescending",
+  itemListElement: posts.map((post, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: post.data.title,
+    url: new URL(`/blog/${post.id}/`, Astro.site).href,
+  })),
+};
+const formatDate = (date: Date) => new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(date);
 ---
-<SiteLayout title="Teaching Notes · Thomas’s Classroom" description="Read Thomas’s Classroom notes about visible progress, CEFR, guided discovery, language transfer, and practical adult English learning." heading="Teaching Notes" lede="Methodology, curriculum, language transfer, and practical English learning—written for thoughtful learners and teachers." current="blog">
+<SiteLayout title="Teaching Notes · Thomas’s Classroom" description="Read Thomas’s Classroom notes about visible progress, CEFR, guided discovery, language transfer, and practical adult English learning." heading="Teaching Notes" lede="Methodology, curriculum, language transfer, and practical English learning—written for thoughtful learners and tutors." current="blog" mainEntityId={articleListId} additionalStructuredData={[articleList]}>
   <section class="tab-page">
     <p class="tab-overline">Blog</p><h2 class="tab-title">Ideas behind the lessons</h2>
-    <p class="tab-lede">These are the first editorial lanes for explaining how the curriculum works and helping adult learners make better decisions about practice.</p>
-    <div class="blog-grid">{blogPosts.map(([tag, title, summary]) => <article class="blog-card"><div class="post-meta"><span>{tag}</span><span>Draft lane</span></div><h2>{title}</h2><p>{summary}</p></article>)}</div>
+    <p class="tab-lede">Complete field notes explain how the curriculum works and help adult learners and tutors make better decisions about practice.</p>
+    <div class="blog-grid" data-blog-index>
+      {posts.map((post) => <article class:list={["blog-card", { "blog-card--featured": post.data.featured }]} data-blog-card={post.id}>
+        <a class="blog-card-link" href={`/blog/${post.id}/`}>
+          <div class="post-meta"><span>{post.data.category}</span><span>{post.data.minutes} min read</span></div>
+          <h2>{post.data.title}</h2>
+          <p>{post.data.description}</p>
+          <div class="blog-card-footer">
+            <span>{post.data.audience}</span>
+            <time datetime={post.data.published.toISOString()}>{formatDate(post.data.published)}</time>
+            <strong>Read field note <span aria-hidden="true">→</span></strong>
+          </div>
+        </a>
+      </article>)}
+    </div>
   </section>
 </SiteLayout>

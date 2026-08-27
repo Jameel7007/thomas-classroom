@@ -1,5 +1,6 @@
 ---
 import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+import AudioControl from "../../components/assessment/AudioControl.astro";
 export const page = {
   "original": "outputs/assessments/a0-exit.html",
   "source": "src/content/assessments/a0-exit.astro",
@@ -63,7 +64,7 @@ export const page = {
 <section class="panel"><h2>Advance when ready</h2><ul class="rubric"><li>Answers independently.</li><li>Uses basic chunks with be accurately.</li><li>Manages short personal exchanges with understandable language.</li></ul></section>
 </div>
 
-<section class="assessment" data-assessment data-pass="70" data-strong="88" data-review-label="A0 still developing" data-pass-label="Ready to begin A1" data-strong-label="A0 secure" data-review-feedback="This shows the A0 areas that still need another lesson cycle." data-pass-feedback="The learner has demonstrated the core A0 abilities needed to begin A1. Review any weaker skill scores before advancing.">
+<section class="assessment" data-assessment data-pass="70" data-strong="88" data-require-live-evidence data-production-min="60" data-listening-min="50" data-evidence-label="More live evidence needed" data-evidence-feedback="The score is high enough, but confirm at least 60% in both speaking and writing and 50% in listening before advancing." data-review-label="A0 still developing" data-pass-label="Ready to begin A1" data-strong-label="A0 secure" data-review-feedback="This shows the A0 areas that still need another lesson cycle." data-pass-feedback="The learner has demonstrated the core A0 abilities needed to begin A1. Review any weaker skill scores before advancing.">
 <div class="score-card">
 <div class="score-big"><span>Score</span><b data-score-text>0 / 0</b></div>
 <div>
@@ -150,7 +151,7 @@ export const page = {
 <article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="Jameel">
 <p class="item-kicker">Listen: alphabet and spelling</p>
 <p class="question">Play the spelling. Which name do you hear?</p>
-<button class="listen-btn" type="button" data-voice-clip="a0-spell-jameel" data-speak="J. A. M. E. E. L." aria-label="Play the spelling J A M E E L"><span aria-hidden="true">▶</span> Play spelling</button>
+<AudioControl clip="a0-spell-jameel" src="/audio/assessments/a0-exit/spell-jameel.mp3" text="J. A. M. E. E. L." label="Play spelling" ariaLabel="Play the spelling J A M E E L" />
 <div class="choice-row choice-grid"><button class="choice-btn" data-option="Jamel">Jamel</button><button class="choice-btn" data-option="Gameel">Gameel</button><button class="choice-btn" data-option="Jameel">Jameel</button></div>
 </article>
 <article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="Monday, March 8 at 10:00">
@@ -186,7 +187,7 @@ export const page = {
 <article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="$40">
 <p class="item-kicker">Listen: numbers and prices</p>
 <p class="question">Play the price. How much do you hear?</p>
-<button class="listen-btn" type="button" data-voice-clip="a0-price-forty" data-speak="The total is forty dollars." aria-label="Play the price"><span aria-hidden="true">▶</span> Play price</button>
+<AudioControl clip="a0-price-forty" src="/audio/assessments/a0-exit/price-forty.mp3" text="The total is forty dollars." label="Play price" ariaLabel="Play the price" />
 <div class="choice-row choice-grid"><button class="choice-btn" data-option="$4">$4</button><button class="choice-btn" data-option="$14">$14</button><button class="choice-btn" data-option="$40">$40</button></div>
 </article>
 </div>

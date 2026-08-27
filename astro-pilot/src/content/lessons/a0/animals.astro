@@ -2,77 +2,116 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Animals · A0 Vocabulary · Curriculum Map",
+  "title": "Animals · A0 Vocabulary",
   "slug": "animals",
   "level": "A0",
   "topic": "Animals",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Name common animals with a or an : a dog , an elephant . Then talk about one or many: The cat is small. The dogs are big. Finish with real life: I have a cat. My neighbor has two d",
+  "description": "Name common animals and combine articles, plurals, be, have, and simple adjectives to talk about pets and wildlife.",
   "sequence": 15,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/articles-a-an",
+    "a0/regular-plural-nouns",
+    "a0/colours-and-basic-adjectives"
+  ],
+  "related": [
+    "a1/have-got",
+    "b1/environment-and-nature"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 50,
+    "revisionSummary": "Animal vocabulary, category and plural boundaries, factual clues, articles, agreement, pronunciation, listening, safety, accessibility, privacy, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
-  <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 16</p>
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 15</p>
   <h1>Animals</h1>
-  <p class="standfirst">Name common animals with <span class="ex">a</span> or <span class="ex">an</span>: <span class="ex">a dog</span>, <span class="ex">an elephant</span>. Then talk about one or many: <span class="ex">The cat is small. The dogs are big.</span> Finish with real life: <span class="ex">I have a cat. My neighbor has two dogs.</span></p>
+  <p class="standfirst">Identify common animals with <span class="ex">a</span> or <span class="ex">an</span>, choose accurate plural forms, and match singular or plural subjects with <span class="ex">is</span> or <span class="ex">are</span>. Describe a pet, farm animal, or wild animal from a real, pictured, or invented context without guessing from one feature alone.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">a / an</span>
-    <span class="tag">one / many</span>
-    <span class="tag">10 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">articles, plurals, and agreement</span>
+    <span class="tag">pets · farm animals · wildlife</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>One animal or two? Listen to is and are.</span></div>
-    <div class="flow-step"><b>Discover</b><span>a or an, and the plural -s with are.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Regular, unchanged, and irregular animal plurals.</span></div>
     <div class="flow-step"><b>Build</b><span>Match, choose, read, and build chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about the animals in your life.</span></div>
+    <div class="flow-step"><b>Use</b><span>Identify and describe animals from clear evidence.</span></div>
   </div>
 
-  <p class="note-line">Most animal words add <span class="ex">-s</span> for “many”: <span class="ex">dog → dogs, cat → cats, bird → birds</span>. After a number, the noun is plural: <span class="ex">two dogs, three cats</span>.</p>
+  <p class="note-line">Regular countable animal words use a singular after <span class="ex">one</span> and a plural after zero or a number greater than one: <span class="ex">one dog · zero dogs · two dogs</span>. Some animal plurals add <span class="ex">-es</span>, some do not change, and some are irregular.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an from the vowel sound in elephant, cats after two, and are with the plural subject the dogs.">
+    <h3>Bring articles, plurals, and <em>be</em> into an animal description</h3>
+    <p class="choice-hint">Use earlier lessons. Complete each sentence, then read it aloud.</p>
+    <div class="choice-bank" aria-label="Earlier grammar choices">
+      <button class="choice-option" data-choice-option="a">a</button>
+      <button class="choice-option" data-choice-option="an">an</button>
+      <button class="choice-option" data-choice-option="cat">cat</button>
+      <button class="choice-option" data-choice-option="cats">cats</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+      <button class="choice-option" data-choice-option="are">are</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The photograph shows <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Elephant begins with a vowel sound, so choose an." data-fix="The photograph shows an elephant." data-placeholder="choose">choose</button> elephant.</span></div>
+    <div class="q"><span class="n">2</span><span>The shelter profile lists two <button class="choice-gap" data-choice-gap data-answer="cats" data-hint="Two requires the regular plural noun cats." data-fix="The shelter profile lists two cats." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The two dogs <button class="choice-gap" data-choice-gap data-answer="are" data-hint="The subject the two dogs is plural, so use are." data-fix="The two dogs are friendly with their handler." data-placeholder="choose">choose</button> friendly with their handler.</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Meet the animals</h2>
   <div class="lead-rule"></div>
-  <p>Point to each picture and say the word with <span class="ex">a</span> or <span class="ex">an</span>.</p>
+  <p>These are representative pictures with visible labels. Point to a picture, describe its position, or say the label with <span class="ex">a</span> or <span class="ex">an</span>. The label gives the intended answer, so this is language practice rather than a biology test.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cat.svg" alt="" loading="lazy" /></span><span class="nm">a cat</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/dog.svg" alt="" loading="lazy" /></span><span class="nm">a dog</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bird.svg" alt="" loading="lazy" /></span><span class="nm">a bird</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fish.svg" alt="" loading="lazy" /></span><span class="nm">a fish</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rabbit.svg" alt="" loading="lazy" /></span><span class="nm">a rabbit</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pig.svg" alt="" loading="lazy" /></span><span class="nm">a pig</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cow.svg" alt="" loading="lazy" /></span><span class="nm">a cow</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/elephant.svg" alt="" loading="lazy" /></span><span class="nm">an elephant</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/horse.svg" alt="" loading="lazy" /></span><span class="nm">a horse</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sheep.svg" alt="" loading="lazy" /></span><span class="nm">a sheep</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/duck.svg" alt="" loading="lazy" /></span><span class="nm">a duck</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/monkey.svg" alt="" loading="lazy" /></span><span class="nm">a monkey</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lion.svg" alt="" loading="lazy" /></span><span class="nm">a lion</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tiger.svg" alt="" loading="lazy" /></span><span class="nm">a tiger</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bear.svg" alt="" loading="lazy" /></span><span class="nm">a bear</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/owl.svg" alt="" loading="lazy" /></span><span class="nm">an owl</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/frog.svg" alt="" loading="lazy" /></span><span class="nm">a frog</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/snake.svg" alt="" loading="lazy" /></span><span class="nm">a snake</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/turtle.svg" alt="" loading="lazy" /></span><span class="nm">a turtle</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/penguin.svg" alt="" loading="lazy" /></span><span class="nm">a penguin</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chicken.svg" alt="" loading="lazy" /></span><span class="nm">a chicken</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fox.svg" alt="" loading="lazy" /></span><span class="nm">a fox</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/panda.svg" alt="" loading="lazy" /></span><span class="nm">a panda</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/giraffe.svg" alt="" loading="lazy" /></span><span class="nm">a giraffe</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/zebra.svg" alt="" loading="lazy" /></span><span class="nm">a zebra</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/octopus.svg" alt="" loading="lazy" /></span><span class="nm">an octopus</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/dolphin.svg" alt="" loading="lazy" /></span><span class="nm">a dolphin</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/koala.svg" alt="" loading="lazy" /></span><span class="nm">a koala</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/kangaroo.svg" alt="" loading="lazy" /></span><span class="nm">a kangaroo</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/crocodile.svg" alt="" loading="lazy" /></span><span class="nm">a crocodile</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cat.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a cat</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/dog.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a dog</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bird.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a bird</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fish.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a fish</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rabbit.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a rabbit</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pig.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a pig</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cow.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a cow</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/elephant.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">an elephant</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/horse.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a horse</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sheep.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a sheep</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/duck.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a duck</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/monkey.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a monkey</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lion.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a lion</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tiger.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a tiger</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bear.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a bear</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/owl.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">an owl</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/frog.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a frog</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/snake.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a snake</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/turtle.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a turtle</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/penguin.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a penguin</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chicken.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a chicken</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fox.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a fox</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/panda.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a panda</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/giraffe.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a giraffe</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/zebra.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a zebra</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/octopus.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">an octopus</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/dolphin.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a dolphin</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/koala.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a koala</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/kangaroo.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a kangaroo</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/crocodile.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a crocodile</span></div>
   </div>
 
   <h2>Notice before the rule</h2>
@@ -87,7 +126,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used a or an before one animal and matched is or are to the singular or plural subject.">
     <h3>Discovery check: one or many?</h3>
     <p class="choice-hint">Say the sentence aloud first. One animal takes a / an and is. Many animals take -s and are.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -96,12 +135,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="is">is</button>
       <button class="choice-option" data-choice-option="are">are</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I have <button class="choice-gap" data-choice-gap data-answer="a" data-placeholder="choose">choose</button> dog. &nbsp;<span class="contraction">(first sound: d)</span></span></div>
-    <div class="q"><span class="n">2</span><span>At the zoo I see <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> elephant. &nbsp;<span class="contraction">(first sound: e)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The cat <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> black. &nbsp;<span class="contraction">(one cat)</span></span></div>
-    <div class="q"><span class="n">4</span><span>The dogs <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> friendly. &nbsp;<span class="contraction">(two dogs)</span></span></div>
-    <div class="q"><span class="n">5</span><span>In the tree there is <button class="choice-gap" data-choice-gap data-answer="an" data-placeholder="choose">choose</button> owl. &nbsp;<span class="contraction">(first sound: o)</span></span></div>
-    <div class="q"><span class="n">6</span><span>They <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> horses. &nbsp;<span class="contraction">(many horses)</span></span></div>
+    <div class="q"><span class="n">1</span><span>I have <button class="choice-gap" data-choice-gap data-answer="a" data-hint="Dog begins with the consonant sound d, so use a." data-fix="I have a dog." data-placeholder="choose">choose</button> dog. &nbsp;<span class="contraction">(first sound: d)</span></span></div>
+    <div class="q"><span class="n">2</span><span>In the wildlife center photograph, I see <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Elephant begins with a vowel sound, so use an." data-fix="In the wildlife center photograph, I see an elephant." data-placeholder="choose">choose</button> elephant. &nbsp;<span class="contraction">(first sound: e)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The cat <button class="choice-gap" data-choice-gap data-answer="is" data-hint="The cat names one animal, so use is." data-fix="The cat is black." data-placeholder="choose">choose</button> black. &nbsp;<span class="contraction">(one cat)</span></span></div>
+    <div class="q"><span class="n">4</span><span>The two dogs <button class="choice-gap" data-choice-gap data-answer="are" data-hint="The two dogs is a plural subject, so use are." data-fix="The two dogs are friendly with their handler." data-placeholder="choose">choose</button> friendly with their handler.</span></div>
+    <div class="q"><span class="n">5</span><span>In the tree there is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Owl begins with a vowel sound, so use an." data-fix="In the tree there is an owl." data-placeholder="choose">choose</button> owl. &nbsp;<span class="contraction">(first sound: o)</span></span></div>
+    <div class="q"><span class="n">6</span><span>They <button class="choice-gap" data-choice-gap data-answer="are" data-hint="They and horses are plural, so use are." data-fix="They are horses." data-placeholder="choose">choose</button> horses. &nbsp;<span class="contraction">(many horses)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -111,26 +150,86 @@ export const page = defineLesson({
 
   <h2>The system: name the animal, count the animal</h2>
   <div class="lead-rule"></div>
-  <p>Each animal word is a <strong>noun</strong>. Two small rules work for all of them:</p>
+  <p>Each animal word is a <strong>noun</strong>. Two core patterns work for most animals. A few words use plural rules you learned earlier, and a few do not change.</p>
   <p><strong>1. One animal?</strong> &nbsp;Use <span class="ex">a</span> before a consonant sound, <span class="ex">an</span> before a vowel sound, and say <span class="ex">is</span>: <span class="ex">a dog · an elephant · The dog is big.</span></p>
-  <p><strong>2. More than one?</strong> &nbsp;Drop <span class="ex">a / an</span>, add <span class="ex">-s</span>, and say <span class="ex">are</span>: <span class="ex">two dogs · The dogs are big.</span></p>
+  <p><strong>2. Zero or more than one?</strong> &nbsp;Drop <span class="ex">a / an</span> and use a plural form after zero or a number greater than one: <span class="ex">zero dogs · two dogs</span>. A plural subject takes <span class="ex">are</span>: <span class="ex">The dogs are big.</span> Most animal words add <span class="ex">-s</span>.</p>
   <table>
-    <thead><tr><th>one (singular)</th><th>many (plural)</th></tr></thead>
+    <thead><tr><th>one (singular)</th><th>zero or more than one (plural)</th></tr></thead>
     <tbody>
       <tr><td><b>a</b> dog &nbsp;·&nbsp; the dog <b>is</b> big</td><td>two <b>dogs</b> &nbsp;·&nbsp; the dogs <b>are</b> big</td></tr>
       <tr><td><b>a</b> cat &nbsp;·&nbsp; the cat <b>is</b> small</td><td>three <b>cats</b> &nbsp;·&nbsp; the cats <b>are</b> small</td></tr>
       <tr><td><b>an</b> owl &nbsp;·&nbsp; it <b>is</b> an owl</td><td>two <b>owls</b> &nbsp;·&nbsp; they <b>are</b> owls</td></tr>
+      <tr><td><b>a</b> horse · <b>a</b> fox</td><td>two <b>horses</b> · two <b>foxes</b> <span class="contraction">(add -es)</span></td></tr>
+      <tr><td><b>a</b> sheep · <b>a</b> fish</td><td>two <b>sheep</b> · two <b>fish</b> <span class="contraction">(commonly no change)</span></td></tr>
+      <tr><td><b>a</b> mouse · <b>an</b> octopus</td><td>two <b>mice</b> · two <b>octopuses</b> <span class="contraction">(special forms)</span></td></tr>
     </tbody>
   </table>
+
+  <div class="note">
+    <h3>Pet, farm animal, wild animal, or wildlife?</h3>
+    <p>These labels describe an animal's relationship with people and its situation, not a fixed biological group.</p>
+    <ul>
+      <li>A <strong>pet</strong> lives with a person mainly for companionship.</li>
+      <li>A <strong>farm animal</strong> is kept or raised on a farm.</li>
+      <li>A <strong>wild animal</strong> lives independently in nature. The group word <strong>wildlife</strong> is uncountable: <span class="ex">We saw wildlife</span>, not <span class="ex">a wildlife</span>.</li>
+      <li>Context matters. A rabbit can be a pet, a farm animal, or a wild animal.</li>
+    </ul>
+    <p>Observe unknown wildlife from a safe distance. Do not approach, feed, or handle it. Follow local signs and expert guidance.</p>
+  </div>
+
+  <div class="note">
+    <h3>Sound natural: the plural <span class="ex">-s</span> has three sounds</h3>
+    <p>The spelling is usually <span class="ex">-s</span>, but the final sound follows the animal word before it. Listen to the ending; it helps you hear one animal or many.</p>
+    <table>
+      <thead><tr><th>ending sound</th><th>examples</th><th>what you hear</th></tr></thead>
+      <tbody>
+        <tr><td>“s”</td><td><span class="ex">cat<strong>s</strong> · rabbit<strong>s</strong></span></td><td>a quiet air sound</td></tr>
+        <tr><td>“z”</td><td><span class="ex">dog<strong>s</strong> · bird<strong>s</strong> · owl<strong>s</strong></span></td><td>a voiced, buzzing sound</td></tr>
+        <tr><td>“iz”</td><td><span class="ex">horse<strong>s</strong> · fox<strong>es</strong></span></td><td>one extra spoken syllable</td></tr>
+      </tbody>
+    </table>
+    <p>Longer animal words also have one strong beat: <span class="ex"><strong>AN</strong>-i-mal · <strong>EL</strong>-e-phant · gi-<strong>RAFFE</strong> · <strong>RAB</strong>-bit · <strong>CHICK</strong>-en · <strong>PEN</strong>-guin</span>. Say the full noun chunk: <span class="ex">an <strong>EL</strong>ephant · two <strong>HORS</strong>es</span>.</p>
+    <p>In common U.S. English, <span class="ex">zebra</span> often begins like <span class="ex">zee</span>: <span class="ex"><strong>ZEE</strong>-bruh</span>. Other English varieties may begin it like <span class="ex">zeb</span>.</p>
+  </div>
 
   <div class="note">
     <h3>Meaning check</h3>
     <ul>
       <li>Can we say <span class="ex">the dogs is big</span>? <strong>No.</strong> Two dogs are many, so we say <span class="ex">the dogs are big</span>.</li>
-      <li>Can we say <span class="ex">two cat</span>? <strong>No.</strong> After a number we need the plural: <span class="ex">two cats</span>.</li>
-      <li>Two special words do not change: <span class="ex">one sheep, two sheep</span> and <span class="ex">one fish, two fish</span>.</li>
+      <li>Can we say <span class="ex">two cat</span>? <strong>No.</strong> After <span class="ex">two</span> we need the plural: <span class="ex">two cats</span>.</li>
+      <li><span class="ex">Sheep</span> does not change: <span class="ex">one sheep, two sheep</span>. The usual plural of <span class="ex">fish</span> is also <span class="ex">fish</span>: <span class="ex">one fish, two fish</span>. In scientific or specialized contexts, <span class="ex">fishes</span> can mean different species or types of fish.</li>
+      <li><span class="ex">A chicken</span> means one animal. Uncountable <span class="ex">chicken</span> can also mean the meat: <span class="ex">We ate chicken.</span></li>
     </ul>
   </div>
+
+  <section data-lesson-extension="Tutor-read singular and plural animal listening check">
+    <h2>Listen: one animal or more?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each numbered sentence once at a natural speed and once more slowly. Listen before you choose.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard the singular and plural noun forms, the article an before owl, and the animal named in each complete sentence.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Listening choices">
+        <button class="choice-option" data-choice-option="cat">cat</button><button class="choice-option" data-choice-option="cats">cats</button>
+        <button class="choice-option" data-choice-option="dog">dog</button><button class="choice-option" data-choice-option="dogs">dogs</button>
+        <button class="choice-option" data-choice-option="horse">horse</button><button class="choice-option" data-choice-option="horses">horses</button>
+        <button class="choice-option" data-choice-option="sheep">sheep</button><button class="choice-option" data-choice-option="sheeps">sheeps</button>
+        <button class="choice-option" data-choice-option="a">a</button><button class="choice-option" data-choice-option="an">an</button>
+        <button class="choice-option" data-choice-option="zebra">zebra</button><button class="choice-option" data-choice-option="giraffe">giraffe</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The photo shows one <button class="choice-gap" data-choice-gap data-answer="cat" data-hint="Listen for the noun without a final s after one." data-fix="The photo shows one cat." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>The shelter has two <button class="choice-gap" data-choice-gap data-answer="dogs" data-hint="Listen for the z sound at the end of dogs after two." data-fix="The shelter has two dogs." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>There are three <button class="choice-gap" data-choice-gap data-answer="horses" data-hint="Listen for the extra syllable at the end of horses." data-fix="There are three horses near the fence." data-placeholder="listen">listen</button> near the fence.</span></div>
+      <div class="q"><span class="n">4</span><span>The field has two <button class="choice-gap" data-choice-gap data-answer="sheep" data-hint="Sheep has the same form for one animal and more than one." data-fix="The field has two sheep." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>There is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Listen for an before the vowel sound in owl." data-fix="There is an owl in the tree." data-placeholder="listen">listen</button> owl in the tree.</span></div>
+      <div class="q"><span class="n">6</span><span>In the photo, I see a <button class="choice-gap" data-choice-gap data-answer="zebra" data-hint="Listen for ZEE-bruh in common U.S. pronunciation." data-fix="In the photo, I see a zebra." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol><li>The photo shows one cat.</li><li>The shelter has two dogs.</li><li>There are three horses near the fence.</li><li>The field has two sheep.</li><li>There is an owl in the tree.</li><li>In the photo, I see a zebra.</li></ol>
+    </details>
+  </section>
 
   <h2>Animal words in real chunks</h2>
   <div class="lead-rule"></div>
@@ -138,7 +237,7 @@ export const page = defineLesson({
   <p><span class="ex">I have a dog. &nbsp; · &nbsp; I don’t have a pet. &nbsp; · &nbsp; I like cats.</span><br /><span class="ex">It’s a cat. &nbsp; · &nbsp; It is small and black. &nbsp; · &nbsp; They are friendly.</span></p>
   <p>And chunks about other people: <span class="ex">My neighbor has two dogs. &nbsp; · &nbsp; My friend has a bird.</span></p>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each clue uses a specific visible feature, sound, behavior, or relationship that identifies one answer in this lesson.">
     <h3>Drill 1: choose the animal from the clue</h3>
     <p class="choice-hint">Read the clue, then choose the animal that fits</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -151,14 +250,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="bird">bird</button>
       <button class="choice-option" data-choice-option="chicken">chicken</button>
     </div>
-    <div class="q"><span class="n">1</span><span>People ride it. → a <button class="choice-gap" data-choice-gap data-answer="horse" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">2</span><span>It gives us wool. → a <button class="choice-gap" data-choice-gap data-answer="sheep" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">3</span><span>It lives in water and can swim. → a <button class="choice-gap" data-choice-gap data-answer="fish" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">4</span><span>It is a very big cat. People call it the king of animals. → a <button class="choice-gap" data-choice-gap data-answer="lion" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">5</span><span>Many people walk it in the park every day. → a <button class="choice-gap" data-choice-gap data-answer="dog" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">6</span><span>It is a small pet. It says “meow.” → a <button class="choice-gap" data-choice-gap data-answer="cat" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">7</span><span>It is small and can fly from tree to tree. → a <button class="choice-gap" data-choice-gap data-answer="bird" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">8</span><span>It is a farm bird. It gives us eggs. → a <button class="choice-gap" data-choice-gap data-answer="chicken" data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">1</span><span>In this photograph, a person is riding it. → a <button class="choice-gap" data-choice-gap data-answer="horse" data-hint="Choose the large animal that the person is riding in the photograph." data-fix="In this photograph, the person is riding a horse." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">2</span><span>This farm animal has a thick wool coat. → a <button class="choice-gap" data-choice-gap data-answer="sheep" data-hint="Choose the farm animal with wool." data-fix="A sheep has a wool coat." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">3</span><span>It lives in water, breathes with gills, has fins, and has no legs. → a <button class="choice-gap" data-choice-gap data-answer="fish" data-hint="The combination of water, gills, fins, and no legs identifies a fish here." data-fix="A fish lives in water and breathes with gills." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">4</span><span>This adult male is a large wild cat with a mane. → a <button class="choice-gap" data-choice-gap data-answer="lion" data-hint="An adult male lion usually has a mane." data-fix="This adult male lion has a mane." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">5</span><span>Its handler walks it in the park, and it can bark. → a <button class="choice-gap" data-choice-gap data-answer="dog" data-hint="In this clue, the animal has a handler and can bark." data-fix="The handler walks a dog that can bark." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">6</span><span>In this home, it is a small pet that can meow. → a <button class="choice-gap" data-choice-gap data-answer="cat" data-hint="The pet sound meow identifies a cat." data-fix="In this home, the small pet is a cat." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">7</span><span>It has feathers and wings. The animal in this picture is flying from one tree to another. → a <button class="choice-gap" data-choice-gap data-answer="bird" data-hint="Feathers identify a bird. The picture also shows this bird flying." data-fix="The picture shows a bird with feathers and wings." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">8</span><span>A hen is an adult female of this farm bird and lays eggs. What is the general animal word? → a <button class="choice-gap" data-choice-gap data-answer="chicken" data-hint="A hen is an adult female chicken." data-fix="The general animal word is chicken." data-placeholder="choose">choose</button></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -169,7 +268,7 @@ export const page = defineLesson({
   <h2>Build the meaning, then the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each match uses a distinguishing feature and avoids claiming that every member of a group behaves in exactly the same way.">
     <h3>Drill 2: match each animal to a true description</h3>
     <p class="tile-target">Tap an animal, then tap the description that fits it</p>
     <div class="tile-bank">
@@ -182,13 +281,13 @@ export const page = defineLesson({
       <button class="tile" data-tile="penguin">a penguin</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="elephant" data-placeholder="it is big, with a long trunk">it is big, with a long trunk</button>
-      <button class="slot" data-slot="fish" data-placeholder="it lives in water">it lives in water</button>
-      <button class="slot" data-slot="bird" data-placeholder="it is small, and it can fly">it is small, and it can fly</button>
-      <button class="slot" data-slot="rabbit" data-placeholder="it has long ears">it has long ears</button>
-      <button class="slot" data-slot="cow" data-placeholder="it gives us milk">it gives us milk</button>
-      <button class="slot" data-slot="giraffe" data-placeholder="it has a very long neck">it has a very long neck</button>
-      <button class="slot" data-slot="penguin" data-placeholder="it is black and white, and it cannot fly">it is black and white, and it cannot fly</button>
+      <button class="slot" data-slot="elephant" data-hint="An elephant has a trunk." data-fix="elephant → it is a large animal with a long trunk" data-placeholder="it is a large animal with a long trunk">it is a large animal with a long trunk</button>
+      <button class="slot" data-slot="fish" data-hint="A fish breathes with gills and moves with fins." data-fix="fish → it lives in water and has gills and fins" data-placeholder="it lives in water and has gills and fins">it lives in water and has gills and fins</button>
+      <button class="slot" data-slot="bird" data-hint="Feathers are the defining clue for a bird." data-fix="bird → it has feathers and wings; many birds can fly" data-placeholder="it has feathers and wings; many birds can fly">it has feathers and wings; many birds can fly</button>
+      <button class="slot" data-slot="rabbit" data-hint="A rabbit commonly has long ears." data-fix="rabbit → it commonly has long ears" data-placeholder="it commonly has long ears">it commonly has long ears</button>
+      <button class="slot" data-slot="cow" data-hint="Cow is the word for an adult female cattle animal." data-fix="cow → it is an adult female cattle animal" data-placeholder="it is an adult female cattle animal">it is an adult female cattle animal</button>
+      <button class="slot" data-slot="giraffe" data-hint="The very long neck distinguishes a giraffe here." data-fix="giraffe → it has a very long neck" data-placeholder="it has a very long neck">it has a very long neck</button>
+      <button class="slot" data-slot="penguin" data-hint="A penguin is a bird that swims but cannot fly." data-fix="penguin → it is a bird that swims but cannot fly" data-placeholder="it is a bird that swims but cannot fly">it is a bird that swims but cannot fly</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -197,9 +296,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="the dogs are very friendly">
+  <div class="tile-game" data-tile-builder data-answer="the dogs are very friendly" data-hint="Begin with the plural subject The dogs, then use are before very friendly." data-fix="The dogs are very friendly." data-success-message="Correct. The plural subject The dogs takes are before the description very friendly.">
     <h3>Drill 3: talk about two dogs</h3>
-    <p class="tile-target">Your neighbor’s dogs are friendly. Build the sentence, then say it.</p>
+    <p class="tile-target">A shelter note says that two dogs are very friendly. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="friendly">friendly</button>
       <button class="tile" data-build-tile="the">The</button>
@@ -215,9 +314,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she has a small cat">
+  <div class="tile-game" data-tile-builder data-answer="she has a small cat" data-hint="Maya uses she. Begin with She has, then keep a small cat together." data-fix="She has a small cat." data-success-message="Correct. She refers to Maya, and a small cat names one animal.">
     <h3>Drill 4: talk about a friend’s pet</h3>
-    <p class="tile-target">Your friend has one small cat. Build the sentence, then say it.</p>
+    <p class="tile-target">Maya uses <span class="ex">she</span>. She has one small cat. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="cat">cat</button>
       <button class="tile" data-build-tile="she">She</button>
@@ -236,21 +335,21 @@ export const page = defineLesson({
   <h2>Read and choose</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message about the neighbor’s pets</h3>
+    <h3>A fictional message about a neighbor's pets</h3>
     <p><span class="ex">“My neighbor has two dogs and a cat. The dogs are big and very friendly. The cat is small and black. Her name is Luna.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real message about animals.">
+  <div class="quiz" data-quiz data-success-message="Correct. You found the number of dogs, their two descriptions, and the animal named Luna in the fictional message.">
     <h3>Drill 5: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="two">
+      <div class="quiz-item" data-quiz-item data-answer="two" data-hint="The first sentence places a number directly before dogs." data-fix="The neighbor has two dogs.">
         <p class="quiz-question">1. How many dogs does the neighbor have?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="big and friendly">
+      <div class="quiz-item" data-quiz-item data-answer="big and friendly" data-hint="The second sentence gives two descriptions of the dogs." data-fix="The dogs are big and very friendly.">
         <p class="quiz-question">2. The dogs are ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="big and friendly">big and friendly</button><button class="quiz-option" data-quiz-option="small and black">small and black</button><button class="quiz-option" data-quiz-option="old and slow">old and slow</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the cat">
+      <div class="quiz-item" data-quiz-item data-answer="the cat" data-hint="The pronoun Her follows the sentence about the small black cat." data-fix="Luna is the cat.">
         <p class="quiz-question">3. Who is Luna?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the cat">the cat</button><button class="quiz-option" data-quiz-option="a dog">a dog</button><button class="quiz-option" data-quiz-option="the neighbor">the neighbor</button></div>
       </div>
@@ -264,7 +363,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="are" data-fix="The cat is black." data-why="One cat is singular, so we use is, not are.">
+  <div class="micro-drill" data-spot-error data-answer="are" data-hint="The subject The cat names one animal, so check the form of be." data-fix="The cat is black." data-why="One cat is singular, so we use is, not are.">
     <h3>Drill 6: one cat, is or are?</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -276,7 +375,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="dog" data-fix="I have two dogs." data-why="After a number we use the plural, so dog becomes dogs.">
+  <div class="micro-drill" data-spot-error data-answer="dog" data-hint="The number is two, so the regular countable animal noun needs a plural ending." data-fix="I have two dogs." data-why="After two, use the plural, so dog becomes dogs.">
     <h3>Drill 7: one or many?</h3>
     <p>Tap the word that does not match the number.</p>
     <div class="spot-options">
@@ -327,52 +426,66 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Talk about you:</b> Do you have a pet? Say <span class="ex">I have a cat. She is small and gray.</span> If not: <span class="ex">I don’t have a pet, but I like dogs.</span></div>
-  <div class="prompt-card"><b>Your street:</b> Name three animals you see near your home or in your city, with <span class="ex">a</span> or <span class="ex">an</span>: <span class="ex">a bird, a dog, a cat.</span> Then count one of them: <span class="ex">I see two dogs every morning.</span></div>
-  <div class="prompt-card"><b>A friend’s pet:</b> Talk about a pet in your family or a friend’s pet. <span class="ex">My friend has a dog. It is big and brown. It is very friendly.</span></div>
-  <div class="prompt-card"><b>At the zoo or on a farm:</b> You visit the city zoo or a farm outside town. Say three animals you want to see: <span class="ex">I want to see the lions, the elephants, and the penguins.</span></div>
-  <div class="prompt-card"><b>Information gap:</b> Describe an animal in two short sentences and the teacher guesses. Then change roles. <span class="ex">It is big. It lives in water.</span></div>
+  <p class="note-line">You never need to share information about your home, street, or a real pet. Choose a labeled picture, a public place, or an invented animal profile. Observe unknown animals from a safe distance rather than approaching or handling them.</p>
+  <div class="prompt-card"><b>A pictured or invented pet:</b> Choose a lesson picture or invent a profile. Say <span class="ex">This is a cat. She is small and gray.</span> You can also say <span class="ex">I don't have a pet, but I like dogs.</span></div>
+  <div class="prompt-card"><b>A city wildlife report:</b> Use a public photograph or an invented city. Name and count three animals with <span class="ex">a</span>, <span class="ex">an</span>, or a plural: <span class="ex">There is an owl. There are two foxes.</span></div>
+  <div class="prompt-card"><b>Categories in context:</b> Choose a rabbit, cat, chicken, or another animal. Explain whether it is a pet, farm animal, or wild animal in your chosen situation. Change the situation and see whether the category changes.</div>
+  <div class="prompt-card"><b>A safe observation:</b> Describe an animal from a picture or a safe distance. Say what you can observe, not what you assume: <span class="ex">It is brown. It has four legs. It is near a tree.</span></div>
+  <div class="prompt-card"><b>Information gap:</b> Describe a labeled animal in short sentences and keep adding observable clues until only one answer is clear. Your teacher guesses, then you change roles. <span class="ex">It is a bird. It is black and white. It swims, but it cannot fly.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: an animal information card</h3>
+    <p>Create a short card for an animal shelter, farm visit, or wildlife center. Use a real public example, a lesson picture, or an invented profile.</p>
+    <ol>
+      <li>Name one animal with the correct article: <span class="ex">a</span> or <span class="ex">an</span>.</li>
+      <li>Add one accurate singular or plural sentence with <span class="ex">is</span> or <span class="ex">are</span>.</li>
+      <li>Give a pet, farm animal, or wild animal category and explain the context.</li>
+      <li>Give at least three observable features without guessing personality or behavior.</li>
+      <li>Add one respectful or safe action for a visitor.</li>
+    </ol>
+    <p>Present the card for 30 to 45 seconds. Then answer one follow-up question from your teacher.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Explain the choice</h3>
-    <p>Complete this aloud: “For one animal I say <strong>a</strong> or <strong>an</strong> and use <strong>is</strong>: <span class="ex">the cat ___ small</span>. For many animals I add ______ and use ______: <span class="ex">the dogs ___ big</span>.”</p>
-    <p>Then say one true sentence about an animal in your life: a pet, a neighbor’s pet, or an animal on your street.</p>
+    <p>Complete this aloud: “For one animal I say <strong>a</strong> or <strong>an</strong> and use <strong>is</strong>: <span class="ex">the cat ___ small</span>. After zero or a number greater than one, I use a plural form: <span class="ex">zero cats · two cats</span>. A plural subject uses ______: <span class="ex">the dogs ___ big</span>.”</p>
+    <p>Name one plural that adds <span class="ex">-s</span> or <span class="ex">-es</span>, one that does not change, and one irregular plural. Then explain why one animal, such as a rabbit, can fit different categories in different contexts. You may use an invented example.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can name animals, choose a or an, and talk about one or many.">
+  <div class="quiz" data-quiz data-success-message="Correct. You can select articles from sound, form regular and unchanged plurals, match is or are to the subject, and identify animals from specific clues.">
     <h3>Final quiz: name it, count it, describe it</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="a">
+      <div class="quiz-item" data-quiz-item data-answer="a" data-hint="Dog begins with the consonant sound d." data-fix="I have a dog.">
         <p class="quiz-question">1. I have ___ dog.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="an">
+      <div class="quiz-item" data-quiz-item data-answer="an" data-hint="Owl begins with a vowel sound." data-fix="There is an owl in the tree.">
         <p class="quiz-question">2. There is ___ owl in the tree.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a">a</button><button class="quiz-option" data-quiz-option="an">an</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="cats">
-        <p class="quiz-question">3. My neighbor has two ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="cat">cat</button><button class="quiz-option" data-quiz-option="cats">cats</button><button class="quiz-option" data-quiz-option="a cat">a cat</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="fish" data-hint="For individual animals of the same kind, the usual plural of fish is fish." data-fix="The aquarium contains exactly two fish of the same kind.">
+        <p class="quiz-question">3. This aquarium contains exactly two individual animals of the same kind: two ___.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="fish">fish</button><button class="quiz-option" data-quiz-option="fishes">fishes</button><button class="quiz-option" data-quiz-option="fishs">fishs</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="are">
+      <div class="quiz-item" data-quiz-item data-answer="are" data-hint="The dogs is a plural subject." data-fix="The dogs are friendly.">
         <p class="quiz-question">4. The dogs ___ friendly.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="is">
+      <div class="quiz-item" data-quiz-item data-answer="is" data-hint="The cat names one animal." data-fix="The cat is black.">
         <p class="quiz-question">5. The cat ___ black.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a giraffe">
+      <div class="quiz-item" data-quiz-item data-answer="a giraffe" data-hint="The combination of great height and a very long neck identifies a giraffe here." data-fix="It is a giraffe.">
         <p class="quiz-question">6. It is very tall, with a long neck. It is ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a giraffe">a giraffe</button><button class="quiz-option" data-quiz-option="a rabbit">a rabbit</button><button class="quiz-option" data-quiz-option="a duck">a duck</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="I have two rabbits.">
+      <div class="quiz-item" data-quiz-item data-answer="I have two rabbits." data-hint="After two, remove a and use the plural rabbits." data-fix="I have two rabbits.">
         <p class="quiz-question">7. Which sentence is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="I have two rabbits.">I have two rabbits.</button><button class="quiz-option" data-quiz-option="I have two rabbit.">I have two rabbit.</button><button class="quiz-option" data-quiz-option="I have a two rabbits.">I have a two rabbits.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a penguin">
+      <div class="quiz-item" data-quiz-item data-answer="a penguin" data-hint="The bird in this clue swims but cannot fly." data-fix="It is a penguin.">
         <p class="quiz-question">8. It is a black and white bird. It swims, but it cannot fly. It is ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a penguin">a penguin</button><button class="quiz-option" data-quiz-option="a chicken">a chicken</button><button class="quiz-option" data-quiz-option="an owl">an owl</button></div>
       </div>
@@ -383,6 +496,39 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the article, plural, agreement, or category boundary that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day animal retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved an before owl, foxes after two, unchanged sheep after three, and uncountable wildlife without a.">
+      <h3>Complete from memory</h3>
+      <div class="choice-bank" aria-label="Next-day animal choices">
+        <button class="choice-option" data-choice-option="a">a</button><button class="choice-option" data-choice-option="an">an</button>
+        <button class="choice-option" data-choice-option="foxes">foxes</button><button class="choice-option" data-choice-option="foxs">foxs</button>
+        <button class="choice-option" data-choice-option="sheep">sheep</button><button class="choice-option" data-choice-option="sheeps">sheeps</button>
+        <button class="choice-option" data-choice-option="wildlife">wildlife</button><button class="choice-option" data-choice-option="a wildlife">a wildlife</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>There is <button class="choice-gap" data-choice-gap data-answer="an" data-hint="Owl begins with a vowel sound." data-fix="There is an owl." data-placeholder="choose">choose</button> owl.</span></div>
+      <div class="q"><span class="n">2</span><span>The public photograph shows two <button class="choice-gap" data-choice-gap data-answer="foxes" data-hint="Fox ends in x, so its plural adds -es." data-fix="The public photograph shows two foxes." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>The field has three <button class="choice-gap" data-choice-gap data-answer="sheep" data-hint="Sheep does not change in the plural." data-fix="The field has three sheep." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>From the marked trail, we saw <button class="choice-gap" data-choice-gap data-answer="wildlife" data-hint="Wildlife is an uncountable group word, so do not place a before it." data-fix="From the marked trail, we saw wildlife." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="is" data-hint="The subject The dogs is plural, so check the form of be." data-fix="The dogs are near the handler." data-why="A plural subject takes are, not is.">
+      <h3>Repair the agreement</h3>
+      <p>Tap the word that is wrong.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="the">The</button><button class="error-choice" data-error-choice="dogs">dogs</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="near">near</button><button class="error-choice" data-error-choice="the-handler">the handler.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, change <span class="ex">The fox is small</span> to two animals. Then name one animal category that depends on context.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>The foxes are small.</strong> A rabbit, for example, can be a pet, farm animal, or wild animal in different contexts.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

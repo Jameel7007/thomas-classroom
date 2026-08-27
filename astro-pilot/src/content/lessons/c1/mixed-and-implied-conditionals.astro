@@ -1,0 +1,339 @@
+---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
+import StructuredLesson from "../../../components/lesson/StructuredLesson.astro";
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+
+export const page = defineLesson({
+  "title": "Mixed and implied conditionals · C1 Grammar",
+  "slug": "mixed-and-implied-conditionals",
+  "level": "C1",
+  "topic": "Mixed and implied conditionals",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
+  "description": "Connect unreal causes and consequences across time, and express conditions economically through context, alternatives, and implied assumptions.",
+  "sequence": 3,
+  "prerequisites": ["c1/advanced-tense-and-aspect-review", "b2/third-and-mixed-conditionals"],
+  "related": ["c1/advanced-modal-meaning-and-stance", "c1/inversion-after-negative-expressions"],
+  "assessments": ["c1-exit"],
+  "tutorReviewRequired": true
+});
+
+export const lesson = {
+  duration: "75–90 min",
+  outcome: "Build and interpret mixed-time conditional relationships, then state or imply conditions with enough context to make the intended cause, consequence, and degree of certainty clear.",
+  focus: "unreal time relationships and implied conditions",
+  tags: ["past cause and present result", "present cause and past result", "without and otherwise"],
+  retrieval: [
+    {
+      prompt: "Build a third conditional: miss the train / arrive late yesterday.",
+      answer: "If I hadn’t missed the train, I wouldn’t have arrived late yesterday.",
+    },
+    {
+      prompt: "Build a second conditional: know the system better / make fewer mistakes now.",
+      answer: "If I knew the system better, I would make fewer mistakes now.",
+    },
+    {
+      prompt: "Name the time relationship: If she had accepted the promotion, she would be living in Chicago now.",
+      answer: "An unreal past decision produces an imagined present result.",
+    },
+  ],
+  notice: {
+    title: "The condition is not always in an if-clause",
+    setup: "A leadership team reviews why a launch succeeded and what could have happened under different circumstances.",
+    samples: [
+      "If we had ignored the early feedback, the product would be much harder to use now.",
+      "If the team were less adaptable, we wouldn’t have recovered so quickly last month.",
+      "Without Priya’s warning, we would have released the faulty update. One more delay, though, and we would have lost the client.",
+    ],
+    questions: [
+      "Which sentence links an unreal past cause to a present result?",
+      "Which sentence links a current quality to a past result?",
+      "Where is the condition expressed without if, and what full condition can you reconstruct?",
+    ],
+    check: {
+      question: "What full condition is implied by “Without Priya’s warning, we would have released the faulty update”?",
+      answer: "If Priya had not warned us, we would have released the faulty update.",
+      options: [
+        { value: "If Priya had not warned us, we would have released the faulty update." },
+        { value: "If Priya warns us tomorrow, we always release faulty updates." },
+        { value: "Because Priya warned us, we definitely released the faulty update." },
+      ],
+      hint: "Without plus a past event can replace an unreal past if-clause.",
+    },
+  },
+  discover: {
+    principle: "A conditional expresses a relationship, not merely a fixed if-pattern. Mixed conditionals connect an unreal cause and result in different time frames. Implied conditionals let context, phrases such as without or but for, and consequence markers such as otherwise carry the condition. The listener must still be able to recover one clear relationship.",
+    formRows: [
+      {
+        label: "past cause, present result",
+        form: "if + past perfect, would + base verb",
+        example: "If I had taken that role, I would work in Seattle now.",
+      },
+      {
+        label: "present state, past result",
+        form: "if + past form, would have + past participle",
+        example: "If she were less careful, she would have missed the error.",
+      },
+      {
+        label: "past condition without if",
+        form: "without / but for + noun phrase, would have + past participle",
+        example: "But for your help, we would have missed the deadline.",
+      },
+      {
+        label: "implied consequence",
+        form: "context or instruction + otherwise + result",
+        example: "Back up the files; otherwise, we could lose everything.",
+      },
+    ],
+    meaningRows: [
+      {
+        choice: "past cause to present result",
+        use: "an unreal earlier event explains an imagined situation now",
+        example: "If we had invested earlier, the system would be more reliable now.",
+      },
+      {
+        choice: "present state to past result",
+        use: "a continuing quality or situation explains an imagined earlier outcome",
+        example: "If he weren’t so persuasive, the board wouldn’t have approved the plan.",
+      },
+      {
+        choice: "without, but for, or otherwise",
+        use: "the condition is recoverable and a more economical form fits the discourse",
+        example: "Without the backup, we would have lost the records.",
+      },
+      {
+        choice: "one more, a little less, or given",
+        use: "a noun phrase or contextual assumption sets the threshold for a result",
+        example: "One more complaint and the agency could suspend the service.",
+      },
+    ],
+    pronunciation: "In unreal conditionals, reduce auxiliaries but stress the contrast: “If we’d LISTened, we WOULDN’T be fixing it now.” Pause after a longer condition. With an implied condition, stress the threshold word or consequence marker: “ONE more delay, and we lose the contract”; “Check it again. OTHERwise, we could miss the error.”",
+    errors: [
+      {
+        wrong: "If I would have accepted the offer, I lived abroad now.",
+        correct: "If I had accepted the offer, I would be living abroad now.",
+        why: "Use the past perfect in the unreal condition and would in the imagined present result.",
+      },
+      {
+        wrong: "If she weren’t so organized, she wouldn’t finish the project last week.",
+        correct: "If she weren’t so organized, she wouldn’t have finished the project last week.",
+        why: "The continuing quality is unreal in the present, but the imagined result belongs to a finished past time.",
+      },
+      {
+        wrong: "Without your reminder, I will have forgotten the appointment yesterday.",
+        correct: "Without your reminder, I would have forgotten the appointment yesterday.",
+        why: "The sentence imagines an unreal past result, so use would have plus the past participle.",
+      },
+    ],
+  },
+  reference: {
+    title: "Recover the hidden relationship",
+    intro: "When the if-clause is absent, test whether the surrounding language still supplies a specific condition and a logical result.",
+    groups: [
+      {
+        heading: "Unreal support or obstacle",
+        items: ["without your help", "but for the delay", "with better data", "under different circumstances"],
+      },
+      {
+        heading: "Threshold",
+        items: ["one more mistake", "a little less preparation", "another week", "one small change"],
+      },
+      {
+        heading: "Alternative consequence",
+        items: ["otherwise", "or we could", "and the result would be", "in that case"],
+      },
+      {
+        heading: "Interpretation check",
+        items: ["Is the condition real or unreal?", "What time is the cause?", "What time is the result?", "How certain is the consequence?"],
+      },
+    ],
+  },
+  build: [
+    {
+      question: "Maya declined a transfer in 2023, so she does not live near the new office now. Which sentence expresses that unreal relationship?",
+      answer: "If Maya had accepted the transfer, she would live near the new office now.",
+      options: [
+        { value: "If Maya had accepted the transfer, she would live near the new office now." },
+        { value: "If Maya accepted the transfer now, she would have lived there in 2023." },
+        { value: "If Maya would accept the transfer, she had lived near the office now." },
+      ],
+      hint: "The unreal cause is in 2023, and the imagined result is present.",
+    },
+    {
+      question: "Daniel is consistently cautious. That quality prevented a serious error yesterday. Which sentence fits?",
+      answer: "If Daniel weren’t so cautious, he would have made a serious error yesterday.",
+      options: [
+        { value: "If Daniel weren’t so cautious, he would have made a serious error yesterday." },
+        { value: "If Daniel hadn’t been cautious tomorrow, he makes an error now." },
+        { value: "If Daniel would be cautious, he had made an error yesterday." },
+      ],
+      hint: "The unreal condition describes a continuing quality, but the imagined result is past.",
+    },
+    {
+      question: "A grant saved a community program from closing last year. Which economical sentence preserves that meaning?",
+      answer: "Without the grant, the program would have closed last year.",
+      options: [
+        { value: "Without the grant, the program would have closed last year." },
+        { value: "Without the grant, the program will close yesterday." },
+        { value: "Because of the grant, the program definitely closed last year." },
+      ],
+      hint: "Without the grant implies “if the program had not received the grant.”",
+    },
+    {
+      question: "You are warning a colleague about a real possible consequence of not saving a file now. Which sentence is appropriate?",
+      answer: "Save a local copy; otherwise, you could lose your changes.",
+      options: [
+        { value: "Save a local copy; otherwise, you could lose your changes." },
+        { value: "Without saving yesterday, you would have lost a future file now." },
+        { value: "If you would save it, you definitely lose every change." },
+      ],
+      hint: "The instruction supplies the real condition, and otherwise introduces the possible result.",
+    },
+    {
+      question: "The client almost ended the contract after the third delay. Which sentence sets a clear imagined threshold?",
+      answer: "One more delay and the client would have ended the contract.",
+      options: [
+        { value: "One more delay and the client would have ended the contract." },
+        { value: "One more delay and the client had always ended the contract." },
+        { value: "One more delay yesterday and the client ends it next year for certain." },
+      ],
+      hint: "The noun phrase “one more delay” carries the unreal past condition.",
+    },
+  ],
+  context: {
+    title: "The launch that nearly failed",
+    intro: "Read the operations director’s review. Some conditions are explicit, while others are compressed because the relationship is clear from context.",
+    lines: [
+      "The team launched on schedule, but only because an external reviewer noticed a security flaw. If she had not tested the final build, we would be dealing with a serious breach now.",
+      "Our lead engineer is unusually calm under pressure. If he were less methodical, we would have approved the first repair and caused another failure that evening.",
+      "Without the overnight support team, the service would have remained offline until morning. Another two hours of downtime and several major clients might have canceled. We now require an independent review before every release; otherwise, the same pattern could recur.",
+    ],
+    questions: [
+      {
+        question: "What unreal past event would have created a present problem?",
+        answer: "The reviewer not testing the final build",
+        options: [
+          { value: "The reviewer not testing the final build" },
+          { value: "The engineer becoming calmer next year" },
+          { value: "The clients canceling before the company existed" },
+        ],
+        hint: "Find the past condition whose imagined result is “dealing with a serious breach now.”",
+      },
+      {
+        question: "Which continuing quality explains the successful repair decision?",
+        answer: "The lead engineer’s methodical approach",
+        options: [
+          { value: "The lead engineer’s methodical approach" },
+          { value: "The absence of all time pressure" },
+          { value: "The first repair’s automatic approval" },
+        ],
+        hint: "The second paragraph links a present characteristic to a past outcome.",
+      },
+      {
+        question: "What condition is implied before “otherwise” in the final sentence?",
+        answer: "If the company does not require independent reviews",
+        options: [
+          { value: "If the company does not require independent reviews" },
+          { value: "If every client had already canceled" },
+          { value: "If the launch had never taken place in the future" },
+        ],
+        hint: "Otherwise means “if the policy described just before this does not happen.”",
+      },
+    ],
+  },
+  builder: {
+    title: "Build the past cause and present result",
+    prompt: "Explain the current system problem through an unreal earlier decision.",
+    answer: "If we had upgraded earlier the system would be stable now",
+    tiles: ["If", "we", "had", "upgraded", "earlier", "the", "system", "would", "be", "stable", "now"],
+  },
+  repairs: [
+    {
+      title: "Separate the unreal cause and result",
+      sentence: "If I would have accepted the offer, I lived abroad now.",
+      answer: "would",
+      fix: "If I had accepted the offer, I would be living abroad now.",
+      why: "The if-clause uses the past perfect for the unreal past decision; the result describes an imagined situation now.",
+      tokens: [
+        { value: "if", label: "If I" },
+        { value: "would", label: "would have accepted" },
+        { value: "offer", label: "the offer" },
+        { value: "lived", label: "I lived" },
+        { value: "abroad", label: "abroad now" },
+      ],
+    },
+    {
+      title: "Place the result in the finished past",
+      sentence: "If she weren’t so organized, she wouldn’t finish the project last week.",
+      answer: "finish",
+      fix: "If she weren’t so organized, she wouldn’t have finished the project last week.",
+      why: "The unreal present quality explains an imagined result at a finished past time.",
+      tokens: [
+        { value: "if", label: "If she" },
+        { value: "organized", label: "weren’t so organized" },
+        { value: "she", label: "she wouldn’t" },
+        { value: "finish", label: "finish" },
+        { value: "project", label: "the project last week" },
+      ],
+    },
+    {
+      title: "Use the unreal past result",
+      sentence: "Without your reminder, I will have forgotten the appointment yesterday.",
+      answer: "will",
+      fix: "Without your reminder, I would have forgotten the appointment yesterday.",
+      why: "Without your reminder implies an unreal past condition, so the result takes would have plus the past participle.",
+      tokens: [
+        { value: "without", label: "Without your reminder" },
+        { value: "i", label: "I" },
+        { value: "will", label: "will have" },
+        { value: "forgotten", label: "forgotten" },
+        { value: "appointment", label: "the appointment yesterday" },
+      ],
+    },
+  ],
+  fluency: [
+    {
+      prompt: "A past decision changed your present situation. Express the unreal alternative.",
+      answer: "If I had made a different decision, I would be in a different situation now.",
+    },
+    {
+      prompt: "A continuing personal quality affected a past result. Express the unreal alternative.",
+      answer: "If I weren’t so persistent, I wouldn’t have completed the project.",
+    },
+    {
+      prompt: "Replace a full if-clause with without, but for, or otherwise.",
+      answer: "But for her careful review, we would have missed the error. Check the figures again; otherwise, we could publish the wrong total.",
+    },
+  ],
+  communicate: {
+    title: "The counterfactual review",
+    setup: "Analyze a real project, decision, travel problem, career move, or public event. Identify what actually happened, then explore two plausible alternatives without pretending that the imagined results are facts.",
+    roles: [
+      "Analyst: give the factual timeline, build one past-to-present and one present-to-past conditional, then reformulate one condition without if.",
+      "Challenger: test whether each cause and result belongs to the stated time, question any unsupported certainty, and ask the analyst to make an implied condition explicit.",
+    ],
+    prompts: [
+      "If that had not happened, what would be different now?",
+      "If the people involved were different, what might have happened then?",
+      "Without which factor would the result have changed?",
+      "What condition is understood before otherwise?",
+    ],
+    success: [
+      "Every imagined cause and consequence has a clear time reference.",
+      "Modal choices distinguish a strong prediction from a cautious possibility.",
+      "Implied conditions remain recoverable from the surrounding context.",
+    ],
+  },
+  reflect: {
+    canDo: [
+      "Connect unreal causes and results across different time frames.",
+      "Interpret and produce conditionals without an explicit if-clause.",
+      "Calibrate imagined consequences with would, could, or might.",
+    ],
+    nextUse: "Take one important decision and write three versions: a full mixed conditional, a version with without or but for, and a cautious version with could or might.",
+  },
+};
+---
+
+<LessonPage page={page}><StructuredLesson page={page} lesson={lesson} /></LessonPage>

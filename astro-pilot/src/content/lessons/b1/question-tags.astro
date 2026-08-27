@@ -1,19 +1,328 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Question tags · B1 Grammar · Curriculum Map",
+  "title": "Question tags · B1 Grammar",
   "slug": "question-tags",
   "level": "B1",
   "topic": "Question tags",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Question tags.",
+  "status": "ready",
+  "description": "Check information and invite agreement by matching the statement’s operator, polarity, subject reference, response logic, and conversational intonation.",
   "sequence": 9,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a0/the-verb-to-be", "a1/present-simple", "a2/modals-should-must-have-to"],
+  "related": ["b1/modals-of-deduction-might-could-must", "b1/relationships"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 58,
+    "revisionSummary": "Operator choice, polarity, pronoun reference, negative-meaning statements, special tags, answer logic, social force, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 9</p>
+  <h1>Question tags: <em>build the grammar, then choose the social signal</em></h1>
+  <p class="standfirst">A question tag adds a small checking phrase to a statement: <span class="ex">You sent the link, didn’t you?</span> The statement carries your current understanding. The tag asks the listener to confirm, correct, or align with it. Accurate grammar comes from the statement’s operator and subject; conversational meaning comes from context, voice movement, and how much agreement you seem to expect.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">statement + operator + pronoun</span>
+    <span class="tag">polarity · response · intonation</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Separate the statement from its checking tag.</span></div>
+    <div class="flow-step"><b>Build</b><span>Find the operator, reverse polarity, and track the subject.</span></div>
+    <div class="flow-step"><b>Listen</b><span>Hear expected agreement or a more open check.</span></div>
+    <div class="flow-step"><b>Use</b><span>Confirm a fictional event plan without pressuring agreement.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can build standard opposite-polarity tags with <span class="ex">be</span>, perfect <span class="ex">have</span>, modals, and <span class="ex">do</span>; use contemporary U.S. <span class="ex">do</span>-support with lexical <span class="ex">have</span>; replace nouns and indefinite subjects with the right tag pronoun; treat <span class="ex">never</span>, <span class="ex">nobody</span>, <span class="ex">nothing</span>, and <span class="ex">hardly</span> as negative in meaning; handle <span class="ex">I’m ..., aren’t I?</span>, <span class="ex">Let’s ..., shall we?</span>, and common imperative tags; answer according to the truth of the statement; use rising or falling intonation as a context-sensitive social signal; and choose a full question when a tag could pressure the listener.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recovered be, perfect have, and modal can as the operators that will reappear in their matching tags.">
+    <h3>Reactivate the statement operators</h3>
+    <div class="choice-bank" aria-label="Question tag foundation choices"><button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="have">have</button><button class="choice-option" data-choice-option="can">can</button><button class="choice-option" data-choice-option="does">does</button><button class="choice-option" data-choice-option="did">did</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">Lena is ready</span>, the visible operator is <button class="choice-gap" data-choice-gap data-answer="is" data-hint="The statement uses present be before the adjective ready." data-fix="The operator is is.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">They have finished</span>, the Present Perfect operator is <button class="choice-gap" data-choice-gap data-answer="have" data-hint="Have carries tense before the participle finished." data-fix="The Present Perfect operator is have.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">Marcus can help</span>, the modal operator is <button class="choice-gap" data-choice-gap data-answer="can" data-hint="The modal comes directly before base help." data-fix="The modal operator is can.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice one event plan and two different checking jobs</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Cedar House event board, 4:00 p.m.</h3>
+    <p><b>Confirmed line:</b> Main speaker arrives at 5:30.</p>
+    <p><b>Blank task:</b> Send the guest Wi-Fi code.</p>
+    <p><b>Known fact:</b> Printed handouts are not required.</p>
+    <p><span class="ex">Lena: “The speaker arrives at 5:30, doesn’t she?”</span> <b>Falling voice:</b> Lena reads a confirmed line and expects Marcus to agree.</p>
+    <p><span class="ex">Marcus: “You haven’t sent the Wi-Fi code, have you?”</span> <b>Rising voice:</b> The board is blank, and Marcus genuinely needs to check.</p>
+    <p><span class="ex">Lena: “No, I haven’t. Let’s send it now, shall we?”</span></p>
+    <ul>
+      <li>Which statement is positive, and which tag is negative?</li>
+      <li>Which statement is negative, and which tag is positive?</li>
+      <li>Does <span class="ex">No, I haven’t</span> confirm or correct the negative statement?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You reversed polarity, repeated the matching operator, interpreted No as confirmation of the negative statement, and linked each voice movement to its stated context.">
+    <h3>Discovery check: form and conversational job</h3>
+    <div class="choice-bank" aria-label="Question tag discovery choices"><button class="choice-option" data-choice-option="negative">negative</button><button class="choice-option" data-choice-option="does">does</button><button class="choice-option" data-choice-option="positive">positive</button><button class="choice-option" data-choice-option="confirms that the code has not been sent">confirms that the code has not been sent</button><button class="choice-option" data-choice-option="a more open check">a more open check</button></div>
+    <div class="q"><span class="n">1</span><span>The statement <span class="ex">The speaker arrives at 5:30</span> is positive, so <span class="ex">doesn’t she</span> is <button class="choice-gap" data-choice-gap data-answer="negative" data-hint="The contraction doesn’t contains not." data-fix="Doesn’t she is a negative tag.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The lexical Present Simple verb <span class="ex">arrives</span> requires tag operator <button class="choice-gap" data-choice-gap data-answer="does" data-hint="There is no visible auxiliary, and the subject speaker is third-person singular." data-fix="The tag uses does: doesn’t she?">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The statement <span class="ex">You haven’t sent the code</span> is negative, so <span class="ex">have you</span> is <button class="choice-gap" data-choice-gap data-answer="positive" data-hint="The tag has no not after have." data-fix="Have you is a positive tag.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Lena’s reply <span class="ex">No, I haven’t</span> <button class="choice-gap" data-choice-gap data-answer="confirms that the code has not been sent" data-hint="The short answer agrees with the negative statement’s truth." data-fix="No, I haven’t confirms that the code has not been sent.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Marcus’s rising voice matches the supplied context because he makes <button class="choice-gap" data-choice-gap data-answer="a more open check" data-hint="The blank board does not tell him whether Lena completed the task elsewhere." data-fix="The rising tag functions as a more open check here.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: a tag echoes the statement’s operator</h2>
+  <div class="lead-rule"></div>
+  <p>An <b>operator</b> is the first auxiliary or modal that carries tense, polarity, or question behavior. If the statement already contains <span class="ex">be</span>, perfect <span class="ex">have</span>, or a modal, echo that operator in the tag. Reverse positive and negative polarity, then replace the statement subject with a matching pronoun.</p>
+  <table>
+    <thead><tr><th>statement system</th><th>operator echoed in tag</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>copular or auxiliary <span class="ex">be</span></td><td><span class="ex">is / are / was / were</span></td><td><span class="ex">Lena is ready, isn’t she?</span></td></tr>
+      <tr><td>Present Perfect</td><td><span class="ex">have / has</span></td><td><span class="ex">They’ve finished, haven’t they?</span></td></tr>
+      <tr><td>modal or future</td><td>same modal</td><td><span class="ex">Marcus can help, can’t he? The talk will start soon, won’t it?</span></td></tr>
+      <tr><td>lexical Present or Past Simple</td><td><span class="ex">do / does / did</span></td><td><span class="ex">She works here, doesn’t she? They called, didn’t they?</span></td></tr>
+    </tbody>
+  </table>
+  <p>With more than one auxiliary, repeat the first operator: <span class="ex">They will have finished, won’t they?</span> Contractions require meaning, not spelling alone. <span class="ex">He’s the speaker, isn’t he?</span> contains <span class="ex">he is</span>; <span class="ex">He’s arrived, hasn’t he?</span> contains <span class="ex">he has</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You echoed be, perfect have, and the first modal, and you resolved he’s from the complement that followed it.">
+    <h3>Operator check: repeat the system already present</h3>
+    <div class="choice-bank" aria-label="Question tag operator choices"><button class="choice-option" data-choice-option="isn’t she">isn’t she</button><button class="choice-option" data-choice-option="are they">are they</button><button class="choice-option" data-choice-option="haven’t you">haven’t you</button><button class="choice-option" data-choice-option="won’t they">won’t they</button><button class="choice-option" data-choice-option="isn’t he">isn’t he</button><button class="choice-option" data-choice-option="hasn’t he">hasn’t he</button></div>
+    <div class="q"><span class="n">1</span><span>Positive <span class="ex">be</span> statement: Lena is ready, <button class="choice-gap" data-choice-gap data-answer="isn’t she" data-hint="Echo is, make it negative, and use she for Lena." data-fix="Lena is ready, isn’t she?">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>Negative <span class="ex">be</span> statement: The guests aren’t waiting outside, <button class="choice-gap" data-choice-gap data-answer="are they" data-hint="Echo are positively and use they for the guests." data-fix="The guests aren’t waiting outside, are they?">choose</button>?</span></div>
+    <div class="q"><span class="n">3</span><span>Positive Present Perfect: You’ve paid the caterer, <button class="choice-gap" data-choice-gap data-answer="haven’t you" data-hint="You’ve means you have before the participle paid." data-fix="You’ve paid the caterer, haven’t you?">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>Two auxiliaries; echo the first one: They will have finished by five, <button class="choice-gap" data-choice-gap data-answer="won’t they" data-hint="The first operator is will, so the negative tag is won’t they." data-fix="They will have finished by five, won’t they?">choose</button>?</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">He’s</span> before the noun phrase <span class="ex">the main speaker</span> means <span class="ex">he is</span>: He’s the main speaker, <button class="choice-gap" data-choice-gap data-answer="isn’t he" data-hint="The noun phrase after he’s identifies him, so echo is." data-fix="He’s the main speaker, isn’t he?">choose</button>?</span></div>
+    <div class="q"><span class="n">6</span><span><span class="ex">He’s</span> before participle <span class="ex">arrived</span> means <span class="ex">he has</span>: He’s arrived, <button class="choice-gap" data-choice-gap data-answer="hasn’t he" data-hint="Arrived is the participle in the Present Perfect, so echo has." data-fix="He’s arrived, hasn’t he?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Supply <span class="ex">do</span> for lexical Present and Past Simple</h2>
+  <div class="lead-rule"></div>
+  <p>When the statement has a lexical Present or Past Simple verb and no visible operator, supply the same <span class="ex">do</span>-support used in ordinary questions: <span class="ex">Lena works here, doesn’t she?</span> and <span class="ex">Marcus called, didn’t he?</span> The tag does not repeat the main verb.</p>
+  <p>In contemporary U.S. English, lexical possession with <span class="ex">have</span> normally uses <span class="ex">do</span>: <span class="ex">You have the room key, don’t you?</span> Perfect <span class="ex">have</span> is different: <span class="ex">You’ve checked the room, haven’t you?</span> British and other varieties may also use <span class="ex">You have a car, haven’t you?</span>; the controlled choices here target the stated U.S. pattern, not a universal ban.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You supplied does for singular present, do for plural and U.S. lexical have, and did for Past Simple while leaving the main verb out of the tag.">
+    <h3>Do-support check: no visible operator in the statement</h3>
+    <div class="choice-bank" aria-label="Do support tag choices"><button class="choice-option" data-choice-option="doesn’t she">doesn’t she</button><button class="choice-option" data-choice-option="don’t they">don’t they</button><button class="choice-option" data-choice-option="didn’t he">didn’t he</button><button class="choice-option" data-choice-option="don’t you">don’t you</button><button class="choice-option" data-choice-option="did it">did it</button></div>
+    <div class="q"><span class="n">1</span><span>Third-person singular Present Simple: Lena works at Cedar House, <button class="choice-gap" data-choice-gap data-answer="doesn’t she" data-hint="Supply negative does and use she for Lena." data-fix="Lena works at Cedar House, doesn’t she?">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>Plural Present Simple: The doors open at five, <button class="choice-gap" data-choice-gap data-answer="don’t they" data-hint="Supply negative do and use they for the doors." data-fix="The doors open at five, don’t they?">choose</button>?</span></div>
+    <div class="q"><span class="n">3</span><span>Positive Past Simple: Marcus sent the schedule yesterday, <button class="choice-gap" data-choice-gap data-answer="didn’t he" data-hint="Supply negative did and use he for Marcus." data-fix="Marcus sent the schedule yesterday, didn’t he?">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>Contemporary U.S. lexical possession: You have the room key, <button class="choice-gap" data-choice-gap data-answer="don’t you" data-hint="This have means possess, so the target U.S. pattern uses do-support." data-fix="You have the room key, don’t you?">choose</button>?</span></div>
+    <div class="q"><span class="n">5</span><span>Negative Past Simple: The confirmation email didn’t arrive, <button class="choice-gap" data-choice-gap data-answer="did it" data-hint="Reverse negative did to positive did and use it for the email." data-fix="The confirmation email didn’t arrive, did it?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Track the subject reference into a pronoun</h2>
+  <div class="lead-rule"></div>
+  <p>A standard tag normally uses a pronoun rather than repeating the full noun. People and things take their ordinary reference pronouns. Indefinite people such as <span class="ex">everyone, someone, no one</span>, and <span class="ex">nobody</span> commonly take singular <span class="ex">they</span> in the tag. <span class="ex">This, that</span>, and <span class="ex">nothing</span> take <span class="ex">it</span>; <span class="ex">these</span> and <span class="ex">those</span> take <span class="ex">they</span>. Existential <span class="ex">there</span> stays <span class="ex">there</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You replaced a named person and plural noun, used singular they for everyone, changed this to it, and preserved existential there.">
+    <h3>Reference check: who or what does the tag point back to?</h3>
+    <div class="choice-bank" aria-label="Question tag subject choices"><button class="choice-option" data-choice-option="she">she</button><button class="choice-option" data-choice-option="they">they</button><button class="choice-option" data-choice-option="it">it</button><button class="choice-option" data-choice-option="there">there</button></div>
+    <div class="q"><span class="n">1</span><span>Lena has the guest list, doesn’t <button class="choice-gap" data-choice-gap data-answer="she" data-hint="Lena is one woman, so the tag pronoun is she." data-fix="Lena has the guest list, doesn’t she?">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>The caterers have arrived, haven’t <button class="choice-gap" data-choice-gap data-answer="they" data-hint="The plural people caterers become they." data-fix="The caterers have arrived, haven’t they?">choose</button>?</span></div>
+    <div class="q"><span class="n">3</span><span>Everyone is ready, aren’t <button class="choice-gap" data-choice-gap data-answer="they" data-hint="Everyone is grammatically singular in the statement but commonly takes singular they in the tag." data-fix="Everyone is ready, aren’t they?">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>This is the final version, isn’t <button class="choice-gap" data-choice-gap data-answer="it" data-hint="This normally becomes it in a standard tag." data-fix="This is the final version, isn’t it?">choose</button>?</span></div>
+    <div class="q"><span class="n">5</span><span>There are enough chairs, aren’t <button class="choice-gap" data-choice-gap data-answer="there" data-hint="Existential there remains there in the tag." data-fix="There are enough chairs, aren’t there?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Read negative meaning, not only visible <span class="ex">not</span></h2>
+  <div class="lead-rule"></div>
+  <p>Words such as <span class="ex">never, nobody, no one, nothing, hardly, rarely, seldom</span>, and <span class="ex">scarcely</span> make the statement negative in meaning. They normally take a positive tag: <span class="ex">Nobody called, did they?</span> Do not add a negative tag just because there is no visible <span class="ex">not</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recognized negative meaning in nobody, nothing, never, and hardly, then formed a positive tag with the matching operator and pronoun.">
+    <h3>Meaning check: the negative may be inside another word</h3>
+    <div class="choice-bank" aria-label="Negative meaning tag choices"><button class="choice-option" data-choice-option="did they">did they</button><button class="choice-option" data-choice-option="is it">is it</button><button class="choice-option" data-choice-option="does it">does it</button><button class="choice-option" data-choice-option="do they">do they</button></div>
+    <div class="q"><span class="n">1</span><span>Nobody called the speaker, <button class="choice-gap" data-choice-gap data-answer="did they" data-hint="Nobody makes the statement negative; use positive did and singular they." data-fix="Nobody called the speaker, did they?">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>Nothing is missing, <button class="choice-gap" data-choice-gap data-answer="is it" data-hint="Nothing is negative in meaning; echo positive is and use it." data-fix="Nothing is missing, is it?">choose</button>?</span></div>
+    <div class="q"><span class="n">3</span><span>The old projector never works reliably, <button class="choice-gap" data-choice-gap data-answer="does it" data-hint="Never makes the lexical Present Simple statement negative; supply positive does." data-fix="The old projector never works reliably, does it?">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>The guests hardly ever request paper copies, <button class="choice-gap" data-choice-gap data-answer="do they" data-hint="Hardly ever carries negative meaning; supply positive do for the plural guests." data-fix="The guests hardly ever request paper copies, do they?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Learn the high-value special patterns as complete chunks</h2>
+  <div class="lead-rule"></div>
+  <p>The positive <span class="ex">I am</span> pattern uses conventional <span class="ex">aren’t I?</span> in standard conversation: <span class="ex">I’m next, aren’t I?</span> Negative <span class="ex">I’m not</span> takes regular positive <span class="ex">am I?</span> A suggestion with <span class="ex">Let’s</span> commonly takes <span class="ex">shall we?</span>. Imperatives commonly take <span class="ex">will you?</span>, although <span class="ex">would you, can you</span>, and <span class="ex">could you</span> change tone and request style.</p>
+  <p>Imperative tags do not follow the simple opposite-polarity rule, so learn the whole chunk. Same-polarity conversational tags also exist, as in <span class="ex">So you finished, did you?</span>, but they carry other attitudes and are not the neutral confirmation pattern practiced here.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used aren’t I after positive I am, am I after I’m not, shall we after Let’s, and will you with both positive and negative imperatives.">
+    <h3>Special-pattern check: retrieve the whole chunk</h3>
+    <div class="choice-bank" aria-label="Special question tag choices"><button class="choice-option" data-choice-option="aren’t I">aren’t I</button><button class="choice-option" data-choice-option="am I">am I</button><button class="choice-option" data-choice-option="shall we">shall we</button><button class="choice-option" data-choice-option="will you">will you</button></div>
+    <div class="q"><span class="n">1</span><span>Positive <span class="ex">I am</span>: I’m introducing the speaker, <button class="choice-gap" data-choice-gap data-answer="aren’t I" data-hint="Use the conventional standard tag aren’t I after positive I’m." data-fix="I’m introducing the speaker, aren’t I?">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>Negative <span class="ex">I am</span>: I’m not speaking too quickly, <button class="choice-gap" data-choice-gap data-answer="am I" data-hint="Reverse negative I’m not to positive am I." data-fix="I’m not speaking too quickly, am I?">choose</button>?</span></div>
+    <div class="q"><span class="n">3</span><span>Joint suggestion: Let’s send the Wi-Fi code now, <button class="choice-gap" data-choice-gap data-answer="shall we" data-hint="Let’s commonly takes the fixed tag shall we." data-fix="Let’s send the Wi-Fi code now, shall we?">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>Positive imperative with the lesson’s core tag: Please close the door, <button class="choice-gap" data-choice-gap data-answer="will you" data-hint="The controlled imperative pattern uses will you here; actual tone depends on voice and relationship." data-fix="Please close the door, will you?">choose</button>?</span></div>
+    <div class="q"><span class="n">5</span><span>Negative imperative: Don’t forget the guest list, <button class="choice-gap" data-choice-gap data-answer="will you" data-hint="A negative imperative can also take will you." data-fix="Don’t forget the guest list, will you?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Answer the statement, and choose intonation from the situation</h2>
+  <div class="lead-rule"></div>
+  <p>A short answer responds to whether the statement is true, not whether the tag itself looks positive or negative. <span class="ex">You haven’t sent it, have you?</span> receives <span class="ex">No, I haven’t</span> when the negative statement is true, and <span class="ex">Yes, I have</span> when the listener corrects it.</p>
+  <p>A falling tag often presents the speaker as fairly sure and invites alignment. A rising tag often makes the check more open. These are useful tendencies, not automatic translations of pitch into certainty. Variety, relationship, emotion, and discourse can change the effect. A falling tag may sound warm, routine, challenging, or pressuring. When genuine choice matters, ask a neutral full question such as <span class="ex">Does Tuesday work for you?</span></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You answered the statement’s truth, matched falling and rising voice to the supplied certainty, and replaced a pressuring assumption with a neutral full question.">
+    <h3>Social-meaning check: use the stated relationship and knowledge</h3>
+    <div class="choice-bank" aria-label="Question tag response and intonation choices"><button class="choice-option" data-choice-option="No, I haven’t">No, I haven’t</button><button class="choice-option" data-choice-option="Yes, I have">Yes, I have</button><button class="choice-option" data-choice-option="a falling voice">a falling voice</button><button class="choice-option" data-choice-option="a rising voice">a rising voice</button><button class="choice-option" data-choice-option="Does Tuesday work for you?">Does Tuesday work for you?</button></div>
+    <div class="q"><span class="n">1</span><span>The code is still unsent. Answer <span class="ex">You haven’t sent it, have you?</span> with <button class="choice-gap" data-choice-gap data-answer="No, I haven’t" data-hint="The negative statement is true, so confirm it with No and a negative short answer." data-fix="No, I haven’t.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The code was sent privately, so the negative statement is false. Correct it with <button class="choice-gap" data-choice-gap data-answer="Yes, I have" data-hint="Use Yes and a positive short answer because the code has been sent." data-fix="Yes, I have.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Lena is reading a verified 5:30 line and expects routine agreement. In this supplied context, she uses <button class="choice-gap" data-choice-gap data-answer="a falling voice" data-hint="A fall often fits an expected confirmation in a routine cooperative exchange." data-fix="She uses a falling voice in this context.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Marcus sees a blank task but does not know whether Lena completed it elsewhere. For a more open check here, he uses <button class="choice-gap" data-choice-gap data-answer="a rising voice" data-hint="A rise often fits a genuine information check when the speaker is uncertain." data-fix="He uses a rising voice for the open check here.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>A colleague must be free to reject a proposed date. Replace <span class="ex">Tuesday is fine, isn’t it?</span> with the neutral full question <button class="choice-gap" data-choice-gap data-answer="Does Tuesday work for you?" data-hint="Ask directly about the colleague’s availability without embedding the preferred answer." data-fix="Does Tuesday work for you?">choose</button></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: keep the tag as a short intonation unit</h2>
+  <div class="lead-rule"></div>
+  <p>A tag often forms a short intonation unit after the statement. The voice commonly falls through the end of an expected-confirmation tag and rises through the end of a more open check. The pitch movement belongs to the whole tag; do not assume that one fixed auxiliary or pronoun must always carry the strongest stress.</p>
+  <p>In connected U.S. speech, <span class="ex">don’t you</span> may link toward /doʊntʃə/, and <span class="ex">didn’t you</span> may link toward /dɪdən(t)ʃə/. <span class="ex">Isn’t it</span> often compresses toward /ˈɪzənɪt/. These reductions must preserve the operator, polarity, and subject reference. In careful or contrastive speech, more of each word remains audible: <span class="ex">I said she HAS arrived, HASN’T she?</span></p>
+
+  <section data-lesson-extension="Tutor-read expected agreement, open confirmation, U.S. tag linking, negative-statement response, and contrastive operator listening check">
+    <details class="reveal-card">
+      <summary>Open the tutor listening check</summary>
+      <div class="reveal-body">
+        <p><b>Tutor:</b> Read each line once naturally, without showing the transcript. Read it a second time only after the learner commits to an answer.</p>
+        <ol>
+          <li><span class="ex">The speaker arrives at FIVE THIRty, doesn’t she?</span> Use a falling voice through the tag.</li>
+          <li><span class="ex">You haven’t sent the WI-FI code, have you?</span> Use a rising voice through the tag.</li>
+          <li><span class="ex">You have the ROOM key, don’t you?</span> Link <span class="ex">don’t you</span> naturally.</li>
+          <li><span class="ex">You haven’t sent it, have you? No, I HAVEN’T.</span></li>
+          <li><span class="ex">I said he HAS arrived, HASN’T he?</span></li>
+        </ol>
+      </div>
+    </details>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard expected and open checks, recovered U.S. do-support linking, interpreted a negative answer, and followed contrastive perfect-have stress.">
+      <h3>Listen for grammar and conversational stance</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Lena presents the confirmed time as expected shared information." data-hint="Listen for the falling tag after the board’s confirmed 5:30 line." data-fix="Lena presents the confirmed time as expected shared information."><p class="quiz-question">1. What job does the falling tag perform in the first supplied context?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lena presents the confirmed time as expected shared information.">Lena presents the confirmed time as expected shared information.</button><button class="quiz-option" data-quiz-option="Lena has no information about the time at all.">Lena has no information about the time at all.</button><button class="quiz-option" data-quiz-option="Lena orders the speaker to change the time.">Lena orders the speaker to change the time.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Marcus genuinely checks whether the blank task was completed elsewhere." data-hint="Listen for the rising tag and remember that the shared board is blank." data-fix="Marcus genuinely checks whether the blank task was completed elsewhere."><p class="quiz-question">2. Why does the second tag rise in this supplied context?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Marcus genuinely checks whether the blank task was completed elsewhere.">Marcus genuinely checks whether the blank task was completed elsewhere.</button><button class="quiz-option" data-quiz-option="Marcus knows with certainty that the task is complete.">Marcus knows with certainty that the task is complete.</button><button class="quiz-option" data-quiz-option="Rising voice always expresses anger in every variety.">Rising voice always expresses anger in every variety.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Lexical possession have takes U.S. do-support: don’t you." data-hint="The statement means possess the key, not have completed an action." data-fix="Lexical possession have takes U.S. do-support: don’t you."><p class="quiz-question">3. What grammar remains recoverable in the linked phrase <span class="ex">don’t you</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lexical possession have takes U.S. do-support: don’t you.">Lexical possession have takes U.S. do-support: don’t you.</button><button class="quiz-option" data-quiz-option="Present Perfect have requires haven’t it.">Present Perfect have requires haven’t it.</button><button class="quiz-option" data-quiz-option="The tag repeats the main verb have you have.">The tag repeats the main verb have you have.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The speaker confirms that the item has not been sent." data-hint="No, I haven’t agrees with the truth of the negative statement." data-fix="The speaker confirms that the item has not been sent."><p class="quiz-question">4. What does <span class="ex">No, I haven’t</span> communicate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The speaker confirms that the item has not been sent.">The speaker confirms that the item has not been sent.</button><button class="quiz-option" data-quiz-option="The speaker corrects the statement and says it was sent.">The speaker corrects the statement and says it was sent.</button><button class="quiz-option" data-quiz-option="The speaker refuses to answer the tag.">The speaker refuses to answer the tag.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The contrast identifies he’s as he has, so the tag repeats has." data-hint="Arrived is a participle, and the speaker stresses perfect have in both statement and tag." data-fix="The contrast identifies he’s as he has, so the tag repeats has."><p class="quiz-question">5. What does the final contrast make explicit?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The contrast identifies he’s as he has, so the tag repeats has.">The contrast identifies he’s as he has, so the tag repeats has.</button><button class="quiz-option" data-quiz-option="He’s means he is before every possible following word.">He’s means he is before every possible following word.</button><button class="quiz-option" data-quiz-option="The tag must use does because arrived is lexical present.">The tag must use does because arrived is lexical present.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details class="reveal-card">
+      <summary>Reveal the listening evidence</summary>
+      <div class="reveal-body">
+        <ol>
+          <li>The confirmed schedule plus falling voice presents 5:30 as expected shared information.</li>
+          <li>The blank task plus rising voice makes the completion check more open.</li>
+          <li>Possessive <span class="ex">have</span> uses contemporary U.S. <span class="ex">do</span>-support. Linking does not erase <span class="ex">don’t you</span>.</li>
+          <li><span class="ex">No, I haven’t</span> confirms the negative statement: the item remains unsent.</li>
+          <li>The participle <span class="ex">arrived</span> resolves <span class="ex">he’s</span> as <span class="ex">he has</span>, and contrastive stress highlights matching <span class="ex">hasn’t</span>.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <h2>Read a confirmation exchange without guessing the answers</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Cedar House planning note</h3>
+    <p><span class="ex">Lena: The speaker arrives at 5:30, doesn’t she?</span></p>
+    <p><span class="ex">Marcus: Yes, she does. The signed agreement confirms it. You paid the caterer yesterday, didn’t you?</span></p>
+    <p><span class="ex">Lena: Yes, I did. But nobody has sent the guest Wi-Fi code, have they?</span></p>
+    <p><span class="ex">Marcus: No, they haven’t. I have the final guest list, though.</span></p>
+    <p><span class="ex">Lena: You have the room key too, don’t you?</span></p>
+    <p><span class="ex">Marcus: No, I don’t. Eli has it. Let’s ask him after the sound check, shall we?</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the confirmed arrival, completed payment, unsent code, missing room key, and joint suggestion from the exchange itself.">
+    <h3>Reading check: follow statement truth and reference</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="The signed agreement confirms a 5:30 arrival." data-hint="Marcus’s first reply names both the time and its source." data-fix="The signed agreement confirms a 5:30 arrival."><p class="quiz-question">1. What supports Marcus’s positive answer about the speaker?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The signed agreement confirms a 5:30 arrival.">The signed agreement confirms a 5:30 arrival.</button><button class="quiz-option" data-quiz-option="The event board says the speaker canceled.">The event board says the speaker canceled.</button><button class="quiz-option" data-quiz-option="Nobody knows who the speaker is.">Nobody knows who the speaker is.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Lena paid the caterer yesterday." data-hint="Lena answers the positive Past Simple statement with Yes, I did." data-fix="Lena paid the caterer yesterday."><p class="quiz-question">2. What does <span class="ex">Yes, I did</span> confirm?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Lena paid the caterer yesterday.">Lena paid the caterer yesterday.</button><button class="quiz-option" data-quiz-option="Lena has never contacted the caterer.">Lena has never contacted the caterer.</button><button class="quiz-option" data-quiz-option="Marcus paid the caterer next month.">Marcus paid the caterer next month.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The guest Wi-Fi code has not been sent." data-hint="Nobody creates a negative statement, and No, they haven’t confirms it." data-fix="The guest Wi-Fi code has not been sent."><p class="quiz-question">3. What remains incomplete?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The guest Wi-Fi code has not been sent.">The guest Wi-Fi code has not been sent.</button><button class="quiz-option" data-quiz-option="The caterer has not been paid.">The caterer has not been paid.</button><button class="quiz-option" data-quiz-option="The speaker’s arrival time has not been confirmed.">The speaker’s arrival time has not been confirmed.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Eli has the room key." data-hint="Marcus corrects Lena’s assumption after No, I don’t." data-fix="Eli has the room key."><p class="quiz-question">4. Who has the room key?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Eli has the room key.">Eli has the room key.</button><button class="quiz-option" data-quiz-option="Marcus has the room key.">Marcus has the room key.</button><button class="quiz-option" data-quiz-option="The speaker has every key.">The speaker has every key.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build a perfect tag and a negative-meaning tag</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="you have checked the room haven't you" data-hint="Begin with You have checked the room, then echo perfect have in the negative tag haven’t you." data-fix="You have checked the room, haven’t you?" data-success-message="Correct. The positive Present Perfect statement takes the negative tag haven’t you.">
+    <h3>Build 1: echo perfect <span class="ex">have</span></h3><p class="tile-target">Confirm a completed room check.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="room">room</button><button class="tile" data-build-tile="you">You</button><button class="tile" data-build-tile="haven't">haven’t</button><button class="tile" data-build-tile="checked">checked</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="have">have</button><button class="tile" data-build-tile="you">you</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="nobody has sent the code have they" data-hint="Begin with negative-meaning Nobody, use has sent in the statement, then a positive have they tag with singular they." data-fix="Nobody has sent the code, have they?" data-success-message="Correct. Nobody makes the statement negative in meaning, so the tag is positive have they with singular they.">
+    <h3>Build 2: read negative meaning</h3><p class="tile-target">Check the unsent code without adding another negative.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="code">code</button><button class="tile" data-build-tile="they">they</button><button class="tile" data-build-tile="nobody">Nobody</button><button class="tile" data-build-tile="has">has</button><button class="tile" data-build-tile="sent">sent</button><button class="tile" data-build-tile="have">have</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the tag or response</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="doesnt" data-hint="The statement already uses be: is ready." data-fix="Lena is ready, isn’t she?" data-why="Echo the statement’s operator is; do not supply does when be is already present." data-success-message="Correct. Isn’t she echoes is and reverses its polarity.">
+    <h3>Repair 1: match the operator</h3><p>Tap the tag operator from the wrong verb system.</p><div class="spot-options"><button class="error-choice" data-error-choice="lena">Lena</button><button class="error-choice" data-error-choice="ready">is ready,</button><button class="error-choice" data-error-choice="doesnt">doesn’t</button><button class="error-choice" data-error-choice="she">she?</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="didnt" data-hint="Nobody makes the statement negative in meaning, so its tag must be positive." data-fix="Nobody called the speaker, did they?" data-why="Use positive did after negative-meaning nobody, and use singular they for the indefinite person." data-success-message="Correct. Did they reverses the negative meaning and keeps the person reference natural.">
+    <h3>Repair 2: reverse negative meaning</h3><p>Tap the tag operator with the wrong polarity.</p><div class="spot-options"><button class="error-choice" data-error-choice="nobody">Nobody</button><button class="error-choice" data-error-choice="called">called the speaker,</button><button class="error-choice" data-error-choice="didnt">didn’t</button><button class="error-choice" data-error-choice="they">they?</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="yes" data-hint="The code is still unsent, so the negative statement is true." data-fix="You haven’t sent the code, have you? No, I haven’t." data-why="A truthful negative short answer begins with No. Yes, I have would correct the negative statement and mean the code was sent." data-success-message="Correct. No, I haven’t confirms the negative statement without reversing its truth.">
+    <h3>Repair 3: answer the statement’s truth</h3><p>The code remains unsent. Tap the response word that contradicts the following negative short answer.</p><div class="spot-options"><button class="error-choice" data-error-choice="question">You haven’t sent the code, have you?</button><button class="error-choice" data-error-choice="yes">Yes,</button><button class="error-choice" data-error-choice="havent">I haven’t.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use tags without exposing plans or pressuring agreement</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to confirm a real employer, coworker, client, family member, relationship, travel plan, address, appointment, payment, password, contract, health detail, schedule, or private disagreement. Use Lena, Marcus, Eli, Cedar House, and the fictional event board. Real details are optional.</p>
+  <div class="prompt-card"><b>Verified details:</b> Choose three confirmed fictional facts. State each with an accurate tag and a cooperative falling voice.</div>
+  <div class="prompt-card"><b>Open checks:</b> Choose three blank or uncertain tasks. Use rising tags and accept either confirmation or correction.</div>
+  <div class="prompt-card"><b>Grammar range:</b> Include <span class="ex">be</span>, Present Perfect, a modal, Present or Past Simple, one negative-meaning word, and one special pattern.</div>
+  <div class="prompt-card"><b>Respect:</b> Replace one tag that embeds a preferred answer with a neutral full question. Respond to every answer rather than repeating the pressure.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: run a 75–90 second fictional coordination check</h3>
+    <p>Use a supplied event board with four confirmed details, three blank tasks, and one incorrect assumption. Produce at least six tags using four operator systems. Include one negative statement, one negative-meaning word, one special pattern, one expected-agreement fall, and one open-check rise. Your partner must confirm at least two assumptions and correct at least one. Finish by changing one potentially pressuring tag into a neutral full question.</p>
+    <p><b>Evidence check:</b> Can the listener recover the statement operator, polarity, subject reference, truth of every short answer, intended checking job, and whether the voice movement invites alignment or leaves room for correction?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You matched perfect have, reversed negative-meaning nobody, and interpreted a correcting positive short answer from its full statement.">
+    <h3>Final check: defend the form and response</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="They’ve received the code, haven’t they?" data-hint="They’ve means they have before participle received, so echo negative haven’t." data-fix="They’ve received the code, haven’t they?"><p class="quiz-question">1. Which sentence accurately tags a positive Present Perfect statement?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="They’ve received the code, haven’t they?">They’ve received the code, haven’t they?</button><button class="quiz-option" data-quiz-option="They’ve received the code, don’t they?">They’ve received the code, don’t they?</button><button class="quiz-option" data-quiz-option="They’ve received the code, have the guests?">They’ve received the code, have the guests?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Nobody called, did they?" data-hint="Nobody is negative in meaning and takes positive did plus singular they." data-fix="Nobody called, did they?"><p class="quiz-question">2. Which sentence accurately tags a negative-meaning Past Simple statement?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Nobody called, did they?">Nobody called, did they?</button><button class="quiz-option" data-quiz-option="Nobody called, didn’t they?">Nobody called, didn’t they?</button><button class="quiz-option" data-quiz-option="Nobody called, did nobody?">Nobody called, did nobody?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The negative assumption was wrong; Marcus has the key." data-hint="Yes, I do responds to whether Marcus has the key, not to the positive shape of do you." data-fix="The negative assumption was wrong; Marcus has the key."><p class="quiz-question">3. Lena asks Marcus, <span class="ex">You don’t have the key, do you?</span> Marcus answers <span class="ex">Yes, I do.</span> What does he mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The negative assumption was wrong; Marcus has the key.">The negative assumption was wrong; Marcus has the key.</button><button class="quiz-option" data-quiz-option="The negative assumption was correct; Marcus lacks the key.">The negative assumption was correct; Marcus lacks the key.</button><button class="quiz-option" data-quiz-option="Marcus refuses to discuss the key.">Marcus refuses to discuss the key.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what did the speaker assume, and what may the listener correct?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">I find the operator by...</span> <span class="ex">I reverse the polarity by...</span> <span class="ex">A negative-meaning word takes...</span> <span class="ex">A short answer responds to...</span> <span class="ex">A falling tag often...</span> <span class="ex">I choose a full question when...</span></p>
+    <p>Take one fictional event fact and produce three versions: a neutral full question, an open rising tag, and an expected-agreement falling tag. Explain how the grammar stays stable while the social stance changes.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day operator, negative-meaning polarity, and response-truth retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Identify the statement operator, semantic polarity, and real subject reference before building each tag or interpreting the answer.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained U.S. lexical-have do-support, positive tagging after never, and statement-based response logic.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="You have the final list, don’t you?" data-hint="In the stated contemporary U.S. pattern, possessive have is lexical and uses do-support." data-fix="You have the final list, don’t you?"><p class="quiz-question">1. Which sentence uses the lesson’s contemporary U.S. tag for lexical possession?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="You have the final list, don’t you?">You have the final list, don’t you?</button><button class="quiz-option" data-quiz-option="You have the final list, haven’t you?">You have the final list, haven’t you?</button><button class="quiz-option" data-quiz-option="You have the final list, doesn’t it?">You have the final list, doesn’t it?</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The old printer never works, does it?" data-hint="Never makes the statement negative in meaning, so use a positive does tag." data-fix="The old printer never works, does it?"><p class="quiz-question">2. Which tag matches the negative meaning of <span class="ex">never</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The old printer never works, does it?">The old printer never works, does it?</button><button class="quiz-option" data-quiz-option="The old printer never works, doesn’t it?">The old printer never works, doesn’t it?</button><button class="quiz-option" data-quiz-option="The old printer never works, is it?">The old printer never works, is it?</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="No, she hasn’t confirms that Lena has not sent the code." data-hint="The short answer responds to the negative statement You haven’t sent the code." data-fix="No, she hasn’t confirms that Lena has not sent the code."><p class="quiz-question">3. Marcus asks about Lena, <span class="ex">She hasn’t sent the code, has she?</span> Eli answers <span class="ex">No, she hasn’t.</span> What does the answer mean?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="No, she hasn’t confirms that Lena has not sent the code.">No, she hasn’t confirms that Lena has not sent the code.</button><button class="quiz-option" data-quiz-option="No, she hasn’t means Lena already sent the code.">No, she hasn’t means Lena already sent the code.</button><button class="quiz-option" data-quiz-option="The answer changes Lena into a plural subject.">The answer changes Lena into a plural subject.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

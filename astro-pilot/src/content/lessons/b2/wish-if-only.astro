@@ -1,19 +1,364 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "wish / if only · B2 Grammar · Curriculum Map",
+  "title": "Wish / if only · B2 Grammar",
   "slug": "wish-if-only",
   "level": "B2",
   "topic": "wish / if only",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B2 grammar lesson covering wish / if only.",
+  "status": "ready",
+  "description": "Express present wishes, past regrets, unavailable ability, and desired change with precise time and attitude.",
   "sequence": 7,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b2-exit"
-  ]
+  "prerequisites": ["b2/third-and-mixed-conditionals", "b2/modals-of-past-speculation", "b1/second-conditional"],
+  "related": ["b1/past-perfect", "b2/causative-have-get-something-done"],
+  "assessments": ["b2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 72,
+    "revisionSummary": "Unreal time, speaker attitude, complete form, wish versus hope, would and could boundaries, U.S. speech, case analysis, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="70–80 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 7</p>
+  <h1><em>Wish</em> and <em>if only</em>: locate reality before expressing distance</h1>
+  <p class="standfirst">A wish compares reality with a preferred alternative. The grammar moves away from reality, but the form called “past” does not always mean past time. First locate the real situation. Then choose whether you want a different state now, unavailable ability now, a different completed past, or a change in behavior.</p>
+  <div class="meta-row">
+    <span class="tag">70–80 min core</span>
+    <span class="tag">reality → preferred alternative</span>
+    <span class="tag">past form, precise time</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Locate</b><span>Is the real fact present, past, or still open?</span></div>
+    <div class="flow-step"><b>Choose</b><span>State, ability, regret, or desired change?</span></div>
+    <div class="flow-step"><b>Build</b><span>Keep every auxiliary and participle.</span></div>
+    <div class="flow-step"><b>Respond</b><span>Express emotion without turning hindsight into blame.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can use <span class="ex">wish / if only + Past Simple</span> for an unreal present, <span class="ex">could</span> for unavailable present ability, Past Perfect for past regret, and <span class="ex">would</span> for desired change; distinguish <span class="ex">wish</span> from an open future <span class="ex">hope</span> and formal <span class="ex">wish to</span>; choose <span class="ex">were</span> or natural informal <span class="ex">was</span> without a false absolute rule; hear contracted <span class="ex">’d</span> and reduced auxiliaries in U.S. speech; and turn a regret into a responsible next step.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You recovered present counterfactual distance, Past Perfect, modal-perfect form, and two participles before using them inside wishes.">
+    <h3>Reactivate the counterfactual foundation</h3>
+    <div class="choice-bank" aria-label="Wish foundation choices">
+      <button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="had tested">had tested</button><button class="choice-option" data-choice-option="might have found">might have found</button><button class="choice-option" data-choice-option="sent">sent</button><button class="choice-option" data-choice-option="known">known</button><button class="choice-option" data-choice-option="would test">would test</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>If the room <button class="choice-gap" data-choice-gap data-answer="were" data-hint="The room is not larger now. Use the counterfactual Past Simple form of be." data-fix="If the room were larger, we could add ten seats.">choose</button> larger, we could add ten seats.</span></div>
+    <div class="q"><span class="n">2</span><span>If the team <button class="choice-gap" data-choice-gap data-answer="had tested" data-hint="The testing opportunity ended before launch, so build Past Perfect." data-fix="If the team had tested the older phones, it might have found the problem.">choose</button> the older phones, it <button class="choice-gap" data-choice-gap data-answer="might have found" data-hint="Keep the past result uncertain with modal plus have plus participle." data-fix="It might have found the problem.">choose</button> the problem.</span></div>
+    <div class="q"><span class="n">3</span><span>The past participle of <span class="ex">send</span> is <button class="choice-gap" data-choice-gap data-answer="sent" data-hint="The irregular form is the same in Past Simple and as the participle." data-fix="send → sent → sent">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The past participle of <span class="ex">know</span> is <button class="choice-gap" data-choice-gap data-answer="known" data-hint="Past Simple is knew, but the participle after had is different." data-fix="know → knew → known">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice: one project, four distances from reality</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Fictional Pine Street Learning Center open day</h3>
+    <p><b>Current and recorded facts:</b> The main room holds 60 people, but 74 people registered. A second room is unavailable during a scheduled electrical inspection. Before registration opened, the team tested the form on desktop computers but not on three older phones. On launch day, 43 people tried the form on those phones, and 18 did not complete registration. The reminder system sent duplicate messages at 8:00 and 8:05 this morning. The vendor is working on a fix and still expects to finish by noon.</p>
+    <p><span class="ex">I wish the main room were larger.</span> It is not larger now.</p>
+    <p><span class="ex">I wish we could use the second room.</span> We cannot use it during the inspection.</p>
+    <p><span class="ex">If only we had tested those phones before launch.</span> We did not test them, and that opportunity is over.</p>
+    <p><span class="ex">I wish the reminder system would stop sending duplicates.</span> The speaker wants a repeated, changeable process to stop.</p>
+    <p><span class="ex">I hope the vendor finishes by noon.</span> Noon is still in the future, so success remains possible.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched each sentence to the real time and the speaker's intended attitude before naming the form.">
+    <h3>Discovery check: recover reality and attitude</h3>
+    <div class="choice-bank" aria-label="Wish discovery choices">
+      <button class="choice-option" data-choice-option="an unreal present state">an unreal present state</button><button class="choice-option" data-choice-option="unavailable present ability">unavailable present ability</button><button class="choice-option" data-choice-option="regret about a completed past">regret about a completed past</button><button class="choice-option" data-choice-option="a desired change in a repeated process">a desired change in a repeated process</button><button class="choice-option" data-choice-option="an open future possibility">an open future possibility</button><button class="choice-option" data-choice-option="emotional emphasis, not a new time pattern">emotional emphasis, not a new time pattern</button>
+    </div>
+    <div class="q"><span class="n">1</span><span><span class="ex">I wish the room were larger</span> presents <button class="choice-gap" data-choice-gap data-answer="an unreal present state" data-hint="Compare the preferred size with the room's actual size now." data-fix="The room is not larger now, so the sentence presents an unreal present state.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">I wish we could use the second room</span> presents <button class="choice-gap" data-choice-gap data-answer="unavailable present ability" data-hint="The inspection prevents use now." data-fix="Could marks an ability or possibility that is unavailable now.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">If only we had tested those phones</span> presents <button class="choice-gap" data-choice-gap data-answer="regret about a completed past" data-hint="The registration launch has already happened." data-fix="Past Perfect creates an alternative to a completed past fact.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">I wish the system would stop</span> presents <button class="choice-gap" data-choice-gap data-answer="a desired change in a repeated process" data-hint="Duplicate messages keep happening, and the process can change." data-fix="Would asks for a repeated, changeable process to behave differently.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">I hope the vendor finishes by noon</span> presents <button class="choice-gap" data-choice-gap data-answer="an open future possibility" data-hint="Noon has not arrived, and the fix may still happen." data-fix="Hope fits a future outcome that remains genuinely possible.">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>Compared with <span class="ex">wish</span>, <span class="ex">if only</span> commonly adds <button class="choice-gap" data-choice-gap data-answer="emotional emphasis, not a new time pattern" data-hint="Both expressions can use Past Simple, Past Perfect, could, or would according to meaning." data-fix="If only can intensify longing, frustration, or regret, but the time relationship still selects the form.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: map real time, preferred reality, and attitude</h2>
+  <div class="lead-rule"></div>
+  <p>The past-looking form marks <b>distance from reality</b>. Real time still matters because the distance can point away from a present fact or back toward a completed past. <span class="ex">Would</span> adds a desired change, while <span class="ex">could</span> focuses on unavailable ability or possibility.</p>
+  <table>
+    <thead><tr><th>Meaning</th><th>Core pattern</th><th>Reality</th><th>Preferred alternative</th></tr></thead>
+    <tbody>
+      <tr><td>different present state</td><td>wish / if only + <b>Past Simple</b></td><td>The room is small.</td><td>I wish it <b>were larger</b>.</td></tr>
+      <tr><td>unavailable present ability</td><td>wish / if only + <b>could + base</b></td><td>We cannot use Room B.</td><td>I wish we <b>could use</b> it.</td></tr>
+      <tr><td>different completed past</td><td>wish / if only + <b>Past Perfect</b></td><td>We did not test the phones.</td><td>If only we <b>had tested</b> them.</td></tr>
+      <tr><td>desired behavior or process change</td><td>wish / if only + subject + <b>would + base</b></td><td>The system keeps sending duplicates.</td><td>I wish it <b>would stop</b>.</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <h3><span class="ex">Were</span>, <span class="ex">was</span>, and a useful standard target</h3>
+    <p>Counterfactual <span class="ex">were</span> is available with every subject: <span class="ex">I wish I were there</span> and <span class="ex">If only the room were larger</span>. It is a dependable target in careful professional and academic English. <span class="ex">Was</span> also occurs naturally with <span class="ex">I, he, she,</span> and <span class="ex">it</span> in informal U.S. conversation. Do not describe every informal <span class="ex">I wish I was</span> as impossible. Use <span class="ex">were</span> when you want an unambiguously counterfactual careful form.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Every choice now follows the stated real time and attitude instead of the word wish alone.">
+    <h3>Choose nine meaning-time relationships</h3>
+    <div class="choice-bank" aria-label="Wish meaning and time choices">
+      <button class="choice-option" data-choice-option="lived">lived</button><button class="choice-option" data-choice-option="could attend">could attend</button><button class="choice-option" data-choice-option="had saved">had saved</button><button class="choice-option" data-choice-option="would lower">would lower</button><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="hadn't sent">hadn't sent</button><button class="choice-option" data-choice-option="wouldn't interrupt">wouldn't interrupt</button><button class="choice-option" data-choice-option="could stay">could stay</button><button class="choice-option" data-choice-option="had known">had known</button><button class="choice-option" data-choice-option="will finish">will finish</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>My apartment is far from work now. I wish I <button class="choice-gap" data-choice-gap data-answer="lived" data-hint="This is a different present state, not a past residence." data-fix="I wish I lived closer to work.">choose</button> closer to work.</span></div>
+    <div class="q"><span class="n">2</span><span>The conference is today, but my schedule makes attendance impossible. I wish I <button class="choice-gap" data-choice-gap data-answer="could attend" data-hint="Focus on unavailable ability today." data-fix="I wish I could attend the conference.">choose</button> the conference.</span></div>
+    <div class="q"><span class="n">3</span><span>We deleted the only local copy last night. If only we <button class="choice-gap" data-choice-gap data-answer="had saved" data-hint="The saving opportunity ended before the deletion." data-fix="If only we had saved a backup.">choose</button> a backup.</span></div>
+    <div class="q"><span class="n">4</span><span>The ventilation fan keeps making a loud tone, and maintenance can change its setting. I wish they <button class="choice-gap" data-choice-gap data-answer="would lower" data-hint="The speaker wants another party to change a controllable setting." data-fix="I wish they would lower the fan speed.">choose</button> the fan speed.</span></div>
+    <div class="q"><span class="n">5</span><span>The office is not quieter now. In careful English: I wish it <button class="choice-gap" data-choice-gap data-answer="were" data-hint="Use the careful counterfactual form of be for an unreal present." data-fix="I wish it were quieter.">choose</button> quieter.</span></div>
+    <div class="q"><span class="n">6</span><span>I sent a rushed reply yesterday and now regret it. I wish I <button class="choice-gap" data-choice-gap data-answer="hadn't sent" data-hint="Negate the completed past action inside Past Perfect." data-fix="I wish I hadn't sent the reply so quickly.">choose</button> the reply so quickly.</span></div>
+    <div class="q"><span class="n">7</span><span>My coworker repeatedly speaks over clients, and I want that behavior to change. If only he <button class="choice-gap" data-choice-gap data-answer="wouldn't interrupt" data-hint="This is a complaint about another person's repeated, potentially controllable behavior." data-fix="If only he wouldn't interrupt clients.">choose</button> clients.</span></div>
+    <div class="q"><span class="n">8</span><span>The last train leaves in five minutes, so we cannot remain for the final question. We wish we <button class="choice-gap" data-choice-gap data-answer="could stay" data-hint="The current schedule removes the ability to stay." data-fix="We wish we could stay for the final question.">choose</button> for the final question.</span></div>
+    <div class="q"><span class="n">9</span><span>The deadline passed before I learned about the grant. If only I <button class="choice-gap" data-choice-gap data-answer="had known" data-hint="The knowing needed to happen before a completed deadline." data-fix="If only I had known about the grant earlier.">choose</button> about the grant earlier.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the complete clause, not a tense label</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>Function</th><th>Form after wish / if only</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>present positive alternative</td><td>subject + Past Simple</td><td>I wish the form <b>worked</b>.</td></tr>
+      <tr><td>present negative alternative</td><td>subject + did not + base</td><td>I wish it <b>didn't require</b> two steps.</td></tr>
+      <tr><td>present state with be</td><td>subject + were / informal was</td><td>If only the room <b>were available</b>.</td></tr>
+      <tr><td>unavailable ability</td><td>subject + could not / could + base</td><td>I wish we <b>could move</b> upstairs.</td></tr>
+      <tr><td>past positive alternative</td><td>subject + had + participle</td><td>I wish we <b>had tested</b> it.</td></tr>
+      <tr><td>past negative alternative</td><td>subject + had not + participle</td><td>I wish we <b>hadn't opened</b> registration yet.</td></tr>
+      <tr><td>desired positive change</td><td>subject + would + base</td><td>I wish the vendor <b>would reply</b>.</td></tr>
+      <tr><td>desired negative change</td><td>subject + would not + base</td><td>I wish the system <b>wouldn't resend</b> notices.</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <h3>Questions ask about the whole wish</h3>
+    <p>In <span class="ex">What do you wish you had known?</span>, <span class="ex">do you wish</span> carries question order. The embedded preferred reality keeps statement order: <span class="ex">you had known</span>, not <span class="ex">had you known</span>. In <span class="ex">Do you wish the schedule were different?</span>, do not invert the embedded subject and verb.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You kept statement order inside the wish and retained every auxiliary, negative, base verb, and participle.">
+    <h3>Complete ten form decisions</h3>
+    <div class="choice-bank" aria-label="Wish form choices">
+      <button class="choice-option" data-choice-option="worked">worked</button><button class="choice-option" data-choice-option="didn't require">didn't require</button><button class="choice-option" data-choice-option="were available">were available</button><button class="choice-option" data-choice-option="could move">could move</button><button class="choice-option" data-choice-option="had tested">had tested</button><button class="choice-option" data-choice-option="hadn't opened">hadn't opened</button><button class="choice-option" data-choice-option="would reply">would reply</button><button class="choice-option" data-choice-option="wouldn't resend">wouldn't resend</button><button class="choice-option" data-choice-option="you had known">you had known</button><button class="choice-option" data-choice-option="the schedule were">the schedule were</button><button class="choice-option" data-choice-option="you knew">you knew</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The form fails on my phone now. I wish it <button class="choice-gap" data-choice-gap data-answer="worked" data-hint="Use Past Simple for a preferred present state." data-fix="I wish it worked on my phone.">choose</button> on my phone.</span></div>
+    <div class="q"><span class="n">2</span><span>The current process requires two approvals. I wish it <button class="choice-gap" data-choice-gap data-answer="didn't require" data-hint="Use did not plus the base verb for the negative present alternative." data-fix="I wish it didn't require two approvals.">choose</button> two approvals.</span></div>
+    <div class="q"><span class="n">3</span><span>Room B is unavailable today. If only it <button class="choice-gap" data-choice-gap data-answer="were available" data-hint="Keep counterfactual were plus the complement." data-fix="If only it were available today.">choose</button> today.</span></div>
+    <div class="q"><span class="n">4</span><span>The inspection prevents us from moving upstairs. I wish we <button class="choice-gap" data-choice-gap data-answer="could move" data-hint="Could is followed by the base verb." data-fix="I wish we could move upstairs.">choose</button> upstairs.</span></div>
+    <div class="q"><span class="n">5</span><span>We did not test three older phones before launch. I wish we <button class="choice-gap" data-choice-gap data-answer="had tested" data-hint="Build Past Perfect with had plus the participle." data-fix="I wish we had tested the three older phones.">choose</button> the three older phones.</span></div>
+    <div class="q"><span class="n">6</span><span>Registration already opened with an incorrect capacity. If only we <button class="choice-gap" data-choice-gap data-answer="hadn't opened" data-hint="Put not after had and retain the participle opened." data-fix="If only we hadn't opened registration yet.">choose</button> registration yet.</span></div>
+    <div class="q"><span class="n">7</span><span>The vendor has not answered three status requests. I wish the vendor <button class="choice-gap" data-choice-gap data-answer="would reply" data-hint="The speaker wants another party to change a repeated pattern of nonresponse." data-fix="I wish the vendor would reply.">choose</button>.</span></div>
+    <div class="q"><span class="n">8</span><span>The system repeatedly sends a second notice. I wish it <button class="choice-gap" data-choice-gap data-answer="wouldn't resend" data-hint="Use would not plus the base verb for the unwanted repeated process." data-fix="I wish it wouldn't resend the notice.">choose</button> the notice.</span></div>
+    <div class="q"><span class="n">9</span><span>What do you wish <button class="choice-gap" data-choice-gap data-answer="you had known" data-hint="The question order is in do you wish; keep statement order inside the embedded past regret." data-fix="What do you wish you had known before launch?">choose</button> before launch?</span></div>
+    <div class="q"><span class="n">10</span><span>Do you wish <button class="choice-gap" data-choice-gap data-answer="the schedule were" data-hint="Keep the embedded subject before the counterfactual verb." data-fix="Do you wish the schedule were different?">choose</button> different?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Keep nearby meanings separate</h2>
+  <div class="lead-rule"></div>
+  <div class="note">
+    <h3><span class="ex">Wish</span>, <span class="ex">hope</span>, and formal <span class="ex">wish to</span></h3>
+    <ul>
+      <li><span class="ex">I hope the vendor finishes by noon</span> treats the future result as open and possible.</li>
+      <li><span class="ex">I wish the vendor had finished by noon yesterday</span> creates an alternative to a completed past fact.</li>
+      <li><span class="ex">I wish to speak with the coordinator</span> is a formal way to say <span class="ex">I want to speak</span>. It is not the counterfactual pattern in this lesson.</li>
+      <li>A noun can follow <span class="ex">wish</span> in conventional expressions: <span class="ex">We wish you a safe trip</span>.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h3>Use <span class="ex">would</span> for a plausible desired change, not every dissatisfaction</h3>
+    <ul>
+      <li><span class="ex">I wish the alarm would stop</span> asks for a current process to change.</li>
+      <li><span class="ex">I wish my coworker would listen</span> asks another person to change potentially controllable behavior.</li>
+      <li>For a stable present state, prefer Past Simple: <span class="ex">I wish the office were closer</span>, not <span class="ex">would be closer</span>.</li>
+      <li>For your own current knowledge or stable characteristic, prefer Past Simple: <span class="ex">I wish I knew</span>. <span class="ex">I wish I would know</span> does not express this meaning.</li>
+      <li>Speakers can use <span class="ex">would</span> with their own future willingness or recurring behavior in special self-critical contexts, but do not use that marked pattern as a general replacement for <span class="ex">I wish I could</span> or <span class="ex">I wish I were</span>.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h3><span class="ex">I wish I could have attended</span> versus <span class="ex">I wish I had attended</span></h3>
+    <p>Both can concern a past event. <span class="ex">I wish I had attended</span> directly regrets nonattendance. <span class="ex">I wish I could have attended</span> highlights that attendance was not possible or available. State the obstacle if that distinction matters: <span class="ex">I wish I could have attended, but my flight was canceled.</span></p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished counterfactual wishes from open hope, formal want, stable states, desired change, and unavailable past opportunity.">
+    <h3>Choose ten boundary meanings from full contexts</h3>
+    <div class="choice-bank" aria-label="Wish boundary choices">
+      <button class="choice-option" data-choice-option="hope">hope</button><button class="choice-option" data-choice-option="wish">wish</button><button class="choice-option" data-choice-option="wish to">wish to</button><button class="choice-option" data-choice-option="wish you">wish you</button><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="would stop">would stop</button><button class="choice-option" data-choice-option="knew">knew</button><button class="choice-option" data-choice-option="could attend">could attend</button><button class="choice-option" data-choice-option="had attended">had attended</button><button class="choice-option" data-choice-option="could have attended">could have attended</button><button class="choice-option" data-choice-option="will stop">will stop</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The vendor is still working, and noon is two hours away. We <button class="choice-gap" data-choice-gap data-answer="hope" data-hint="The future result is still genuinely possible." data-fix="We hope the vendor finishes by noon.">choose</button> the vendor finishes by noon.</span></div>
+    <div class="q"><span class="n">2</span><span>The vendor missed yesterday's noon deadline. We <button class="choice-gap" data-choice-gap data-answer="wish" data-hint="The completed past fact is now different from the preferred reality." data-fix="We wish the vendor had finished by noon yesterday.">choose</button> the vendor had finished by noon yesterday.</span></div>
+    <div class="q"><span class="n">3</span><span>In a formal service email, <span class="ex">I <button class="choice-gap" data-choice-gap data-answer="wish to" data-hint="Here wish means formally want, so it is followed by to plus base verb." data-fix="I wish to request a corrected invoice.">choose</button> request a corrected invoice</span> means I formally want to request one.</span></div>
+    <div class="q"><span class="n">4</span><span>Before a friend's trip, <span class="ex">We <button class="choice-gap" data-choice-gap data-answer="wish you" data-hint="This is the conventional wish plus person plus noun pattern." data-fix="We wish you a safe trip.">choose</button> a safe trip</span> does not describe an unreal situation.</span></div>
+    <div class="q"><span class="n">5</span><span>The building is permanently far from the station. I wish it <button class="choice-gap" data-choice-gap data-answer="were" data-hint="Use Past Simple for a stable unreal present state." data-fix="I wish it were closer to the station.">choose</button> closer to the station.</span></div>
+    <div class="q"><span class="n">6</span><span>A temporary alarm has sounded for ten minutes, and maintenance can reset it. I wish it <button class="choice-gap" data-choice-gap data-answer="would stop" data-hint="This is a current changeable process the speaker wants to end." data-fix="I wish it would stop.">choose</button>.</span></div>
+    <div class="q"><span class="n">7</span><span>I do not know the code now. I wish I <button class="choice-gap" data-choice-gap data-answer="knew" data-hint="Knowledge is a present state, not desired future willingness." data-fix="I wish I knew the code.">choose</button> the code.</span></div>
+    <div class="q"><span class="n">8</span><span>The workshop is happening now, but my shift makes attendance impossible. I wish I <button class="choice-gap" data-choice-gap data-answer="could attend" data-hint="Focus on unavailable present ability." data-fix="I wish I could attend the workshop.">choose</button> the workshop.</span></div>
+    <div class="q"><span class="n">9</span><span>I freely chose not to attend yesterday, and now I regret the choice. I wish I <button class="choice-gap" data-choice-gap data-answer="had attended" data-hint="The focus is the completed nonattendance itself, not an external obstacle." data-fix="I wish I had attended yesterday.">choose</button> yesterday.</span></div>
+    <div class="q"><span class="n">10</span><span>I wanted to attend yesterday, but my canceled flight made it impossible. I wish I <button class="choice-gap" data-choice-gap data-answer="could have attended" data-hint="Highlight the unavailable past opportunity and keep modal plus have plus participle." data-fix="I wish I could have attended, but my flight was canceled.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: let stress reveal the emotional target</h2>
+  <div class="lead-rule"></div>
+  <p>In natural U.S. speech, <span class="ex">wish I</span> can link closely, and auxiliaries often reduce. Keep the time-carrying verb recoverable. Stress normally falls on the contrast the speaker wants changed, not automatically on <span class="ex">wish</span>.</p>
+  <table>
+    <thead><tr><th>Written form</th><th>Common connected speech</th><th>Meaning cue</th></tr></thead>
+    <tbody>
+      <tr><td>I wish I were <b>THERE</b>.</td><td><span class="ex">wish I</span> may link like /ˈwɪʃaɪ/</td><td>Stress the missing place or state.</td></tr>
+      <tr><td>I wish I’d <b>CHECKED</b>.</td><td><span class="ex">I’d</span> = I had before a participle</td><td><span class="ex">checked</span> locates the unreal completed past.</td></tr>
+      <tr><td>I wish it’d <b>STOP</b>.</td><td><span class="ex">it’d</span> = it would before a base verb</td><td><span class="ex">stop</span> is the desired change.</td></tr>
+      <tr><td>If only I could’ve <b>STAYED</b>.</td><td><span class="ex">could have</span> may sound like /ˈkʊdəv/</td><td>Standard writing retains <span class="ex">could have</span>.</td></tr>
+      <tr><td>I wish I hadn’t <b>SENT</b> it.</td><td><span class="ex">hadn't</span> may reduce, but <span class="ex">sent</span> stays clear</td><td>Stress can contrast the regretted action.</td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">If only</span> often forms one opening thought group. Its pitch may express longing, frustration, or regret, but there is no single compulsory “if only intonation.” Context and contrastive stress carry the attitude.</p>
+
+  <div class="practice" data-choice-gap-drill data-lesson-extension="Tutor-read wish-I linking, contracted had and would, weak could-have, negative Past Perfect, and contrastive-stress listening check" data-success-message="Correct. You used the following verb, real time, and stress to recover five meanings from connected U.S. speech.">
+    <h3>Listen before reading the options closely</h3>
+    <p class="note-line">Tutor: read each line naturally twice. Student: choose the meaning, then explain which later verb or stressed word resolved the reduced form.</p>
+    <div class="choice-bank" aria-label="Wish listening choices">
+      <button class="choice-option" data-choice-option="a different present location">a different present location</button><button class="choice-option" data-choice-option="a regretted completed check">a regretted completed check</button><button class="choice-option" data-choice-option="a desired process change">a desired process change</button><button class="choice-option" data-choice-option="an unavailable past opportunity">an unavailable past opportunity</button><button class="choice-option" data-choice-option="regret about sending, not receiving">regret about sending, not receiving</button><button class="choice-option" data-choice-option="a certain future plan">a certain future plan</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Tutor reads: <span class="ex">“I wish I were THERE.”</span> The line expresses <button class="choice-gap" data-choice-gap data-answer="a different present location" data-hint="Were marks present counterfactual distance, and THERE carries the contrast." data-fix="The speaker is not there now and prefers a different present location.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Tutor reads: <span class="ex">“I wish I'd CHECKED the date.”</span> <span class="ex">’d</span> is recovered as had because the line expresses <button class="choice-gap" data-choice-gap data-answer="a regretted completed check" data-hint="Checked is a participle after contracted had, and the checking opportunity is over." data-fix="I wish I had checked the date expresses a regretted completed check.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Tutor reads: <span class="ex">“I wish it'd STOP sending those alerts.”</span> <span class="ex">’d</span> is would because the line expresses <button class="choice-gap" data-choice-gap data-answer="a desired process change" data-hint="Stop is a base verb after contracted would, and the alerts keep occurring." data-fix="The speaker wants the alert process to change now.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Tutor reads: <span class="ex">“If only I could've STAYED.”</span> The reduced auxiliary expresses <button class="choice-gap" data-choice-gap data-answer="an unavailable past opportunity" data-hint="Could have plus stayed points to past ability or opportunity that was unavailable." data-fix="If only I could have stayed expresses an unavailable past opportunity.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Tutor reads: <span class="ex">“I wish I hadn't SENT it so soon.”</span> The stress identifies <button class="choice-gap" data-choice-gap data-answer="regret about sending, not receiving" data-hint="The stressed lexical participle names the action the speaker wants to undo." data-fix="The regret concerns sending it too soon.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+    <details><summary>Tutor script and transcript</summary><ol><li>I wish I were THERE.</li><li>I wish I'd CHECKED the date.</li><li>I wish it'd STOP sending those alerts.</li><li>If only I could've STAYED.</li><li>I wish I hadn't SENT it so soon.</li></ol><p>Read each line once naturally and once with the indicated information stress. Keep the contraction recoverable through the following participle or base verb.</p></details>
+  </div>
+
+  <h2>Read a debrief without turning hindsight into blame</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Fictional Pine Street open-day file</h3>
+    <p>Registration opened on September 2 for a September 15 open day. The main room's posted capacity was 60, and 74 registrations were accepted before the team closed the form. The second room had already been reserved for an electrical inspection on September 15, so it could not be used for the event.</p>
+    <p>Before launch, the team tested the form on two desktop browsers and two current phones. It did not test three older phone models. On September 2, 43 people attempted registration on those three models, and 18 of those attempts were incomplete. The available record does not establish that phone compatibility caused every incomplete attempt.</p>
+    <p>On September 15, the reminder system sent one message at 8:00 a.m. and a duplicate at 8:05. The vendor confirmed the duplicate process at 9:10 and predicted a fix by noon. At 11:30, the fix was still being tested, so completion remained an open future possibility.</p>
+    <p>A careful debrief can say, <span class="ex">We wish we had capped registration at 60</span> and <span class="ex">If only we had tested the older phones</span>. It can also say, <span class="ex">We wish the reminder system would stop sending duplicates</span> and <span class="ex">We hope the vendor finishes by noon</span>. The later outcome supports better safeguards, but it does not prove that one person could have predicted every problem or caused every incomplete attempt.</p>
+  </div>
+
+  <div class="quiz" data-quiz data-success-message="Correct. You reconstructed Pine Street's dates, quantities, time relationships, open forecast, and explicit evidence limit.">
+    <h3>Eight evidence-bound reading decisions</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="September 2" data-hint="Separate the registration launch from the later open day." data-fix="Registration opened on September 2."><p class="quiz-question">1. When did registration open?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="September 2">September 2</button><button class="quiz-option" data-quiz-option="September 15">September 15</button><button class="quiz-option" data-quiz-option="At 9:10 on September 15">At 9:10 on September 15</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Fourteen registrations exceeded the posted capacity." data-hint="Compare 74 accepted registrations with capacity 60." data-fix="74 minus 60 means fourteen registrations exceeded the posted capacity."><p class="quiz-question">2. What capacity mismatch does the file document?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Fourteen registrations exceeded the posted capacity.">Fourteen registrations exceeded the posted capacity.</button><button class="quiz-option" data-quiz-option="Eighteen registrations exceeded the posted capacity.">Eighteen registrations exceeded the posted capacity.</button><button class="quiz-option" data-quiz-option="The second room had fourteen empty seats.">The second room had fourteen empty seats.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="It had been reserved for a scheduled electrical inspection." data-hint="The room was unavailable for a documented reason before event day." data-fix="The second room had been reserved for a scheduled electrical inspection."><p class="quiz-question">3. Why couldn't the team use the second room?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="It had been reserved for a scheduled electrical inspection.">It had been reserved for a scheduled electrical inspection.</button><button class="quiz-option" data-quiz-option="The vendor needed it to test reminder messages.">The vendor needed it to test reminder messages.</button><button class="quiz-option" data-quiz-option="All 74 registrants were already inside it.">All 74 registrants were already inside it.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The team did not test three older phone models before launch." data-hint="Identify the documented test-coverage gap, not a claim about individual responsibility." data-fix="The team did not test three older phone models before launch."><p class="quiz-question">4. What past fact motivates <span class="ex">If only we had tested the older phones</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The team did not test three older phone models before launch.">The team did not test three older phone models before launch.</button><button class="quiz-option" data-quiz-option="The team tested every older phone and proved the form worked.">The team tested every older phone and proved the form worked.</button><button class="quiz-option" data-quiz-option="The vendor will test desktop browsers after noon.">The vendor will test desktop browsers after noon.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Eighteen of the 43 attempts on those models were incomplete." data-hint="Keep the model-specific attempt count and incomplete count together." data-fix="Eighteen of 43 attempts on those older models were incomplete."><p class="quiz-question">5. What does the record say about the three older phone models?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Eighteen of the 43 attempts on those models were incomplete.">Eighteen of the 43 attempts on those models were incomplete.</button><button class="quiz-option" data-quiz-option="All 43 attempts failed because of confirmed incompatibility.">All 43 attempts failed because of confirmed incompatibility.</button><button class="quiz-option" data-quiz-option="Only 18 people attempted registration on those models.">Only 18 people attempted registration on those models.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The reminder system sent a duplicate message five minutes after the first." data-hint="Compare the 8:00 and 8:05 timestamps." data-fix="The system sent a duplicate five minutes after the first reminder."><p class="quiz-question">6. What repeated process supports a wish with <span class="ex">would</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The reminder system sent a duplicate message five minutes after the first.">The reminder system sent a duplicate message five minutes after the first.</button><button class="quiz-option" data-quiz-option="The electrical inspection ended five minutes early.">The electrical inspection ended five minutes early.</button><button class="quiz-option" data-quiz-option="The team tested five new phone models.">The team tested five new phone models.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Hope, because the noon fix was still possible at 11:30." data-hint="At 11:30, noon had not arrived and testing continued." data-fix="Hope fits because the fix remained an open future possibility."><p class="quiz-question">7. At 11:30, should the team use <span class="ex">hope</span> or a past-regret <span class="ex">wish</span> for the noon fix?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Hope, because the noon fix was still possible at 11:30.">Hope, because the noon fix was still possible at 11:30.</button><button class="quiz-option" data-quiz-option="Past-regret wish, because noon had already passed at 11:30.">Past-regret wish, because noon had already passed at 11:30.</button><button class="quiz-option" data-quiz-option="Neither, because forecasts can never be discussed.">Neither, because forecasts can never be discussed.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The record does not prove that phone compatibility caused every incomplete attempt or that one person predicted every problem." data-hint="Choose the statement that preserves both explicit evidence limits." data-fix="The record supports safeguards but does not prove one complete cause or one person's foresight."><p class="quiz-question">8. Which limit keeps the debrief responsible?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The record does not prove that phone compatibility caused every incomplete attempt or that one person predicted every problem.">The record does not prove that phone compatibility caused every incomplete attempt or that one person predicted every problem.</button><button class="quiz-option" data-quiz-option="The incomplete attempts prove that one person knowingly caused the entire problem.">The incomplete attempts prove that one person knowingly caused the entire problem.</button><button class="quiz-option" data-quiz-option="Because certainty is incomplete, the team cannot improve any safeguard.">Because certainty is incomplete, the team cannot improve any safeguard.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the time and attitude from shuffled chunks</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="i wish the main room were larger" data-hint="Start with the speaker's wish, then keep the embedded subject before counterfactual were." data-fix="I wish the main room were larger." data-success-message="Correct. The sentence contrasts the room's present size with a preferred present state.">
+    <h3>Builder 1: unreal present state</h3><p class="tile-target">Build the preferred present reality.</p><div class="tile-bank" data-build-bank><button class="tile" data-build-tile="room">room</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="larger">larger</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="were">were</button><button class="tile" data-build-tile="wish">wish</button><button class="tile" data-build-tile="main">main</button></div><div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="if only we had tested the older phones before launch" data-hint="Open with if only, then build Past Perfect and finish with the past deadline." data-fix="If only we had tested the older phones before launch." data-success-message="Correct. Past Perfect creates an alternative to the completed prelaunch record.">
+    <h3>Builder 2: completed past regret</h3><p class="tile-target">Build the alternative to the prelaunch record.</p><div class="tile-bank" data-build-bank><button class="tile" data-build-tile="older">older</button><button class="tile" data-build-tile="if">If</button><button class="tile" data-build-tile="launch">launch</button><button class="tile" data-build-tile="tested">tested</button><button class="tile" data-build-tile="phones">phones</button><button class="tile" data-build-tile="only">only</button><button class="tile" data-build-tile="before">before</button><button class="tile" data-build-tile="had">had</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="we">we</button></div><div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="i wish the reminder system would stop sending duplicate messages" data-hint="Place the changeable system before would, then use base stop plus -ing complement." data-fix="I wish the reminder system would stop sending duplicate messages." data-success-message="Correct. Would presents a desired change in the repeated reminder process.">
+    <h3>Builder 3: desired process change</h3><p class="tile-target">Build the request for the reminder process to change.</p><div class="tile-bank" data-build-bank><button class="tile" data-build-tile="duplicate">duplicate</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="sending">sending</button><button class="tile" data-build-tile="i">I</button><button class="tile" data-build-tile="system">system</button><button class="tile" data-build-tile="messages">messages</button><button class="tile" data-build-tile="would">would</button><button class="tile" data-build-tile="reminder">reminder</button><button class="tile" data-build-tile="wish">wish</button><button class="tile" data-build-tile="stop">stop</button></div><div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the broken relationship</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="would" data-hint="Knowing is a present state, not another person's desired change." data-fix="I wish I knew the access code." data-why="Past Simple expresses an unreal present knowledge state. Would does not generally replace it." data-success-message="Correct. Knew now contrasts the speaker's present lack of knowledge.">
+    <h3>Repair 1: current knowledge state</h3><p>Tap the form that treats present knowledge like a desired behavior change.</p><div class="spot-options"><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="wish">wish</button><button class="error-choice" data-error-choice="would">would</button><button class="error-choice" data-error-choice="know">know</button><button class="error-choice" data-error-choice="code">the access code.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="tested" data-hint="The testing opportunity ended before the September 2 launch." data-fix="If only we had tested the older phones before launch." data-why="A completed past regret needs had plus the participle, not Past Simple alone." data-success-message="Correct. Had tested locates the preferred action before the completed launch.">
+    <h3>Repair 2: completed past alternative</h3><p>Tap the verb that is missing the Past Perfect auxiliary.</p><div class="spot-options"><button class="error-choice" data-error-choice="if">If only</button><button class="error-choice" data-error-choice="we">we</button><button class="error-choice" data-error-choice="tested">tested</button><button class="error-choice" data-error-choice="phones">the older phones</button><button class="error-choice" data-error-choice="before">before launch.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="would" data-hint="The speaker wants a different stable location, not a process to change its behavior." data-fix="I wish the building were closer to the station." data-why="Counterfactual were presents a different current location. Would be is not the default form for this stable-state meaning." data-success-message="Correct. Were closer expresses the unreal present location precisely.">
+    <h3>Repair 3: stable present location</h3><p>Tap the auxiliary that incorrectly frames a stable location as desired behavior.</p><div class="spot-options"><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="wish">wish</button><button class="error-choice" data-error-choice="building">the building</button><button class="error-choice" data-error-choice="would">would be</button><button class="error-choice" data-error-choice="closer">closer to the station.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="had" data-hint="Question order belongs in do you wish, not inside the embedded preferred reality." data-fix="What do you wish you had known before registration opened?" data-why="The embedded clause keeps statement order: you had known. Inverting had you would create conditional or question-like order." data-success-message="Correct. The whole question is inverted, while the clause after wish keeps statement order.">
+    <h3>Repair 4: embedded statement order</h3><p>Tap the chunk whose subject and auxiliary are reversed inside the wish.</p><div class="spot-options"><button class="error-choice" data-error-choice="what">What</button><button class="error-choice" data-error-choice="wish">do you wish</button><button class="error-choice" data-error-choice="had">had you known</button><button class="error-choice" data-error-choice="before">before registration opened?</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Say the preferred reality before you reveal it</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-transform>
+    <p class="note-line">Respond aloud first. Identify real time and attitude, produce the sentence, then reveal and compare.</p>
+    <div class="transform-list">
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> The current room is too small. Express a careful present wish.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I wish the room were larger.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> The inspection prevents use of Room B today. Focus on unavailable ability.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I wish we could use Room B today.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> The team did not cap registration before it opened. Express strong past regret.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>If only we had capped registration at 60.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Duplicate reminders keep arriving. Ask for that process to change.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I wish the reminder system would stop sending duplicates.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> It is 11:30, testing continues, and a noon fix is still possible. Choose wish or hope.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>We hope the vendor finishes by noon.</strong></p></div>
+    </div>
+  </div>
+
+  <h2>Practice reflection without exposing a private regret</h2>
+  <div class="lead-rule"></div>
+  <div class="note">
+    <h3>Use a safe distance</h3>
+    <p>You never need to discuss a real relationship, medical decision, financial loss, immigration matter, disciplinary event, academic failure, family conflict, legal issue, or painful regret. Use the fictional Pine Street file, a movie character, or a low-stakes invented situation. Emotional precision does not require personal disclosure.</p>
+    <p>When a past outcome is known now, avoid turning hindsight into false certainty. <span class="ex">I wish we had tested the phones</span> expresses regret and suggests a safeguard. It does not by itself prove that the test would have predicted every incomplete attempt or that one person was responsible.</p>
+  </div>
+  <div class="prompt-card"><b>Reality map:</b> Use Pine Street or a tutor-created fictional project. State four real facts, locate each one as present or completed past, and build the preferred alternative only after your listener can recover the actual timeline.</div>
+  <div class="prompt-card"><b>Attitude switch:</b> Keep one fictional situation constant. Express it as an unreal state, unavailable ability, completed regret, or desired change, adding the contextual fact needed to make each interpretation defensible.</div>
+  <div class="prompt-card"><b>Wish or hope:</b> Create one deadline that is still open and one that has passed. Use <span class="ex">hope</span> for the open result and Past Perfect after <span class="ex">wish</span> for the completed alternative.</div>
+  <div class="prompt-card"><b>Spoken contrast:</b> Say one sentence with contracted <span class="ex">had</span> before a participle and one with contracted <span class="ex">would</span> before a base verb. Ask your listener to recover each auxiliary from the following verb.</div>
+  <div class="prompt-card"><b>Responsible close:</b> Turn one fictional regret into a practical safeguard. State what the later result supports and what it does not prove about cause, prediction, or individual responsibility.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: lead a 90-second reality-and-response debrief</h3>
+    <p>Use Pine Street or another fictional project. Include one present state you wish were different, one unavailable present ability with <span class="ex">could</span>, two past regrets with Past Perfect, one desired behavior or process change with <span class="ex">would</span>, and one genuinely open outcome with <span class="ex">hope</span>. State the real fact before each preferred alternative.</p>
+    <p>Add one negative, one question about another person's wish, one contracted <span class="ex">’d</span> form whose meaning the next verb makes clear, one evidence limit, and one practical next step. Your partner should challenge one sentence by asking, <span class="ex">Is that a state, an unavailable ability, a completed regret, or a changeable process?</span> Reformulate immediately if the form and attitude do not match.</p>
+    <p><b>Listener check:</b> Can the listener recover real time, preferred reality, speaker attitude, and the evidence limit without guessing?</p>
+  </div>
+
+  <div class="quiz" data-quiz data-success-message="Correct. You can now map reality to form, distinguish wish from hope, control would and could, hear contracted auxiliaries, and keep regret separate from blame.">
+    <h3>Seven final decisions</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="I wish the main room were larger." data-hint="The room's size is a stable current state." data-fix="I wish the main room were larger."><p class="quiz-question">1. Which sentence gives a careful unreal present state?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I wish the main room were larger.">I wish the main room were larger.</button><button class="quiz-option" data-quiz-option="I wish the main room would have been larger now.">I wish the main room would have been larger now.</button><button class="quiz-option" data-quiz-option="I hope the main room had been larger now.">I hope the main room had been larger now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="If only we had tested the older phones before launch." data-hint="The unperformed test belongs before a completed launch." data-fix="If only we had tested the older phones before launch."><p class="quiz-question">2. Which sentence expresses the completed past regret?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="If only we had tested the older phones before launch.">If only we had tested the older phones before launch.</button><button class="quiz-option" data-quiz-option="If only we would test the older phones before the past launch.">If only we would test the older phones before the past launch.</button><button class="quiz-option" data-quiz-option="If only we test the older phones yesterday.">If only we test the older phones yesterday.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="I wish the reminder system would stop sending duplicate messages." data-hint="The duplicate process keeps occurring and can be changed." data-fix="I wish the reminder system would stop sending duplicate messages."><p class="quiz-question">3. Which sentence asks for a repeated process to change?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I wish the reminder system would stop sending duplicate messages.">I wish the reminder system would stop sending duplicate messages.</button><button class="quiz-option" data-quiz-option="I wish the reminder system stopped yesterday before it existed.">I wish the reminder system stopped yesterday before it existed.</button><button class="quiz-option" data-quiz-option="I hope the reminder system had stopped now.">I hope the reminder system had stopped now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="We hope the vendor finishes by noon because the fix is still possible." data-hint="The future deadline remains open at 11:30." data-fix="We hope the vendor finishes by noon."><p class="quiz-question">4. Which line fits an open future result?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We hope the vendor finishes by noon because the fix is still possible.">We hope the vendor finishes by noon because the fix is still possible.</button><button class="quiz-option" data-quiz-option="We wish the vendor had finished by noon tomorrow because tomorrow is over.">We wish the vendor had finished by noon tomorrow because tomorrow is over.</button><button class="quiz-option" data-quiz-option="We wish to the vendor finishes by noon.">We wish to the vendor finishes by noon.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="What do you wish you had known before registration opened?" data-hint="Invert do and the main subject, but keep statement order in the embedded clause." data-fix="What do you wish you had known before registration opened?"><p class="quiz-question">5. Which question has correct embedded order?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="What do you wish you had known before registration opened?">What do you wish you had known before registration opened?</button><button class="quiz-option" data-quiz-option="What do you wish had you known before registration opened?">What do you wish had you known before registration opened?</button><button class="quiz-option" data-quiz-option="What you wish did you had known before registration opened?">What you wish did you had known before registration opened?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="In I wish I'd checked, ’d means had because checked is a participle." data-hint="Use the form after the contraction to recover the hidden auxiliary." data-fix="I'd checked expands to I had checked."><p class="quiz-question">6. Which explanation correctly recovers contracted <span class="ex">’d</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="In I wish I'd checked, ’d means had because checked is a participle.">In I wish I'd checked, ’d means had because checked is a participle.</button><button class="quiz-option" data-quiz-option="In I wish I'd checked, ’d means would because would takes a participle directly.">In I wish I'd checked, ’d means would because would takes a participle directly.</button><button class="quiz-option" data-quiz-option="The contraction has no recoverable grammatical meaning.">The contraction has no recoverable grammatical meaning.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The later result supports a testing safeguard, but it does not prove one cause or one person's foresight." data-hint="Keep the useful retrospective lesson and both evidence limits." data-fix="The result supports a safeguard without proving one complete cause or one person's foresight."><p class="quiz-question">7. Which conclusion separates regret from unsupported blame?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The later result supports a testing safeguard, but it does not prove one cause or one person's foresight.">The later result supports a testing safeguard, but it does not prove one cause or one person's foresight.</button><button class="quiz-option" data-quiz-option="Saying I wish we had tested proves that one employee knowingly caused all 18 incomplete attempts.">Saying I wish we had tested proves that one employee knowingly caused all 18 incomplete attempts.</button><button class="quiz-option" data-quiz-option="Because causation is incomplete, no future safeguard can be justified.">Because causation is incomplete, no future safeguard can be justified.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: can you name the reality before the wish?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the full choice</h3>
+    <p>Complete these lines aloud: <span class="ex">The real fact is...</span> <span class="ex">Its time is...</span> <span class="ex">The preferred alternative is...</span> <span class="ex">My attitude is state / ability / regret / desired change...</span> <span class="ex">That is why I used...</span> <span class="ex">If only adds...</span> <span class="ex">Hope is better here because...</span> <span class="ex">The evidence supports...</span> <span class="ex">The evidence does not prove...</span> <span class="ex">A realistic next step is...</span></p>
+    <p>Then change one time fact. Move a current problem into the completed past, or reopen a past deadline so the result becomes possible again. Reformulate the sentence and explain why the old grammar no longer fits.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the five-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+  <div class="prompt-card"><b>Next use:</b> Before the next lesson, retrieve one unreal present, one unavailable ability, one past regret, one desired change, and one open hope from five new fictional facts. Explain the time and attitude before checking the form.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day unreal present, unavailable ability, past regret, desired change, and wish-hope boundary retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading. Reconstruct real time, attitude, complete form, and the responsible limit in five new fictional contexts.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained present counterfactual distance, unavailable ability, Past Perfect regret, desired change, and the wish-hope boundary.">
+      <h3>Five delayed decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="I wish the studio were quieter." data-hint="The studio is noisy now, so use a careful counterfactual present form." data-fix="I wish the studio were quieter."><p class="quiz-question">1. The studio is noisy now. Which sentence expresses the preferred present state?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I wish the studio were quieter.">I wish the studio were quieter.</button><button class="quiz-option" data-quiz-option="I wish the studio had been quieter tomorrow.">I wish the studio had been quieter tomorrow.</button><button class="quiz-option" data-quiz-option="I hope the studio would have been quiet now.">I hope the studio would have been quiet now.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="I wish we could extend today's session, but the building closes at six." data-hint="A current external limit removes the ability to extend." data-fix="I wish we could extend today's session."><p class="quiz-question">2. Which line focuses on unavailable present ability?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I wish we could extend today's session, but the building closes at six.">I wish we could extend today's session, but the building closes at six.</button><button class="quiz-option" data-quiz-option="I wish we had extended tomorrow's completed session.">I wish we had extended tomorrow's completed session.</button><button class="quiz-option" data-quiz-option="I wish the building would be located near six.">I wish the building would be located near six.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="If only I had saved the draft before the computer restarted." data-hint="The unsaved draft and restart are completed past facts." data-fix="If only I had saved the draft before the computer restarted."><p class="quiz-question">3. Which sentence expresses the completed past regret?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="If only I had saved the draft before the computer restarted.">If only I had saved the draft before the computer restarted.</button><button class="quiz-option" data-quiz-option="If only I would save the draft before yesterday restarted.">If only I would save the draft before yesterday restarted.</button><button class="quiz-option" data-quiz-option="I hope I had saved the already lost draft tomorrow.">I hope I had saved the already lost draft tomorrow.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="I wish the notification would stop repeating; the setting can be changed." data-hint="The unwanted process is continuing and controllable." data-fix="I wish the notification would stop repeating."><p class="quiz-question">4. Which context licenses desired-change <span class="ex">would</span>?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I wish the notification would stop repeating; the setting can be changed.">I wish the notification would stop repeating; the setting can be changed.</button><button class="quiz-option" data-quiz-option="I wish I would know my permanent birth date.">I wish I would know my permanent birth date.</button><button class="quiz-option" data-quiz-option="I wish yesterday would have a different recorded date now.">I wish yesterday would have a different recorded date now.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="We hope the repair finishes tonight because tonight's outcome remains possible." data-hint="Use hope while a future outcome remains genuinely open." data-fix="We hope the repair finishes tonight."><p class="quiz-question">5. Which sentence keeps an open future distinct from an unreal wish?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We hope the repair finishes tonight because tonight's outcome remains possible.">We hope the repair finishes tonight because tonight's outcome remains possible.</button><button class="quiz-option" data-quiz-option="We wish the repair had finished tonight even though tonight has not begun.">We wish the repair had finished tonight even though tonight has not begun.</button><button class="quiz-option" data-quiz-option="We wish to the repair finishes tonight.">We wish to the repair finishes tonight.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

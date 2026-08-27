@@ -1,14 +1,72 @@
 {
   "a0-spell-jameel": {
     "text": "J. A. M. E. E. L.",
+    "path": "audio/assessments/a0-exit/spell-jameel.mp3",
     "language": "en",
     "speed": 0.72,
     "voice": "teacher"
   },
   "a0-price-forty": {
     "text": "The total is forty dollars.",
+    "path": "audio/assessments/a0-exit/price-forty.mp3",
     "language": "en",
     "speed": 0.86,
+    "voice": "teacher"
+  },
+  "a1-routine-message": {
+    "text": "Hi, this is Maya. I usually start work at nine, but today I’m working from home. Please call me after ten.",
+    "path": "audio/assessments/a1-exit/routine-message.mp3",
+    "language": "en",
+    "speed": 0.9,
+    "voice": "teacher"
+  },
+  "a1-weather-plan": {
+    "text": "The weather will be cold and rainy this afternoon. Bring a jacket and take an umbrella.",
+    "path": "audio/assessments/a1-exit/weather-plan.mp3",
+    "language": "en",
+    "speed": 0.9,
+    "voice": "teacher"
+  },
+  "a2-train-delay": {
+    "text": "Attention passengers. The train to Boston is delayed by forty minutes. It will now leave from platform six at eleven twenty.",
+    "path": "audio/assessments/a2-exit/train-delay.mp3",
+    "language": "en",
+    "speed": 0.94,
+    "voice": "teacher"
+  },
+  "a2-doctor-appointment": {
+    "text": "Hi, Nina. The doctor can see you on Thursday at three fifteen. Please arrive ten minutes early and bring your insurance card.",
+    "path": "audio/assessments/a2-exit/doctor-appointment.mp3",
+    "language": "en",
+    "speed": 0.92,
+    "voice": "teacher"
+  },
+  "b1-project-update": {
+    "text": "Hi team. We’ve been testing the booking system since Monday, and we’ve fixed most of the payment errors. One problem with confirmation emails remains. The client said they were pleased with the progress, but they moved Friday’s review from ten to two.",
+    "path": "audio/assessments/b1-exit/project-update.mp3",
+    "language": "en",
+    "speed": 0.96,
+    "voice": "teacher"
+  },
+  "b1-community-report": {
+    "text": "According to the city report, bicycle theft near Central Station fell by twenty percent during the three-month lighting trial. Officials say the result is encouraging. However, they cannot yet prove that the new lights caused the decline, and they plan to collect data for another nine months.",
+    "path": "audio/assessments/b1-exit/community-report.mp3",
+    "language": "en",
+    "speed": 0.96,
+    "voice": "teacher"
+  },
+  "b2-research-briefing": {
+    "text": "Our six-week pilot involved four customer-support teams using an automated scheduling tool. Reported response delays fell by eighteen percent, and most staff said routine coordination became easier. However, the busiest team was not included, and managers also changed the shift pattern during the trial. We will therefore compare eight teams over six months before deciding whether the tool itself produced the improvement.",
+    "path": "audio/assessments/b2-exit/research-briefing.mp3",
+    "language": "en",
+    "speed": 0.98,
+    "voice": "teacher"
+  },
+  "b2-policy-consultation": {
+    "text": "Most speakers supported reducing private traffic around the market, mainly because of safety and air quality. Several shop owners were concerned that older customers and delivery drivers might lose access. Rather than introducing a permanent ban immediately, the panel recommends a three-month weekend restriction, independent monitoring of footfall and air quality, and designated access for mobility services and deliveries. The policy should be revised if the evidence shows serious harm.",
+    "path": "audio/assessments/b2-exit/policy-consultation.mp3",
+    "language": "en",
+    "speed": 0.98,
     "voice": "teacher"
   }
 }

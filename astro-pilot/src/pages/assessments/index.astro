@@ -1,0 +1,123 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { curriculum } from "../../lib/curriculum";
+import { assessmentRoutes, readyAssessmentRoutes } from "../../data/assessment-routes.mjs";
+
+const canonical = new URL("/assessments/", Astro.site);
+const diagnosticListId = `${canonical.href}#diagnostic-list`;
+const startingDiagnostics = assessmentRoutes.filter((assessment) => assessment.kind !== "exit");
+const exitDiagnostics = curriculum.map((level) => ({
+  level,
+  assessment: assessmentRoutes.find((assessment) => assessment.kind === "exit" && assessment.level === level.code),
+}));
+const diagnosticList = {
+  "@type": "ItemList",
+  "@id": diagnosticListId,
+  name: "Thomas’s Classroom English diagnostics",
+  numberOfItems: readyAssessmentRoutes.length,
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  itemListElement: readyAssessmentRoutes.map((assessment, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: assessment.title,
+    url: new URL(assessment.route, Astro.site).href,
+  })),
+};
+---
+<SiteLayout
+  title="English Diagnostics · Thomas’s Classroom"
+  description="Choose a quick English level check, a full placement diagnostic, or an A0–C1 end-of-level review from one dedicated assessment hub."
+  heading="English Diagnostics"
+  lede="Find your starting point or review a completed level. Diagnostics live here so the curriculum can stay focused on learning."
+  current="diagnostics"
+  pageClass="diagnostics-page"
+  mainEntityId={diagnosticListId}
+  additionalStructuredData={[diagnosticList]}
+>
+  <section class="tab-page diagnostics-hub" data-diagnostics-hub>
+    <div class="diagnostic-intro">
+      <div>
+        <p class="tab-overline">Choose the right check</p>
+        <h2 class="tab-title">One place for every diagnostic.</h2>
+      </div>
+      <p class="tab-lede">Starting-point checks help you choose a level. End-of-level diagnostics help you decide whether to review, continue, or move forward. They do not replace the lessons themselves.</p>
+    </div>
+
+    <section class="diagnostic-section" aria-labelledby="starting-diagnostics-title">
+      <div class="diagnostic-section-head">
+        <div>
+          <p class="finder-kicker">Before choosing a level</p>
+          <h2 id="starting-diagnostics-title">Find your starting point</h2>
+        </div>
+        <p>Use the short check for orientation or the full diagnostic when you need detailed evidence.</p>
+      </div>
+      <div class="diagnostic-start-grid">
+        {startingDiagnostics.map((assessment) => (
+          <a
+            class:list={["diagnostic-card", `diagnostic-card--${assessment.kind}`]}
+            href={assessment.route}
+            data-diagnostic-route={assessment.slug}
+            data-diagnostic-status={assessment.status}
+          >
+            <span class="diagnostic-card-label">{assessment.kind === "screening" ? "About 10 minutes" : "Full teacher-guided review"}</span>
+            <h3>{assessment.title}</h3>
+            <p>{assessment.kind === "screening"
+              ? "Get a quick A0–B2 estimate from language questions and a short speaking confirmation."
+              : "Build a fuller A0–B2 profile across grammar, vocabulary, reading, listening, speaking, and writing."}</p>
+            <strong>Open diagnostic <span aria-hidden="true">→</span></strong>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="diagnostic-section" aria-labelledby="level-diagnostics-title">
+      <div class="diagnostic-section-head">
+        <div>
+          <p class="finder-kicker">After completing a level</p>
+          <h2 id="level-diagnostics-title">Review level evidence</h2>
+        </div>
+        <p>Use these after the complete level sequence, not as substitutes for lesson practice.</p>
+      </div>
+      <div class="diagnostic-level-grid" id="diagnostic-list">
+        {exitDiagnostics.map(({ level, assessment }) => assessment?.status === "ready" ? (
+          <a
+            class="diagnostic-level-card"
+            href={assessment.route}
+            style={`--diagnostic-accent:var(--accent);--diagnostic-tint:var(--accent-tint)`}
+            data-diagnostic-route={assessment.slug}
+            data-diagnostic-level={level.code}
+            data-diagnostic-status={assessment.status}
+          >
+            <span class="diagnostic-level-code">{level.code}</span>
+            <span class="diagnostic-level-copy">
+              <strong>{assessment.title}</strong>
+              <span>Review receptive and productive evidence after the {level.code} lesson path.</span>
+            </span>
+            <span class="diagnostic-level-action" aria-hidden="true">Open →</span>
+          </a>
+        ) : assessment ? (
+          <article
+            class="diagnostic-level-card diagnostic-level-card--planned"
+            aria-disabled="true"
+            data-diagnostic-route={assessment.slug}
+            data-diagnostic-level={level.code}
+            data-diagnostic-status={assessment.status}
+          >
+            <span class="diagnostic-level-code">{level.code}</span>
+            <span class="diagnostic-level-copy">
+              <strong>{assessment.title}</strong>
+              <span>This diagnostic will open after the complete C1 sequence is authored and reviewed.</span>
+            </span>
+            <span class="soon-tag">Planned</span>
+          </article>
+        ) : null)}
+      </div>
+    </section>
+
+    <aside class="diagnostic-next-step">
+      <div><p class="finder-kicker">Ready to learn?</p><h2>Open the curriculum path.</h2></div>
+      <p>Choose A0–C1, follow the lessons in order, or search for the exact language you need.</p>
+      <a class="home-link primary" href="/curriculum/">Explore the curriculum <span aria-hidden="true">→</span></a>
+    </aside>
+  </section>
+</SiteLayout>

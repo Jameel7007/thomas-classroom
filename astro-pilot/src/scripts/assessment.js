@@ -1,3 +1,6 @@
+import { evidenceFor, hasLiveEvidence, percent } from "../lib/assessment-readiness.mjs";
+import { randomizeResponseGroups } from "./randomize-responses.js";
+
 (function(){
   var idSeq = 0;
 
@@ -89,10 +92,6 @@
       attempted: attempted,
       evidence: options.length || input ? "recognition" : checks.length ? "teacher" : "other"
     };
-  }
-
-  function percent(score, points){
-    return points ? Math.round((score / points) * 100) : 0;
   }
 
   function groupScores(results, key){
@@ -324,44 +323,9 @@
     return "Below A0";
   }
 
-  function evidenceFor(results, levels, skills){
-    const selected = results.filter(function(item){
-      return (!levels || levels.includes(item.level)) && (!skills || skills.includes(item.skill));
-    });
-    return {
-      attempted: selected.some(function(item){ return item.attempted; }),
-      score: selected.reduce(function(total, item){ return total + item.score; }, 0),
-      points: selected.reduce(function(total, item){ return total + item.points; }, 0),
-      attemptedItems: selected.filter(function(item){ return item.attempted; }).length,
-      itemCount: selected.length
-    };
-  }
-
-  function productionStatus(results, level){
-    const production = evidenceFor(results, [level], ["Speaking", "Writing"]);
-    // The live script set establishes listening through B1+. For a B2 starting
-    // point, combine that evidence with B2 speaking and writing rather than
-    // requiring a separate advanced audio task that this diagnostic does not include.
-    const listeningLevels = level === "B2" ? ["B1", "B2"] : [level];
-    const listening = evidenceFor(results, listeningLevels, ["Listening"]);
-    const speaking = evidenceFor(results, [level], ["Speaking"]);
-    const writing = evidenceFor(results, [level], ["Writing"]);
-    const hasBothProductionModes = speaking.attempted && writing.attempted;
-    const productionPercent = percent(production.score, production.points);
-    const listeningPercent = percent(listening.score, listening.points);
-    return {
-      complete: hasBothProductionModes && listening.attempted,
-      supportive: hasBothProductionModes && listening.attempted &&
-        productionPercent >= 60 && listeningPercent >= 50,
-      productionPercent: productionPercent,
-      listeningPercent: listeningPercent
-    };
-  }
-
   function updatePlacementSummary(root, results){
     if (!root.dataset.placement) return;
     const recognition = results.filter(function(item){ return item.evidence === "recognition"; });
-    const teacherEvidence = results.filter(function(item){ return item.evidence === "teacher"; });
     const byLevel = groupScores(recognition, "level");
     const bySkill = groupScores(results, "skill");
     const ceiling = estimatePlacement(byLevel);
@@ -394,12 +358,12 @@
       displayEstimate = "Not enough evidence";
       analysis = "There is not enough foundation evidence to suggest a starting point yet. Complete more of the A0-A1 section first.";
     } else if (ceilingLevel === "B2") {
-      const b2Evidence = productionStatus(teacherEvidence, "B2");
-      const b1Evidence = productionStatus(teacherEvidence, "B1");
-      if (b2Evidence.supportive) {
+      const b2Evidence = hasLiveEvidence(results, "B2");
+      const b1Evidence = hasLiveEvidence(results, "B1");
+      if (b2Evidence) {
         displayEstimate = "B2 starting point";
         analysis = "Current evidence suggests a B2 starting point. Recognition, listening, speaking, and writing evidence are aligned. This is a placement estimate, not an official CEFR certificate.";
-      } else if (b1Evidence.supportive) {
+      } else if (b1Evidence) {
         displayEstimate = "B1 starting point";
         analysis = "Multiple-choice answers suggest a possible B2 ceiling, while current production evidence supports a B1 starting point. More B2 speaking or writing practice may help close the gap.";
       } else {
@@ -407,8 +371,8 @@
         analysis = "Your multiple-choice answers suggest a possible B2 ceiling. Speaking, listening, and writing evidence are recommended before choosing a final starting point.";
       }
     } else if (ceilingLevel === "B1") {
-      const b1Evidence = productionStatus(teacherEvidence, "B1");
-      if (b1Evidence.supportive) {
+      const b1Evidence = hasLiveEvidence(results, "B1");
+      if (b1Evidence) {
         displayEstimate = "B1 starting point";
         analysis = "Current evidence suggests a B1 starting point. Recognition and live performance are broadly aligned. This is a placement estimate, pending teacher confirmation.";
       } else {
@@ -471,8 +435,13 @@
     root.dataset.resultPercent = totalPercent;
     const pass = Number(root.dataset.pass || 70);
     const strong = Number(root.dataset.strong || 86);
-    const label = totalPercent >= strong ? root.dataset.strongLabel :
-      totalPercent >= pass ? root.dataset.passLabel : root.dataset.reviewLabel;
+    const requiresLiveEvidence = root.hasAttribute("data-require-live-evidence");
+    const evidenceReady = !requiresLiveEvidence ||
+      hasLiveEvidence(results, null, Number(root.dataset.productionMin), Number(root.dataset.listeningMin));
+    const ready = totalPercent >= pass && evidenceReady;
+    const label = totalPercent >= strong && evidenceReady ? root.dataset.strongLabel :
+      ready ? root.dataset.passLabel :
+      totalPercent >= pass ? root.dataset.evidenceLabel : root.dataset.reviewLabel;
 
     const scoreText = root.querySelector("[data-score-text]");
     const scoreBar = root.querySelector("[data-score-bar]");
@@ -484,11 +453,13 @@
     if (scoreBar) scoreBar.style.width = totalPercent + "%";
     if (scoreLabel) scoreLabel.textContent = label || totalPercent + "%";
     if (feedback) {
-      feedback.textContent = totalPercent >= pass
+      feedback.textContent = ready
         ? root.dataset.passFeedback || "Good evidence. Compare this with the next check to show visible progress."
-        : root.dataset.reviewFeedback || "Useful baseline. These items show where the next lessons should focus.";
+        : totalPercent >= pass && !evidenceReady
+          ? root.dataset.evidenceFeedback
+          : root.dataset.reviewFeedback || "Useful baseline. These items show where the next lessons should focus.";
       feedback.classList.remove("is-success", "is-error");
-      feedback.classList.add(totalPercent >= pass ? "is-success" : "is-error");
+      feedback.classList.add(ready ? "is-success" : "is-error");
     }
 
     const skillRoot = root.querySelector("[data-skill-summary]");
@@ -514,7 +485,7 @@
 
     updatePlacementSummary(root, results);
     updateResultRecord(root);
-    animate(root, root.dataset.placement ? root.dataset.placementReady === "true" : totalPercent >= pass);
+    animate(root, root.dataset.placement ? root.dataset.placementReady === "true" : ready);
   }
 
   function resetAssessment(root){
@@ -583,6 +554,7 @@
   // group: arrow-key navigation, roving tabindex, and aria-checked state.
   function initOptionGroups(root){
     root.querySelectorAll("[data-assessment-item]").forEach(function(item){
+      randomizeResponseGroups(item, "[data-option]");
       const options = Array.from(item.querySelectorAll("[data-option]"));
       if (!options.length) return;
       const group = options[0].parentNode;
@@ -616,47 +588,22 @@
   function initAssessment(root){
     addResultRecord(root);
     if (root.dataset.placement) initTeacherMode();
-    root.querySelectorAll("[data-speak]").forEach(function(button){
-      button.addEventListener("click", async function(){
-        if (root._activeLessonAudio) {
-          root._activeLessonAudio.pause();
-          root._activeLessonAudio = null;
-        }
-        if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-        root.querySelectorAll("[data-speak]").forEach(function(other){ other.classList.remove("is-playing"); });
-        button.classList.add("is-playing");
-
-        try {
-          const clipId = button.dataset.voiceClip;
-          if (!clipId) throw new Error("No ElevenLabs clip is configured.");
-          const response = await fetch("/api/voice/" + encodeURIComponent(clipId));
-          if (!response.ok) throw new Error("ElevenLabs audio is unavailable.");
-          const audioUrl = URL.createObjectURL(await response.blob());
-          const audio = new Audio(audioUrl);
-          root._activeLessonAudio = audio;
-          const clear = function(){
-            button.classList.remove("is-playing");
-            URL.revokeObjectURL(audioUrl);
-            if (root._activeLessonAudio === audio) root._activeLessonAudio = null;
-          };
-          audio.addEventListener("ended", clear, { once: true });
-          audio.addEventListener("error", clear, { once: true });
-          await audio.play();
-        } catch (error) {
-          button.classList.remove("is-playing");
-          playBrowserVoice(button);
-        }
-      });
-    });
+    initStaticAudio(root);
     initOptionGroups(root);
 
     const check = root.querySelector("[data-check-assessment]");
     const reset = root.querySelector("[data-reset-assessment]");
     const print = root.querySelector("[data-print-assessment]");
+    const resultRegion = root.querySelector(".score-card");
+    if (resultRegion) {
+      resultRegion.ariaLabel = "Assessment results";
+      resultRegion.tabIndex = -1;
+    }
     if (check) {
       check.addEventListener("click", function(){
         const results = Array.from(root.querySelectorAll("[data-assessment-item]")).map(gradeItem);
         updateSummary(root, results);
+        if (resultRegion) resultRegion.focus();
       });
     }
     if (reset) reset.addEventListener("click", function(){ resetAssessment(root); });
@@ -673,6 +620,63 @@
     [".score-card", ".placement-result"].forEach(function(selector){
       const region = root.querySelector(selector);
       if (region) region.setAttribute("aria-live", "polite");
+    });
+  }
+
+  function initStaticAudio(root){
+    root.querySelectorAll("audio[data-audio-src][data-speak]").forEach(function(audio){
+      const fallback = document.createElement("button");
+      fallback.type = "button";
+      fallback.className = "listen-btn audio-fallback";
+      fallback.hidden = true;
+      fallback.dataset.speak = audio.dataset.speak;
+      fallback.textContent = "Use browser voice";
+      fallback.setAttribute("aria-label", "Use browser voice because the recorded audio is unavailable");
+      audio.insertAdjacentElement("afterend", fallback);
+
+      let attemptedPlayback = false;
+      const stopOtherAudio = function(){
+        if (root._activeLessonAudio && root._activeLessonAudio !== audio) root._activeLessonAudio.pause();
+        if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+        root.querySelectorAll("[data-speak]").forEach(function(other){ other.classList.remove("is-playing"); });
+      };
+      const clear = function(){
+        audio.classList.remove("is-playing");
+        if (root._activeLessonAudio === audio) root._activeLessonAudio = null;
+      };
+      const useFallback = function(){
+        clear();
+        audio.hidden = true;
+        fallback.hidden = false;
+        fallback.title = "The recorded MP3 is missing. Browser speech is available as a fallback.";
+        if (attemptedPlayback) {
+          attemptedPlayback = false;
+          stopOtherAudio();
+          playBrowserVoice(fallback);
+        }
+      };
+
+      audio.addEventListener("click", function(){ attemptedPlayback = true; });
+      audio.addEventListener("keydown", function(event){
+        if (event.key === " " || event.key === "Enter") attemptedPlayback = true;
+      });
+      audio.addEventListener("play", function(){
+        attemptedPlayback = true;
+        stopOtherAudio();
+        root._activeLessonAudio = audio;
+        audio.classList.add("is-playing");
+      });
+      audio.addEventListener("pause", clear);
+      audio.addEventListener("ended", clear);
+      audio.addEventListener("error", useFallback);
+      fallback.addEventListener("click", function(){
+        stopOtherAudio();
+        playBrowserVoice(fallback);
+      });
+
+      // The native control already contains its static src so playback works
+      // without JavaScript. Keep the data attribute for validation and fallback
+      // handling when a draft build does not yet contain the generated MP3.
     });
   }
 

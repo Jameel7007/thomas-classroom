@@ -1,5 +1,6 @@
 ---
 import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+import AudioControl from "../../components/assessment/AudioControl.astro";
 export const page = {
   "original": "outputs/assessments/a1-exit.html",
   "source": "src/content/assessments/a1-exit.astro",
@@ -7,15 +8,48 @@ export const page = {
   "slug": "a1-exit",
   "title": "A1 End-of-Level Diagnostic",
   "description": "Use this after all A1 lessons to identify anything the learner missed and confirm whether they are ready to begin A2.",
-  "engine": "none",
+  "engine": "assessment",
   "bodyClass": "",
   "features": [
     "AssessmentPage",
-    "AssessmentNavigation"
+    "AssessmentNavigation",
+    "AssessmentEngine",
+    "ProgressIndicator",
+    "FeedbackPanel",
+    "MultipleChoiceExercise",
+    "AudioControls"
   ],
-  "contentTextHash": "621189bc78588d97a9edeb590b431a99b487b3d5551ee97bfa902db13d90267c",
-  "interactionCounts": {},
-  "audioClips": []
+  "contentTextHash": "cbeb69b08262ab2311ea0887e8c12ebe48aa60d633d5460c5e8201e89597c06c",
+  "interactionCounts": {
+    "data-assessment": 1,
+    "data-pass": 1,
+    "data-strong": 1,
+    "data-review-label": 1,
+    "data-pass-label": 1,
+    "data-strong-label": 1,
+    "data-review-feedback": 1,
+    "data-pass-feedback": 1,
+    "data-score-text": 1,
+    "data-score-bar": 1,
+    "data-score-label": 1,
+    "data-skill-summary": 1,
+    "data-assessment-item": 22,
+    "data-skill": 22,
+    "data-points": 22,
+    "data-answer": 20,
+    "data-option": 60,
+    "data-voice-clip": 2,
+    "data-speak": 2,
+    "data-credit": 9,
+    "data-check-assessment": 1,
+    "data-reset-assessment": 1,
+    "data-print-assessment": 1,
+    "data-feedback": 1
+  },
+  "audioClips": [
+    "a1-routine-message",
+    "a1-weather-plan"
+  ]
 };
 ---
 <AssessmentPage page={page}>
@@ -24,10 +58,210 @@ export const page = {
 <p class="overline">Complete A1 before advancing</p>
 <h1>A1 End-of-Level Diagnostic</h1>
 <p class="lede">Use this after all A1 lessons to identify anything the learner missed and confirm whether they are ready to begin A2.</p>
+
 <div class="grid">
-<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Grammar</b>Present simple, present continuous, can, have got, and there is/are.</li><li><b>Functions</b>Shop, cafe, home, time, weather, and routine tasks.</li><li><b>Production</b>Describe a day, a room, a person, and a need.</li></ul></section>
-<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can ask and answer everyday questions.</li><li>Can choose forms in short controlled tasks.</li><li>Can speak for short turns with familiar language.</li></ul></section>
+<section class="panel"><h2>Benchmark goal</h2><p>The learner should manage familiar daily situations with connected A1 language. This check combines form control with reading, listening, practical decisions, and independent production.</p></section>
+<section class="panel"><h2>Advance when ready</h2><ul class="rubric"><li>Asks and answers everyday questions.</li><li>Chooses present and past forms for the intended meaning.</li><li>Completes short speaking and writing tasks without copying a model.</li></ul></section>
 </div>
-<p class="placeholder">Next build: add a comprehensive scored diagnostic and speaking rubric covering the complete A1 level.</p>
+
+<section class="assessment" data-assessment data-pass="70" data-strong="88" data-require-live-evidence data-production-min="60" data-listening-min="50" data-evidence-label="More live evidence needed" data-evidence-feedback="The score is high enough, but confirm at least 60% in both speaking and writing and 50% in listening before advancing." data-review-label="A1 still developing" data-pass-label="Ready to begin A2" data-strong-label="A1 secure" data-review-feedback="The skill profile shows which A1 areas need another focused lesson cycle before the learner advances." data-pass-feedback="The learner has demonstrated the core A1 abilities needed to begin A2. Review any weaker skill score before advancing.">
+<div class="score-card">
+<div class="score-big"><span>Score</span><b data-score-text>0 / 0</b></div>
+<div>
+<div class="score-meter"><span class="score-fill" data-score-bar></span></div>
+<div class="score-label" data-score-label>Not checked yet</div>
+<p class="score-help">Use the skill profile to separate a small review need from a broader A1 gap.</p>
+<div class="skill-summary" data-skill-summary></div>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>1. Grammar for everyday meaning</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Does Maya work on Saturdays?">
+<p class="item-kicker">Present simple questions</p>
+<div class="reading-text"><p><strong>Answer:</strong> “No, Maya doesn’t work on Saturdays.”</p></div>
+<p class="question">Which question produced the answer?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Does Maya work on Saturdays?">Does Maya work on Saturdays?</button><button class="choice-btn" data-option="Do Maya works on Saturdays?">Do Maya works on Saturdays?</button><button class="choice-btn" data-option="Is Maya work on Saturdays?">Is Maya work on Saturdays?</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="He doesn't drive to work.">
+<p class="item-kicker">Present simple negatives</p>
+<div class="reading-text"><p>Leo takes the train every morning.</p></div>
+<p class="question">Choose the sentence that correctly describes Leo.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="He doesn't drives to work.">He doesn’t drives to work.</button><button class="choice-btn" data-option="He doesn't drive to work.">He doesn’t drive to work.</button><button class="choice-btn" data-option="He not drive to work.">He not drive to work.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="She is talking to a client right now.">
+<p class="item-kicker">Present continuous</p>
+<div class="reading-text"><p>Nina normally answers email in the morning. At this moment, she is on a video call with a client.</p></div>
+<p class="question">What is Nina doing now?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="She talks to a client right now.">She talks to a client right now.</button><button class="choice-btn" data-option="She is talking to a client right now.">She is talking to a client right now.</button><button class="choice-btn" data-option="She talking to a client right now.">She talking to a client right now.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Are there any cafés near here?">
+<p class="item-kicker">There is / are and any</p>
+<p class="question">You are new in the neighborhood and want to find a café. What do you ask?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Is there some cafés near here?">Is there some cafés near here?</button><button class="choice-btn" data-option="Are there any cafés near here?">Are there any cafés near here?</button><button class="choice-btn" data-option="There are any cafés near here?">There are any cafés near here?</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="We have got a meeting at two.">
+<p class="item-kicker">Have got</p>
+<div class="reading-text"><p>The team calendar shows a meeting today at 2:00 PM.</p></div>
+<p class="question">Which sentence gives the calendar information correctly?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="We has got a meeting at two.">We has got a meeting at two.</button><button class="choice-btn" data-option="We have got a meeting at two.">We have got a meeting at two.</button><button class="choice-btn" data-option="We got have a meeting at two.">We got have a meeting at two.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Can I use this chair?">
+<p class="item-kicker">Can for permission</p>
+<p class="question">You need an extra chair in a coworker’s office. Choose the polite request.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Can I use this chair?">Can I use this chair?</button><button class="choice-btn" data-option="Do I can use this chair?">Do I can use this chair?</button><button class="choice-btn" data-option="I can use this chair?">I can use this chair?</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="I usually check my email before breakfast.">
+<p class="item-kicker">Adverbs of frequency</p>
+<p class="question">Choose the natural word order.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="I check usually my email before breakfast.">I check usually my email before breakfast.</button><button class="choice-btn" data-option="Usually I check my before breakfast email.">Usually I check my before breakfast email.</button><button class="choice-btn" data-option="I usually check my email before breakfast.">I usually check my email before breakfast.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The meeting is at 9:00 on Tuesday in Room 4.">
+<p class="item-kicker">Prepositions of time and place</p>
+<div class="reading-text"><p><strong>Meeting:</strong> Tuesday · 9:00 AM · Room 4</p></div>
+<p class="question">Which reminder uses the correct prepositions?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The meeting is on 9:00 at Tuesday at Room 4.">The meeting is on 9:00 at Tuesday at Room 4.</button><button class="choice-btn" data-option="The meeting is at 9:00 on Tuesday in Room 4.">The meeting is at 9:00 on Tuesday in Room 4.</button><button class="choice-btn" data-option="The meeting is in 9:00 in Tuesday on Room 4.">The meeting is in 9:00 in Tuesday on Room 4.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Please send it to her.">
+<p class="item-kicker">Object pronouns</p>
+<div class="reading-text"><p>Ana needs the report. You have the report on your computer.</p></div>
+<p class="question">What does your manager ask you to do?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Please send she to it.">Please send she to it.</button><button class="choice-btn" data-option="Please send it to her.">Please send it to her.</button><button class="choice-btn" data-option="Please send her to it.">Please send her to it.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Don't open the door.">
+<p class="item-kicker">Imperatives</p>
+<div class="reading-text"><p>A meeting is in progress. A sign asks visitors to keep the door closed.</p></div>
+<p class="question">Which instruction belongs on the sign?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Not open the door.">Not open the door.</button><button class="choice-btn" data-option="Don't to open the door.">Don’t to open the door.</button><button class="choice-btn" data-option="Don't open the door.">Don’t open the door.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="We were at the airport yesterday.">
+<p class="item-kicker">Was / were</p>
+<div class="reading-text"><p>You and your partner traveled yesterday. You waited for your flight at the airport.</p></div>
+<p class="question">Choose the correct sentence about yesterday.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="We was at the airport yesterday.">We was at the airport yesterday.</button><button class="choice-btn" data-option="We were at the airport yesterday.">We were at the airport yesterday.</button><button class="choice-btn" data-option="We are at the airport yesterday.">We are at the airport yesterday.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>2. Read connected everyday information</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="She is working from home before meeting a friend.">
+<p class="item-kicker">Read a routine update</p>
+<div class="reading-text"><p><strong>Message from Carla:</strong><br />I usually work at the downtown office, but today I’m working from home. I have a video meeting at 10:00. After work, I’m meeting Sofia at a café near the station.</p></div>
+<p class="question">Which sentence accurately summarizes Carla’s day?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="She is working from home before meeting a friend.">She is working from home before meeting a friend.</button><button class="choice-btn" data-option="She always works from home and has no meetings today.">She always works from home and has no meetings today.</button><button class="choice-btn" data-option="She is meeting Sofia before she starts work.">She is meeting Sofia before she starts work.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The apartment has furniture, but it does not have parking.">
+<p class="item-kicker">Read an apartment listing</p>
+<div class="reading-text"><p><strong>Apartment for rent</strong><br />One bedroom · Furnished living room · Small kitchen · Close to the subway<br />There isn’t a parking space. No pets, please.</p></div>
+<p class="question">Which statement is true?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The apartment has two bedrooms and allows pets.">The apartment has two bedrooms and allows pets.</button><button class="choice-btn" data-option="The apartment has furniture, but it does not have parking.">The apartment has furniture, but it does not have parking.</button><button class="choice-btn" data-option="The apartment is far from public transportation.">The apartment is far from public transportation.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Bring a warm layer and arrive before 8:15.">
+<p class="item-kicker">Read a practical message</p>
+<div class="reading-text"><p><strong>Saturday walking group</strong><br />Meet outside Central Station at 8:15 AM. The walk starts at 8:30. It may be cool and windy in the morning, so bring a sweater. We stop for lunch at 12:00.</p></div>
+<p class="question">What should a participant do?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Bring a warm layer and arrive before 8:15.">Bring a warm layer and arrive before 8:15.</button><button class="choice-btn" data-option="Meet inside the station at noon.">Meet inside the station at noon.</button><button class="choice-btn" data-option="Bring summer clothes and arrive after 8:30.">Bring summer clothes and arrive after 8:30.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>3. Listen and act in familiar situations</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="Call Maya after ten because she is working from home.">
+<p class="item-kicker">Listen: a work message</p>
+<p class="question">Play the message. What should the listener do?</p>
+<AudioControl clip="a1-routine-message" src="/audio/assessments/a1-exit/routine-message.mp3" text="Hi, this is Maya. I usually start work at nine, but today I’m working from home. Please call me after ten." label="Play message" ariaLabel="Play Maya’s work message" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Call Maya after ten because she is working from home.">Call Maya after ten because she is working from home.</button><button class="choice-btn" data-option="Visit Maya's office before nine.">Visit Maya’s office before nine.</button><button class="choice-btn" data-option="Call Maya at nine because she is at the office.">Call Maya at nine because she is at the office.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="Take a jacket and an umbrella.">
+<p class="item-kicker">Listen: weather advice</p>
+<p class="question">Play the forecast. What should you take?</p>
+<AudioControl clip="a1-weather-plan" src="/audio/assessments/a1-exit/weather-plan.mp3" text="The weather will be cold and rainy this afternoon. Bring a jacket and take an umbrella." label="Play advice" ariaLabel="Play the afternoon weather advice" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Take sunglasses and a hat.">Take sunglasses and a hat.</button><button class="choice-btn" data-option="Take a jacket and an umbrella.">Take a jacket and an umbrella.</button><button class="choice-btn" data-option="Take a T-shirt and some water.">Take a T-shirt and some water.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="A mechanic works in a garage and repairs cars.">
+<p class="item-kicker">Jobs and workplaces</p>
+<p class="question">Which description matches the job and workplace?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="A mechanic works in a garage and repairs cars.">A mechanic works in a garage and repairs cars.</button><button class="choice-btn" data-option="A receptionist works in a kitchen and cooks meals.">A receptionist works in a kitchen and cooks meals.</button><button class="choice-btn" data-option="A nurse works in a garage and sells clothes.">A nurse works in a garage and sells clothes.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="Could I have the soup and some water, please?">
+<p class="item-kicker">Order food and drink</p>
+<div class="reading-text"><p><strong>Server:</strong> “Hello. Are you ready to order?”</p></div>
+<p class="question">Choose the clearest polite order.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Could I have the soup and some water, please?">Could I have the soup and some water, please?</button><button class="choice-btn" data-option="I am soup and water.">I am soup and water.</button><button class="choice-btn" data-option="Do you soup any water?">Do you soup any water?</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="The lamp is next to the sofa in the living room.">
+<p class="item-kicker">Rooms and furniture</p>
+<div class="reading-text"><p>A floor plan shows a sofa in the living room. A lamp stands immediately beside it.</p></div>
+<p class="question">Choose the accurate description.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The lamp is next to the sofa in the living room.">The lamp is next to the sofa in the living room.</button><button class="choice-btn" data-option="The sofa is under the lamp in the kitchen.">The sofa is under the lamp in the kitchen.</button><button class="choice-btn" data-option="The lamp is between two beds in the bathroom.">The lamp is between two beds in the bathroom.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="Do you have this shirt in a larger size?">
+<p class="item-kicker">Clothes and shopping</p>
+<div class="reading-text"><p>The shirt is too small, but you like the color.</p></div>
+<p class="question">What do you ask the sales assistant?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Do you have this shirt in a larger size?">Do you have this shirt in a larger size?</button><button class="choice-btn" data-option="Is this shirt more small?">Is this shirt more small?</button><button class="choice-btn" data-option="Have this shirt a large?">Have this shirt a large?</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>4. Teacher-scored communication</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Speaking" data-points="5">
+<p class="item-kicker">Speaking task · 5 points</p>
+<div class="reading-text"><p><strong>Plan a Saturday:</strong> Ask the learner about their normal weekend, then arrange one activity together. Include a time, place, and practical detail such as weather, transport, food, or clothing.</p></div>
+<p class="question">Award one point for each ability demonstrated independently or after one light prompt.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Describes at least three parts of a normal routine using understandable present simple forms.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Asks the teacher at least two relevant questions using usable question word order.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Suggests or accepts an activity using can, an imperative, or another clear A1 chunk.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Agrees on a time and place using understandable time and place expressions.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Maintains the exchange for about ninety seconds without reading complete prepared sentences.</label>
+</div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Writing" data-points="4">
+<p class="item-kicker">Writing task · 4 points</p>
+<div class="reading-text"><p><strong>Write a message to a new classmate.</strong> Introduce yourself, describe one part of your normal week, say what you are doing this week, and ask two questions. Aim for 45–70 words.</p></div>
+<p class="question">Award one point for each observable quality.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Includes all four requested parts and communicates a clear purpose.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses present simple and present continuous with enough control to distinguish routine from now or temporary activity.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Forms two understandable questions with appropriate word order.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Connects ideas with basic punctuation and linkers such as and, but, or because.</label>
+</div>
+</article>
+</div>
+</div>
+
+<div class="actions">
+<button class="assessment-btn primary" data-check-assessment>Check assessment</button>
+<button class="assessment-btn" data-reset-assessment>Reset</button>
+<button class="assessment-btn" data-print-assessment>Print summary</button>
+</div>
+<p class="feedback" data-feedback>Complete the sections, then check the assessment.</p>
+</section>
 </main>
 </AssessmentPage>

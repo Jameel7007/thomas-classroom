@@ -1,401 +1,318 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Health & the body · A2 Vocabulary · Curriculum Map",
+  "title": "Health & the body · A2 Vocabulary",
   "slug": "health-and-the-body",
   "level": "A2",
   "topic": "Health & the body",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Name the parts of the body, describe how you feel, and handle a doctor’s visit. Learn the symptom chunks I have a headache , I have a sore throat , and I have a fever , say where i",
+  "description": "Describe a symptom, body location, onset, duration, and severity; answer common health questions; report instructions; and request urgent help in clear U.S. English.",
   "sequence": 13,
-  "prerequisites": [],
+  "prerequisites": ["a2/modals-should-must-have-to", "a2/present-perfect", "a1/imperatives"],
   "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Symptom form, body location, onset, duration, severity, clinical questions, reported instructions, urgent-help language, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 13</p>
-  <h1>Health &amp; <em>the body</em></h1>
-  <p class="standfirst">Name the parts of the body, describe how you feel, and handle a doctor’s visit. Learn the symptom chunks <span class="ex">I have a headache</span>, <span class="ex">I have a sore throat</span>, and <span class="ex">I have a fever</span>, say where it hurts with <span class="ex">My back hurts</span>, and give simple advice with <span class="ex">You should rest</span>.</p>
+  <h1>Health &amp; the body: <em>describe what is happening clearly</em></h1>
+  <p class="standfirst">A useful health message does more than name one symptom. Say what you notice, where it is, when it started, how long it has continued, and how serious it feels. Then understand the next question or instruction.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">body &amp; symptoms</span>
-    <span class="tag">have · hurts · should</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">symptom · location · onset</span>
+    <span class="tag">duration · severity · urgency</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read a short talk with a doctor.</span></div>
-    <div class="flow-step"><b>Discover</b><span>have + symptom vs. body part + hurts.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, and build the chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe symptoms, give advice, call in sick.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Find six kinds of information in one fictional call.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose <em>have</em>, <em>feel</em>, <em>hurt</em>, or <em>pain in</em>.</span></div>
+    <div class="flow-step"><b>Build</b><span>Add body location, onset, duration, severity, and questions.</span></div>
+    <div class="flow-step"><b>Use</b><span>Complete a fictional clinic intake and clarify instructions.</span></div>
   </div>
 
-  <p class="note-line">Two ways to talk about a problem: name the symptom with <span class="ex">have</span> (<span class="ex">I have a headache</span>) or name the body part with <span class="ex">hurts</span> (<span class="ex">My head hurts</span>). For advice, use <span class="ex">should</span> + base verb: <span class="ex">You should rest</span>.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can describe common symptoms and body locations; say when a problem started and how long it has continued; report severity; answer common health questions; distinguish general advice from reported instructions; and use direct language to request urgent help.</p>
+
+  <div class="note">
+    <h2>Communication lesson, not medical advice</h2>
+    <p>This page teaches English for sharing information. It cannot diagnose a condition or tell a person which treatment or medicine is right. A real health care professional or medicine label supplies the medical instruction; the learner practices understanding and reporting it accurately.</p>
+  </div>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="got">got</button>
-      <button class="choice-option" data-choice-option="have">have</button>
-      <button class="choice-option" data-choice-option="should">should</button>
-      <button class="choice-option" data-choice-option="must">must</button>
-      <button class="choice-option" data-choice-option="at">at</button>
-      <button class="choice-option" data-choice-option="in">in</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I’ve <button class="choice-gap" data-choice-gap data-answer="got" data-placeholder="choose">choose</button> a headache! &nbsp;<span class="contraction">(A1 lesson · have got)</span></span></div>
-    <div class="q"><span class="n">2</span><span>You look tired. You <button class="choice-gap" data-choice-gap data-answer="should" data-placeholder="choose">choose</button> go to bed early. &nbsp;<span class="contraction">(A2 lesson · advice, not obligation)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I take my vitamins <button class="choice-gap" data-choice-gap data-answer="at" data-placeholder="choose">choose</button> night, after dinner. &nbsp;<span class="contraction">(A1 lesson · parts of the day)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved advice, present-perfect duration, and a finished starting event.">
+    <h3>Three checks from earlier lessons</h3>
+    <p class="choice-hint">Use advice, a state continuing to now, and the finished time when it began.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices"><button class="choice-option" data-choice-option="should">should</button><button class="choice-option" data-choice-option="must">must</button><button class="choice-option" data-choice-option="have had">have had</button><button class="choice-option" data-choice-option="had">had</button><button class="choice-option" data-choice-option="started">started</button><button class="choice-option" data-choice-option="has started">has started</button></div>
+    <div class="q"><span class="n">1</span><span>The speaker offers a useful idea, not a rule: You <button class="choice-gap" data-choice-gap data-answer="should" data-hint="Use should plus a base verb for advice." data-fix="You should call the clinic for advice." data-placeholder="choose">choose</button> call the clinic for advice.</span></div>
+    <div class="q"><span class="n">2</span><span>The cough began three days ago and continues now: I <button class="choice-gap" data-choice-gap data-answer="have had" data-hint="Use have had for a symptom state that began before now and continues now." data-fix="I have had this cough for three days." data-placeholder="choose">choose</button> this cough for three days.</span></div>
+    <div class="q"><span class="n">3</span><span>The sentence asks about the finished beginning last night: The pain <button class="choice-gap" data-choice-gap data-answer="started" data-hint="Use past simple for the finished event when the pain began." data-fix="The pain started last night." data-placeholder="choose">choose</button> last night.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Meet the body</h2>
-  <div class="lead-rule"></div>
-  <p>The parts of the body, from head to foot. Say each one aloud with <span class="ex">This is my…</span> for one, or <span class="ex">These are my…</span> for two or more.</p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/brain.svg" alt="" loading="lazy" /></span><span class="nm">brain</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/eyes.svg" alt="" loading="lazy" /></span><span class="nm">eyes</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ear.svg" alt="" loading="lazy" /></span><span class="nm">ear</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/nose.svg" alt="" loading="lazy" /></span><span class="nm">nose</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mouth.svg" alt="" loading="lazy" /></span><span class="nm">mouth</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tooth.svg" alt="" loading="lazy" /></span><span class="nm">tooth</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/arm.svg" alt="" loading="lazy" /></span><span class="nm">arm</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hand.svg" alt="" loading="lazy" /></span><span class="nm">hand</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/heart-organ.svg" alt="" loading="lazy" /></span><span class="nm">heart</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lungs.svg" alt="" loading="lazy" /></span><span class="nm">lungs</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bone.svg" alt="" loading="lazy" /></span><span class="nm">bone</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/leg.svg" alt="" loading="lazy" /></span><span class="nm">leg</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/foot.svg" alt="" loading="lazy" /></span><span class="nm">foot</span></div>
-  </div>
-
-  <h2>At the doctor</h2>
-  <div class="lead-rule"></div>
-  <p>The people and things you meet when you are sick. Say each one aloud in a short sentence: <span class="ex">I feel sick. I need to see a doctor.</span></p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sick.svg" alt="" loading="lazy" /></span><span class="nm">feel sick</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/doctor.svg" alt="" loading="lazy" /></span><span class="nm">doctor</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/stethoscope.svg" alt="" loading="lazy" /></span><span class="nm">stethoscope</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/pill.svg" alt="" loading="lazy" /></span><span class="nm">medicine</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/syringe.svg" alt="" loading="lazy" /></span><span class="nm">shot</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bandage.svg" alt="" loading="lazy" /></span><span class="nm">bandage</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/hospital.svg" alt="" loading="lazy" /></span><span class="nm">hospital</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/ambulance.svg" alt="" loading="lazy" /></span><span class="nm">ambulance</span></div>
-  </div>
-
-  <h2>Notice before the rule</h2>
+  <h2>Notice six kinds of health information</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read the talk with the doctor</h3>
-    <p><span class="ex">“Good morning. What’s the problem? · I <strong>have a headache</strong> and <strong>a sore throat</strong>, and <strong>my back hurts</strong>. · Do you <strong>have a fever</strong>? · Yes, my temperature is high. · Then <strong>you should rest</strong> today and drink a lot of water. <strong>Take this medicine</strong> twice a day, and you’ll <strong>feel better</strong> soon.”</span></p>
+    <h3>Harbor Clinic phone call</h3>
+    <p><span class="ex">“I <strong>have a bad cough</strong>, and I <strong>feel dizzy</strong>. I also <strong>have pain in my lower back</strong>. The cough <strong>started on Monday</strong>, so <strong>I’ve had it for three days</strong>. The back pain is <strong>a six out of ten</strong>. I can breathe normally, and I have not fainted.”</span></p>
     <ul>
-      <li>Look at <span class="ex">I have a headache</span> and <span class="ex">Do you have a fever?</span> Which little verb carries the symptom? Which small word comes before it?</li>
-      <li>Now look at <span class="ex">my back hurts</span>. There is no <span class="ex">have</span> here. What does the body part do in this sentence?</li>
-      <li>The doctor says <span class="ex">you should rest</span>, not <span class="ex">you should to rest</span>. What comes directly after <span class="ex">should</span>?</li>
+      <li>Which phrases name the symptom, feeling, and body location?</li>
+      <li>Which phrase gives the finished starting time? Which one measures the duration to now?</li>
+      <li>Which information reports severity and which reports current urgent-warning status?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check · read the cue, then choose</h3>
-    <p class="choice-hint">Symptom → <b>have + a</b>. Pain → <b>body part + hurts</b>. Advice → <b>should + base verb</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="have">have</button>
-      <button class="choice-option" data-choice-option="hurts">hurts</button>
-      <button class="choice-option" data-choice-option="sore">sore</button>
-      <button class="choice-option" data-choice-option="fever">fever</button>
-      <button class="choice-option" data-choice-option="should">should</button>
-      <button class="choice-option" data-choice-option="feel">feel</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> a cough and a cold. &nbsp;<span class="contraction">(name the symptom)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My head <button class="choice-gap" data-choice-gap data-answer="hurts" data-placeholder="choose">choose</button>. I need to sit down. &nbsp;<span class="contraction">(the body part does the verb)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I have a <button class="choice-gap" data-choice-gap data-answer="sore" data-placeholder="choose">choose</button> throat. It hurts when I speak. &nbsp;<span class="contraction">(word that goes with throat)</span></span></div>
-    <div class="q"><span class="n">4</span><span>My temperature is very high. I think I have a <button class="choice-gap" data-choice-gap data-answer="fever" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(high temperature)</span></span></div>
-    <div class="q"><span class="n">5</span><span>You <button class="choice-gap" data-choice-gap data-answer="should" data-placeholder="choose">choose</button> see a doctor about that. &nbsp;<span class="contraction">(advice)</span></span></div>
-    <div class="q"><span class="n">6</span><span>I don’t <button class="choice-gap" data-choice-gap data-answer="feel" data-placeholder="choose">choose</button> well today. &nbsp;<span class="contraction">(how you are, in general)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified a countable symptom, feeling, pain location, onset, duration to now, and severity report.">
+    <h3>Discovery check: identify the information job</h3>
+    <div class="choice-bank" aria-label="Health information job choices"><button class="choice-option" data-choice-option="countable symptom">countable symptom</button><button class="choice-option" data-choice-option="feeling or state">feeling or state</button><button class="choice-option" data-choice-option="pain location">pain location</button><button class="choice-option" data-choice-option="finished onset">finished onset</button><button class="choice-option" data-choice-option="duration to now">duration to now</button><button class="choice-option" data-choice-option="severity report">severity report</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">have a bad cough</span>, <span class="ex">a cough</span> names a <button class="choice-gap" data-choice-gap data-answer="countable symptom" data-hint="Cough can be a singular countable symptom with a." data-fix="A cough is a countable symptom in this message." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">feel dizzy</span>, the adjective after <span class="ex">feel</span> reports a <button class="choice-gap" data-choice-gap data-answer="feeling or state" data-hint="Dizzy is an adjective describing how the caller feels." data-fix="Feel dizzy reports a feeling or state." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">pain in my lower back</span>, the preposition phrase gives the <button class="choice-gap" data-choice-gap data-answer="pain location" data-hint="In my lower back identifies where the pain is." data-fix="Pain in my lower back reports the pain location." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>In <span class="ex">started on Monday</span>, past simple locates the <button class="choice-gap" data-choice-gap data-answer="finished onset" data-hint="Started names the completed event when the symptom began." data-fix="Started on Monday reports the finished onset." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>In <span class="ex">I’ve had it for three days</span>, present perfect connects the symptom to now and reports its <button class="choice-gap" data-choice-gap data-answer="duration to now" data-hint="For three days measures the continuing time from the past to now." data-fix="I’ve had it for three days reports duration to now." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>In <span class="ex">a six out of ten</span>, the number gives a <button class="choice-gap" data-choice-gap data-answer="severity report" data-hint="The scale number communicates how bad the pain feels." data-fix="A six out of ten is the caller’s severity report." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: have a symptom, or it hurts</h2>
+  <h2>Get to the root: report observations, not a diagnosis</h2>
   <div class="lead-rule"></div>
-  <p>To name a symptom, use <span class="ex">have + a</span>: <span class="ex">I have a headache. I have a fever. I have a cough. I have a cold. I have a sore throat.</span></p>
-  <p>To say where the pain is, make the body part the subject and use the verb <span class="ex">hurt</span>: <span class="ex">My back hurts. My tooth hurts.</span> With a plural body part, drop the <span class="ex">-s</span>: <span class="ex">My feet hurt. My eyes hurt.</span></p>
+  <p>A learner does not need to know the medical cause. Clear everyday English reports what the person can observe or feel. Choose the pattern that fits the kind of information.</p>
   <table>
-    <thead><tr><th>say the symptom <span class="contraction">have + a</span></th><th>say where it hurts <span class="contraction">body part + hurts</span></th></tr></thead>
+    <thead><tr><th>pattern</th><th>use</th><th>examples</th></tr></thead>
     <tbody>
-      <tr><td><b>I have a headache.</b></td><td><b>My head hurts.</b></td></tr>
-      <tr><td><b>I have a toothache.</b></td><td><b>My tooth hurts.</b></td></tr>
-      <tr><td><b>I have a backache.</b></td><td><b>My back hurts.</b></td></tr>
-      <tr><td><b>I have a stomachache.</b></td><td><b>My stomach hurts.</b></td></tr>
-      <tr><td><b>I have a sore throat.</b></td><td><b>My throat hurts.</b></td></tr>
+      <tr><td><span class="ex">have + symptom noun</span></td><td>name a symptom</td><td><span class="ex">a headache, a cough, a fever, a cold, a sore throat</span></td></tr>
+      <tr><td><span class="ex">feel + adjective</span></td><td>describe the person’s state</td><td><span class="ex">sick, dizzy, nauseous, tired, weak, short of breath</span></td></tr>
+      <tr><td><span class="ex">body part + hurt</span></td><td>name the painful part</td><td><span class="ex">My back hurts. My feet hurt.</span></td></tr>
+      <tr><td><span class="ex">have pain in + location</span></td><td>locate pain more precisely</td><td><span class="ex">I have pain in my chest. I have pain in my left knee.</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line"><span class="ex">Have</span> does not always require <span class="ex">a</span>. Use an article with singular countable symptom phrases such as <span class="ex">a cough</span> or <span class="ex">a headache</span>. Do not add one before uncountable <span class="ex">pain</span>: <span class="ex">I have pain in my shoulder</span>, not <span class="ex">a pain</span> in this neutral pattern.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected have, feel, hurt, or pain in from the requested symptom type and agreement.">
+    <h3>Drill 1: choose the symptom pattern</h3>
+    <div class="choice-bank" aria-label="Symptom pattern choices"><button class="choice-option" data-choice-option="have a headache">have a headache</button><button class="choice-option" data-choice-option="feel dizzy">feel dizzy</button><button class="choice-option" data-choice-option="hurts">hurts</button><button class="choice-option" data-choice-option="hurt">hurt</button><button class="choice-option" data-choice-option="pain in">pain in</button><button class="choice-option" data-choice-option="have a cold">have a cold</button></div>
+    <div class="q"><span class="n">1</span><span>The caller names the symptom caused by head pain: I <button class="choice-gap" data-choice-gap data-answer="have a headache" data-hint="Use have a plus the countable symptom headache." data-fix="I have a headache." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The caller describes an unsteady feeling with an adjective: I <button class="choice-gap" data-choice-gap data-answer="feel dizzy" data-hint="Use feel before the adjective dizzy." data-fix="I feel dizzy when I stand up." data-placeholder="choose">choose</button> when I stand up.</span></div>
+    <div class="q"><span class="n">3</span><span>One singular body part is painful: My left knee <button class="choice-gap" data-choice-gap data-answer="hurts" data-hint="Singular knee takes the present-simple verb hurts." data-fix="My left knee hurts when I walk." data-placeholder="choose">choose</button> when I walk.</span></div>
+    <div class="q"><span class="n">4</span><span>Two plural body parts are painful: My feet <button class="choice-gap" data-choice-gap data-answer="hurt" data-hint="Plural feet takes the base form hurt with no s." data-fix="My feet hurt after the long walk." data-placeholder="choose">choose</button> after the long walk.</span></div>
+    <div class="q"><span class="n">5</span><span>The caller gives a precise uncountable pain location: I have <button class="choice-gap" data-choice-gap data-answer="pain in" data-hint="Use pain with no article, followed by in plus the body location." data-fix="I have pain in my lower back." data-placeholder="choose">choose</button> my lower back.</span></div>
+    <div class="q"><span class="n">6</span><span>The caller means the common respiratory illness, not low body temperature: I <button class="choice-gap" data-choice-gap data-answer="have a cold" data-hint="Have a cold names the illness; feel cold describes temperature." data-fix="I have a cold, but I do not have a fever." data-placeholder="choose">choose</button>, but I do not have a fever.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Locate the problem with useful body groups</h2>
+  <div class="lead-rule"></div>
+  <p>Learn nearby parts together so you can point to a precise area. A health professional may ask <span class="ex">Where does it hurt?</span> or <span class="ex">Where is the pain?</span></p>
+  <table>
+    <thead><tr><th>area</th><th>useful body words</th><th>location example</th></tr></thead>
+    <tbody>
+      <tr><td>head and face</td><td>head, eye, ear, nose, mouth, tooth, throat, neck</td><td><span class="ex">My right ear hurts.</span></td></tr>
+      <tr><td>upper body</td><td>shoulder, chest, upper back, lower back, stomach</td><td><span class="ex">I have pain in my right shoulder.</span></td></tr>
+      <tr><td>arm and hand</td><td>arm, elbow, wrist, hand, finger</td><td><span class="ex">My left wrist hurts.</span></td></tr>
+      <tr><td>leg and foot</td><td>hip, leg, knee, ankle, foot, toe</td><td><span class="ex">My knees hurt after I run.</span></td></tr>
+      <tr><td>inside the body</td><td>heart, lungs, bone, muscle</td><td><span class="ex">The doctor listened to my lungs.</span></td></tr>
+    </tbody>
+  </table>
+  <p>Use <span class="ex">left, right, upper</span>, and <span class="ex">lower</span> when the side or area matters: <span class="ex">my left ankle, my right shoulder, my upper back, my lower stomach</span>. One part takes <span class="ex">hurts</span>; plural parts take <span class="ex">hurt</span>. The plurals <span class="ex">feet</span> and <span class="ex">teeth</span> are irregular.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified precise body locations, irregular plurals, and singular or plural hurt agreement.">
+    <h3>Drill 2: make the body location precise</h3>
+    <div class="choice-bank" aria-label="Body location choices"><button class="choice-option" data-choice-option="throat">throat</button><button class="choice-option" data-choice-option="lower back">lower back</button><button class="choice-option" data-choice-option="wrist">wrist</button><button class="choice-option" data-choice-option="ankle">ankle</button><button class="choice-option" data-choice-option="teeth hurt">teeth hurt</button><button class="choice-option" data-choice-option="shoulder hurts">shoulder hurts</button></div>
+    <div class="q"><span class="n">1</span><span>Speaking and swallowing are painful in the passage behind the mouth: I have a sore <button class="choice-gap" data-choice-gap data-answer="throat" data-hint="The throat is the passage behind the mouth used for swallowing." data-fix="I have a sore throat, and it hurts when I swallow." data-placeholder="choose">choose</button>, and it hurts when I swallow.</span></div>
+    <div class="q"><span class="n">2</span><span>The pain is below the waist on the back side of the body: I have pain in my <button class="choice-gap" data-choice-gap data-answer="lower back" data-hint="Lower back names the back area below the waist." data-fix="I have pain in my lower back." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The painful joint connects the hand to the arm: My right <button class="choice-gap" data-choice-gap data-answer="wrist" data-hint="The wrist is the joint between the hand and arm." data-fix="My right wrist hurts when I move my hand." data-placeholder="choose">choose</button> hurts when I move my hand.</span></div>
+    <div class="q"><span class="n">4</span><span>The painful joint connects the foot to the leg: My left <button class="choice-gap" data-choice-gap data-answer="ankle" data-hint="The ankle is the joint between the foot and leg." data-fix="My left ankle hurts when I walk." data-placeholder="choose">choose</button> hurts when I walk.</span></div>
+    <div class="q"><span class="n">5</span><span>More than one tooth is painful, so use the irregular plural and base verb: My <button class="choice-gap" data-choice-gap data-answer="teeth hurt" data-hint="The plural of tooth is teeth, and the plural subject takes hurt." data-fix="My teeth hurt when I drink something cold." data-placeholder="choose">choose</button> when I drink something cold.</span></div>
+    <div class="q"><span class="n">6</span><span>Only the right shoulder is painful, so use singular agreement: My right <button class="choice-gap" data-choice-gap data-answer="shoulder hurts" data-hint="One shoulder is singular, so the verb is hurts." data-fix="My right shoulder hurts when I lift my arm." data-placeholder="choose">choose</button> when I lift my arm.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Add onset, duration, severity, and useful questions</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>information needed</th><th>question</th><th>possible answer</th></tr></thead>
+    <tbody>
+      <tr><td>main problem</td><td><span class="ex">What brings you in today?</span></td><td><span class="ex">I have a bad cough.</span></td></tr>
+      <tr><td>location</td><td><span class="ex">Where does it hurt?</span></td><td><span class="ex">My lower back hurts.</span></td></tr>
+      <tr><td>finished beginning</td><td><span class="ex">When did it start?</span></td><td><span class="ex">It started on Monday.</span></td></tr>
+      <tr><td>duration to now</td><td><span class="ex">How long have you had it?</span></td><td><span class="ex">I’ve had it for three days.</span></td></tr>
+      <tr><td>severity</td><td><span class="ex">How bad is the pain from zero to ten?</span></td><td><span class="ex">It’s a six out of ten.</span></td></tr>
+      <tr><td>safety information</td><td><span class="ex">Are you allergic to any medicines?</span></td><td><span class="ex">I’m allergic to penicillin.</span></td></tr>
+    </tbody>
+  </table>
+  <p>Use <span class="ex">for</span> with a duration and <span class="ex">since</span> with a starting point: <span class="ex">for three days, since Monday</span>. The onset question uses past simple because starting is a finished event. The duration question uses present perfect because the symptom continues to now.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched location, onset, duration, severity, allergy, and current-medicine answers to their exact questions.">
+    <h3>Drill 3: choose the question the answer supports</h3>
+    <div class="choice-bank" aria-label="Health question choices"><button class="choice-option" data-choice-option="Where does it hurt?">Where does it hurt?</button><button class="choice-option" data-choice-option="When did it start?">When did it start?</button><button class="choice-option" data-choice-option="How long have you had it?">How long have you had it?</button><button class="choice-option" data-choice-option="How bad is the pain from zero to ten?">How bad is the pain from zero to ten?</button><button class="choice-option" data-choice-option="Are you allergic to any medicines?">Are you allergic to any medicines?</button><button class="choice-option" data-choice-option="Are you taking any medicine now?">Are you taking any medicine now?</button></div>
+    <div class="q"><span class="n">1</span><span>The patient answers, <span class="ex">In my lower back, mostly on the left.</span> The question was <button class="choice-gap" data-choice-gap data-answer="Where does it hurt?" data-hint="The answer gives a body location, so ask where." data-fix="Where does it hurt? In my lower back, mostly on the left." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">2</span><span>The patient answers, <span class="ex">It started on Monday morning.</span> The question was <button class="choice-gap" data-choice-gap data-answer="When did it start?" data-hint="The answer gives the finished onset time, so ask when it started." data-fix="When did it start? It started on Monday morning." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">3</span><span>The patient answers, <span class="ex">I’ve had it for three days.</span> The question was <button class="choice-gap" data-choice-gap data-answer="How long have you had it?" data-hint="The answer gives duration to now, so ask how long." data-fix="How long have you had it? I’ve had it for three days." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">4</span><span>The patient answers, <span class="ex">It’s a six out of ten.</span> The question was <button class="choice-gap" data-choice-gap data-answer="How bad is the pain from zero to ten?" data-hint="A number on a scale reports severity." data-fix="How bad is the pain from zero to ten? It’s a six." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">5</span><span>The patient answers, <span class="ex">Yes. I’m allergic to penicillin.</span> The question was <button class="choice-gap" data-choice-gap data-answer="Are you allergic to any medicines?" data-hint="Penicillin in this answer is an allergy, not a current treatment." data-fix="Are you allergic to any medicines? Yes, I’m allergic to penicillin." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">6</span><span>The patient answers, <span class="ex">Yes. I take one allergy tablet every morning.</span> The question was <button class="choice-gap" data-choice-gap data-answer="Are you taking any medicine now?" data-hint="The answer names a medicine used at the present time." data-fix="Are you taking any medicine now? Yes, I take one allergy tablet every morning." data-placeholder="choose">choose</button></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Advice, instructions, and urgent help are different messages</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Should</span> gives general advice: <span class="ex">You should call the clinic.</span> An imperative can report a direct instruction from a clinician or label: <span class="ex">The label says, “Take one tablet with food.”</span> Do not invent a medicine, dose, or treatment. Repeat the real instruction accurately and ask when it is unclear.</p>
+  <p>A normal health-care path is not always the same. Someone may call a clinic, schedule an appointment, see a doctor or nurse, visit a pharmacist, receive a prescription, or receive no prescription. In U.S. English, a pharmacy <span class="ex">fills a prescription</span>, and the patient can <span class="ex">pick up the medicine</span>.</p>
+  <div class="note">
+    <h3>Urgent-help language</h3>
+    <p>If a problem seems life-threatening, use emergency services instead of waiting for a routine language practice. In the United States, call 911; elsewhere, use the local emergency number. Useful direct messages include <span class="ex">I’m having trouble breathing. I have severe chest pain. She fainted. The bleeding won’t stop. He is suddenly confused. We need an ambulance.</span></p>
+    <p class="contraction">Safety reference: <a href="https://medlineplus.gov/ency/article/001927.htm">MedlinePlus, Recognizing medical emergencies</a>. These examples support communication and do not diagnose the cause.</p>
+  </div>
 
   <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li><span class="ex">Hurt</span> is a verb, so the body part is the subject: <span class="ex">My back hurts</span>, never <span class="ex">My back is hurt</span> for everyday pain. One part takes <span class="ex">hurts</span>; two or more take <span class="ex">hurt</span>: <span class="ex">My feet hurt.</span></li>
-      <li><span class="ex">Ache</span> lives inside symptom nouns: <span class="ex">headache, toothache, backache, stomachache</span>. Use them with <span class="ex">have + a</span>: <span class="ex">I have a backache</span> = <span class="ex">My back hurts</span>.</li>
-      <li>Say <span class="ex">I have a cold</span> for the illness. <span class="ex">I am cold</span> means you need a sweater, not a doctor.</li>
-      <li>You met <span class="ex">should</span> in the modals lesson. It gives advice, softer than <span class="ex">must</span>, and takes the base verb with no <span class="ex">to</span>: <span class="ex">You should rest. You shouldn’t work today.</span></li>
-    </ul>
+    <h3>Sound natural: stress the new health information</h3>
+    <p>The health detail carries the strongest beat: <span class="ex">I have a bad <strong>COUGH</strong>. My lower <strong>BACK</strong> hurts. It started on <strong>MON</strong>day. I’ve had it for <strong>THREE DAYS</strong>.</span> Clear stress helps the listener collect symptom, location, onset, and duration.</p>
+    <p><span class="ex">Ache</span> is /eɪk/ in <span class="ex">headache</span> and <span class="ex">toothache</span>. <span class="ex">Cough</span> ends with /f/, despite its spelling. Common U.S. speech reduces the middle of <span class="ex">stomach /ˈstʌmək/</span> and <span class="ex">medicine /ˈmɛdəsən/</span>.</p>
+    <p>Link the duration frame: <span class="ex">I’ve had it for three days</span>. <span class="ex">For</span> is often weak /fɚ/, while <span class="ex">three days</span> stays clear. In <span class="ex">Where does it hurt?</span>, <span class="ex">does it</span> connects smoothly, but keep <span class="ex">where</span> and <span class="ex">hurt</span> easy to hear.</p>
+    <p>If a detail is wrong, correct it with contrastive stress: <span class="ex">It started on <strong>MON</strong>day, not Sunday. The pain is in my <strong>LEFT</strong> knee, not my right.</span></p>
   </div>
 
-  <h2>From the first call to feeling better</h2>
-  <div class="lead-rule"></div>
-  <p>A doctor’s visit follows the same five steps almost every time. Learn them as chunks, in order:</p>
-  <p><span class="ex"><strong>make an appointment</strong> → <strong>see a doctor</strong> → <strong>get a prescription</strong> → <strong>take medicine</strong> → <strong>feel better</strong></span></p>
-  <p>In a sentence: <span class="ex">I made an appointment for Monday. I saw the doctor, got a prescription, and took the medicine twice a day. Now I feel better.</span></p>
-
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 · symptom and advice chunks</h3>
-    <p class="choice-hint">Chunks to reuse: <b>have + a symptom</b>, <b>body part + hurts / hurt</b>, <b>should + base verb</b>, <b>make an appointment</b>, <b>see a doctor</b>, <b>get a prescription</b>, <b>take medicine</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="have">have</button>
-      <button class="choice-option" data-choice-option="hurts">hurts</button>
-      <button class="choice-option" data-choice-option="hurt">hurt</button>
-      <button class="choice-option" data-choice-option="should">should</button>
-      <button class="choice-option" data-choice-option="make">make</button>
-      <button class="choice-option" data-choice-option="see">see</button>
-      <button class="choice-option" data-choice-option="get">get</button>
-      <button class="choice-option" data-choice-option="take">take</button>
+  <section data-lesson-extension="Tutor-read symptom, location, onset, duration, allergy, and urgent-help listening check">
+    <h2>Listen for the information a health professional needs</h2>
+    <div class="lead-rule"></div>
+    <p class="note-line"><b>Tutor-read listening:</b> Keep the transcript closed. Read each item once naturally and once more after the learner chooses. Do not diagnose the fictional caller or add treatment advice.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a symptom, body location, onset, duration, medicine allergy, and urgent request.">
+      <h3>Six health-message decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="a bad cough" data-hint="Listen for the symptom noun after I have." data-fix="The caller has a bad cough."><p class="quiz-question">1. What is the caller’s main symptom?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a bad cough">a bad cough</button><button class="quiz-option" data-quiz-option="a sore knee">a sore knee</button><button class="quiz-option" data-quiz-option="a toothache">a toothache</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the lower left side of her back" data-hint="Listen for both the vertical area and the side." data-fix="The pain is in the lower left side of her back."><p class="quiz-question">2. Where is the pain?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the lower left side of her back">the lower left side of her back</button><button class="quiz-option" data-quiz-option="the upper right side of her back">the upper right side of her back</button><button class="quiz-option" data-quiz-option="the lower left side of her stomach">the lower left side of her stomach</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Monday morning" data-hint="Listen for the starting point after started on." data-fix="The symptom started on Monday morning."><p class="quiz-question">3. When did the symptom start?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Monday morning">Monday morning</button><button class="quiz-option" data-quiz-option="Sunday morning">Sunday morning</button><button class="quiz-option" data-quiz-option="Monday evening">Monday evening</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="for three days" data-hint="Listen for the duration after I’ve had it." data-fix="The caller has had the symptom for three days."><p class="quiz-question">4. How long has the symptom continued?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="for three days">for three days</button><button class="quiz-option" data-quiz-option="since three days">since three days</button><button class="quiz-option" data-quiz-option="for three weeks">for three weeks</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="penicillin" data-hint="Listen for the medicine named after allergic to." data-fix="The caller reports an allergy to penicillin."><p class="quiz-question">5. Which medicine allergy does the caller report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="penicillin">penicillin</button><button class="quiz-option" data-quiz-option="an allergy tablet">an allergy tablet</button><button class="quiz-option" data-quiz-option="no known allergy">no known allergy</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Call 911 because he is having trouble breathing." data-hint="The message says the person cannot breathe normally and requests immediate help." data-fix="Call 911 because he is having trouble breathing."><p class="quiz-question">6. What urgent action does the final U.S. message request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Call 911 because he is having trouble breathing.">Call 911 because he is having trouble breathing.</button><button class="quiz-option" data-quiz-option="Schedule a routine visit next month.">Schedule a routine visit next month.</button><button class="quiz-option" data-quiz-option="Wait for the pharmacy to open tomorrow.">Wait for the pharmacy to open tomorrow.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> a headache and a sore throat. &nbsp;<span class="contraction">(name the symptom)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My back <button class="choice-gap" data-choice-gap data-answer="hurts" data-placeholder="choose">choose</button> after work. &nbsp;<span class="contraction">(one body part · add -s)</span></span></div>
-    <div class="q"><span class="n">3</span><span>My feet <button class="choice-gap" data-choice-gap data-answer="hurt" data-placeholder="choose" data-hint="Feet is plural, so the verb has no -s." data-fix="hurt">choose</button> at the end of the day. &nbsp;<span class="contraction">(plural · no -s)</span></span></div>
-    <div class="q"><span class="n">4</span><span>You <button class="choice-gap" data-choice-gap data-answer="should" data-placeholder="choose">choose</button> rest today and drink a lot of water. &nbsp;<span class="contraction">(advice)</span></span></div>
-    <div class="q"><span class="n">5</span><span>First, call the clinic and <button class="choice-gap" data-choice-gap data-answer="make" data-placeholder="choose" data-hint="The collocation is make an appointment." data-fix="make">choose</button> an appointment. &nbsp;<span class="contraction">(collocation · appointment)</span></span></div>
-    <div class="q"><span class="n">6</span><span>You should <button class="choice-gap" data-choice-gap data-answer="see" data-placeholder="choose">choose</button> a doctor about that cough. &nbsp;<span class="contraction">(chunk · a doctor)</span></span></div>
-    <div class="q"><span class="n">7</span><span><button class="choice-gap" data-choice-gap data-answer="get" data-placeholder="choose">choose</button> a prescription from the doctor before you leave. &nbsp;<span class="contraction">(the doctor gives it to you)</span></span></div>
-    <div class="q"><span class="n">8</span><span>You should <button class="choice-gap" data-choice-gap data-answer="take" data-placeholder="choose">choose</button> the medicine twice a day, with food. &nbsp;<span class="contraction">(chunk · medicine)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">I have a bad cough, but I do not have a fever.</span> Evidence target: countable symptom.</li>
+        <li><span class="ex">I have pain in the lower left side of my back.</span> Evidence target: precise body location.</li>
+        <li><span class="ex">It started on Monday morning, not Sunday morning.</span> Evidence target: finished onset and contrastive stress.</li>
+        <li><span class="ex">I’ve had it for three days.</span> Evidence target: continuing duration and weak <span class="ex">for</span>.</li>
+        <li><span class="ex">I’m allergic to penicillin, and I take an allergy tablet every morning.</span> Evidence target: allergy distinguished from current medicine.</li>
+        <li><span class="ex">He is having trouble breathing. Call 911 now and ask for an ambulance.</span> Evidence target: direct U.S. urgent-help request, not diagnosis.</li>
+      </ol>
+    </details>
+  </section>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2 · type the symptom word</h3>
-    <p class="choice-hint">Read the cue in parentheses, then type one word. Say the whole sentence aloud after you check.</p>
-    <div class="q"><span class="n">1</span><span>I have a <input class="answer-input" data-answer="headache" aria-label="answer 1" />. &nbsp;<span class="contraction">(your head hurts)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I have a sore <input class="answer-input" data-answer="throat" aria-label="answer 2" />. &nbsp;<span class="contraction">(it hurts when you speak or swallow)</span></span></div>
-    <div class="q"><span class="n">3</span><span>My temperature is very high. I have a <input class="answer-input" data-answer="fever" aria-label="answer 3" />. &nbsp;<span class="contraction">(high temperature)</span></span></div>
-    <div class="q"><span class="n">4</span><span>I have a bad <input class="answer-input" data-answer="cough" aria-label="answer 4" />, so my throat is tired. &nbsp;<span class="contraction">(you do it all day when you are sick)</span></span></div>
-    <div class="q"><span class="n">5</span><span>My tooth hurts. I have a <input class="answer-input" data-answer="toothache" aria-label="answer 5" data-hint="Join the body part and ache into one word." data-fix="toothache" />. &nbsp;<span class="contraction">(one word · body part + ache)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Rest and take your medicine, and soon you will feel <input class="answer-input" data-answer="better" aria-label="answer 6" />. &nbsp;<span class="contraction">(the happy end of the story)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Read and choose</h2>
+  <h2>Read the fictional clinic intake</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message calling in sick</h3>
-    <p><span class="ex">“Hi Dana, I’m sorry, but I can’t come to work today. I have a fever and a bad cough, and my whole body aches. I have a doctor’s appointment at 10:30 this morning. I’ll send you an update after I see the doctor. I hope I’ll feel better and be back tomorrow. · Omar”</span></p>
+    <h3>Harbor Clinic intake note, Wednesday at 9:00</h3>
+    <p><span class="ex"><strong>Main problem:</strong> Omar has a sore throat and a bad cough. <strong>Onset:</strong> Both started on Monday morning. <strong>Duration:</strong> He has had them for two days. <strong>Other information:</strong> He does not have a fever and can breathe normally. <strong>Allergy:</strong> He is allergic to penicillin. <strong>Current medicine:</strong> One allergy tablet every morning. <strong>Next step:</strong> A nurse will call him at 10:30. If he has trouble breathing before then, the clinic message says to call 911.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real message calling in sick to work.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the symptoms, onset, duration, negative information, allergy, current medicine, and conditional urgent instruction.">
+    <h3>Reading check: use only the intake note</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="He is sick.">
-        <p class="quiz-question">1. Why can’t Omar come to work today?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="He is sick.">He is sick.</button><button class="quiz-option" data-quiz-option="He is traveling.">He is traveling.</button><button class="quiz-option" data-quiz-option="He has a meeting.">He has a meeting.</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="10:30">
-        <p class="quiz-question">2. What time is his doctor’s appointment?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="10:30">10:30</button><button class="quiz-option" data-quiz-option="12:30">12:30</button><button class="quiz-option" data-quiz-option="3:00">3:00</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="tomorrow">
-        <p class="quiz-question">3. When does Omar hope to be back at work?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="tomorrow">tomorrow</button><button class="quiz-option" data-quiz-option="today">today</button><button class="quiz-option" data-quiz-option="next week">next week</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="a sore throat and a bad cough" data-hint="The main-problem field names two symptoms." data-fix="Omar reports a sore throat and a bad cough."><p class="quiz-question">1. Which two symptoms does Omar report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a sore throat and a bad cough">a sore throat and a bad cough</button><button class="quiz-option" data-quiz-option="a fever and back pain">a fever and back pain</button><button class="quiz-option" data-quiz-option="dizziness and a toothache">dizziness and a toothache</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="They started Monday morning and have continued for two days." data-hint="Combine the onset field with the duration field." data-fix="They started Monday morning and have continued for two days."><p class="quiz-question">2. What does the note say about onset and duration?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="They started Monday morning and have continued for two days.">They started Monday morning and have continued for two days.</button><button class="quiz-option" data-quiz-option="They started Wednesday and ended immediately.">They started Wednesday and ended immediately.</button><button class="quiz-option" data-quiz-option="They have continued since last month.">They have continued since last month.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Penicillin is an allergy; the allergy tablet is a current medicine." data-hint="The note separates the allergy field from the current-medicine field." data-fix="Penicillin is an allergy; the allergy tablet is a current medicine."><p class="quiz-question">3. How are penicillin and the allergy tablet different in the note?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Penicillin is an allergy; the allergy tablet is a current medicine.">Penicillin is an allergy; the allergy tablet is a current medicine.</button><button class="quiz-option" data-quiz-option="Both are new prescriptions from the nurse.">Both are new prescriptions from the nurse.</button><button class="quiz-option" data-quiz-option="Both are symptoms that started Monday.">Both are symptoms that started Monday.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Call 911 if he begins having trouble breathing before the nurse calls." data-hint="The final sentence gives a conditional urgent instruction." data-fix="Call 911 if he begins having trouble breathing before the nurse calls."><p class="quiz-question">4. According to the clinic message, when should Omar call 911?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Call 911 if he begins having trouble breathing before the nurse calls.">Call 911 if he begins having trouble breathing before the nurse calls.</button><button class="quiz-option" data-quiz-option="Call 911 because he has no fever.">Call 911 because he has no fever.</button><button class="quiz-option" data-quiz-option="Call 911 after taking his normal allergy tablet.">Call 911 after taking his normal allergy tablet.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Build the meaning, then the sentence</h2>
+  <h2>Build duration and agreement</h2>
   <div class="lead-rule"></div>
-
-  <div class="tile-game" data-tile-builder data-answer="i have a sore throat">
-    <h3>Drill 3 · build the symptom</h3>
-    <p class="tile-target">It hurts when you speak. Build the sentence, then say it to your doctor.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="throat">throat</button>
-      <button class="tile" data-build-tile="i">I</button>
-      <button class="tile" data-build-tile="sore">sore</button>
-      <button class="tile" data-build-tile="have">have</button>
-      <button class="tile" data-build-tile="a">a</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="i've had this cough for three days" data-hint="Use I’ve had for a symptom continuing to now, then for plus the duration." data-fix="I’ve had this cough for three days." data-success-message="Correct. I’ve had connects the continuing cough to now, and for introduces its duration.">
+    <h3>Drill 4: report a continuing symptom</h3><p class="tile-target">The cough began three days ago and continues now. Build the message.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="days">days</button><button class="tile" data-build-tile="cough">cough</button><button class="tile" data-build-tile="i've">I’ve</button><button class="tile" data-build-tile="three">three</button><button class="tile" data-build-tile="for">for</button><button class="tile" data-build-tile="this">this</button><button class="tile" data-build-tile="had">had</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="you should make an appointment">
-    <h3>Drill 4 · build the advice</h3>
-    <p class="tile-target">Your friend has been sick for three days. Give the advice, then say it aloud.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="appointment">appointment</button>
-      <button class="tile" data-build-tile="you">You</button>
-      <button class="tile" data-build-tile="make">make</button>
-      <button class="tile" data-build-tile="should">should</button>
-      <button class="tile" data-build-tile="an">an</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="my feet hurt after the long walk" data-hint="Use irregular plural feet and the base verb hurt for a plural subject." data-fix="My feet hurt after the long walk." data-success-message="Correct. The irregular plural feet takes the base verb hurt.">
+    <h3>Drill 5: report two painful body parts</h3><p class="tile-target">Both feet became painful after the walk. Build the sentence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="walk">walk</button><button class="tile" data-build-tile="feet">feet</button><button class="tile" data-build-tile="after">after</button><button class="tile" data-build-tile="my">My</button><button class="tile" data-build-tile="long">long</button><button class="tile" data-build-tile="hurt">hurt</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice and repair errors</h2>
+  <h2>Notice and repair three different errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="is" data-fix="My head hurts." data-why="Hurt is a verb here, so the body part does the action: My head hurts. There is no is.">
-    <h3>Drill 5 · the body part does the verb</h3>
-    <p>Tap the word that is wrong. Remember how English says where the pain is.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="my">My</button>
-      <button class="error-choice" data-error-choice="head">head</button>
-      <button class="error-choice" data-error-choice="is">is</button>
-      <button class="error-choice" data-error-choice="hurt">hurt.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="micro-drill" data-spot-error data-answer="am" data-hint="Headache is a symptom noun; use have, not be." data-fix="I have a headache." data-why="Use have plus the countable symptom noun: I have a headache." data-success-message="Correct. A countable symptom noun uses have a headache.">
+    <h3>Drill 6: repair the symptom pattern</h3><p>The speaker is naming a symptom, not identifying themself as the symptom: <span class="ex">I am a headache.</span> Tap the verb that creates the wrong pattern.</p><div class="spot-options"><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="am">am</button><button class="error-choice" data-error-choice="headache">a headache</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="to" data-fix="You should rest today." data-why="After should, use the base verb with no to: You should rest.">
-    <h3>Drill 6 · advice without to</h3>
-    <p>Tap the word that is wrong. Think about what comes after <span class="ex">should</span>.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="you">You</button>
-      <button class="error-choice" data-error-choice="should">should</button>
-      <button class="error-choice" data-error-choice="to">to</button>
-      <button class="error-choice" data-error-choice="rest">rest</button>
-      <button class="error-choice" data-error-choice="today">today.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="micro-drill" data-spot-error data-answer="hurts" data-hint="Feet is plural, so use the base verb hurt with no s." data-fix="My feet hurt after the long walk." data-why="The irregular plural subject feet takes hurt; a singular foot takes hurts." data-success-message="Correct. The plural subject feet takes hurt.">
+    <h3>Drill 7: repair body-part agreement</h3><p>Both feet are painful: <span class="ex">My feet hurts after the long walk.</span> Tap the verb with singular agreement.</p><div class="spot-options"><button class="error-choice" data-error-choice="my">My</button><button class="error-choice" data-error-choice="feet">feet</button><button class="error-choice" data-error-choice="hurts">hurts</button><button class="error-choice" data-error-choice="walk">after the long walk</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="have" data-hint="The cough began Monday and continues now, so use present perfect have had." data-fix="I have had this cough since Monday." data-why="Present perfect have had connects the continuing symptom to now; since introduces the starting point." data-success-message="Correct. Have had plus since reports a symptom continuing from Monday to now.">
+    <h3>Drill 8: repair duration to now</h3><p>The cough began Monday and is still present: <span class="ex">I have this cough since Monday.</span> Tap the incomplete verb phrase.</p><div class="spot-options"><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="have">have</button><button class="error-choice" data-error-choice="cough">this cough</button><button class="error-choice" data-error-choice="since">since Monday</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 · say it the other way</h3>
-    <p>Say the new sentence aloud first, using the pattern in the cue. Reveal only after you answer.</p>
+    <h3>Oral transforms: add the missing health information</h3>
+    <p>Say each complete message before revealing it. Follow the exact information request.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> head &nbsp;→&nbsp; say the symptom with <span class="ex">have</span></p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I have a headache.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> throat &nbsp;→&nbsp; say the symptom with <span class="ex">sore</span></p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I have a sore throat.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> I have a backache. &nbsp;→&nbsp; say it with <span class="ex">hurts</span></p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>My back hurts.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> My tooth hurts. &nbsp;→&nbsp; say it with <span class="ex">have</span></p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I have a toothache.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> Your coworker has a fever. &nbsp;→&nbsp; give advice with <span class="ex">should</span> + <span class="ex">see a doctor</span></p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>You should see a doctor.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> You took the medicine and rested all weekend. &nbsp;→&nbsp; say how you are now with <span class="ex">feel</span></p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I feel better.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> cough, singular symptom noun. Use <span class="ex">have</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I have a bad cough.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> dizzy, adjective describing your state. Use <span class="ex">feel</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I feel dizzy when I stand up.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> lower back, precise pain location. Use <span class="ex">pain in</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I have pain in my lower back.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> Monday morning, finished onset. Use <span class="ex">start</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>It started on Monday morning.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> three days, continuing duration. Use <span class="ex">have had</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>I’ve had it for three days.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> The listener heard Sunday, but the onset was Monday. Correct the detail with contrastive stress.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>It started on Monday, not Sunday.</strong></p></div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Communicate: complete a fictional clinic intake</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>At the doctor:</b> Role-play with the teacher. The teacher is the doctor and asks <span class="ex">What’s the problem?</span> Describe at least three symptoms. <span class="ex">I have a sore throat and a fever, and my back hurts.</span></div>
-  <div class="prompt-card"><b>Give the advice:</b> Now you are the doctor. The teacher names a problem; answer with <span class="ex">should</span> or <span class="ex">shouldn’t</span>. <span class="ex">You should rest and drink water. You shouldn’t go to the gym this week.</span></div>
-  <div class="prompt-card"><b>Interview the teacher:</b> Ask three questions about health habits, then report one answer. <span class="ex">How often do you exercise? Do you sleep well? Do you ever get headaches?</span></div>
-  <div class="prompt-card"><b>Your exercise routine:</b> Say what you do for your body and when. <span class="ex">I usually walk to work. I go to the gym twice a week, and I never skip breakfast.</span></div>
-  <div class="prompt-card"><b>Call in sick:</b> Leave a polite voice message for your manager: say the problem, the plan, and when you hope to return. <span class="ex">I’m sorry, but I can’t come in today. I have a fever, and I have a doctor’s appointment at ten. I hope I’ll be back tomorrow.</span></div>
+  <p class="note-line">You never need to disclose your real health, body, symptoms, medicines, allergies, medical history, disability, mental health, pregnancy, family, workplace, school, location, contact information, or emergency experience. Use the Harbor Clinic cards, invent a neutral case, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Prepare the fictional case:</b> Choose a name, one symptom noun, one feeling adjective, one body location, a starting time, a duration, and a severity from zero to ten. Add fictional allergy and current-medicine information, including <span class="ex">none</span> when appropriate.</div>
+  <div class="prompt-card"><b>Final production: give a 45–60 second fictional clinic intake.</b> Report the main problem, precise location, onset, duration to now, severity, and relevant allergy or current-medicine information. Do not diagnose the cause or invent a treatment.</div>
+  <div class="prompt-card"><b>Clarify and reformulate:</b> The listener asks three intake questions and intentionally repeats one detail incorrectly. Correct the time, side, number, or medicine with clear contrastive stress.</div>
+  <div class="prompt-card"><b>Report an instruction:</b> Draw a fictional clinician or label card. Report only the instruction printed on that card, then ask a clarification question such as <span class="ex">Did you say once or twice a day?</span></div>
 
-  <h2>Reflect</h2>
+  <h2>Final check</h2>
+  <div class="lead-rule"></div>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled symptom form, continuing duration, onset question, and direct urgent-help language.">
+    <h3>Four decisions with one defensible target</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="I feel dizzy when I stand up." data-hint="Dizzy is an adjective describing a state, so use feel." data-fix="I feel dizzy when I stand up."><p class="quiz-question">1. The speaker describes an unsteady feeling with the adjective <span class="ex">dizzy</span>. Which sentence uses the natural pattern?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I feel dizzy when I stand up.">I feel dizzy when I stand up.</button><button class="quiz-option" data-quiz-option="I have a dizzy when I stand up.">I have a dizzy when I stand up.</button><button class="quiz-option" data-quiz-option="My dizzy hurts when I stand up.">My dizzy hurts when I stand up.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="I’ve had this cough for three days." data-hint="The cough began before now and continues now, so use have had plus for the duration." data-fix="I’ve had this cough for three days."><p class="quiz-question">2. The cough began three days ago and is still present. Which sentence reports duration to now?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I’ve had this cough for three days.">I’ve had this cough for three days.</button><button class="quiz-option" data-quiz-option="I have this cough since three days.">I have this cough since three days.</button><button class="quiz-option" data-quiz-option="I had this cough for three days, and it continues now.">I had this cough for three days, and it continues now.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="When did it start?" data-hint="The answer gives the finished beginning on Monday, so ask when it started." data-fix="When did it start? It started on Monday."><p class="quiz-question">3. The patient answers, <span class="ex">It started on Monday.</span> Which question requested that onset information?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="When did it start?">When did it start?</button><button class="quiz-option" data-quiz-option="Where does it hurt?">Where does it hurt?</button><button class="quiz-option" data-quiz-option="How bad is it from zero to ten?">How bad is it from zero to ten?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Call 911 now and say, “I’m having trouble breathing.”" data-hint="Trouble breathing can be life-threatening; the U.S. message requires emergency help now." data-fix="Call 911 now and say, “I’m having trouble breathing.”"><p class="quiz-question">4. In the United States, a fictional caller suddenly cannot breathe normally. Which message requests the appropriate immediate help from these choices?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Call 911 now and say, “I’m having trouble breathing.”">Call 911 now and say, “I’m having trouble breathing.”</button><button class="quiz-option" data-quiz-option="Schedule a routine checkup for next month.">Schedule a routine checkup for next month.</button><button class="quiz-option" data-quiz-option="Wait until tomorrow and ask a language teacher.">Wait until tomorrow and ask a language teacher.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect and retrieve</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Explain the system</h3>
-    <p>Complete this aloud: “To name a symptom, I use <strong>have + a</strong>: I have a ______. To say where the pain is, the body part does the verb: My back ______. To give advice, I use ______ and the base verb, with no <strong>to</strong>.”</p>
-    <p>Then tell the teacher about the last time you were sick: what did you have, what did you do, and when did you feel better?</p>
+    <h3>Explain the communication path without looking back</h3>
+    <p>Am I naming a symptom noun, describing a feeling, naming a painful body part, or locating pain? When did it start? How long has it continued? How serious does it feel? Am I reporting a real instruction, asking for clarification, or requesting urgent help?</p>
   </div>
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the symptom pattern, agreement, onset, duration, or urgency language that still feels slow.</p>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can name body parts, describe symptoms with have and hurts, walk through a doctor’s visit, and give advice with should.">
-    <h3>Final quiz · choose the right word</h3>
-    <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="have">
-        <p class="quiz-question">1. I ___ a headache and a cough.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="have">have</button><button class="quiz-option" data-quiz-option="hurt">hurt</button><button class="quiz-option" data-quiz-option="am">am</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="hurt">
-        <p class="quiz-question">2. My feet ___ after the long walk.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="hurt">hurt</button><button class="quiz-option" data-quiz-option="hurts">hurts</button><button class="quiz-option" data-quiz-option="have">have</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="throat">
-        <p class="quiz-question">3. I have a sore ___ . It hurts when I speak.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="throat">throat</button><button class="quiz-option" data-quiz-option="fever">fever</button><button class="quiz-option" data-quiz-option="cough">cough</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="rest">
-        <p class="quiz-question">4. You should ___ today.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="rest">rest</button><button class="quiz-option" data-quiz-option="to rest">to rest</button><button class="quiz-option" data-quiz-option="resting">resting</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="make">
-        <p class="quiz-question">5. First, ___ an appointment with the doctor.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="make">make</button><button class="quiz-option" data-quiz-option="do">do</button><button class="quiz-option" data-quiz-option="put">put</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="I have a fever.">
-        <p class="quiz-question">6. Your temperature is high. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I have a fever.">I have a fever.</button><button class="quiz-option" data-quiz-option="I am a fever.">I am a fever.</button><button class="quiz-option" data-quiz-option="My fever hurts.">My fever hurts.</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="get">
-        <p class="quiz-question">7. After you see the doctor, you ___ a prescription.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="get">get</button><button class="quiz-option" data-quiz-option="make">make</button><button class="quiz-option" data-quiz-option="hurt">hurt</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="feel">
-        <p class="quiz-question">8. Take the medicine and rest, and you will ___ better soon.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="feel">feel</button><button class="quiz-option" data-quiz-option="hurt">hurt</button><button class="quiz-option" data-quiz-option="ache">ache</button></div>
-      </div>
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day symptom duration, body agreement, and onset-question retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved continuing duration, plural hurt agreement, and the finished-onset question.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day health choices"><button class="choice-option" data-choice-option="have had">have had</button><button class="choice-option" data-choice-option="have">have</button><button class="choice-option" data-choice-option="hurt">hurt</button><button class="choice-option" data-choice-option="hurts">hurts</button><button class="choice-option" data-choice-option="When did it start?">When did it start?</button><button class="choice-option" data-choice-option="How long did it start?">How long did it start?</button></div>
+      <div class="q"><span class="n">1</span><span>The cough began Monday and continues now: I <button class="choice-gap" data-choice-gap data-answer="have had" data-hint="Use present perfect have had before the continuing symptom." data-fix="I have had this cough since Monday." data-placeholder="choose">choose</button> this cough since Monday.</span></div>
+      <div class="q"><span class="n">2</span><span>Both feet are painful, so the plural subject takes the base verb: My feet <button class="choice-gap" data-choice-gap data-answer="hurt" data-hint="Plural feet takes hurt with no s." data-fix="My feet hurt after the long walk." data-placeholder="choose">choose</button> after the long walk.</span></div>
+      <div class="q"><span class="n">3</span><span>The answer is <span class="ex">It started on Monday.</span> Ask for that finished onset: <button class="choice-gap" data-choice-gap data-answer="When did it start?" data-hint="Use when plus did and the base verb start to ask about the finished beginning." data-fix="When did it start? It started on Monday." data-placeholder="choose">choose</button></span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+  </section>
 </main>
 </LessonPage>
-

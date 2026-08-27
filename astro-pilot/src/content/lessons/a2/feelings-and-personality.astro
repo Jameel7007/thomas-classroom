@@ -1,419 +1,322 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Feelings & personality · A2 Vocabulary · Curriculum Map",
+  "title": "Feelings & personality · A2 Vocabulary",
   "slug": "feelings-and-personality",
   "level": "A2",
   "topic": "Feelings & personality",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Say how you feel and describe what people are like. Learn feeling adjectives with be and feel , escape the classic bored / boring trap, and build a set of personality words for rea",
+  "description": "Describe current feelings, their causes, and evidence-based personality tendencies while distinguishing observed behavior from assumptions about people.",
   "sequence": 16,
-  "prerequisites": [],
+  "prerequisites": ["a1/common-verbs-and-adjectives", "a1/adverbs-of-frequency", "a0/the-verb-to-be"],
   "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Feeling state, experiencer-stimulus meaning, adjective complements, intensity, evidence-based personality tendencies, behavior, questions, U.S. spoken form, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 16</p>
-  <h1>Feelings &amp; <em>personality</em></h1>
-  <p class="standfirst">Say how you feel and describe what people are like. Learn feeling adjectives with <strong>be</strong> and <strong>feel</strong>, escape the classic <strong>bored / boring</strong> trap, and build a set of personality words for real people in your life: <span class="ex">I feel nervous</span>, <span class="ex">The meeting was boring</span>, <span class="ex">She’s friendly and hard-working</span>.</p>
+  <h1>Feelings &amp; personality: <em>describe without guessing</em></h1>
+  <p class="standfirst">A good description answers the right question. Name a current feeling, identify what creates that reaction, or describe a general personality tendency supported by repeated behavior. Keep an observation separate from an assumption about someone’s identity.</p>
   <div class="meta-row">
-    <span class="tag">≈ 50–60 min</span>
-    <span class="tag">-ed vs -ing</span>
-    <span class="tag">feeling vs personality</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">state · reaction · tendency · behavior</span>
+    <span class="tag">-ed experiencer · -ing stimulus</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read a short message about a new job.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Feelings now vs. what a person is like.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, build, and repair.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe yourself and people you know.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Find six description jobs in one team update.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Separate feelings, causes, tendencies, and evidence.</span></div>
+    <div class="flow-step"><b>Build</b><span>Choose complements, degree, questions, and careful labels.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give an evidence-based fictional team introduction.</span></div>
   </div>
 
-  <p class="note-line">Two key questions: <span class="ex">How do you feel?</span> asks about your feeling right now. <span class="ex">What’s she like?</span> asks about her personality. Careful: <span class="ex">What does she like?</span> is a different question. It asks about things she enjoys.</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can describe a current or past feeling; distinguish an experiencer from a stimulus in common <span class="ex">-ed / -ing</span> pairs; add natural complements and intensity; ask separately about condition, personality, preference, and appearance; describe a personality tendency with evidence and appropriate limits; and replace an unsupported label with an observable behavior.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="is">is</button>
-      <button class="choice-option" data-choice-option="are">are</button>
-      <button class="choice-option" data-choice-option="never">never</button>
-      <button class="choice-option" data-choice-option="always">always</button>
-      <button class="choice-option" data-choice-option="didn’t">didn’t</button>
-      <button class="choice-option" data-choice-option="don’t">don’t</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>My sister <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> a nurse at the city hospital. &nbsp;<span class="contraction">(A0 · the verb to be)</span></span></div>
-    <div class="q"><span class="n">2</span><span>I am <button class="choice-gap" data-choice-gap data-answer="never" data-placeholder="choose">choose</button> late for work. Zero times a year! &nbsp;<span class="contraction">(A1 · adverbs of frequency · 0% of the time)</span></span></div>
-    <div class="q"><span class="n">3</span><span>He <button class="choice-gap" data-choice-gap data-answer="didn’t" data-placeholder="choose">choose</button> sleep well last night. &nbsp;<span class="contraction">(A2 · past simple · negative)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved present and past be plus a frequency word that supports a general tendency.">
+    <h3>Three earlier patterns</h3>
+    <p class="choice-hint">Choose present <span class="ex">is</span>, past <span class="ex">was</span>, or the frequency word matching most meetings.</p>
+    <div class="choice-bank" aria-label="Earlier pattern choices"><button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="usually">usually</button><button class="choice-option" data-choice-option="are">are</button><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="never">never</button></div>
+    <div class="q"><span class="n">1</span><span>The speaker describes Maya’s current state now: Maya <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Use present singular be for Maya’s state now." data-fix="Maya is calm now." data-placeholder="choose">choose</button> calm now.</span></div>
+    <div class="q"><span class="n">2</span><span>The speaker describes Leo’s feeling before yesterday’s talk: Leo <button class="choice-gap" data-choice-gap data-answer="was" data-hint="Use past singular be because yesterday establishes a finished past situation." data-fix="Leo was nervous before yesterday’s talk." data-placeholder="choose">choose</button> nervous before yesterday’s talk.</span></div>
+    <div class="q"><span class="n">3</span><span>Nora asks useful questions in most meetings, but not every meeting: Nora <button class="choice-gap" data-choice-gap data-answer="usually" data-hint="Usually describes a high-frequency tendency without claiming every occasion." data-fix="Nora usually asks useful questions in meetings." data-placeholder="choose">choose</button> asks useful questions in meetings.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Meet the feelings</h2>
-  <div class="lead-rule"></div>
-  <p>Everyday feeling words. Say each one aloud with <span class="ex">I’m…</span> or <span class="ex">I feel…</span> Then pick the two you feel most often at work.</p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/happy.svg" alt="" loading="lazy" /></span><span class="nm">happy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sad.svg" alt="" loading="lazy" /></span><span class="nm">sad</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/angry.svg" alt="" loading="lazy" /></span><span class="nm">angry</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/tired.svg" alt="" loading="lazy" /></span><span class="nm">tired</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/surprised.svg" alt="" loading="lazy" /></span><span class="nm">surprised</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/scared.svg" alt="" loading="lazy" /></span><span class="nm">scared</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/nervous.svg" alt="" loading="lazy" /></span><span class="nm">nervous</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/excited.svg" alt="" loading="lazy" /></span><span class="nm">excited</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bored.svg" alt="" loading="lazy" /></span><span class="nm">bored</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/worried.svg" alt="" loading="lazy" /></span><span class="nm">worried</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/calm.svg" alt="" loading="lazy" /></span><span class="nm">calm</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/confused.svg" alt="" loading="lazy" /></span><span class="nm">confused</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/laughing.svg" alt="" loading="lazy" /></span><span class="nm">laughing</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/embarrassed.svg" alt="" loading="lazy" /></span><span class="nm">embarrassed</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/in-love.svg" alt="" loading="lazy" /></span><span class="nm">in love</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sick.svg" alt="" loading="lazy" /></span><span class="nm">sick</span></div>
-  </div>
-
-  <h2>Notice before the rule</h2>
+  <h2>Notice six description jobs in one update</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read Dana’s message about her new job</h3>
-    <p><span class="ex">“How do you feel about the new job? · Honestly, I’m <strong>excited</strong>, but a little <strong>nervous</strong> too. The training was long and <strong>tiring</strong>, and by the end I felt <strong>bored</strong>. But my manager is <strong>friendly</strong> and <strong>patient</strong>, so I think it will be fine.”</span></p>
+    <h3>Harbor workshop team</h3>
+    <p><span class="ex">“Before the workshop, Leo <strong>felt nervous</strong>. The new schedule was <strong>confusing</strong>, so the volunteers were <strong>confused</strong> at first. Maya <strong>usually stays patient</strong> when someone needs another explanation. During today’s meeting, Nora <strong>spoke only once</strong>. She says she <strong>likes listening before she gives an opinion</strong>.”</span></p>
     <ul>
-      <li>Look at <span class="ex">I felt bored</span> and <span class="ex">the training was tiring</span>. One word describes a <strong>person’s feeling</strong>, the other describes the <strong>thing that causes it</strong>. Which ending goes with which?</li>
-      <li>Dana says <span class="ex">I’m excited</span> and <span class="ex">I felt bored</span>. So which verbs can go before a feeling adjective?</li>
-      <li>Her manager is <span class="ex">friendly and patient</span>. Is that how the manager feels <strong>today</strong>, or what the manager is <strong>usually</strong> like?</li>
+      <li>Which phrase names a feeling, and which phrase names its stimulus?</li>
+      <li>Which sentence describes a general tendency supported by repeated situations?</li>
+      <li>Which sentence reports only today’s observable behavior? Does that one behavior prove a personality label?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: read the cue, then choose</h3>
-    <p class="choice-hint">Use <b>-ed</b> for how a person feels and <b>-ing</b> for the thing that causes the feeling. For feelings, <b>be</b> and <b>feel</b> both work.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="feel">feel</button>
-      <button class="choice-option" data-choice-option="is">is</button>
-      <button class="choice-option" data-choice-option="bored">bored</button>
-      <button class="choice-option" data-choice-option="boring">boring</button>
-      <button class="choice-option" data-choice-option="tired">tired</button>
-      <button class="choice-option" data-choice-option="tiring">tiring</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="feel" data-placeholder="choose">choose</button> nervous before interviews. &nbsp;<span class="contraction">(after I · verb + feeling adjective)</span></span></div>
-    <div class="q"><span class="n">2</span><span>The movie was slow and <button class="choice-gap" data-choice-gap data-answer="boring" data-placeholder="choose">choose</button>, so we left early. &nbsp;<span class="contraction">(bored / boring · the movie causes it)</span></span></div>
-    <div class="q"><span class="n">3</span><span>We were <button class="choice-gap" data-choice-gap data-answer="bored" data-placeholder="choose">choose</button> after ten minutes. &nbsp;<span class="contraction">(bored / boring · how the people felt)</span></span></div>
-    <div class="q"><span class="n">4</span><span>My commute is long and <button class="choice-gap" data-choice-gap data-answer="tiring" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(tired / tiring · the commute causes it)</span></span></div>
-    <div class="q"><span class="n">5</span><span>I’m always <button class="choice-gap" data-choice-gap data-answer="tired" data-placeholder="choose">choose</button> after that commute. &nbsp;<span class="contraction">(tired / tiring · how I feel)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Marta <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> friendly and patient. &nbsp;<span class="contraction">(be + adjective · her usual personality)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated a past feeling, stimulus, experiencer reaction, general tendency, observed behavior, and stated preference.">
+    <h3>Discovery check: identify each description job</h3>
+    <div class="choice-bank" aria-label="Description job choices"><button class="choice-option" data-choice-option="past feeling">past feeling</button><button class="choice-option" data-choice-option="stimulus">stimulus</button><button class="choice-option" data-choice-option="experiencer reaction">experiencer reaction</button><button class="choice-option" data-choice-option="general tendency">general tendency</button><button class="choice-option" data-choice-option="observed behavior">observed behavior</button><button class="choice-option" data-choice-option="stated preference">stated preference</button></div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Leo felt nervous before the workshop</span> reports a <button class="choice-gap" data-choice-gap data-answer="past feeling" data-hint="Felt plus nervous names Leo’s internal state in a finished past situation." data-fix="Leo felt nervous reports a past feeling." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">The schedule was confusing</span> presents the schedule as the <button class="choice-gap" data-choice-gap data-answer="stimulus" data-hint="The schedule creates or invites the confused reaction." data-fix="The confusing schedule is the stimulus." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">The volunteers were confused</span> names the volunteers’ <button class="choice-gap" data-choice-gap data-answer="experiencer reaction" data-hint="The volunteers experience the reaction created by the unclear schedule." data-fix="The confused volunteers have the experiencer reaction." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">Maya usually stays patient</span> describes a <button class="choice-gap" data-choice-gap data-answer="general tendency" data-hint="Usually summarizes behavior across repeated situations without claiming always." data-fix="Maya usually stays patient describes a general tendency." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">Nora spoke only once during today’s meeting</span> gives an <button class="choice-gap" data-choice-gap data-answer="observed behavior" data-hint="The sentence reports what happened in one meeting without explaining Nora’s identity or feelings." data-fix="Speaking once in today’s meeting is an observed behavior." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span><span class="ex">Nora likes listening before she gives an opinion</span> is her own <button class="choice-gap" data-choice-gap data-answer="stated preference" data-hint="Nora directly states what she prefers to do." data-fix="Nora’s own words give a stated preference." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: -ed for the person, -ing for the cause</h2>
+  <h2>Get to the root: describe state, reaction, tendency, or behavior</h2>
   <div class="lead-rule"></div>
-  <p>Feeling adjectives go after <strong>be</strong> or <strong>feel</strong>: <span class="ex">I’m nervous.</span> = <span class="ex">I feel nervous.</span> Both are correct and natural.</p>
-  <p>Some feeling adjectives come in pairs. The <strong>-ed</strong> form describes <strong>how a person feels</strong>. The <strong>-ing</strong> form describes <strong>the thing that causes the feeling</strong>. This is the classic trap at this level, so learn the pairs as chunks:</p>
   <table>
-    <thead><tr><th>-ed · how a person feels</th><th>-ing · the thing that causes it</th></tr></thead>
+    <thead><tr><th>description job</th><th>useful frame</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>I’m bored.</b> &nbsp;<span class="contraction">the person</span></td><td><b>The meeting is boring.</b> &nbsp;<span class="contraction">the meeting</span></td></tr>
-      <tr><td><b>She’s interested in the project.</b></td><td><b>The project is interesting.</b></td></tr>
-      <tr><td><b>We were tired after the trip.</b></td><td><b>The trip was tiring.</b></td></tr>
-      <tr><td><b>He was surprised by the news.</b></td><td><b>The news was surprising.</b></td></tr>
+      <tr><td>current state</td><td><span class="ex">be / feel + adjective</span></td><td><span class="ex">I’m nervous. I feel nervous.</span></td></tr>
+      <tr><td>past state</td><td><span class="ex">was / were / felt + adjective</span></td><td><span class="ex">We felt relieved after the call.</span></td></tr>
+      <tr><td>reaction and stimulus</td><td><span class="ex">experiencer + -ed · stimulus + -ing</span></td><td><span class="ex">The interested visitors asked about the interesting design.</span></td></tr>
+      <tr><td>general tendency</td><td><span class="ex">usually / often / can be + adjective</span></td><td><span class="ex">Maya is usually patient. Leo can be quiet in large groups.</span></td></tr>
+      <tr><td>observable behavior</td><td><span class="ex">subject + action + situation</span></td><td><span class="ex">Leo listened and took notes during the meeting.</span></td></tr>
     </tbody>
   </table>
+  <p><span class="ex">Be</span> presents a state: <span class="ex">I’m worried.</span> <span class="ex">Feel</span> foregrounds the person’s experience: <span class="ex">I feel worried.</span> Both can be natural. <span class="ex">Feel like</span> is a different pattern: <span class="ex">I feel like taking a break</span> means that action appeals to me now.</p>
+  <p>A feeling word is not automatically temporary, and a personality word is not automatically permanent. Context supplies the time boundary: <span class="ex">Nora is quiet today</span> describes today’s state, while <span class="ex">Nora is usually quiet in large meetings</span> describes a limited tendency.</p>
+
+  <h2>Choose the experiencer or the stimulus</h2>
+  <div class="lead-rule"></div>
+  <p>The useful distinction is not “person versus thing.” The <span class="ex">-ed</span> form normally presents the <strong>experiencer’s reaction</strong>. The <span class="ex">-ing</span> form presents something or someone as having an <strong>effect that creates or invites that reaction</strong>.</p>
+  <table>
+    <thead><tr><th>experiencer reaction</th><th>stimulus or effect</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">The audience was bored.</span></td><td><span class="ex">The talk was boring.</span></td></tr>
+      <tr><td><span class="ex">I’m interested in the guide.</span></td><td><span class="ex">The guide is an interesting person.</span></td></tr>
+      <tr><td><span class="ex">The team felt encouraged.</span></td><td><span class="ex">The manager was encouraging.</span></td></tr>
+      <tr><td><span class="ex">We were surprised by the result.</span></td><td><span class="ex">The result was surprising.</span></td></tr>
+    </tbody>
+  </table>
+  <p>A person can therefore be <span class="ex">interesting, boring, encouraging</span>, or <span class="ex">surprising</span> because people can create effects. A group or organization can be <span class="ex">interested</span> because it can experience or express a reaction. Choose the meaning role, not whether the noun is human.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected the experiencer reaction or stimulus effect from each complete situation, including a person as an interesting stimulus.">
+    <h3>Drill 1: reaction or effect?</h3>
+    <div class="choice-bank" aria-label="Reaction and effect choices"><button class="choice-option" data-choice-option="interested">interested</button><button class="choice-option" data-choice-option="interesting">interesting</button><button class="choice-option" data-choice-option="confused">confused</button><button class="choice-option" data-choice-option="confusing">confusing</button><button class="choice-option" data-choice-option="surprised">surprised</button><button class="choice-option" data-choice-option="surprising">surprising</button></div>
+    <div class="q"><span class="n">1</span><span>The visitors wanted to learn more about the design, so they were <button class="choice-gap" data-choice-gap data-answer="interested" data-hint="The visitors experience curiosity, so choose the -ed reaction form." data-fix="The visitors were interested in the design." data-placeholder="choose">choose</button> in it.</span></div>
+    <div class="q"><span class="n">2</span><span>The guide’s stories held everyone’s attention, so the guide was <button class="choice-gap" data-choice-gap data-answer="interesting" data-hint="The guide creates the audience’s interest, so a person can take the -ing effect form." data-fix="The guide was interesting." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The volunteers could not understand the new schedule, so they felt <button class="choice-gap" data-choice-gap data-answer="confused" data-hint="The volunteers experience the lack of understanding, so choose the -ed reaction form." data-fix="The volunteers felt confused by the new schedule." data-placeholder="choose">choose</button> by the new schedule.</span></div>
+    <div class="q"><span class="n">4</span><span>The schedule showed two different start times, so it was <button class="choice-gap" data-choice-gap data-answer="confusing" data-hint="The schedule creates the uncertainty, so choose the -ing effect form." data-fix="The schedule was confusing because it showed two start times." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The team expected ten visitors but saw fifty, so everyone was <button class="choice-gap" data-choice-gap data-answer="surprised" data-hint="Everyone experiences the unexpected result, so choose the -ed reaction form." data-fix="Everyone was surprised by the number of visitors." data-placeholder="choose">choose</button> by the number.</span></div>
+    <div class="q"><span class="n">6</span><span>Fifty visitors arrived when the team expected ten, so the number was <button class="choice-gap" data-choice-gap data-answer="surprising" data-hint="The unexpected number creates the reaction, so choose the -ing effect form." data-fix="The number of visitors was surprising." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Add the complement and degree</h2>
+  <div class="lead-rule"></div>
+  <p>Many adjectives carry a common complement. Store the whole chunk: <span class="ex">interested in, excited about, worried about, nervous about, surprised by / at, angry with / at someone, angry about something</span>. These are strong tendencies, not rules that ban every alternative.</p>
+  <table>
+    <thead><tr><th>low or limited degree</th><th>ordinary strong degree</th><th>very strong degree</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">a little nervous · a bit worried</span></td><td><span class="ex">really excited · very interested</span></td><td><span class="ex">extremely surprised · completely confused</span></td></tr>
+    </tbody>
+  </table>
+  <p>Choose degree from evidence, not drama. If a speaker says <span class="ex">a little nervous</span>, do not report <span class="ex">terrified</span>. If you are unsure about another person’s feeling, ask: <span class="ex">How are you feeling about the presentation?</span></p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You completed six natural adjective chunks and preserved the stated level of intensity.">
+    <h3>Drill 2: complete the feeling accurately</h3>
+    <div class="choice-bank" aria-label="Feeling complement choices"><button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="about">about</button><button class="choice-option" data-choice-option="with">with</button><button class="choice-option" data-choice-option="by">by</button><button class="choice-option" data-choice-option="a little">a little</button><button class="choice-option" data-choice-option="completely">completely</button></div>
+    <div class="q"><span class="n">1</span><span>Nora wants to learn more about the research project: She is interested <button class="choice-gap" data-choice-gap data-answer="in" data-hint="Store interested with in before the topic that attracts attention." data-fix="Nora is interested in the research project." data-placeholder="choose">choose</button> the research project.</span></div>
+    <div class="q"><span class="n">2</span><span>Leo is looking forward to Saturday’s workshop: He is excited <button class="choice-gap" data-choice-gap data-answer="about" data-hint="Excited about commonly introduces the future event creating anticipation." data-fix="Leo is excited about Saturday’s workshop." data-placeholder="choose">choose</button> Saturday’s workshop.</span></div>
+    <div class="q"><span class="n">3</span><span>Maya is upset with Leo personally because he changed her notes without asking: She is angry <button class="choice-gap" data-choice-gap data-answer="with" data-hint="Angry with commonly introduces the person who is the target of the feeling." data-fix="Maya is angry with Leo because he changed her notes." data-placeholder="choose">choose</button> Leo.</span></div>
+    <div class="q"><span class="n">4</span><span>The final number was unexpected and created the team’s reaction: The team was surprised <button class="choice-gap" data-choice-gap data-answer="by" data-hint="Surprised by introduces the unexpected stimulus in this passive-style chunk." data-fix="The team was surprised by the final number." data-placeholder="choose">choose</button> the final number.</span></div>
+    <div class="q"><span class="n">5</span><span>Nora says her nervousness is small, not extreme: She feels <button class="choice-gap" data-choice-gap data-answer="a little" data-hint="Preserve the speaker’s low degree with a little." data-fix="Nora feels a little nervous before the talk." data-placeholder="choose">choose</button> nervous before the talk.</span></div>
+    <div class="q"><span class="n">6</span><span>After reading two conflicting schedules, Leo understands none of the plan: He is <button class="choice-gap" data-choice-gap data-answer="completely" data-hint="Completely matches the context of no understanding at all." data-fix="Leo is completely confused by the conflicting schedules." data-placeholder="choose">choose</button> confused by the conflicting schedules.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Describe tendencies with evidence and limits</h2>
+  <div class="lead-rule"></div>
+  <p>A personality adjective summarizes a tendency. It does not prove how someone acts in every situation. Add a limit such as <span class="ex">usually, often, can be, with new people</span>, or <span class="ex">in large meetings</span> when that is what the evidence supports.</p>
+  <table>
+    <thead><tr><th>word</th><th>possible evidence</th><th>important boundary</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ex">friendly</span></td><td>greets people and includes newcomers</td><td>one smile does not prove a global trait</td></tr>
+      <tr><td><span class="ex">patient</span></td><td>waits or explains again calmly</td><td>someone can be patient in one role and impatient in another</td></tr>
+      <tr><td><span class="ex">quiet</span></td><td>speaks little in a stated situation</td><td>quiet does not automatically mean shy, unfriendly, or unhappy</td></tr>
+      <tr><td><span class="ex">funny</span></td><td>says things that make people laugh</td><td><span class="ex">fun</span> means enjoyable; <span class="ex">funny</span> can also mean strange</td></tr>
+      <tr><td><span class="ex">hardworking</span></td><td>regularly prepares and completes difficult work</td><td>one late task does not prove laziness</td></tr>
+      <tr><td><span class="ex">direct</span></td><td>states an opinion clearly with little softening</td><td>the same style may sound efficient or too strong in different contexts</td></tr>
+    </tbody>
+  </table>
+  <p>For useful feedback, describe the behavior before applying a label: <span class="ex">Maya explained the process twice and waited for questions</span> is more precise than <span class="ex">Maya is nice</span>. Avoid diagnosing a feeling from appearance alone. <span class="ex">You look worried</span> is an impression, not a fact; <span class="ex">How are you feeling?</span> lets the person answer.</p>
+
+  <h2>Ask the question you actually mean</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>information wanted</th><th>natural question</th><th>possible answer</th></tr></thead>
+    <tbody>
+      <tr><td>current condition</td><td><span class="ex">How is Maya? How is Maya feeling?</span></td><td><span class="ex">She’s feeling better.</span></td></tr>
+      <tr><td>general character</td><td><span class="ex">What’s Maya like?</span></td><td><span class="ex">She’s usually patient and direct.</span></td></tr>
+      <tr><td>preference</td><td><span class="ex">What does Maya like?</span></td><td><span class="ex">She likes small-group discussions.</span></td></tr>
+      <tr><td>appearance</td><td><span class="ex">What does Maya look like?</span></td><td><span class="ex">She has short, dark hair.</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">What’s Maya like?</span> can invite a broad description, so clarify when needed: <span class="ex">What’s she like to work with?</span> This asks about a context, not every part of her identity.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched repeated evidence, limited context, observed behavior, and the intended personality question without turning one event into a fixed identity.">
+    <h3>Drill 3: choose the supported description</h3>
+    <div class="choice-bank" aria-label="Evidence-based description choices"><button class="choice-option" data-choice-option="friendly">friendly</button><button class="choice-option" data-choice-option="patient">patient</button><button class="choice-option" data-choice-option="quiet during today’s meeting">quiet during today’s meeting</button><button class="choice-option" data-choice-option="funny">funny</button><button class="choice-option" data-choice-option="can be direct in written feedback">can be direct in written feedback</button><button class="choice-option" data-choice-option="What’s she like to work with?">What’s she like to work with?</button></div>
+    <div class="q"><span class="n">1</span><span>At three events, Maya greeted every newcomer and introduced people to one another. The repeated evidence supports <button class="choice-gap" data-choice-gap data-answer="friendly" data-hint="Greeting and including newcomers across several events supports friendly in this context." data-fix="Maya is friendly with new volunteers." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>When volunteers need help, Leo calmly explains the same step again. This repeated behavior supports <button class="choice-gap" data-choice-gap data-answer="patient" data-hint="Calmly waiting and explaining again is evidence for patient." data-fix="Leo is usually patient when volunteers need another explanation." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Nora spoke once in one meeting, and no one knows whether this is typical. The evidence supports only <button class="choice-gap" data-choice-gap data-answer="quiet during today’s meeting" data-hint="Limit the description to the one situation actually observed." data-fix="Nora was quiet during today’s meeting." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>At several team lunches, Omar told stories that made everyone laugh. The repeated evidence supports <button class="choice-gap" data-choice-gap data-answer="funny" data-hint="Repeatedly making people laugh supports funny, not merely fun." data-fix="Omar is funny; his stories often make the team laugh." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Maya’s emails state problems clearly with little softening, but her spoken feedback is gentle. The limited description is that she <button class="choice-gap" data-choice-gap data-answer="can be direct in written feedback" data-hint="Use can be plus the evidence-based context instead of making a universal claim." data-fix="Maya can be direct in written feedback." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>A new volunteer wants a general description specifically about collaborating with Maya. The useful question is <button class="choice-gap" data-choice-gap data-answer="What’s she like to work with?" data-hint="What’s she like to work with asks for character in the relevant collaboration context." data-fix="What’s she like to work with?" data-placeholder="choose">choose</button></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
 
   <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li>Say <span class="ex">I’m boring</span> and you are describing your personality as dull. Say <span class="ex">I’m bored</span> and you are describing your feeling right now. Big difference!</li>
-      <li>Feelings change: <span class="ex">today</span>, <span class="ex">right now</span>, <span class="ex">this week</span>. Use <span class="ex">be</span> or <span class="ex">feel</span>: <span class="ex">I’m worried about the deadline. I feel calm now.</span></li>
-      <li>For past feelings, use past forms: <span class="ex">I was embarrassed. I felt nervous before the interview.</span></li>
-    </ul>
+    <h3>Sound natural: let endings, stress, and questions carry the contrast</h3>
+    <p>In common <span class="ex">-ed</span> adjectives, the ending follows the same sound logic as regular past forms. <span class="ex">Bored /bɔrd/</span> and <span class="ex">tired /ˈtaɪɚd/</span> end in /d/. <span class="ex">Embarrassed /ɪmˈbærəst/</span> ends in /t/. <span class="ex">Interested /ˈɪntrəstɪd/</span> and <span class="ex">excited /ɪkˈsaɪtɪd/</span> add /ɪd/ because their bases end in /t/ or /d/.</p>
+    <p>The <span class="ex">-ing</span> ending is /ɪŋ/, with no extra hard /g/: <span class="ex">boring /ˈbɔrɪŋ/</span>, <span class="ex">interesting /ˈɪntrəstɪŋ/</span>. Stress the meaning contrast: <span class="ex">I’m <strong>BORED</strong>. The talk is <strong>BORING</strong>.</span></p>
+    <p>In connected U.S. speech, <span class="ex">How are you feeling?</span> may sound like /haʊɚjə ˈfilɪŋ/. In <span class="ex">What’s she like?</span>, stress the description word <span class="ex">like</span>. In <span class="ex">What does she like?</span>, <span class="ex">does she</span> is lighter and the preferred item receives the next strong stress.</p>
+    <p>Use contrastive stress to repair the role: <span class="ex">I said I was <strong>INTERESTED</strong>, not that I was <strong>INTERESTING</strong>.</span></p>
   </div>
 
-  <h2>Personality: usually true, not just today</h2>
-  <div class="lead-rule"></div>
-  <p>Personality adjectives describe what a person is <strong>usually</strong> like, not how they feel at one moment. Ten useful ones:</p>
-  <table>
-    <thead><tr><th>word</th><th>meaning</th><th>word</th><th>meaning</th></tr></thead>
-    <tbody>
-      <tr><td><b>friendly</b></td><td>warm and open with people</td><td><b>honest</b></td><td>tells the truth</td></tr>
-      <tr><td><b>funny</b></td><td>makes people laugh</td><td><b>hard-working</b></td><td>puts real effort into work</td></tr>
-      <tr><td><b>quiet</b></td><td>doesn’t talk much</td><td><b>lazy</b></td><td>avoids work or effort</td></tr>
-      <tr><td><b>kind</b></td><td>cares about other people</td><td><b>shy</b></td><td>nervous with new people</td></tr>
-      <tr><td><b>patient</b></td><td>can wait and repeat calmly</td><td><b>talkative</b></td><td>talks a lot</td></tr>
-    </tbody>
-  </table>
-  <p>Keep the two ideas apart. Personality is <strong>usually true</strong>; a feeling is <strong>right now</strong>:</p>
-  <table>
-    <thead><tr><th>personality · usually true</th><th>feeling · right now</th></tr></thead>
-    <tbody>
-      <tr><td><b>She’s friendly.</b> &nbsp;<span class="contraction">with everyone, always</span></td><td><b>She’s nervous.</b> &nbsp;<span class="contraction">today, before the interview</span></td></tr>
-      <tr><td><b>He’s quiet.</b> &nbsp;<span class="contraction">his character</span></td><td><b>He’s tired.</b> &nbsp;<span class="contraction">after a long shift</span></td></tr>
-      <tr><td><b>They’re hard-working.</b> &nbsp;<span class="contraction">in general</span></td><td><b>They’re excited.</b> &nbsp;<span class="contraction">about the trip next week</span></td></tr>
-    </tbody>
-  </table>
-
-  <div class="note">
-    <h3>Two questions that look alike</h3>
-    <ul>
-      <li><span class="ex">What’s she like?</span> asks about <strong>personality</strong>: <span class="ex">She’s kind and a little shy.</span> The <span class="ex">like</span> here is not the verb for enjoying things.</li>
-      <li><span class="ex">What does she like?</span> asks about <strong>things she enjoys</strong>: <span class="ex">She likes coffee and hiking.</span></li>
-      <li>For feelings, ask <span class="ex">How do you feel?</span> or <span class="ex">How are you feeling?</span>: <span class="ex">I feel a little worried, honestly.</span></li>
-    </ul>
-  </div>
-
-  <h2>Choose the word that fits the person</h2>
-  <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: feeling or personality?</h3>
-    <p class="choice-hint">Read the whole sentence first. Is it about a feeling right now, a thing that causes a feeling, or what someone is usually like?</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="bored">bored</button>
-      <button class="choice-option" data-choice-option="interesting">interesting</button>
-      <button class="choice-option" data-choice-option="nervous">nervous</button>
-      <button class="choice-option" data-choice-option="calm">calm</button>
-      <button class="choice-option" data-choice-option="patient">patient</button>
-      <button class="choice-option" data-choice-option="talkative">talkative</button>
-      <button class="choice-option" data-choice-option="shy">shy</button>
-      <button class="choice-option" data-choice-option="kind">kind</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>The training video was three hours long. Everyone was <button class="choice-gap" data-choice-gap data-answer="bored" data-placeholder="choose">choose</button> by the end. &nbsp;<span class="contraction">(bored / boring · how the people felt)</span></span></div>
-    <div class="q"><span class="n">2</span><span>The new project is really <button class="choice-gap" data-choice-gap data-answer="interesting" data-placeholder="choose">choose</button>. I want to learn more about it. &nbsp;<span class="contraction">(interested / interesting · the project causes it)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I felt <button class="choice-gap" data-choice-gap data-answer="nervous" data-placeholder="choose">choose</button> before my presentation, so I took a deep breath. &nbsp;<span class="contraction">(feeling · worried before something important)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Our manager never shouts. She stays <button class="choice-gap" data-choice-gap data-answer="calm" data-placeholder="choose">choose</button> under pressure. &nbsp;<span class="contraction">(= relaxed, not stressed)</span></span></div>
-    <div class="q"><span class="n">5</span><span>My colleague explains things twice without a problem. He’s very <button class="choice-gap" data-choice-gap data-answer="patient" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(= can wait and repeat calmly)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Elena chats with everyone at lunch. She’s the most <button class="choice-gap" data-choice-gap data-answer="talkative" data-placeholder="choose">choose</button> person on the team. &nbsp;<span class="contraction">(= talks a lot)</span></span></div>
-    <div class="q"><span class="n">7</span><span>Sami doesn’t say much in big meetings. He’s a little <button class="choice-gap" data-choice-gap data-answer="shy" data-placeholder="choose">choose</button> with new people. &nbsp;<span class="contraction">(= nervous with new people)</span></span></div>
-    <div class="q"><span class="n">8</span><span>It was very <button class="choice-gap" data-choice-gap data-answer="kind" data-placeholder="choose">choose</button> of you to help me move on Saturday. Thank you! &nbsp;<span class="contraction">(= caring about others)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type the missing word</h3>
-    <p class="choice-hint">Type one word. Use <b>-ed</b> for the person’s feeling and <b>-ing</b> for the thing that causes it. The cue in parentheses helps you choose.</p>
-    <div class="q"><span class="n">1</span><span>The conference was tiring, and now I feel really <input class="answer-input" data-answer="tired" aria-label="answer 1" />. &nbsp;<span class="contraction">(tired / tiring)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My new job isn’t boring at all. It’s really <input class="answer-input" data-answer="interesting" aria-label="answer 2" />. &nbsp;<span class="contraction">(interested / interesting)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Two hours of delays at the airport! We were so <input class="answer-input" data-answer="bored" aria-label="answer 3" />. &nbsp;<span class="contraction">(bored / boring)</span></span></div>
-    <div class="q"><span class="n">4</span><span>He always tells the truth, even when it’s hard. He’s very <input class="answer-input" data-answer="honest" aria-label="answer 4" />. &nbsp;<span class="contraction">(personality · tells the truth)</span></span></div>
-    <div class="q"><span class="n">5</span><span>My brother never does his dishes. He’s so <input class="answer-input" data-answer="lazy" aria-label="answer 5" />. &nbsp;<span class="contraction">(personality · avoids work)</span></span></div>
-    <div class="q"><span class="n">6</span><span>A: How do you <input class="answer-input" data-answer="feel" aria-label="answer 6" /> today? &nbsp;B: I feel much better, thanks. &nbsp;<span class="contraction">(the question for feelings)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Build the meaning, then the sentence</h2>
-  <div class="lead-rule"></div>
-
-  <div class="tile-game" data-tile-builder data-answer="she is friendly and hard-working">
-    <h3>Drill 3: describe a coworker’s personality</h3>
-    <p class="tile-target">Your coworker Marta helps everyone and always finishes her projects. Build the sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="hard-working">hard-working</button>
-      <button class="tile" data-build-tile="she">She</button>
-      <button class="tile" data-build-tile="and">and</button>
-      <button class="tile" data-build-tile="is">is</button>
-      <button class="tile" data-build-tile="friendly">friendly</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="i felt nervous before the interview">
-    <h3>Drill 4: build the past feeling</h3>
-    <p class="tile-target">Talk about a feeling in the past with <span class="ex">felt</span>. Build the sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="before">before</button>
-      <button class="tile" data-build-tile="i">I</button>
-      <button class="tile" data-build-tile="interview">interview</button>
-      <button class="tile" data-build-tile="felt">felt</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="nervous">nervous</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
-  <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="bored" data-fix="The meeting was very boring." data-why="The meeting causes the feeling, so it takes the -ing form: boring. People feel bored; things are boring.">
-    <h3>Drill 5: who feels it, what causes it?</h3>
-    <p>Tap the word that is wrong. Think: is the meeting a person with feelings?</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="the">The</button>
-      <button class="error-choice" data-error-choice="meeting">meeting</button>
-      <button class="error-choice" data-error-choice="was">was</button>
-      <button class="error-choice" data-error-choice="very">very</button>
-      <button class="error-choice" data-error-choice="bored">bored.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
-  </div>
-
-  <div class="micro-drill" data-spot-error data-answer="kindly" data-fix="He is a very kind person." data-why="Before a noun like person, use the adjective kind. Kindly is an adverb, so it can’t describe the noun.">
-    <h3>Drill 6: adjective before the noun</h3>
-    <p>Tap the word that is wrong. Which word describes <span class="ex">person</span>?</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="he">He</button>
-      <button class="error-choice" data-error-choice="is">is</button>
-      <button class="error-choice" data-error-choice="a">a</button>
-      <button class="error-choice" data-error-choice="very">very</button>
-      <button class="error-choice" data-error-choice="kindly">kindly</button>
-      <button class="error-choice" data-error-choice="person">person.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
-  </div>
-
-  <div class="micro-drill" data-transform>
-    <h3>Drill 7: transform it aloud, then reveal</h3>
-    <p>Say the new sentence aloud first. Reveal only after you answer.</p>
-    <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> I’m bored. &nbsp;→&nbsp; now describe the movie instead</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>The movie is boring.</strong></p>
+  <section data-lesson-extension="Tutor-read current feeling, stimulus, evidence, limited tendency, question purpose, and role-repair listening check">
+    <h2>Listen for the description job</h2>
+    <div class="lead-rule"></div>
+    <p class="note-line"><b>Tutor-read listening:</b> Keep the transcript closed. Read each item once naturally and once after the learner chooses. Preserve normal reductions and make contrastive correction audible.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a current feeling, stimulus effect, repeated evidence, limited tendency, preference question, and experiencer-role repair.">
+      <h3>Six description decisions</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="a little nervous" data-hint="Listen for the small degree word before nervous." data-fix="Leo feels a little nervous, not extremely frightened."><p class="quiz-question">1. How strong is Leo’s stated feeling?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a little nervous">a little nervous</button><button class="quiz-option" data-quiz-option="completely terrified">completely terrified</button><button class="quiz-option" data-quiz-option="not nervous at all">not nervous at all</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The instructions created confusion." data-hint="Listen for confusing, which presents the instructions as the stimulus." data-fix="The confusing instructions created confusion."><p class="quiz-question">2. What role do the instructions have?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The instructions created confusion.">The instructions created confusion.</button><button class="quiz-option" data-quiz-option="The instructions experienced confusion.">The instructions experienced confusion.</button><button class="quiz-option" data-quiz-option="The instructions expressed a preference.">The instructions expressed a preference.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="She greeted newcomers at three events." data-hint="Listen for the repeated observable evidence supporting friendly." data-fix="She greeted newcomers at three events."><p class="quiz-question">3. What evidence supports the description friendly?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She greeted newcomers at three events.">She greeted newcomers at three events.</button><button class="quiz-option" data-quiz-option="She smiled once in one photograph.">She smiled once in one photograph.</button><button class="quiz-option" data-quiz-option="Someone guessed that she was happy.">Someone guessed that she was happy.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="He can be quiet in large meetings." data-hint="Listen for can be and the situation that limits the tendency." data-fix="He can be quiet in large meetings."><p class="quiz-question">4. Which statement preserves the speaker’s limited claim?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="He can be quiet in large meetings.">He can be quiet in large meetings.</button><button class="quiz-option" data-quiz-option="He never speaks in any situation.">He never speaks in any situation.</button><button class="quiz-option" data-quiz-option="He is definitely shy and unfriendly.">He is definitely shy and unfriendly.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The speaker asks about Maya’s preferences." data-hint="Listen for does in What does Maya like?" data-fix="What does Maya like? asks about her preferences."><p class="quiz-question">5. What information does the question request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The speaker asks about Maya’s preferences.">The speaker asks about Maya’s preferences.</button><button class="quiz-option" data-quiz-option="The speaker asks about Maya’s general character.">The speaker asks about Maya’s general character.</button><button class="quiz-option" data-quiz-option="The speaker asks about Maya’s current health.">The speaker asks about Maya’s current health.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The speaker experienced interest." data-hint="Listen for contrastive stress on interested, not interesting." data-fix="The speaker said interested, so the speaker experienced interest."><p class="quiz-question">6. What does the correction clarify?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The speaker experienced interest.">The speaker experienced interest.</button><button class="quiz-option" data-quiz-option="The speaker caused everyone else’s interest.">The speaker caused everyone else’s interest.</button><button class="quiz-option" data-quiz-option="The speaker did not understand the topic.">The speaker did not understand the topic.</button></div></div>
       </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> She is nervous today. &nbsp;→&nbsp; move it to yesterday</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>She was nervous yesterday.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> He talks a lot. &nbsp;→&nbsp; say it with one personality word</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>He’s talkative.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> What does she like? &nbsp;→&nbsp; ask about her personality instead</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>What’s she like?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> The trip was tiring. &nbsp;→&nbsp; say how you felt after it, with <span class="ex">feel</span> in the past</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I felt tired.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> How do you feel? &nbsp;→&nbsp; ask me about my usual personality instead</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>What are you like?</strong></p>
-      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-  </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">Leo feels a little nervous before the talk, but he still wants to do it.</span> Evidence target: low degree, not an extreme inference.</li>
+        <li><span class="ex">The instructions were confusing, so the volunteers asked for a clearer version.</span> Evidence target: stimulus effect.</li>
+        <li><span class="ex">Maya is friendly with new volunteers. She greeted newcomers at all three events.</span> Evidence target: repeated behavior supporting a tendency.</li>
+        <li><span class="ex">Leo can be quiet in large meetings, but he asks many questions one-on-one.</span> Evidence target: context-limited tendency.</li>
+        <li><span class="ex">What does Maya like? She likes small-group discussions.</span> Evidence target: preference rather than character.</li>
+        <li><span class="ex">No, I said I was interested, not that I was interesting.</span> Evidence target: contrastive experiencer repair.</li>
+      </ol>
+    </details>
+  </section>
 
-  <h2>Read and choose</h2>
+  <h2>Read an evidence-based team introduction</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Dana’s message after week one</h3>
-    <p><span class="ex">“First week at the new office! My manager, Priya, is kind and really patient. She explained the systems twice and never got annoyed. The guy next to me, Tom, is quiet at first, but he’s actually very funny. Today was stressful, though: the printer broke before a big meeting, and my laptop started playing music in front of everyone. I felt so embarrassed! By six I was completely tired, but honestly? I’m excited about this job.”</span></p>
+    <h3>Harbor workshop coordinator’s note</h3>
+    <p><span class="ex">Maya is usually patient with new volunteers. At the last three events, she explained the check-in process more than once and waited for questions. Leo can be quiet in large planning meetings, but he asks detailed questions in one-on-one conversations. Nora is interested in design, and she prepared an interesting display for Saturday. She felt worried about the deadline on Friday, but she was relieved when the display was finished. These descriptions apply to the situations in this note, not to every part of each person’s life.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood personality words and feelings inside a real message.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered repeated evidence, a limited context, an experiencer-stimulus pair, and a changed feeling from the team note.">
+    <h3>Reading check: use only the coordinator’s note</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="kind and patient">
-        <p class="quiz-question">1. What’s Priya like?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="kind and patient">kind and patient</button><button class="quiz-option" data-quiz-option="quiet and funny">quiet and funny</button><button class="quiz-option" data-quiz-option="lazy and talkative">lazy and talkative</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="embarrassed">
-        <p class="quiz-question">2. How did Dana feel when her laptop played music?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="embarrassed">embarrassed</button><button class="quiz-option" data-quiz-option="bored">bored</button><button class="quiz-option" data-quiz-option="calm">calm</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Tom seems quiet at first, but he is funny.">
-        <p class="quiz-question">3. Which sentence is true?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Tom seems quiet at first, but he is funny.">Tom seems quiet at first, but he is funny.</button><button class="quiz-option" data-quiz-option="Dana hates the new job.">Dana hates the new job.</button><button class="quiz-option" data-quiz-option="Priya got annoyed twice.">Priya got annoyed twice.</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="She explained again and waited for questions at three events." data-hint="The second sentence gives repeated observable evidence for patient." data-fix="Maya explained again and waited for questions at three events."><p class="quiz-question">1. Which evidence supports the description of Maya as patient?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She explained again and waited for questions at three events.">She explained again and waited for questions at three events.</button><button class="quiz-option" data-quiz-option="She prepared one design display.">She prepared one design display.</button><button class="quiz-option" data-quiz-option="She spoke little in one meeting.">She spoke little in one meeting.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="large planning meetings" data-hint="The sentence limits Leo’s quiet tendency to one group context." data-fix="Leo can be quiet in large planning meetings."><p class="quiz-question">2. In which context can Leo be quiet?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="large planning meetings">large planning meetings</button><button class="quiz-option" data-quiz-option="every conversation in his life">every conversation in his life</button><button class="quiz-option" data-quiz-option="one-on-one conversations">one-on-one conversations</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Nora experienced interest, and the display created interest." data-hint="Interested presents Nora’s reaction; interesting presents the display’s effect." data-fix="Nora experienced interest, and the display created interest."><p class="quiz-question">3. What relationship does <span class="ex">interested in design</span> and <span class="ex">an interesting display</span> express?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Nora experienced interest, and the display created interest.">Nora experienced interest, and the display created interest.</button><button class="quiz-option" data-quiz-option="Nora created confusion, and the display felt confused.">Nora created confusion, and the display felt confused.</button><button class="quiz-option" data-quiz-option="Both phrases describe a permanent personality trait.">Both phrases describe a permanent personality trait.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="She changed from worried to relieved." data-hint="The final sentence contrasts her Friday feeling with her feeling after completion." data-fix="Nora changed from worried before completion to relieved afterward."><p class="quiz-question">4. How did Nora’s feeling change?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="She changed from worried to relieved.">She changed from worried to relieved.</button><button class="quiz-option" data-quiz-option="She changed from interested to boring.">She changed from interested to boring.</button><button class="quiz-option" data-quiz-option="She remained completely confused.">She remained completely confused.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Build the relationship and the limit</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Right now:</b> Say how you feel today and why, in two sentences. <span class="ex">I feel a little tired because I worked late. But I’m excited about the weekend.</span></div>
-  <div class="prompt-card"><b>Your best friend:</b> Describe your best friend’s personality with three adjectives, then give one example. <span class="ex">She’s funny, honest, and a little talkative. Last week she made the whole table laugh.</span></div>
-  <div class="prompt-card"><b>A nervous moment:</b> Tell a short story about a time you felt nervous. Use the past simple. <span class="ex">I felt nervous before my first job interview. My hands were cold, but the manager was friendly, and I got the job.</span></div>
-  <div class="prompt-card"><b>Interview the teacher:</b> Ask the teacher <span class="ex">What are you like?</span> and one follow-up question. Then answer the same questions yourself. <span class="ex">What are you like? Are you patient with slow learners?</span></div>
-  <div class="prompt-card"><b>Two people you know:</b> Compare the personalities of two people in your life. <span class="ex">My father is quiet and calm, but my uncle is talkative and funny. They’re both kind.</span></div>
+  <div class="tile-game" data-tile-builder data-answer="the volunteers were interested because the guide was interesting" data-hint="Begin with the experiencers and their -ed reaction, then name the guide’s -ing effect after because." data-fix="The volunteers were interested because the guide was interesting." data-success-message="Correct. The volunteers experience interest, and the guide creates that interest.">
+    <h3>Drill 4: build reaction and stimulus</h3><p class="tile-target">The volunteers had the reaction. The guide created it.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="interesting">interesting</button><button class="tile" data-build-tile="volunteers">volunteers</button><button class="tile" data-build-tile="because">because</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="guide">guide</button><button class="tile" data-build-tile="interested">interested</button><button class="tile" data-build-tile="was">was</button><button class="tile" data-build-tile="were">were</button><button class="tile" data-build-tile="the">the</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
 
-  <h2>Reflect</h2>
+  <div class="tile-game" data-tile-builder data-answer="leo can be quiet in large meetings" data-hint="Use can be to avoid an absolute, then add the exact context after quiet." data-fix="Leo can be quiet in large meetings." data-success-message="Correct. Can be and in large meetings limit the tendency to what the evidence supports.">
+    <h3>Drill 5: build a limited tendency</h3><p class="tile-target">Leo speaks little in some large meetings, but not in every situation.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="large">large</button><button class="tile" data-build-tile="quiet">quiet</button><button class="tile" data-build-tile="can">can</button><button class="tile" data-build-tile="meetings">meetings</button><button class="tile" data-build-tile="leo">Leo</button><button class="tile" data-build-tile="in">in</button><button class="tile" data-build-tile="be">be</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair unsupported meanings</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="boring" data-hint="The speaker intends to name an internal reaction during long waits." data-fix="I feel bored during long waits." data-why="Bored presents the speaker as the experiencer. Boring would present the speaker as someone who causes boredom." data-success-message="Correct. The speaker experiences boredom, so the intended word is bored.">
+    <h3>Drill 6: repair the experiencer role</h3><p>Tap the adjective whose ending gives the wrong meaning.</p><div class="spot-options"><button class="error-choice" data-error-choice="i">I</button><button class="error-choice" data-error-choice="feel">feel</button><button class="error-choice" data-error-choice="boring">boring</button><button class="error-choice" data-error-choice="during">during</button><button class="error-choice" data-error-choice="long">long</button><button class="error-choice" data-error-choice="waits">waits.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="about" data-hint="Store interested with the preposition in before a topic." data-fix="Nora is interested in community design." data-why="Interested in is the usual adjective-complement chunk for a topic that attracts attention." data-success-message="Correct. Interested in introduces the topic that attracts Nora’s attention.">
+    <h3>Drill 7: repair the adjective complement</h3><p>Tap the preposition that does not complete the target chunk.</p><div class="spot-options"><button class="error-choice" data-error-choice="nora">Nora</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="interested">interested</button><button class="error-choice" data-error-choice="about">about</button><button class="error-choice" data-error-choice="community">community</button><button class="error-choice" data-error-choice="design">design.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="shy" data-hint="One observed silence does not prove a stable personality or an internal feeling." data-fix="Leo was quiet during today’s meeting." data-why="Quiet reports the observed amount of speech in a stated situation. Shy interprets an internal social feeling that the evidence does not establish." data-success-message="Correct. The evidence supports quiet during one meeting, not a fixed label of shy.">
+    <h3>Drill 8: repair the unsupported label</h3><p>Leo spoke once in today’s meeting. Tap the word that claims more than the evidence supports.</p><div class="spot-options"><button class="error-choice" data-error-choice="leo">Leo</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="shy">shy</button><button class="error-choice" data-error-choice="because">because</button><button class="error-choice" data-error-choice="he">he</button><button class="error-choice" data-error-choice="spoke-once">spoke once.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without profiling real people</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to disclose your real feelings, mental health, personality, relationships, family, workplace, coworkers, home, schedule, or personal history. Use the fictional Harbor team. Real disclosure is optional.</p>
+  <div class="prompt-card"><b>Fictional evidence cards:</b> Maya welcomed newcomers at three events and calmly repeated instructions. Leo spoke little in two large meetings but asked detailed questions one-on-one. Nora said she felt worried before a deadline and relieved afterward. Omar’s lunch stories often made the team laugh.</div>
+  <div class="prompt-card"><b>State or tendency:</b> Give one current or past feeling from the cards and one limited personality tendency. Include the time or context that supports each description.</div>
+  <div class="prompt-card"><b>Evidence before label:</b> Describe one behavior first. Then add a careful summary with <span class="ex">usually</span> or <span class="ex">can be</span>. Ask your listener whether the summary matches the evidence.</div>
+  <div class="prompt-card"><b>Question repair:</b> Ask separately about Maya’s current condition, her work style, her preference, and her appearance. Explain what information each question requests.</div>
+
+  <h2>Final production and check</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Explain the system</h3>
-    <p>Complete this aloud: “The <strong>-ed</strong> form describes how a ______ feels. The <strong>-ing</strong> form describes the ______ that causes the feeling. <span class="ex">What’s she like?</span> asks about her ______, but <span class="ex">What does she like?</span> asks about things she ______.”</p>
-    <p>Then say one true sentence about how you feel right now and one true sentence about what you are usually like.</p>
+    <h3>Final production: give a 45–60 second fictional team introduction</h3>
+    <p>Introduce two Harbor team members. Include one current or past feeling with its cause, one accurate <span class="ex">-ed / -ing</span> relationship, two personality tendencies supported by repeated behavior, one context limit such as <span class="ex">in large meetings</span>, and one follow-up question. Replace any unsupported label with an observation.</p>
+    <p><b>Evidence check:</b> Can the listener identify which words report a feeling, which describe an effect, and which summarize repeated behavior? Can the listener see the evidence and limit for every personality description?</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can talk about feelings with be and feel, choose -ed or -ing correctly, describe personality, and ask the right questions about people.">
-    <h3>Final quiz: choose the best answer</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You protected experiencer-stimulus meaning, adjective complements, question purpose, and evidence limits instead of turning one behavior into a fixed identity.">
+    <h3>Final check: choose the defensible description</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="boring">
-        <p class="quiz-question">1. The lecture was really ___, so half the class fell asleep.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="boring">boring</button><button class="quiz-option" data-quiz-option="bored">bored</button><button class="quiz-option" data-quiz-option="bore">bore</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="What’s she like?">
-        <p class="quiz-question">2. You want to know about your new manager’s personality. What do you ask?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="What’s she like?">What’s she like?</button><button class="quiz-option" data-quiz-option="What does she like?">What does she like?</button><button class="quiz-option" data-quiz-option="How is she like?">How is she like?</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="honest">
-        <p class="quiz-question">3. He never lies, even when the truth is difficult. He’s very ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="honest">honest</button><button class="quiz-option" data-quiz-option="lazy">lazy</button><button class="quiz-option" data-quiz-option="shy">shy</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="felt">
-        <p class="quiz-question">4. I ___ nervous before the test last month, but I passed.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="felt">felt</button><button class="quiz-option" data-quiz-option="feel">feel</button><button class="quiz-option" data-quiz-option="feeling">feeling</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="talkative">
-        <p class="quiz-question">5. Sofia chats with everyone at every party. She’s really ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="talkative">talkative</button><button class="quiz-option" data-quiz-option="quiet">quiet</button><button class="quiz-option" data-quiz-option="shy">shy</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="patient">
-        <p class="quiz-question">6. My coworker can explain the same thing five times without getting angry. He’s so ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="patient">patient</button><button class="quiz-option" data-quiz-option="lazy">lazy</button><button class="quiz-option" data-quiz-option="nervous">nervous</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="I’m a little tired.">
-        <p class="quiz-question">7. A: How do you feel? &nbsp;B: ___</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I’m a little tired.">I’m a little tired.</button><button class="quiz-option" data-quiz-option="I’m an engineer.">I’m an engineer.</button><button class="quiz-option" data-quiz-option="I like tea.">I like tea.</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="I’m interested in the new project.">
-        <p class="quiz-question">8. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="I’m interested in the new project.">I’m interested in the new project.</button><button class="quiz-option" data-quiz-option="I’m interesting in the new project.">I’m interesting in the new project.</button><button class="quiz-option" data-quiz-option="The project is interested.">The project is interested.</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="The visitors were interested because the guide was interesting." data-hint="The visitors experience the reaction, while the guide creates it." data-fix="The visitors were interested because the guide was interesting."><p class="quiz-question">1. Which sentence assigns the experiencer and stimulus roles accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The visitors were interested because the guide was interesting.">The visitors were interested because the guide was interesting.</button><button class="quiz-option" data-quiz-option="The visitors were interesting because the guide was interested.">The visitors were interesting because the guide was interested.</button><button class="quiz-option" data-quiz-option="The visitors interested because the guide interesting.">The visitors interested because the guide interesting.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="What’s Maya like to work with?" data-hint="The speaker wants a general character description limited to collaboration." data-fix="What’s Maya like to work with?"><p class="quiz-question">2. Which question asks specifically about Maya’s character as a coworker?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="What’s Maya like to work with?">What’s Maya like to work with?</button><button class="quiz-option" data-quiz-option="What does Maya like at work?">What does Maya like at work?</button><button class="quiz-option" data-quiz-option="What does Maya look like at work?">What does Maya look like at work?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Leo can be quiet in large meetings." data-hint="The evidence covers some large meetings, not every social situation." data-fix="Leo can be quiet in large meetings."><p class="quiz-question">3. Leo spoke little in two large meetings but talked freely one-on-one. Which description stays inside the evidence?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Leo can be quiet in large meetings.">Leo can be quiet in large meetings.</button><button class="quiz-option" data-quiz-option="Leo is always shy and unfriendly.">Leo is always shy and unfriendly.</button><button class="quiz-option" data-quiz-option="Leo never talks to anyone.">Leo never talks to anyone.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Nora is interested in the design and a little nervous about presenting it." data-hint="Use interested in, nervous about, and the stated low degree." data-fix="Nora is interested in the design and a little nervous about presenting it."><p class="quiz-question">4. Nora wants to learn about the design and says her presentation worry is small. Which report preserves both meanings?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Nora is interested in the design and a little nervous about presenting it.">Nora is interested in the design and a little nervous about presenting it.</button><button class="quiz-option" data-quiz-option="Nora is interesting about the design and completely terrified in presenting it.">Nora is interesting about the design and completely terrified in presenting it.</button><button class="quiz-option" data-quiz-option="Nora feels like interested and nervous of the design.">Nora feels like interested and nervous of the design.</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
+
+  <h2>Reflect: what do you know, and what are you inferring?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the description choices</h3>
+    <p>Complete these ideas aloud: <span class="ex">An -ed adjective usually presents...</span> <span class="ex">An -ing adjective presents...</span> <span class="ex">A personality tendency needs...</span> <span class="ex">One quiet meeting does not prove...</span></p>
+    <p>Then revisit your final introduction. Underline the observations and circle the summaries. Add a context limit anywhere a summary is broader than its evidence.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading any explanation.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day experiencer role, adjective complement, and evidence-limit retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Name the evidence or meaning role before choosing.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the interested-in chunk, the behavior-versus-label boundary, and the bored-boring meaning contrast.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="interested in the project" data-hint="The person experiences attention toward a topic, so use the -ed form with in." data-fix="Nora is interested in the project."><p class="quiz-question">1. Nora wants to learn more about the project. Which phrase fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="interested in the project">interested in the project</button><button class="quiz-option" data-quiz-option="interesting about the project">interesting about the project</button><button class="quiz-option" data-quiz-option="interested of the project">interested of the project</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Nora was quiet during that meeting." data-hint="Report the one observed behavior and its situation without guessing an inner state." data-fix="Nora was quiet during that meeting."><p class="quiz-question">2. Nora spoke once in one meeting. Which statement stays inside the evidence?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Nora was quiet during that meeting.">Nora was quiet during that meeting.</button><button class="quiz-option" data-quiz-option="Nora is permanently shy.">Nora is permanently shy.</button><button class="quiz-option" data-quiz-option="Nora dislikes everyone there.">Nora dislikes everyone there.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="I’m bored, so the wait is boring." data-hint="The speaker experiences the reaction; the wait creates it." data-fix="I’m bored, so the wait is boring."><p class="quiz-question">3. Which sentence assigns both meaning roles accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="I’m bored, so the wait is boring.">I’m bored, so the wait is boring.</button><button class="quiz-option" data-quiz-option="I’m boring, so the wait is bored.">I’m boring, so the wait is bored.</button><button class="quiz-option" data-quiz-option="I bored, so the wait boring.">I bored, so the wait boring.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

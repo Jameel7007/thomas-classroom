@@ -1,5 +1,6 @@
 ---
 import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+import AudioControl from "../../components/assessment/AudioControl.astro";
 export const page = {
   "original": "outputs/assessments/b1-exit.html",
   "source": "src/content/assessments/b1-exit.astro",
@@ -7,15 +8,18 @@ export const page = {
   "slug": "b1-exit",
   "title": "B1 End-of-Level Diagnostic",
   "description": "Use this after all B1 lessons to identify any remaining gaps and confirm whether the learner is ready to begin B2.",
-  "engine": "none",
+  "engine": "assessment",
   "bodyClass": "",
-  "features": [
-    "AssessmentPage",
-    "AssessmentNavigation"
-  ],
-  "contentTextHash": "b3fe10f74157d942dee32cdb072676f1eb97bfca6573792158101f19a5a5c7e6",
-  "interactionCounts": {},
-  "audioClips": []
+  "features": ["AssessmentPage", "AssessmentNavigation", "AssessmentEngine", "ProgressIndicator", "FeedbackPanel", "MultipleChoiceExercise", "AudioControls"],
+  "contentTextHash": "8234398304079fda6f3d1e3f5b1c6ede370cfaa4b6d5ab4dcacca538c9c6d1cb",
+  "interactionCounts": {
+    "data-assessment": 1, "data-pass": 1, "data-strong": 1, "data-review-label": 1, "data-pass-label": 1, "data-strong-label": 1,
+    "data-review-feedback": 1, "data-pass-feedback": 1, "data-score-text": 1, "data-score-bar": 1, "data-score-label": 1,
+    "data-skill-summary": 1, "data-assessment-item": 22, "data-skill": 22, "data-points": 22, "data-answer": 20,
+    "data-option": 60, "data-voice-clip": 2, "data-speak": 2, "data-credit": 10, "data-check-assessment": 1,
+    "data-reset-assessment": 1, "data-print-assessment": 1, "data-feedback": 1
+  },
+  "audioClips": ["b1-project-update", "b1-community-report"]
 };
 ---
 <AssessmentPage page={page}>
@@ -24,10 +28,207 @@ export const page = {
 <p class="overline">Complete B1 before advancing</p>
 <h1>B1 End-of-Level Diagnostic</h1>
 <p class="lede">Use this after all B1 lessons to identify any remaining gaps and confirm whether the learner is ready to begin B2.</p>
+
 <div class="grid">
-<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Grammar</b>Present perfect continuous, past perfect, passive, conditionals, and reported speech.</li><li><b>Skills</b>Main idea reading/listening plus focused detail questions.</li><li><b>Production</b>Opinion task, travel problem, story, and short written response.</li></ul></section>
-<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can produce connected speech.</li><li>Can give reasons and explain preferences.</li><li>Can manage familiar situations with limited support.</li></ul></section>
+<section class="panel"><h2>Benchmark goal</h2><p>The learner should understand the main points of clear connected input, explain experiences and opinions, manage familiar problems, and produce organized language with reasons and relevant detail.</p></section>
+<section class="panel"><h2>Advance when ready</h2><ul class="rubric"><li>Controls the B1 time, voice, condition, reporting, and clause systems in context.</li><li>Distinguishes main idea, supporting evidence, viewpoint, and uncertainty.</li><li>Speaks and writes connected language that explains, compares, and justifies.</li></ul></section>
 </div>
-<p class="placeholder">Next build: add a full B1 benchmark quiz with separate grammar, skills, and speaking scores.</p>
+
+<section class="assessment" data-assessment data-pass="70" data-strong="87" data-require-live-evidence data-production-min="60" data-listening-min="50" data-evidence-label="More live evidence needed" data-evidence-feedback="The score is high enough, but confirm at least 60% in both speaking and writing and 50% in listening before advancing." data-review-label="B1 still developing" data-pass-label="Ready to begin B2" data-strong-label="B1 secure" data-review-feedback="The skill profile identifies which B1 abilities need another focused lesson cycle before the learner begins B2." data-pass-feedback="The learner has demonstrated independent B1 communication and can begin B2. Review any weaker receptive or productive skill before advancing.">
+<div class="score-card">
+<div class="score-big"><span>Score</span><b data-score-text>0 / 0</b></div>
+<div>
+<div class="score-meter"><span class="score-fill" data-score-bar></span></div>
+<div class="score-label" data-score-label>Not checked yet</div>
+<p class="score-help">A B2 starting point needs evidence from connected reading, listening, speaking, and writing—not grammar recognition alone.</p>
+<div class="skill-summary" data-skill-summary></div>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>1. Control time, viewpoint, and information</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="has been working">
+<p class="item-kicker">Activity continuing to now</p>
+<div class="reading-text"><p>Leah began the report at eight. It is now eleven, and she is still writing it.</p></div>
+<p class="question">Leah ___ on the report for three hours.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="has been working">has been working</button><button class="choice-btn" data-option="worked yesterday">worked yesterday</button><button class="choice-btn" data-option="is work since eight">is work since eight</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="had already left">
+<p class="item-kicker">Earlier past</p>
+<div class="reading-text"><p>We reached the restaurant at 9:15. Our friends left at 9:00 because they thought we were not coming.</p></div>
+<p class="question">When we arrived, our friends ___.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="had already left">had already left</button><button class="choice-btn" data-option="have already leave">have already leave</button><button class="choice-btn" data-option="were leave before">were leave before</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="If I had more time, I would take the course.">
+<p class="item-kicker">Imagined present</p>
+<div class="reading-text"><p>You want to take a design course, but your current schedule makes it impossible.</p></div>
+<p class="question">Which sentence expresses the imagined situation?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="If I had more time, I would take the course.">If I had more time, I would take the course.</button><button class="choice-btn" data-option="If I would have time, I take the course.">If I would have time, I take the course.</button><button class="choice-btn" data-option="If I had time yesterday, I will take it.">If I had time yesterday, I will take it.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="used to be">
+<p class="item-kicker">Past state and present contrast</p>
+<div class="reading-text"><p>The neighborhood was quiet twenty years ago. It is now busy and crowded.</p></div>
+<p class="question">This neighborhood ___ much quieter.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="used to be">used to be</button><button class="choice-btn" data-option="would be every state">would be every state</button><button class="choice-btn" data-option="did used to being">did used to being</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The order was delivered to the wrong address.">
+<p class="item-kicker">Passive focus</p>
+<div class="reading-text"><p>You are writing a complaint about the affected order. The driver’s identity is not important.</p></div>
+<p class="question">Choose the most useful sentence.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The order was delivered to the wrong address.">The order was delivered to the wrong address.</button><button class="choice-btn" data-option="The order delivered to the wrong address.">The order delivered to the wrong address.</button><button class="choice-btn" data-option="The order was deliver by someone.">The order was deliver by someone.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Mina told me that she would send the file the next day.">
+<p class="item-kicker">Reported statement</p>
+<div class="reading-text"><p>Yesterday Mina said to you, “I’ll send the file tomorrow.” You report the message today.</p></div>
+<p class="question">Which report keeps the listener, viewpoint, and time clear?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Mina told me that she would send the file the next day.">Mina told me that she would send the file the next day.</button><button class="choice-btn" data-option="Mina said me that I will send the file tomorrow.">Mina said me that I will send the file tomorrow.</button><button class="choice-btn" data-option="Mina told that she sends the file yesterday.">Mina told that she sends the file yesterday.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="who can explain complex ideas clearly">
+<p class="item-kicker">Defining relative clause</p>
+<div class="reading-text"><p>The company needs a trainer. The trainer must be able to explain complex ideas clearly.</p></div>
+<p class="question">The company needs a trainer ___.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="who can explain complex ideas clearly">who can explain complex ideas clearly</button><button class="choice-btn" data-option="which they can explain complex ideas clearly">which they can explain complex ideas clearly</button><button class="choice-btn" data-option="where can explain clear ideas">where can explain clear ideas</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="must be in a meeting">
+<p class="item-kicker">Present deduction</p>
+<div class="reading-text"><p>Omar’s calendar shows “Client review, 2–3 p.m.” It is 2:30, and he is not at his desk.</p></div>
+<p class="question">Omar ___.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="must be in a meeting">must be in a meeting</button><button class="choice-btn" data-option="must to be meeting">must to be meeting</button><button class="choice-btn" data-option="can’t be at any meeting">can’t be at any meeting</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="haven't they">
+<p class="item-kicker">Question tag</p>
+<p class="question">The clients have approved the design, ___?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="haven't they">haven’t they</button><button class="choice-btn" data-option="don't the clients">don’t the clients</button><button class="choice-btn" data-option="have they approved">have they approved</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="applying">
+<p class="item-kicker">Verb pattern</p>
+<div class="reading-text"><p>Priya is seriously considering a new role.</p></div>
+<p class="question">Priya is considering ___ for the position.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="applying">applying</button><button class="choice-btn" data-option="to applying">to applying</button><button class="choice-btn" data-option="apply to">apply to</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="am meeting">
+<p class="item-kicker">Future arrangement</p>
+<div class="reading-text"><p>The appointment is confirmed for Tuesday at ten with the bank manager.</p></div>
+<p class="question">I ___ the bank manager on Tuesday at ten.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="am meeting">am meeting</button><button class="choice-btn" data-option="will meeting perhaps">will meeting perhaps</button><button class="choice-btn" data-option="am going meet yesterday">am going meet yesterday</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Although the option costs more, it should last longer.">
+<p class="item-kicker">Concession</p>
+<div class="reading-text"><p>The more expensive option has one important disadvantage and one expected benefit.</p></div>
+<p class="question">Choose the correctly connected sentence.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Although the option costs more, it should last longer.">Although the option costs more, it should last longer.</button><button class="choice-btn" data-option="Although the option costs more, but it should last longer.">Although the option costs more, but it should last longer.</button><button class="choice-btn" data-option="The option costs more, although however lasts longer.">The option costs more, although however lasts longer.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>2. Read for argument, evidence, and implication</h2>
+<div class="reading-text"><p><strong>Proposal: a shared workshop for the neighborhood</strong></p><p>A vacant shop on Park Street has been empty for three years. A local group proposes turning it into a shared workshop where residents could repair bicycles, furniture, and small appliances. Supporters argue that the project would reduce waste, teach practical skills, and create a place for neighbors to meet.</p><p>The building needs electrical repairs and step-free access. The group has raised half the renovation cost, but it would need a council grant and regular membership fees. Some nearby businesses are concerned about noise and parking. In response, the group has proposed evening closing hours, sound insulation, and a six-month trial.</p><p>Overall, the project appears promising because it addresses both waste and social isolation. However, approval should depend on a realistic budget, safe access, and clear evidence from the trial.</p></div>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="It would combine practical repair, waste reduction, and community connection.">
+<p class="item-kicker">Main purpose</p><p class="question">What is the proposal’s central idea?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="It would combine practical repair, waste reduction, and community connection.">It would combine practical repair, waste reduction, and community connection.</button><button class="choice-btn" data-option="It would replace every local business with parking.">It would replace every local business with parking.</button><button class="choice-btn" data-option="It would turn the shop into private luxury housing.">It would turn the shop into private luxury housing.</button></div>
+</article>
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Funding, building access, noise, and parking">
+<p class="item-kicker">Supporting concerns</p><p class="question">Which set contains only unresolved practical concerns?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Funding, building access, noise, and parking">Funding, building access, noise, and parking</button><button class="choice-btn" data-option="Whether bicycles and furniture exist">Whether bicycles and furniture exist</button><button class="choice-btn" data-option="The meaning of practical skills">The meaning of practical skills</button></div>
+</article>
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Support the idea conditionally and evaluate it through a trial.">
+<p class="item-kicker">Writer’s position</p><p class="question">What position does the final paragraph take?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Support the idea conditionally and evaluate it through a trial.">Support the idea conditionally and evaluate it through a trial.</button><button class="choice-btn" data-option="Reject the project without considering evidence.">Reject the project without considering evidence.</button><button class="choice-btn" data-option="Approve permanent funding without a budget.">Approve permanent funding without a budget.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>3. Listen, evaluate, and respond</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="Testing continues, one issue remains, and the client moved the review to Friday afternoon.">
+<p class="item-kicker">Listen: project update</p>
+<p class="question">Play the message. Which summary preserves all three key developments?</p>
+<AudioControl clip="b1-project-update" src="/audio/assessments/b1-exit/project-update.mp3" text="Hi team. We’ve been testing the booking system since Monday, and we’ve fixed most of the payment errors. One problem with confirmation emails remains. The client said they were pleased with the progress, but they moved Friday’s review from ten to two." label="Play update" ariaLabel="Play the B1 project update" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Testing continues, one issue remains, and the client moved the review to Friday afternoon.">Testing continues, one issue remains, and the client moved the review to Friday afternoon.</button><button class="choice-btn" data-option="All testing ended, every error remains, and the review was canceled.">All testing ended, every error remains, and the review was canceled.</button><button class="choice-btn" data-option="The client rejected the project and moved the review to Monday morning.">The client rejected the project and moved the review to Monday morning.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="The decline is encouraging, but one short period cannot prove the lighting caused it.">
+<p class="item-kicker">Listen: community report</p>
+<p class="question">Play the report. Which conclusion matches the speaker’s level of certainty?</p>
+<AudioControl clip="b1-community-report" src="/audio/assessments/b1-exit/community-report.mp3" text="According to the city report, bicycle theft near Central Station fell by twenty percent during the three-month lighting trial. Officials say the result is encouraging. However, they cannot yet prove that the new lights caused the decline, and they plan to collect data for another nine months." label="Play report" ariaLabel="Play the B1 community report" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The decline is encouraging, but one short period cannot prove the lighting caused it.">The decline is encouraging, but one short period cannot prove the lighting caused it.</button><button class="choice-btn" data-option="The trial proves brighter lights prevent every bicycle theft.">The trial proves brighter lights prevent every bicycle theft.</button><button class="choice-btn" data-option="The report says theft increased and the trial ended immediately.">The report says theft increased and the trial ended immediately.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="meet deadlines and take responsibility for client communication">
+<p class="item-kicker">Work collocations</p>
+<div class="reading-text"><p>The role requires finishing work on time and owning communication with clients.</p></div>
+<p class="question">Which résumé phrase sounds precise and natural?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="meet deadlines and take responsibility for client communication">meet deadlines and take responsibility for client communication</button><button class="choice-btn" data-option="do deadlines and make responsible of clients">do deadlines and make responsible of clients</button><button class="choice-btn" data-option="arrive deadlines and responsibility to communicate">arrive deadlines and responsibility to communicate</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="borrow $50 from Ana and pay her back Friday">
+<p class="item-kicker">Money direction</p>
+<div class="reading-text"><p>Ana gives you $50 temporarily. You will return it on Friday.</p></div>
+<p class="question">Choose the accurate description from your viewpoint.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="borrow $50 from Ana and pay her back Friday">borrow $50 from Ana and pay her back Friday</button><button class="choice-btn" data-option="lend $50 from Ana and borrow her Friday">lend $50 from Ana and borrow her Friday</button><button class="choice-btn" data-option="charge Ana $50 because she owes me">charge Ana $50 because she owes me</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="According to the report, the plan could reduce waste; however, the cost is still uncertain.">
+<p class="item-kicker">Careful recommendation</p>
+<div class="reading-text"><p>You need to attribute a possible benefit and acknowledge missing financial information.</p></div>
+<p class="question">Which sentence does both jobs clearly?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="According to the report, the plan could reduce waste; however, the cost is still uncertain.">According to the report, the plan could reduce waste; however, the cost is still uncertain.</button><button class="choice-btn" data-option="The plan definitely fixes everything because the headline is exciting.">The plan definitely fixes everything because the headline is exciting.</button><button class="choice-btn" data-option="Although the cost uncertain, but report proves waste.">Although the cost uncertain, but report proves waste.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>4. Teacher-scored independent communication</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Speaking" data-points="5">
+<p class="item-kicker">Speaking task · 5 points</p>
+<div class="reading-text"><p><strong>Decision meeting:</strong> A company has $5,000 to improve either staff training, office energy efficiency, or customer support. The learner chooses a priority, responds to one alternative, and revises or defends the recommendation after two follow-up questions.</p></div>
+<p class="question">Award one point for each ability demonstrated independently or after one light prompt.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Organizes a two-to-three-minute response with a clear position, reasons, examples, and conclusion.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Compares realistic options and uses precise vocabulary from work, money, environment, or relationships.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses several B1 structures accurately enough to express duration, hypothesis, deduction, reporting, or future planning.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Responds to challenges, clarifies meaning, and asks or answers relevant follow-up questions.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Connects ideas with varied linkers and remains comprehensible without continuous teacher support.</label>
+</div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Writing" data-points="5">
+<p class="item-kicker">Writing task · 5 points</p>
+<div class="reading-text"><p><strong>Write a recommendation of 130–170 words.</strong> Choose a realistic change for a workplace, neighborhood, or learning program. Explain the current problem and evidence, compare at least two options, acknowledge one disadvantage, and recommend a next step or trial.</p></div>
+<p class="question">Award one point for each observable quality.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Covers the problem, evidence, options, disadvantage, recommendation, and next step.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Organizes connected paragraphs with accurate reason, contrast, example, and result linkers.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses a useful range of B1 grammar, including at least one complex clause or appropriate passive/reported form.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses precise topic vocabulary and natural collocations rather than repeated general words.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Produces clear independent text whose errors do not obscure the argument or intended viewpoint.</label>
+</div>
+</article>
+</div>
+</div>
+
+<div class="actions">
+<button class="assessment-btn primary" data-check-assessment>Check assessment</button>
+<button class="assessment-btn" data-reset-assessment>Reset</button>
+<button class="assessment-btn" data-print-assessment>Print summary</button>
+</div>
+<p class="feedback" data-feedback>Complete the sections, then check the assessment.</p>
+</section>
 </main>
 </AssessmentPage>

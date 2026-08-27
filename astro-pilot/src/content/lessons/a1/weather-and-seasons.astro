@@ -2,373 +2,447 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Weather and seasons · A1 Vocabulary · Curriculum Map",
+  "title": "Weather and seasons · A1 Vocabulary",
   "slug": "weather-and-seasons",
   "level": "A1",
   "topic": "Weather & seasons",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Talk about the sky and the year. Describe the weather with It's + adjective — It's sunny. — or with It's + verb-ing for rain and snow — It's raining. Name the four seasons and say ",
+  "description": "Describe current conditions, read simple forecasts and temperatures, distinguish weather from climate, and discuss seasons without assuming one global pattern.",
   "sequence": 18,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/the-verb-to-be", "a1/present-continuous", "a1/prepositions-of-time-and-place"],
+  "related": ["a1/present-continuous", "a2/will-for-predictions-and-offers", "a2/travel-and-transport"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Weather word families, current and forecast viewpoints, temperature units, probability, global season systems, U.S. usage, speech, listening, feedback, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 18</p>
   <h1>Weather &amp; <em>seasons</em></h1>
-  <p class="standfirst">Talk about the sky and the year. Describe the weather with <strong>It's + adjective</strong> — <span class="ex">It's sunny.</span> — or with <strong>It's + verb-ing</strong> for rain and snow — <span class="ex">It's raining.</span> Name the four seasons and say when things happen with <span class="ex">in summer</span>, <span class="ex">in winter</span>.</p>
+  <p class="standfirst">Move beyond a list of sky words. Describe a general condition with <span class="ex">It’s rainy</span>, focus on an event happening now with <span class="ex">It’s raining</span>, read a simple forecast with clear temperature units, and discuss seasons without assuming the same pattern everywhere.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">It's + adjective / -ing</span>
-    <span class="tag">spring · summer · fall · winter</span>
-    <span class="tag">8 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">weather noun · adjective · event</span>
+    <span class="tag">current conditions · forecast · temperature</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Compare two ways to talk about weather.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Adjective or -ing? Plus the four seasons.</span></div>
-    <div class="flow-step"><b>Build</b><span>Match, choose, and build chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe today, your seasons, your plans.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Compare a day’s condition with an event happening now.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose the word family and time viewpoint.</span></div>
+    <div class="flow-step"><b>Build</b><span>Read temperature, probability, and forecast labels.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional community weather bulletin.</span></div>
   </div>
 
-  <p class="note-line">American English uses <span class="ex">fall</span> for the season between summer and winter. British English uses <span class="ex">autumn</span> for the same season — both are correct; we'll use <span class="ex">fall</span> here.</p>
+  <p class="note-line"><span class="ex">Weather</span> describes conditions over a short time, such as now, today, or this week. <span class="ex">Climate</span> describes patterns observed over many years. One cold day does not prove a cold climate, and a long-term climate pattern does not tell you the exact weather at this moment.</p>
 
-  <h2>Meet the weather</h2>
+  <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <p>We describe the weather with <span class="ex">It's…</span> + a weather word: <span class="ex">It's sunny. It's rainy today.</span></p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunny.svg" alt="" loading="lazy" /></span><span class="nm">sunny</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cloudy.svg" alt="" loading="lazy" /></span><span class="nm">cloudy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rainy.svg" alt="" loading="lazy" /></span><span class="nm">rainy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/stormy.svg" alt="" loading="lazy" /></span><span class="nm">stormy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/snowy.svg" alt="" loading="lazy" /></span><span class="nm">snowy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/windy.svg" alt="" loading="lazy" /></span><span class="nm">windy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/foggy.svg" alt="" loading="lazy" /></span><span class="nm">foggy</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rainbow.svg" alt="" loading="lazy" /></span><span class="nm">rainbow</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lightning.svg" alt="" loading="lazy" /></span><span class="nm">lightning</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fire.svg" alt="" loading="lazy" /></span><span class="nm">hot</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/snowflake.svg" alt="" loading="lazy" /></span><span class="nm">cold</span></div>
-  </div>
-
-  <h2>Meet the seasons</h2>
-  <div class="lead-rule"></div>
-  <p>The year has four seasons. We use <span class="ex">in</span> with a season: <span class="ex">in summer, in winter.</span></p>
-  <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/spring.svg" alt="" loading="lazy" /></span><span class="nm">spring</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/summer.svg" alt="" loading="lazy" /></span><span class="nm">summer</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fall.svg" alt="" loading="lazy" /></span><span class="nm">fall</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/winter.svg" alt="" loading="lazy" /></span><span class="nm">winter</span></div>
-  </div>
-
-  <h2>Notice before the rule</h2>
-  <div class="lead-rule"></div>
-  <div class="thinking-card">
-    <h3>Two ways to talk about the sky</h3>
-    <p><span class="ex">"It's sunny today, so I'll walk to work. Wait — now it's raining. It's cold and windy too, so I'll take the bus."</span></p>
-    <ul>
-      <li>Look at <span class="ex">It's sunny</span> and <span class="ex">It's cold</span>. What kind of word comes after <strong>It's</strong> — a describing word, or an action?</li>
-      <li>Now look at <span class="ex">It's raining</span>. This one is an <strong>action</strong> happening now. How does the word <span class="ex">rain</span> change?</li>
-      <li>So there are two patterns. One uses a describing word; the other uses a verb with <span class="ex">-ing</span>. Which words go in which group?</li>
-    </ul>
-  </div>
-
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — adjective or action?</h3>
-    <p class="choice-hint">If the word describes the day, it's an <b>adjective</b>. If it's an action happening now, it ends in <b>-ing</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="sunny">sunny</button>
-      <button class="choice-option" data-choice-option="cold">cold</button>
-      <button class="choice-option" data-choice-option="raining">raining</button>
-      <button class="choice-option" data-choice-option="snowing">snowing</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved present continuous for live events, in with an ordinary season, and the present-continuous negative.">
+    <h3>Three quick checks from earlier lessons</h3>
+    <p class="choice-hint">Use the camera time and the time expression. Say each complete sentence aloud.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices">
+      <button class="choice-option" data-choice-option="raining">raining</button><button class="choice-option" data-choice-option="rainy">rainy</button>
+      <button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="on">on</button>
+      <button class="choice-option" data-choice-option="isn’t snowing">isn’t snowing</button><button class="choice-option" data-choice-option="doesn’t snow">doesn’t snow</button>
     </div>
-    <div class="q"><span class="n">1</span><span>It's <button class="choice-gap" data-choice-gap data-answer="sunny" data-placeholder="choose">choose</button> &nbsp;<span class="contraction">(adjective · the sun is out)</span></span></div>
-    <div class="q"><span class="n">2</span><span>It's <button class="choice-gap" data-choice-gap data-answer="raining" data-placeholder="choose">choose</button> &nbsp;<span class="contraction">(action now · water is falling)</span></span></div>
-    <div class="q"><span class="n">3</span><span>It's <button class="choice-gap" data-choice-gap data-answer="cold" data-placeholder="choose">choose</button> &nbsp;<span class="contraction">(adjective · low temperature)</span></span></div>
-    <div class="q"><span class="n">4</span><span>It's <button class="choice-gap" data-choice-gap data-answer="snowing" data-placeholder="choose">choose</button> &nbsp;<span class="contraction">(action now · snow is falling)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The live camera shows water falling now: It’s <button class="choice-gap" data-choice-gap data-answer="raining" data-hint="A live event in progress uses the -ing form." data-fix="It’s raining now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional festival happens during the ordinary season: It opens <button class="choice-gap" data-choice-gap data-answer="in" data-hint="Use in before a season when there is no this, next, or last." data-fix="It opens in winter." data-placeholder="choose">choose</button> winter.</span></div>
+    <div class="q"><span class="n">3</span><span>The current camera shows no falling snow: It <button class="choice-gap" data-choice-gap data-answer="isn’t snowing" data-hint="The camera describes an event not happening now, so keep be plus -ing." data-fix="It isn’t snowing now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: two patterns, four seasons</h2>
+  <h2>Meet the weather words</h2>
   <div class="lead-rule"></div>
-  <p>When you ask about the weather, the natural question is:</p>
-  <p><span class="ex">What's the weather like?</span> &nbsp;→&nbsp; <span class="ex">It's sunny.</span> &nbsp;/&nbsp; <span class="ex">It's raining.</span></p>
-  <p><strong>1. It's + adjective</strong> describes the day. Most weather words work this way:</p>
+  <p>Store each picture with a useful grammar frame. Some labels are adjectives, while others are nouns.</p>
+  <div class="figure-grid">
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sunny.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">sunny</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/cloudy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cloudy</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rainy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">rainy</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/stormy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">stormy</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/snowy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">snowy</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/windy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">windy</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/foggy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">foggy</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/rainbow.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">a rainbow</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/lightning.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">lightning</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fire.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">hot</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/snowflake.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">cold</span></div>
+  </div>
+
+  <h2>Meet four common season names</h2>
+  <div class="lead-rule"></div>
+  <p>Many calendars use four seasons: <span class="ex">spring, summer, fall</span>, and <span class="ex">winter</span>. This is one useful model, not one universal weather schedule.</p>
+  <div class="figure-grid">
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/spring.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">spring</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/summer.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">summer</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/fall.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">fall</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/winter.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">winter</span></div>
+  </div>
+
+  <h2>Notice the speaker’s viewpoint</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>A forecast and a live camera</h3>
+    <p><span class="ex">The forecast calls Tuesday a rainy day. On the live camera, it isn’t raining at 8:00 a.m. At 8:15, water begins to fall, so now it’s raining.</span></p>
+    <ul>
+      <li>Which word describes Tuesday as a broader kind of day?</li>
+      <li>Which form focuses on water falling at one specific moment?</li>
+      <li>Can a day be called rainy even when the rain stops for a short time?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated broad weather descriptions from rain and snow events happening at an exact moment.">
+    <h3>Discovery check: description or event?</h3>
+    <p class="choice-hint">Use the whole context. A broader condition often uses an adjective; an event in progress uses be plus -ing.</p>
+    <div class="choice-bank" aria-label="Weather description and event choices">
+      <button class="choice-option" data-choice-option="rainy">rainy</button><button class="choice-option" data-choice-option="raining">raining</button>
+      <button class="choice-option" data-choice-option="snowy">snowy</button><button class="choice-option" data-choice-option="snowing">snowing</button>
+      <button class="choice-option" data-choice-option="cloudy">cloudy</button><button class="choice-option" data-choice-option="shining">shining</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Showers start and stop throughout the fictional Tuesday: It’s a <button class="choice-gap" data-choice-gap data-answer="rainy" data-hint="The sentence classifies the whole day, not one exact moment." data-fix="It’s a rainy day." data-placeholder="choose">choose</button> day.</span></div>
+    <div class="q"><span class="n">2</span><span>The camera shows water falling at 8:15: It’s <button class="choice-gap" data-choice-gap data-answer="raining" data-hint="Water is falling at this exact camera time, so use the event form." data-fix="It’s raining at 8:15." data-placeholder="choose">choose</button> at 8:15.</span></div>
+    <div class="q"><span class="n">3</span><span>The lodge report describes a white landscape after last night’s storm, with no flakes now: It’s <button class="choice-gap" data-choice-gap data-answer="snowy" data-hint="The report describes the place’s condition, not falling snow now." data-fix="It’s snowy at the lodge." data-placeholder="choose">choose</button> at the lodge.</span></div>
+    <div class="q"><span class="n">4</span><span>The live camera shows flakes falling now: It’s <button class="choice-gap" data-choice-gap data-answer="snowing" data-hint="Falling flakes create an event in progress." data-fix="It’s snowing now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="q"><span class="n">5</span><span>The sky is covered with clouds, but no rain is falling: It’s <button class="choice-gap" data-choice-gap data-answer="cloudy" data-hint="Cloudy is the adjective for a sky with many clouds." data-fix="It’s cloudy, but it isn’t raining." data-placeholder="choose">choose</button>, but it isn’t raining.</span></div>
+    <div class="q"><span class="n">6</span><span>The real subject is named, and bright light is coming from it now: The sun is <button class="choice-gap" data-choice-gap data-answer="shining" data-hint="With the real subject the sun, use is plus the event verb shining." data-fix="The sun is shining now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: noun, adjective, or event</h2>
+  <div class="lead-rule"></div>
+  <p>Weather words form families, but they do not all use the same pattern. Choose the grammar from the message, not from the picture alone.</p>
   <table>
-    <thead><tr><th>adjective</th><th>meaning</th></tr></thead>
+    <thead><tr><th>weather idea</th><th>noun</th><th>adjective</th><th>event now</th></tr></thead>
     <tbody>
-      <tr><td><b>sunny</b></td><td>the sun is out</td></tr>
-      <tr><td><b>cloudy</b></td><td>gray sky, clouds, no sun</td></tr>
-      <tr><td><b>windy</b></td><td>a lot of wind</td></tr>
-      <tr><td><b>foggy</b></td><td>thick mist; hard to see far</td></tr>
-      <tr><td><b>hot · warm · cool · cold</b></td><td>temperature, from high to low</td></tr>
-      <tr><td><b>humid</b></td><td>hot and very wet in the air</td></tr>
-    </tbody>
-  </table>
-  <p><strong>2. It's + verb-ing</strong> says an action is happening now. We use this for falling weather:</p>
-  <p><span class="ex">It's raining.</span> &nbsp;·&nbsp; <span class="ex">It's snowing.</span> &nbsp;·&nbsp; <span class="ex">The sun is shining.</span></p>
-  <p>Note the pairs: the action <span class="ex">It's raining</span> matches the adjective <span class="ex">It's rainy</span>; <span class="ex">It's snowing</span> matches <span class="ex">It's snowy</span>.</p>
-  <p>The year has four <strong>seasons</strong>. Say when something happens with <strong>in + season</strong>:</p>
-  <table>
-    <thead><tr><th>season</th><th>typical weather</th><th>example</th></tr></thead>
-    <tbody>
-      <tr><td><b>spring</b></td><td>cool, often rainy</td><td><span class="ex">In spring it's often rainy.</span></td></tr>
-      <tr><td><b>summer</b></td><td>hot, sunny</td><td><span class="ex">In summer it's hot.</span></td></tr>
-      <tr><td><b>fall</b> <span class="contraction">autumn</span></td><td>cool, windy</td><td><span class="ex">In fall it's windy.</span></td></tr>
-      <tr><td><b>winter</b></td><td>cold, snowy</td><td><span class="ex">In winter it's cold.</span></td></tr>
+      <tr><td>rain</td><td><span class="ex">a chance of rain</span></td><td><span class="ex">It’s rainy.</span></td><td><span class="ex">It’s raining.</span></td></tr>
+      <tr><td>snow</td><td><span class="ex">some snow</span></td><td><span class="ex">It’s snowy.</span></td><td><span class="ex">It’s snowing.</span></td></tr>
+      <tr><td>wind</td><td><span class="ex">The wind is strong.</span></td><td><span class="ex">It’s windy.</span></td><td><span class="ex">The wind is blowing.</span></td></tr>
+      <tr><td>sun</td><td><span class="ex">the sun</span></td><td><span class="ex">It’s sunny.</span></td><td><span class="ex">The sun is shining.</span></td></tr>
+      <tr><td>cloud</td><td><span class="ex">a cloud</span></td><td><span class="ex">It’s cloudy.</span></td><td><span class="contraction">no ordinary “It’s clouding” pattern</span></td></tr>
+      <tr><td>fog</td><td><span class="ex">some fog</span></td><td><span class="ex">It’s foggy.</span></td><td><span class="contraction">usually describe the condition</span></td></tr>
     </tbody>
   </table>
 
   <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li>Can we say <span class="ex">It's rain</span>? <strong>No.</strong> Use the adjective <span class="ex">It's rainy</span>, or the action <span class="ex">It's raining</span> — never the bare word <span class="ex">rain</span> after <span class="ex">It's</span>.</li>
-      <li>Do we say <span class="ex">on summer</span> or <span class="ex">at summer</span>? <strong>No.</strong> For seasons we use <span class="ex">in</span>: <span class="ex">in summer</span>, <span class="ex">in winter</span>.</li>
-      <li>What's the difference between <span class="ex">warm</span> and <span class="ex">hot</span>? <strong>Warm</strong> is pleasant, mild heat; <strong>hot</strong> is a high, strong temperature.</li>
-    </ul>
+    <h3><span class="ex">It</span> in a weather sentence does not point to an object</h3>
+    <p>In <span class="ex">It’s cold</span> and <span class="ex">It’s raining</span>, <span class="ex">it</span> is a required weather subject. It does not refer back to a thing. Do not normally drop it: say <span class="ex">It’s windy</span>, not only <span class="ex">Is windy</span>.</p>
+    <p>When a real subject is named, use that subject: <span class="ex">The sun is shining</span>, <span class="ex">The wind is blowing</span>, and <span class="ex">The clouds are moving</span>.</p>
   </div>
 
-  <h2>Choose the right pattern</h2>
-  <div class="lead-rule"></div>
-  <p>The cue in brackets tells you whether you need a describing word or an action. Keep the chunk together: <span class="ex">It's + word</span>.</p>
+  <div class="note">
+    <h3>Do not add -ing to every weather noun</h3>
+    <p><span class="ex">It’s raining</span> and <span class="ex">It’s snowing</span> are common weather-event patterns. English does not build every event by attaching <span class="ex">-ing</span> to the picture label. Say <span class="ex">The sun is shining</span>, not <span class="ex">It’s sunning</span>; say <span class="ex">It’s windy</span> or <span class="ex">The wind is blowing</span>, not <span class="ex">It’s winding</span>.</p>
+    <p><span class="ex">Lightning</span> and <span class="ex">thunder</span> are normally uncountable in basic weather use: <span class="ex">There is some lightning and thunder.</span> <span class="ex">A rainbow</span> and <span class="ex">a storm</span> are countable nouns.</p>
+  </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — adjective or -ing?</h3>
-    <p class="choice-hint">A describing word stays plain; a falling-weather action ends in <b>-ing</b></p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="windy">windy</button>
-      <button class="choice-option" data-choice-option="raining">raining</button>
-      <button class="choice-option" data-choice-option="snowing">snowing</button>
-      <button class="choice-option" data-choice-option="cloudy">cloudy</button>
-      <button class="choice-option" data-choice-option="hot">hot</button>
-      <button class="choice-option" data-choice-option="foggy">foggy</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected the rain and wind word families plus uncountable lightning from the grammar around each gap.">
+    <h3>Drill 1: choose the family member</h3>
+    <div class="choice-bank" aria-label="Weather word family choices">
+      <button class="choice-option" data-choice-option="rain">rain</button><button class="choice-option" data-choice-option="rainy">rainy</button><button class="choice-option" data-choice-option="raining">raining</button>
+      <button class="choice-option" data-choice-option="wind">wind</button><button class="choice-option" data-choice-option="windy">windy</button><button class="choice-option" data-choice-option="lightning">lightning</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Take an umbrella — it's <button class="choice-gap" data-choice-gap data-answer="raining" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(action · water falling)</span></span></div>
-    <div class="q"><span class="n">2</span><span>Hold your hat — it's very <button class="choice-gap" data-choice-gap data-answer="windy" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(adjective · a lot of wind)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Drive slowly — it's <button class="choice-gap" data-choice-gap data-answer="foggy" data-placeholder="choose">choose</button> on the road. &nbsp;<span class="contraction">(adjective · hard to see)</span></span></div>
-    <div class="q"><span class="n">4</span><span>The roads are white — it's <button class="choice-gap" data-choice-gap data-answer="snowing" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(action · snow falling)</span></span></div>
-    <div class="q"><span class="n">5</span><span>No sun today — it's gray and <button class="choice-gap" data-choice-gap data-answer="cloudy" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(adjective · full of clouds)</span></span></div>
-    <div class="q"><span class="n">6</span><span>Drink water — it's 35 degrees and <button class="choice-gap" data-choice-gap data-answer="hot" data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(adjective · high temperature)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The forecast gives a probability: There is a 60 percent chance of <button class="choice-gap" data-choice-gap data-answer="rain" data-hint="After chance of, use the weather noun rain." data-fix="There is a 60 percent chance of rain." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The report classifies the whole day: It will be a <button class="choice-gap" data-choice-gap data-answer="rainy" data-hint="Before the noun day, use the adjective rainy." data-fix="It will be a rainy day." data-placeholder="choose">choose</button> day.</span></div>
+    <div class="q"><span class="n">3</span><span>The camera shows water falling now: It’s <button class="choice-gap" data-choice-gap data-answer="raining" data-hint="The live event uses the -ing form." data-fix="It’s raining now." data-placeholder="choose">choose</button> now.</span></div>
+    <div class="q"><span class="n">4</span><span>The noun is the subject of the sentence: The <button class="choice-gap" data-choice-gap data-answer="wind" data-hint="After the, use the noun wind." data-fix="The wind is strong." data-placeholder="choose">choose</button> is strong.</span></div>
+    <div class="q"><span class="n">5</span><span>The weather adjective follows it is: It’s very <button class="choice-gap" data-choice-gap data-answer="windy" data-hint="After it’s very, use the adjective windy." data-fix="It’s very windy." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>The storm report uses the uncountable noun: There is some <button class="choice-gap" data-choice-gap data-answer="lightning" data-hint="Some introduces the uncountable weather noun lightning." data-fix="There is some lightning in the distance." data-placeholder="choose">choose</button> in the distance.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Match the season to its weather</h2>
+  <h2>Ask for the information you need</h2>
   <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>information wanted</th><th>natural question</th><th>possible answer</th></tr></thead>
+    <tbody>
+      <tr><td>broad current description</td><td><span class="ex">What’s the weather like?</span></td><td><span class="ex">It’s cool and cloudy.</span></td></tr>
+      <tr><td>same broad description</td><td><span class="ex">How’s the weather?</span></td><td><span class="ex">It’s warm and sunny.</span></td></tr>
+      <tr><td>one current event</td><td><span class="ex">Is it raining?</span></td><td><span class="ex">No, it isn’t.</span></td></tr>
+      <tr><td>a number and unit</td><td><span class="ex">What’s the temperature?</span></td><td><span class="ex">It’s 72 degrees Fahrenheit.</span></td></tr>
+      <tr><td>expected later conditions</td><td><span class="ex">What’s the forecast for Friday?</span></td><td><span class="ex">Cloudy, with a high of 68°F.</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line"><span class="ex">What’s X like?</span> asks for a description. The word <span class="ex">like</span> does not mean enjoy in this question. Do not combine the two question frames as <span class="ex">How is the weather like?</span></p>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each season to its typical weather</h3>
-    <p class="tile-target">Tap a season, then tap the weather that fits it</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched broad weather, one live event, a temperature, and a later forecast to four different questions.">
+    <h3>Drill 2: choose the question from the answer needed</h3>
+    <div class="choice-bank" aria-label="Weather question choices">
+      <button class="choice-option" data-choice-option="What’s the weather like?">What’s the weather like?</button>
+      <button class="choice-option" data-choice-option="Is it raining?">Is it raining?</button>
+      <button class="choice-option" data-choice-option="What’s the temperature?">What’s the temperature?</button>
+      <button class="choice-option" data-choice-option="What’s the forecast for Friday?">What’s the forecast for Friday?</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The caller wants a broad description of current conditions: <button class="choice-gap" data-choice-gap data-answer="What’s the weather like?" data-hint="A broad current description answers What’s the weather like?" data-fix="What’s the weather like? It’s cool and cloudy." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">2</span><span>The caller only needs to know whether water is falling now: <button class="choice-gap" data-choice-gap data-answer="Is it raining?" data-hint="A yes-or-no question with raining checks one current event." data-fix="Is it raining? No, it isn’t." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">3</span><span>The caller expects the answer “72 degrees Fahrenheit”: <button class="choice-gap" data-choice-gap data-answer="What’s the temperature?" data-hint="A number with Fahrenheit or Celsius answers a temperature question." data-fix="What’s the temperature? It’s 72 degrees Fahrenheit." data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">4</span><span>The caller needs expected conditions for a later day: <button class="choice-gap" data-choice-gap data-answer="What’s the forecast for Friday?" data-hint="Forecast asks about expected later conditions." data-fix="What’s the forecast for Friday? Cloudy, with a high of 68°F." data-placeholder="choose">choose</button></span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Read temperature and probability carefully</h2>
+  <div class="lead-rule"></div>
+  <div class="note">
+    <h3>Always make the unit clear across countries</h3>
+    <p>U.S. local forecasts commonly use <span class="ex">Fahrenheit</span>; most countries use <span class="ex">Celsius</span>. In an international conversation, include the unit: <span class="ex">72 degrees Fahrenheit</span> or <span class="ex">about 22 degrees Celsius</span>. Do not assume that <span class="ex">35 degrees</span> creates the same temperature picture for every listener.</p>
+    <p>Use singular after one and plural after other numbers: <span class="ex">1 degree</span>, <span class="ex">72 degrees</span>. <span class="ex">High</span> is the warmest temperature expected in the forecast period; <span class="ex">low</span> is the coolest.</p>
+  </div>
+  <div class="note">
+    <h3>A chance is not a promise</h3>
+    <p><span class="ex">A 60 percent chance of rain</span> is a probability estimate for a place and forecast period. It means rain is possible, not certain. It does not simply mean rain for 60 percent of the day. Forecast services may define and calculate the number in more detail.</p>
+  </div>
+
+  <h2>Seasons depend on place and system</h2>
+  <div class="lead-rule"></div>
+  <p>The four-season model does not produce the same month or weather picture everywhere.</p>
+  <ul>
+    <li>Under the four-season model, January is winter in the Northern Hemisphere and summer in the Southern Hemisphere.</li>
+    <li>Places near the equator may have less seasonal temperature change. Some local calendars focus on wet and dry seasons instead.</li>
+    <li>A season name does not guarantee one condition. A winter day can be sunny, and a summer day can be rainy.</li>
+  </ul>
+  <table>
+    <thead><tr><th>time frame</th><th>preposition pattern</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>season in general</td><td><span class="ex">in + season</span></td><td><span class="ex">The program opens in spring.</span></td></tr>
+      <tr><td>common U.S. alternative</td><td><span class="ex">in the + season</span></td><td><span class="ex">The program opens in the spring.</span></td></tr>
+      <tr><td>this, next, or last</td><td><span class="ex">no in</span></td><td><span class="ex">It opens next spring.</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">American English commonly uses <span class="ex">fall</span> for the season between summer and winter. <span class="ex">Autumn</span> is also understood and is especially common in British English.</p>
+
+  <div class="note">
+    <h3>Sound natural: short frames, clear message words</h3>
+    <p>In relaxed speech, <span class="ex">it is</span> becomes one-syllable <span class="ex">it’s</span>. Keep the weather message prominent: <span class="ex">It’s <strong>RAIN</strong>ing</span>, <span class="ex">It’s <strong>WIND</strong>y</span>, and <span class="ex">It’s <strong>SEV</strong>enty-two degrees</span>.</p>
+    <p><span class="ex">Weather</span> begins with a voiced <span class="ex">th</span> and sounds like <span class="ex"><strong>WEATH</strong>-er</span> in U.S. English. <span class="ex">Whether</span> often sounds the same but has a different spelling and meaning. <span class="ex">What’s the weather like?</span> links as <span class="ex">What’s-the <strong>WEATH</strong>er-like?</span></p>
+    <p>Common U.S. pronunciations include <span class="ex"><strong>TEM</strong>-pruh-cher</span> for <span class="ex">temperature</span>, <span class="ex"><strong>FAIR</strong>-en-height</span> for <span class="ex">Fahrenheit</span>, and <span class="ex"><strong>SEL</strong>-see-us</span> for <span class="ex">Celsius</span>. Careful speech may keep more sounds in <span class="ex">temperature</span>.</p>
+    <p>Keep word-family differences audible: <span class="ex">rain</span> has one syllable, while <span class="ex"><strong>RAIN</strong>-y</span> and <span class="ex"><strong>RAIN</strong>-ing</span> have two. The noun <span class="ex">wind</span> in weather uses the short vowel in <span class="ex">win</span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read condition, event, forecast-label, probability, and hemisphere listening check">
+    <h2>Listen: which weather meaning do you hear?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once with natural U.S. rhythm and once more slowly. Listen for adjective or event form, forecast labels, probability, and place. Open the script only after checking.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You distinguished a broad rainy condition, a live event, forecast high, probability, and opposite hemisphere seasons.">
+      <h3>Tutor-read listening check</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="a broad description of the day" data-hint="Rainy is an adjective describing the day as a whole." data-fix="It’s a rainy day gives a broad description of the day.">
+          <p class="quiz-question">1. What viewpoint does Clip 1 express?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a broad description of the day">a broad description of the day</button><button class="quiz-option" data-quiz-option="rain falling at this exact moment">rain falling at this exact moment</button><button class="quiz-option" data-quiz-option="a temperature number">a temperature number</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="rain falling at this exact moment" data-hint="Raining now focuses on a live event in progress." data-fix="It’s raining now means rain is falling at this exact moment.">
+          <p class="quiz-question">2. What viewpoint does Clip 2 express?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="rain falling at this exact moment">rain falling at this exact moment</button><button class="quiz-option" data-quiz-option="a broad description of the day">a broad description of the day</button><button class="quiz-option" data-quiz-option="a climate pattern">a climate pattern</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="the warmest expected temperature" data-hint="A forecast high identifies the warmest temperature expected in the period." data-fix="A high of 72 degrees Fahrenheit is the warmest expected temperature.">
+          <p class="quiz-question">3. What does Clip 3 report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the warmest expected temperature">the warmest expected temperature</button><button class="quiz-option" data-quiz-option="the current wind speed">the current wind speed</button><button class="quiz-option" data-quiz-option="the coolest expected temperature">the coolest expected temperature</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="rain is possible, not certain" data-hint="A 70 percent chance is a probability estimate, not a guarantee." data-fix="A 70 percent chance means rain is possible, not certain.">
+          <p class="quiz-question">4. What does Clip 4 communicate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="rain is possible, not certain">rain is possible, not certain</button><button class="quiz-option" data-quiz-option="rain is guaranteed all day">rain is guaranteed all day</button><button class="quiz-option" data-quiz-option="70 percent of the city is wet now">70 percent of the city is wet now</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="winter" data-hint="In the four-season model, January belongs to winter in the Northern Hemisphere." data-fix="For the fictional Northern Hemisphere city, January is winter.">
+          <p class="quiz-question">5. Which season is January in the fictional Northern Hemisphere city?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="winter">winter</button><button class="quiz-option" data-quiz-option="summer">summer</button><button class="quiz-option" data-quiz-option="the wet season">the wet season</button></div>
+        </div>
+        <div class="quiz-item" data-quiz-item data-answer="summer" data-hint="In the four-season model, January belongs to summer in the Southern Hemisphere." data-fix="For the fictional Southern Hemisphere city, January is summer.">
+          <p class="quiz-question">6. Which season is January in the fictional Southern Hemisphere city?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="summer">summer</button><button class="quiz-option" data-quiz-option="winter">winter</button><button class="quiz-option" data-quiz-option="the dry season">the dry season</button></div>
+        </div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">It’s a rainy day.</span></li>
+        <li><span class="ex">It’s raining now.</span></li>
+        <li><span class="ex">The forecast shows a high of 72 degrees Fahrenheit.</span></li>
+        <li><span class="ex">There is a 70 percent chance of rain.</span></li>
+        <li><span class="ex">In our Northern Hemisphere city, January is winter.</span></li>
+        <li><span class="ex">In our Southern Hemisphere city, January is summer.</span></li>
+      </ol>
+      <p>Stress the contrasting message words: <span class="ex"><strong>RAIN</strong>-y</span>, <span class="ex"><strong>RAIN</strong>-ing <strong>NOW</strong></span>, <span class="ex"><strong>HIGH</strong></span>, <span class="ex"><strong>CHANCE</strong></span>, <span class="ex"><strong>NORTH</strong>ern</span>, and <span class="ex"><strong>SOUTH</strong>ern</span>.</p>
+    </details>
+  </section>
+
+  <h2>Build meaning from a forecast card</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-game data-success-message="Correct. You matched current and later weather information, high and low temperatures, and rain probability to their forecast meanings.">
+    <h3>Drill 3: match each label to what it tells you</h3>
+    <p class="tile-target">Tap a forecast label, then tap its exact meaning.</p>
     <div class="tile-bank">
-      <button class="tile" data-tile="summer">summer</button>
-      <button class="tile" data-tile="winter">winter</button>
-      <button class="tile" data-tile="spring">spring</button>
-      <button class="tile" data-tile="fall">fall</button>
+      <button class="tile" data-tile="current">current conditions</button><button class="tile" data-tile="forecast">forecast</button><button class="tile" data-tile="high">high</button><button class="tile" data-tile="low">low</button><button class="tile" data-tile="chance">60% chance of rain</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="summer" data-placeholder="hot and sunny">hot and sunny</button>
-      <button class="slot" data-slot="winter" data-placeholder="cold and snowy">cold and snowy</button>
-      <button class="slot" data-slot="spring" data-placeholder="cool, with a lot of rain">cool, with a lot of rain</button>
-      <button class="slot" data-slot="fall" data-placeholder="cool and windy, leaves fall">cool and windy, leaves fall</button>
+      <button class="slot" data-slot="current" data-hint="Current conditions report what is observed or reported now." data-fix="Current conditions: weather now." data-placeholder="weather now">weather now</button>
+      <button class="slot" data-slot="forecast" data-hint="A forecast describes conditions expected later." data-fix="Forecast: expected later weather." data-placeholder="expected later weather">expected later weather</button>
+      <button class="slot" data-slot="high" data-hint="High is the warmest temperature expected in the period." data-fix="High: warmest expected temperature." data-placeholder="warmest expected temperature">warmest expected temperature</button>
+      <button class="slot" data-slot="low" data-hint="Low is the coolest temperature expected in the period." data-fix="Low: coolest expected temperature." data-placeholder="coolest expected temperature">coolest expected temperature</button>
+      <button class="slot" data-slot="chance" data-hint="A percentage chance expresses probability, not certainty or duration." data-fix="60% chance of rain: a probability estimate." data-placeholder="a probability estimate">a probability estimate</button>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-tiles>Check</button>
-      <button class="lesson-btn" data-reset-tiles>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-tiles>Check</button><button class="lesson-btn" data-reset-tiles>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Build the weather sentence</h2>
-  <div class="lead-rule"></div>
-
-  <div class="tile-game" data-tile-builder data-answer="it's sunny today">
-    <h3>Drill 3 — build the sentence</h3>
-    <p class="tile-target">The sun is out this morning. Build the sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="today">today</button>
-      <button class="tile" data-build-tile="it's">It's</button>
-      <button class="tile" data-build-tile="sunny">sunny</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="what’s the weather like there today" data-hint="Begin with what’s, name the weather, use like for description, then locate it with there today." data-fix="What’s the weather like there today?" data-success-message="Correct. The question asks for a broad description of current conditions in the fictional city.">
+    <h3>Drill 4: build the current-weather question</h3>
+    <p class="tile-target">A coordinator calls a partner at a fictional office in another city and wants a broad description now.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="today">today</button><button class="tile" data-build-tile="weather">weather</button><button class="tile" data-build-tile="what’s">What’s</button><button class="tile" data-build-tile="there">there</button><button class="tile" data-build-tile="like">like</button><button class="tile" data-build-tile="the">the</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="it's raining outside">
-    <h3>Drill 4 — build the action sentence</h3>
-    <p class="tile-target">Rain is falling right now. Use the <span class="ex">-ing</span> action form.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="raining">raining</button>
-      <button class="tile" data-build-tile="it's">It's</button>
-      <button class="tile" data-build-tile="outside">outside</button>
-    </div>
+  <div class="tile-game" data-tile-builder data-answer="what’s the forecast for friday" data-hint="Begin with what’s, use the forecast, and finish with for Friday." data-fix="What’s the forecast for Friday?" data-success-message="Correct. The question asks about expected conditions for the stated later day.">
+    <h3>Drill 5: build the later-weather question</h3>
+    <p class="tile-target">The coordinator has current conditions but needs expected conditions for Friday.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="friday">Friday</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="what’s">What’s</button><button class="tile" data-build-tile="for">for</button><button class="tile" data-build-tile="forecast">forecast</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="rain" data-fix="It's raining today." data-why="After It's we need an adjective (rainy) or an action (raining), never the bare word rain. The action form is raining.">
-    <h3>Drill 5 — fix the weather word</h3>
-    <p>Tap the word that is wrong. Rain is falling now.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="it's">It's</button>
-      <button class="error-choice" data-error-choice="rain">rain</button>
-      <button class="error-choice" data-error-choice="today">today.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="rain" data-hint="After it’s, a live falling event needs the -ing form." data-fix="It’s raining now." data-why="Rain is the noun or base verb. A weather event happening at this moment uses be plus raining." data-success-message="Correct. You changed the bare weather word into the live event form.">
+    <h3>Drill 6: repair the event form</h3>
+    <p>The camera shows water falling at this exact moment: “It’s rain now.” Tap the word to replace.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="it’s">It’s</button><button class="error-choice" data-error-choice="rain">rain</button><button class="error-choice" data-error-choice="now">now.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="on" data-fix="In summer it's hot." data-why="For seasons we use the preposition in, not on. We say in summer, in winter.">
-    <h3>Drill 6 — fix the preposition</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="on">On</button>
-      <button class="error-choice" data-error-choice="summer">summer</button>
-      <button class="error-choice" data-error-choice="it's">it's</button>
-      <button class="error-choice" data-error-choice="hot">hot.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="in" data-hint="This, next, and last go directly before a season with no in." data-fix="The fictional program starts next summer." data-why="Use in summer for the season in general, but use next summer without a preposition." data-success-message="Correct. You removed the unnecessary preposition before next summer.">
+    <h3>Drill 7: ordinary season or next season?</h3>
+    <p>The schedule names the following summer: “The fictional program starts in next summer.” Tap the extra word.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="program">The fictional program</button><button class="error-choice" data-error-choice="starts">starts</button><button class="error-choice" data-error-choice="in">in</button><button class="error-choice" data-error-choice="next-summer">next summer.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — say the weather, then reveal</h3>
-    <p>Read the cue and say the full sentence aloud first. Reveal only after you answer.</p>
+    <h3>Oral transform: keep the weather idea, change the viewpoint</h3>
+    <p>Say each complete response aloud before revealing it.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> the sun is out &nbsp;→&nbsp; It's + adjective</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>It's sunny.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> snow is falling now &nbsp;→&nbsp; It's + -ing</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>It's snowing.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> a lot of wind today &nbsp;→&nbsp; It's + adjective</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>It's windy.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> water is falling now &nbsp;→&nbsp; It's + -ing</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>It's raining.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> the season after summer, it's windy &nbsp;→&nbsp; In + season…</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>In fall it's windy.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> rain · probability in a forecast</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>There is a chance of rain.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> rain · broad description of the day</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>It’s a rainy day.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> rain · falling at this exact moment</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>It’s raining now.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> broad current description · ask</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>What’s the weather like?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> number and unit · ask</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>What’s the temperature?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> expected Friday conditions · ask</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>What’s the forecast for Friday?</strong></p></div>
     </div>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Read a fictional service forecast</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>The week’s forecast</h3>
-    <p><span class="ex">“Quick forecast for the week: Monday is sunny and warm. On Tuesday it’s cloudy, and on Wednesday it rains all day. It’s windy on Thursday. The weekend looks perfect, sunny with a clear sky.”</span></p>
+    <h3>Harbor City service desk, Tuesday at 8:00 a.m.</h3>
+    <p><span class="ex">Current conditions: cloudy, 61°F / 16°C, with no rain now. Tuesday forecast: high 68°F / 20°C, low 55°F / 13°C, and a 40 percent chance of rain after 3:00 p.m. Wednesday forecast: rainy, with a high of 64°F / 18°C. Under the posted service plan, Wednesday’s community market moves indoors.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real weather forecast.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You separated current conditions from forecast values and located the service change stated for Wednesday.">
+    <h3>Read, then choose the exact card information</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="rainy">
-        <p class="quiz-question">1. What is the weather on Wednesday?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="rainy">rainy</button><button class="quiz-option" data-quiz-option="sunny">sunny</button><button class="quiz-option" data-quiz-option="windy">windy</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="cloudy with no rain" data-hint="The current-conditions line names clouds and explicitly says no rain now." data-fix="At 8:00 a.m., it is cloudy with no rain.">
+        <p class="quiz-question">1. What are the current conditions at 8:00 a.m.?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="cloudy with no rain">cloudy with no rain</button><button class="quiz-option" data-quiz-option="rainy and 68°F">rainy and 68°F</button><button class="quiz-option" data-quiz-option="sunny and 55°F">sunny and 55°F</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Thursday">
-        <p class="quiz-question">2. Which day is windy?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Thursday">Thursday</button><button class="quiz-option" data-quiz-option="Monday">Monday</button><button class="quiz-option" data-quiz-option="Tuesday">Tuesday</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="68°F / 20°C" data-hint="The Tuesday forecast labels one value as the high." data-fix="Tuesday’s forecast high is 68°F / 20°C.">
+        <p class="quiz-question">2. What is Tuesday’s forecast high?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="68°F / 20°C">68°F / 20°C</button><button class="quiz-option" data-quiz-option="61°F / 16°C">61°F / 16°C</button><button class="quiz-option" data-quiz-option="55°F / 13°C">55°F / 13°C</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="sunny">
-        <p class="quiz-question">3. How is the weekend?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="sunny">sunny</button><button class="quiz-option" data-quiz-option="cloudy">cloudy</button><button class="quiz-option" data-quiz-option="rainy">rainy</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Wednesday’s community market" data-hint="The final sentence states which service moves indoors under the posted plan." data-fix="Wednesday’s community market moves indoors.">
+        <p class="quiz-question">3. Which service moves indoors under the posted plan?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Wednesday’s community market">Wednesday’s community market</button><button class="quiz-option" data-quiz-option="Tuesday’s service desk">Tuesday’s service desk</button><button class="quiz-option" data-quiz-option="Friday’s forecast office">Friday’s forecast office</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it safely and flexibly</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>The weather today:</b> Look outside and describe the weather where you live right now in two or three sentences. <span class="ex">It's cloudy and cool. It's not raining.</span></div>
-  <div class="prompt-card"><b>Your favorite season:</b> Say which season you like best and why, using <span class="ex">in + season</span>. <span class="ex">I like summer best. In summer it's hot and sunny, and I travel.</span></div>
-  <div class="prompt-card"><b>Weather and plans:</b> Pair the weather with an activity. <span class="ex">It's sunny, so I'll walk to work. It's snowing, so I'll stay home.</span></div>
-  <div class="prompt-card"><b>Small talk:</b> Practice the opener with the teacher. <span class="ex">What's the weather like there today? — It's warm and windy.</span></div>
-  <div class="prompt-card"><b>Pack a bag:</b> The teacher names a season or weather; you say one thing to wear or bring. <span class="ex">It's rainy → I'll take an umbrella. In winter → I'll wear a coat.</span></div>
+  <p class="note-line">You never need to disclose your real location, weather, climate, home conditions, clothing, health, mobility, work, travel, schedule, plans, finances, family, or access needs. Use the fictional forecast cards and service plans, invent details, or share personal information only when you freely choose. For real severe weather, follow official local alerts; this language lesson is not safety guidance.</p>
+  <div class="prompt-card"><b>Separate the times:</b> Use one fictional card to state current conditions, one live event that is or is not happening now, and one later forecast.</div>
+  <div class="prompt-card"><b>Change the word family:</b> Move from a noun phrase such as <span class="ex">a chance of rain</span> to <span class="ex">a rainy day</span> and then to <span class="ex">It’s raining now</span>.</div>
+  <div class="prompt-card"><b>Read the numbers responsibly:</b> Give a current temperature, forecast high, forecast low, and chance of rain. Include Fahrenheit or Celsius every time.</div>
+  <div class="prompt-card"><b>Compare fictional places:</b> Use supplied Northern Hemisphere, Southern Hemisphere, wet-season, and dry-season cards. Report only what each card states; do not guess climate from a country name.</div>
+  <div class="prompt-card"><b>Final production: give a fictional community weather bulletin for 45–60 seconds.</b> Include a broad current condition, one event happening or not happening now, a later forecast, a temperature with its unit, a rain probability interpreted as possible rather than certain, one place-specific season fact, the supplied service change, and one follow-up weather question.</div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Say the two patterns back</h3>
-    <p>Complete this aloud: “To describe the day I say <strong>It's</strong> + a describing word, like <span class="ex">It's ______</span>. For rain and snow happening now I say <strong>It's</strong> + a word ending in ______, like <span class="ex">It's ______</span>. For seasons I use the preposition ______.”</p>
-    <p>Then say one true sentence about the weather right now and one about your favorite season.</p>
+    <h3>Say the system back</h3>
+    <p>Complete this aloud: “Short-term conditions are ______; long-term patterns are ______. <span class="ex">Rain</span> is the noun, <span class="ex">rainy</span> is the ______, and <span class="ex">raining</span> focuses on an ______ in progress. A temperature needs a number and a ______.”</p>
+    <p>Then explain why January can be winter in one fictional city and summer in another, and why a 60 percent chance of rain is not a promise.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can describe the weather with It's + adjective and It's + -ing, name the four seasons, and use in + season.">
-    <h3>Final quiz — weather and seasons</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled weather word families, current and later viewpoints, temperature units, probability, and place-specific seasons.">
+    <h3>Final quiz: choose from the complete weather context</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="It's sunny.">
-        <p class="quiz-question">1. The sun is out and the sky is blue. Which is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="It's sunny.">It's sunny.</button><button class="quiz-option" data-quiz-option="It's sun.">It's sun.</button><button class="quiz-option" data-quiz-option="It's sunning.">It's sunning.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="We had bad weather all morning." data-hint="Weather is uncountable, so it does not take a in this meaning." data-fix="We had bad weather all morning.">
+        <p class="quiz-question">1. Which sentence uses the uncountable word weather correctly?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We had bad weather all morning.">We had bad weather all morning.</button><button class="quiz-option" data-quiz-option="We had a bad weather all morning.">We had a bad weather all morning.</button><button class="quiz-option" data-quiz-option="We had two bad weathers all morning.">We had two bad weathers all morning.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="It's raining.">
-        <p class="quiz-question">2. Water is falling from the sky right now. Which is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="It's raining.">It's raining.</button><button class="quiz-option" data-quiz-option="It's rain.">It's rain.</button><button class="quiz-option" data-quiz-option="It's rainy raining.">It's rainy raining.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="It’s raining." data-hint="The camera shows water falling at this exact moment, so use the event form." data-fix="The live event is: It’s raining.">
+        <p class="quiz-question">2. A live camera shows water falling right now. Which report fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="It’s raining.">It’s raining.</button><button class="quiz-option" data-quiz-option="It’s rain.">It’s rain.</button><button class="quiz-option" data-quiz-option="It’s a rain.">It’s a rain.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="winter">
-        <p class="quiz-question">3. The cold, snowy season is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="winter">winter</button><button class="quiz-option" data-quiz-option="summer">summer</button><button class="quiz-option" data-quiz-option="spring">spring</button><button class="quiz-option" data-quiz-option="fall">fall</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="It’s a rainy day." data-hint="The report classifies the whole day, including breaks between showers." data-fix="The broader description is: It’s a rainy day.">
+        <p class="quiz-question">3. Showers start and stop throughout Tuesday. Which broad description fits the whole day?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="It’s a rainy day.">It’s a rainy day.</button><button class="quiz-option" data-quiz-option="It’s rain all day.">It’s rain all day.</button><button class="quiz-option" data-quiz-option="It’s raining at every moment.">It’s raining at every moment.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="in">
-        <p class="quiz-question">4. ___ summer it's hot.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="in">In</button><button class="quiz-option" data-quiz-option="on">On</button><button class="quiz-option" data-quiz-option="at">At</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="What’s the temperature?" data-hint="The expected answer is a number plus Fahrenheit or Celsius." data-fix="What’s the temperature? It’s 72 degrees Fahrenheit.">
+        <p class="quiz-question">4. The caller needs the answer “72 degrees Fahrenheit.” Which question fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="What’s the temperature?">What’s the temperature?</button><button class="quiz-option" data-quiz-option="What’s the weather like?">What’s the weather like?</button><button class="quiz-option" data-quiz-option="Is it raining?">Is it raining?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="snowing">
-        <p class="quiz-question">5. Look — snow is falling! It's ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="snowing">snowing</button><button class="quiz-option" data-quiz-option="snow">snow</button><button class="quiz-option" data-quiz-option="snows">snows</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Rain is possible, but not certain." data-hint="A percentage chance is a probability estimate, not a guarantee." data-fix="A 60 percent chance means rain is possible, but not certain.">
+        <p class="quiz-question">5. The card shows a 60 percent chance of rain. Which interpretation is defensible?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Rain is possible, but not certain.">Rain is possible, but not certain.</button><button class="quiz-option" data-quiz-option="It will rain for exactly 60 percent of the day.">It will rain for exactly 60 percent of the day.</button><button class="quiz-option" data-quiz-option="Rain is guaranteed everywhere.">Rain is guaranteed everywhere.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="windy">
-        <p class="quiz-question">6. There is a lot of wind today. It's very ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="windy">windy</button><button class="quiz-option" data-quiz-option="winding">winding</button><button class="quiz-option" data-quiz-option="wind">wind</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="next winter" data-hint="Next goes directly before the season with no in." data-fix="The fictional program starts next winter.">
+        <p class="quiz-question">6. The schedule names the following winter: The fictional program starts ___.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="next winter">next winter</button><button class="quiz-option" data-quiz-option="in next winter">in next winter</button><button class="quiz-option" data-quiz-option="on next winter">on next winter</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="What's the weather like?">
-        <p class="quiz-question">7. You want to ask a friend about today's weather. Which question is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="What's the weather like?">What's the weather like?</button><button class="quiz-option" data-quiz-option="How is the weather like?">How is the weather like?</button><button class="quiz-option" data-quiz-option="What weather?">What weather?</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="summer" data-hint="Under the four-season model, January is summer in the Southern Hemisphere." data-fix="In the fictional Southern Hemisphere city, January is summer.">
+        <p class="quiz-question">7. The card uses the four-season model for a Southern Hemisphere city. Which season is January?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="summer">summer</button><button class="quiz-option" data-quiz-option="winter">winter</button><button class="quiz-option" data-quiz-option="fall">fall</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="fall">
-        <p class="quiz-question">8. The cool, windy season after summer, when leaves drop, is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="fall">fall</button><button class="quiz-option" data-quiz-option="spring">spring</button><button class="quiz-option" data-quiz-option="summer">summer</button><button class="quiz-option" data-quiz-option="winter">winter</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="We saw some lightning in the distance." data-hint="Lightning is normally uncountable in basic weather use, so some is natural." data-fix="We saw some lightning in the distance.">
+        <p class="quiz-question">8. Which sentence uses lightning naturally in a basic weather report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We saw some lightning in the distance.">We saw some lightning in the distance.</button><button class="quiz-option" data-quiz-option="We saw a lightning in the distance.">We saw a lightning in the distance.</button><button class="quiz-option" data-quiz-option="We saw two lightnings in the distance.">We saw two lightnings in the distance.</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check quiz</button><button class="lesson-btn" data-reset-quiz>Reset quiz</button></div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the word family, time viewpoint, forecast label, unit, probability, or season frame that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day weather word-family, forecast, and season retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a live rain event, the rain noun after chance of, and the Southern Hemisphere season.">
+      <h3>Choose the missing weather language before rereading</h3>
+      <div class="choice-bank" aria-label="Next-day weather choices">
+        <button class="choice-option" data-choice-option="raining">raining</button><button class="choice-option" data-choice-option="rainy">rainy</button>
+        <button class="choice-option" data-choice-option="rain">rain</button><button class="choice-option" data-choice-option="weather">weather</button>
+        <button class="choice-option" data-choice-option="summer">summer</button><button class="choice-option" data-choice-option="winter">winter</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The camera shows water falling at this exact moment: It’s <button class="choice-gap" data-choice-gap data-answer="raining" data-hint="An event visibly in progress uses the -ing form." data-fix="It’s raining at this exact moment." data-placeholder="choose">choose</button> at this exact moment.</span></div>
+      <div class="q"><span class="n">2</span><span>The forecast gives a probability: There is a chance of <button class="choice-gap" data-choice-gap data-answer="rain" data-hint="After chance of, use the weather noun rain." data-fix="There is a chance of rain." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>The card uses the four-season model for a Southern Hemisphere city: January is <button class="choice-gap" data-choice-gap data-answer="summer" data-hint="Northern and Southern Hemisphere seasons are opposite in the four-season model." data-fix="In this Southern Hemisphere city, January is summer." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="in" data-hint="Next goes directly before a season, without in." data-fix="The fictional program starts next summer." data-why="Use in summer for the season in general, but next summer has no preposition." data-success-message="Correct. You removed the preposition before next plus a season.">
+      <h3>Repair the next-season frame</h3>
+      <p>The schedule names the following summer: “The fictional program starts in next summer.” Tap the extra word.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="program">The fictional program</button><button class="error-choice" data-error-choice="starts">starts</button><button class="error-choice" data-error-choice="in">in</button><button class="error-choice" data-error-choice="next-summer">next summer.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, give one noun, adjective, and live-event rain sentence. Then ask for broad current weather, a temperature, and a later forecast. Finish with one Northern or Southern Hemisphere season fact.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>There is a chance of rain. It’s a rainy day. It’s raining now. What’s the weather like? What’s the temperature? What’s the forecast for Friday? In the four-season model, January is summer in the Southern Hemisphere.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

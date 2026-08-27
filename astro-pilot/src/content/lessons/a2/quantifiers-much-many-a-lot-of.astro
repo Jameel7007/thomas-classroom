@@ -1,392 +1,315 @@
 ---
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "much, many, a lot of · A2 Grammar · Curriculum Map",
+  "title": "Much, many, a lot of · A2 Grammar",
   "slug": "quantifiers-much-many-a-lot-of",
   "level": "A2",
   "topic": "Quantifiers: much / many / a lot of",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Ask and answer about quantity in real life: How many people are coming? , We don’t have much coffee left , and There are a lot of chairs.",
+  "description": "Choose quantity expressions from the noun phrase, amount, polarity, and register, including units, small quantities, excess, and natural short answers.",
   "sequence": 8,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "a2-exit"
-  ]
+  "prerequisites": ["a1/some-any-with-countable-and-uncountable-nouns", "a0/regular-plural-nouns"],
+  "related": ["a2/comparatives-and-superlatives"],
+  "assessments": ["a2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Countability by noun meaning, unit phrases, polarity tendencies, register, small and excessive quantities, agreement, U.S. speech, listening, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="50–60 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 8</p>
   <h1>Quantifiers <em>much, many, a lot of</em></h1>
-  <p class="standfirst">Ask and answer about quantity in real life: <span class="ex">How many people are coming?</span>, <span class="ex">We don’t have much coffee left</span>, and <span class="ex">There are a lot of chairs.</span></p>
+  <p class="standfirst">Package a quantity through the noun you choose: <span class="ex">How much water do we need? How many bottles do we need? We need a lot of water, but we don’t need many bottles.</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">50–60 min core</span>
+    <span class="tag">count nouns · noncount nouns · units</span>
     <span class="tag">much · many · a lot of</span>
-    <span class="tag">a few · a little</span>
-    <span class="tag">how much · how many</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Compare questions about people and questions about coffee.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Match much, many, and a lot of to the noun and the sentence.</span></div>
-    <div class="flow-step"><b>Build</b><span>Choose, type, read, and build quantity sentences.</span></div>
-    <div class="flow-step"><b>Use</b><span>Ask and answer how much and how many about your life.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Compare one supply through an amount noun and a countable unit.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose the noun meaning before quantity and register.</span></div>
+    <div class="flow-step"><b>Build</b><span>Control questions, short answers, small amounts, excess, and agreement.</span></div>
+    <div class="flow-step"><b>Use</b><span>Give a fictional event inventory and solve a supply problem.</span></div>
   </div>
 
-  <p class="note-line">Quantifiers answer one everyday question: how much is there? English splits the answer by one thing: can you count the noun, or do you measure it?</p>
+  <p class="note-line"><b>Can-do:</b> By the end, you can ask about an amount or number, switch between a substance and its countable unit, describe large, small, zero, and excessive quantities, choose a natural spoken or written form, and make the verb agree with the noun.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
-    <h3>Three quick checks from earlier lessons</h3>
-    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="some">some</button>
-      <button class="choice-option" data-choice-option="any">any</button>
-      <button class="choice-option" data-choice-option="There is">There is</button>
-      <button class="choice-option" data-choice-option="There are">There are</button>
-      <button class="choice-option" data-choice-option="’ve got">’ve got</button>
-      <button class="choice-option" data-choice-option="’s got">’s got</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>We need <button class="choice-gap" data-choice-gap data-answer="some" data-placeholder="choose">choose</button> tomatoes for the salad. &nbsp;<span class="contraction">(some / any, from A1)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> two banks on this street. &nbsp;<span class="contraction">(there is / there are, from A1)</span></span></div>
-    <div class="q"><span class="n">3</span><span>She <button class="choice-gap" data-choice-gap data-answer="’s got" data-placeholder="choose">choose</button> two sisters. &nbsp;<span class="contraction">(have got, from A1)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved some in a positive offer, any in a neutral question, and plural agreement with there are.">
+    <h3>Three checks from earlier lessons</h3>
+    <p class="choice-hint">Use the stated sentence purpose and the noun’s number.</p>
+    <div class="choice-bank" aria-label="Earlier quantity choices"><button class="choice-option" data-choice-option="some">some</button><button class="choice-option" data-choice-option="any">any</button><button class="choice-option" data-choice-option="There are">There are</button><button class="choice-option" data-choice-option="There is">There is</button><button class="choice-option" data-choice-option="a chair">a chair</button><button class="choice-option" data-choice-option="chairs">chairs</button></div>
+    <div class="q"><span class="n">1</span><span>The coordinator offers a positive quantity for the table: We have <button class="choice-gap" data-choice-gap data-answer="some" data-hint="Some is natural in this positive statement offering an available quantity." data-fix="We have some paper for the table." data-placeholder="choose">choose</button> paper for the table.</span></div>
+    <div class="q"><span class="n">2</span><span>The inventory question does not assume the answer: Do we have <button class="choice-gap" data-choice-gap data-answer="any" data-hint="Any is natural in this neutral yes-or-no question." data-fix="Do we have any extra badges?" data-placeholder="choose">choose</button> extra badges?</span></div>
+    <div class="q"><span class="n">3</span><span>The phrase <span class="ex">eighty chairs</span> is plural: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="A plural count noun takes there are." data-fix="There are eighty chairs in the hall." data-placeholder="choose">choose</button> eighty chairs in the hall.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Notice before the rule</h2>
+  <h2>Notice one supply packaged two ways</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A kitchen check before shopping</h3>
-    <p><span class="ex">"How many eggs do we have? Not many. And how much milk is there? Not much. But we’ve got a lot of rice, and there are a lot of tomatoes."</span></p>
+    <h3>Riverside workshop inventory</h3>
+    <p><b>Amount view:</b> <span class="ex">How much water do we have? We have a lot of water, about twenty-four liters.</span></p>
+    <p><b>Unit view:</b> <span class="ex">How many bottles of water do we have? We have forty-eight bottles.</span></p>
+    <p><b>Other supplies:</b> <span class="ex">We have a lot of chairs. We don’t have many printed maps. We have only a little time before the doors open.</span></p>
     <ul>
-      <li>Which word goes with <strong>eggs</strong>, a noun you can count one by one?</li>
-      <li>Which word goes with <strong>milk</strong>, a noun you measure?</li>
-      <li>Which phrase appears in the positive sentences, with both kinds of noun?</li>
+      <li>Does the real-world supply change between <span class="ex">water</span> and <span class="ex">bottles of water</span>?</li>
+      <li>Which noun asks for an amount? Which noun asks for a number of units?</li>
+      <li>Which expressions describe a large quantity, a small number, and a small amount?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check: choose the pattern</h3>
-    <p class="choice-hint">Questions and negatives take <b>much</b> or <b>many</b>. Positive sentences take <b>a lot of</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="much">much</button>
-      <button class="choice-option" data-choice-option="many">many</button>
-      <button class="choice-option" data-choice-option="a lot of">a lot of</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>How <button class="choice-gap" data-choice-gap data-answer="many" data-placeholder="choose">choose</button> people are coming? &nbsp;<span class="contraction">(question, countable)</span></span></div>
-    <div class="q"><span class="n">2</span><span>How <button class="choice-gap" data-choice-gap data-answer="much" data-placeholder="choose">choose</button> coffee do we have? &nbsp;<span class="contraction">(question, uncountable)</span></span></div>
-    <div class="q"><span class="n">3</span><span>We’ve got <button class="choice-gap" data-choice-gap data-answer="a lot of" data-placeholder="choose">choose</button> chairs. &nbsp;<span class="contraction">(positive)</span></span></div>
-    <div class="q"><span class="n">4</span><span>There isn’t <button class="choice-gap" data-choice-gap data-answer="much" data-placeholder="choose">choose</button> juice. &nbsp;<span class="contraction">(negative, uncountable)</span></span></div>
-    <div class="q"><span class="n">5</span><span>Do we need <button class="choice-gap" data-choice-gap data-answer="many" data-placeholder="choose">choose</button> more plates? &nbsp;<span class="contraction">(question, countable)</span></span></div>
-    <div class="q"><span class="n">6</span><span>There’s <button class="choice-gap" data-choice-gap data-answer="a lot of" data-placeholder="choose">choose</button> food already. &nbsp;<span class="contraction">(positive)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified the count noun, noncount noun, countable unit, large-quantity phrase, nounless short answer, and written many pattern.">
+    <h3>Discovery check: identify what controls the choice</h3>
+    <div class="choice-bank" aria-label="Countability and quantity choices"><button class="choice-option" data-choice-option="plural count noun">plural count noun</button><button class="choice-option" data-choice-option="noncount noun">noncount noun</button><button class="choice-option" data-choice-option="countable unit">countable unit</button><button class="choice-option" data-choice-option="works with both noun types">works with both noun types</button><button class="choice-option" data-choice-option="drops of because no noun follows">drops of because no noun follows</button><button class="choice-option" data-choice-option="a natural positive written pattern">a natural positive written pattern</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">How many chairs...?</span>, <span class="ex">chairs</span> is a <button class="choice-gap" data-choice-gap data-answer="plural count noun" data-hint="You can count one chair, two chairs, and three chairs." data-fix="Chairs is a plural count noun." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">How much water...?</span>, <span class="ex">water</span> names the substance as a <button class="choice-gap" data-choice-gap data-answer="noncount noun" data-hint="Water is being measured as an undivided amount, not counted as separate items." data-fix="Water is a noncount noun in How much water...?" data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">How many bottles of water...?</span>, <span class="ex">bottles</span> provides a <button class="choice-gap" data-choice-gap data-answer="countable unit" data-hint="The bottles divide the water into separate units that can be counted." data-fix="Bottles provides a countable unit for the water." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">A lot of chairs</span> and <span class="ex">a lot of water</span> show that <span class="ex">a lot of</span> <button class="choice-gap" data-choice-gap data-answer="works with both noun types" data-hint="A lot of can come before plural count nouns and noncount nouns." data-fix="A lot of works with both noun types." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>After <span class="ex">How many maps do we have?</span>, the short answer <span class="ex">A lot</span> <button class="choice-gap" data-choice-gap data-answer="drops of because no noun follows" data-hint="Of belongs before a following noun; the nounless short answer is a lot." data-fix="A lot drops of because no noun follows." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>A report says <span class="ex">Many participants used the digital map</span>. This is <button class="choice-gap" data-choice-gap data-answer="a natural positive written pattern" data-hint="Many is not restricted to questions and negatives; it is common in positive written summaries." data-fix="Many participants used the digital map is a natural positive written pattern." data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The foundation: count it or measure it</h2>
+  <h2>Get to the root: grammar packages the quantity</h2>
   <div class="lead-rule"></div>
-  <p>You met this split in the A1 lesson on <span class="ex">some</span> and <span class="ex">any</span>. Every quantifier choice in this lesson starts with the same question about the noun.</p>
+  <p>Countability is not simply a physical property of an object. It belongs to the noun meaning the speaker chooses. A count noun packages separate units. A noncount noun packages a substance, activity, or idea as an amount.</p>
   <table>
-    <thead><tr><th>type of noun</th><th>examples</th><th>the test</th></tr></thead>
+    <thead><tr><th>package</th><th>useful question</th><th>examples</th></tr></thead>
     <tbody>
-      <tr><td><b>countable</b></td><td>cup → cups, chair → chairs, person → people</td><td><span class="contraction">You can say one cup, two cups, three cups.</span></td></tr>
-      <tr><td><b>uncountable</b></td><td>coffee, milk, time, money, work, traffic</td><td><span class="contraction">No plural form. You measure it: some coffee, a cup of coffee.</span></td></tr>
+      <tr><td>separate countable units</td><td><span class="ex">How many...?</span></td><td><span class="ex">chairs, guests, bottles, pieces, cups</span></td></tr>
+      <tr><td>an undivided amount</td><td><span class="ex">How much...?</span></td><td><span class="ex">water, time, information, equipment, advice</span></td></tr>
     </tbody>
   </table>
+  <p>A unit phrase changes the grammatical package: <span class="ex">much advice</span> but <span class="ex">many pieces of advice</span>; <span class="ex">much furniture</span> but <span class="ex">many pieces of furniture</span>; <span class="ex">much water</span> but <span class="ex">many bottles of water</span>. The first noun after the quantifier controls <span class="ex">much</span> or <span class="ex">many</span>.</p>
+  <p class="note-line">Do not add a regular plural ending to the general noncount meanings in this lesson. Use <span class="ex">information</span>, <span class="ex">advice</span>, <span class="ex">equipment</span>, and <span class="ex">furniture</span>, not <span class="ex">informations</span>, <span class="ex">advices</span>, <span class="ex">equipments</span>, or <span class="ex">furnitures</span>. Count units when needed: <span class="ex">two pieces of information</span>, <span class="ex">three items of equipment</span>.</p>
 
-  <h2>The system: much, many, and a lot of</h2>
-  <div class="lead-rule"></div>
-  <p>Use <strong>many</strong> with countable nouns and <strong>much</strong> with uncountable nouns, mainly in questions and negatives. Use <strong>a lot of</strong> with both, especially in positive sentences.</p>
-  <table>
-    <thead><tr><th>sentence type</th><th>countable (cups, people)</th><th>uncountable (coffee, time)</th></tr></thead>
-    <tbody>
-      <tr><td><b>question</b></td><td>How <b>many</b> chairs do we need?</td><td>How <b>much</b> coffee is left?</td></tr>
-      <tr><td><b>negative</b></td><td>We don’t have <b>many</b> cups.</td><td>There isn’t <b>much</b> milk.</td></tr>
-      <tr><td><b>positive</b></td><td>We have <b>a lot of</b> chairs.</td><td>We have <b>a lot of</b> food.</td></tr>
-    </tbody>
-  </table>
-  <p class="note-line">In everyday positive sentences, <span class="ex">a lot of</span> sounds more natural than <span class="ex">much</span> or <span class="ex">many</span>. Say <span class="ex">I have a lot of work</span>, not <span class="ex">I have much work</span>.</p>
+  <h3>One noun can change its package and meaning</h3>
+  <p><span class="ex">Coffee</span> is noncount when it means the drink as a substance: <span class="ex">We don’t have much coffee.</span> In a café order, <span class="ex">two coffees</span> means two servings or cups. <span class="ex">Paper</span> can mean material, while <span class="ex">two papers</span> can mean two documents or articles. The plural is possible when the meaning becomes countable.</p>
 
-  <h2>Get to the root: counting and measuring</h2>
-  <div class="lead-rule"></div>
-  <p>Each word thinks about quantity in a different way. <span class="ex">Many</span> counts units: one chair, two chairs, three chairs. <span class="ex">Much</span> measures an amount: you do not count coffee or time piece by piece, you ask how big the amount is. <span class="ex">A lot of</span> does not care about the difference at all. It simply means “a large quantity,” and that is exactly why it works with both kinds of noun.</p>
-  <table>
-    <thead><tr><th>word</th><th>how it thinks</th><th>works with</th><th>example</th></tr></thead>
-    <tbody>
-      <tr><td><b>many</b></td><td>counts units</td><td>plural countable nouns</td><td><span class="contraction">many cups, many people</span></td></tr>
-      <tr><td><b>much</b></td><td>measures an amount</td><td>uncountable nouns</td><td><span class="contraction">much time, much coffee</span></td></tr>
-      <tr><td><b>a lot of</b></td><td>just says “a large quantity”</td><td>both</td><td><span class="contraction">a lot of cups, a lot of coffee</span></td></tr>
-    </tbody>
-  </table>
-  <div class="thinking-card">
-    <h3>Follow the noun, not the thing</h3>
-    <p><span class="ex">How much money do you have? How many dollars do you have?</span></p>
-    <p>You can count dollars, but <span class="ex">money</span> itself is uncountable in English. The grammar follows the noun you choose, not the object in the world. This is why the first question a quantifier asks is always: what kind of noun comes next?</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You followed the chosen noun meaning through people, substances, units, advice, pieces, and servings.">
+    <h3>Drill 1: follow the noun, not the real-world object</h3>
+    <div class="choice-bank" aria-label="Noun-package choices"><button class="choice-option" data-choice-option="many guests">many guests</button><button class="choice-option" data-choice-option="much water">much water</button><button class="choice-option" data-choice-option="many bottles">many bottles</button><button class="choice-option" data-choice-option="much advice">much advice</button><button class="choice-option" data-choice-option="many pieces of advice">many pieces of advice</button><button class="choice-option" data-choice-option="two coffees">two coffees</button></div>
+    <div class="q"><span class="n">1</span><span>The registration list counts separate people: How <button class="choice-gap" data-choice-gap data-answer="many guests" data-hint="Guests is a plural count noun for separate people." data-fix="How many guests are registered?" data-placeholder="choose">choose</button> are registered?</span></div>
+    <div class="q"><span class="n">2</span><span>The coordinator asks for the total amount before choosing containers: How <button class="choice-gap" data-choice-gap data-answer="much water" data-hint="Water names the substance as an amount." data-fix="How much water do we need?" data-placeholder="choose">choose</button> do we need?</span></div>
+    <div class="q"><span class="n">3</span><span>The coordinator now counts the separate containers: How <button class="choice-gap" data-choice-gap data-answer="many bottles" data-hint="Bottles is the plural countable unit." data-fix="How many bottles do we need?" data-placeholder="choose">choose</button> do we need?</span></div>
+    <div class="q"><span class="n">4</span><span>The trainer asks about the general amount, without dividing it into suggestions: How <button class="choice-gap" data-choice-gap data-answer="much advice" data-hint="Advice is noncount when presented as a general amount." data-fix="How much advice should the guide include?" data-placeholder="choose">choose</button> should the guide include?</span></div>
+    <div class="q"><span class="n">5</span><span>The editor counts three separate suggestions: How <button class="choice-gap" data-choice-gap data-answer="many pieces of advice" data-hint="Pieces creates separate countable units of advice." data-fix="How many pieces of advice are in the guide?" data-placeholder="choose">choose</button> are in the guide?</span></div>
+    <div class="q"><span class="n">6</span><span>A volunteer orders two separate servings: At the café counter, <button class="choice-gap" data-choice-gap data-answer="two coffees" data-hint="In a café order, coffees can mean separate servings." data-fix="Two coffees are waiting at the café counter." data-placeholder="choose">choose</button> are waiting.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1: choose much, many, or a lot of</h3>
-    <p class="choice-hint">In this drill, use <b>much</b> or <b>many</b> in questions and negatives, and <b>a lot of</b> in positive sentences. Let the noun decide between much and many.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="much">much</button>
-      <button class="choice-option" data-choice-option="many">many</button>
-      <button class="choice-option" data-choice-option="a lot of">a lot of</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>How <button class="choice-gap" data-choice-gap data-answer="much" data-placeholder="choose">choose</button> time do we have before the meeting?</span></div>
-    <div class="q"><span class="n">2</span><span>Do you know <button class="choice-gap" data-choice-gap data-answer="many" data-placeholder="choose">choose</button> people in this neighborhood?</span></div>
-    <div class="q"><span class="n">3</span><span>She gets <button class="choice-gap" data-choice-gap data-answer="a lot of" data-placeholder="choose">choose</button> emails every day.</span></div>
-    <div class="q"><span class="n">4</span><span>We don’t have <button class="choice-gap" data-choice-gap data-answer="much" data-placeholder="choose">choose</button> milk left.</span></div>
-    <div class="q"><span class="n">5</span><span>How <button class="choice-gap" data-choice-gap data-answer="many" data-placeholder="choose">choose</button> chairs do we need for Friday?</span></div>
-    <div class="q"><span class="n">6</span><span>They do <button class="choice-gap" data-choice-gap data-answer="a lot of" data-placeholder="choose">choose</button> work in the summer.</span></div>
-    <div class="q"><span class="n">7</span><span>Is there <button class="choice-gap" data-choice-gap data-answer="much" data-placeholder="choose">choose</button> traffic in the morning?</span></div>
-    <div class="q"><span class="n">8</span><span>He doesn’t take <button class="choice-gap" data-choice-gap data-answer="many" data-placeholder="choose">choose</button> photos on vacation.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <h2>Choose quantity, sentence environment, and register</h2>
+  <div class="lead-rule"></div>
+  <table>
+    <thead><tr><th>form</th><th>noun type</th><th>common use</th></tr></thead>
+    <tbody>
+      <tr><td><b>many</b></td><td>plural count nouns</td><td><span class="ex">How many chairs? We don’t have many. Many guests arrived.</span></td></tr>
+      <tr><td><b>much</b></td><td>noncount nouns</td><td><span class="ex">How much time? We don’t have much. Too much time.</span></td></tr>
+      <tr><td><b>a lot of / lots of</b></td><td>both noun types</td><td><span class="ex">a lot of chairs, lots of time</span></td></tr>
+    </tbody>
+  </table>
+  <p>In everyday positive U.S. conversation, <span class="ex">a lot of</span> or informal <span class="ex">lots of</span> is usually more natural than plain positive <span class="ex">much</span>: <span class="ex">We have a lot of time</span>, not usually <span class="ex">We have much time</span>. Positive <span class="ex">many</span> is normal, especially in writing and more formal speech: <span class="ex">Many participants completed the survey.</span></p>
+  <p class="note-line">These are tendencies, not sentence-type laws. <span class="ex">A lot of</span> also appears in questions and negatives: <span class="ex">Do we have a lot of time? We don’t have a lot of time.</span> <span class="ex">Much</span> is natural in positive phrases with words such as <span class="ex">too, so</span>, and <span class="ex">as</span>: <span class="ex">too much noise, so much work, as much time as we need</span>.</p>
+
+  <h3><em>A lot of</em> before a noun; <em>a lot</em> without one</h3>
+  <p>Use <span class="ex">of</span> when a noun follows: <span class="ex">We need a lot of chairs.</span> Drop <span class="ex">of</span> when the noun is understood: <span class="ex">How many chairs do we need? A lot.</span></p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected question forms, conversational and written positives, a flexible a-lot-of question, and a nounless short answer.">
+    <h3>Drill 2: choose the requested environment and register</h3>
+    <div class="choice-bank" aria-label="Quantity and register choices"><button class="choice-option" data-choice-option="many">many</button><button class="choice-option" data-choice-option="much">much</button><button class="choice-option" data-choice-option="a lot of">a lot of</button><button class="choice-option" data-choice-option="Many">Many</button><button class="choice-option" data-choice-option="a lot">a lot</button><button class="choice-option" data-choice-option="lots">lots</button></div>
+    <div class="q"><span class="n">1</span><span>Ask for the exact number on the registration list: How <button class="choice-gap" data-choice-gap data-answer="many" data-hint="Guests is countable, and How many asks for a number." data-fix="How many guests are registered?" data-placeholder="choose">choose</button> guests are registered?</span></div>
+    <div class="q"><span class="n">2</span><span>Ask for the amount of setup time: How <button class="choice-gap" data-choice-gap data-answer="much" data-hint="Time is noncount in this amount question." data-fix="How much setup time do we have?" data-placeholder="choose">choose</button> setup time do we have?</span></div>
+    <div class="q"><span class="n">3</span><span>Use the neutral everyday positive form for a large chair quantity: We have <button class="choice-gap" data-choice-gap data-answer="a lot of" data-hint="A lot of is natural before a plural count noun in everyday positive speech." data-fix="We have a lot of chairs." data-placeholder="choose">choose</button> chairs.</span></div>
+    <div class="q"><span class="n">4</span><span>Begin a written summary with the requested positive count form: <button class="choice-gap" data-choice-gap data-answer="Many" data-hint="Positive many is natural in this written summary." data-fix="Many participants used the digital map." data-placeholder="choose">choose</button> participants used the digital map.</span></div>
+    <div class="q"><span class="n">5</span><span>The coordinator expects that the answer may be a large amount and asks: Do we have <button class="choice-gap" data-choice-gap data-answer="a lot of" data-hint="A lot of is possible in a question and fits the expected large-amount contrast." data-fix="Do we have a lot of time, or only ten minutes?" data-placeholder="choose">choose</button> time, or only ten minutes?</span></div>
+    <div class="q"><span class="n">6</span><span>The noun <span class="ex">chairs</span> is already understood: “How many do we need?” “<button class="choice-gap" data-choice-gap data-answer="a lot" data-hint="Without a following noun, use a lot without of." data-fix="How many chairs do we need? A lot." data-placeholder="choose">choose</button>.”</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Asking about quantity: <em>How much…? How many…?</em></h2>
+  <h2>Place the quantity on a useful scale</h2>
   <div class="lead-rule"></div>
-  <p>These two question frames run half of daily life: shopping, cooking, planning, and travel. The answer is often short and drops the noun completely.</p>
+  <table>
+    <thead><tr><th>meaning</th><th>count nouns</th><th>noncount nouns</th></tr></thead>
+    <tbody>
+      <tr><td>zero</td><td><span class="ex">no chairs / not any chairs</span></td><td><span class="ex">no water / not any water</span></td></tr>
+      <tr><td>small but more than zero</td><td><span class="ex">a few chairs</span></td><td><span class="ex">a little water</span></td></tr>
+      <tr><td>smaller than needed or expected</td><td><span class="ex">few chairs / not many chairs</span></td><td><span class="ex">little water / not much water</span></td></tr>
+      <tr><td>large</td><td><span class="ex">many chairs / a lot of chairs</span></td><td><span class="ex">a lot of water</span></td></tr>
+      <tr><td>more than wanted or acceptable</td><td><span class="ex">too many chairs</span></td><td><span class="ex">too much water</span></td></tr>
+    </tbody>
+  </table>
+  <p><span class="ex">A few</span> and <span class="ex">a little</span> mean “some, more than zero” and can sound positive: <span class="ex">We have a few extra chairs, so everyone can sit.</span> Bare <span class="ex">few</span> and <span class="ex">little</span> emphasize a shortage and can sound formal. In everyday U.S. conversation, <span class="ex">not many</span> and <span class="ex">not much</span> are often more natural: <span class="ex">We don’t have many chairs. We don’t have much time.</span></p>
+  <p class="note-line"><span class="ex">Too many</span> and <span class="ex">too much</span> do not simply mean “a large quantity.” They mean the quantity passes a limit for the situation. Seventy chairs can be a lot but not too many in a hall for eighty people.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished useful small quantities, shortages, and excessive countable and noncount quantities.">
+    <h3>Drill 3: use the consequence to choose the quantity</h3>
+    <div class="choice-bank" aria-label="Quantity-scale choices"><button class="choice-option" data-choice-option="a few">a few</button><button class="choice-option" data-choice-option="a little">a little</button><button class="choice-option" data-choice-option="few">few</button><button class="choice-option" data-choice-option="little">little</button><button class="choice-option" data-choice-option="too many">too many</button><button class="choice-option" data-choice-option="too much">too much</button></div>
+    <div class="q"><span class="n">1</span><span>Four extra chairs are enough for the four late guests: We have <button class="choice-gap" data-choice-gap data-answer="a few" data-hint="A few means a small count above zero, and the context says the chairs are enough." data-fix="We have a few extra chairs, so all four late guests can sit." data-placeholder="choose">choose</button> extra chairs.</span></div>
+    <div class="q"><span class="n">2</span><span>Ten minutes is a small amount, but it is enough for the short check: We have <button class="choice-gap" data-choice-gap data-answer="a little" data-hint="A little means a small noncount amount above zero." data-fix="We have a little time, enough for the short check." data-placeholder="choose">choose</button> time.</span></div>
+    <div class="q"><span class="n">3</span><span>Only two maps remain for seventy-two guests, so the coordinator emphasizes the shortage: <button class="choice-gap" data-choice-gap data-answer="few" data-hint="Bare few emphasizes that the small count is insufficient." data-fix="Few printed maps remain, so display the digital map." data-placeholder="choose">choose</button> printed maps remain.</span></div>
+    <div class="q"><span class="n">4</span><span>The doors open in one minute, so a formal announcement emphasizes the shortage: <button class="choice-gap" data-choice-gap data-answer="little" data-hint="Bare little emphasizes an insufficient noncount amount and suits the formal announcement." data-fix="Little setup time remains, so stop adding decorations." data-placeholder="choose">choose</button> setup time remains.</span></div>
+    <div class="q"><span class="n">5</span><span>The aisle holds ten tables safely, but the plan places twelve there: There are <button class="choice-gap" data-choice-gap data-answer="too many" data-hint="Tables is countable, and twelve passes the stated safe limit of ten." data-fix="There are too many tables in the aisle." data-placeholder="choose">choose</button> tables in the aisle.</span></div>
+    <div class="q"><span class="n">6</span><span>The container holds twenty liters, but the order sends twenty-four: There is <button class="choice-gap" data-choice-gap data-answer="too much" data-hint="Water is noncount, and twenty-four liters passes the twenty-liter limit." data-fix="There is too much water for the container." data-placeholder="choose">choose</button> water for the container.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Let the noun control agreement</h2>
+  <div class="lead-rule"></div>
+  <p>The quantifier does not decide whether the verb is singular or plural. The noun does: <span class="ex">A lot of chairs are ready</span>, but <span class="ex">A lot of equipment is ready</span>. The same contrast appears in questions: <span class="ex">How many bottles are left?</span> and <span class="ex">How much water is left?</span></p>
   <table>
     <thead><tr><th>question</th><th>natural short answers</th></tr></thead>
     <tbody>
-      <tr><td>How <b>many</b> people are coming?</td><td><span class="contraction">A lot. / Not many. / Just a few.</span></td></tr>
-      <tr><td>How <b>much</b> coffee do we have?</td><td><span class="contraction">A lot. / Not much. / Just a little.</span></td></tr>
+      <tr><td><span class="ex">How many maps are left?</span></td><td><span class="ex">A lot. / Not many. / A few. / None.</span></td></tr>
+      <tr><td><span class="ex">How much time is left?</span></td><td><span class="ex">A lot. / Not much. / A little. / None.</span></td></tr>
     </tbody>
   </table>
 
-  <h3>Small amounts: <em>a few</em> and <em>a little</em></h3>
-  <p>For a small quantity, English keeps the same split. <span class="ex">A few</span> counts a small number; <span class="ex">a little</span> measures a small amount. Both mean “some, not zero.”</p>
-  <table>
-    <thead><tr><th>small amount</th><th>use with</th><th>example</th></tr></thead>
-    <tbody>
-      <tr><td><b>a few</b></td><td>plural countable nouns</td><td><span class="contraction">a few cups, a few friends, a few minutes</span></td></tr>
-      <tr><td><b>a little</b></td><td>uncountable nouns</td><td><span class="contraction">a little milk, a little time, a little sugar</span></td></tr>
-    </tbody>
-  </table>
-  <p class="note-line">For excess, add <span class="ex">too</span>: <span class="ex">too many emails</span> with countable nouns, <span class="ex">too much noise</span> with uncountable nouns. <span class="ex">Too</span> means more than you want.</p>
+  <h2>Sound natural: link the frame, stress the quantity or noun</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">How many</span> forms one question frame before a plural noun: <span class="ex">How many <strong>GUESTS</strong>?</span> <span class="ex">How much</span> links before a noncount noun: <span class="ex">How much <strong>TIME</strong>?</span> In neutral questions, the noun often carries the most useful stress. Stress <span class="ex">many</span> or <span class="ex">much</span> when correcting the size or type of quantity.</p>
+  <p>In connected U.S. speech, <span class="ex">a lot of</span> often sounds like /ə ˈlɑɾəv/, with a quick flap in <span class="ex">lot</span> and weak <span class="ex">of</span>. Informal <span class="ex">lots of</span> links as /ˈlɑtsəv/. Keep <span class="ex">of</span> before a noun even when it is weak: <span class="ex">a lot of chairs</span>. Drop it only when the noun is absent: <span class="ex">We need a lot.</span></p>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type much, many, a few, or a little</h3>
-    <p class="choice-hint">Type one of these four: <b>much</b>, <b>many</b>, <b>a few</b>, or <b>a little</b>. Check the noun first.</p>
-    <div class="q"><span class="n">1</span><span>How <input class="answer-input" data-answer="much" aria-label="answer 1" /> money do we need for the tickets?</span></div>
-    <div class="q"><span class="n">2</span><span>How <input class="answer-input" data-answer="many" aria-label="answer 2" /> people work in your office?</span></div>
-    <div class="q"><span class="n">3</span><span>I only need <input class="answer-input" data-answer="a few" aria-label="answer 3" /> minutes to get ready.</span></div>
-    <div class="q"><span class="n">4</span><span>There’s <input class="answer-input" data-answer="a little" aria-label="answer 4" /> milk in the fridge, enough for one coffee.</span></div>
-    <div class="q"><span class="n">5</span><span>We don’t have <input class="answer-input" data-answer="many" aria-label="answer 5" /> cups, so bring yours.</span></div>
-    <div class="q"><span class="n">6</span><span>I don’t have <input class="answer-input" data-answer="much" aria-label="answer 6" /> energy after work.</span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-answers>Check</button>
-      <button class="lesson-btn" data-reset-answers>Reset</button>
+  <section data-lesson-extension="Tutor-read count question, amount question, large quantity, useful small count, shortage, and countable-serving listening check">
+    <h2>Listen: what quantity package do you hear?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional inventory line once naturally and once more slowly. Listen for the noun, unit, quantity, and consequence. Open the script only after checking.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a count question, amount question, linked large quantity, useful small count, shortage, and countable serving meaning.">
+      <h3>Tutor-read listening check</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="the number of chairs" data-hint="How many plus plural chairs asks for a number of separate units." data-fix="How many chairs are ready? asks for the number of chairs."><p class="quiz-question">1. What information does Clip 1 request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the number of chairs">the number of chairs</button><button class="quiz-option" data-quiz-option="the weight of every chair">the weight of every chair</button><button class="quiz-option" data-quiz-option="the amount of floor space">the amount of floor space</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the total amount of water" data-hint="How much plus noncount water asks for the total amount." data-fix="How much water do we have? asks for the total amount of water."><p class="quiz-question">2. What does Clip 2 ask about?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the total amount of water">the total amount of water</button><button class="quiz-option" data-quiz-option="the number of empty bottles">the number of empty bottles</button><button class="quiz-option" data-quiz-option="the price of one map">the price of one map</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="a large information quantity" data-hint="A lot of modifies noncount information and describes a large quantity." data-fix="The guide contains a lot of information, so Clip 3 describes a large information quantity."><p class="quiz-question">3. What does Clip 3 say about the guide?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a large information quantity">a large information quantity</button><button class="quiz-option" data-quiz-option="exactly one piece of information">exactly one piece of information</button><button class="quiz-option" data-quiz-option="no useful information">no useful information</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="some badges remain and the number is enough" data-hint="A few means a small count above zero; the rest of the line says it is enough." data-fix="A few extra badges remain, and the line says the number is enough."><p class="quiz-question">4. What does <span class="ex">a few extra badges</span> mean in Clip 4?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="some badges remain and the number is enough">some badges remain and the number is enough</button><button class="quiz-option" data-quiz-option="no badges remain">no badges remain</button><button class="quiz-option" data-quiz-option="the badge count passes a limit">the badge count passes a limit</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the map count is insufficient" data-hint="Bare few emphasizes a shortage, and the speaker asks for the digital map." data-fix="Few printed maps remain, so the map count is insufficient."><p class="quiz-question">5. Why does the speaker request the digital map in Clip 5?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the map count is insufficient">the map count is insufficient</button><button class="quiz-option" data-quiz-option="there are too many digital maps">there are too many digital maps</button><button class="quiz-option" data-quiz-option="every guest already has a printed map">every guest already has a printed map</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="two separate coffee servings" data-hint="At a café counter, plural coffees means separate servings or cups." data-fix="Two coffees are ready means two separate coffee servings are ready."><p class="quiz-question">6. What does <span class="ex">two coffees</span> mean in Clip 6?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="two separate coffee servings">two separate coffee servings</button><button class="quiz-option" data-quiz-option="two types of event furniture">two types of event furniture</button><button class="quiz-option" data-quiz-option="an unmeasured amount of coffee">an unmeasured amount of coffee</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">How many chairs are ready?</span></li>
+        <li><span class="ex">How much water do we have?</span></li>
+        <li><span class="ex">The guide contains a lot of information.</span></li>
+        <li><span class="ex">A few extra badges remain, enough for the late guests.</span></li>
+        <li><span class="ex">Few printed maps remain, so display the digital map.</span></li>
+        <li><span class="ex">Two coffees are ready at the café counter.</span></li>
+      </ol>
+    </details>
+  </section>
 
-  <h2>Read and choose</h2>
+  <h2>Read the updated supply note</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message about the office party</h3>
-    <p><span class="ex">"Hi team! The office party is on Friday. How many people are coming? I think about thirty. We’ve got a lot of chairs, but only a few cups, so please bring one. We don’t have much coffee left, and there isn’t much juice either. Elena is bringing a lot of snacks, and we just need a little sugar for the cake. See you Friday!"</span></p>
+    <h3>Riverside workshop at 8:20</h3>
+    <p><span class="ex">Seventy-two guests are registered, and eighty chairs are ready. We have twenty-four liters of water in forty-eight bottles. There is a lot of coffee, but only a little setup time remains. We have a few spare badges, enough for the four expected late guests. Few printed maps remain, so the digital map is on the entrance screen. The guide contains a lot of information, and many participants opened it yesterday.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed real quantities in a real message.">
-    <h3>Drill 3: read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You used the note to distinguish people, substance, units, enough small quantities, and a printed-map shortage.">
+    <h3>Reading check: use only the supply note</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="about thirty">
-        <p class="quiz-question">1. How many people are coming to the party?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="about thirty">about thirty</button><button class="quiz-option" data-quiz-option="just a few">just a few</button><button class="quiz-option" data-quiz-option="more than fifty">more than fifty</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="cups">
-        <p class="quiz-question">2. What does the office need more of?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="cups">cups</button><button class="quiz-option" data-quiz-option="chairs">chairs</button><button class="quiz-option" data-quiz-option="snacks">snacks</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="Elena">
-        <p class="quiz-question">3. Who is bringing a lot of snacks?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Elena">Elena</button><button class="quiz-option" data-quiz-option="the writer">the writer</button><button class="quiz-option" data-quiz-option="nobody">nobody</button></div>
-      </div>
+      <div class="quiz-item" data-quiz-item data-answer="seventy-two guests" data-hint="The opening clause gives the exact registration count." data-fix="Seventy-two guests are registered."><p class="quiz-question">1. How many guests are registered?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="seventy-two guests">seventy-two guests</button><button class="quiz-option" data-quiz-option="eighty guests">eighty guests</button><button class="quiz-option" data-quiz-option="forty-eight guests">forty-eight guests</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="twenty-four liters in forty-eight bottles" data-hint="The note reports both the total amount and its countable containers." data-fix="The center has twenty-four liters of water in forty-eight bottles."><p class="quiz-question">2. Which answer gives both the water amount and bottle number?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="twenty-four liters in forty-eight bottles">twenty-four liters in forty-eight bottles</button><button class="quiz-option" data-quiz-option="forty-eight liters in twenty-four bottles">forty-eight liters in twenty-four bottles</button><button class="quiz-option" data-quiz-option="seventy-two liters with no bottles">seventy-two liters with no bottles</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="four spare badges are enough" data-hint="A few signals a small positive count, and the note says it covers four late guests." data-fix="Four spare badges are enough for the expected late guests."><p class="quiz-question">3. What does the note imply about spare badges?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="four spare badges are enough">four spare badges are enough</button><button class="quiz-option" data-quiz-option="there are no spare badges">there are no spare badges</button><button class="quiz-option" data-quiz-option="the badge quantity is excessive">the badge quantity is excessive</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the printed-map count is too small" data-hint="Bare few presents the printed maps as a shortage and motivates the digital display." data-fix="The digital map is displayed because the printed-map count is too small."><p class="quiz-question">4. Why is the digital map on the entrance screen?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the printed-map count is too small">the printed-map count is too small</button><button class="quiz-option" data-quiz-option="the guide contains no information">the guide contains no information</button><button class="quiz-option" data-quiz-option="too many chairs block the printed maps">too many chairs block the printed maps</button></div></div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="how many cups do we need">
-    <h3>Drill 4: build the question</h3>
-    <p class="tile-target">Build the question. Cups is countable, so count it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="cups">cups</button>
-      <button class="tile" data-build-tile="how">How</button>
-      <button class="tile" data-build-tile="need">need</button>
-      <button class="tile" data-build-tile="many">many</button>
-      <button class="tile" data-build-tile="we">we</button>
-      <button class="tile" data-build-tile="do">do</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <div class="tile-game" data-tile-builder data-answer="there isn’t much coffee left">
-    <h3>Drill 5: build the negative</h3>
-    <p class="tile-target">Build the sentence. Coffee is uncountable, and the sentence is negative.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="left">left</button>
-      <button class="tile" data-build-tile="much">much</button>
-      <button class="tile" data-build-tile="there">There</button>
-      <button class="tile" data-build-tile="coffee">coffee</button>
-      <button class="tile" data-build-tile="isn’t">isn’t</button>
-    </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
-  <h2>Notice and repair errors</h2>
+  <h2>Build an amount question and a negative update</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="much" data-fix="How many people are coming tonight?" data-why="People is a countable noun, so count it: how many people, not how much people.">
-    <h3>Drill 6: count the people</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="how">How</button>
-      <button class="error-choice" data-error-choice="much">much</button>
-      <button class="error-choice" data-error-choice="people">people</button>
-      <button class="error-choice" data-error-choice="coming">are coming</button>
-      <button class="error-choice" data-error-choice="tonight">tonight?</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="how many bottles of water do we need" data-hint="Begin with How many because bottles is the countable unit, then complete the question." data-fix="How many bottles of water do we need?" data-success-message="Correct. How many follows the countable unit bottles, while of water names the contents.">
+    <h3>Drill 4: count the containers</h3><p class="tile-target">Ask for the number of water containers.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="need">need</button><button class="tile" data-build-tile="bottles">bottles</button><button class="tile" data-build-tile="water">water</button><button class="tile" data-build-tile="how">How</button><button class="tile" data-build-tile="of">of</button><button class="tile" data-build-tile="many">many</button><button class="tile" data-build-tile="we">we</button><button class="tile" data-build-tile="do">do</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="many" data-fix="I don’t have much time this week." data-why="Time is uncountable. In a negative, use much: not much time.">
-    <h3>Drill 7: measure the time</h3>
-    <p>Tap the word that is wrong.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="i">I</button>
-      <button class="error-choice" data-error-choice="don’t have">don’t have</button>
-      <button class="error-choice" data-error-choice="many">many</button>
-      <button class="error-choice" data-error-choice="time">time</button>
-      <button class="error-choice" data-error-choice="week">this week.</button>
-    </div>
-    <p class="hidden-answer" data-error-feedback></p>
+  <div class="tile-game" data-tile-builder data-answer="there isn't much setup time left" data-hint="Begin with There isn’t, then use much before noncount setup time." data-fix="There isn’t much setup time left." data-success-message="Correct. The negative update uses much before the noncount phrase setup time.">
+    <h3>Drill 5: report a small remaining amount</h3><p class="tile-target">The doors open soon. Say that the remaining setup time is small.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="left">left</button><button class="tile" data-build-tile="much">much</button><button class="tile" data-build-tile="there">There</button><button class="tile" data-build-tile="setup">setup</button><button class="tile" data-build-tile="isn't">isn’t</button><button class="tile" data-build-tile="time">time</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair three different errors</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="much" data-hint="The question asks for a number of separate guests." data-fix="How many guests are registered?" data-why="Guests is a plural count noun, so use how many." data-success-message="Correct. Separate guests require the count question how many.">
+    <h3>Drill 6: count the guests</h3><p>The registration question says: <span class="ex">How much guests are registered?</span> Tap the quantifier with the wrong noun type.</p><div class="spot-options"><button class="error-choice" data-error-choice="how">How</button><button class="error-choice" data-error-choice="much">much</button><button class="error-choice" data-error-choice="guests">guests</button><button class="error-choice" data-error-choice="are">are</button><button class="error-choice" data-error-choice="registered">registered</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="lot" data-hint="A noun follows, so the large-quantity expression needs of." data-fix="We have a lot of information in the guide." data-why="Use a lot of before a noun; use a lot only when no noun follows." data-success-message="Correct. The following noun information requires the complete phrase a lot of.">
+    <h3>Drill 7: keep <em>of</em> before the noun</h3><p>The guide update says: <span class="ex">We have a lot information in the guide.</span> Tap the incomplete quantity phrase.</p><div class="spot-options"><button class="error-choice" data-error-choice="we">We</button><button class="error-choice" data-error-choice="have">have</button><button class="error-choice" data-error-choice="lot">a lot</button><button class="error-choice" data-error-choice="information">information</button><button class="error-choice" data-error-choice="guide">in the guide</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <div class="micro-drill" data-spot-error data-answer="is" data-hint="The noun chairs is plural even though a lot of comes first." data-fix="A lot of chairs are ready." data-why="The noun controls agreement: plural chairs takes are." data-success-message="Correct. Plural chairs, not the quantifier, controls the verb are.">
+    <h3>Drill 8: let the noun control the verb</h3><p>The inventory says: <span class="ex">A lot of chairs is ready.</span> Tap the verb with incorrect agreement.</p><div class="spot-options"><button class="error-choice" data-error-choice="a">A</button><button class="error-choice" data-error-choice="lot">lot</button><button class="error-choice" data-error-choice="of">of</button><button class="error-choice" data-error-choice="chairs">chairs</button><button class="error-choice" data-error-choice="is">is</button><button class="error-choice" data-error-choice="ready">ready</button></div><p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 8: say it, then reveal</h3>
-    <p>Read the cue, say the full sentence aloud, then reveal only after you answer.</p>
+    <h3>Oral transforms: change the package or quantity</h3>
+    <p>Say the complete new sentence before revealing it. Preserve the stated fact.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> We have a lot of cups. Make it negative.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>We don’t have many cups.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> There’s a lot of coffee. Ask a question with how.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>How much coffee is there?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> They have a lot of meetings. Ask a yes / no question.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>Do they have many meetings?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> I have a lot of free time. Make it negative.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>I don’t have much free time.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> We need some chairs. Ask about the number.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>How many chairs do we need?</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> There are a few cookies left. Now say the same about the cake.</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>There’s a little cake left.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> Ask for the water amount, not its containers.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>How much water do we need?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> Now ask for the number of bottles.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>How many bottles of water do we need?</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> <span class="ex">We have a lot of chairs.</span> Make a compact negative that means the number is small.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>We don’t have many chairs.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> <span class="ex">There is a lot of time.</span> Make a compact negative that means the amount is small.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>There isn’t much time.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> The safe limit is ten tables; twelve are in the aisle. Report the excess.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>There are too many tables in the aisle.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>6</b> The café has two separate coffee servings ready. Use plural <span class="ex">coffees</span>.</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>Two coffees are ready.</strong></p></div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Communicate: solve a fictional supply problem</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your week:</b> Say five true sentences about quantity in your week. <span class="ex">I have a lot of meetings. I don’t have much free time.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask three questions with <span class="ex">How much</span> or <span class="ex">How many</span>, then react to the answers. <span class="ex">How much coffee do you drink? How many students do you have?</span></div>
-  <div class="prompt-card"><b>Your kitchen:</b> Describe what is in your kitchen right now. <span class="ex">There’s a lot of rice, but there isn’t much fruit. We’ve only got a few eggs.</span></div>
-  <div class="prompt-card"><b>Your city:</b> Describe your city or neighborhood. <span class="ex">There are a lot of cafés. There isn’t much green space.</span></div>
-  <div class="prompt-card"><b>Too honest:</b> Say two true sentences with <span class="ex">too much</span> and <span class="ex">too many</span>. <span class="ex">I drink too much coffee. I get too many emails.</span></div>
+  <p class="note-line">You never need to disclose your real food, drinks, home, work, school, schedule, location, money, purchases, health, body, family, relationships, travel, belongings, or habits. Use the Riverside inventory, invent a neutral public event, or share personal information only when you freely choose.</p>
+  <div class="prompt-card"><b>Ask before planning:</b> Ask two <span class="ex">How many</span> questions about countable supplies and two <span class="ex">How much</span> questions about noncount supplies. Answer with a complete quantity and then a natural short answer.</div>
+  <div class="prompt-card"><b>Final production: give a 45–60 second fictional supply briefing.</b> Include one amount and its countable unit, one large quantity, one useful small number, one useful small amount, one shortage, one zero quantity, and one quantity that passes a stated limit. Make each verb agree with its noun.</div>
+  <div class="prompt-card"><b>Repackage the quantity:</b> Choose water, coffee, information, advice, furniture, or equipment. Describe it once as a noncount amount and once through a countable unit or serving. Explain why the real-world material can stay the same while the grammar changes.</div>
 
-  <h2>Reflect</h2>
+  <h2>Final check</h2>
+  <div class="lead-rule"></div>
+  <div class="quiz" data-quiz data-success-message="Correct. You controlled noncount information, conversational large quantity, shortage meaning, and noun-based agreement.">
+    <h3>Four decisions with one defensible target</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="How much information does the guide contain?" data-hint="Information is noncount in this general amount question." data-fix="How much information does the guide contain?"><p class="quiz-question">1. Which question asks for the general amount of information, not a number of separate items?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="How much information does the guide contain?">How much information does the guide contain?</button><button class="quiz-option" data-quiz-option="How many information does the guide contain?">How many information does the guide contain?</button><button class="quiz-option" data-quiz-option="How many informations does the guide contain?">How many informations does the guide contain?</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="We have a lot of equipment." data-hint="The target is neutral everyday positive speech before noncount equipment." data-fix="We have a lot of equipment."><p class="quiz-question">2. Which sentence is the natural everyday positive update about a large equipment quantity?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="We have a lot of equipment.">We have a lot of equipment.</button><button class="quiz-option" data-quiz-option="We have many equipment.">We have many equipment.</button><button class="quiz-option" data-quiz-option="We have a lot equipment.">We have a lot equipment.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="the printed-map count is smaller than needed" data-hint="Bare few emphasizes a shortage rather than a useful small count." data-fix="Few printed maps remain means the printed-map count is smaller than needed."><p class="quiz-question">3. The coordinator says, <span class="ex">Few printed maps remain, so display the digital map</span>. What does <span class="ex">few</span> imply?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the printed-map count is smaller than needed">the printed-map count is smaller than needed</button><button class="quiz-option" data-quiz-option="the small map count is definitely enough">the small map count is definitely enough</button><button class="quiz-option" data-quiz-option="there are too many printed maps">there are too many printed maps</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="A lot of chairs are ready." data-hint="Plural chairs controls the verb even after a lot of." data-fix="A lot of chairs are ready."><p class="quiz-question">4. Which sentence has correct noun-based agreement?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="A lot of chairs are ready.">A lot of chairs are ready.</button><button class="quiz-option" data-quiz-option="A lot of chairs is ready.">A lot of chairs is ready.</button><button class="quiz-option" data-quiz-option="A lot chairs are ready.">A lot chairs are ready.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect and retrieve</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Say the system back</h3>
-    <p>Complete this aloud: “In questions and negatives, I use ______ with uncountable nouns and ______ with countable nouns. In positive sentences, ______ sounds natural with both. For a small number I say ______, and for a small amount I say ______.”</p>
-    <p>Then ask one <span class="ex">How much</span> question and one <span class="ex">How many</span> question about your real life, and answer them.</p>
+    <h3>Explain the decision path without looking back</h3>
+    <p>How can one supply be described with <span class="ex">much</span> through a noncount noun and <span class="ex">many</span> through a unit noun? Why is “questions and negatives use much or many; positives use a lot of” only a tendency? What changes between <span class="ex">a few / few</span> and <span class="ex">a little / little</span>?</p>
   </div>
+  <p class="note-line">Return tomorrow before rereading. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the noun package, unit, polarity, register, quantity scale, agreement, or spoken pattern that still feels slow.</p>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can ask and answer about quantity with much, many, a lot of, a few, and a little.">
-    <h3>Final quiz: quantifiers in real sentences</h3>
-    <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="much">
-        <p class="quiz-question">1. How ___ sugar do you take in your coffee?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="much">much</button><button class="quiz-option" data-quiz-option="many">many</button><button class="quiz-option" data-quiz-option="a few">a few</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="many">
-        <p class="quiz-question">2. How ___ languages do you speak?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="many">many</button><button class="quiz-option" data-quiz-option="much">much</button><button class="quiz-option" data-quiz-option="a lot">a lot</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="much">
-        <p class="quiz-question">3. We don’t have ___ time before the flight.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="much">much</button><button class="quiz-option" data-quiz-option="many">many</button><button class="quiz-option" data-quiz-option="a few">a few</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="a lot of">
-        <p class="quiz-question">4. I bought ___ oranges at the market.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a lot of">a lot of</button><button class="quiz-option" data-quiz-option="much">much</button><button class="quiz-option" data-quiz-option="a little">a little</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="a few">
-        <p class="quiz-question">5. There are only ___ cups left.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a few">a few</button><button class="quiz-option" data-quiz-option="a little">a little</button><button class="quiz-option" data-quiz-option="much">much</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="a little">
-        <p class="quiz-question">6. Add just ___ salt to the soup.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a little">a little</button><button class="quiz-option" data-quiz-option="a few">a few</button><button class="quiz-option" data-quiz-option="many">many</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="much">
-        <p class="quiz-question">7. I can’t sleep. I drink too ___ coffee.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="much">much</button><button class="quiz-option" data-quiz-option="many">many</button><button class="quiz-option" data-quiz-option="a lot">a lot</button></div>
-      </div>
-      <div class="quiz-item" data-quiz-item data-answer="She has a lot of friends.">
-        <p class="quiz-question">8. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="She has a lot of friends.">She has a lot of friends.</button><button class="quiz-option" data-quiz-option="She has much friends.">She has much friends.</button><button class="quiz-option" data-quiz-option="She has a lot friends.">She has a lot friends.</button></div>
-      </div>
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day unit, nounless quantity, and excess retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a countable unit question, nounless large-quantity answer, and noncount excess.">
+      <h3>Choose from memory before looking back</h3>
+      <div class="choice-bank" aria-label="Next-day quantifier choices"><button class="choice-option" data-choice-option="many bottles of water">many bottles of water</button><button class="choice-option" data-choice-option="much bottles of water">much bottles of water</button><button class="choice-option" data-choice-option="a lot">a lot</button><button class="choice-option" data-choice-option="a lot of">a lot of</button><button class="choice-option" data-choice-option="too much">too much</button><button class="choice-option" data-choice-option="too many">too many</button></div>
+      <div class="q"><span class="n">1</span><span>Ask for the number of separate containers: How <button class="choice-gap" data-choice-gap data-answer="many bottles of water" data-hint="Bottles is the plural countable unit, so use many." data-fix="How many bottles of water do we need?" data-placeholder="choose">choose</button> do we need?</span></div>
+      <div class="q"><span class="n">2</span><span>The noun <span class="ex">chairs</span> is understood from the question: “How many do we need?” “<button class="choice-gap" data-choice-gap data-answer="a lot" data-hint="Without a following noun, use a lot without of." data-fix="How many chairs do we need? A lot." data-placeholder="choose">choose</button>.”</span></div>
+      <div class="q"><span class="n">3</span><span>The container limit is twenty liters, but the order sends twenty-four: There is <button class="choice-gap" data-choice-gap data-answer="too much" data-hint="Water is noncount, and the amount passes the stated limit." data-fix="There is too much water for the container." data-placeholder="choose">choose</button> water for the container.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+  </section>
 </main>
 </LessonPage>
-

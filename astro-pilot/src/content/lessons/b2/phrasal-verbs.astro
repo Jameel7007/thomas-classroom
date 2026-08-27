@@ -1,19 +1,118 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
+import StructuredLesson from "../../../components/lesson/StructuredLesson.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Phrasal verbs (advanced) · B2 Vocabulary · Curriculum Map",
+  "title": "Phrasal verbs (advanced) · B2 Vocabulary",
   "slug": "phrasal-verbs",
   "level": "B2",
   "topic": "Phrasal verbs (advanced)",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
-  "status": "planned",
-  "description": "Planned B2 vocabulary lesson covering Phrasal verbs (advanced).",
+  "status": "ready",
+  "description": "Control advanced multiword verbs by meaning, particle pattern, object placement, register, and productive use in connected discourse.",
   "sequence": 18,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b2-exit"
-  ]
+  "prerequisites": ["a2/phrasal-verbs", "b2/register-and-formality", "b2/idioms-and-fixed-expressions"],
+  "related": ["b1/work-and-careers", "b1/relationships", "b2/connotation-and-shades-of-meaning"],
+  "assessments": ["b2-exit"]
 });
+export const lesson = {
+  duration: "70–80 min",
+  outcome: "Interpret and use advanced phrasal and prepositional verbs as grammatical chunks, placing objects correctly and shifting to a more formal equivalent when context requires it.",
+  focus: "verb + particle patterns",
+  tags: ["object placement", "polysemy, particle meaning and register"],
+  retrieval: [
+    { prompt: "Place the pronoun: turn off + it.", answer: "Turn it off—not turn off it." },
+    { prompt: "Explain one meaning of look after, give up, and find out.", answer: "Look after = care for; give up = stop trying/doing; find out = discover." },
+    { prompt: "Shift register: We need to look into the complaint.", answer: "We need to investigate the complaint." }
+  ],
+  notice: {
+    title: "The particle helps build a meaning, but the whole chunk decides",
+    setup: "A project lead describes recovery after a failed supplier relationship.",
+    samples: [
+      "The original supplier backed out two weeks before launch, so we had to fall back on a smaller local company.",
+      "At first, the new team struggled to keep up with demand, but it gradually caught up and carried out every urgent order.",
+      "We have now drawn up a contingency plan to prevent one cancellation from bringing the whole operation to a standstill."
+    ],
+    questions: ["Which verb means withdraw from an agreement?", "Which two verbs describe being behind and then reaching the required level?", "Which expression means prepare a written plan?"],
+    check: { question: "What does “fall back on a smaller company” mean?", answer: "Use it as an alternative when the first plan fails.", options: [{ value: "Use it as an alternative when the first plan fails." }, { value: "Physically fall behind the company." }, { value: "Reject every possible supplier." }], hint: "The original supplier withdrew, so another resource became necessary." }
+  },
+  discover: {
+    principle: "Learn a multiword verb as meaning + grammar + object pattern + register. Particles offer useful clues—out often suggests completion or emergence; up can suggest completion or increase—but the complete chunk, not the particle alone, determines meaning.",
+    formRows: [
+      { label: "separable transitive", form: "verb + object + particle / verb + particle + noun", example: "draw the plan up / draw up the plan; draw it up" },
+      { label: "inseparable transitive", form: "verb + particle/preposition + object", example: "look into the issue; come across an article" },
+      { label: "intransitive", form: "verb + particle; no object", example: "The deal fell through. Sales picked up." },
+      { label: "three-part verb", form: "verb + particle + preposition + object", example: "We need to catch up with the schedule." }
+    ],
+    meaningRows: [
+      { choice: "plan and execute", use: "you prepare, begin, complete, or abandon action", example: "draw up a plan; carry out a test; phase out a product" },
+      { choice: "manage difficulty", use: "you tolerate, recover, compensate, or use an alternative", example: "put up with delays; bounce back; make up for lost time; fall back on reserves" },
+      { choice: "investigate and discover", use: "you examine, encounter, identify, or clarify", example: "look into a claim; come across evidence; figure out a cause" },
+      { choice: "change and progress", use: "something improves, weakens, continues, or reaches a level", example: "pick up; wear off; go on; catch up" },
+      { choice: "register shift", use: "you choose a phrasal or lexical verb for audience and tone", example: "put off → postpone; carry out → conduct" }
+    ],
+    pronunciation: "In many verb–particle combinations, the particle is stressed: back OUT, catch UP, fall THROUGH. A preposition in an ordinary verb + preposition pattern is more often unstressed.",
+    errors: [
+      { wrong: "We drew up it yesterday.", correct: "We drew it up yesterday.", why: "A pronoun object goes between a separable verb and particle." },
+      { wrong: "I came an interesting article across.", correct: "I came across an interesting article.", why: "Come across is inseparable." },
+      { wrong: "The agreement fell through it.", correct: "The agreement fell through.", why: "Fall through is intransitive in the meaning fail to happen." },
+      { wrong: "We carried the survey out it.", correct: "We carried out the survey / carried the survey out.", why: "Use one object position, not both." }
+    ]
+  },
+  reference: {
+    title: "Advanced multiword verbs by purpose",
+    intro: "Group chunks around situations you actually discuss, and mark each as separable (S), inseparable (I), or intransitive (Ø).",
+    groups: [
+      { heading: "Plan and implement", items: ["draw up (S)", "set out (S/I by meaning)", "carry out (S)", "follow through on (I)", "roll out (S)", "phase out (S)"] },
+      { heading: "Problems and alternatives", items: ["back out (Ø)", "fall through (Ø)", "fall back on (I)", "rule out (S)", "work around (I)", "put up with (I)"] },
+      { heading: "Investigate and understand", items: ["look into (I)", "come across (I)", "figure out (S)", "point out (S)", "narrow down (S)", "account for (I)"] },
+      { heading: "Progress and recovery", items: ["keep up with (I)", "catch up with/on (I)", "pick up (Ø/S by meaning)", "bounce back (Ø)", "make up for (I)", "wear off (Ø)"] },
+      { heading: "Interaction and responsibility", items: ["bring up (S)", "take on (S)", "step down (Ø)", "hand over (S)", "stand up for (I)", "come up with (I)"] }
+    ]
+  },
+  build: [
+    { question: "The planned merger did not happen. It ___.", answer: "fell through", options: [{ value: "fell through" }, { value: "carried out" }, { value: "drew up" }], hint: "Use the intransitive verb for a plan that failed to materialize." },
+    { question: "We must compensate for the lost week. We need to ___ lost time.", answer: "make up for", options: [{ value: "make up for" }, { value: "back out" }, { value: "come across" }], hint: "The chunk means compensate for a disadvantage or loss." },
+    { question: "Replace the noun with a pronoun: We ruled out the cheapest option.", answer: "We ruled it out.", options: [{ value: "We ruled it out." }, { value: "We ruled out it." }, { value: "We it ruled out." }], hint: "Rule out is separable, and a pronoun goes in the middle." },
+    { question: "I found an unexpected document by chance. I ___ it.", answer: "came across", options: [{ value: "came across" }, { value: "came it across" }, { value: "carried out" }], hint: "Come across is inseparable." },
+    { question: "The effects of the medication gradually disappeared. They ___.", answer: "wore off", options: [{ value: "wore off" }, { value: "drew up" }, { value: "stood up for" }], hint: "This intransitive verb describes a fading effect." },
+    { question: "Choose the formal equivalent of “carry out an investigation.”", answer: "conduct an investigation", options: [{ value: "conduct an investigation" }, { value: "cancel an investigation" }, { value: "encounter an investigation" }], hint: "The meaning stays the same while register shifts." }
+  ],
+  context: {
+    title: "A delayed community research project",
+    intro: "Track the project through planning, failure, investigation, and recovery.",
+    lines: [
+      "The team drew up a survey and planned to roll it out in March. However, the original partnership fell through when the sponsor backed out.",
+      "Researchers looked into alternative funding and came across a smaller grant. It did not make up for the entire loss, so they narrowed the project down to two neighborhoods.",
+      "After a slow start, participation picked up. The team carried out the revised study, caught up on data entry, and followed through on its promise to share the findings locally."
+    ],
+    questions: [
+      { question: "Why did the original plan fail?", answer: "The sponsor withdrew and the partnership collapsed.", options: [{ value: "The sponsor withdrew and the partnership collapsed." }, { value: "Participation immediately exceeded expectations." }, { value: "The team completed every stage in March." }], hint: "Interpret backed out and fell through together." },
+      { question: "How did the team adapt to less funding?", answer: "It reduced the scope to two neighborhoods.", options: [{ value: "It reduced the scope to two neighborhoods." }, { value: "It abandoned all investigation." }, { value: "It expanded to every neighborhood." }], hint: "Narrow down means reduce the number or range." },
+      { question: "What does “followed through on its promise” show?", answer: "The team completed the action it had committed to.", options: [{ value: "The team completed the action it had committed to." }, { value: "The promise gradually disappeared." }, { value: "The team discovered the promise by chance." }], hint: "Follow-through connects commitment to completion." }
+    ]
+  },
+  builder: { title: "Build the contingency response", prompt: "Explain that the original arrangement failed, so an alternative resource was used.", answer: "the deal fell through so we fell back on reserves", tiles: ["fell", "we", "reserves", "so", "The", "through", "deal", "on", "back", "fell"] },
+  repairs: [
+    { title: "Repair pronoun placement", sentence: "We need to draw up it before Friday.", answer: "up", fix: "We need to draw it up before Friday.", why: "The pronoun object goes between draw and up.", tokens: [{ value: "we", label: "We need" }, { value: "draw", label: "to draw" }, { value: "up", label: "up" }, { value: "it", label: "it" }, { value: "friday", label: "before Friday" }] },
+    { title: "Repair an inseparable verb", sentence: "I came an important detail across in the archive.", answer: "detail", fix: "I came across an important detail in the archive.", why: "The object follows the complete inseparable verb come across.", tokens: [{ value: "i", label: "I came" }, { value: "detail", label: "an important detail" }, { value: "across", label: "across" }, { value: "archive", label: "in the archive" }] },
+    { title: "Repair the three-part verb", sentence: "She cannot keep the current workload up with.", answer: "workload", fix: "She cannot keep up with the current workload.", why: "Keep up with is an inseparable three-part verb followed by its object.", tokens: [{ value: "she", label: "She cannot" }, { value: "keep", label: "keep" }, { value: "workload", label: "the current workload" }, { value: "up", label: "up with" }] }
+  ],
+  fluency: [
+    { prompt: "Describe a plan that failed and the alternative you used.", answer: "The original plan fell through, so we fell back on…" },
+    { prompt: "Explain an investigation from question to discovery.", answer: "We looked into… and came across…; eventually, we figured out…" },
+    { prompt: "Describe falling behind and recovering.", answer: "We struggled to keep up with…, but we caught up by…" },
+    { prompt: "Shift two phrasal verbs into a more formal report.", answer: "carry out → conduct; put off → postpone; look into → investigate; phase out → discontinue gradually" }
+  ],
+  communicate: {
+    title: "The recovery briefing",
+    setup: "Tell the story of a project, trip, event, or personal plan that faced a setback and recovered. Use a timeline and at least six multiword verbs from different grammar patterns.",
+    roles: ["Project lead: explain the original plan, what fell through, what you looked into, the alternative, the recovery, and the follow-through.", "Language analyst: track each multiword verb, check object placement and meaning, and request a formal equivalent for two of them."],
+    prompts: ["We drew up…", "… backed out / fell through.", "We fell back on…", "We looked into…", "We made up for…", "We followed through on…"],
+    success: ["Use separable, inseparable, intransitive, and three-part patterns accurately.", "Make the meaning clear enough to infer from context.", "Shift register without assuming the phrasal verb is always less correct or less precise."]
+  },
+  reflect: { canDo: ["Classify multiword verbs by object pattern.", "Use pronoun objects in the correct position.", "Learn related meanings and formal alternatives without word-for-word translation."], nextUse: "Create four personal example cards—one separable, one inseparable, one intransitive, and one three-part verb—with the object pattern visibly marked." }
+};
 ---
+<LessonPage page={page}><StructuredLesson page={page} lesson={lesson} /></LessonPage>

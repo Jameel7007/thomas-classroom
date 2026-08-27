@@ -1,19 +1,330 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
+
 export const page = defineLesson({
-  "title": "Passive voice (present & past simple) · B1 Grammar · Curriculum Map",
+  "title": "Passive voice (present & past simple) · B1 Grammar",
   "slug": "passive-voice",
   "level": "B1",
   "topic": "Passive voice (present & past simple)",
   "category": "Grammar",
   "contentType": "grammar",
-  "status": "planned",
-  "description": "Planned B1 grammar lesson covering Passive voice (present & past simple).",
+  "status": "ready",
+  "description": "Choose active or passive focus, build present and past simple passives, decide whether an agent matters, and report processes or incidents responsibly.",
   "sequence": 5,
-  "prerequisites": [],
-  "related": [],
-  "assessments": [
-    "b1-exit"
-  ]
+  "prerequisites": ["a0/the-verb-to-be", "a1/present-simple", "a2/past-simple", "a2/present-perfect"],
+  "related": ["b2/full-passive", "b1/media-and-news"],
+  "assessments": ["b1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 58,
+    "revisionSummary": "Information focus, passive form, participles, agent choice, verb eligibility, state boundaries, questions, responsible reporting, U.S. speech, listening, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
+
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="60–70 minutes" data-extension-duration="15–20 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson 5</p>
+  <h1>Passive voice: <em>choose the camera angle, not only the verb form</em></h1>
+  <p class="standfirst">Active and passive clauses can report the same event while organizing the listener’s attention differently. Use the present simple passive for recurring processes or general facts, the past simple passive for finished past events, and a <span class="ex">by</span>-phrase only when the agent adds useful information.</p>
+  <div class="meta-row">
+    <span class="tag">60–70 min core</span>
+    <span class="tag">affected participant + be + participle</span>
+    <span class="tag">focus · agent · responsibility</span>
+    <span class="tag">15–20 min listening and retrieval</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Track who or what becomes the topic.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Build tense and agreement through <span class="ex">be</span>.</span></div>
+    <div class="flow-step"><b>Decide</b><span>Keep, omit, or label the agent responsibly.</span></div>
+    <div class="flow-step"><b>Use</b><span>Explain a process and report a fictional incident.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can identify the agent and affected participant; choose active or passive according to the intended topic; form present and past simple passive statements, negatives, and questions; use accurate regular and irregular participles; decide whether a <span class="ex">by</span>-phrase is informative; distinguish an agent from an instrument or source material; recognize which verbs can form a passive; interpret state-like participles from context; hear weak forms and contractions in U.S. speech; and give a clear, responsible service report.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved present plural be, past plural be, and the irregular participle sent before building the passive chain.">
+    <h3>Reactivate <span class="ex">be</span> and one participle</h3>
+    <p class="choice-hint">Use the stated time, subject number, and verb family.</p>
+    <div class="choice-bank" aria-label="Passive foundation choices"><button class="choice-option" data-choice-option="are">are</button><button class="choice-option" data-choice-option="were">were</button><button class="choice-option" data-choice-option="sent">sent</button><button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="send">send</button></div>
+    <div class="q"><span class="n">1</span><span>Today, two replacement bicycles <button class="choice-gap" data-choice-gap data-answer="are" data-hint="The subject bicycles is plural, and today describes the present situation." data-fix="Today, two replacement bicycles are ready.">choose</button> ready.</span></div>
+    <div class="q"><span class="n">2</span><span>Yesterday, those two bicycles <button class="choice-gap" data-choice-gap data-answer="were" data-hint="Yesterday requires past time, and bicycles requires the plural form of be." data-fix="Yesterday, those two bicycles were in the workshop.">choose</button> in the workshop.</span></div>
+    <div class="q"><span class="n">3</span><span>The irregular verb family is <span class="ex">send, sent, <button class="choice-gap" data-choice-gap data-answer="sent" data-hint="Send has the same Past Simple and past participle form." data-fix="The verb family is send, sent, sent.">choose</button></span>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice who or what gets first position</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Northline Bicycle Service, Model R inspection</h3>
+    <p><span class="ex">At 9:00 on May 6, technician Maya Chen inspected Model R bicycle 24.</span></p>
+    <p><span class="ex">Model R bicycle 24 was inspected at 9:00 on May 6. A brake cable was installed incorrectly.</span></p>
+    <p><span class="ex">The final safety report was signed by engineer Lena Ortiz.</span></p>
+    <ul>
+      <li>Which clause makes the technician the starting topic?</li>
+      <li>Which clauses make the bicycle, cable, and report the starting topics?</li>
+      <li>Why is the installer absent while the named safety engineer remains?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You identified the active agent, passive topics, unknown installer, informative named agent, and finished past time.">
+    <h3>Discovery check: recover the information choices</h3>
+    <div class="choice-bank" aria-label="Active and passive information choices"><button class="choice-option" data-choice-option="technician Maya Chen">technician Maya Chen</button><button class="choice-option" data-choice-option="Model R bicycle 24">Model R bicycle 24</button><button class="choice-option" data-choice-option="the installer is not identified">the installer is not identified</button><button class="choice-option" data-choice-option="engineer Lena Ortiz">engineer Lena Ortiz</button><button class="choice-option" data-choice-option="a finished inspection on May 6">a finished inspection on May 6</button></div>
+    <div class="q"><span class="n">1</span><span>The agent placed first in the active clause is <button class="choice-gap" data-choice-gap data-answer="technician Maya Chen" data-hint="The active subject before inspected names the person who performed the action." data-fix="Technician Maya Chen is the agent and starting topic of the active clause.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>The affected participant placed first in the first passive clause is <button class="choice-gap" data-choice-gap data-answer="Model R bicycle 24" data-hint="Read the noun phrase before was inspected." data-fix="Model R bicycle 24 is the affected participant and passive subject.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">A brake cable was installed incorrectly</span>, <button class="choice-gap" data-choice-gap data-answer="the installer is not identified" data-hint="There is no by-phrase after the participle installed." data-fix="The passive reports the installation problem without identifying the installer.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>The final clause keeps the informative agent <button class="choice-gap" data-choice-gap data-answer="engineer Lena Ortiz" data-hint="The by-phrase names the qualified person who signed the safety report." data-fix="The final report was signed by engineer Lena Ortiz.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>The form <span class="ex">was inspected</span> locates <button class="choice-gap" data-choice-gap data-answer="a finished inspection on May 6" data-hint="Was is past, and the exact date marks a completed event." data-fix="Was inspected reports a finished inspection on May 6.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: the passive reorganizes an event</h2>
+  <div class="lead-rule"></div>
+  <p>Many action events contain an <b>agent</b>, the person or thing that performs the action, and an <b>affected participant</b>, the person or thing changed, moved, created, seen, or discussed. An active clause normally starts with the agent: <span class="ex">Maya inspected the bicycle</span>. A passive clause starts with the affected participant: <span class="ex">The bicycle was inspected</span>.</p>
+  <p>The passive does not automatically change the real event or its time. It changes the grammatical camera angle. The new subject controls agreement, <span class="ex">be</span> carries tense and negativity, and the main action takes a past participle. A <span class="ex">by</span>-phrase can restore the agent when that detail matters.</p>
+
+  <table>
+    <thead><tr><th>job</th><th>form</th><th>complete example</th></tr></thead>
+    <tbody>
+      <tr><td>present positive</td><td><span class="ex">subject + am / is / are + participle</span></td><td><span class="ex">Every bicycle is inspected.</span></td></tr>
+      <tr><td>past positive</td><td><span class="ex">subject + was / were + participle</span></td><td><span class="ex">Two faults were found yesterday.</span></td></tr>
+      <tr><td>negative</td><td><span class="ex">subject + be + not + participle</span></td><td><span class="ex">The batteries weren’t replaced.</span></td></tr>
+      <tr><td>yes-or-no question</td><td><span class="ex">Be + subject + participle?</span></td><td><span class="ex">Was the cable replaced?</span></td></tr>
+      <tr><td>information question</td><td><span class="ex">question word + be + subject + participle?</span></td><td><span class="ex">When was it replaced?</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched present and past time, singular and plural agreement, negative placement, and passive question order.">
+    <h3>Form check: let <span class="ex">be</span> carry time and agreement</h3>
+    <div class="choice-bank" aria-label="Present and past passive form choices"><button class="choice-option" data-choice-option="are inspected">are inspected</button><button class="choice-option" data-choice-option="was inspected">was inspected</button><button class="choice-option" data-choice-option="aren’t inspected">aren’t inspected</button><button class="choice-option" data-choice-option="Was the bicycle inspected">Was the bicycle inspected</button><button class="choice-option" data-choice-option="When were the bicycles inspected">When were the bicycles inspected</button></div>
+    <div class="q"><span class="n">1</span><span>The workshop’s current routine applies to all Model R bicycles: They <button class="choice-gap" data-choice-gap data-answer="are inspected" data-hint="Use present plural are plus the participle inspected for a current routine." data-fix="All Model R bicycles are inspected before sale.">choose</button> before sale.</span></div>
+    <div class="q"><span class="n">2</span><span>The record gives one finished check yesterday: Bicycle 24 <button class="choice-gap" data-choice-gap data-answer="was inspected" data-hint="Use past singular was plus inspected for the one finished check." data-fix="Bicycle 24 was inspected yesterday.">choose</button> yesterday.</span></div>
+    <div class="q"><span class="n">3</span><span>Sunday is outside the current inspection schedule: The bicycles <button class="choice-gap" data-choice-gap data-answer="aren’t inspected" data-hint="Use present plural are not, contracted to aren’t, before inspected." data-fix="The bicycles aren’t inspected on Sundays.">choose</button> on Sundays.</span></div>
+    <div class="q"><span class="n">4</span><span>Ask for confirmation about one finished check: <button class="choice-gap" data-choice-gap data-answer="Was the bicycle inspected" data-hint="Move past singular was before the subject and keep inspected after it." data-fix="Was the bicycle inspected on May 6?">choose</button> on May 6?</span></div>
+    <div class="q"><span class="n">5</span><span>Ask for the time of the two finished checks: <button class="choice-gap" data-choice-gap data-answer="When were the bicycles inspected" data-hint="Begin with When, use past plural were before the subject, and finish with inspected." data-fix="When were the bicycles inspected?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Keep the action in the past participle</h2>
+  <div class="lead-rule"></div>
+  <p>Regular participles end in <span class="ex">-ed</span>: <span class="ex">inspect, inspected, inspected</span>. Irregular families must be retrieved as complete families: <span class="ex">send, sent, sent</span>; <span class="ex">build, built, built</span>; <span class="ex">steal, stole, stolen</span>. The form of <span class="ex">be</span>, not the participle, shows present or past time in this lesson.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You supplied one regular and three irregular participles while be carried the clause tense.">
+    <h3>Participle check: complete the verb family</h3>
+    <div class="choice-bank" aria-label="Passive participle choices"><button class="choice-option" data-choice-option="inspected">inspected</button><button class="choice-option" data-choice-option="sent">sent</button><button class="choice-option" data-choice-option="built">built</button><button class="choice-option" data-choice-option="stolen">stolen</button></div>
+    <div class="q"><span class="n">1</span><span>Every bicycle is <button class="choice-gap" data-choice-gap data-answer="inspected" data-hint="Inspect is regular, so its participle ends in -ed." data-fix="Every bicycle is inspected before sale.">choose</button> before sale.</span></div>
+    <div class="q"><span class="n">2</span><span>The notice was <button class="choice-gap" data-choice-gap data-answer="sent" data-hint="The family is send, sent, sent." data-fix="The notice was sent on May 6.">choose</button> on May 6.</span></div>
+    <div class="q"><span class="n">3</span><span>The workshop was <button class="choice-gap" data-choice-gap data-answer="built" data-hint="The family is build, built, built." data-fix="The workshop was built in 2018.">choose</button> in 2018.</span></div>
+    <div class="q"><span class="n">4</span><span>Two bicycles were <button class="choice-gap" data-choice-gap data-answer="stolen" data-hint="The participle in the family steal, stole, stolen is stolen." data-fix="Two bicycles were stolen on Monday night.">choose</button> on Monday night.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Choose active or passive from the intended topic</h2>
+  <div class="lead-rule"></div>
+  <p>Use active voice when the agent is the natural topic, especially when responsibility, skill, or a person’s decision matters. Use passive voice when the process, result, evidence, or affected participant is the natural topic. An agentless passive does not prove that the agent is unknown. The agent may be unknown, obvious, generic, already established, or simply less relevant to this sentence.</p>
+  <p>Label other details accurately. <span class="ex">By</span> usually introduces an agent or responsible cause: <span class="ex">repaired by Maya</span>, <span class="ex">damaged by the storm</span>. <span class="ex">With</span> introduces an instrument: <span class="ex">tightened with a torque wrench</span>. <span class="ex">From</span> can introduce source material: <span class="ex">made from recycled aluminum</span>.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose active responsibility, agentless process focus, a meaningful by-agent, an instrument with with, and source material with from.">
+    <h3>Information check: keep only the details that serve the report</h3>
+    <div class="choice-bank" aria-label="Active passive agent instrument and material choices"><button class="choice-option" data-choice-option="Maya approved the release">Maya approved the release</button><button class="choice-option" data-choice-option="The frames are assembled in three stages">The frames are assembled in three stages</button><button class="choice-option" data-choice-option="was signed by engineer Lena Ortiz">was signed by engineer Lena Ortiz</button><button class="choice-option" data-choice-option="with a torque wrench">with a torque wrench</button><button class="choice-option" data-choice-option="from recycled aluminum">from recycled aluminum</button></div>
+    <div class="q"><span class="n">1</span><span>The investigation must identify who made the final release decision: <button class="choice-gap" data-choice-gap data-answer="Maya approved the release" data-hint="Choose active voice because the decision maker is the required topic." data-fix="Maya approved the release at 4:00.">choose</button> at 4:00.</span></div>
+    <div class="q"><span class="n">2</span><span>The visitor guide explains the manufacturing process, not individual workers: <button class="choice-gap" data-choice-gap data-answer="The frames are assembled in three stages" data-hint="Choose an agentless present passive because the frames and process are the topic." data-fix="The frames are assembled in three stages.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>The safety engineer’s qualification makes her identity informative: The final report <button class="choice-gap" data-choice-gap data-answer="was signed by engineer Lena Ortiz" data-hint="Use a by-phrase because the named qualified agent adds evidence." data-fix="The final report was signed by engineer Lena Ortiz.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>Name the tool, not another agent: Each cable is tightened <button class="choice-gap" data-choice-gap data-answer="with a torque wrench" data-hint="An instrument follows with, not by." data-fix="Each cable is tightened with a torque wrench.">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>Name the source material rather than a person: The frames are made <button class="choice-gap" data-choice-gap data-answer="from recycled aluminum" data-hint="Use from for source material that changes into the finished frame." data-fix="The frames are made from recycled aluminum.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Check whether the verb has an affected participant</h2>
+  <div class="lead-rule"></div>
+  <p>A basic passive normally comes from a verb with an object. In <span class="ex">The team repaired the bicycle</span>, <span class="ex">the bicycle</span> can become <span class="ex">The bicycle was repaired</span>. Verbs such as <span class="ex">happen, arrive, sleep</span>, and <span class="ex">occur</span> do not normally take an object in these meanings, so forms such as <span class="cross">was happened</span> and <span class="cross">was arrived</span> are not standard passives.</p>
+  <p>Some verbs have two object patterns. From <span class="ex">The company sent Maya a replacement</span>, English allows <span class="ex">Maya was sent a replacement</span> or <span class="ex">A replacement was sent to Maya</span>. The selected subject determines the camera angle.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed a passive only from verbs with an object, kept happen and arrive active, and selected one valid two-object viewpoint.">
+    <h3>Verb check: can this event support a passive?</h3>
+    <div class="choice-bank" aria-label="Passive verb eligibility choices"><button class="choice-option" data-choice-option="The brake cable was repaired by the team">The brake cable was repaired by the team</button><button class="choice-option" data-choice-option="The fault happened at noon">The fault happened at noon</button><button class="choice-option" data-choice-option="The parts arrived at 3:00">The parts arrived at 3:00</button><button class="choice-option" data-choice-option="Maya was sent a replacement">Maya was sent a replacement</button></div>
+    <div class="q"><span class="n">1</span><span>Shift focus from the repair team to its affected object: <button class="choice-gap" data-choice-gap data-answer="The brake cable was repaired by the team" data-hint="The active verb repaired has the object brake cable, so that object can become the passive subject." data-fix="The brake cable was repaired by the team.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Report the event without inventing an object for <span class="ex">happen</span>: <button class="choice-gap" data-choice-gap data-answer="The fault happened at noon" data-hint="Happen is intransitive here, so keep an active form without was." data-fix="The fault happened at noon.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Report movement to the workshop without an impossible passive of <span class="ex">arrive</span>: <button class="choice-gap" data-choice-gap data-answer="The parts arrived at 3:00" data-hint="Arrive has no object in this meaning, so it remains active." data-fix="The parts arrived at 3:00.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>From <span class="ex">The company sent Maya a replacement</span>, make Maya the new topic: <button class="choice-gap" data-choice-gap data-answer="Maya was sent a replacement" data-hint="The recipient Maya can become the passive subject with was sent." data-fix="Maya was sent a replacement.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Event, routine, or current state? Context decides</h2>
+  <div class="lead-rule"></div>
+  <p><span class="ex">Be + participle</span> can present a passive action, but some participles also behave like adjectives or resulting states. Compare <span class="ex">The workshop door is closed by staff at 8:00 every night</span>, a repeated action, with <span class="ex">The workshop door is closed now</span>, a current state. The words around the form reveal whether an agent, action, routine, or condition is relevant.</p>
+  <p>Conversation also uses eventive <span class="ex">get</span>-passives such as <span class="ex">The package got damaged during delivery</span>. They can sound more informal and often emphasize what happened to the subject. This lesson practices the more neutral <span class="ex">be</span>-passive; it does not label natural <span class="ex">get</span>-passives incorrect.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used time, agent, frequency, and condition evidence to distinguish repeated passive action, current state, past passive event, and informal get-passive event.">
+    <h3>Meaning check: read beyond <span class="ex">be + participle</span></h3>
+    <div class="choice-bank" aria-label="Passive action and state choices"><button class="choice-option" data-choice-option="a repeated passive action">a repeated passive action</button><button class="choice-option" data-choice-option="the door’s current state">the door’s current state</button><button class="choice-option" data-choice-option="one finished past passive event">one finished past passive event</button><button class="choice-option" data-choice-option="an informal event affecting the package">an informal event affecting the package</button></div>
+    <div class="q"><span class="n">1</span><span>In <span class="ex">The door is closed by staff at 8:00 every night</span>, the by-agent and frequency describe <button class="choice-gap" data-choice-gap data-answer="a repeated passive action" data-hint="Every night and by staff show an action repeated by an agent." data-fix="The sentence describes a repeated passive closing action.">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In <span class="ex">The door is closed now, so use the side entrance</span>, the practical point is <button class="choice-gap" data-choice-gap data-answer="the door’s current state" data-hint="Now and use the side entrance make the present condition relevant, not who closed it." data-fix="The sentence describes the door’s current closed state.">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>In <span class="ex">The store was damaged by the storm on May 6</span>, the date and by-cause identify <button class="choice-gap" data-choice-gap data-answer="one finished past passive event" data-hint="Was, the exact date, and by the storm locate a completed event." data-fix="The sentence reports one finished past passive event.">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>In conversational <span class="ex">The package got damaged during delivery</span>, <span class="ex">got damaged</span> presents <button class="choice-gap" data-choice-gap data-answer="an informal event affecting the package" data-hint="The get-passive emphasizes what happened to the package in a conversational way." data-fix="Got damaged presents an informal event affecting the package.">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Ask passive questions without adding <span class="ex">do</span></h2>
+  <div class="lead-rule"></div>
+  <p>Because <span class="ex">be</span> is already an auxiliary, move it before the subject: <span class="ex">Was the bicycle inspected?</span> Add a question word before that sequence: <span class="ex">When was it inspected?</span> A natural conversational agent question is <span class="ex">Who was it inspected by?</span>. <span class="ex">By whom was it inspected?</span> is grammatical but considerably more formal.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You formed confirmation, time, conversational-agent, and plural negative questions by moving be rather than adding do.">
+    <h3>Question check: request one exact kind of information</h3>
+    <div class="choice-bank" aria-label="Passive question choices"><button class="choice-option" data-choice-option="Was bicycle 24 inspected on May 6">Was bicycle 24 inspected on May 6</button><button class="choice-option" data-choice-option="When was the notice sent">When was the notice sent</button><button class="choice-option" data-choice-option="Who was the final report signed by">Who was the final report signed by</button><button class="choice-option" data-choice-option="Why weren’t the owners contacted earlier">Why weren’t the owners contacted earlier</button></div>
+    <div class="q"><span class="n">1</span><span>Ask for yes-or-no confirmation about bicycle 24: <button class="choice-gap" data-choice-gap data-answer="Was bicycle 24 inspected on May 6" data-hint="Begin with past singular Was, then the subject and participle." data-fix="Was bicycle 24 inspected on May 6?">choose</button>?</span></div>
+    <div class="q"><span class="n">2</span><span>Ask for the notice’s sending time: <button class="choice-gap" data-choice-gap data-answer="When was the notice sent" data-hint="Use When plus was, the subject notice, and the participle sent." data-fix="When was the notice sent?">choose</button>?</span></div>
+    <div class="q"><span class="n">3</span><span>Ask conversationally for the person who signed the final report: <button class="choice-gap" data-choice-gap data-answer="Who was the final report signed by" data-hint="Use Who first and leave by in its natural conversational position at the end." data-fix="Who was the final report signed by?">choose</button>?</span></div>
+    <div class="q"><span class="n">4</span><span>Ask for the reason that earlier contact did not happen: <button class="choice-gap" data-choice-gap data-answer="Why weren’t the owners contacted earlier" data-hint="Use Why plus contracted past plural were not before the subject owners." data-fix="Why weren’t the owners contacted earlier?">choose</button>?</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Use the passive responsibly</h2>
+  <div class="lead-rule"></div>
+  <p>Passive voice is not automatically vague or formal. It is efficient when a process, result, or affected person belongs in focus. It can also hide responsibility. In an investigation, compare <span class="ex">The unsafe release was approved</span> with <span class="ex">Maya approved the unsafe release</span>. If the report’s purpose is accountability and the agent is known, omitting that agent removes important evidence.</p>
+  <div class="quiz" data-quiz data-success-message="Correct. You preserved useful process focus while naming a known decision maker when accountability required it.">
+    <h3>Critical choice: which camera angle serves the reader?</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Maya approved the unsafe release at 4:00." data-hint="The investigation asks who made the decision, so name that known agent as the active subject." data-fix="Maya approved the unsafe release at 4:00."><p class="quiz-question">1. The investigation must establish individual responsibility. Which sentence supplies the required evidence?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya approved the unsafe release at 4:00.">Maya approved the unsafe release at 4:00.</button><button class="quiz-option" data-quiz-option="The unsafe release was approved at 4:00.">The unsafe release was approved at 4:00.</button><button class="quiz-option" data-quiz-option="There was an approval somehow.">There was an approval somehow.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Every Model R bicycle is inspected before sale." data-hint="The visitor guide explains a standard process, and the individual inspectors are not relevant." data-fix="Every Model R bicycle is inspected before sale."><p class="quiz-question">2. A visitor guide describes the workshop’s standard safety process. Which sentence keeps the process in focus?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Every Model R bicycle is inspected before sale.">Every Model R bicycle is inspected before sale.</button><button class="quiz-option" data-quiz-option="A person who works somewhere does something.">A person who works somewhere does something.</button><button class="quiz-option" data-quiz-option="Every Model R bicycle inspected before sale.">Every Model R bicycle inspected before sale.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The wording hides who made the mistakes." data-hint="No agent appears, although the statement refers to human decisions and responsibility may matter." data-fix="Mistakes were made can hide who made them."><p class="quiz-question">3. In a public accountability report, what risk does <span class="ex">Mistakes were made</span> create?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The wording hides who made the mistakes.">The wording hides who made the mistakes.</button><button class="quiz-option" data-quiz-option="The wording proves that no person was involved.">The wording proves that no person was involved.</button><button class="quiz-option" data-quiz-option="The wording changes the mistakes into future plans.">The wording changes the mistakes into future plans.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The final report was signed by safety engineer Lena Ortiz." data-hint="The named qualified signer adds useful authority and accountability to the final report." data-fix="The final report was signed by safety engineer Lena Ortiz."><p class="quiz-question">4. Which passive sentence keeps a genuinely informative agent?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The final report was signed by safety engineer Lena Ortiz.">The final report was signed by safety engineer Lena Ortiz.</button><button class="quiz-option" data-quiz-option="The report was signed by someone with a pen.">The report was signed by someone with a pen.</button><button class="quiz-option" data-quiz-option="The report was signed by people.">The report was signed by people.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: hear weak <span class="ex">be</span>, keep the participle</h2>
+  <div class="lead-rule"></div>
+  <div class="two-col">
+    <div>
+      <h3>Listen for a small auxiliary</h3>
+      <p>In connected U.S. speech, unstressed <span class="ex">was</span> often reduces toward /wəz/ and unstressed <span class="ex">were</span> toward /wɚ/: <span class="ex">It was SENT on MONday</span>, /ɪt wəz ˈsɛnt ɑn ˈmʌndeɪ/; <span class="ex">They were TESTed TWICE</span>, /ðeɪ wɚ ˈtɛstɪd twaɪs/. The participle and new information normally carry clearer stress.</p>
+      <p>Do not drop the auxiliary because it is weak. <span class="ex">The parts sent yesterday</span> is not a complete Past Simple passive clause. Keep <span class="ex">were</span>: <span class="ex">The parts were sent yesterday</span>.</p>
+    </div>
+    <div>
+      <h3>Link questions and hear the ending</h3>
+      <p><span class="ex">Was it sent?</span> may link as /wəzɪt ˈsɛnt/. <span class="ex">When was it sent?</span> may sound like /wɛn wəzɪt ˈsɛnt/. Let question order, the subject, and the participle help you recover the small auxiliary.</p>
+      <p>Regular participles keep the same ending patterns as regular Past Simple verbs: <span class="ex">repaired</span> ends /d/, <span class="ex">washed</span> ends /t/, and <span class="ex">tested</span> adds /ɪd/. Accurate listening depends on the whole clause, not one ending alone.</p>
+    </div>
+  </div>
+
+  <section data-lesson-extension="Tutor-read present process, past event, negative passive, linked time question, and agent-versus-instrument listening check">
+    <h2>Listen for time, polarity, and the useful detail</h2>
+    <div class="lead-rule"></div>
+    <p>Your tutor reads each line once naturally and once in short thought groups. Choose from the time marker, subject, auxiliary, participle, and preposition together.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You heard a present process, finished past event, negative passive, linked time question, and agent-versus-instrument contrast.">
+      <h3>Listening check: recover the complete passive message</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Every unit goes through two tests as a routine." data-hint="Listen for every unit, present is, and twice." data-fix="Every unit goes through two tests as a routine."><p class="quiz-question">1. What does the first line say about testing?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Every unit goes through two tests as a routine.">Every unit goes through two tests as a routine.</button><button class="quiz-option" data-quiz-option="One unit was tested twice last year.">One unit was tested twice last year.</button><button class="quiz-option" data-quiz-option="Testing is prohibited at the workshop.">Testing is prohibited at the workshop.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The package was sent on Monday." data-hint="Listen for weak was, the participle sent, and Monday." data-fix="The package was sent on Monday."><p class="quiz-question">2. Which finished event does the second line report?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The package was sent on Monday.">The package was sent on Monday.</button><button class="quiz-option" data-quiz-option="The package is sent every Monday.">The package is sent every Monday.</button><button class="quiz-option" data-quiz-option="The package will send itself next Monday.">The package will send itself next Monday.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="No replacement of the batteries occurred." data-hint="Listen for weren’t replaced, which negates the replacement action without adding another unstated event." data-fix="No replacement of the batteries occurred."><p class="quiz-question">3. What does <span class="ex">The batteries weren’t replaced</span> state directly?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="No replacement of the batteries occurred.">No replacement of the batteries occurred.</button><button class="quiz-option" data-quiz-option="New batteries were installed in every bicycle.">New batteries were installed in every bicycle.</button><button class="quiz-option" data-quiz-option="The original batteries definitely remained inside every bicycle.">The original batteries definitely remained inside every bicycle.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="the delivery time" data-hint="Listen for the question word When before linked was it delivered." data-fix="When was it delivered? asks for the delivery time."><p class="quiz-question">4. What information does the linked question request?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="the delivery time">the delivery time</button><button class="quiz-option" data-quiz-option="the identity of the customer">the identity of the customer</button><button class="quiz-option" data-quiz-option="the price of the package">the price of the package</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Maya is the agent, and a torque wrench is the instrument." data-hint="By introduces Maya; with introduces the torque wrench." data-fix="Maya is the agent, and a torque wrench is the instrument."><p class="quiz-question">5. In the final line, what do the <span class="ex">by</span>-phrase and <span class="ex">with</span>-phrase identify?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Maya is the agent, and a torque wrench is the instrument.">Maya is the agent, and a torque wrench is the instrument.</button><button class="quiz-option" data-quiz-option="The wrench is the agent, and Maya is the source material.">The wrench is the agent, and Maya is the source material.</button><button class="quiz-option" data-quiz-option="Both phrases identify two unknown times.">Both phrases identify two unknown times.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Tutor transcript and evidence notes</summary>
+      <ol>
+        <li><span class="ex">Every UNIT is TESTed TWICE.</span> Evidence: present <span class="ex">is tested</span>, frequency <span class="ex">every</span>, and count <span class="ex">twice</span>.</li>
+        <li><span class="ex">The PACKAGE was SENT on MONday.</span> Evidence: weak past <span class="ex">was</span>, irregular participle <span class="ex">sent</span>, and finished day.</li>
+        <li><span class="ex">The BATteries WEREN’T rePLACED.</span> Evidence: contracted negative auxiliary before the participle.</li>
+        <li><span class="ex">WHEN was it deLIVered?</span> Evidence: linked <span class="ex">was it</span> and prominent information word <span class="ex">when</span>.</li>
+        <li><span class="ex">The FRAME was rePAIRED by MAYa with a TORQUE WRENCH.</span> Evidence: <span class="ex">by Maya</span> names the agent; <span class="ex">with a torque wrench</span> names the instrument.</li>
+      </ol>
+    </details>
+  </section>
+
+  <h2>Read one complete service bulletin</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Northline Model R safety bulletin, May 7</h3>
+    <p><span class="ex">A brake-cable fault was discovered during a routine inspection at 9:00 on May 6. Twenty-four Model R bicycles were removed from sale that morning. Their registered owners were contacted before 6:00 p.m., and replacement cables were installed free of charge on May 7. No injuries were reported to Northline. The final safety check was completed by engineer Lena Ortiz, whose name appears on the signed report.</span></p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You recovered the fault, affected bicycles, owner contact, exact no-injury claim, and reason the final agent was named from the bulletin.">
+    <h3>Reading check: use only the stated evidence</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="A brake-cable fault." data-hint="The opening sentence names what the routine inspection discovered." data-fix="A brake-cable fault was discovered."><p class="quiz-question">1. What was discovered during the May 6 inspection?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="A brake-cable fault.">A brake-cable fault.</button><button class="quiz-option" data-quiz-option="A missing safety engineer.">A missing safety engineer.</button><button class="quiz-option" data-quiz-option="A new bicycle color.">A new bicycle color.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Twenty-four Model R bicycles." data-hint="The second sentence gives the exact number and model removed that morning." data-fix="Twenty-four Model R bicycles were removed from sale."><p class="quiz-question">2. What was removed from sale?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Twenty-four Model R bicycles.">Twenty-four Model R bicycles.</button><button class="quiz-option" data-quiz-option="Every bicycle in the country.">Every bicycle in the country.</button><button class="quiz-option" data-quiz-option="Twenty-four workshop buildings.">Twenty-four workshop buildings.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="No injuries were reported to Northline." data-hint="Repeat the bulletin’s limited claim without changing it into proof that no injury existed anywhere." data-fix="No injuries were reported to Northline."><p class="quiz-question">3. What exact claim does the bulletin make about injuries?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="No injuries were reported to Northline.">No injuries were reported to Northline.</button><button class="quiz-option" data-quiz-option="The bulletin proves that no injury occurred anywhere.">The bulletin proves that no injury occurred anywhere.</button><button class="quiz-option" data-quiz-option="Twenty-four injuries were confirmed.">Twenty-four injuries were confirmed.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Her identity provides qualified responsibility for the final safety check." data-hint="The final sentence connects the named engineer to the completed check and signed report." data-fix="Lena Ortiz is named because her identity provides qualified responsibility for the final safety check."><p class="quiz-question">4. Why is Lena Ortiz retained in a <span class="ex">by</span>-phrase?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Her identity provides qualified responsibility for the final safety check.">Her identity provides qualified responsibility for the final safety check.</button><button class="quiz-option" data-quiz-option="Every passive sentence must name an agent.">Every passive sentence must name an agent.</button><button class="quiz-option" data-quiz-option="She is the instrument used to tighten the cables.">She is the instrument used to tighten the cables.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build one passive question and one accountable report</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="were the replacement cables installed on Tuesday" data-hint="Begin with Were, place the plural subject before the participle installed, and finish with the time phrase." data-fix="Were the replacement cables installed on Tuesday?" data-success-message="Correct. Were agrees with cables and moves before the subject to form the past passive question.">
+    <h3>Build 1: ask for confirmation</h3><p class="tile-target">Ask whether Tuesday was the installation day for the replacement cables.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="tuesday">Tuesday</button><button class="tile" data-build-tile="installed">installed</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="on">on</button><button class="tile" data-build-tile="replacement">replacement</button><button class="tile" data-build-tile="were">Were</button><button class="tile" data-build-tile="cables">cables</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+  <div class="tile-game" data-tile-builder data-answer="the final check was completed by Lena Ortiz" data-hint="Begin with the report topic, use past singular was plus completed, and retain the informative agent after by." data-fix="The final check was completed by Lena Ortiz." data-success-message="Correct. The final check remains the topic, while by Lena Ortiz preserves the qualified agent.">
+    <h3>Build 2: preserve an informative agent</h3><p class="tile-target">Report the completed safety check with the named engineer as useful evidence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="ortiz">Ortiz</button><button class="tile" data-build-tile="completed">completed</button><button class="tile" data-build-tile="lena">Lena</button><button class="tile" data-build-tile="final">final</button><button class="tile" data-build-tile="by">by</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="was">was</button><button class="tile" data-build-tile="check">check</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div><div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair the broken chain</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="inspected" data-hint="A complete present passive needs plural be before the participle." data-fix="The bicycles are inspected every morning." data-why="The plural subject bicycles requires are, and inspected remains the participle." data-success-message="Correct. Adding are restores the present plural passive chain.">
+    <h3>Repair 1: restore the missing auxiliary</h3><p>Tap the word before which <span class="ex">are</span> must be inserted.</p><div class="spot-options"><button class="error-choice" data-error-choice="bicycles">The bicycles</button><button class="error-choice" data-error-choice="inspected">inspected</button><button class="error-choice" data-error-choice="every">every</button><button class="error-choice" data-error-choice="morning">morning.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="install" data-hint="After was, the action needs its past participle." data-fix="The replacement cable was installed on May 7." data-why="Install is regular, so its participle is installed." data-success-message="Correct. Installed is the regular participle required after was.">
+    <h3>Repair 2: use the participle</h3><p>Tap the base verb that cannot complete this past passive.</p><div class="spot-options"><button class="error-choice" data-error-choice="cable">The replacement cable</button><button class="error-choice" data-error-choice="was">was</button><button class="error-choice" data-error-choice="install">install</button><button class="error-choice" data-error-choice="date">on May 7.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="was" data-hint="Happen has no object in this meaning, so it cannot form this passive." data-fix="The fault happened at noon." data-why="Remove was and keep Past Simple happened because no affected object can become a passive subject." data-success-message="Correct. Removing was keeps the intransitive event in an accurate active form.">
+    <h3>Repair 3: remove an impossible passive</h3><p>Tap the unnecessary auxiliary.</p><div class="spot-options"><button class="error-choice" data-error-choice="fault">The fault</button><button class="error-choice" data-error-choice="was">was</button><button class="error-choice" data-error-choice="happened">happened</button><button class="error-choice" data-error-choice="noon">at noon.</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Use it without exposing private work history</h2>
+  <div class="lead-rule"></div>
+  <p class="note-line">You never need to describe a real employer, workplace incident, product defect, customer, legal issue, injury, complaint, financial loss, password, address, schedule, or person responsible for a mistake. Use the fictional Northline case. Real details are optional.</p>
+  <div class="prompt-card"><b>Routine process:</b> Explain how Model R bicycles are inspected, tested, and prepared. Use at least two present simple passives.</div>
+  <div class="prompt-card"><b>Finished incident:</b> Report what was discovered, removed, sent, or replaced on May 6 and May 7. Use at least two past simple passives.</div>
+  <div class="prompt-card"><b>Responsible focus:</b> Omit an obvious or unknown agent once, keep one meaningful agent with <span class="ex">by</span>, and name a responsible decision maker actively when accountability requires it.</div>
+  <div class="prompt-card"><b>Follow-up:</b> Ask one passive question and answer it from the fictional case.</div>
+
+  <h2>Final production and check</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Final production: give a 75–90 second fictional service briefing</h3>
+    <p>Use the Northline case. Begin with two recurring process steps in the present passive. Move to two finished May 6 or May 7 events in the past passive. Omit one unhelpful agent, retain one informative <span class="ex">by</span>-agent, identify one instrument with <span class="ex">with</span>, and name a known decision maker actively if responsibility is central. Include one negative and one passive follow-up question.</p>
+    <p><b>Evidence check:</b> Can the listener identify the topic of each clause, recover present or past time, hear the complete <span class="ex">be + participle</span> chain, distinguish agent from instrument, and tell whether any important responsibility was hidden?</p>
+  </div>
+  <div class="quiz" data-quiz data-success-message="Correct. You preserved process focus, accurate past form, and accountable agent choice rather than transforming every clause mechanically.">
+    <h3>Final check: defend the camera angle</h3>
+    <div class="quiz-list">
+      <div class="quiz-item" data-quiz-item data-answer="Every Model R bicycle is inspected before sale." data-hint="The sentence needs a present routine with the bicycle and safety process in focus." data-fix="Every Model R bicycle is inspected before sale."><p class="quiz-question">1. Which sentence accurately describes the current inspection process?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Every Model R bicycle is inspected before sale.">Every Model R bicycle is inspected before sale.</button><button class="quiz-option" data-quiz-option="Every Model R bicycle was inspect before sale now.">Every Model R bicycle was inspect before sale now.</button><button class="quiz-option" data-quiz-option="Every Model R bicycle inspects by itself.">Every Model R bicycle inspects by itself.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="Twenty-four bicycles were removed from sale on May 6." data-hint="The sentence needs past plural were plus the participle removed for the dated finished event." data-fix="Twenty-four bicycles were removed from sale on May 6."><p class="quiz-question">2. Which sentence accurately reports the finished removal?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Twenty-four bicycles were removed from sale on May 6.">Twenty-four bicycles were removed from sale on May 6.</button><button class="quiz-option" data-quiz-option="Twenty-four bicycles was remove from sale on May 6.">Twenty-four bicycles was remove from sale on May 6.</button><button class="quiz-option" data-quiz-option="Twenty-four bicycles were happened from sale.">Twenty-four bicycles were happened from sale.</button></div></div>
+      <div class="quiz-item" data-quiz-item data-answer="The final safety check was completed by engineer Lena Ortiz." data-hint="The report topic remains first, and the qualified signer is informative enough to keep in a by-phrase." data-fix="The final safety check was completed by engineer Lena Ortiz."><p class="quiz-question">3. Which sentence balances report focus with useful accountability?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The final safety check was completed by engineer Lena Ortiz.">The final safety check was completed by engineer Lena Ortiz.</button><button class="quiz-option" data-quiz-option="The final safety check completed by someone.">The final safety check completed by someone.</button><button class="quiz-option" data-quiz-option="Engineer Lena Ortiz was happened the final check.">Engineer Lena Ortiz was happened the final check.</button></div></div>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Reflect: what did the camera angle accomplish?</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Explain the decision path</h3>
+    <p>Complete these ideas aloud: <span class="ex">I choose active when...</span> <span class="ex">I choose passive when...</span> <span class="ex">Be carries...</span> <span class="ex">The participle carries...</span> <span class="ex">I keep a by-agent when...</span> <span class="ex">A with-phrase identifies...</span></p>
+    <p>Make active and passive versions of one Northline event. Explain what remains true, what becomes the grammatical topic, and whether either version hides information the reader needs.</p>
+    <p><a href="#next-day-retrieval">Return tomorrow for the three-item retrieval check</a> before rereading the lesson.</p>
+  </div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Next-day passive form, verb eligibility, and accountable agent-choice retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Return without rereading the page. Name the intended topic, time, and agent decision before selecting a form.</p>
+    <div class="quiz" data-quiz data-success-message="Correct. You retained the full present passive chain, the intransitive happen boundary, and responsible agent choice.">
+      <h3>Three delayed checks</h3>
+      <div class="quiz-list">
+        <div class="quiz-item" data-quiz-item data-answer="Every bicycle is inspected before sale." data-hint="The current process needs present singular is plus the participle inspected." data-fix="Every bicycle is inspected before sale."><p class="quiz-question">1. Which sentence contains the complete present passive for the current routine?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Every bicycle is inspected before sale.">Every bicycle is inspected before sale.</button><button class="quiz-option" data-quiz-option="Every bicycle inspected before sale.">Every bicycle inspected before sale.</button><button class="quiz-option" data-quiz-option="Every bicycle is inspect before sale.">Every bicycle is inspect before sale.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="The fault happened at noon." data-hint="Happen has no object in this meaning, so do not add passive be." data-fix="The fault happened at noon."><p class="quiz-question">2. Which sentence reports the intransitive event accurately?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The fault happened at noon.">The fault happened at noon.</button><button class="quiz-option" data-quiz-option="The fault was happened at noon.">The fault was happened at noon.</button><button class="quiz-option" data-quiz-option="The fault was happen by noon.">The fault was happen by noon.</button></div></div>
+        <div class="quiz-item" data-quiz-item data-answer="Name the known approver because the report is establishing responsibility." data-hint="When accountability is the purpose and the agent is known, hiding the agent removes relevant evidence." data-fix="Name the known approver because the report is establishing responsibility."><p class="quiz-question">3. An investigation asks who approved an unsafe release. What is the responsible information choice?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="Name the known approver because the report is establishing responsibility.">Name the known approver because the report is establishing responsibility.</button><button class="quiz-option" data-quiz-option="Always omit every agent because passive voice is more formal.">Always omit every agent because passive voice is more formal.</button><button class="quiz-option" data-quiz-option="Replace the decision maker with the instrument used to write the report.">Replace the decision maker with the instrument used to write the report.</button></div></div>
+      </div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div><p class="feedback" data-feedback></p>
+    </div>
+  </section>
+</main>
+</LessonPage>

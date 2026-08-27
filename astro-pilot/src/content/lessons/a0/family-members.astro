@@ -2,74 +2,112 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Family members · A0 Vocabulary · Curriculum Map",
+  "title": "Family members · A0 Vocabulary",
   "slug": "family-members",
   "level": "A0",
   "topic": "Family members",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Name the people closest to you. Learn the family words in female / male pairs — mother / father , sister / brother — and join them with my, his, her and 's : my sister , Omar's bro",
+  "description": "Name close and extended family members and explain relationships naturally with possessive adjectives and possessive ’s.",
   "sequence": 13,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/possessive-adjectives",
+    "a0/regular-plural-nouns",
+    "a0/this-that-these-those"
+  ],
+  "related": [
+    "a1/have-got",
+    "b1/relationships"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 45,
+    "revisionSummary": "Family diversity, neutral and gender-specific terms, possessive meaning, irregular plurals, spoken forms, privacy, item context, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 13</p>
   <h1>Family <em>members</em></h1>
-  <p class="standfirst">Name the people closest to you. Learn the family words in <strong>female / male</strong> pairs — <span class="ex">mother / father</span>, <span class="ex">sister / brother</span> — and join them with <strong>my, his, her</strong> and <strong>'s</strong>: <span class="ex">my sister</span>, <span class="ex">Omar's brother</span>, <span class="ex">Ana's husband</span>.</p>
+  <p class="standfirst">Name close and extended family relationships with specific words such as <span class="ex">mother</span> and <span class="ex">brother</span>, or neutral words such as <span class="ex">parent</span> and <span class="ex">sibling</span>. Connect people with <strong>my, his, her, our, their</strong>, and possessive <strong>'s</strong>: <span class="ex">my sibling</span>, <span class="ex">Omar's brother</span>, <span class="ex">their children</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 40–50 min</span>
-    <span class="tag">female / male pairs</span>
-    <span class="tag">my · his · her · 's</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">specific and neutral words</span>
+    <span class="tag">my · his · her · our · their · 's</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Read a short family description.</span></div>
-    <div class="flow-step"><b>Discover</b><span>Female / male pairs and the word for "many".</span></div>
+    <div class="flow-step"><b>Discover</b><span>Specific words, neutral words, and one irregular plural.</span></div>
     <div class="flow-step"><b>Build</b><span>Match meanings, choose, and build chunks.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe your family and a coworker's.</span></div>
+    <div class="flow-step"><b>Use</b><span>Describe a real, pictured, or invented family.</span></div>
   </div>
 
-  <p class="note-line">We say one thing many ways: <span class="ex">mother</span> = <span class="ex">mom</span>, <span class="ex">father</span> = <span class="ex">dad</span>, <span class="ex">grandmother</span> = <span class="ex">grandma</span>, <span class="ex">grandfather</span> = <span class="ex">grandpa</span>, <span class="ex">children</span> = <span class="ex">kids</span>. Both are correct and adult; <em>mom / dad / grandma / grandpa / kids</em> are warmer and more informal.</p>
+  <p class="note-line"><span class="ex">Mother, father, grandmother, grandfather</span>, and <span class="ex">children</span> are standard or more formal choices. In U.S. English, <span class="ex">mom, dad, grandma, grandpa</span>, and <span class="ex">kids</span> are common informal choices. Use the family words each person uses for their own relationships.</p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved my for the speaker's relationship, a plural noun after two, and are with the plural subject Ana's parents.">
+    <h3>Bring possessives, plurals, and <em>be</em> into the lesson</h3>
+    <p class="choice-hint">Use earlier lessons. Complete each full family description, then say it aloud.</p>
+    <div class="choice-bank" aria-label="Earlier grammar choices">
+      <button class="choice-option" data-choice-option="my">my</button>
+      <button class="choice-option" data-choice-option="her">her</button>
+      <button class="choice-option" data-choice-option="cousin">cousin</button>
+      <button class="choice-option" data-choice-option="cousins">cousins</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+      <button class="choice-option" data-choice-option="are">are</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>Ana says, “This is <button class="choice-gap" data-choice-gap data-answer="my" data-hint="Ana is speaking about her own sister, so use the speaker word my." data-fix="Ana says, ‘This is my sister.’" data-placeholder="choose">choose</button> sister.”</span></div>
+    <div class="q"><span class="n">2</span><span>I have two <button class="choice-gap" data-choice-gap data-answer="cousins" data-hint="Two requires the regular plural noun cousins." data-fix="I have two cousins." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Ana's parents <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Parents is plural, so use the plural form are." data-fix="Ana's parents are here." data-placeholder="choose">choose</button> here.</span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Meet the family</h2>
   <div class="lead-rule"></div>
-  <p>Point to each person and say who they are: <span class="ex">This is my mother. This is my brother.</span></p>
+  <p>Use the written label under each representative picture: <span class="ex">This is my mother. This is my brother.</span> A person's appearance does not tell you their family role, so learn the label and relationship, not the face or clothing.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/grandmother.svg" alt="" loading="lazy" /></span><span class="nm">grandmother</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/grandfather.svg" alt="" loading="lazy" /></span><span class="nm">grandfather</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mother.svg" alt="" loading="lazy" /></span><span class="nm">mother</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/father.svg" alt="" loading="lazy" /></span><span class="nm">father</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sister.svg" alt="" loading="lazy" /></span><span class="nm">sister</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/brother.svg" alt="" loading="lazy" /></span><span class="nm">brother</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/boy.svg" alt="" loading="lazy" /></span><span class="nm">son</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/girl.svg" alt="" loading="lazy" /></span><span class="nm">daughter</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/man.svg" alt="" loading="lazy" /></span><span class="nm">husband</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/woman.svg" alt="" loading="lazy" /></span><span class="nm">wife</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/family.svg" alt="" loading="lazy" /></span><span class="nm">family</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/grandmother.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">grandmother</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/grandfather.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">grandfather</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mother.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">mother</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/father.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">father</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/sister.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">sister</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/brother.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">brother</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/boy.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">son</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/girl.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">daughter</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/man.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">husband</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/woman.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">wife</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/family.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">family</span></div>
   </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Read about Sofia's family</h3>
-    <p><span class="ex">"My mother is a nurse. My father is a teacher. I have one sister and one brother. My sister's husband, Diego, is my favorite cousin's friend."</span></p>
+    <h3>Read about Sofia's fictional family</h3>
+    <p><span class="ex">"My mother is a nurse. My father is a teacher. I have one sister and one brother. My sister's husband is Diego."</span></p>
     <ul>
-      <li>Which words name <strong>women</strong> in the family? Which name <strong>men</strong>? Can you find the pairs?</li>
-      <li>What do you think <strong>parents</strong> means — only the mother, only the father, or both together?</li>
-      <li>Look at <span class="ex">my sister's husband</span>. The little <span class="ex">'s</span> shows the sister <strong>has</strong> a husband. Who does Diego belong to?</li>
+      <li>Which words give a specific relationship and gender: <strong>mother, father, sister, brother</strong>, or <strong>family</strong>?</li>
+      <li>For Sofia, <strong>mother</strong> and <strong>father</strong> are both types of <strong>parent</strong>. <strong>Sister</strong> and <strong>brother</strong> are both types of <strong>sibling</strong>. Which neutral word names each pair?</li>
+      <li>Look at <span class="ex">my sister's husband</span>. The little <span class="ex">'s</span> shows a family relationship. What is Diego’s relationship to Sofia’s sister?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the clue, then choose the word</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The fictional description distinguishes mother, father, parents, sister, and brother from explicit relationship clues.">
+    <h3>Discovery check: read the clue, then choose the word</h3>
     <p class="choice-hint">Each clue describes one person. Choose the family word that matches.</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="mother">mother</button>
@@ -78,11 +116,11 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="brother">brother</button>
       <button class="choice-option" data-choice-option="parents">parents</button>
     </div>
-    <div class="q"><span class="n">1</span><span>your female parent &nbsp;→&nbsp; your <button class="choice-gap" data-choice-gap data-answer="mother" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">2</span><span>your male parent &nbsp;→&nbsp; your <button class="choice-gap" data-choice-gap data-answer="father" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">3</span><span>your mother and father together &nbsp;→&nbsp; your <button class="choice-gap" data-choice-gap data-answer="parents" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">4</span><span>your parents' daughter, not you &nbsp;→&nbsp; your <button class="choice-gap" data-choice-gap data-answer="sister" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">5</span><span>your parents' son, not you &nbsp;→&nbsp; your <button class="choice-gap" data-choice-gap data-answer="brother" data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">1</span><span>Sofia says, “Rosa is my female parent.” Rosa is Sofia's <button class="choice-gap" data-choice-gap data-answer="mother" data-hint="The clue says female parent; the specific family word is mother." data-fix="Rosa is Sofia's mother." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>Sofia says, “Luis is my male parent.” Luis is Sofia's <button class="choice-gap" data-choice-gap data-answer="father" data-hint="The clue says male parent; the specific family word is father." data-fix="Luis is Sofia's father." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Rosa and Luis are both Sofia's parents. Together, they are her <button class="choice-gap" data-choice-gap data-answer="parents" data-hint="The sentence says both people are Sofia's parents, so use the plural parents." data-fix="Rosa and Luis are Sofia's parents." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>In this story, Marta and Sofia have the same parents. Marta is their daughter and is not Sofia. Marta is Sofia's <button class="choice-gap" data-choice-gap data-answer="sister" data-hint="A female sibling is a sister; the clue names Marta as a daughter with the same parents." data-fix="Marta is Sofia's sister." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>In this story, Leo and Sofia have the same parents. Leo is their son and is not Sofia. Leo is Sofia's <button class="choice-gap" data-choice-gap data-answer="brother" data-hint="A male sibling is a brother; the clue names Leo as a son with the same parents." data-fix="Leo is Sofia's brother." data-placeholder="choose">choose</button>.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -90,40 +128,107 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: pairs, and one special plural</h2>
+  <h2>The system: specific words, neutral words, and one special plural</h2>
   <div class="lead-rule"></div>
-  <p>Most family words come in a <strong>female / male</strong> pair. Learn them two at a time:</p>
+  <p>Some family words give a specific relationship and gender. A neutral word can describe the relationship without giving gender. Use the word that matches how the person describes their family:</p>
   <table>
-    <thead><tr><th></th><th>female</th><th>male</th></tr></thead>
+    <thead><tr><th>relationship</th><th>specific words</th><th>neutral or general word</th></tr></thead>
     <tbody>
-      <tr><td><b>parent</b></td><td><b>mother</b> &nbsp;<span class="contraction">mom</span></td><td><b>father</b> &nbsp;<span class="contraction">dad</span></td></tr>
-      <tr><td><b>sibling</b></td><td><b>sister</b></td><td><b>brother</b></td></tr>
-      <tr><td><b>child</b></td><td><b>daughter</b></td><td><b>son</b></td></tr>
-      <tr><td><b>partner</b></td><td><b>wife</b></td><td><b>husband</b></td></tr>
-      <tr><td><b>grandparent</b></td><td><b>grandmother</b> &nbsp;<span class="contraction">grandma</span></td><td><b>grandfather</b> &nbsp;<span class="contraction">grandpa</span></td></tr>
-      <tr><td><b>parent's sibling</b></td><td><b>aunt</b></td><td><b>uncle</b></td></tr>
-      <tr><td><b>aunt / uncle's child</b></td><td colspan="2"><b>cousin</b> &nbsp;<span class="contraction">female or male — same word</span></td></tr>
+      <tr><td><b>parent</b></td><td><b>mother</b> / <b>mom</b> · <b>father</b> / <b>dad</b></td><td><b>parent</b></td></tr>
+      <tr><td><b>sibling</b></td><td><b>sister</b> · <b>brother</b></td><td><b>sibling</b></td></tr>
+      <tr><td><b>child</b></td><td><b>daughter</b> · <b>son</b></td><td><b>child</b></td></tr>
+      <tr><td><b>married partner</b></td><td><b>wife</b> · <b>husband</b></td><td><b>spouse</b></td></tr>
+      <tr><td><b>partner</b></td><td>use the word the person gives you</td><td><b>partner</b></td></tr>
+      <tr><td><b>grandparent</b></td><td><b>grandmother</b> / <b>grandma</b> · <b>grandfather</b> / <b>grandpa</b></td><td><b>grandparent</b></td></tr>
+      <tr><td><b>parent's sibling</b></td><td><b>aunt</b> · <b>uncle</b></td><td>say <b>my parent's sibling</b> if needed</td></tr>
+      <tr><td><b>aunt or uncle's child</b></td><td><b>cousin</b></td><td><b>cousin</b></td></tr>
     </tbody>
   </table>
 
   <div class="note">
-    <h3>Meaning check</h3>
+    <h3>Pronunciation focus: family words hide a few sounds</h3>
+    <p>Some family words are easier to understand when you learn their spoken parts. Say each one slowly once, then use it in a natural chunk such as <span class="ex">my brother</span> or <span class="ex">her daughter</span>.</p>
+    <table>
+      <thead><tr><th>word</th><th>sound help</th><th>example chunk</th></tr></thead>
+      <tbody>
+        <tr><td>mother · father · brother</td><td>put the tongue gently between the teeth and use your voice for the <span class="ex">th</span> sound</td><td><span class="contraction">my <strong>BROTH</strong>er</span></td></tr>
+        <tr><td>daughter</td><td><span class="ex"><strong>DAW</strong>-ter</span>; <span class="ex">gh</span> is silent, and in many U.S. accents the <span class="ex">t</span> sounds like a quick <span class="ex">d</span></td><td><span class="contraction">their <strong>DAW</strong>ter</span></td></tr>
+        <tr><td>children</td><td><span class="ex"><strong>CHIL</strong>-dren</span>; two spoken parts</td><td><span class="contraction">three <strong>CHIL</strong>dren</span></td></tr>
+        <tr><td>cousin</td><td><span class="ex"><strong>CUZ</strong>-in</span>; the second part is light</td><td><span class="contraction">my <strong>CUZ</strong>in Ana</span></td></tr>
+        <tr><td>sibling</td><td><span class="ex"><strong>SIB</strong>-ling</span>; the first part is strong</td><td><span class="contraction">her <strong>SIB</strong>ling</span></td></tr>
+        <tr><td>aunt</td><td>both “ant” and “ahnt” are common in American English</td><td><span class="contraction">my aunt Maria</span></td></tr>
+      </tbody>
+    </table>
+    <p>In long family words, the first part is usually the clear beat: <span class="ex"><strong>GRAND</strong>mother · <strong>GRAND</strong>father · <strong>PAR</strong>ents</span>.</p>
+    <p>Possessive <span class="ex">'s</span> joins closely to a name. After a voiced sound, it often sounds like <span class="ex">z</span>: <span class="ex">Omar's</span> sounds like <span class="ex">Omarz</span>. Say the relationship as one chunk: <span class="ex">Omar's brother · Ana's spouse</span>.</p>
+  </div>
+
+  <div class="note">
+    <h3>Families and meanings</h3>
     <ul>
       <li>How do we say more than one child? <strong>Not</strong> <span class="ex">childs</span>. The plural of <span class="ex">child</span> is <span class="ex">children</span> (warmly, <span class="ex">kids</span>).</li>
-      <li>What is the difference between <span class="ex">parents</span> and <span class="ex">grandparents</span>? <strong>Parents</strong> = your mother and father. <strong>Grandparents</strong> = your parents' parents.</li>
-      <li>Is <span class="ex">cousin</span> male or female? <strong>Either.</strong> One word for both: <span class="ex">my cousin Ana</span>, <span class="ex">my cousin Tom</span>.</li>
+      <li>One person is a <span class="ex">parent</span>; two or more are <span class="ex">parents</span>. A family may have one parent, two parents, or another structure. A <span class="ex">grandparent</span> is a parent's parent.</li>
+      <li><span class="ex">Sibling, parent, child, spouse, partner, grandparent</span>, and <span class="ex">cousin</span> do not state gender. They are useful when gender is not relevant or when they are the words a person uses.</li>
+      <li>In this A0 lesson, an <span class="ex">aunt</span> or <span class="ex">uncle</span> is a parent's sibling. People also commonly use these words for the spouse or partner of a parent's sibling.</li>
+      <li>Families can be connected by birth, adoption, marriage, partnership, or other committed family relationships. Do not guess a relationship from appearance; listen for the word the person uses.</li>
     </ul>
   </div>
 
-  <h2>Whose person is it? &nbsp;<em>my · his · her · 's</em></h2>
-  <div class="lead-rule"></div>
-  <p>Put a possessive in front to show <strong>whose</strong> the person is. Keep these chunks together:</p>
-  <p><span class="ex">my mother &nbsp; · &nbsp; her brother &nbsp; · &nbsp; his wife</span></p>
-  <p>For a name, add <span class="ex">'s</span> to the person who "has" the family member:</p>
-  <p><span class="ex">Omar's brother &nbsp; · &nbsp; Ana's husband &nbsp; · &nbsp; my sister's son</span></p>
+  <section data-lesson-extension="Tutor-read family relationship listening check">
+    <h2>Hear the family relationship</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the script closed while you listen. Your teacher reads each sentence once, then once more. Choose the exact relationship word or plural you hear.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished sibling, children, spouse, cousin, parents, and daughter in complete spoken family descriptions.">
+      <h3>Listening check: complete the description</h3>
+      <div class="choice-bank" aria-label="Listening family-word choices">
+        <button class="choice-option" data-choice-option="sibling">sibling</button>
+        <button class="choice-option" data-choice-option="sister">sister</button>
+        <button class="choice-option" data-choice-option="children">children</button>
+        <button class="choice-option" data-choice-option="child">child</button>
+        <button class="choice-option" data-choice-option="spouse">spouse</button>
+        <button class="choice-option" data-choice-option="parent">parent</button>
+        <button class="choice-option" data-choice-option="cousin">cousin</button>
+        <button class="choice-option" data-choice-option="uncle">uncle</button>
+        <button class="choice-option" data-choice-option="parents">parents</button>
+        <button class="choice-option" data-choice-option="grandparents">grandparents</button>
+        <button class="choice-option" data-choice-option="daughter">daughter</button>
+        <button class="choice-option" data-choice-option="brother">brother</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>This is my <button class="choice-gap" data-choice-gap data-answer="sibling" data-hint="Listen for SIB-ling, the neutral word for a sister or brother." data-fix="This is my sibling." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>They have two <button class="choice-gap" data-choice-gap data-answer="children" data-hint="Listen for the two spoken parts in CHIL-dren and notice the number two." data-fix="They have two children." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Her <button class="choice-gap" data-choice-gap data-answer="spouse" data-hint="Listen for spouse, the neutral word for a husband or wife." data-fix="Her spouse is a doctor." data-placeholder="listen">listen</button> is a doctor.</span></div>
+      <div class="q"><span class="n">4</span><span>Omar's <button class="choice-gap" data-choice-gap data-answer="cousin" data-hint="Listen for CUZ-in, not uncle." data-fix="Omar's cousin lives nearby." data-placeholder="listen">listen</button> lives nearby.</span></div>
+      <div class="q"><span class="n">5</span><span>My <button class="choice-gap" data-choice-gap data-answer="parents" data-hint="Listen for parents, not the longer word grandparents." data-fix="My parents are in Texas." data-placeholder="listen">listen</button> are in Texas.</span></div>
+      <div class="q"><span class="n">6</span><span>Ana's <button class="choice-gap" data-choice-gap data-answer="daughter" data-hint="Listen for DAW-ter with silent gh." data-fix="Ana's daughter is twenty." data-placeholder="listen">listen</button> is twenty.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol>
+        <li>This is my sibling.</li>
+        <li>They have two children.</li>
+        <li>Her spouse is a doctor.</li>
+        <li>Omar's cousin lives nearby.</li>
+        <li>My parents are in Texas.</li>
+        <li>Ana's daughter is twenty.</li>
+      </ol>
+    </details>
+  </section>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose the family word</h3>
+  <h2>Show the family connection &nbsp;<em>my · his · her · 's</em></h2>
+  <div class="lead-rule"></div>
+  <p>Put a possessive adjective before the family word to show the relationship. Keep the chunk together:</p>
+  <p><span class="ex">my mother &nbsp; · &nbsp; her brother &nbsp; · &nbsp; his spouse &nbsp; · &nbsp; our children &nbsp; · &nbsp; their cousin</span></p>
+  <p>For a name, add possessive <span class="ex">'s</span> to the name that identifies the connection:</p>
+  <p><span class="ex">Omar's brother &nbsp; · &nbsp; Ana's spouse &nbsp; · &nbsp; my sister's son</span></p>
+  <p><span class="ex">Omar's brother</span> shows a relationship; it does not mean Omar owns a person. Do not use both systems together: say <span class="ex">Omar's brother</span>, not <span class="ex">Omar's his brother</span>.</p>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each family word follows from the stated connection, and children is the irregular plural after three.">
+    <h3>Drill 1: choose the family word</h3>
     <p class="choice-hint">The clue and the possessive tell you exactly who the person is</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="grandmother">grandmother</button>
@@ -133,12 +238,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="cousin">cousin</button>
       <button class="choice-option" data-choice-option="children">children</button>
     </div>
-    <div class="q"><span class="n">1</span><span>my mother's mother is my <button class="choice-gap" data-choice-gap data-answer="grandmother" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">2</span><span>my father's brother is my <button class="choice-gap" data-choice-gap data-answer="uncle" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">3</span><span>Omar's wife is Leyla; their female child is their <button class="choice-gap" data-choice-gap data-answer="daughter" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">4</span><span>the woman married to my brother is his <button class="choice-gap" data-choice-gap data-answer="wife" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">5</span><span>my aunt's son is my <button class="choice-gap" data-choice-gap data-answer="cousin" data-placeholder="choose">choose</button></span></div>
-    <div class="q"><span class="n">6</span><span>a coworker has two sons and one daughter; she has three <button class="choice-gap" data-choice-gap data-answer="children" data-placeholder="choose">choose</button></span></div>
+    <div class="q"><span class="n">1</span><span>In this fictional family, my mother Rosa says, “Elena is my mother.” Elena is my <button class="choice-gap" data-choice-gap data-answer="grandmother" data-hint="Elena is the mother of my parent Rosa, so she is my grandmother." data-fix="Elena is my grandmother." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span>In this fictional family, my father Luis says, “Tom is my brother.” Tom is my <button class="choice-gap" data-choice-gap data-answer="uncle" data-hint="Tom is my parent's brother, so the family word in this lesson is uncle." data-fix="Tom is my uncle." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span>Omar's wife is Leyla. They say, “Nina is our female child.” Nina is their <button class="choice-gap" data-choice-gap data-answer="daughter" data-hint="The people describe Nina as their female child; the specific word is daughter." data-fix="Nina is their daughter." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span>My brother says, “Maya and I are married, and Maya is my wife.” Maya is his <button class="choice-gap" data-choice-gap data-answer="wife" data-hint="The speaker explicitly uses wife for Maya, so repeat that family word." data-fix="Maya is his wife." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span>My aunt says, “Leo is my son.” Leo is my <button class="choice-gap" data-choice-gap data-answer="cousin" data-hint="An aunt's child is a cousin in the family pattern taught here." data-fix="Leo is my cousin." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span>A fictional coworker has two sons and one daughter. The three people are the coworker's <button class="choice-gap" data-choice-gap data-answer="children" data-hint="Two sons plus one daughter are three children; child has an irregular plural." data-fix="The coworker has three children." data-placeholder="choose">choose</button>.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -149,8 +254,8 @@ export const page = defineLesson({
   <h2>Build the meaning, then the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each meaning to its family word</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. You matched each family word to an explicit relationship rather than guessing from a name or appearance.">
+    <h3>Drill 2: match each meaning to its family word</h3>
     <p class="tile-target">Tap a word, then tap the meaning that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="grandmother">grandmother</button>
@@ -160,11 +265,11 @@ export const page = defineLesson({
       <button class="tile" data-tile="husband">husband</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="grandmother" data-placeholder="my mother's mother">my mother's mother</button>
-      <button class="slot" data-slot="uncle" data-placeholder="my father's brother">my father's brother</button>
-      <button class="slot" data-slot="sister" data-placeholder="my parents' daughter, not me">my parents' daughter, not me</button>
-      <button class="slot" data-slot="parents" data-placeholder="my mother and father together">my mother and father together</button>
-      <button class="slot" data-slot="husband" data-placeholder="the man married to a woman">the man married to a woman</button>
+      <button class="slot" data-slot="grandmother" data-hint="Move up one generation: my mother's mother is my grandmother." data-fix="grandmother → my mother's mother" data-placeholder="my mother's mother">my mother's mother</button>
+      <button class="slot" data-slot="uncle" data-hint="In this family, my father's brother is my uncle." data-fix="uncle → my father's brother" data-placeholder="my father's brother">my father's brother</button>
+      <button class="slot" data-slot="sister" data-hint="A female sibling is a sister; the clue says daughter with the same parents." data-fix="sister → my parents' daughter, not me" data-placeholder="my parents' daughter, not me">my parents' daughter, not me</button>
+      <button class="slot" data-slot="parents" data-hint="The clue names two people who are both my parents, so use the plural parents." data-fix="parents → my mother and father together in this family" data-placeholder="my mother and father together in this family">my mother and father together in this family</button>
+      <button class="slot" data-slot="husband" data-hint="The clue explicitly asks for the male word for a married partner." data-fix="husband → a male married partner" data-placeholder="a male married partner">a male married partner</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -173,8 +278,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="this is my sister">
-    <h3>Drill 3 — build the sentence</h3>
+  <div class="tile-game" data-tile-builder data-answer="this is my sister" data-hint="Begin with This is, then place my before the family word sister." data-fix="This is my sister." data-success-message="Correct. This is introduces the person, and my stays directly before the relationship word sister.">
+    <h3>Drill 3: build the sentence</h3>
     <p class="tile-target">You introduce the woman next to you. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="sister">sister</button>
@@ -190,9 +295,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="leyla is omar's wife">
-    <h3>Drill 4 — build the sentence with 's</h3>
-    <p class="tile-target">Leyla is married to Omar. Use <span class="ex">Omar's</span> to show whose wife she is.</p>
+  <div class="tile-game" data-tile-builder data-answer="leyla is omar's wife" data-hint="Begin with Leyla is, then keep Omar's directly before wife." data-fix="Leyla is Omar's wife." data-success-message="Correct. Possessive Omar's identifies Leyla's family relationship to Omar and stays directly before wife.">
+    <h3>Drill 4: build the sentence with 's</h3>
+    <p class="tile-target">Leyla says, “I am Omar's wife.” Report Leyla's words with <span class="ex">Omar's</span> before <span class="ex">wife</span>.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="wife">wife</button>
       <button class="tile" data-build-tile="leyla">Leyla</button>
@@ -209,8 +314,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="brother" data-fix="She is my sister." data-why="She is female, so the family word must be female too. The female word is sister, not brother.">
-    <h3>Drill 5 — does the word match the person?</h3>
+  <div class="micro-drill" data-spot-error data-answer="brother" data-hint="The fictional speaker explicitly calls the person a woman and uses she; check the gender-specific family word." data-fix="She is my sister." data-why="The context explicitly identifies the person as the speaker's female sibling, so the specific word is sister, not brother.">
+    <h3>Drill 5: does the word match the person?</h3>
     <p>Tap the word that does not match. <span class="ex">She</span> is a woman.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="she">She</button>
@@ -221,8 +326,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="childs" data-fix="My coworker has two children." data-why="The plural of child is irregular. We say children, not childs.">
-    <h3>Drill 6 — one special plural</h3>
+  <div class="micro-drill" data-spot-error data-answer="childs" data-hint="Two needs a plural, but child does not form its plural with regular -s." data-fix="My fictional coworker has two children." data-why="The plural of child is irregular. We say children, not childs.">
+    <h3>Drill 6: one special plural</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="coworker">coworker</button>
@@ -234,7 +339,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — name the person, then say it</h3>
+    <h3>Drill 7: name the person, then say it</h3>
     <p>Read the relationship clue and say the family word aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -271,18 +376,18 @@ export const page = defineLesson({
     <h3>My family</h3>
     <p><span class="ex">“This is my family. My mother’s name is Rosa and my father’s name is Luis. I have one brother and two sisters. My grandmother lives with us. Her name is Elena.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real family description.">
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the fictional description to identify Rosa, the two sisters, and Elena the grandmother.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Rosa">
+      <div class="quiz-item" data-quiz-item data-answer="Rosa" data-hint="The second sentence gives the mother's name before the father's name." data-fix="The mother's name is Rosa.">
         <p class="quiz-question">1. What is the mother’s name?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Rosa">Rosa</button><button class="quiz-option" data-quiz-option="Elena">Elena</button><button class="quiz-option" data-quiz-option="Ana">Ana</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="two">
+      <div class="quiz-item" data-quiz-item data-answer="two" data-hint="The third sentence says one brother and two sisters." data-fix="The writer has two sisters.">
         <p class="quiz-question">2. How many sisters does the writer have?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the grandmother">
+      <div class="quiz-item" data-quiz-item data-answer="the grandmother" data-hint="The final two sentences connect grandmother with the name Elena." data-fix="Elena is the grandmother.">
         <p class="quiz-question">3. Who is Elena?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the grandmother">the grandmother</button><button class="quiz-option" data-quiz-option="the mother">the mother</button><button class="quiz-option" data-quiz-option="a sister">a sister</button></div>
       </div>
@@ -296,53 +401,60 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your close family:</b> Name four people in your family (real or invented) with a full sentence each. <span class="ex">This is my mother, Carla. This is my brother, Luis.</span></div>
-  <div class="prompt-card"><b>Who do you live with?</b> Say who is in your home now. <span class="ex">I live with my wife and our two children.</span> &nbsp;<span class="ex">I live with my parents.</span></div>
-  <div class="prompt-card"><b>A coworker's family:</b> Describe a coworker's family using <span class="ex">his / her</span> and <span class="ex">'s</span>. <span class="ex">My coworker Omar has a wife, Leyla. Omar's daughter is six.</span></div>
-  <div class="prompt-card"><b>A family photo:</b> Show or imagine a photo. Point and name each person. <span class="ex">This is my grandmother. These are my cousins.</span></div>
-  <div class="prompt-card"><b>Ask and answer:</b> The teacher asks; the student answers in full. <span class="ex">Do you have brothers or sisters? How many cousins do you have? Who is the oldest in your family?</span></div>
+  <div class="note"><strong>Choice and privacy:</strong> you do not need to share real names, ages, family structure, living arrangements, photos, or coworker information. Use the fictional people on this page, public fictional characters, or an invented family whenever you prefer.</div>
+  <div class="prompt-card"><b>A close family:</b> Name four real, pictured, or invented people with a full sentence each. <span class="ex">This is Carla, a parent. This is her son, Luis.</span></div>
+  <div class="prompt-card"><b>A fictional household:</b> Choose who lives in one invented home. <span class="ex">Maya lives with her partner and their two children.</span> &nbsp;<span class="ex">Leo lives with his grandparent.</span></div>
+  <div class="prompt-card"><b>An invented coworker's family:</b> Use a name, a possessive adjective, and possessive <span class="ex">'s</span>. <span class="ex">Omar has a spouse, Leyla. Omar's cousin lives nearby. Their child is six.</span></div>
+  <div class="prompt-card"><b>A fictional family picture:</b> Point and name each labeled person. <span class="ex">This is the grandmother. These are her two children.</span></div>
+  <div class="prompt-card"><b>Ask and answer in role:</b> Choose a fictional identity. Answer in full sentences: <span class="ex">Do you have siblings? How many cousins do you have? Who is the oldest person in this family?</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: explain a fictional family map</h3>
+    <p>Draw or arrange five fictional people. Explain every connection so your partner can rebuild the same map without seeing it. Then compare the two maps and repair one unclear sentence.</p>
+    <p><strong>Success criteria:</strong> use at least one neutral relationship word and one specific relationship word; use one correct plural, including <span class="ex">children</span> if it fits; use two possessive adjectives; use a name with possessive <span class="ex">'s</span>; and never ask your partner to guess a role from appearance.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>Say the pairs back</h3>
-    <p>Complete this aloud: “A female parent is a ______; a male parent is a ______. Together they are my ______. My parents' parents are my ______. The plural of <strong>child</strong> is ______.”</p>
-    <p>Then say two true sentences about your own family using <strong>my</strong> and one sentence about a friend's family using <strong>'s</strong>.</p>
+    <h3>Explain the choices</h3>
+    <p>Complete this aloud: “A mother or father is a ______. A sister or brother is a ______. A husband or wife is a ______. The irregular plural of <strong>child</strong> is ______.”</p>
+    <p>Then use a real, pictured, or invented family. Say two sentences with possessive adjectives and one sentence with a name plus possessive <strong>'s</strong>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can name family members in female / male pairs and show whose they are with my, his, her, and 's.">
-    <h3>Final quiz — name the family member</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You can identify specific and neutral family relationships, use children, and show connections with possessive adjectives and possessive 's.">
+    <h3>Final quiz: name the family member</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="grandfather">
-        <p class="quiz-question">1. My father's father is my ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="grandfather" data-hint="Move from the fictional speaker to their father, then to his father." data-fix="My father's father is my grandfather.">
+        <p class="quiz-question">1. In a fictional family, my father Luis says, “Rafael is my father.” Rafael is my ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="grandfather">grandfather</button><button class="quiz-option" data-quiz-option="grandmother">grandmother</button><button class="quiz-option" data-quiz-option="uncle">uncle</button><button class="quiz-option" data-quiz-option="cousin">cousin</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="aunt">
-        <p class="quiz-question">2. My mother's sister is my ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="aunt" data-hint="In the family pattern on this page, a parent's sister is an aunt." data-fix="My mother's sister is my aunt.">
+        <p class="quiz-question">2. In this family, my mother Rosa says, “Maya is my sister.” Maya is my ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="aunt">aunt</button><button class="quiz-option" data-quiz-option="uncle">uncle</button><button class="quiz-option" data-quiz-option="sister">sister</button><button class="quiz-option" data-quiz-option="daughter">daughter</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="parents">
-        <p class="quiz-question">3. My mother and father together are my ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="parents" data-hint="The sentence explicitly says both Rosa and Luis are types of parent, so use the plural." data-fix="Rosa and Luis are Sofia's parents.">
+        <p class="quiz-question">3. Sofia says, “Rosa is my mother and Luis is my father. Both are my ___.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="parents">parents</button><button class="quiz-option" data-quiz-option="children">children</button><button class="quiz-option" data-quiz-option="cousins">cousins</button><button class="quiz-option" data-quiz-option="grandparents">grandparents</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="children">
-        <p class="quiz-question">4. My coworker has two sons and a daughter. She has three ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="children" data-hint="Two sons plus one daughter are three people; child has an irregular plural." data-fix="The fictional coworker has three children.">
+        <p class="quiz-question">4. A fictional coworker has two sons and a daughter. The coworker has three ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="children">children</button><button class="quiz-option" data-quiz-option="childs">childs</button><button class="quiz-option" data-quiz-option="cousins">cousins</button><button class="quiz-option" data-quiz-option="parents">parents</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="daughter">
-        <p class="quiz-question">5. Ana's female child is Ana's ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="daughter" data-hint="Ana explicitly calls Nina her daughter, so repeat the relationship word Ana uses." data-fix="Nina is Ana's daughter.">
+        <p class="quiz-question">5. Ana says, “Nina is my daughter.” Nina is Ana's ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="daughter">daughter</button><button class="quiz-option" data-quiz-option="son">son</button><button class="quiz-option" data-quiz-option="sister">sister</button><button class="quiz-option" data-quiz-option="wife">wife</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Omar's wife">
-        <p class="quiz-question">6. Leyla is married to Omar. Which phrase is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Omar's wife" data-hint="Add possessive 's to Omar, then place the relationship word wife after it." data-fix="Omar's wife">
+        <p class="quiz-question">6. Leyla says, “I am Omar's wife.” Which phrase writes that relationship correctly?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Omar's wife">Omar's wife</button><button class="quiz-option" data-quiz-option="Omar wife">Omar wife</button><button class="quiz-option" data-quiz-option="wife's Omar">wife's Omar</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="She is my sister.">
-        <p class="quiz-question">7. You point at a woman in a photo. Which sentence is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="She is my sister." data-hint="Maya explicitly identifies herself as a sister and says she uses she; match both pieces of information." data-fix="She is my sister.">
+        <p class="quiz-question">7. Maya says, “I am your sister, and I use she.” Which sentence reports her words?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="She is my sister.">She is my sister.</button><button class="quiz-option" data-quiz-option="She is my brother.">She is my brother.</button><button class="quiz-option" data-quiz-option="He is my sister.">He is my sister.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="cousin">
-        <p class="quiz-question">8. My aunt's son is my ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="cousin" data-hint="In this family pattern, an aunt's child is a cousin." data-fix="My aunt's son is my cousin.">
+        <p class="quiz-question">8. My aunt says, “Leo is my son.” Leo is my ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="cousin">cousin</button><button class="quiz-option" data-quiz-option="brother">brother</button><button class="quiz-option" data-quiz-option="uncle">uncle</button><button class="quiz-option" data-quiz-option="nephew">nephew</button></div>
       </div>
     </div>
@@ -352,6 +464,57 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the relationship words or possessive chunks that still feel slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day family retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve neutral family words, the irregular plural <span class="ex">children</span>, and possessive <span class="ex">'s</span>.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You recalled parent, sibling, children, and spouse from explicit family relationships without guessing from names or appearance.">
+      <h3>Choose the exact relationship from memory</h3>
+      <div class="choice-bank" aria-label="Next-day family choices">
+        <button class="choice-option" data-choice-option="parent">parent</button>
+        <button class="choice-option" data-choice-option="grandparent">grandparent</button>
+        <button class="choice-option" data-choice-option="sibling">sibling</button>
+        <button class="choice-option" data-choice-option="cousin">cousin</button>
+        <button class="choice-option" data-choice-option="children">children</button>
+        <button class="choice-option" data-choice-option="childs">childs</button>
+        <button class="choice-option" data-choice-option="spouse">spouse</button>
+        <button class="choice-option" data-choice-option="parent's">parent's</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Maria says, “Rosa is my mother.” Rosa is Maria's <button class="choice-gap" data-choice-gap data-answer="parent" data-hint="Mother is a specific word; the neutral relationship word is parent." data-fix="Rosa is Maria's parent." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Tom says, “Leo is my brother.” Leo is Tom's <button class="choice-gap" data-choice-gap data-answer="sibling" data-hint="Brother is a specific word; the neutral relationship word is sibling." data-fix="Leo is Tom's sibling." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Rosa and Luis have one son and one daughter. They have two <button class="choice-gap" data-choice-gap data-answer="children" data-hint="Child has the irregular plural children, not childs." data-fix="They have two children." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Maya says, “Lee and I are married.” Lee is Maya's <button class="choice-gap" data-choice-gap data-answer="spouse" data-hint="Spouse is the neutral word for a husband or wife." data-fix="Lee is Maya's spouse." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="Omar" data-hint="A name before a family word needs possessive 's to identify the relationship." data-fix="Omar's wife" data-why="Add possessive 's to the name: Omar's wife. The phrase shows a family connection, not ownership of a person.">
+      <h3>Repair the possessive connection</h3>
+      <p>Leyla says, “I am Omar wife.” Tap the name that needs possessive <span class="ex">'s</span>.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="I">I</button>
+        <button class="error-choice" data-error-choice="Omar">Omar</button>
+        <button class="error-choice" data-error-choice="wife">wife</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Say the neutral word for <span class="ex">mother or father</span>, <span class="ex">sister or brother</span>, and <span class="ex">husband or wife</span>. Then say the plural of <span class="ex">child</span>.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Invent three people and explain two family connections. Use one neutral word and one name with possessive <span class="ex">'s</span>. Your teacher repeats the map back; repair any unclear connection.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

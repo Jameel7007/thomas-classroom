@@ -2,32 +2,40 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "can for ability and permission · A1 Grammar · Curriculum Map",
+  "title": "Can for ability and permission · A1 Grammar",
   "slug": "can-for-ability-and-permission",
   "level": "A1",
   "topic": "can for ability and permission",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Say what is possible and ask politely: I can drive , She can’t come , and Can I open the window?",
+  "description": "Use can and can’t for ability and present possibility, ask and answer questions, request permission, and make friendly everyday requests.",
   "sequence": 5,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/subject-pronouns", "a1/present-simple"],
+  "related": ["a1/adverbs-of-frequency", "a2/past-simple", "b1/modals-of-deduction-might-could-must"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Ability, present possibility, permission, requests, form, time boundaries, U.S. spoken contrasts, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 5</p>
   <h1>Ability and permission with <em>can</em></h1>
-  <p class="standfirst">Say what is possible and ask politely: <span class="ex">I can drive</span>, <span class="ex">She can’t come</span>, and <span class="ex">Can I open the window?</span></p>
+  <p class="standfirst">Say what someone is able to do, what is possible now, and what a person or rule allows: <span class="ex">I can drive</span>, <span class="ex">She can’t come today</span>, and <span class="ex">Can I open the window?</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">ability and permission</span>
-    <span class="tag">polite requests</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">ability, present possibility, and permission</span>
+    <span class="tag">friendly requests</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,11 +45,11 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Talk about your real skills and rules.</span></div>
   </div>
 
-  <p class="note-line"><span class="ex">Can</span> is one small word with three everyday jobs: skills, permission, and friendly requests. You will use it at work, around the city, and at home.</p>
+  <p class="note-line"><span class="ex">Can</span> presents an action as possible now. A skill can make it possible, a situation can make it possible, or a person or rule can allow it. In a question to another person, <span class="ex">can</span> can also ask for help.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You matched has got to the singular subject, used Do for a present-simple question, and introduced one place with There is.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -52,9 +60,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="There is">There is</button>
       <button class="choice-option" data-choice-option="There are">There are</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My sister <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> got two children. &nbsp;<span class="contraction">(have got)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Do" data-placeholder="choose">choose</button> you work on weekends? &nbsp;<span class="contraction">(present simple)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="There is" data-placeholder="choose">choose</button> a coffee shop on my street. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The fictional family profile names one sister. My sister <button class="choice-gap" data-choice-gap data-answer="has" data-hint="My sister is one third-person subject, so use has before got." data-fix="My sister has got two children." data-placeholder="choose">choose</button> got two children. &nbsp;<span class="contraction">(have got)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The schedule question asks about your regular weekend routine: <button class="choice-gap" data-choice-gap data-answer="Do" data-hint="A present-simple question with you begins with Do." data-fix="Do you work on weekends?" data-placeholder="choose">choose</button> you work on weekends? &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">3</span><span>A neighborhood guide introduces one place: <button class="choice-gap" data-choice-gap data-answer="There is" data-hint="One new coffee shop takes the singular introduction There is." data-fix="There is a coffee shop on this fictional street." data-placeholder="choose">choose</button> a coffee shop on this fictional street. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -74,7 +82,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Can marks a possible skill or allowed action, can’t marks an unavailable action, and Can at the front asks permission.">
     <h3>Discovery check: choose the pattern</h3>
     <p class="choice-hint">Read the whole sentence first. The meaning tells you which form fits.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -82,12 +90,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="can’t">can’t</button>
       <button class="choice-option" data-choice-option="Can">Can</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> swim, so I go to the pool every week.</span></div>
-    <div class="q"><span class="n">2</span><span>He <button class="choice-gap" data-choice-gap data-answer="can’t" data-placeholder="choose">choose</button> drive at night; his eyes get tired.</span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="Can" data-placeholder="choose">choose</button> I open the window? It’s hot in here.</span></div>
-    <div class="q"><span class="n">4</span><span>She <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> speak Spanish and English, so she translates for our team.</span></div>
-    <div class="q"><span class="n">5</span><span>We <button class="choice-gap" data-choice-gap data-answer="can’t" data-placeholder="choose">choose</button> hear you. The music is very loud.</span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="Can" data-placeholder="choose">choose</button> we start the meeting now? Everyone is here.</span></div>
+    <div class="q"><span class="n">1</span><span>The speaker describes a learned skill: I <button class="choice-gap" data-choice-gap data-answer="can" data-hint="Going to the pool every week supports a positive swimming ability." data-fix="I can swim, so I go to the pool every week." data-placeholder="choose">choose</button> swim, so I go to the pool every week.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional health note says night driving is not safe for Leo: He <button class="choice-gap" data-choice-gap data-answer="can’t" data-hint="The note makes night driving unavailable, so use the negative can’t." data-fix="He can’t drive at night because his eyes get tired." data-placeholder="choose">choose</button> drive at night because his eyes get tired.</span></div>
+    <div class="q"><span class="n">3</span><span>The room is hot, and the learner asks the host for permission: <button class="choice-gap" data-choice-gap data-answer="Can" data-hint="A permission question begins Can I followed by the base verb." data-fix="Can I open the window?" data-placeholder="choose">choose</button> I open the window?</span></div>
+    <div class="q"><span class="n">4</span><span>The fictional team profile lists two language skills: She <button class="choice-gap" data-choice-gap data-answer="can" data-hint="The profile confirms a positive ability, so use can." data-fix="She can speak Spanish and English, so she translates for the team." data-placeholder="choose">choose</button> speak Spanish and English, so she translates for the team.</span></div>
+    <div class="q"><span class="n">5</span><span>The music is very loud, so hearing the caller is not possible now: We <button class="choice-gap" data-choice-gap data-answer="can’t" data-hint="The loud music blocks the action in this situation, so use can’t." data-fix="We can’t hear you because the music is very loud." data-placeholder="choose">choose</button> hear you because the music is very loud.</span></div>
+    <div class="q"><span class="n">6</span><span>Everyone has arrived, and the chair asks the group for permission to begin: <button class="choice-gap" data-choice-gap data-answer="Can" data-hint="The chair asks whether the group allows the action, so begin Can we." data-fix="Can we start the meeting now?" data-placeholder="choose">choose</button> we start the meeting now?</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -109,17 +117,21 @@ export const page = defineLesson({
   <p class="note-line">Short answers: <span class="ex">Yes, I can. / No, she can’t.</span> Do not repeat the action verb in a short answer.</p>
   <p class="note-line">The key rule: <span class="ex">can</span> + base verb for <strong>every</strong> subject. <span class="ex">I can drive, she can drive, they can drive.</span> No <span class="ex">-s</span>, no <span class="ex">do / does</span>, ever.</p>
 
-  <h2>Get to the root: one word, three meanings</h2>
+  <h2>Get to the root: one idea, four everyday uses</h2>
   <div class="lead-rule"></div>
-  <p><span class="ex">Can</span> is a <strong>modal verb</strong>. A modal does not name the main action. It adds the speaker’s view of that action. With <span class="ex">can</span>, that view is whether the action is possible: because of a skill, because a rule or person allows it, or because someone agrees to do it for you.</p>
+  <p><span class="ex">Can</span> is a <strong>modal verb</strong>. A modal does not name the main action. It adds the speaker’s view of that action. With <span class="ex">can</span>, the speaker presents the action as possible now. The context explains why it is possible.</p>
   <table>
     <thead><tr><th>meaning</th><th>example</th><th>what it says</th></tr></thead>
     <tbody>
       <tr><td><b>ability</b></td><td>I can swim.</td><td>A skill makes the action possible.</td></tr>
+      <tr><td><b>present possibility</b></td><td>I can talk now.</td><td>The situation makes the action possible now.</td></tr>
       <tr><td><b>permission</b></td><td>You can leave early. Can I open the window?</td><td>A rule or a person allows it.</td></tr>
       <tr><td><b>request</b></td><td>Can you help me?</td><td>You ask someone to do something for you.</td></tr>
     </tbody>
   </table>
+
+  <h3>Ability or this situation?</h3>
+  <p>A negative with <span class="ex">can’t</span> does not always mean “I do not have the skill.” Compare <span class="ex">I can’t drive</span> in a driving lesson with <span class="ex">I can’t drive you today because my car is at the repair shop</span>. The first is about general ability. The second is about what the present situation allows.</p>
 
   <h3>Context decides the meaning</h3>
   <p>The words alone do not always tell you which meaning is active. The situation does.</p>
@@ -138,7 +150,12 @@ export const page = defineLesson({
     <p>Only <span class="ex">can</span> moves to the front or becomes negative. The base verb <span class="ex">drive</span> never changes. This is why <span class="ex">Does she can drive?</span> mixes two different systems and is not the target form.</p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Keep the time boundary clear</h3>
+    <p>This lesson uses <span class="ex">can</span> for ability, permission, and possibility that are true now or generally. Do not combine present <span class="ex">can</span> with a finished past time. Say <span class="ex">I could swim when I was five</span>, not <span class="ex">I can swim when I was five</span>. Later lessons develop past <span class="ex">could</span> and future <span class="ex">be able to</span>.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The stated skill, present obstacle, permission rule, or requested action makes each can chunk defensible.">
     <h3>Drill 1: ability, permission, or request</h3>
     <p class="choice-hint">Read the whole situation first. Then choose the chunk that fits.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -147,14 +164,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="Can I">Can I</button>
       <button class="choice-option" data-choice-option="Can you">Can you</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My brother <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> fix computers. He works in IT.</span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Can you" data-placeholder="choose">choose</button> help me with these boxes, please?</span></div>
-    <div class="q"><span class="n">3</span><span>Sorry, I <button class="choice-gap" data-choice-gap data-answer="can’t" data-placeholder="choose">choose</button> come to the office today. My daughter is sick.</span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Can I" data-placeholder="choose">choose</button> ask you a question about the schedule?</span></div>
-    <div class="q"><span class="n">5</span><span>At this school, students <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> use their phones during the break, but not in class.</span></div>
-    <div class="q"><span class="n">6</span><span>She <button class="choice-gap" data-choice-gap data-answer="can’t" data-placeholder="choose">choose</button> find a parking spot downtown in the morning; the streets are full.</span></div>
-    <div class="q"><span class="n">7</span><span><button class="choice-gap" data-choice-gap data-answer="Can you" data-placeholder="choose">choose</button> call me back after lunch? I’m in a meeting right now.</span></div>
-    <div class="q"><span class="n">8</span><span>My parents <button class="choice-gap" data-choice-gap data-answer="can" data-placeholder="choose">choose</button> speak a little English, so we travel together easily.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional staff profile says my brother repairs computers at work. My brother <button class="choice-gap" data-choice-gap data-answer="can" data-hint="His IT work provides evidence of a positive skill." data-fix="My brother can fix computers because he works in IT." data-placeholder="choose">choose</button> fix computers because he works in IT.</span></div>
+    <div class="q"><span class="n">2</span><span>I cannot lift the boxes alone, so I make a friendly request: <button class="choice-gap" data-choice-gap data-answer="Can you" data-hint="A request for another person’s action begins Can you." data-fix="Can you help me with these boxes, please?" data-placeholder="choose">choose</button> help me with these boxes, please?</span></div>
+    <div class="q"><span class="n">3</span><span>A fictional employee has an urgent family responsibility today. Sorry, I <button class="choice-gap" data-choice-gap data-answer="can’t" data-hint="The urgent responsibility makes coming unavailable today, so use can’t." data-fix="Sorry, I can’t come to the office today." data-placeholder="choose">choose</button> come to the office today.</span></div>
+    <div class="q"><span class="n">4</span><span>I need the teacher’s permission before changing the topic: <button class="choice-gap" data-choice-gap data-answer="Can I" data-hint="A permission question about your own action begins Can I." data-fix="Can I ask a question about the schedule?" data-placeholder="choose">choose</button> ask a question about the schedule?</span></div>
+    <div class="q"><span class="n">5</span><span>The posted school rule allows phones only during the break. Students <button class="choice-gap" data-choice-gap data-answer="can" data-hint="The rule allows the action during the break, so use positive can." data-fix="Students can use their phones during the break, but not in class." data-placeholder="choose">choose</button> use their phones during the break, but not in class.</span></div>
+    <div class="q"><span class="n">6</span><span>The live parking map shows every downtown space is full. She <button class="choice-gap" data-choice-gap data-answer="can’t" data-hint="The full streets make parking impossible in this situation; this is not a statement about her skill." data-fix="She can’t find a parking spot downtown this morning." data-placeholder="choose">choose</button> find a parking spot downtown this morning.</span></div>
+    <div class="q"><span class="n">7</span><span>I am in a meeting and ask for a later action: <button class="choice-gap" data-choice-gap data-answer="Can you" data-hint="You want the other person to call, so use the request frame Can you." data-fix="Can you call me back after lunch?" data-placeholder="choose">choose</button> call me back after lunch?</span></div>
+    <div class="q"><span class="n">8</span><span>The fictional travel profile confirms a useful family skill. My parents <button class="choice-gap" data-choice-gap data-answer="can" data-hint="The profile confirms positive language ability, so use can." data-fix="My parents can speak a little English, so the group travels easily." data-placeholder="choose">choose</button> speak a little English, so the group travels easily.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -164,21 +181,65 @@ export const page = defineLesson({
 
   <h2>Permission, requests, and politeness</h2>
   <div class="lead-rule"></div>
-  <p><span class="ex">Can I…?</span> is normal and friendly for everyday permission. <span class="ex">Can you…?</span> is often a request, not a question about skill. Tone and <span class="ex">please</span> make the request warmer: <span class="ex">Can you open the window, please?</span> A positive answer to a request is usually <span class="ex">Of course</span> or <span class="ex">Sure</span>, not only <span class="ex">Yes, I can</span>.</p>
+  <p><span class="ex">Can I...?</span> is normal and friendly for everyday permission. <span class="ex">Can you...?</span> is often a request, not a question about skill. A calm voice, a reason when useful, and <span class="ex">please</span> can make the request warmer: <span class="ex">Can you open the window, please?</span></p>
+  <table>
+    <thead><tr><th>purpose</th><th>question</th><th>natural response</th></tr></thead>
+    <tbody>
+      <tr><td><b>ask permission</b></td><td>Can I sit here?</td><td>Sure. / Sorry, this seat is taken.</td></tr>
+      <tr><td><b>make a request</b></td><td>Can you send the file, please?</td><td>Of course. / Sorry, I can’t right now.</td></tr>
+      <tr><td><b>ask about ability</b></td><td>Can you use this program?</td><td>Yes, I can. / No, I can’t.</td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">The grammar can be identical while the social action changes. Listen to the situation before you answer. <span class="ex">Yes, I can</span> answers an ability question, but <span class="ex">Sure</span> more naturally accepts a request.</p>
   <div class="note">
-    <h3>Hear the difference: weak can, strong can’t</h3>
-    <p>In a normal positive sentence, <span class="ex">can</span> is weak and quick, and the stress lands on the action: <span class="ex">I can SWIM</span>. In a negative sentence, <span class="ex">can’t</span> is strong and clear: <span class="ex">I CAN’T swim</span>. Listeners often catch the difference from this stress, not from the final <span class="ex">t</span>, so say <span class="ex">can’t</span> with real weight.</p>
+    <h3>Sound natural: can or can’t in U.S. English?</h3>
+    <p>In an ordinary positive statement, <span class="ex">can</span> is often weak and quick, like <span class="ex">kuhn</span>, while the action carries the main beat: <span class="ex">I can <strong>SWIM</strong></span>. When <span class="ex">can</span> is contrasted or placed at the end, it is strong: <span class="ex">I <strong>CAN</strong> swim</span> and <span class="ex">Yes, I <strong>CAN</strong></span>.</p>
+    <p>Negative <span class="ex">can’t</span> is normally stressed: <span class="ex">I <strong>CAN’T</strong> swim</span>. In American speech, the final <span class="ex">t</span> may be light or unreleased, so do not depend on that sound alone. Stress, the vowel, the following words, and the situation all help the listener. If the contrast matters, repeat the full idea clearly: <span class="ex">I can come Friday, but I can’t come Thursday.</span></p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <section data-lesson-extension="Tutor-read can meaning and spoken-contrast listening check">
+    <h2>Listen: what does <em>can</em> do here?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each complete fictional context once at a natural speed and once more slowly. Listen for the situation, the sentence stress, and whether <span class="ex">can</span> expresses ability, present possibility, permission, or a request. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You used the complete situation and spoken contrast to distinguish ability, present possibility, permission, and a friendly request.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Can meaning choices">
+        <button class="choice-option" data-choice-option="ability">ability</button><button class="choice-option" data-choice-option="present possibility">present possibility</button>
+        <button class="choice-option" data-choice-option="permission question">permission question</button><button class="choice-option" data-choice-option="permission given">permission given</button>
+        <button class="choice-option" data-choice-option="request">request</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 mainly expresses <button class="choice-gap" data-choice-gap data-answer="ability" data-hint="The profile describes a learned workplace skill that is generally true." data-fix="Mina can repair bicycles. This is ability." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 mainly expresses <button class="choice-gap" data-choice-gap data-answer="present possibility" data-hint="The sentence says the speaker has time now, not that talking is a learned skill." data-fix="I can talk now because my meeting is over. This is present possibility." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 is a <button class="choice-gap" data-choice-gap data-answer="permission question" data-hint="The visitor asks whether their own action is allowed." data-fix="Can I charge my phone here? This is a permission question." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 expresses <button class="choice-gap" data-choice-gap data-answer="permission given" data-hint="The host tells a visitor that an action is allowed." data-fix="You can use the desk by the window. This gives permission." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 is a <button class="choice-gap" data-choice-gap data-answer="request" data-hint="The speaker wants another person to perform the action." data-fix="Can you speak more slowly, please? This is a request." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 mainly expresses <button class="choice-gap" data-choice-gap data-answer="present possibility" data-hint="The train schedule blocks the action today; the sentence does not question anyone’s travel skill." data-fix="We can’t take the 6:00 train because it is canceled. This is present impossibility." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">Mina can repair bicycles. She works at a neighborhood bike shop.</span></li>
+        <li><span class="ex">My meeting is over, so I can talk now.</span></li>
+        <li><span class="ex">My battery is low. Can I charge my phone here?</span></li>
+        <li><span class="ex">You can use the desk by the window. Nobody is using it.</span></li>
+        <li><span class="ex">I understand the topic, but the pace is fast. Can you speak more slowly, please?</span></li>
+        <li><span class="ex">The 6:00 train is canceled, so we can’t take it today.</span></li>
+      </ol>
+      <p>Read the ordinary positive <span class="ex">can</span> weakly and the negative <span class="ex">can’t</span> with a clear beat. Keep the surrounding context natural.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-answer-drill data-success-message="Correct. Each question begins with Can, and each one-word short answer keeps can or can’t without repeating the action verb.">
     <h3>Drill 2: type the question word or short answer</h3>
     <p class="choice-hint">Questions start with <b>Can</b>. Short answers end with <b>can</b> or <b>can’t</b>, never the action verb.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Can" aria-label="answer 1" /> you work on Saturdays?</span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Can" aria-label="answer 2" /> your sister drive?</span></div>
-    <div class="q"><span class="n">3</span><span>No, she <input class="answer-input" data-answer="can’t" aria-label="answer 3" />.</span></div>
-    <div class="q"><span class="n">4</span><span>Yes, we <input class="answer-input" data-answer="can" aria-label="answer 4" />.</span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Can" aria-label="answer 5" /> your parents use a computer?</span></div>
-    <div class="q"><span class="n">6</span><span>No, they <input class="answer-input" data-answer="can’t" aria-label="answer 6" />.</span></div>
+    <div class="q"><span class="n">1</span><span>A manager asks about your general availability: <input class="answer-input" data-answer="Can" data-hint="A can question moves Can before the subject you." data-fix="Can you work on Saturdays?" aria-label="Question starter before you work on Saturdays" /> you work on Saturdays?</span></div>
+    <div class="q"><span class="n">2</span><span>A travel profile asks about your sister’s ability: <input class="answer-input" data-answer="Can" data-hint="Ability questions also begin with Can before the subject." data-fix="Can your sister drive?" aria-label="Question starter before your sister drive" /> your sister drive?</span></div>
+    <div class="q"><span class="n">3</span><span>The profile says she does not have that skill. “Can your sister drive?” “No, she <input class="answer-input" data-answer="can’t" data-hint="The prompt requires one word, so keep can and contract not." data-fix="No, she can’t." aria-label="One-word negative short answer after No she" />.”</span></div>
+    <div class="q"><span class="n">4</span><span>The venue is available to the group. “Can we meet here?” “Yes, we <input class="answer-input" data-answer="can" data-hint="A positive short answer keeps can and omits meet here." data-fix="Yes, we can." aria-label="One-word positive short answer after Yes we" />.”</span></div>
+    <div class="q"><span class="n">5</span><span>A fictional support form asks about two people’s computer ability: <input class="answer-input" data-answer="Can" data-hint="Move Can before the plural subject your parents." data-fix="Can your parents use a computer?" aria-label="Question starter before your parents use a computer" /> your parents use a computer?</span></div>
+    <div class="q"><span class="n">6</span><span>The form records a negative answer. “Can they use a computer?” “No, they <input class="answer-input" data-answer="can’t" data-hint="The prompt requires one word, so use the negative short-answer form can’t." data-fix="No, they can’t." aria-label="One-word negative short answer after No they" />.”</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -192,18 +253,18 @@ export const page = defineLesson({
     <h3>A job ad in the café window</h3>
     <p><span class="ex">"Weekend barista wanted. You can choose your hours, and you can learn everything on the job. Staff can’t park behind the café, but you can leave a bike in the yard. Can you start in June? Ask for Dana at the counter."</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood can and can’t in a real job ad.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the available choice, the parking restriction, and the requested June start date in the fictional job ad.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="their hours">
+      <div class="quiz-item" data-quiz-item data-answer="their hours" data-hint="The first sentence after the job title names what staff may choose." data-fix="New staff can choose their hours.">
         <p class="quiz-question">1. What can new staff choose?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="their hours">their hours</button><button class="quiz-option" data-quiz-option="their pay">their pay</button><button class="quiz-option" data-quiz-option="their uniform">their uniform</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="behind the café">
+      <div class="quiz-item" data-quiz-item data-answer="behind the café" data-hint="The sentence with can’t names the restricted parking location." data-fix="Staff can’t park behind the café.">
         <p class="quiz-question">2. Where can’t staff park?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="behind the café">behind the café</button><button class="quiz-option" data-quiz-option="in the yard">in the yard</button><button class="quiz-option" data-quiz-option="at the counter">at the counter</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="in June">
+      <div class="quiz-item" data-quiz-item data-answer="in June" data-hint="The final question in the ad names the requested starting month." data-fix="The café asks whether the new barista can start in June.">
         <p class="quiz-question">3. When does the café want the new barista to start?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in June">in June</button><button class="quiz-option" data-quiz-option="in December">in December</button><button class="quiz-option" data-quiz-option="next weekend">next weekend</button></div>
       </div>
@@ -215,7 +276,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="can you work on saturdays">
+  <div class="tile-game" data-tile-builder data-answer="can you work on saturdays" data-hint="Move Can before the subject you, then keep work in its base form." data-fix="Can you work on Saturdays?" data-success-message="Correct. The availability question places Can before you and keeps work in the base form.">
     <h3>Drill 4: build the question</h3>
     <p class="tile-target">Build the question. Remember: can moves in front of the subject.</p>
     <div class="tile-bank" data-build-bank>
@@ -233,7 +294,7 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="she can’t come to the meeting">
+  <div class="tile-game" data-tile-builder data-answer="she can’t come to the meeting" data-hint="Begin with She, place can’t before the base verb come, and finish with the meeting." data-fix="She can’t come to the meeting." data-success-message="Correct. The negative sentence keeps can’t before the unchanged base verb come.">
     <h3>Drill 5: build the negative</h3>
     <p class="tile-target">Build the sentence. Only can’t carries the negative.</p>
     <div class="tile-bank" data-build-bank>
@@ -254,7 +315,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="cans" data-fix="She can swim very well." data-why="Can never changes. It has no -s form, even after she, he, or it.">
+  <div class="micro-drill" data-spot-error data-answer="cans" data-hint="A modal has one form for every subject, including she." data-fix="She can swim very well." data-why="Can never changes. It has no -s form, even after she, he, or it.">
     <h3>Drill 6: one form for every subject</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -266,7 +327,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="do" data-fix="Can you drive?" data-why="Can makes its own questions. Move can in front of the subject and drop do.">
+  <div class="micro-drill" data-spot-error data-answer="do" data-hint="Can forms its own question by moving before you, so one question helper is extra." data-fix="Can you drive?" data-why="Can makes its own questions. Move can in front of the subject and drop do.">
     <h3>Drill 7: can asks its own questions</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -317,53 +378,66 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Skills:</b> Say three things you can do well. <span class="ex">I can cook. I can drive. I can read maps.</span></div>
-  <div class="prompt-card"><b>Not yet:</b> Say three things you can’t do yet. <span class="ex">I can’t play the guitar. I can’t swim very far.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five <span class="ex">Can you…?</span> questions. Listen and give a short answer back. <span class="ex">Can you swim? Can you cook fish?</span></div>
-  <div class="prompt-card"><b>Permission:</b> Ask four permission questions for your work or class. <span class="ex">Can I leave early on Friday? Can I open a window?</span></div>
-  <div class="prompt-card"><b>Family match:</b> Compare yourself with someone in your family. <span class="ex">My mother can cook very well, but she can’t drive. I can drive, but I can’t cook.</span></div>
+  <p class="note-line">You never need to disclose your real skills, health, family, workplace, schedule, location, or access needs. Choose a fictional profile, a public role, or a teacher-provided card whenever you prefer.</p>
+  <div class="prompt-card"><b>Fictional skills card:</b> Choose a character such as a café worker, neighbor, traveler, or new employee. Give the character three abilities and one skill they do not have yet. <span class="ex">Ari can make coffee and use the register, but he can’t repair the machine yet.</span></div>
+  <div class="prompt-card"><b>Situation change:</b> Give the character one action that is generally possible but unavailable today. <span class="ex">She can drive, but she can’t drive today because the car is at the repair shop.</span></div>
+  <div class="prompt-card"><b>Information desk:</b> Ask two permission questions and make two requests. The teacher responds naturally with <span class="ex">Sure</span>, <span class="ex">Of course</span>, or a short reason for saying no.</div>
+  <div class="prompt-card"><b>Meaning switch:</b> Use the same beginning, <span class="ex">Can you use the printer...?</span>, once to ask about ability and once to make a request. Add enough context to make each meaning clear.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: run a fictional community-center help desk</h3>
+    <p>Create a 45–60 second exchange between a visitor and a staff member. Include all five pieces of evidence:</p>
+    <ol>
+      <li>one general ability with <span class="ex">can</span>;</li>
+      <li>one present obstacle with <span class="ex">can’t</span> and a reason;</li>
+      <li>one <span class="ex">Can I...?</span> permission question;</li>
+      <li>one <span class="ex">Can you...?</span> request with a natural response;</li>
+      <li>one clear contrast in which weak <span class="ex">can</span> and stressed <span class="ex">can’t</span> are easy to hear.</li>
+    </ol>
+    <p>The listener names the meaning of each <span class="ex">can</span> form and asks one follow-up question. Revise any line whose context permits more than one reading.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
     <p>Complete this aloud: “After <span class="ex">can</span>, I always use the ______ verb. <span class="ex">Can</span> is the same for ______ subject. For a question, ______ moves in front of the subject. The negative is ______.”</p>
-    <p>Then say one ability sentence, one permission question, and one polite request about your real life.</p>
+    <p>Then use a real or fictional context to say one general ability, one present obstacle, one permission question, and one friendly request.</p>
   </div>
 
   <div class="quiz" data-quiz data-success-message="Great. You can talk about ability, ask permission, and make polite requests with can.">
     <h3>Final quiz: can forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="can run">
-        <p class="quiz-question">1. He ___ very fast.</p>
+      <div class="quiz-item" data-quiz-item data-answer="can run" data-hint="After can, use the unchanged base verb and do not add -s to either word." data-fix="The athletics profile says he can run very fast.">
+        <p class="quiz-question">1. The athletics profile confirms a positive skill: He ___ very fast.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="can run">can run</button><button class="quiz-option" data-quiz-option="cans run">cans run</button><button class="quiz-option" data-quiz-option="can runs">can runs</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Can I">
+      <div class="quiz-item" data-quiz-item data-answer="Can I" data-hint="You are asking permission for your own action, so begin Can I." data-fix="Can I use your phone for a minute?">
         <p class="quiz-question">2. ___ use your phone for a minute? My battery is dead.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Can I">Can I</button><button class="quiz-option" data-quiz-option="I can">I can</button><button class="quiz-option" data-quiz-option="Do I can">Do I can</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="can’t">
-        <p class="quiz-question">3. Sorry, we ___ come tonight.</p>
+      <div class="quiz-item" data-quiz-item data-answer="can’t" data-hint="The confirmed work shift makes coming unavailable tonight, so use can’t." data-fix="Sorry, we can’t come tonight because we are working.">
+        <p class="quiz-question">3. A confirmed work shift makes the visit impossible: Sorry, we ___ come tonight because we are working.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="can’t">can’t</button><button class="quiz-option" data-quiz-option="don’t can">don’t can</button><button class="quiz-option" data-quiz-option="aren’t can">aren’t can</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="can’t">
-        <p class="quiz-question">4. Can your brother cook? No, he ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="can’t" data-hint="The prompt requests one word, so keep can and contract not without repeating cook." data-fix="Can your fictional brother cook? No, he can’t.">
+        <p class="quiz-question">4. Complete the short answer with one word: “Can your fictional brother cook?” “No, he ___.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="can’t">can’t</button><button class="quiz-option" data-quiz-option="doesn’t">doesn’t</button><button class="quiz-option" data-quiz-option="can’t cook">can’t cook</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="speak">
-        <p class="quiz-question">5. She can ___ Spanish and Portuguese.</p>
+      <div class="quiz-item" data-quiz-item data-answer="speak" data-hint="A modal is followed directly by the base verb, with no -s and no to." data-fix="The profile says she can speak Spanish and Portuguese.">
+        <p class="quiz-question">5. Complete the fictional language profile: She can ___ Spanish and Portuguese.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="speak">speak</button><button class="quiz-option" data-quiz-option="speaks">speaks</button><button class="quiz-option" data-quiz-option="to speak">to speak</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Can she drive?">
-        <p class="quiz-question">6. Which question is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Can she drive?" data-hint="Move Can before she and keep drive in its base form; do not add does." data-fix="The correct ability question is: Can she drive?">
+        <p class="quiz-question">6. Which question correctly asks about the fictional traveler’s driving ability?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Can she drive?">Can she drive?</button><button class="quiz-option" data-quiz-option="Does she can drive?">Does she can drive?</button><button class="quiz-option" data-quiz-option="Can she drives?">Can she drives?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="permission">
-        <p class="quiz-question">7. “You can leave early today.” Which meaning is this?</p>
+      <div class="quiz-item" data-quiz-item data-answer="permission" data-hint="A manager is allowing an employee’s action, not describing a skill." data-fix="When a manager says, 'You can leave early today,' can gives permission.">
+        <p class="quiz-question">7. A manager says, “You can leave early today.” Which meaning is this?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="permission">permission</button><button class="quiz-option" data-quiz-option="ability">ability</button><button class="quiz-option" data-quiz-option="a request">a request</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a request">
-        <p class="quiz-question">8. “Can you help me with these bags?” Which meaning is this?</p>
+      <div class="quiz-item" data-quiz-item data-answer="a request" data-hint="The speaker wants the listener to perform the helpful action." data-fix="Can you help me with these bags? is a request for action.">
+        <p class="quiz-question">8. A traveler points to two heavy bags and asks, “Can you help me with these bags?” Which meaning is this?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a request">a request</button><button class="quiz-option" data-quiz-option="an ability question">an ability question</button><button class="quiz-option" data-quiz-option="a permission question">a permission question</button></div>
       </div>
     </div>
@@ -373,6 +447,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the form, meaning, time boundary, or spoken contrast that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day can retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a general ability, a present obstacle, a permission question, and a friendly request from explicit situations.">
+      <h3>Choose the can chunk from meaning</h3>
+      <div class="choice-bank" aria-label="Next-day can choices">
+        <button class="choice-option" data-choice-option="can">can</button><button class="choice-option" data-choice-option="can’t">can’t</button>
+        <button class="choice-option" data-choice-option="Can I">Can I</button><button class="choice-option" data-choice-option="Can you">Can you</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The fictional profile confirms a general skill: Noor <button class="choice-gap" data-choice-gap data-answer="can" data-hint="The profile gives positive evidence of ability, so use can." data-fix="Noor can repair bicycles." data-placeholder="choose">choose</button> repair bicycles.</span></div>
+      <div class="q"><span class="n">2</span><span>The building is closed today, so entry is not possible now: We <button class="choice-gap" data-choice-gap data-answer="can’t" data-hint="The closed building creates a present obstacle, so use can’t." data-fix="We can’t enter the building today because it is closed." data-placeholder="choose">choose</button> enter the building today.</span></div>
+      <div class="q"><span class="n">3</span><span>A visitor asks whether their own action is allowed: <button class="choice-gap" data-choice-gap data-answer="Can I" data-hint="Permission for the speaker’s own action begins Can I." data-fix="Can I use this chair?" data-placeholder="choose">choose</button> use this chair?</span></div>
+      <div class="q"><span class="n">4</span><span>The visitor wants the staff member to repeat an action: <button class="choice-gap" data-choice-gap data-answer="Can you" data-hint="A request for the listener’s action begins Can you." data-fix="Can you say that again, please?" data-placeholder="choose">choose</button> say that again, please?</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="to" data-hint="After can, the main action appears directly in its base form without an infinitive marker." data-fix="She can speak English." data-why="A modal is followed directly by the base verb: can speak, not can to speak.">
+      <h3>Repair the verb pattern</h3>
+      <p>The fictional language profile says, “She can to speak English.” Tap the one extra word.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="she">She</button><button class="error-choice" data-error-choice="can">can</button><button class="error-choice" data-error-choice="to">to</button><button class="error-choice" data-error-choice="speak">speak</button><button class="error-choice" data-error-choice="English">English.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, use a fictional person to say one general ability and one present obstacle. Then ask one permission question and make one request.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>Mina can repair bikes, but she can’t work today because the shop is closed. Can I leave a message? Can you call her tomorrow, please?</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

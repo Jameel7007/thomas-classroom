@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "have got · A1 Grammar · Curriculum Map",
+  "title": "Have got · A1 Grammar",
   "slug": "have-got",
   "level": "A1",
   "topic": "have got",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Talk about possessions, family, and features: I’ve got a car , She’s got two sisters , and Have you got your phone?",
+  "description": "Use have got and has got to talk about possessions, family relationships, and personal features and to ask related questions.",
   "sequence": 4,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/subject-pronouns", "a0/possessive-adjectives"],
+  "related": ["a0/family-members", "a1/rooms-and-furniture", "a2/present-perfect"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Present possession, have/has agreement, questions, U.S. ordinary-have alternatives, activity and tense boundaries, spoken form, listening, privacy, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 4</p>
   <h1>Possession with <em>have got</em></h1>
-  <p class="standfirst">Talk about possessions, family, and features: <span class="ex">I’ve got a car</span>, <span class="ex">She’s got two sisters</span>, and <span class="ex">Have you got your phone?</span></p>
+  <p class="standfirst">Recognize and use the conversational possession pattern in <span class="ex">I’ve got a car</span>, <span class="ex">She’s got two sisters</span>, and <span class="ex">Have you got your phone?</span> Then connect it to the ordinary U.S. forms <span class="ex">I have</span> and <span class="ex">Do you have...?</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">have / has got</span>
-    <span class="tag">possessions and family</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">present possession and connections</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Meet two people and their things.</span></div>
     <div class="flow-step"><b>Discover</b><span>Choose have or has.</span></div>
     <div class="flow-step"><b>Build</b><span>Make questions, negatives, and short answers.</span></div>
-    <div class="flow-step"><b>Use</b><span>Talk about your real life.</span></div>
+    <div class="flow-step"><b>Use</b><span>Complete a fictional resource check.</span></div>
   </div>
 
-  <p class="note-line"><span class="ex">Have got</span> is everyday grammar for what you own, who is in your family, and what is part of your life right now.</p>
+  <p class="note-line"><span class="ex">Have got</span> is one conversational way to present what someone owns, what relationships or features they have, and what condition is true now. Ordinary <span class="ex">have</span> gives the same possession meaning and is the neutral default in U.S. English.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved third-person present-simple works and matched there is or there are to one sofa and two windows.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -50,9 +58,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="There is">There is</button>
       <button class="choice-option" data-choice-option="There are">There are</button>
     </div>
-    <div class="q"><span class="n">1</span><span>Maria <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> in a bank. &nbsp;<span class="contraction">(present simple)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="There is" data-placeholder="choose">choose</button> a sofa in the living room. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> two windows in my office. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
+    <div class="q"><span class="n">1</span><span>Maria’s regular work profile says she <button class="choice-gap" data-choice-gap data-answer="works" data-hint="A regular action with the third-person subject Maria takes works." data-fix="Maria works in a bank." data-placeholder="choose">choose</button> in a bank. &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">2</span><span>The room inventory introduces one sofa: <button class="choice-gap" data-choice-gap data-answer="There is" data-hint="A sofa is one countable thing, so use There is." data-fix="There is a sofa in the living room." data-placeholder="choose">choose</button> a sofa in the living room. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The office inventory introduces two windows: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Two windows is plural, so use There are." data-fix="There are two windows in the office." data-placeholder="choose">choose</button> two windows in the office. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -72,7 +80,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Have matches I, you, and we; has matches he and it; and each negative contracts not with the subject-matched form.">
     <h3>Discovery check: choose the pattern</h3>
     <p class="choice-hint">Use the subject to choose <b>have</b> or <b>has</b>.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -81,12 +89,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="haven’t">haven’t</button>
       <button class="choice-option" data-choice-option="hasn’t">hasn’t</button>
     </div>
-    <div class="q"><span class="n">1</span><span>We <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> got a meeting.</span></div>
-    <div class="q"><span class="n">2</span><span>He <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> got a laptop.</span></div>
-    <div class="q"><span class="n">3</span><span>I <button class="choice-gap" data-choice-gap data-answer="haven’t" data-placeholder="choose">choose</button> got cash.</span></div>
-    <div class="q"><span class="n">4</span><span>She <button class="choice-gap" data-choice-gap data-answer="hasn’t" data-placeholder="choose">choose</button> got time.</span></div>
-    <div class="q"><span class="n">5</span><span>You <button class="choice-gap" data-choice-gap data-answer="have" data-placeholder="choose">choose</button> got my number.</span></div>
-    <div class="q"><span class="n">6</span><span>It <button class="choice-gap" data-choice-gap data-answer="has" data-placeholder="choose">choose</button> got a garden.</span></div>
+    <div class="q"><span class="n">1</span><span>Our confirmed calendar shows a meeting at 10. We <button class="choice-gap" data-choice-gap data-answer="have" data-hint="The subject we takes have before got." data-fix="We have got a meeting at 10." data-placeholder="choose">choose</button> got a meeting at 10.</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional equipment profile says he owns a laptop. He <button class="choice-gap" data-choice-gap data-answer="has" data-hint="The subject he takes has before got." data-fix="He has got a laptop." data-placeholder="choose">choose</button> got a laptop.</span></div>
+    <div class="q"><span class="n">3</span><span>The cash check shows my wallet is empty. I <button class="choice-gap" data-choice-gap data-answer="haven’t" data-hint="The subject I takes have; contract have not to haven't." data-fix="I haven't got any cash." data-placeholder="choose">choose</button> got any cash.</span></div>
+    <div class="q"><span class="n">4</span><span>Maya’s schedule is full, so she cannot add another call. She <button class="choice-gap" data-choice-gap data-answer="hasn’t" data-hint="The subject she takes has; contract has not to hasn't." data-fix="She hasn't got time for another call." data-placeholder="choose">choose</button> got time for another call.</span></div>
+    <div class="q"><span class="n">5</span><span>I sent the contact card yesterday. You <button class="choice-gap" data-choice-gap data-answer="have" data-hint="The subject you takes have before got." data-fix="You have got my number already." data-placeholder="choose">choose</button> got my number already.</span></div>
+    <div class="q"><span class="n">6</span><span>The pronoun <span class="ex">it</span> refers to one fictional apartment. It <button class="choice-gap" data-choice-gap data-answer="has" data-hint="The singular subject it takes has before got." data-fix="It has got a small garden." data-placeholder="choose">choose</button> got a small garden.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -128,7 +136,7 @@ export const page = defineLesson({
     <p>Only <span class="ex">has</span> moves or becomes negative. This is why <span class="ex">Does she has got…?</span> mixes two different systems and is not the target form.</p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each contracted chunk matches its subject and the stated positive or negative present connection.">
     <h3>Drill 1: choose the natural chunk</h3>
     <p class="choice-hint">Read the subject first. Then choose the contracted chunk people really say.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -137,14 +145,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="haven’t got">haven’t got</button>
       <button class="choice-option" data-choice-option="hasn’t got">hasn’t got</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="’ve got" data-placeholder="choose">choose</button> two sisters.</span></div>
-    <div class="q"><span class="n">2</span><span>My boss <button class="choice-gap" data-choice-gap data-answer="’s got" data-placeholder="choose">choose</button> three meetings today.</span></div>
-    <div class="q"><span class="n">3</span><span>We <button class="choice-gap" data-choice-gap data-answer="haven’t got" data-placeholder="choose">choose</button> a printer at home.</span></div>
-    <div class="q"><span class="n">4</span><span>The café <button class="choice-gap" data-choice-gap data-answer="hasn’t got" data-placeholder="choose">choose</button> Wi-Fi, so I work at the library.</span></div>
-    <div class="q"><span class="n">5</span><span>They <button class="choice-gap" data-choice-gap data-answer="’ve got" data-placeholder="choose">choose</button> a big kitchen.</span></div>
-    <div class="q"><span class="n">6</span><span>My phone <button class="choice-gap" data-choice-gap data-answer="’s got" data-placeholder="choose">choose</button> a good camera.</span></div>
-    <div class="q"><span class="n">7</span><span>You <button class="choice-gap" data-choice-gap data-answer="’ve got" data-placeholder="choose">choose</button> my email address already.</span></div>
-    <div class="q"><span class="n">8</span><span>He <button class="choice-gap" data-choice-gap data-answer="hasn’t got" data-placeholder="choose">choose</button> time this week.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional profile says, “I <button class="choice-gap" data-choice-gap data-answer="’ve got" data-hint="The subject I takes have; contract I have to I've before got." data-fix="I've got two sisters." data-placeholder="choose">choose</button> two sisters.”</span></div>
+    <div class="q"><span class="n">2</span><span>The calendar shows three meetings for one manager. My boss <button class="choice-gap" data-choice-gap data-answer="’s got" data-hint="The singular subject my boss takes has; contract has to 's before got." data-fix="My boss has got three meetings today." data-placeholder="choose">choose</button> three meetings today.</span></div>
+    <div class="q"><span class="n">3</span><span>The fictional home-office inventory lists no printer. We <button class="choice-gap" data-choice-gap data-answer="haven’t got" data-hint="The subject we takes have; the inventory gives a negative result." data-fix="We haven't got a printer in the home office." data-placeholder="choose">choose</button> a printer in the home office.</span></div>
+    <div class="q"><span class="n">4</span><span>The service list says Wi-Fi is unavailable. The café <button class="choice-gap" data-choice-gap data-answer="hasn’t got" data-hint="The singular subject the café takes has, and unavailable requires the negative." data-fix="The café hasn't got Wi-Fi, so I work at the library." data-placeholder="choose">choose</button> Wi-Fi, so I work at the library.</span></div>
+    <div class="q"><span class="n">5</span><span>The apartment profile gives a couple one large kitchen. They <button class="choice-gap" data-choice-gap data-answer="’ve got" data-hint="The subject they takes have; contract they have to they've." data-fix="They've got a big kitchen." data-placeholder="choose">choose</button> a big kitchen.</span></div>
+    <div class="q"><span class="n">6</span><span>The device specification lists one high-quality camera. The phone <button class="choice-gap" data-choice-gap data-answer="’s got" data-hint="The singular subject the phone takes has; contract has to 's." data-fix="The phone has got a good camera." data-placeholder="choose">choose</button> a good camera.</span></div>
+    <div class="q"><span class="n">7</span><span>I already sent the contact card. You <button class="choice-gap" data-choice-gap data-answer="’ve got" data-hint="The subject you takes have; contract you have to you've." data-fix="You've got my email address already." data-placeholder="choose">choose</button> my email address already.</span></div>
+    <div class="q"><span class="n">8</span><span>The fictional schedule has no open time this week. He <button class="choice-gap" data-choice-gap data-answer="hasn’t got" data-hint="The subject he takes has; no open time requires the negative hasn't got." data-fix="He hasn't got time for another meeting this week." data-placeholder="choose">choose</button> time for another meeting this week.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -154,7 +162,7 @@ export const page = defineLesson({
 
   <h2><em>Have got</em> and <em>have</em></h2>
   <div class="lead-rule"></div>
-  <p>For possession, both forms are correct. <span class="ex">Have got</span> is especially common in British English and in conversational English generally. American English often prefers ordinary <span class="ex">have</span>.</p>
+  <p>For a present possession or connection, both systems below are correct. <span class="ex">Have got</span> is especially common in British English, but learners also hear <span class="ex">I've got</span> and similar forms in American conversation. In neutral U.S. English, ordinary <span class="ex">have</span> is usually the clearest default, especially in questions and negatives.</p>
   <table>
     <thead><tr><th>have got system</th><th>ordinary have system</th></tr></thead>
     <tbody>
@@ -163,24 +171,74 @@ export const page = defineLesson({
       <tr><td>I haven’t got a car.</td><td>I don’t have a car.</td></tr>
     </tbody>
   </table>
-  <p class="note-line">Choose one system inside a sentence. Do not combine them as <span class="ex">Do you have got…?</span> Both systems communicate the same possession meaning.</p>
+  <p class="note-line">Choose one system inside a clause. Use <span class="ex">Have you got a car?</span> or <span class="ex">Do you have a car?</span>, never <span class="ex">Do you have got a car?</span> Both correct systems communicate the same present possession meaning.</p>
 
-  <h3>Contractions make the pattern sound natural</h3>
-  <p>In speech, positive forms are usually contracted: <span class="ex">I’ve got, you’ve got, he’s got, we’ve got</span>. Here <span class="ex">he’s</span> means <span class="ex">he has</span>, not <span class="ex">he is</span>, because it is followed by <span class="ex">got</span>. Negative forms commonly contract too: <span class="ex">haven’t got, hasn’t got</span>.</p>
+  <h3>Sound natural: contractions, linking, and focus</h3>
+  <p>In speech, positive <span class="ex">have got</span> forms are usually contracted: <span class="ex">I’ve got, you’ve got, he’s got, we’ve got</span>. Here <span class="ex">he’s</span> means <span class="ex">he has</span>, not <span class="ex">he is</span>, because it is followed by <span class="ex">got</span>. Negative forms commonly contract too: <span class="ex">haven’t got, hasn’t got</span>.</p>
   <div class="note">
-    <h3>A useful boundary</h3>
-    <p>Use <span class="ex">have got</span> mainly for possession and present connections, not for repeated actions. Say <span class="ex">I have lunch at one</span>, not normally <span class="ex">I’ve got lunch at one</span>, when you mean “eat lunch.”</p>
+    <h3>Sound natural in U.S. English</h3>
+    <p>Link the contracted subject to <span class="ex">got</span>: <span class="ex">I've-got a charger</span> and <span class="ex">she's-got two sisters</span>. In a neutral statement, the new or contrasting noun often carries the strongest beat: <span class="ex">I've got a <strong>CHAR</strong>ger</span>. In the question <span class="ex">Have-you-got a charger?</span>, the small words link while <span class="ex">charger</span> stays clear.</p>
+    <p>In ordinary U.S. <span class="ex">Do you have...?</span>, speakers often reduce and link the first words: <span class="ex">D'you-have a charger?</span> Keep the full words in writing, and use the careful form whenever the listener needs more clarity.</p>
+  </div>
+  <div class="note">
+    <h3>Possession is not an activity</h3>
+    <p>Use <span class="ex">have got</span> for possession and present connections, not for the action meaning of <span class="ex">have</span>. Say <span class="ex">I have lunch at one every day</span> when <span class="ex">have</span> means “eat.” <span class="ex">I've got lunch at one</span> can instead suggest that a lunch appointment is on your schedule, so the context changes the meaning.</p>
+    <table>
+      <thead><tr><th>present connection</th><th>activity</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ex">I've got a car.</span><br />The car belongs to me now.</td><td><span class="ex">I have lunch at one.</span><br /><span class="ex">Have</span> means “eat.”</td></tr>
+        <tr><td><span class="ex">She's got a meeting at one.</span><br />The meeting is on her schedule.</td><td><span class="ex">She's having lunch now.</span><br />Lunch is the open activity.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <h3>Present possession, past possession, and U.S. <em>gotten</em></h3>
+    <p><span class="ex">I've got a car</span> describes possession now. For an ordinary past possession, use <span class="ex">I had a car last year</span>. Do not use present <span class="ex">have got</span> with a finished past time such as <span class="ex">last year</span>.</p>
+    <p>In U.S. English, <span class="ex">have gotten</span> is a different, later pattern. It can describe receiving or becoming: <span class="ex">I've gotten three messages today</span> and <span class="ex">It's gotten colder</span>. Do not add <span class="ex">-en</span> to the possession pattern in this lesson.</p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <section data-lesson-extension="Tutor-read have got and ordinary have listening check">
+    <h2>Listen: possession, U.S. alternative, or activity?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each complete fictional context once at a natural speed and once more slowly. Listen for the subject, the chosen possession system, and whether <span class="ex">have</span> names an activity. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You heard subject agreement, a negative and question, the ordinary U.S. possession system, and the activity meaning of have.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Listening form choices">
+        <button class="choice-option" data-choice-option="I’ve got">I’ve got</button><button class="choice-option" data-choice-option="She’s got">She’s got</button>
+        <button class="choice-option" data-choice-option="We haven’t got">We haven’t got</button><button class="choice-option" data-choice-option="Have you got">Have you got</button>
+        <button class="choice-option" data-choice-option="Do you have">Do you have</button><button class="choice-option" data-choice-option="have">have</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The speaker reports a charger in their fictional kit: <button class="choice-gap" data-choice-gap data-answer="I’ve got" data-hint="Listen for the subject I and the contracted have-got possession form." data-fix="I've got a charger in my kit." data-placeholder="listen">listen</button> a charger in my kit.</span></div>
+      <div class="q"><span class="n">2</span><span>The profile gives Maya a current family relationship: <button class="choice-gap" data-choice-gap data-answer="She’s got" data-hint="Listen for the subject she and the contracted has-got form." data-fix="She's got two sisters." data-placeholder="listen">listen</button> two sisters.</span></div>
+      <div class="q"><span class="n">3</span><span>The group reports that its resource kit contains no cash: <button class="choice-gap" data-choice-gap data-answer="We haven’t got" data-hint="Listen for the plural subject we and the negative have-got form." data-fix="We haven't got any cash." data-placeholder="listen">listen</button> any cash.</span></div>
+      <div class="q"><span class="n">4</span><span>The host uses the have-got question system to check one reservation: <button class="choice-gap" data-choice-gap data-answer="Have you got" data-hint="The requested have-got question moves Have before you." data-fix="Have you got a reservation?" data-placeholder="listen">listen</button> a reservation?</span></div>
+      <div class="q"><span class="n">5</span><span>The U.S. service worker uses the ordinary-have system to ask about identification: <button class="choice-gap" data-choice-gap data-answer="Do you have" data-hint="The ordinary-have question begins Do you have and contains no got." data-fix="Do you have an ID?" data-placeholder="listen">listen</button> an ID?</span></div>
+      <div class="q"><span class="n">6</span><span>The routine describes eating at noon, not possessing a meal: I <button class="choice-gap" data-choice-gap data-answer="have" data-hint="Here have means eat, so use ordinary present-simple have without got." data-fix="I have lunch at noon every weekday." data-placeholder="listen">listen</button> lunch at noon every weekday.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol>
+        <li>I've got a charger in my kit.</li>
+        <li>She's got two sisters.</li>
+        <li>We haven't got any cash.</li>
+        <li>Have you got a reservation?</li>
+        <li>Do you have an ID?</li>
+        <li>I have lunch at noon every weekday.</li>
+      </ol>
+    </details>
+  </section>
+
+  <div class="practice" data-answer-drill data-success-message="Correct. Each question begins with subject-matched Have or Has, and each short answer keeps that auxiliary without repeating got.">
     <h3>Drill 2: type the question word or short answer</h3>
     <p class="choice-hint">Use <b>have</b> with I, you, we, they. Use <b>has</b> with he, she, it. Short answers never repeat <b>got</b>.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Have" aria-label="answer 1" /> you got a passport?</span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Has" aria-label="answer 2" /> Leo got a car?</span></div>
-    <div class="q"><span class="n">3</span><span>No, he <input class="answer-input" data-answer="hasn’t" aria-label="answer 3" />.</span></div>
-    <div class="q"><span class="n">4</span><span>Yes, we <input class="answer-input" data-answer="have" aria-label="answer 4" />.</span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Have" aria-label="answer 5" /> your parents got a house?</span></div>
-    <div class="q"><span class="n">6</span><span>No, they <input class="answer-input" data-answer="haven’t" aria-label="answer 6" />.</span></div>
+    <div class="q"><span class="n">1</span><span>A travel checklist asks about one passport: <input class="answer-input" data-answer="Have" data-hint="The subject you takes have; move Have to the front and capitalize it." data-fix="Have you got a passport?" aria-label="Have-got question starter before you got a passport" /> you got a passport?</span></div>
+    <div class="q"><span class="n">2</span><span>The fictional transport profile uses <span class="ex">he</span> for Leo: <input class="answer-input" data-answer="Has" data-hint="The subject Leo takes has; move Has to the front and capitalize it." data-fix="Has Leo got a car?" aria-label="Have-got question starter before Leo got a car" /> Leo got a car?</span></div>
+    <div class="q"><span class="n">3</span><span>The same profile says Leo has no car. “Has Leo got a car?” “No, he <input class="answer-input" data-answer="hasn’t" data-hint="The negative short answer to Has he...? keeps has and contracts not." data-fix="No, he hasn't." aria-label="Negative short answer after No he for Has Leo got a car" />.”</span></div>
+    <div class="q"><span class="n">4</span><span>A receptionist asks your fictional group, “Have you got the keys?” The group answers, “Yes, we <input class="answer-input" data-answer="have" data-hint="The positive short answer to Have you...? uses have after we and omits got." data-fix="Yes, we have." aria-label="Positive short answer after Yes we for Have you got the keys" />.”</span></div>
+    <div class="q"><span class="n">5</span><span>A fictional family profile uses the plural subject <span class="ex">the parents</span>: <input class="answer-input" data-answer="Have" data-hint="The plural subject the parents takes have; move Have to the front." data-fix="Have the parents got a house?" aria-label="Have-got question starter before the parents got a house" /> the parents got a house?</span></div>
+    <div class="q"><span class="n">6</span><span>The profile says the parents have no house. “Have they got a house?” “No, they <input class="answer-input" data-answer="haven’t" data-hint="The negative short answer to Have they...? keeps have and contracts not." data-fix="No, they haven't." aria-label="Negative short answer after No they for Have they got a house" />.”</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -194,19 +252,19 @@ export const page = defineLesson({
     <h3>A message from a friend</h3>
     <p><span class="ex">"Hi! We’ve got the keys to the new apartment. It’s got two bedrooms and a small balcony. We haven’t got a table yet, so we eat in the kitchen. Marco’s got a car, so moving day is easy. Have you got time on Saturday to help us?"</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood have got in a real message.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the apartment's two bedrooms, missing table, and Marco's car from explicit details in the message.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="two">
-        <p class="quiz-question">1. How many bedrooms has the apartment got?</p>
+      <div class="quiz-item" data-quiz-item data-answer="two" data-hint="The second sentence gives a number immediately before bedrooms." data-fix="The new apartment has two bedrooms.">
+        <p class="quiz-question">1. How many bedrooms does the new apartment have?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="two">two</button><button class="quiz-option" data-quiz-option="one">one</button><button class="quiz-option" data-quiz-option="three">three</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a table">
-        <p class="quiz-question">2. What haven’t they got yet?</p>
+      <div class="quiz-item" data-quiz-item data-answer="a table" data-hint="The third sentence names one missing piece of furniture before yet." data-fix="They don't have a table yet.">
+        <p class="quiz-question">2. Which piece of furniture are they still missing?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a table">a table</button><button class="quiz-option" data-quiz-option="a balcony">a balcony</button><button class="quiz-option" data-quiz-option="keys">keys</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Marco">
-        <p class="quiz-question">3. Who has got a car?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Marco" data-hint="The fourth sentence names the person with a car." data-fix="Marco has a car.">
+        <p class="quiz-question">3. Who has a car for moving day?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Marco">Marco</button><button class="quiz-option" data-quiz-option="the friend writing">the friend writing</button><button class="quiz-option" data-quiz-option="nobody">nobody</button></div>
       </div>
     </div>
@@ -217,15 +275,16 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="has she got any children">
+  <div class="tile-game" data-tile-builder data-answer="has the room got any windows" data-hint="The singular subject the room takes has; move Has before the subject and use any before plural windows." data-fix="Has the room got any windows?" data-success-message="Correct. The singular have-got question moves has before the room and uses any before windows.">
     <h3>Drill 4: build the question</h3>
-    <p class="tile-target">Build the question. Remember: has moves to the front.</p>
+    <p class="tile-target">The hotel description does not mention windows. Build the have-got question about the room.</p>
     <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="children">children</button>
+      <button class="tile" data-build-tile="windows">windows</button>
       <button class="tile" data-build-tile="has">Has</button>
       <button class="tile" data-build-tile="got">got</button>
       <button class="tile" data-build-tile="any">any</button>
-      <button class="tile" data-build-tile="she">she</button>
+      <button class="tile" data-build-tile="room">room</button>
+      <button class="tile" data-build-tile="the">the</button>
     </div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
     <div class="drill-actions">
@@ -235,9 +294,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="the office hasn’t got a printer">
+  <div class="tile-game" data-tile-builder data-answer="the office hasn’t got a printer" data-hint="Begin with The office, then use the singular negative hasn't got before a printer." data-fix="The office hasn't got a printer." data-success-message="Correct. The singular subject the office takes hasn't got before the missing printer.">
     <h3>Drill 5: build the negative</h3>
-    <p class="tile-target">Build the sentence. Only hasn’t carries the negative.</p>
+    <p class="tile-target">The equipment inventory lists no printer. Build the have-got negative.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="printer">printer</button>
       <button class="tile" data-build-tile="hasn’t">hasn’t</button>
@@ -256,9 +315,9 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="have" data-fix="My brother has got a new job." data-why="Use has got with he, she, or a singular person.">
+  <div class="micro-drill" data-spot-error data-answer="have" data-hint="The fictional profile names one person, my brother, so choose the he form." data-fix="My brother has got a new job." data-why="Use has got with he, she, or a singular person.">
     <h3>Drill 6: one person, one form</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>A fictional profile says “My brother have got a new job.” Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="brother">My brother</button>
       <button class="error-choice" data-error-choice="have">have</button>
@@ -268,13 +327,14 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="do" data-fix="Have you got a reservation?" data-why="Choose one system. With got, start the question with have or has, without do.">
+  <div class="micro-drill" data-spot-error data-answer="got" data-hint="The instruction requires the ordinary U.S. have system, so Do you have is already complete." data-fix="Do you have a reservation?" data-why="The ordinary-have question uses do plus the base form have and contains no got.">
     <h3>Drill 7: one system at a time</h3>
-    <p>Tap the word that is wrong.</p>
+    <p>The host must use the ordinary U.S. have system: “Do you have got a reservation?” Tap the extra word.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="do">Do</button>
       <button class="error-choice" data-error-choice="you">you</button>
-      <button class="error-choice" data-error-choice="have got">have got</button>
+      <button class="error-choice" data-error-choice="have">have</button>
+      <button class="error-choice" data-error-choice="got">got</button>
       <button class="error-choice" data-error-choice="reservation">a reservation?</button>
     </div>
     <p class="hidden-answer" data-error-feedback></p>
@@ -319,53 +379,67 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Pocket and bag check:</b> Say five true things you have or haven’t got with you right now. <span class="ex">I’ve got my phone. I haven’t got cash.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five <span class="ex">Have you got…?</span> questions. Listen and give a short answer back. <span class="ex">Have you got any pets? Have you got a car?</span></div>
-  <div class="prompt-card"><b>People:</b> Describe a real person’s family, home, or useful possessions with <span class="ex">he’s got</span> or <span class="ex">she’s got</span>.</div>
-  <div class="prompt-card"><b>Not at home:</b> Say three things your home hasn’t got. <span class="ex">My apartment hasn’t got a balcony.</span></div>
-  <div class="prompt-card"><b>Same and different:</b> Compare yourself with a friend or coworker. <span class="ex">We’ve both got laptops. She’s got a car, but I haven’t.</span></div>
+  <p class="note-line">You never need to disclose your possessions, money, health, family, home, workplace, schedule, documents, or travel plans. Use a fictional resource kit, profile, apartment listing, or service-desk card. If a visual is not accessible, the teacher reads every relevant detail aloud.</p>
+  <div class="prompt-card"><b>Resource-kit check:</b> Use an invented kit list. Report three included items and two missing items: <span class="ex">We've got two chargers. We haven't got any cash.</span></div>
+  <div class="prompt-card"><b>Service desk:</b> Ask five questions from a fictional checklist. Use both <span class="ex">Have you got...?</span> and ordinary U.S. <span class="ex">Do you have...?</span>, then answer with the matching system.</div>
+  <div class="prompt-card"><b>Fictional profiles:</b> Describe one person's family relationship, apartment feature, useful possession, and present condition with <span class="ex">she's got</span> or <span class="ex">he's got</span>.</div>
+  <div class="prompt-card"><b>Possession or activity:</b> Explain the difference between <span class="ex">She's got a lunch meeting at one</span>, <span class="ex">She has lunch at one every day</span>, and <span class="ex">She's having lunch now</span>.</div>
+  <div class="prompt-card"><b>Same meaning, two systems:</b> Restate <span class="ex">They've got a printer</span> as <span class="ex">They have a printer</span>, then change both systems into a question and a negative.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: prepare a first-day resource kit</h3>
+    <p>Use a fictional new employee card and two possible resource kits. Give a 45- to 60-second recommendation, then complete a short service-desk exchange.</p>
+    <ol>
+      <li>Use one accurate <span class="ex">have got</span> statement with <span class="ex">I, you, we</span>, or <span class="ex">they</span>.</li>
+      <li>Use one accurate <span class="ex">has got</span> statement with a singular person or thing.</li>
+      <li>Include one negative and one correctly ordered have-got question with a matching short answer.</li>
+      <li>Restate one possession with the ordinary U.S. <span class="ex">have</span> system.</li>
+      <li>Use ordinary <span class="ex">have</span>, not <span class="ex">have got</span>, for one routine activity.</li>
+    </ol>
+    <p>The teacher asks one follow-up question. Repair one sentence if the subject agreement, possession system, or activity meaning is unclear.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
     <p>Complete this aloud: “With I, you, we, and they, I use ______ got. With he, she, and it, I use ______ got. For a question, ______ moves in front of the subject. In a short answer, I never repeat ______.”</p>
-    <p>Then say one positive sentence, one negative sentence, and one question about your real life.</p>
+    <p>Then use a fictional profile to give one positive, one negative, and one question. Restate one possession with ordinary U.S. <span class="ex">have</span>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can talk about possession, family, and features with have got.">
+  <div class="quiz" data-quiz data-success-message="Correct. You matched have or has to the subject, built questions and short answers, distinguished two possession systems, and kept activity have separate.">
     <h3>Final quiz: have got forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="has got">
-        <p class="quiz-question">1. Nina ___ a new phone.</p>
+      <div class="quiz-item" data-quiz-item data-answer="has got" data-hint="The fictional ownership record uses the singular subject Nina, so choose has got." data-fix="Nina has got a new phone.">
+        <p class="quiz-question">1. A fictional ownership record lists one new phone for Nina. Nina ___ a new phone.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="has got">has got</button><button class="quiz-option" data-quiz-option="have got">have got</button><button class="quiz-option" data-quiz-option="is got">is got</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Have you got">
-        <p class="quiz-question">2. ___ a reservation?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Have you got" data-hint="The host must use the have-got question system with the subject you." data-fix="Have you got a reservation?">
+        <p class="quiz-question">2. The host must use the have-got system to ask one guest about a reservation: ___ a reservation?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Have you got">Have you got</button><button class="quiz-option" data-quiz-option="Has you got">Has you got</button><button class="quiz-option" data-quiz-option="Are you got">Are you got</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="haven’t">
-        <p class="quiz-question">3. We ___ got much time.</p>
+      <div class="quiz-item" data-quiz-item data-answer="haven’t" data-hint="The subject we takes have, and very little time requires the negative haven't got." data-fix="We haven't got much time before the train leaves.">
+        <p class="quiz-question">3. The train leaves in five minutes, so the group has very little time. We ___ got much time.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="haven’t">haven’t</button><button class="quiz-option" data-quiz-option="hasn’t">hasn’t</button><button class="quiz-option" data-quiz-option="don’t">don’t</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="hasn’t">
-        <p class="quiz-question">4. Has Leo got a car? No, he ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="hasn’t" data-hint="The prompt asks for a one-word short answer, so keep has, contract not, and omit got." data-fix="Has Leo got a car? No, he hasn't.">
+        <p class="quiz-question">4. Complete the negative short answer with one word: “Has Leo got a car?” “No, he ___.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="hasn’t">hasn’t</button><button class="quiz-option" data-quiz-option="hasn’t got">hasn’t got</button><button class="quiz-option" data-quiz-option="doesn’t">doesn’t</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="has">
-        <p class="quiz-question">5. “She’s got two brothers.” Here ’s means ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="has" data-hint="Before got, the contraction she's expands to she has." data-fix="She's got means she has got, so 's means has.">
+        <p class="quiz-question">5. In the fictional profile “She’s got two brothers,” what does <span class="ex">’s</span> mean?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="has">has</button><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="does">does</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Do you have a car?">
-        <p class="quiz-question">6. Which question is correct?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Do you have a car?" data-hint="The requested ordinary-have system uses do plus the base form have and contains no got." data-fix="Do you have a car? is the ordinary U.S. have question.">
+        <p class="quiz-question">6. Which question correctly uses the ordinary U.S. <span class="ex">have</span> system?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Do you have a car?">Do you have a car?</button><button class="quiz-option" data-quiz-option="Do you have got a car?">Do you have got a car?</button><button class="quiz-option" data-quiz-option="Has you got a car?">Has you got a car?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="has got">
-        <p class="quiz-question">7. The apartment ___ a balcony.</p>
+      <div class="quiz-item" data-quiz-item data-answer="has got" data-hint="The apartment is singular, and the listing uses the have-got system for one feature." data-fix="The apartment has got a balcony.">
+        <p class="quiz-question">7. A listing uses the have-got system to describe one apartment feature. The apartment ___ a balcony.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="has got">has got</button><button class="quiz-option" data-quiz-option="have got">have got</button><button class="quiz-option" data-quiz-option="got">got</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="’ve got">
-        <p class="quiz-question">8. I ___ a headache today.</p>
+      <div class="quiz-item" data-quiz-item data-answer="’ve got" data-hint="The present condition belongs with I have got, contracted to I've got." data-fix="The fictional speaker says, 'I've got a headache today.'">
+        <p class="quiz-question">8. A fictional speaker reports a present condition: “I ___ a headache today.”</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="’ve got">’ve got</button><button class="quiz-option" data-quiz-option="’s got">’s got</button><button class="quiz-option" data-quiz-option="am got">am got</button></div>
       </div>
     </div>
@@ -375,6 +449,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the subject agreement, possession-system, activity, or present-time boundary that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day have got retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a contracted possession, a negative have-got form, an ordinary U.S. question, and activity have from explicit contexts.">
+      <h3>Choose the system from meaning</h3>
+      <div class="choice-bank" aria-label="Next-day possession and activity choices">
+        <button class="choice-option" data-choice-option="She’s got">She’s got</button><button class="choice-option" data-choice-option="haven’t got">haven’t got</button>
+        <button class="choice-option" data-choice-option="Do you have">Do you have</button><button class="choice-option" data-choice-option="have">have</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The fictional equipment profile gives Maya one laptop: <button class="choice-gap" data-choice-gap data-answer="She’s got" data-hint="Maya uses she, so contract she has got to She's got." data-fix="She's got a laptop." data-placeholder="choose">choose</button> a laptop.</span></div>
+      <div class="q"><span class="n">2</span><span>The group inventory lists no charger: We <button class="choice-gap" data-choice-gap data-answer="haven’t got" data-hint="The subject we takes have, and the inventory gives a negative result." data-fix="We haven't got a charger." data-placeholder="choose">choose</button> a charger.</span></div>
+      <div class="q"><span class="n">3</span><span>A U.S. service worker must use ordinary <span class="ex">have</span> to ask about identification: <button class="choice-gap" data-choice-gap data-answer="Do you have" data-hint="The ordinary-have question begins Do you have and contains no got." data-fix="Do you have an ID?" data-placeholder="choose">choose</button> an ID?</span></div>
+      <div class="q"><span class="n">4</span><span>The routine means “eat,” not “possess”: I <button class="choice-gap" data-choice-gap data-answer="have" data-hint="For the repeated activity eat lunch, use present-simple have without got." data-fix="I have lunch at noon every day." data-placeholder="choose">choose</button> lunch at noon every day.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="got" data-hint="The instruction requires ordinary U.S. have, so Do you have is already a complete question frame." data-fix="Do you have a charger?" data-why="The ordinary-have question uses do plus have and does not add got.">
+      <h3>Repair the mixed systems</h3>
+      <p>The service worker must use ordinary U.S. <span class="ex">have</span>: “Do you have got a charger?” Tap the extra word.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="do">Do</button><button class="error-choice" data-error-choice="you">you</button><button class="error-choice" data-error-choice="have">have</button><button class="error-choice" data-error-choice="got">got</button><button class="error-choice" data-error-choice="charger">a charger?</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, say one fictional possession with <span class="ex">have got</span>. Restate it with ordinary <span class="ex">have</span>. Then give one past possession and one routine activity.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>We've got a printer. We have a printer. We had a printer last year. We have lunch at noon.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

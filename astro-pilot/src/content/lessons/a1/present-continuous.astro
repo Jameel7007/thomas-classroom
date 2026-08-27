@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Present continuous · A1 Grammar · Curriculum Map",
+  "title": "Present continuous · A1 Grammar",
   "slug": "present-continuous",
   "level": "A1",
   "topic": "Present continuous",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Show what is in progress at this moment: I’m waiting for the bus , She’s talking to a client , and Are they working?",
+  "description": "Use the present continuous to describe actions happening now or around now in affirmative, negative, and question forms.",
   "sequence": 2,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/the-verb-to-be", "a0/subject-pronouns", "a1/present-simple"],
+  "related": ["b1/future-review-will-going-to-present-continuous", "a2/present-perfect"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Present and temporary meaning, be + verb-ing form, spelling, state/action contrasts, future arrangements, spoken form, listening, privacy, feedback, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 2</p>
   <h1>Present continuous: <em>happening now</em></h1>
-  <p class="standfirst">Show what is in progress at this moment: <span class="ex">I’m waiting for the bus</span>, <span class="ex">She’s talking to a client</span>, and <span class="ex">Are they working?</span></p>
+  <p class="standfirst">Present an action as open and in progress now or temporarily around now: <span class="ex">I’m waiting for the bus</span>, <span class="ex">She’s working from home this week</span>, and <span class="ex">Are they still talking?</span> Build the complete form, contrast it with routines and states, and recognize arranged future meaning from clear context.</p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
+    <span class="tag">45–55 min core</span>
     <span class="tag">am / is / are + verb-ing</span>
     <span class="tag">happening now</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>See routine and right now side by side.</span></div>
     <div class="flow-step"><b>Discover</b><span>Build be + verb-ing.</span></div>
     <div class="flow-step"><b>Build</b><span>Make questions, negatives, and short answers.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe this exact moment in your life.</span></div>
+    <div class="flow-step"><b>Use</b><span>Describe a clear pictured, stated, or invented situation.</span></div>
   </div>
 
-  <p class="note-line">The present continuous is the grammar of live description: what is in progress at this moment, or temporarily around now.</p>
+  <p class="note-line">The core meaning is an open situation viewed from inside. Context can place that open situation at this moment, temporarily around now, or in a clearly arranged future.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved am with I, are with the plural subject my parents, and present-simple works with Omar's stated routine.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. You will need <b>am, is, are</b> again in a minute.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -51,9 +59,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="works">works</button>
       <button class="choice-option" data-choice-option="work">work</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="am" data-placeholder="choose">choose</button> a teacher at a language school. &nbsp;<span class="contraction">(the verb to be)</span></span></div>
-    <div class="q"><span class="n">2</span><span>My parents <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> doctors. &nbsp;<span class="contraction">(the verb to be)</span></span></div>
-    <div class="q"><span class="n">3</span><span>Omar <button class="choice-gap" data-choice-gap data-answer="works" data-placeholder="choose">choose</button> long hours at the clinic. &nbsp;<span class="contraction">(present simple)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The fictional speaker says, “I <button class="choice-gap" data-choice-gap data-answer="am" data-hint="The subject I takes am." data-fix="I am a teacher at a language school." data-placeholder="choose">choose</button> a teacher at a language school.”</span></div>
+    <div class="q"><span class="n">2</span><span>The profile states, “My parents <button class="choice-gap" data-choice-gap data-answer="are" data-hint="My parents is plural, so use are." data-fix="My parents are doctors." data-placeholder="choose">choose</button> doctors.”</span></div>
+    <div class="q"><span class="n">3</span><span>Omar’s schedule says he regularly <button class="choice-gap" data-choice-gap data-answer="works" data-hint="A regular schedule with he takes works in the present simple." data-fix="Omar works long hours at the clinic." data-placeholder="choose">choose</button> long hours at the clinic.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -73,7 +81,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Every sentence contains the subject-matched form of be and an unchanged verb-ing activity form.">
     <h3>Discovery check: choose the pattern</h3>
     <p class="choice-hint">Use the subject to choose <b>am</b>, <b>is</b>, or <b>are</b>. Two gaps need the <b>-ing</b> verb itself.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -83,12 +91,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="working">working</button>
       <button class="choice-option" data-choice-option="waiting">waiting</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="am" data-placeholder="choose">choose</button> waiting for the elevator.</span></div>
-    <div class="q"><span class="n">2</span><span>She <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> talking to a client.</span></div>
-    <div class="q"><span class="n">3</span><span>They <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> working late tonight.</span></div>
-    <div class="q"><span class="n">4</span><span>It <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> raining outside.</span></div>
-    <div class="q"><span class="n">5</span><span>Marcos is <button class="choice-gap" data-choice-gap data-answer="working" data-placeholder="choose">choose</button> from home today.</span></div>
-    <div class="q"><span class="n">6</span><span>We are <button class="choice-gap" data-choice-gap data-answer="waiting" data-placeholder="choose">choose</button> for the train.</span></div>
+    <div class="q"><span class="n">1</span><span>The live elevator message says, “I <button class="choice-gap" data-choice-gap data-answer="am" data-hint="The subject I takes am before waiting." data-fix="I am waiting for the elevator." data-placeholder="choose">choose</button> waiting for the elevator.”</span></div>
+    <div class="q"><span class="n">2</span><span>The office update states that Lena uses <span class="ex">she</span>. She <button class="choice-gap" data-choice-gap data-answer="is" data-hint="The subject she takes is before talking." data-fix="She is talking to a client." data-placeholder="choose">choose</button> talking to a client.</span></div>
+    <div class="q"><span class="n">3</span><span>The team has already arranged tonight's shift. They <button class="choice-gap" data-choice-gap data-answer="are" data-hint="The plural subject they takes are before working." data-fix="They are working late tonight." data-placeholder="choose">choose</button> working late tonight.</span></div>
+    <div class="q"><span class="n">4</span><span>The live weather camera shows rain. It <button class="choice-gap" data-choice-gap data-answer="is" data-hint="The subject it takes is before raining." data-fix="It is raining outside." data-placeholder="choose">choose</button> raining outside.</span></div>
+    <div class="q"><span class="n">5</span><span>Marcos’s temporary schedule says he is <button class="choice-gap" data-choice-gap data-answer="working" data-hint="After is, use the activity form working." data-fix="Marcos is working from home today." data-placeholder="choose">choose</button> from home today.</span></div>
+    <div class="q"><span class="n">6</span><span>Our live message says, “We are <button class="choice-gap" data-choice-gap data-answer="waiting" data-hint="After are, use the activity form waiting." data-fix="We are waiting for the train." data-placeholder="choose">choose</button> for the train.”</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -98,7 +106,7 @@ export const page = defineLesson({
 
   <h2>The system: am, is, are + verb-ing</h2>
   <div class="lead-rule"></div>
-  <p>Every present continuous sentence has two verbs: a form of <span class="ex">be</span> that agrees with the subject, and a verb ending in <span class="ex">-ing</span> that names the activity.</p>
+  <p>Every present continuous verb phrase has two parts: a present form of <span class="ex">be</span> that agrees with the subject, and an <span class="ex">-ing</span> form that presents the activity as open.</p>
   <table>
     <thead><tr><th></th><th>I</th><th>you / we / they</th><th>he / she / it</th></tr></thead>
     <tbody>
@@ -139,19 +147,41 @@ export const page = defineLesson({
   </div>
 
   <h3>Spelling the -ing form</h3>
-  <p>We add <span class="ex">-ing</span> to the base verb, but spelling sometimes protects the original sound. Most verbs simply add <span class="ex">-ing</span>; a few need one small change first.</p>
+  <p>We add <span class="ex">-ing</span> to the base verb, but spelling sometimes protects the original sound. Most verbs simply add <span class="ex">-ing</span>; learn the high-value changes below as spelling patterns, not as a reason to guess every unfamiliar form.</p>
   <table>
     <thead><tr><th>base verb</th><th>rule</th><th>-ing form</th></tr></thead>
     <tbody>
       <tr><td>work, wait</td><td>just add <b>-ing</b></td><td><span class="ex">work → working</span>, <span class="ex">wait → waiting</span></td></tr>
       <tr><td>make, write</td><td>drop the silent <b>e</b></td><td><span class="ex">make → making</span>, <span class="ex">write → writing</span></td></tr>
-      <tr><td>run, sit</td><td>double the final consonant after one short stressed vowel</td><td><span class="ex">run → running</span>, <span class="ex">sit → sitting</span></td></tr>
+      <tr><td>run, sit, begin</td><td>after one vowel plus one final consonant, double that consonant in a one-syllable verb or a verb stressed at the end</td><td><span class="ex">run → running</span>, <span class="ex">sit → sitting</span>, <span class="ex">begin → beginning</span></td></tr>
+      <tr><td>visit, open, snow, fix</td><td>do not double when the final syllable is unstressed or the word ends in <b>w</b> or <b>x</b></td><td><span class="ex">visiting · opening · snowing · fixing</span></td></tr>
       <tr><td>study, stay</td><td>keep the <b>y</b></td><td><span class="ex">study → studying</span>, <span class="ex">stay → staying</span></td></tr>
       <tr><td>lie, die</td><td>change <b>ie</b> to <b>y</b></td><td><span class="ex">lie → lying</span>, <span class="ex">die → dying</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line">Two common forms do not follow the silent-<span class="ex">e</span> row: <span class="ex">be → being</span> and <span class="ex">see → seeing</span>. When unsure, check the whole form rather than adding letters mechanically.</p>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Sound natural: contractions carry the spoken rhythm</h3>
+    <p>In a neutral positive sentence, speakers usually join the subject and <span class="ex">be</span>: <span class="ex">I’m working, you’re waiting, she’s talking, we’re leaving</span>. The activity word normally receives the strongest beat: <span class="ex">I’m <strong>WORK</strong>ing</span>, not four equally strong words.</p>
+    <table>
+      <thead><tr><th>written form</th><th>usual spoken chunk</th><th>main beat</th></tr></thead>
+      <tbody>
+        <tr><td>I am working.</td><td>I’m working.</td><td><b>work</b></td></tr>
+        <tr><td>She is calling.</td><td>She’s calling.</td><td><b>call</b></td></tr>
+        <tr><td>They are waiting.</td><td>They’re waiting.</td><td><b>wait</b></td></tr>
+      </tbody>
+    </table>
+    <p>The ending <span class="ex">-ing</span> finishes with one nasal <em>ng</em> sound; do not release a separate hard <em>g</em>. In questions, link the small words smoothly and keep the activity clear: <span class="ex">Are-you <strong>WORK</strong>ing?</span> and <span class="ex">What-are-you <strong>DO</strong>ing?</span></p>
+  </div>
+
+  <div class="note">
+    <h3>A nearby future with an arrangement</h3>
+    <p>The same open-situation viewpoint can describe a future arrangement when the context gives a future time and shows that people have organized it: <span class="ex">We're meeting the client at 10 tomorrow</span>. This is more than a general hope; the meeting is on the calendar.</p>
+    <p>Keep the time context visible. <span class="ex">We're working</span> normally points to now or around now. <span class="ex">We're working this Friday</span> points to an arranged future shift. A later future lesson compares this use with plans, predictions, and schedules.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each chunk matches its subject, positive or negative meaning, and stated present, temporary, or arranged-future context.">
     <h3>Drill 1: choose the natural chunk</h3>
     <p class="choice-hint">Read the subject first, then the context: is the sentence positive or negative? Choose the chunk people really say.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -161,14 +191,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="isn’t working">isn’t working</button>
       <button class="choice-option" data-choice-option="aren’t working">aren’t working</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="’m working" data-placeholder="choose">choose</button> from home this week, so call me on my cell.</span></div>
-    <div class="q"><span class="n">2</span><span>My sister <button class="choice-gap" data-choice-gap data-answer="’s working" data-placeholder="choose">choose</button> in Chicago this month. She likes her new team.</span></div>
-    <div class="q"><span class="n">3</span><span>The builders <button class="choice-gap" data-choice-gap data-answer="are working" data-placeholder="choose">choose</button> on the roof right now, so it’s noisy.</span></div>
-    <div class="q"><span class="n">4</span><span>The elevator <button class="choice-gap" data-choice-gap data-answer="isn’t working" data-placeholder="choose">choose</button> today, so take the stairs.</span></div>
-    <div class="q"><span class="n">5</span><span>We <button class="choice-gap" data-choice-gap data-answer="aren’t working" data-placeholder="choose">choose</button> this Friday. The office is closed for the holiday.</span></div>
-    <div class="q"><span class="n">6</span><span>Dan <button class="choice-gap" data-choice-gap data-answer="’s working" data-placeholder="choose">choose</button> late tonight, so don’t wait for him for dinner.</span></div>
-    <div class="q"><span class="n">7</span><span>You and Priya <button class="choice-gap" data-choice-gap data-answer="are working" data-placeholder="choose">choose</button> on the same report, so please share your notes.</span></div>
-    <div class="q"><span class="n">8</span><span>My headphones <button class="choice-gap" data-choice-gap data-answer="aren’t working" data-placeholder="choose">choose</button> again, so I can’t hear the call.</span></div>
+    <div class="q"><span class="n">1</span><span>The fictional update says, “I <button class="choice-gap" data-choice-gap data-answer="’m working" data-hint="I takes am; in a positive spoken chunk, contract I am to I'm." data-fix="I'm working from home this week, so call me on my cell." data-placeholder="choose">choose</button> from home this week, so call me on my cell.”</span></div>
+    <div class="q"><span class="n">2</span><span>The profile states that Maya uses <span class="ex">she</span>. She <button class="choice-gap" data-choice-gap data-answer="’s working" data-hint="She takes is; in a positive spoken chunk, contract she is to she's." data-fix="She's working in Chicago this month." data-placeholder="choose">choose</button> in Chicago this month.</span></div>
+    <div class="q"><span class="n">3</span><span>The live building notice says the builders <button class="choice-gap" data-choice-gap data-answer="are working" data-hint="The plural subject the builders takes are, and the sentence is positive." data-fix="The builders are working on the roof right now." data-placeholder="choose">choose</button> on the roof right now, so it’s noisy.</span></div>
+    <div class="q"><span class="n">4</span><span>The maintenance notice says the elevator <button class="choice-gap" data-choice-gap data-answer="isn’t working" data-hint="The singular subject the elevator takes is; the stairs instruction shows a negative meaning." data-fix="The elevator isn't working today, so take the stairs." data-placeholder="choose">choose</button> today, so take the stairs.</span></div>
+    <div class="q"><span class="n">5</span><span>The calendar states that we <button class="choice-gap" data-choice-gap data-answer="aren’t working" data-hint="We takes are; the office closure makes this arranged Friday shift negative." data-fix="We aren't working this Friday because the office is closed." data-placeholder="choose">choose</button> this Friday. The office is closed for the holiday.</span></div>
+    <div class="q"><span class="n">6</span><span>Dan's confirmed schedule says he <button class="choice-gap" data-choice-gap data-answer="’s working" data-hint="Dan is singular, and the confirmed schedule states a positive arrangement." data-fix="Dan's working late tonight." data-placeholder="choose">choose</button> late tonight, so his household is planning dinner without him.</span></div>
+    <div class="q"><span class="n">7</span><span>The project board assigns the same report to you and Priya. You and Priya <button class="choice-gap" data-choice-gap data-answer="are working" data-hint="You and Priya is a plural subject, so use are working." data-fix="You and Priya are working on the same report." data-placeholder="choose">choose</button> on the same report, so please share your notes.</span></div>
+    <div class="q"><span class="n">8</span><span>The call diagnostics show no audio. My headphones <button class="choice-gap" data-choice-gap data-answer="aren’t working" data-hint="Headphones has a plural form and the diagnostics show a negative result." data-fix="My headphones aren't working, so I can't hear the call." data-placeholder="choose">choose</button> again, so I can’t hear the call.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -189,19 +219,56 @@ export const page = defineLesson({
   </table>
   <p class="note-line">Time expressions are clues, not automatic rules. <span class="ex">Every day, usually</span> often support the present simple; <span class="ex">now, today, at the moment</span> often support the continuous. First understand the meaning, then use the clue.</p>
   <div class="note">
-    <h3>One useful limit</h3>
-    <p>Some verbs normally describe a state, not an unfolding action: <span class="ex">know, understand, want, need, like</span>. At this level, prefer <span class="ex">I understand</span> and <span class="ex">I need help</span>, not <span class="ex">I’m understanding</span> or <span class="ex">I’m needing help</span>.</p>
+    <h3>State or action? Meaning comes first</h3>
+    <p>Some verbs normally describe a state rather than an unfolding action: <span class="ex">know, understand, want, need, like</span>. At this level, use <span class="ex">I understand</span> and <span class="ex">I need help</span>, not <span class="ex">I’m understanding</span> or <span class="ex">I’m needing help</span>.</p>
+    <p>A verb can change patterns when its meaning changes:</p>
+    <table>
+      <thead><tr><th>state meaning</th><th>open activity meaning</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ex">I have a car.</span><br />Have means possession.</td><td><span class="ex">I'm having lunch.</span><br />Have is part of an activity.</td></tr>
+        <tr><td><span class="ex">I think the plan is good.</span><br />Think gives an opinion.</td><td><span class="ex">I'm thinking about the plan.</span><br />Think names an active process.</td></tr>
+        <tr><td><span class="ex">The menu looks good.</span><br />Look describes appearance.</td><td><span class="ex">I'm looking at the menu.</span><br />Look names an intentional action.</td></tr>
+      </tbody>
+    </table>
+    <p>Do not choose only from the verb. Choose from the meaning the speaker needs.</p>
   </div>
 
-  <div class="practice" data-answer-drill>
+  <section data-lesson-extension="Tutor-read present-simple and present-continuous listening check">
+    <h2>Listen: routine, state, or open situation?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each complete fictional context once at a natural speed and once more slowly. Listen before you choose.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished a routine from a temporary situation, possession from an activity, a live question, and a future arrangement.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Listening choices">
+        <button class="choice-option" data-choice-option="works">works</button><button class="choice-option" data-choice-option="is working">is working</button>
+        <button class="choice-option" data-choice-option="has">has</button><button class="choice-option" data-choice-option="is having">is having</button>
+        <button class="choice-option" data-choice-option="Are">Are</button><button class="choice-option" data-choice-option="Do">Do</button>
+        <button class="choice-option" data-choice-option="are meeting">are meeting</button><button class="choice-option" data-choice-option="meet">meet</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The schedule is the same every weekday. Luis <button class="choice-gap" data-choice-gap data-answer="works" data-hint="Listen for every weekday, which marks the stated routine." data-fix="Luis works at the clinic every weekday." data-placeholder="listen">listen</button> at the clinic every weekday.</span></div>
+      <div class="q"><span class="n">2</span><span>Luis normally works at the clinic, but today he <button class="choice-gap" data-choice-gap data-answer="is working" data-hint="Listen for but today, which changes the normal arrangement temporarily." data-fix="Today Luis is working from home." data-placeholder="listen">listen</button> from home.</span></div>
+      <div class="q"><span class="n">3</span><span>The profile says Maya owns one car. She <button class="choice-gap" data-choice-gap data-answer="has" data-hint="Here have means possession, a state." data-fix="Maya has one car." data-placeholder="listen">listen</button> one car.</span></div>
+      <div class="q"><span class="n">4</span><span>The café photo shows Maya eating lunch now. She <button class="choice-gap" data-choice-gap data-answer="is having" data-hint="Here have is part of the open activity have lunch." data-fix="Maya is having lunch now." data-placeholder="listen">listen</button> lunch now.</span></div>
+      <div class="q"><span class="n">5</span><span>The caller wants to know about this moment: “<button class="choice-gap" data-choice-gap data-answer="Are" data-hint="A present-continuous question begins with Are before you." data-fix="Are you waiting outside?" data-placeholder="listen">listen</button> you waiting outside?”</span></div>
+      <div class="q"><span class="n">6</span><span>The appointment is confirmed for tomorrow at 10. We <button class="choice-gap" data-choice-gap data-answer="are meeting" data-hint="A confirmed future appointment supports the arranged-future continuous form." data-fix="We are meeting the client at 10 tomorrow." data-placeholder="listen">listen</button> the client at 10 tomorrow.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details>
+      <summary>Teacher: open the script after the learner checks</summary>
+      <ol><li>The schedule is the same every weekday. Luis works at the clinic every weekday.</li><li>Luis normally works at the clinic, but today he is working from home.</li><li>The profile says Maya owns one car. She has one car.</li><li>The café photo shows Maya eating lunch now. She is having lunch now.</li><li>The caller wants to know about this moment: “Are you waiting outside?”</li><li>The appointment is confirmed for tomorrow at 10. We are meeting the client at 10 tomorrow.</li></ol>
+    </details>
+  </section>
+
+  <div class="practice" data-answer-drill data-success-message="Correct. Each question moves the matching form of be before the subject, and each short answer keeps only that form of be.">
     <h3>Drill 2: type the question word or short answer</h3>
     <p class="choice-hint">Questions start with <b>Am</b>, <b>Is</b>, or <b>Are</b>. Short answers use the be verb alone, never the <b>-ing</b> verb.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Are" aria-label="answer 1" /> you working right now?</span></div>
-    <div class="q"><span class="n">2</span><span>Yes, I <input class="answer-input" data-answer="am" aria-label="answer 2" />.</span></div>
-    <div class="q"><span class="n">3</span><span><input class="answer-input" data-answer="Is" aria-label="answer 3" /> Lena driving to the airport?</span></div>
-    <div class="q"><span class="n">4</span><span>No, she <input class="answer-input" data-answer="isn’t" aria-label="answer 4" />.</span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Am" aria-label="answer 5" /> I speaking too fast?</span></div>
-    <div class="q"><span class="n">6</span><span>No, you <input class="answer-input" data-answer="aren’t" aria-label="answer 6" />.</span></div>
+    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Are" data-hint="The subject you takes are; move it to the front and capitalize it." data-fix="Are you working right now?" aria-label="Question starter before you working right now" /> you working right now?</span></div>
+    <div class="q"><span class="n">2</span><span>Yes, I <input class="answer-input" data-answer="am" data-hint="The positive short answer to Are you...? is Yes, I am." data-fix="Yes, I am." aria-label="Positive short answer after Yes I" />.</span></div>
+    <div class="q"><span class="n">3</span><span>The travel update states that Lena uses <span class="ex">she</span>. <input class="answer-input" data-answer="Is" data-hint="The subject Lena takes is; move it to the front and capitalize it." data-fix="Is Lena driving to the airport?" aria-label="Question starter before Lena driving to the airport" /> Lena driving to the airport?</span></div>
+    <div class="q"><span class="n">4</span><span>No, she <input class="answer-input" data-answer="isn’t" data-hint="The negative short answer to Is she...? keeps is and adds not." data-fix="No, she isn't." aria-label="Negative short answer after No she" />.</span></div>
+    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Am" data-hint="The subject I takes am; move it to the front and capitalize it." data-fix="Am I speaking too fast?" aria-label="Question starter before I speaking too fast" /> I speaking too fast?</span></div>
+    <div class="q"><span class="n">6</span><span>No, you <input class="answer-input" data-answer="aren’t" data-hint="The negative short answer to Am I...? uses you are not from the listener's viewpoint." data-fix="No, you aren't." aria-label="Negative short answer after No you" />.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -215,18 +282,18 @@ export const page = defineLesson({
     <h3>A message from a coworker</h3>
     <p><span class="ex">"Where are you? We’re waiting outside the restaurant. Dana is parking the car, and Tom is holding a table for us inside. I’m looking at the menu now, and everything looks great. Are you still finishing that report?"</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed a real conversation about right now.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the group's waiting place, Dana's current activity, and the report question addressed to the message recipient.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="outside the restaurant">
+      <div class="quiz-item" data-quiz-item data-answer="outside the restaurant" data-hint="The second sentence states the group's location directly after waiting." data-fix="The group is waiting outside the restaurant.">
         <p class="quiz-question">1. Where is the group waiting?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="outside the restaurant">outside the restaurant</button><button class="quiz-option" data-quiz-option="inside the office">inside the office</button><button class="quiz-option" data-quiz-option="at the station">at the station</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="parking the car">
+      <div class="quiz-item" data-quiz-item data-answer="parking the car" data-hint="The third sentence names Dana and her unfinished activity." data-fix="Dana is parking the car.">
         <p class="quiz-question">2. What is Dana doing right now?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="parking the car">parking the car</button><button class="quiz-option" data-quiz-option="holding a table">holding a table</button><button class="quiz-option" data-quiz-option="reading the menu">reading the menu</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the person reading the message">
+      <div class="quiz-item" data-quiz-item data-answer="the person reading the message" data-hint="The final question uses you and asks whether the recipient is still finishing a report." data-fix="The person receiving the message is probably still working on the report.">
         <p class="quiz-question">3. Who is probably still working?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the person reading the message">the person reading the message</button><button class="quiz-option" data-quiz-option="Tom">Tom</button><button class="quiz-option" data-quiz-option="Dana">Dana</button></div>
       </div>
@@ -238,9 +305,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="is she taking the train">
+  <div class="tile-game" data-tile-builder data-answer="is she taking the train" data-hint="Move Is before the subject she, then keep taking the train together." data-fix="Is she taking the train?" data-success-message="Correct. The question moves is before she and leaves the activity phrase taking the train unchanged.">
     <h3>Drill 4: build the question</h3>
-    <p class="tile-target">Build the question. Remember: is moves in front of the subject.</p>
+    <p class="tile-target">A live travel update is unclear. Build the question asking about her current trip.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="taking">taking</button>
       <button class="tile" data-build-tile="is">Is</button>
@@ -256,9 +323,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="we aren’t watching the game tonight">
+  <div class="tile-game" data-tile-builder data-answer="we aren’t watching the game tonight" data-hint="Begin with We aren't, then keep watching the game together and place tonight last." data-fix="We aren't watching the game tonight." data-success-message="Correct. Aren't carries the negative after we, while watching stays in the verb-ing form.">
     <h3>Drill 5: build the negative</h3>
-    <p class="tile-target">Build the sentence. Only aren’t carries the negative.</p>
+    <p class="tile-target">The group has confirmed a different plan for tonight. Build the negative arrangement.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="watching">watching</button>
       <button class="tile" data-build-tile="we">We</button>
@@ -277,7 +344,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="working" data-fix="She is working at the hospital now." data-why="The -ing verb cannot stand alone. Add is: she is working.">
+  <div class="micro-drill" data-spot-error data-answer="working" data-hint="The sentence has an -ing activity but no subject-matched form of be." data-fix="She is working at the hospital now." data-why="The -ing verb cannot stand alone. Add is: she is working.">
     <h3>Drill 6: two verbs, not one</h3>
     <p>One small verb is missing. Tap the word that cannot stand alone.</p>
     <div class="spot-options">
@@ -289,7 +356,7 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="do" data-fix="Are you working today?" data-why="Present continuous questions move are in front of the subject. Do belongs to the present simple system.">
+  <div class="micro-drill" data-spot-error data-answer="do" data-hint="The phrase are working already contains the present-continuous helper needed for the question." data-fix="Are you working today?" data-why="Present continuous questions move are in front of the subject. Do belongs to the present simple system.">
     <h3>Drill 7: one system at a time</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -340,54 +407,68 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Live camera:</b> Describe five things happening in your room, on your street, or on your screen right now. <span class="ex">The neighbors are cooking. A bus is passing.</span></div>
-  <div class="prompt-card"><b>Family radar:</b> Guess what three family members or friends are doing at this moment. <span class="ex">My brother is probably driving home now.</span></div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five questions about this exact moment and listen for the short answers. <span class="ex">Are you drinking coffee? Are you sitting near a window? What are you looking at?</span></div>
-  <div class="prompt-card"><b>Not true now:</b> Say three things that are not happening right now. <span class="ex">I’m not driving. It isn’t raining. My phone isn’t ringing.</span></div>
-  <div class="prompt-card"><b>Today is different:</b> Contrast one routine with today. <span class="ex">I usually take the bus, but today I’m walking.</span></div>
+  <p class="note-line">You never need to show your camera, room, street, screen, location, schedule, family, friends, or messages. Use a fictional scene card, a public image with a written description, or invented information. If a visual is not accessible, the teacher reads the scene card aloud.</p>
+  <div class="prompt-card"><b>Live scene card:</b> Invent or use a labeled public scene. Give five supported descriptions: <span class="ex">A bus is stopping. Two people are waiting. It isn't raining.</span></div>
+  <div class="prompt-card"><b>Routine versus today:</b> Create a fictional worker's normal schedule and one different day. Contrast three pairs: <span class="ex">Maya usually takes the bus, but today she's walking.</span></div>
+  <div class="prompt-card"><b>Information gap:</b> You and your teacher each receive a fictional live-update card. Ask focused questions such as <span class="ex">Is Luis working from home?</span> and <span class="ex">What is Maya doing?</span> Use short answers before adding details.</div>
+  <div class="prompt-card"><b>State or action:</b> Explain the meaning difference in <span class="ex">He has lunch at noon</span>, <span class="ex">He is having lunch now</span>, and <span class="ex">He has a lunch reservation</span>.</div>
+  <div class="prompt-card"><b>Arranged future:</b> Build a fictional calendar with three confirmed appointments. State the time or day clearly: <span class="ex">We're meeting the designer at 2 tomorrow.</span></div>
+
+  <div class="thinking-card">
+    <h3>Final production: a two-time update</h3>
+    <p>Give a 45- to 60-second fictional team update with a normal routine, the temporary situation now, and one confirmed future arrangement.</p>
+    <ol>
+      <li>Use one accurate present-simple routine.</li>
+      <li>Use two complete present-continuous statements with the correct form of <span class="ex">be</span>.</li>
+      <li>Include one negative and one correctly ordered question.</li>
+      <li>Use a state verb accurately or explain one state/action contrast.</li>
+      <li>Give a clear future time with the arranged-future example.</li>
+    </ol>
+    <p>The teacher asks one follow-up question. Repair one sentence if the context or time frame is unclear.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
-    <p>Complete this aloud: “The present continuous needs two verbs: a form of ______ and the verb ending in ______. For a question, ______ moves in front of the subject. The present simple describes a routine; the present continuous describes what is happening ______.”</p>
-    <p>Then say one positive sentence, one negative sentence, and one question about this exact moment.</p>
+    <p>Complete this aloud: “The present continuous verb phrase needs two parts: a present form of ______ and an ______ form. For a question, the form of ______ moves in front of the subject. The core meaning is an open situation viewed from ______.”</p>
+    <p>Then contrast a routine with a temporary situation, explain <span class="ex">I have lunch at noon</span> versus <span class="ex">I'm having lunch now</span>, and give one arranged future with a clear future time.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can describe what is happening right now, and what usually happens.">
+  <div class="quiz" data-quiz data-success-message="Correct. You selected complete forms from explicit time contexts, built questions and short answers, separated routines from temporary situations, and formed writing accurately.">
     <h3>Final quiz: forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="is raining">
-        <p class="quiz-question">1. Look outside. It ___ again.</p>
+      <div class="quiz-item" data-quiz-item data-answer="is raining" data-hint="The live weather feed presents rain as in progress now; include the form of be and the -ing form." data-fix="The live weather feed says it is raining now.">
+        <p class="quiz-question">1. The live weather feed shows rain in progress now. It ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="is raining">is raining</button><button class="quiz-option" data-quiz-option="rains">rains</button><button class="quiz-option" data-quiz-option="raining">raining</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Are you coming to the meeting?">
-        <p class="quiz-question">2. Which question is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Are you coming to the meeting?">Are you coming to the meeting?</button><button class="quiz-option" data-quiz-option="Do you coming to the meeting?">Do you coming to the meeting?</button><button class="quiz-option" data-quiz-option="You are coming to the meeting?">You are coming to the meeting?</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="Are you coming to the meeting now?" data-hint="To ask about the movement in progress, place Are before you and keep coming unchanged." data-fix="Are you coming to the meeting now?">
+        <p class="quiz-question">2. Your teammate says, “I'm walking toward the meeting now.” Ask about that movement in progress.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="Are you coming to the meeting now?">Are you coming to the meeting now?</button><button class="quiz-option" data-quiz-option="Do you come to the meeting every week?">Do you come to the meeting every week?</button><button class="quiz-option" data-quiz-option="Are you at the meeting already?">Are you at the meeting already?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="aren’t">
-        <p class="quiz-question">3. We ___ watching the game. We’re still at work.</p>
+      <div class="quiz-item" data-quiz-item data-answer="aren’t" data-hint="The subject we takes are; add not to make the present-continuous statement negative." data-fix="We aren't watching the game; the office screen is off.">
+        <p class="quiz-question">3. The office screen is off, and nobody is streaming the game. We ___ watching it.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="aren’t">aren’t</button><button class="quiz-option" data-quiz-option="don’t">don’t</button><button class="quiz-option" data-quiz-option="isn’t">isn’t</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="isn’t">
-        <p class="quiz-question">4. Is Marta working today? No, she ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="isn’t">isn’t</button><button class="quiz-option" data-quiz-option="isn’t working">isn’t working</button><button class="quiz-option" data-quiz-option="doesn’t">doesn’t</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="isn’t" data-hint="The prompt requires a one-word negative short answer, so keep is and contract not." data-fix="Is Marta working today? No, she isn't.">
+        <p class="quiz-question">4. Complete the negative short answer with one word: “Is Marta working today?” “No, she ___.”</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="isn’t">isn’t</button><button class="quiz-option" data-quiz-option="not">not</button><button class="quiz-option" data-quiz-option="doesn’t">doesn’t</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="She’s taking the bus.">
-        <p class="quiz-question">5. Which sentence describes an action happening right now?</p>
+      <div class="quiz-item" data-quiz-item data-answer="She’s taking the bus." data-hint="The live tracker presents the trip as in progress now." data-fix="The live tracker says she's taking the bus.">
+        <p class="quiz-question">5. A live tracker shows that her bus trip is in progress now. Which report fits?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="She’s taking the bus.">She’s taking the bus.</button><button class="quiz-option" data-quiz-option="She takes the bus.">She takes the bus.</button><button class="quiz-option" data-quiz-option="She’s got a bus pass.">She’s got a bus pass.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="drink">
+      <div class="quiz-item" data-quiz-item data-answer="drink" data-hint="Every morning marks a routine, so use the present simple with I." data-fix="I drink coffee every morning.">
         <p class="quiz-question">6. I ___ coffee every morning.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="drink">drink</button><button class="quiz-option" data-quiz-option="am drinking">am drinking</button><button class="quiz-option" data-quiz-option="drinking">drinking</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a temporary situation">
+      <div class="quiz-item" data-quiz-item data-answer="a temporary situation" data-hint="This week limits the home-working arrangement to an open period around now." data-fix="I'm working from home this week describes a temporary situation.">
         <p class="quiz-question">7. “I’m working from home this week” describes ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="a temporary situation">a temporary situation</button><button class="quiz-option" data-quiz-option="a permanent fact">a permanent fact</button><button class="quiz-option" data-quiz-option="a finished action">a finished action</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="running">
-        <p class="quiz-question">8. The -ing form of run is ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="running">running</button><button class="quiz-option" data-quiz-option="runing">runing</button><button class="quiz-option" data-quiz-option="runnig">runnig</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="writing" data-hint="Write ends in a silent e, so drop that e before adding -ing." data-fix="The email is open and unfinished; she is writing it now.">
+        <p class="quiz-question">8. The email is open on her screen and unfinished. She is ___ it now.</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="writing">writing</button><button class="quiz-option" data-quiz-option="written">written</button><button class="quiz-option" data-quiz-option="writes">writes</button></div>
       </div>
     </div>
     <div class="drill-actions">
@@ -396,6 +477,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the form, time meaning, state/action contrast, or spelling pattern that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day present-continuous retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved a temporary continuous form, a simple routine, possession with has, and the activity is having lunch.">
+      <h3>Choose from meaning, not from the verb alone</h3>
+      <div class="choice-bank" aria-label="Next-day tense and meaning choices">
+        <button class="choice-option" data-choice-option="is working">is working</button><button class="choice-option" data-choice-option="works">works</button>
+        <button class="choice-option" data-choice-option="has">has</button><button class="choice-option" data-choice-option="is having">is having</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Normally Maya works downtown, but today she <button class="choice-gap" data-choice-gap data-answer="is working" data-hint="But today marks a temporary change from the stated routine." data-fix="Today Maya is working from home." data-placeholder="choose">choose</button> from home.</span></div>
+      <div class="q"><span class="n">2</span><span>Her regular calendar says she <button class="choice-gap" data-choice-gap data-answer="works" data-hint="Every Monday marks a regular routine." data-fix="She works downtown every Monday." data-placeholder="choose">choose</button> downtown every Monday.</span></div>
+      <div class="q"><span class="n">3</span><span>The profile says Luis owns one car. He <button class="choice-gap" data-choice-gap data-answer="has" data-hint="Here have means possession, so use the present simple form has." data-fix="Luis has one car." data-placeholder="choose">choose</button> one car.</span></div>
+      <div class="q"><span class="n">4</span><span>The café photo shows Luis eating now. He <button class="choice-gap" data-choice-gap data-answer="is having" data-hint="Here have is part of the open activity have lunch." data-fix="Luis is having lunch now." data-placeholder="choose">choose</button> lunch now.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="working" data-hint="The sentence has an -ing form but no present form of be." data-fix="She is working today." data-why="The present continuous requires is before working with she.">
+      <h3>Repair the missing form of be</h3>
+      <p>Tap the activity form that cannot stand alone here.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="she">She</button><button class="error-choice" data-error-choice="working">working</button><button class="error-choice" data-error-choice="today">today.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, change <span class="ex">He works at home every day</span> to a temporary situation today. Then give one confirmed arrangement for tomorrow.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>He's working at home today.</strong> Example arrangement: <strong>He's meeting the team at 9 tomorrow.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

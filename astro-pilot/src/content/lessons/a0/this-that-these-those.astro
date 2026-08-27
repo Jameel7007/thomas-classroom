@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "this / that / these / those · A0 Grammar · Curriculum Map",
+  "title": "This / that / these / those · A0 Grammar",
   "slug": "this-that-these-those",
   "level": "A0",
   "topic": "this / that / these / those",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Point at the world. Use this and that for one thing, these and those for many . What is near you is this / these ; what is far is that / those .",
+  "description": "Use this, that, these, and those to identify one or more people or things and show whether they are near or farther away.",
   "sequence": 4,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/the-verb-to-be",
+    "a0/articles-a-an"
+  ],
+  "related": [
+    "a0/regular-plural-nouns",
+    "a0/possessive-adjectives"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 30,
+    "revisionSummary": "Distance, singular-versus-plural meaning, noun and be agreement, U.S. phone use, sentence capitalization, contextual feedback, sound discrimination, timing, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="40–45 min" data-extension-duration="10–15 min">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 04</p>
   <h1><em>this / that</em> · <em>these / those</em></h1>
-  <p class="standfirst">Point at the world. Use <span class="ex">this</span> and <span class="ex">that</span> for <strong>one</strong> thing, <span class="ex">these</span> and <span class="ex">those</span> for <strong>many</strong>. What is <strong>near</strong> you is <span class="ex">this / these</span>; what is <strong>far</strong> is <span class="ex">that / those</span>.</p>
+  <p class="standfirst">Point at the world. Use <span class="ex">this</span> and <span class="ex">that</span> for <strong>one</strong> thing, <span class="ex">these</span> and <span class="ex">those</span> for <strong>more than one</strong>. What the speaker treats as <strong>near</strong> is <span class="ex">this / these</span>; what the speaker treats as <strong>farther away</strong> is <span class="ex">that / those</span>.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
+    <span class="tag">≈ 40–45 min</span>
     <span class="tag">near / far</span>
-    <span class="tag">one / many</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">one / more than one</span>
+    <span class="tag">distance + number</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,7 +51,7 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Point, introduce, and describe.</span></div>
   </div>
 
-  <p class="note-line">Many words add <span class="ex">-s</span> for "many": <span class="ex">book → books, chair → chairs, key → keys</span>. We use a few plurals here; the next lesson drills this fully.</p>
+  <p class="note-line">Many nouns add <span class="ex">-s</span> for more than one: <span class="ex">book → books, chair → chairs, key → keys</span>. We use a few plurals here; the next lesson drills this fully.</p>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
@@ -45,14 +59,14 @@ export const page = defineLesson({
     <h3>Point and compare</h3>
     <p><span class="ex">this phone &nbsp; · &nbsp; that building &nbsp; · &nbsp; these keys &nbsp; · &nbsp; those people</span></p>
     <ul>
-      <li>Which two phrases mean <strong>one</strong> thing? Which two mean <strong>many</strong>?</li>
+      <li>Which two phrases mean <strong>one</strong> thing? Which two mean <strong>more than one</strong>?</li>
       <li>Imagine the phone and keys are <strong>in your hand</strong>, and the building and people are <strong>across the street</strong>. Which words go with things <strong>near</strong> you?</li>
       <li>So the choice depends on two things at once. What are they?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — read the hint, then choose</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You combined one or more than one with near or far to choose this, that, these, or those.">
+    <h3>Discovery check: read the hint, then choose</h3>
     <p class="choice-hint">The hint in brackets tells you the number and the distance</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="this">this</button>
@@ -60,10 +74,10 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="these">these</button>
       <button class="choice-option" data-choice-option="those">those</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="this" data-placeholder="choose">choose</button> cup &nbsp;<span class="contraction">(one · near)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="those" data-placeholder="choose">choose</button> cars &nbsp;<span class="contraction">(many · far)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="that" data-placeholder="choose">choose</button> door &nbsp;<span class="contraction">(one · far)</span></span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="these" data-placeholder="choose">choose</button> notes &nbsp;<span class="contraction">(many · near)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="this" data-hint="Cup is one thing and the cue says near." data-fix="this cup" data-placeholder="choose">choose</button> cup &nbsp;<span class="contraction">(one · near)</span></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="those" data-hint="Cars is plural and the cue says far." data-fix="those cars" data-placeholder="choose">choose</button> cars &nbsp;<span class="contraction">(more than one · far)</span></span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="that" data-hint="Door is one thing and the cue says far." data-fix="that door" data-placeholder="choose">choose</button> door &nbsp;<span class="contraction">(one · far)</span></span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="these" data-hint="Notes is plural and the cue says near." data-fix="these notes" data-placeholder="choose">choose</button> notes &nbsp;<span class="contraction">(more than one · near)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -75,9 +89,9 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <p>Before you choose, ask yourself two quick questions:</p>
   <p><strong>1. How many?</strong> &nbsp;One thing → <span class="ex">this / that</span>. &nbsp;More than one → <span class="ex">these / those</span>.</p>
-  <p><strong>2. How far?</strong> &nbsp;Near me → <span class="ex">this / these</span>. &nbsp;Far from me → <span class="ex">that / those</span>.</p>
+  <p><strong>2. How far?</strong> &nbsp;Treated as near → <span class="ex">this / these</span>. &nbsp;Treated as farther away → <span class="ex">that / those</span>. The situation and gesture make the distance clear; there is no exact number of inches or feet.</p>
   <table>
-    <thead><tr><th></th><th>one (singular)</th><th>many (plural)</th></tr></thead>
+    <thead><tr><th></th><th>one (singular)</th><th>more than one (plural)</th></tr></thead>
     <tbody>
       <tr><td><b>near</b> you</td><td><b>this</b> &nbsp;<span class="contraction">this chair</span></td><td><b>these</b> &nbsp;<span class="contraction">these chairs</span></td></tr>
       <tr><td><b>far</b> from you</td><td><b>that</b> &nbsp;<span class="contraction">that chair</span></td><td><b>those</b> &nbsp;<span class="contraction">those chairs</span></td></tr>
@@ -87,9 +101,18 @@ export const page = defineLesson({
   <div class="note">
     <h3>Meaning check</h3>
     <ul>
-      <li>Can we say <span class="ex">these book</span>? <strong>No.</strong> <em>These / those</em> mean many, so the noun is plural: <span class="ex">these books</span>.</li>
-      <li>Can we say <span class="ex">this are</span>? <strong>No.</strong> Use <span class="ex">this is</span> and <span class="ex">that is</span> for one thing. Use <span class="ex">these are</span> and <span class="ex">those are</span> for many things.</li>
+      <li>Can we say <span class="ex">these book</span>? <strong>No.</strong> <em>These / those</em> mean more than one, so the noun is plural: <span class="ex">these books</span>.</li>
+      <li>Can we say <span class="ex">this are</span>? <strong>No.</strong> Use <span class="ex">this is</span> and <span class="ex">that is</span> for one thing. Use <span class="ex">these are</span> and <span class="ex">those are</span> for more than one thing.</li>
       <li>Is <span class="ex">that</span> only about distance in space? <strong>Usually,</strong> but we also use <em>that</em> for something a step away in the conversation: <span class="ex">That is a good idea.</span></li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <h3>Beyond physical distance</h3>
+    <ul>
+      <li>Introduce someone beside you: <span class="ex">This is my manager, Elena.</span></li>
+      <li>In U.S. phone English, identify yourself with <span class="ex">Hi, this is Ana.</span> Ask the other caller <span class="ex">Who’s this?</span> or <span class="ex">Is this Mr. Lopez?</span></li>
+      <li>Refer back to an idea in the conversation: <span class="ex">That’s a good idea.</span></li>
     </ul>
   </div>
 
@@ -99,21 +122,48 @@ export const page = defineLesson({
   <p><span class="ex">This is… &nbsp; · &nbsp; That is…</span><br /><span class="ex">These are… &nbsp; · &nbsp; Those are…</span></p>
   <p>We use them to introduce people, too: <span class="ex">This is my manager, Elena. These are my coworkers.</span></p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — choose the demonstrative</h3>
+  <div class="note">
+    <h3>Sound natural: hear the difference between all four words</h3>
+    <p>All four words begin with the same voiced <em>th</em> sound. Put your tongue gently between your teeth and keep your voice on. The middle and final sounds show which word you mean.</p>
+    <table>
+      <thead><tr><th>word</th><th>sound clue</th><th>spoken chunk</th></tr></thead>
+      <tbody>
+        <tr><td><b>this</b></td><td>short vowel; ends in <b>s</b></td><td>this-is my <b>PHONE</b></td></tr>
+        <tr><td><b>these</b></td><td>long “ee”; ends in <b>z</b></td><td>these-are my <b>KEYS</b></td></tr>
+        <tr><td><b>that</b></td><td>wide “a”; ends in <b>t</b></td><td>that-is the <b>DOOR</b></td></tr>
+        <tr><td><b>those</b></td><td>long “oh”; ends in <b>z</b></td><td>those-are the <b>OFFICES</b></td></tr>
+      </tbody>
+    </table>
+    <p>Link the demonstrative to <span class="ex">is</span> or <span class="ex">are</span>, then make the noun clear. Do not pronounce <span class="ex">this</span> and <span class="ex">these</span> as the same word.</p>
+  </div>
+
+  <div class="thinking-card" data-lesson-extension="Optional tutor-read sound discrimination">
+    <h3>Listen: one or more than one?</h3>
+    <p>Look away from the script. Your tutor reads each phrase. Say “one” or “more than one,” then repeat the complete phrase. Listen especially for the short vowel and final <span class="ex">s</span> in <span class="ex">this</span> versus the long “ee” and final <span class="ex">z</span> in <span class="ex">these</span>.</p>
+    <details>
+      <summary>Tutor script and listening key</summary>
+      <ol>
+        <li><span class="ex">this key</span> (one) · <span class="ex">these keys</span> (more than one)</li>
+        <li><span class="ex">that chair</span> (one) · <span class="ex">those chairs</span> (more than one)</li>
+      </ol>
+    </details>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. This and that agree with is for one; these and those agree with are for more than one, while the context shows distance.">
+    <h3>Drill 1: choose the demonstrative</h3>
     <p class="choice-hint"><b>is</b> or <b>are</b> shows the number; the hint shows the distance</p>
     <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="this">this</button>
-      <button class="choice-option" data-choice-option="that">that</button>
-      <button class="choice-option" data-choice-option="these">these</button>
-      <button class="choice-option" data-choice-option="those">those</button>
+      <button class="choice-option" data-choice-option="This">This</button>
+      <button class="choice-option" data-choice-option="That">That</button>
+      <button class="choice-option" data-choice-option="These">These</button>
+      <button class="choice-option" data-choice-option="Those">Those</button>
     </div>
-    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="this" data-placeholder="choose">choose</button> is my desk. <span class="contraction">(near)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="these" data-placeholder="choose">choose</button> are my coworkers. <span class="contraction">(near)</span></span></div>
-    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="that" data-placeholder="choose">choose</button> is your taxi. <span class="contraction">(far)</span></span></div>
-    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="those" data-placeholder="choose">choose</button> are the new offices. <span class="contraction">(far)</span></span></div>
-    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="this" data-placeholder="choose">choose</button> is my manager, Elena. <span class="contraction">(near)</span></span></div>
-    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="those" data-placeholder="choose">choose</button> are your seats, at the back. <span class="contraction">(far)</span></span></div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="This" data-hint="Desk is one thing and is treated as near." data-fix="This is my desk." data-placeholder="choose">choose</button> is my desk. <span class="contraction">(near)</span></span></div>
+    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="These" data-hint="Coworkers is plural, are confirms more than one, and the people are near." data-fix="These are my coworkers." data-placeholder="choose">choose</button> are my coworkers. <span class="contraction">(near)</span></span></div>
+    <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="That" data-hint="Taxi is one thing and is farther away." data-fix="That is your taxi." data-placeholder="choose">choose</button> is your taxi. <span class="contraction">(far)</span></span></div>
+    <div class="q"><span class="n">4</span><span><button class="choice-gap" data-choice-gap data-answer="Those" data-hint="Offices is plural, are confirms more than one, and the offices are far." data-fix="Those are the new offices." data-placeholder="choose">choose</button> are the new offices. <span class="contraction">(far)</span></span></div>
+    <div class="q"><span class="n">5</span><span><button class="choice-gap" data-choice-gap data-answer="This" data-hint="Elena is one person being introduced beside the speaker." data-fix="This is my manager, Elena." data-placeholder="choose">choose</button> is my manager, Elena. <span class="contraction">(near)</span></span></div>
+    <div class="q"><span class="n">6</span><span><button class="choice-gap" data-choice-gap data-answer="Those" data-hint="Seats is plural and the phrase at the back makes them far." data-fix="Those are your seats, at the back." data-placeholder="choose">choose</button> are your seats, at the back. <span class="contraction">(far)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -124,8 +174,8 @@ export const page = defineLesson({
   <h2>Build the meaning, then the sentence</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each word to its meaning</h3>
+  <div class="tile-game" data-tile-game data-lesson-extension="Optional distance-and-number matching" data-success-message="Correct. This means one near, that means one far, these means more than one near, and those means more than one far.">
+    <h3>Drill 2: match each word to its meaning</h3>
     <p class="tile-target">Tap a word, then tap the meaning that fits it</p>
     <div class="tile-bank">
       <button class="tile" data-tile="this">this</button>
@@ -134,10 +184,10 @@ export const page = defineLesson({
       <button class="tile" data-tile="those">those</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="this" data-placeholder="one thing · near you">one thing · near you</button>
-      <button class="slot" data-slot="that" data-placeholder="one thing · far from you">one thing · far from you</button>
-      <button class="slot" data-slot="these" data-placeholder="many things · near you">many things · near you</button>
-      <button class="slot" data-slot="those" data-placeholder="many things · far from you">many things · far from you</button>
+      <button class="slot" data-slot="this" data-hint="Choose the singular word for something near." data-fix="this → one thing · near you" data-placeholder="one thing · near you">one thing · near you</button>
+      <button class="slot" data-slot="that" data-hint="Choose the singular word for something far." data-fix="that → one thing · far from you" data-placeholder="one thing · far from you">one thing · far from you</button>
+      <button class="slot" data-slot="these" data-hint="Choose the plural word for things near." data-fix="these → more than one thing · near you" data-placeholder="more than one thing · near you">more than one thing · near you</button>
+      <button class="slot" data-slot="those" data-hint="Choose the plural word for things far." data-fix="those → more than one thing · far from you" data-placeholder="more than one thing · far from you">more than one thing · far from you</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -146,8 +196,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="these are my keys">
-    <h3>Drill 3 — build the sentence</h3>
+  <div class="tile-game" data-tile-builder data-answer="these are my keys" data-hint="The keys are plural and near, so begin with These are." data-fix="These are my keys." data-success-message="Correct. Keys is plural and in your hand, so These agrees with are and shows near distance.">
+    <h3>Drill 3: build the sentence</h3>
     <p class="tile-target">The keys are in your hand. Build the sentence, then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="keys">keys</button>
@@ -163,8 +213,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="that is my office">
-    <h3>Drill 4 — point across the room</h3>
+  <div class="tile-game" data-tile-builder data-answer="that is my office" data-hint="The office is one place and far, so begin with That is." data-fix="That is my office." data-success-message="Correct. Office is singular and across the room, so That agrees with is and shows far distance.">
+    <h3>Drill 4: point across the room</h3>
     <p class="tile-target">One office, far from you. Build the sentence.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="office">office</button>
@@ -182,8 +232,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="is" data-fix="These are my books." data-why="These is a plural demonstrative, so we use are, not is.">
-    <h3>Drill 5 — fix the verb</h3>
+  <div class="micro-drill" data-spot-error data-answer="is" data-hint="These and books are plural, so check the form of be between them." data-fix="These are my books." data-why="“These” is a plural demonstrative, so we use “are,” not “is.”">
+    <h3>Drill 5: fix the verb</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="these">These</button>
@@ -194,8 +244,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="these" data-fix="I like this car." data-why="Car is one thing, so use a singular word. The car is near you, so this is best — not these or those.">
-    <h3>Drill 6 — one thing or many?</h3>
+  <div class="micro-drill" data-spot-error data-answer="these" data-hint="The context identifies one car near you. Check the number of the demonstrative." data-fix="I like this car." data-why="Car is one thing, so use a singular word. The car is near you, so “this” is best, not “these” or “those.”">
+    <h3>Drill 6: one thing or more than one?</h3>
     <p>Tap the word that does not match the noun. The car is near you.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
@@ -206,8 +256,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-transform>
-    <h3>Drill 7 — change one thing, then say it</h3>
+  <div class="micro-drill" data-transform data-lesson-extension="Optional number-and-distance oral transformation">
+    <h3>Drill 7: change one thing, then say it</h3>
     <p>Say the new phrase aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -240,11 +290,20 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Point and name:</b> Find four things — two near you, two across the room. Say a full sentence for each: <span class="ex">This is a…, That is a…, These are…, Those are…</span></div>
+  <div class="prompt-card"><b>Point and name:</b> Find four things: two near you and two across the room. Say a full sentence for each: <span class="ex">This is a…, That is a…, These are…, Those are…</span></div>
   <div class="prompt-card"><b>Introduce people:</b> Introduce the people around you (real or invented). <span class="ex">This is my colleague, Daniel. These are my friends from work.</span></div>
-  <div class="prompt-card"><b>On the phone:</b> Practice the openings. <span class="ex">Hello, this is Ana.</span> &nbsp;<span class="ex">Who's that?</span> &nbsp;<span class="ex">Is that Mr. Lopez?</span></div>
+  <div class="prompt-card"><b>On the phone:</b> Practice the openings in U.S. English. <span class="ex">Hello, this is Ana.</span> &nbsp;<span class="ex">Who’s this?</span> &nbsp;<span class="ex">Is this Mr. Lopez?</span></div>
   <div class="prompt-card"><b>At the market:</b> Point at near and far items and ask the price. <span class="ex">How much is this?</span> &nbsp;<span class="ex">How much are those?</span></div>
-  <div class="prompt-card"><b>Information gap:</b> The teacher points at or hides an object. The student guesses: <span class="ex">Is this a phone? Are those your keys?</span> Continue until correct.</div>
+  <div class="prompt-card"><b>Information gap:</b> Your teacher places one or more objects near or farther away without naming them. Guess: <span class="ex">Is this a phone? Are those your keys?</span> Continue until you identify the objects.</div>
+  <div class="thinking-card">
+    <h3>Success check</h3>
+    <ul>
+      <li>Choose from both number and distance, not only one cue.</li>
+      <li>Use a singular noun and <span class="ex">is</span> with <span class="ex">this / that</span>.</li>
+      <li>Use a plural noun and <span class="ex">are</span> with <span class="ex">these / those</span>.</li>
+      <li>Make <span class="ex">this</span> and <span class="ex">these</span> sound different when speaking.</li>
+    </ul>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
@@ -254,38 +313,38 @@ export const page = defineLesson({
     <p>Then say one true sentence about something <strong>near</strong> you and one about something <strong>far</strong> from you right now.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can choose this, that, these, or those by number and distance.">
-    <h3>Final quiz — number and distance together</h3>
+  <div class="quiz" data-quiz data-success-message="Excellent. You used number and distance together, matched singular or plural nouns, and chose is or are correctly.">
+    <h3>Final quiz: number and distance together</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="this">
+      <div class="quiz-item" data-quiz-item data-answer="this" data-hint="The phone is one thing and it is in your hand." data-fix="This is my phone.">
         <p class="quiz-question">1. (the phone in your hand) ___ is my phone.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="this">this</button><button class="quiz-option" data-quiz-option="that">that</button><button class="quiz-option" data-quiz-option="these">these</button><button class="quiz-option" data-quiz-option="those">those</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="those">
+      <div class="quiz-item" data-quiz-item data-answer="those" data-hint="Birds is plural and high in the sky makes them far." data-fix="Look at those birds!">
         <p class="quiz-question">2. (birds high in the sky) Look at ___ birds!</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="this">this</button><button class="quiz-option" data-quiz-option="that">that</button><button class="quiz-option" data-quiz-option="these">these</button><button class="quiz-option" data-quiz-option="those">those</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="that">
+      <div class="quiz-item" data-quiz-item data-answer="that" data-hint="Office is one place and at the end of the hall makes it far." data-fix="That is the manager’s office.">
         <p class="quiz-question">3. (an office at the end of the hall) ___ is the manager's office.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="this">this</button><button class="quiz-option" data-quiz-option="that">that</button><button class="quiz-option" data-quiz-option="these">these</button><button class="quiz-option" data-quiz-option="those">those</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="these">
+      <div class="quiz-item" data-quiz-item data-answer="these" data-hint="Cookies is plural and the table is directly in front of you." data-fix="These cookies are delicious!">
         <p class="quiz-question">4. (cookies on the table in front of you) ___ cookies are delicious!</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="this">this</button><button class="quiz-option" data-quiz-option="that">that</button><button class="quiz-option" data-quiz-option="these">these</button><button class="quiz-option" data-quiz-option="those">those</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="These are my keys.">
+      <div class="quiz-item" data-quiz-item data-answer="These are my keys." data-hint="Keys is plural, so the demonstrative and be must both be plural." data-fix="These are my keys.">
         <p class="quiz-question">5. Which sentence is correct?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="These are my keys.">These are my keys.</button><button class="quiz-option" data-quiz-option="These is my keys.">These is my keys.</button><button class="quiz-option" data-quiz-option="This are my keys.">This are my keys.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="this">
+      <div class="quiz-item" data-quiz-item data-answer="this" data-hint="In U.S. phone English, speakers identify themselves with this is." data-fix="Hello, this is Ana.">
         <p class="quiz-question">6. (on the phone, saying your name) Hello, ___ is Ana.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="this">this</button><button class="quiz-option" data-quiz-option="that">that</button><button class="quiz-option" data-quiz-option="these">these</button><button class="quiz-option" data-quiz-option="those">those</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="this car">
+      <div class="quiz-item" data-quiz-item data-answer="this car" data-hint="One requires a singular demonstrative and car; near selects this, not that." data-fix="this car">
         <p class="quiz-question">7. Which phrase means one car, near you?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="this car">this car</button><button class="quiz-option" data-quiz-option="these car">these car</button><button class="quiz-option" data-quiz-option="this cars">this cars</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="this car">this car</button><button class="quiz-option" data-quiz-option="that car">that car</button><button class="quiz-option" data-quiz-option="these cars">these cars</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="those">
+      <div class="quiz-item" data-quiz-item data-answer="those" data-hint="People is plural and across the street makes the group far." data-fix="Are those your guests?">
         <p class="quiz-question">8. (people waiting across the street) Are ___ your guests?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="this">this</button><button class="quiz-option" data-quiz-option="that">that</button><button class="quiz-option" data-quiz-option="these">these</button><button class="quiz-option" data-quiz-option="those">those</button></div>
       </div>
@@ -296,6 +355,64 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <div class="prompt-card"><b>Next use:</b> tomorrow, return to the <a href="#next-day-retrieval">five-minute retrieval check</a> before you reread the number-and-distance table.</div>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day demonstrative retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Come back tomorrow. Use both the number and the distance cue before you choose.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. This marks one near, those marks more than one far, and these marks more than one near; every choice uses both cues.">
+      <h3>Choose from memory</h3>
+      <p class="choice-hint">Tap each gap, then choose the demonstrative</p>
+      <div class="choice-bank" aria-label="Answer choices">
+        <button class="choice-option" data-choice-option="This">This</button>
+        <button class="choice-option" data-choice-option="That">That</button>
+        <button class="choice-option" data-choice-option="These">These</button>
+        <button class="choice-option" data-choice-option="Those">Those</button>
+      </div>
+      <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="This" data-hint="The laptop is one thing and it is touching the speaker." data-fix="This is my laptop." data-placeholder="choose">choose</button> is my laptop. &nbsp;<span class="contraction">(one · touching you)</span></span></div>
+      <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="Those" data-hint="Chairs is plural and across the room makes them far." data-fix="Those chairs are available." data-placeholder="choose">choose</button> chairs are available. &nbsp;<span class="contraction">(more than one · across the room)</span></span></div>
+      <div class="q"><span class="n">3</span><span><button class="choice-gap" data-choice-gap data-answer="These" data-hint="Documents is plural and the speaker is holding them." data-fix="These documents are for you." data-placeholder="choose">choose</button> documents are for you. &nbsp;<span class="contraction">(more than one · in your hand)</span></span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="that" data-hint="Bags and are are plural. The bags are also far by the door." data-fix="Those are my bags by the door." data-why="Use those for more than one thing farther away, and pair it with are.">
+      <h3>Repair from memory</h3>
+      <p>Tap the word that is wrong.</p>
+      <p class="ex">That are my bags by the door.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="that">That</button>
+        <button class="error-choice" data-error-choice="are">are</button>
+        <button class="error-choice" data-error-choice="bags">bags</button>
+        <button class="error-choice" data-error-choice="door">door.</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without notes</h3>
+      <p>Say the new sentence before you reveal it.</p>
+      <div class="transform-list">
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>1</b> This is my key. → make it plural and keep it near</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>These are my keys.</strong></p>
+        </div>
+        <div class="transform-item" data-transform-item>
+          <p class="transform-cue"><b>2</b> These are the offices. → move them far</p>
+          <button class="lesson-btn" data-reveal-transform>Reveal</button>
+          <p class="transform-answer" data-transform-answer><strong>Those are the offices.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-card"><b>Thirty-second response:</b> identify one near object, one far object, one near group, and one far group. Use all four demonstratives in complete sentences.</div>
+  </section>
 </main>
 </LessonPage>
-

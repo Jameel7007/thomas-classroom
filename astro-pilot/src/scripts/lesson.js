@@ -1,3 +1,5 @@
+import { randomizeResponseGroups } from "./randomize-responses.js";
+
 (function(){
   let lessonControlId = 0;
 
@@ -54,6 +56,11 @@
       .replace(/\s+/g, " ");
   }
 
+  function choiceNorm(value){
+    return String(value || "").trim()
+      .replace(/\s+/g, " ");
+  }
+
   function setFeedback(root, message, state){
     const out = root.querySelector("[data-feedback]");
     if (!out) return;
@@ -107,9 +114,9 @@
   }
 
   function optionAnswerText(item, options, attribute){
-    const answers = String(item.dataset.answer || "").split("|").map(norm);
+    const answers = String(item.dataset.answer || "").split("|").map(choiceNorm);
     const option = options.find(function(candidate){
-      return answers.includes(norm(candidate.dataset[attribute]));
+      return answers.includes(choiceNorm(candidate.dataset[attribute]));
     });
     return option ? option.textContent.trim() : firstAnswer(item);
   }
@@ -177,7 +184,7 @@
         )
         : "";
       setFeedback(root, allCorrect
-        ? "Perfect. Say the full sentences aloud."
+        ? root.dataset.successMessage || "Perfect. Say the full sentences aloud."
         : wrongFeedback(correct, inputs.length, firstWrong, inputs, cue),
         allCorrect ? "success" : "error");
     });
@@ -196,6 +203,7 @@
   }
 
   function initChoiceGapDrill(root){
+    randomizeResponseGroups(root, "[data-choice-option]");
     const gaps = Array.from(root.querySelectorAll("[data-choice-gap]"));
     const options = Array.from(root.querySelectorAll("[data-choice-option]"));
     const check = root.querySelector("[data-check-choices]");
@@ -249,8 +257,8 @@
         let correct = 0;
         let firstWrong = null;
         gaps.forEach(function(gap){
-          const answers = gap.dataset.answer.split("|").map(norm);
-          const ok = answers.includes(norm(gap.dataset.value));
+          const answers = gap.dataset.answer.split("|").map(choiceNorm);
+          const ok = answers.includes(choiceNorm(gap.dataset.value));
           gap.classList.toggle("is-correct", ok);
           gap.classList.toggle("is-wrong", !ok);
           if (ok) {
@@ -267,13 +275,13 @@
             root,
             firstWrongAttempts,
             firstWrong.dataset.value
-              ? "Look at the words around the highlighted gap and try again."
-              : "Choose a word for this gap, then check again.",
+              ? "Check the words around the gap and try again."
+              : "Choose a word, then check again.",
             optionAnswerText(firstWrong, options, "choiceOption")
           )
           : "";
-        setFeedback(root, allCorrect
-          ? "Perfect. Now read the full sentences aloud."
+      setFeedback(root, allCorrect
+        ? root.dataset.successMessage || "Perfect. Now read the full sentences aloud."
           : wrongFeedback(correct, gaps.length, firstWrong, gaps, cue),
           allCorrect ? "success" : "error");
       });
@@ -300,6 +308,7 @@
   }
 
   function initTileGame(root){
+    randomizeResponseGroups(root, "[data-tile]");
     const tiles = Array.from(root.querySelectorAll("[data-tile]"));
     const slots = Array.from(root.querySelectorAll("[data-slot]"));
     const reset = root.querySelector("[data-reset-tiles]");
@@ -366,14 +375,14 @@
             root,
             firstWrongAttempts,
             firstWrong.dataset.value
-              ? "Check the highlighted match and try again."
-              : "Place a tile in this slot, then check again.",
+              ? "Check the match and try again."
+              : "Place a tile, then check again.",
             matchingTile ? matchingTile.textContent.trim() : "",
             "Match it with"
           )
           : "";
         setFeedback(root, allCorrect
-          ? "Great match. Now say each pair aloud."
+          ? root.dataset.successMessage || "Great match. Now say each pair aloud."
           : wrongFeedback(correct, slots.length, firstWrong, slots, cue),
           allCorrect ? "success" : "error");
       });
@@ -406,6 +415,7 @@
     const check = root.querySelector("[data-check-build]");
     const reset = root.querySelector("[data-reset-build]");
     if (!bank || !area) return;
+    randomizeResponseGroups(bank, "[data-build-tile]");
     const sourceTiles = Array.from(bank.querySelectorAll("[data-build-tile]"));
     bank.setAttribute("role", "group");
     bank.setAttribute("aria-label", "Available words");
@@ -463,13 +473,13 @@
           root,
           attempts,
           attempt
-            ? "Check the word order and try again."
-            : "Build the sentence before you check it.",
+            ? "Check the order and try again."
+            : "Build the sentence, then check.",
           answerDisplay(),
           "Correct order is"
         );
         setFeedback(root, ok
-          ? "Correct. Now say it aloud."
+          ? root.dataset.successMessage || "Correct. Now say it aloud."
           : cue,
           ok ? "success" : "error");
       });
@@ -514,8 +524,8 @@
           feedback.innerHTML = ok
             ? "<strong>Fix:</strong> " + fix + (why ? "<br><strong>Why:</strong> " + why : "")
             : (hint || (attempts > 1
-              ? "That word works here. Compare the other words with the rule and try again."
-              : "That word works here. Look at another word and try again."));
+              ? "That word works. Compare the others with the rule and try again."
+              : "That word works. Try another word."));
           feedback.classList.add("is-visible");
         }
       }
@@ -551,6 +561,7 @@
 
     const resetGroups = [];
     items.forEach(function(item){
+      randomizeResponseGroups(item, "[data-quiz-option]");
       const options = Array.from(item.querySelectorAll("[data-quiz-option]"));
       resetGroups.push(setupRadioGroup(
         options,
@@ -570,15 +581,15 @@
       let correct = 0;
       let firstWrong = null;
       items.forEach(function(item){
-        const answer = norm(item.dataset.answer);
+        const answer = choiceNorm(item.dataset.answer);
         const options = Array.from(item.querySelectorAll("[data-quiz-option]"));
         options.forEach(function(option){
-          const selected = norm(item.dataset.value) === norm(option.dataset.quizOption);
-          const isAnswer = norm(option.dataset.quizOption) === answer;
+          const selected = choiceNorm(item.dataset.value) === choiceNorm(option.dataset.quizOption);
+          const isAnswer = choiceNorm(option.dataset.quizOption) === answer;
           option.classList.toggle("is-correct", isAnswer && selected);
           option.classList.toggle("is-wrong", selected && !isAnswer);
         });
-        if (norm(item.dataset.value) === answer) {
+        if (choiceNorm(item.dataset.value) === answer) {
           correct += 1;
           item.setAttribute("aria-invalid", "false");
           delete item.dataset.feedbackAttempts;
@@ -596,8 +607,8 @@
           root,
           firstWrongAttempts,
           firstWrong.dataset.value
-            ? "Compare the highlighted choice with the question and try again."
-            : "Choose an answer for this item, then check again.",
+            ? "Compare the choice with the question and try again."
+            : "Choose an answer, then check again.",
           optionAnswerText(
             firstWrong,
             Array.from(firstWrong.querySelectorAll("[data-quiz-option]")),

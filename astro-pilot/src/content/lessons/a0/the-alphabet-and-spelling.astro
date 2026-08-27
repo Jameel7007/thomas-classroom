@@ -2,32 +2,46 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "The alphabet and spelling · A0 Vocabulary · Curriculum Map",
+  "title": "The alphabet and spelling · A0 Vocabulary",
   "slug": "the-alphabet-and-spelling",
   "level": "A0",
   "topic": "The alphabet & spelling",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "You already know the 26 letters by shape. Now learn their names out loud — so you can spell your last name on a call, read out your email, or confirm a city on a form. The name of ",
+  "description": "Say and recognize the 26 letter names so you can spell names, email addresses, cities, and other important information clearly.",
   "sequence": 10,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": [
+    "a0/greetings-and-introductions",
+    "a0/cardinal-numbers-0-100"
+  ],
+  "related": [
+    "a0/countries-and-nationalities",
+    "a1/jobs-and-workplaces"
+  ],
   "assessments": [
     "a0-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 48,
+    "revisionSummary": "Letter-name scope, U.S. variants, confusable sounds, clarification and confirmation, item context, feedback, timing, privacy-safe production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 10</p>
   <h1>The alphabet &amp; <em>spelling</em></h1>
-  <p class="standfirst">You already know the 26 letters by shape. Now learn their <strong>names</strong> out loud — so you can spell your last name on a call, read out your email, or confirm a city on a form. The name of a letter is not always the sound it makes in a word.</p>
+  <p class="standfirst">Learn the <strong>names</strong> of the 26 letters so you can spell a name, understand a booking code, read a fictional email address, and correct one letter on a call. The name of a letter is not always the sound it makes inside a word.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">A–Z names</span>
-    <span class="tag">spell it aloud</span>
-    <span class="tag">9 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">A–Z letter names</span>
+    <span class="tag">clarify and confirm</span>
+    <span class="tag">15–20 min optional practice</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
@@ -37,16 +51,39 @@ export const page = defineLesson({
     <div class="flow-step"><b>Use</b><span>Confirm a name and email aloud.</span></div>
   </div>
 
-  <p class="note-line">Useful phrases for the whole lesson: <span class="ex">How do you spell that? · It's S-M-I-T-H. · Can you spell your last name? · double L · capital A, lowercase b.</span></p>
+  <p class="note-line">Useful phrases for the whole lesson: <span class="ex">How do you spell that? · Could you repeat that? · Was that B or V? · B as in Boston. · Let me read it back.</span></p>
+
+  <h2>Two-minute retrieval</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved the name question, the number word, and the short introduction used before spelling information.">
+    <h3>Bring earlier language into the call</h3>
+    <p class="choice-hint">Complete each line from an earlier A0 lesson, then say the full exchange.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices">
+      <button class="choice-option" data-choice-option="What">What</button>
+      <button class="choice-option" data-choice-option="Where">Where</button>
+      <button class="choice-option" data-choice-option="thirteen">thirteen</button>
+      <button class="choice-option" data-choice-option="thirty">thirty</button>
+      <button class="choice-option" data-choice-option="My name is Ana">My name is Ana</button>
+      <button class="choice-option" data-choice-option="This is Ana">This is Ana</button>
+    </div>
+    <div class="q"><span class="n">1</span><span><button class="choice-gap" data-choice-gap data-answer="What" data-hint="The answer will be a name, so use the question word for information." data-fix="What is your name?" data-placeholder="choose">choose</button> is your name? &nbsp;<span class="contraction">(greetings)</span></span></div>
+    <div class="q"><span class="n">2</span><span>My booking code has the number 13: <button class="choice-gap" data-choice-gap data-answer="thirteen" data-hint="13 ends in -teen; 30 ends in -ty." data-fix="The number is thirteen." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(numbers)</span></span></div>
+    <div class="q"><span class="n">3</span><span>Receptionist: What's your name? &nbsp; Guest: <button class="choice-gap" data-choice-gap data-answer="My name is Ana" data-hint="Give your own name with My name is." data-fix="My name is Ana." data-placeholder="choose">choose</button>. &nbsp;<span class="contraction">(introductions)</span></span></div>
+    <div class="drill-actions">
+      <button class="lesson-btn" data-check-choices>Check</button>
+      <button class="lesson-btn" data-reset-choices>Reset</button>
+    </div>
+    <p class="feedback" data-feedback></p>
+  </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>The name of the letter, not the sound</h3>
     <p>Read each letter <strong>name</strong> aloud, then read the word next to it:</p>
-    <p><span class="ex">H — say "aitch" — but in <strong>hotel</strong> it sounds /h/.</span><br />
-    <span class="ex">W — say "double-u" — but in <strong>work</strong> it sounds /w/.</span><br />
-    <span class="ex">C — say "see" — but in <strong>city</strong> it sounds /s/, and in <strong>café</strong> it sounds /k/.</span></p>
+    <p><span class="ex">H: say "aitch," but in <strong>hotel</strong> it sounds /h/.</span><br />
+    <span class="ex">W: say "double-u," but in <strong>work</strong> it sounds /w/.</span><br />
+    <span class="ex">C: say "see," but in <strong>city</strong> it sounds /s/, and in <strong>café</strong> it sounds /k/.</span></p>
     <ul>
       <li>When you <strong>spell a word out loud</strong>, do you say the letter name or the sound? <em>Say the name.</em></li>
       <li>Is the name of a letter always the same as its sound in a word?</li>
@@ -56,33 +93,101 @@ export const page = defineLesson({
 
   <h2>The system: vowels, consonants, and rhyming groups</h2>
   <div class="lead-rule"></div>
-  <p>The five main <strong>vowel letters</strong> are <span class="ex">A, E, I, O, U</span>. The letter <span class="ex">Y</span> can also represent a vowel sound, as in <span class="ex">my</span> and <span class="ex">gym</span>. Every English syllable has a vowel sound.</p>
+  <p>The five main <strong>vowel letters</strong> are <span class="ex">A, E, I, O, U</span>. The letter <span class="ex">Y</span> can also represent a vowel sound, as in <span class="ex">my</span> and <span class="ex">gym</span>. This letter classification helps with spelling, but a letter name and the sounds represented by that letter are different things.</p>
   <p>Many letter names <strong>rhyme</strong>. Grouping them makes them easier to say and to hear on a call:</p>
   <table>
     <thead><tr><th>This sound…</th><th>…joins these letters</th></tr></thead>
     <tbody>
       <tr><td>rhymes with <b>day</b></td><td><span class="ex">A &nbsp; H &nbsp; J &nbsp; K</span></td></tr>
-      <tr><td>rhymes with <b>be</b></td><td><span class="ex">B &nbsp; C &nbsp; D &nbsp; E &nbsp; G &nbsp; P &nbsp; T &nbsp; V &nbsp; Z</span> <span class="contraction">(American English: "zee")</span></td></tr>
+      <tr><td>rhymes with <b>be</b></td><td><span class="ex">B &nbsp; C &nbsp; D &nbsp; E &nbsp; G &nbsp; P &nbsp; T &nbsp; V &nbsp; Z</span> <span class="contraction">(U.S. English: “zee”)</span></td></tr>
       <tr><td>rhymes with <b>my</b></td><td><span class="ex">I &nbsp; Y</span></td></tr>
       <tr><td>rhymes with <b>go</b></td><td><span class="ex">O</span></td></tr>
       <tr><td>rhymes with <b>you</b></td><td><span class="ex">Q &nbsp; U &nbsp; W</span></td></tr>
-      <tr><td>rhymes with <b>egg</b> (starts with /e/)</td><td><span class="ex">F &nbsp; L &nbsp; M &nbsp; N &nbsp; S &nbsp; X</span></td></tr>
+      <tr><td>begins with the vowel sound in <b>egg</b></td><td><span class="ex">F &nbsp; L &nbsp; M &nbsp; N &nbsp; S &nbsp; X</span></td></tr>
       <tr><td>its own sound</td><td><span class="ex">R</span> (say "ar")</td></tr>
     </tbody>
   </table>
 
   <div class="note">
-    <h3>Spelling out loud — the moves you need</h3>
+    <h3>Spelling out loud: the moves you need</h3>
     <ul>
-      <li>Two of the same letter together: <span class="ex">double</span>. <span class="ex">Miller → M-I-double-L-E-R.</span></li>
-      <li>A big letter at the start of a name: <span class="ex">capital</span>. A small letter: <span class="ex">lowercase</span>. <span class="ex">capital A, lowercase n.</span></li>
-      <li>In an email: <span class="ex">@</span> = "at", <span class="ex">.</span> = "dot", <span class="ex">_</span> = "underscore". <span class="ex">ana_lopez@mail.com → ana underscore lopez at mail dot com.</span></li>
-      <li>Easy to confuse on a call: <span class="ex">B / V, E / I, G / J, M / N</span>. Slow down and say a clue word: <span class="ex">"B for Boston."</span></li>
+      <li>Two of the same letter together: say both letters, <span class="ex">L-L</span>, or use <span class="ex">double L</span>. For information that must be exact, saying each letter separately is safest.</li>
+      <li>An uppercase letter: <span class="ex">capital A</span> or <span class="ex">uppercase A</span>. A small letter: <span class="ex">lowercase n</span>.</li>
+      <li>In an email: <span class="ex">@</span> = “at”, <span class="ex">.</span> = “dot”, <span class="ex">_</span> = “underscore”, and <span class="ex">-</span> = “hyphen” or “dash.” <span class="ex">ana_lopez@example.com → ana underscore lopez at example dot com.</span></li>
+      <li>Easy to confuse on a call: <span class="ex">B / V, E / I, G / J, M / N</span>. Slow down and say a clue word: <span class="ex">"B as in Boston."</span></li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — which letter name fits the group?</h3>
+  <div class="note">
+    <h3>Pronunciation focus: separate the letter names people confuse</h3>
+    <p>On a call, one small sound can change a name or email address. Say the pair slowly, then add a clue word when the listener is not sure.</p>
+    <table>
+      <thead><tr><th>pair</th><th>clear contrast</th><th>repair phrase</th></tr></thead>
+      <tbody>
+        <tr><td>B / V</td><td><span class="ex">“bee” / “vee”</span></td><td><span class="contraction">B as in Boston. V as in Victor.</span></td></tr>
+        <tr><td>E / I</td><td><span class="ex">E rhymes with “see”; I rhymes with “my.”</span></td><td><span class="contraction">E as in email. I as in India.</span></td></tr>
+        <tr><td>G / J</td><td><span class="ex">G rhymes with “see”; J rhymes with “day.”</span></td><td><span class="contraction">G as in golf. J as in Juliet.</span></td></tr>
+        <tr><td>M / N</td><td><span class="ex">“em” / “en”</span></td><td><span class="contraction">M as in Mike. N as in November.</span></td></tr>
+      </tbody>
+    </table>
+    <p>Spell in short groups and pause: <span class="ex">S-M-I | T-H</span>. Keep the letter names separate. Put a clear beat on the clue word: <span class="ex">B as in <strong>BOS</strong>ton.</span> Let your voice rise when you check: <span class="ex">Was that B or V?</span></p>
+    <p>In U.S. English, <span class="ex">Z</span> is pronounced <span class="ex">“zee.”</span> In many other English varieties, you will hear <span class="ex">“zed.”</span> Use <span class="ex">zee</span> in this course and recognize both.</p>
+  </div>
+
+  <div class="note">
+    <h3>Clarify, repair, and confirm</h3>
+    <p>A complete spelling exchange is more than saying letters. Use these moves when the information matters:</p>
+    <ol>
+      <li><strong>Ask again:</strong> <span class="ex">Sorry, could you repeat that?</span></li>
+      <li><strong>Check one contrast:</strong> <span class="ex">Was that B or V?</span></li>
+      <li><strong>Repair with a clue:</strong> <span class="ex">V as in Victor.</span></li>
+      <li><strong>Read everything back:</strong> <span class="ex">Let me read it back: A-N-A.</span></li>
+      <li><strong>Confirm or correct:</strong> <span class="ex">Yes, that's right.</span> / <span class="ex">No, the second letter is N.</span></li>
+    </ol>
+    <p>There is no single universal clue-word list in ordinary calls. Choose a familiar word that clearly begins with the letter. Formal systems may use standardized words such as <span class="ex">Victor</span> or <span class="ex">November</span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read letter-name listening check">
+    <h2>Hear the confusable letter names</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the script closed while you listen. Your teacher reads each item once, then once more. Choose the one letter you hear.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You separated B from V, E from I, G from J, and M from N by their letter names.">
+      <h3>Listening check: one letter in each code</h3>
+      <div class="choice-bank" aria-label="Listening letter choices">
+        <button class="choice-option" data-choice-option="B">B</button>
+        <button class="choice-option" data-choice-option="V">V</button>
+        <button class="choice-option" data-choice-option="E">E</button>
+        <button class="choice-option" data-choice-option="I">I</button>
+        <button class="choice-option" data-choice-option="G">G</button>
+        <button class="choice-option" data-choice-option="J">J</button>
+        <button class="choice-option" data-choice-option="M">M</button>
+        <button class="choice-option" data-choice-option="N">N</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Booking code <button class="choice-gap" data-choice-gap data-answer="B" data-hint="Listen for “bee,” with a /b/ sound at the beginning." data-fix="B-7: B as in Boston." data-placeholder="listen">listen</button>-7</span></div>
+      <div class="q"><span class="n">2</span><span>Room code <button class="choice-gap" data-choice-gap data-answer="V" data-hint="Listen for “vee,” with a /v/ sound at the beginning." data-fix="V-2: V as in Victor." data-placeholder="listen">listen</button>-2</span></div>
+      <div class="q"><span class="n">3</span><span>File <button class="choice-gap" data-choice-gap data-answer="E" data-hint="E rhymes with see; I rhymes with my." data-fix="File E-4: E as in email." data-placeholder="listen">listen</button>-4</span></div>
+      <div class="q"><span class="n">4</span><span>Gate <button class="choice-gap" data-choice-gap data-answer="I" data-hint="I rhymes with my; E rhymes with see." data-fix="Gate I-9: I as in India." data-placeholder="listen">listen</button>-9</span></div>
+      <div class="q"><span class="n">5</span><span>Desk <button class="choice-gap" data-choice-gap data-answer="G" data-hint="G rhymes with see; J rhymes with day." data-fix="Desk G-3: G as in golf." data-placeholder="listen">listen</button>-3</span></div>
+      <div class="q"><span class="n">6</span><span>Order <button class="choice-gap" data-choice-gap data-answer="J" data-hint="J rhymes with day; G rhymes with see." data-fix="Order J-8: J as in Juliet." data-placeholder="listen">listen</button>-8</span></div>
+      <div class="q"><span class="n">7</span><span>Line <button class="choice-gap" data-choice-gap data-answer="M" data-hint="M is “em”; N is “en.” Listen for the final consonant." data-fix="Line M-5: M as in Mike." data-placeholder="listen">listen</button>-5</span></div>
+      <div class="q"><span class="n">8</span><span>Table <button class="choice-gap" data-choice-gap data-answer="N" data-hint="N is “en”; M is “em.” Listen for the final consonant." data-fix="Table N-6: N as in November." data-placeholder="listen">listen</button>-6</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <details class="note">
+      <summary>Tutor script · open only after the learner answers</summary>
+      <p>Read naturally without the clue words first: <span class="ex">1. Booking code B-seven. 2. Room code V-two. 3. File E-four. 4. Gate I-nine. 5. Desk G-three. 6. Order J-eight. 7. Line M-five. 8. Table N-six.</span></p>
+      <p>For a repair round, repeat each answer with its clue word: <span class="ex">B as in Boston</span>, <span class="ex">V as in Victor</span>, and so on.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You grouped the letter names by the sound patterns they share.">
+    <h3>Discovery check: which letter name fits the group?</h3>
     <p class="choice-hint">The hint in brackets tells you which sound the letter name rhymes with</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="J">J</button>
@@ -91,11 +196,11 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="U">U</button>
       <button class="choice-option" data-choice-option="S">S</button>
     </div>
-    <div class="q"><span class="n">1</span><span>A, H, <button class="choice-gap" data-choice-gap data-answer="J" data-placeholder="choose">choose</button>, K &nbsp;<span class="contraction">(rhymes with day)</span></span></div>
-    <div class="q"><span class="n">2</span><span>B, C, D, E, G, P, T, <button class="choice-gap" data-choice-gap data-answer="V" data-placeholder="choose">choose</button>, Z &nbsp;<span class="contraction">(rhymes with be; Z is "zee")</span></span></div>
-    <div class="q"><span class="n">3</span><span>I, <button class="choice-gap" data-choice-gap data-answer="Y" data-placeholder="choose">choose</button> &nbsp;<span class="contraction">(rhymes with my)</span></span></div>
-    <div class="q"><span class="n">4</span><span>Q, <button class="choice-gap" data-choice-gap data-answer="U" data-placeholder="choose">choose</button>, W &nbsp;<span class="contraction">(rhymes with you)</span></span></div>
-    <div class="q"><span class="n">5</span><span>F, L, M, N, <button class="choice-gap" data-choice-gap data-answer="S" data-placeholder="choose">choose</button>, X &nbsp;<span class="contraction">(starts with the egg sound)</span></span></div>
+    <div class="q"><span class="n">1</span><span>A, H, <button class="choice-gap" data-choice-gap data-answer="J" data-hint="Choose the letter name that rhymes with day." data-fix="A, H, J, and K rhyme with day." data-placeholder="choose">choose</button>, K &nbsp;<span class="contraction">(rhymes with day)</span></span></div>
+    <div class="q"><span class="n">2</span><span>B, C, D, E, G, P, T, <button class="choice-gap" data-choice-gap data-answer="V" data-hint="Choose the letter name that rhymes with be." data-fix="V joins the be group; U belongs in the you group." data-placeholder="choose">choose</button>, Z &nbsp;<span class="contraction">(rhymes with be; Z is “zee”)</span></span></div>
+    <div class="q"><span class="n">3</span><span>I, <button class="choice-gap" data-choice-gap data-answer="Y" data-hint="Choose the letter name that rhymes with my." data-fix="I and Y rhyme with my." data-placeholder="choose">choose</button> &nbsp;<span class="contraction">(rhymes with my)</span></span></div>
+    <div class="q"><span class="n">4</span><span>Q, <button class="choice-gap" data-choice-gap data-answer="U" data-hint="Choose the letter name that rhymes with you." data-fix="Q, U, and W rhyme with you." data-placeholder="choose">choose</button>, W &nbsp;<span class="contraction">(rhymes with you)</span></span></div>
+    <div class="q"><span class="n">5</span><span>F, L, M, N, <button class="choice-gap" data-choice-gap data-answer="S" data-hint="Choose a letter name that begins with the same vowel sound as egg." data-fix="F, L, M, N, S, and X begin with the vowel sound in egg." data-placeholder="choose">choose</button>, X &nbsp;<span class="contraction">(begins with the vowel sound in egg)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -107,8 +212,8 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <p>Read the clue, then spell the word in your head. Choose the one letter that completes it.</p>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 1 — fill the missing letter</h3>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You completed each familiar word with the one missing written letter.">
+    <h3>Drill 1: fill the missing letter</h3>
     <p class="choice-hint">The clue in brackets tells you the word; pick the letter that is missing</p>
     <div class="choice-bank" aria-label="Answer choices">
       <button class="choice-option" data-choice-option="O">O</button>
@@ -118,12 +223,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="N">N</button>
       <button class="choice-option" data-choice-option="R">R</button>
     </div>
-    <div class="q"><span class="n">1</span><span>L &middot; O &middot; N &middot; D &middot; <button class="choice-gap" data-choice-gap data-answer="O" data-placeholder="?">?</button> &middot; N &nbsp;<span class="contraction">(a city in England)</span></span></div>
-    <div class="q"><span class="n">2</span><span>M &middot; <button class="choice-gap" data-choice-gap data-answer="A" data-placeholder="?">?</button> &middot; D &middot; R &middot; I &middot; D &nbsp;<span class="contraction">(the capital of Spain)</span></span></div>
-    <div class="q"><span class="n">3</span><span>E &middot; M &middot; A &middot; <button class="choice-gap" data-choice-gap data-answer="I" data-placeholder="?">?</button> &middot; L &nbsp;<span class="contraction">(messages on your computer)</span></span></div>
-    <div class="q"><span class="n">4</span><span>N &middot; A &middot; M &middot; <button class="choice-gap" data-choice-gap data-answer="E" data-placeholder="?">?</button> &nbsp;<span class="contraction">(what people call you)</span></span></div>
-    <div class="q"><span class="n">5</span><span>J &middot; A &middot; <button class="choice-gap" data-choice-gap data-answer="N" data-placeholder="?">?</button> &middot; E &nbsp;<span class="contraction">(a common first name)</span></span></div>
-    <div class="q"><span class="n">6</span><span>P &middot; A &middot; <button class="choice-gap" data-choice-gap data-answer="R" data-placeholder="?">?</button> &middot; I &middot; S &nbsp;<span class="contraction">(the capital of France)</span></span></div>
+    <div class="q"><span class="n">1</span><span>L &middot; O &middot; N &middot; D &middot; <button class="choice-gap" data-choice-gap data-answer="O" data-hint="The city name ends in the short chunk -don." data-fix="London: L-O-N-D-O-N." data-placeholder="?">?</button> &middot; N &nbsp;<span class="contraction">(a city in England)</span></span></div>
+    <div class="q"><span class="n">2</span><span>M &middot; <button class="choice-gap" data-choice-gap data-answer="A" data-hint="The city begins with the letters M-A." data-fix="Madrid: M-A-D-R-I-D." data-placeholder="?">?</button> &middot; D &middot; R &middot; I &middot; D &nbsp;<span class="contraction">(the capital of Spain)</span></span></div>
+    <div class="q"><span class="n">3</span><span>E &middot; M &middot; A &middot; <button class="choice-gap" data-choice-gap data-answer="I" data-hint="The word ends with the two written letters I-L." data-fix="Email: E-M-A-I-L." data-placeholder="?">?</button> &middot; L &nbsp;<span class="contraction">(a message you send online)</span></span></div>
+    <div class="q"><span class="n">4</span><span>N &middot; A &middot; M &middot; <button class="choice-gap" data-choice-gap data-answer="E" data-hint="The word name ends with silent e." data-fix="Name: N-A-M-E." data-placeholder="?">?</button> &nbsp;<span class="contraction">(what people call you)</span></span></div>
+    <div class="q"><span class="n">5</span><span>J &middot; A &middot; <button class="choice-gap" data-choice-gap data-answer="N" data-hint="The name Jane has four letters and ends N-E." data-fix="Jane: J-A-N-E." data-placeholder="?">?</button> &middot; E &nbsp;<span class="contraction">(a common first name)</span></span></div>
+    <div class="q"><span class="n">6</span><span>P &middot; A &middot; <button class="choice-gap" data-choice-gap data-answer="R" data-hint="The city name has R between A and I." data-fix="Paris: P-A-R-I-S." data-placeholder="?">?</button> &middot; I &middot; S &nbsp;<span class="contraction">(the capital of France)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -134,8 +239,8 @@ export const page = defineLesson({
   <h2>Match the letter</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 2 — match each letter to a clue word that starts with it</h3>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each clue word begins with the letter it helps identify.">
+    <h3>Drill 2: match each letter to a clue word that starts with it</h3>
     <p class="tile-target">Tap a letter, then tap a word that begins with that letter. These are the clue words you say on a call.</p>
     <div class="tile-bank">
       <button class="tile" data-tile="b">B</button>
@@ -146,12 +251,12 @@ export const page = defineLesson({
       <button class="tile" data-tile="n">N</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="b" data-placeholder="Boston">Boston</button>
-      <button class="slot" data-slot="v" data-placeholder="Victor">Victor</button>
-      <button class="slot" data-slot="g" data-placeholder="Golf">Golf</button>
-      <button class="slot" data-slot="j" data-placeholder="Juliet">Juliet</button>
-      <button class="slot" data-slot="m" data-placeholder="Mike">Mike</button>
-      <button class="slot" data-slot="n" data-placeholder="November">November</button>
+      <button class="slot" data-slot="b" data-hint="This city begins with B." data-fix="B as in Boston." data-placeholder="Boston">Boston</button>
+      <button class="slot" data-slot="v" data-hint="This name begins with V." data-fix="V as in Victor." data-placeholder="Victor">Victor</button>
+      <button class="slot" data-slot="g" data-hint="This sport begins with G." data-fix="G as in golf." data-placeholder="Golf">Golf</button>
+      <button class="slot" data-slot="j" data-hint="This name begins with J." data-fix="J as in Juliet." data-placeholder="Juliet">Juliet</button>
+      <button class="slot" data-slot="m" data-hint="This name begins with M." data-fix="M as in Mike." data-placeholder="Mike">Mike</button>
+      <button class="slot" data-slot="n" data-hint="This month begins with N." data-fix="N as in November." data-placeholder="November">November</button>
     </div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-tiles>Check</button>
@@ -163,8 +268,8 @@ export const page = defineLesson({
   <h2>Build the phrase, then say it</h2>
   <div class="lead-rule"></div>
 
-  <div class="tile-game" data-tile-builder data-answer="how do you spell that">
-    <h3>Drill 3 — build the question</h3>
+  <div class="tile-game" data-tile-builder data-answer="how do you spell that" data-hint="Begin with How do you, then add the base verb spell and the object that." data-fix="How do you spell that?" data-success-message="Correct. How do you spell that? asks for the letters of information you did not catch.">
+    <h3>Drill 3: build the question</h3>
     <p class="tile-target">You did not catch a word on a call. Ask for the spelling, then say it aloud.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="spell">spell</button>
@@ -181,8 +286,8 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="can you spell your last name">
-    <h3>Drill 4 — build the request</h3>
+  <div class="tile-game" data-tile-builder data-answer="can you spell your last name" data-hint="Begin with Can you, add the base verb spell, then name the information you need." data-fix="Can you spell your last name?" data-success-message="Correct. Can you spell your last name? is a polite, complete request for exact information.">
+    <h3>Drill 4: build the request</h3>
     <p class="tile-target">You are filling in a form for someone. Ask them politely. Then say it.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="your">your</button>
@@ -202,8 +307,8 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="z" data-fix="The city is spelled B-A-R-C-E-L-O-N-A." data-why="Barcelona has an S sound but is spelled with a C, not a Z. The letter that does not belong here is the Z.">
-    <h3>Drill 5 — fix the misspelled city</h3>
+  <div class="micro-drill" data-spot-error data-answer="z" data-hint="Compare the fourth written letter with the standard spelling of Barcelona." data-fix="The city is spelled B-A-R-C-E-L-O-N-A." data-why="The standard written spelling has C as the fourth letter, not Z. A sound alone cannot tell you which written letter a name uses.">
+    <h3>Drill 5: fix the misspelled city</h3>
     <p>Someone spelled the city <strong>Barcelona</strong> out loud. Tap the letter that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="b">B</button>
@@ -219,8 +324,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="k" data-fix="The name is spelled D-A-N-I-E-L." data-why="Daniel has no K. The name DANIEL is D-A-N-I-E-L — read each letter name slowly so an extra letter does not slip in.">
-    <h3>Drill 6 — fix the misspelled name</h3>
+  <div class="micro-drill" data-spot-error data-answer="k" data-hint="Compare the seven letters you hear with the six-letter name Daniel." data-fix="The name is spelled D-A-N-I-E-L." data-why="Daniel has no K. The name Daniel is D-A-N-I-E-L. Read each letter name slowly so an extra letter does not slip in.">
+    <h3>Drill 6: fix the misspelled name</h3>
     <p>Someone spelled the name <strong>Daniel</strong> out loud. Tap the letter that does not belong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="d">D</button>
@@ -235,7 +340,7 @@ export const page = defineLesson({
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — say the word, then spell it aloud</h3>
+    <h3>Drill 7: say the word, then spell it aloud</h3>
     <p>Spell each one out loud, letter by letter, before you reveal. Use <span class="ex">double</span> where two letters repeat.</p>
     <div class="transform-list">
       <div class="transform-item" data-transform-item>
@@ -246,7 +351,7 @@ export const page = defineLesson({
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>2</b> a last name with a repeated letter &nbsp;→&nbsp; spell <strong>Miller</strong></p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>M-I-double-L-E-R</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>M-I-L-L-E-R</strong>, or <strong>M-I-double-L-E-R</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>3</b> a city &nbsp;→&nbsp; spell <strong>Tokyo</strong></p>
@@ -254,9 +359,9 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>T-O-K-Y-O</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> an email address &nbsp;→&nbsp; read <strong>ana@mail.com</strong> aloud</p>
+        <p class="transform-cue"><b>4</b> a fictional email address &nbsp;→&nbsp; read <strong>ana_lopez@example.com</strong> aloud</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>A-N-A at mail dot com</strong></p>
+        <p class="transform-answer" data-transform-answer><strong>ana underscore lopez at example dot com</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
         <p class="transform-cue"><b>5</b> a name with a capital &nbsp;→&nbsp; spell <strong>Ng</strong></p>
@@ -270,20 +375,20 @@ export const page = defineLesson({
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Spelling on the phone</h3>
-    <p><span class="ex">“Can you spell your last name, please?” “Yes. It’s Reyes: R-E-Y-E-S.” “Thank you. And your first name?” “Marco: M-A-R-C-O.” “Perfect. Your email is marco@fastmail.com, right?” “Yes, that’s right.”</span></p>
+    <p><span class="ex">“Can you spell your last name, please?” “Yes. It’s Reyes: R-E-Y-E-S.” “Thank you. And your first name?” “Marco: M-A-R-C-O.” “Let me read it back. Your email is marco@example.com, right?” “Yes, that’s right.”</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You can follow spelling in a real call.">
+  <div class="quiz" data-quiz data-success-message="Correct. You followed the first name, last name, and read-back check in the call.">
     <h3>Read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="Reyes">
+      <div class="quiz-item" data-quiz-item data-answer="Reyes" data-hint="The receptionist asks for the last name first." data-fix="The last name is Reyes: R-E-Y-E-S.">
         <p class="quiz-question">1. What is the last name?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Reyes">Reyes</button><button class="quiz-option" data-quiz-option="Marco">Marco</button><button class="quiz-option" data-quiz-option="Fastmail">Fastmail</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="five">
+      <div class="quiz-item" data-quiz-item data-answer="five" data-hint="Count the letters in M-A-R-C-O." data-fix="Marco has five letters.">
         <p class="quiz-question">2. How many letters are in the first name?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="five">five</button><button class="quiz-option" data-quiz-option="four">four</button><button class="quiz-option" data-quiz-option="six">six</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the email">
+      <div class="quiz-item" data-quiz-item data-answer="the email" data-hint="At the end, the speaker reads back marco@example.com." data-fix="The person checks the email address at the end.">
         <p class="quiz-question">3. What does the person check at the end?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="the email">the email</button><button class="quiz-option" data-quiz-option="the phone number">the phone number</button><button class="quiz-option" data-quiz-option="the address">the address</button></div>
       </div>
@@ -297,52 +402,59 @@ export const page = defineLesson({
 
   <h2>Use it in real life</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your name on a call:</b> Say your first name, then spell it letter by letter. Then do your last name. Use a clue word if a letter is hard: <span class="ex">"M for Mike."</span></div>
-  <div class="prompt-card"><b>Your city:</b> Say where you live, then spell it slowly. The teacher writes it down and reads it back. Did it match?</div>
-  <div class="prompt-card"><b>Your email:</b> Read your email aloud using <span class="ex">at</span>, <span class="ex">dot</span>, and <span class="ex">underscore</span>. The teacher types it. Confirm: <span class="ex">"Yes, that's right."</span></div>
+  <div class="note"><strong>Privacy:</strong> use invented names, codes, and the reserved domain <span class="ex">example.com</span> for practice. Do not share real contact information or account details.</div>
+  <div class="prompt-card"><b>A name on a call:</b> Invent a first and last name. Say the name, then spell it letter by letter. Use a clue word if one letter is hard: <span class="ex">M as in Mike.</span></div>
+  <div class="prompt-card"><b>A city:</b> Choose a city and spell it slowly. Your teacher writes it down and reads it back. Confirm or correct one letter.</div>
+  <div class="prompt-card"><b>A fictional email:</b> Create an address at <span class="ex">example.com</span>. Read it aloud using <span class="ex">at</span>, <span class="ex">dot</span>, <span class="ex">underscore</span>, or <span class="ex">hyphen</span>. Your teacher types it and reads it back.</div>
   <div class="prompt-card"><b>Filling a form:</b> Role-play a front desk. One person asks <span class="ex">"Can you spell your last name?"</span> and <span class="ex">"How do you spell that?"</span>; the other answers. Then switch.</div>
-  <div class="prompt-card"><b>Information gap:</b> The teacher spells a city or name out loud once. The student writes it, then reads it back to confirm. Repeat with harder words until both match.</div>
+  <div class="prompt-card"><b>Information gap:</b> Your teacher spells a city or name out loud once. Write it, then read it back to confirm. Repeat with harder words until both versions match.</div>
+
+  <div class="thinking-card">
+    <h3>Final production: front-desk spelling repair</h3>
+    <p>Role-play a 60-second hotel or office check-in. The guest gives an invented name, a fictional email at <span class="ex">example.com</span>, and a booking code with one letter and two digits. The receptionist asks for spelling, deliberately confuses one letter, and reads everything back. Then switch roles.</p>
+    <p><strong>Success criteria:</strong> spell in short groups; use one <span class="ex">as in</span> clue; ask <span class="ex">Could you repeat that?</span> or <span class="ex">Was that B or V?</span>; read the full information back; and confirm or correct it clearly.</p>
+  </div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Check yourself</h3>
-    <p>Say the answers aloud: “The five main vowel letters are ______, ______, ______, ______, and ______. The letter ______ can also represent a vowel sound. To ask for a spelling I say ‘How do you ______ that?’ When two letters repeat, I say ______.”</p>
-    <p>Then spell your own last name out loud once more, slowly, with one clue word.</p>
+    <p>Say the answers aloud: “The five main vowel letters are ______, ______, ______, ______, and ______. The letter ______ can also represent a vowel sound. To ask for a spelling I say ‘How do you ______ that?’ To check one contrast I ask ‘Was that ______ or ______?’”</p>
+    <p>Then spell an invented last name slowly, use one clue word, and ask your teacher to read it back.</p>
   </div>
 
   <div class="quiz" data-quiz data-success-message="Great. You can name the letters and spell real names, cities, and emails aloud with confidence.">
-    <h3>Final quiz — choose the correct spelling</h3>
+    <h3>Final quiz: choose the correct spelling</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="S-M-I-T-H">
+      <div class="quiz-item" data-quiz-item data-answer="S-M-I-T-H" data-hint="Read the five written letters in Smith from left to right." data-fix="Smith is S-M-I-T-H.">
         <p class="quiz-question">1. How do you spell the last name <strong>Smith</strong>?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="S-M-I-T-H">S-M-I-T-H</button><button class="quiz-option" data-quiz-option="S-M-Y-T-H">S-M-Y-T-H</button><button class="quiz-option" data-quiz-option="S-M-I-T-E">S-M-I-T-E</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="L-O-N-D-O-N">
+      <div class="quiz-item" data-quiz-item data-answer="L-O-N-D-O-N" data-hint="London ends with the same three-letter chunk it begins to form after D: O-N." data-fix="London is L-O-N-D-O-N.">
         <p class="quiz-question">2. Which is the correct spelling of the city <strong>London</strong>?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="L-O-N-D-O-N">L-O-N-D-O-N</button><button class="quiz-option" data-quiz-option="L-O-N-D-E-N">L-O-N-D-E-N</button><button class="quiz-option" data-quiz-option="L-U-N-D-O-N">L-U-N-D-O-N</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="vowel">
+      <div class="quiz-item" data-quiz-item data-answer="vowel" data-hint="A, E, I, O, and U are the main letters in this category." data-fix="A, E, I, O, and U are the five main vowel letters.">
         <p class="quiz-question">3. A, E, I, O, and U are the five main ___ letters.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="vowel">vowel</button><button class="quiz-option" data-quiz-option="consonant">consonant</button><button class="quiz-option" data-quiz-option="number">number</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="How do you spell that?">
+      <div class="quiz-item" data-quiz-item data-answer="How do you spell that?" data-hint="A complete information question uses How + do + you + base verb." data-fix="How do you spell that?">
         <p class="quiz-question">4. You did not catch a word on a call. What do you say?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="How do you spell that?">How do you spell that?</button><button class="quiz-option" data-quiz-option="How you spell that?">How you spell that?</button><button class="quiz-option" data-quiz-option="How do you spell?">How do you spell?</button></div>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="How do you spell that?">How do you spell that?</button><button class="quiz-option" data-quiz-option="How you spell that?">How you spell that?</button><button class="quiz-option" data-quiz-option="What do you spell that?">What do you spell that?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="M-I-double-L-E-R">
-        <p class="quiz-question">5. The name <strong>Miller</strong> has two of the same letter. How do you say it?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="M-I-double-L-E-R">M-I-double-L-E-R</button><button class="quiz-option" data-quiz-option="M-I-L-E-R">M-I-L-E-R</button><button class="quiz-option" data-quiz-option="M-I-two-L-E-R">M-I-two-L-E-R</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="M-I-L-L-E-R" data-hint="For exact information, you can say every written letter separately." data-fix="Miller is M-I-L-L-E-R; double L is also understood.">
+        <p class="quiz-question">5. Which option gives every letter in <strong>Miller</strong> separately?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="M-I-L-L-E-R">M-I-L-L-E-R</button><button class="quiz-option" data-quiz-option="M-I-L-E-R">M-I-L-E-R</button><button class="quiz-option" data-quiz-option="M-E-L-L-E-R">M-E-L-L-E-R</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="ana at mail dot com">
-        <p class="quiz-question">6. How do you read the email <strong>ana@mail.com</strong> aloud?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="ana at mail dot com">ana at mail dot com</button><button class="quiz-option" data-quiz-option="ana dot mail at com">ana dot mail at com</button><button class="quiz-option" data-quiz-option="ana mail com">ana mail com</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="ana at example dot com" data-hint="Read @ as at and the period before com as dot." data-fix="ana@example.com → ana at example dot com">
+        <p class="quiz-question">6. How do you read the fictional email <strong>ana@example.com</strong> aloud?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="ana at example dot com">ana at example dot com</button><button class="quiz-option" data-quiz-option="ana dot example at com">ana dot example at com</button><button class="quiz-option" data-quiz-option="ana example com">ana example com</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="capital A, lowercase n">
-        <p class="quiz-question">7. The name <strong>An</strong> starts with a big letter. How do you say its spelling?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="capital A, lowercase n">capital A, lowercase n</button><button class="quiz-option" data-quiz-option="lowercase a, capital N">lowercase a, capital N</button><button class="quiz-option" data-quiz-option="big a, small n">big a, small n</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="capital A, lowercase n" data-hint="The first character is uppercase A; the second is lowercase n." data-fix="An → capital A, lowercase n.">
+        <p class="quiz-question">7. You are describing uppercase and lowercase letters on a form. How do you describe <strong>An</strong>?</p>
+        <div class="quiz-options"><button class="quiz-option" data-quiz-option="capital A, lowercase n">capital A, lowercase n</button><button class="quiz-option" data-quiz-option="lowercase a, capital N">lowercase a, capital N</button><button class="quiz-option" data-quiz-option="capital A, capital N">capital A, capital N</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="D-A-N-I-E-L">
+      <div class="quiz-item" data-quiz-item data-answer="D-A-N-I-E-L" data-hint="Daniel has six written letters and ends I-E-L." data-fix="Daniel is D-A-N-I-E-L.">
         <p class="quiz-question">8. Which is the correct spelling of the name <strong>Daniel</strong>?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="D-A-N-I-E-L">D-A-N-I-E-L</button><button class="quiz-option" data-quiz-option="D-A-N-I-E-L-L">D-A-N-I-E-L-L</button><button class="quiz-option" data-quiz-option="D-A-N-Y-E-L">D-A-N-Y-E-L</button></div>
       </div>
@@ -353,6 +465,58 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then practice only the letters and repair moves that still feel slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day alphabet retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <p>Keep the main lesson closed. Retrieve the letter contrasts and communication moves from memory.</p>
+
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You recalled a U.S. letter name, two clarification moves, and the words for common email symbols.">
+      <h3>Choose the exact spelling move</h3>
+      <div class="choice-bank" aria-label="Next-day alphabet choices">
+        <button class="choice-option" data-choice-option="zee">zee</button>
+        <button class="choice-option" data-choice-option="zed">zed</button>
+        <button class="choice-option" data-choice-option="repeat">repeat</button>
+        <button class="choice-option" data-choice-option="spell">spell</button>
+        <button class="choice-option" data-choice-option="B or V">B or V</button>
+        <button class="choice-option" data-choice-option="B and V">B and V</button>
+        <button class="choice-option" data-choice-option="at, dot, underscore">at, dot, underscore</button>
+        <button class="choice-option" data-choice-option="dot, at, line">dot, at, line</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>In U.S. English, the letter Z is pronounced <button class="choice-gap" data-choice-gap data-answer="zee" data-hint="This course uses the U.S. letter name, which rhymes with see." data-fix="In U.S. English, Z is zee." data-placeholder="choose">choose</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>You did not hear the code. Ask: “Could you <button class="choice-gap" data-choice-gap data-answer="repeat" data-hint="You need the speaker to say the same information again." data-fix="Could you repeat that?" data-placeholder="choose">choose</button> that?”</span></div>
+      <div class="q"><span class="n">3</span><span>You are unsure about one letter. Ask: “Was that <button class="choice-gap" data-choice-gap data-answer="B or V" data-hint="Use or to check which of two alternatives is correct." data-fix="Was that B or V?" data-placeholder="choose">choose</button>?”</span></div>
+      <div class="q"><span class="n">4</span><span>The symbols <span class="ex">@, ., _</span> are read as <button class="choice-gap" data-choice-gap data-answer="at, dot, underscore" data-hint="Match @ with at, . with dot, and _ with underscore." data-fix="@ = at; . = dot; _ = underscore." data-placeholder="choose">choose</button>.</span></div>
+      <div class="drill-actions">
+        <button class="lesson-btn" data-check-choices>Check</button>
+        <button class="lesson-btn" data-reset-choices>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-spot-error data-answer="D" data-hint="The name is Victor. Its first letter should match the clue word Victor." data-fix="Victor begins V as in Victor." data-why="The clue word Victor identifies V, not D. A repair phrase must use a clue word that begins with the intended letter.">
+      <h3>Repair the clue word</h3>
+      <p>A guest spells the name Victor: “D as in Victor, I-C-T-O-R.” Tap the letter that does not match the clue word.</p>
+      <div class="spot-options">
+        <button class="error-choice" data-error-choice="D">D</button>
+        <button class="error-choice" data-error-choice="as in">as in</button>
+        <button class="error-choice" data-error-choice="Victor">Victor</button>
+        <button class="error-choice" data-error-choice="I-C-T-O-R">I-C-T-O-R</button>
+      </div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+
+    <div class="micro-drill" data-transform>
+      <h3>Say it without choices</h3>
+      <p>Spell <span class="ex">Miller</span>. Read <span class="ex">ana_lopez@example.com</span>. Then ask for one unclear letter, repair it with <span class="ex">as in</span>, and read the whole item back.</p>
+    </div>
+
+    <div class="thinking-card">
+      <h3>Thirty-second production</h3>
+      <p>Give an invented name and a booking code with one letter and two digits. Your teacher deliberately repeats one letter incorrectly. Correct that letter, then confirm the complete information.</p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

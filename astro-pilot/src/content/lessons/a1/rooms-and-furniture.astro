@@ -2,379 +2,454 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "Rooms and furniture · A1 Vocabulary · Curriculum Map",
+  "title": "Rooms and furniture · A1 Vocabulary",
   "slug": "rooms-and-furniture",
   "level": "A1",
   "topic": "Rooms & furniture",
   "category": "Vocabulary & Topics",
   "contentType": "vocabulary",
   "status": "ready",
-  "description": "Walk through a home and name what you see. Learn the rooms — kitchen , bedroom , living room — and the furniture in them — sofa , bed , desk . Then say where things are with there ",
+  "description": "Name rooms and common objects, distinguish furniture from fixtures and appliances, and describe what exists and where known things are.",
   "sequence": 15,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a1/there-is-there-are", "a1/prepositions-of-time-and-place"],
+  "related": ["a1/there-is-there-are", "a1/prepositions-of-time-and-place", "a2/town-and-directions"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Object categories, uncountable furniture, information status, there is versus has, location contrasts, U.S. vocabulary, speech, listening, feedback, privacy, production, and retrieval were audited; three pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Vocabulary · Lesson 15</p>
   <h1>Rooms &amp; <em>furniture</em></h1>
-  <p class="standfirst">Walk through a home and name what you see. Learn the <strong>rooms</strong> — <span class="ex">kitchen</span>, <span class="ex">bedroom</span>, <span class="ex">living room</span> — and the <strong>furniture</strong> in them — <span class="ex">sofa</span>, <span class="ex">bed</span>, <span class="ex">desk</span>. Then say where things are with <strong>there is / there are</strong> and small place words: <span class="ex">There is a lamp on the desk.</span> <span class="ex">There are two chairs in the kitchen.</span></p>
+  <p class="standfirst">Build a clear picture of a room. First introduce a new thing with <span class="ex">There is a lamp in the room.</span> Then locate that known thing with <span class="ex">It is on the desk.</span> Along the way, separate true <strong>furniture</strong> from appliances, fixtures, and small objects, and use precise place phrases.</p>
   <div class="meta-row">
-    <span class="tag">≈ 45–55 min</span>
-    <span class="tag">there is / there are</span>
-    <span class="tag">in · on · under · next to</span>
-    <span class="tag">8 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">rooms · furniture · fixtures · objects</span>
+    <span class="tag">new thing vs. known thing</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
-    <div class="flow-step"><b>Notice</b><span>Read a short tour of an apartment.</span></div>
-    <div class="flow-step"><b>Discover</b><span>One thing vs. many; small place words.</span></div>
-    <div class="flow-step"><b>Build</b><span>Match furniture to rooms, choose, and build.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe your own home, room by room.</span></div>
+    <div class="flow-step"><b>Notice</b><span>Follow a fictional studio description.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose a form from number and information.</span></div>
+    <div class="flow-step"><b>Build</b><span>Classify objects and locate them precisely.</span></div>
+    <div class="flow-step"><b>Use</b><span>Present a fictional accessible guest room.</span></div>
   </div>
 
-  <p class="note-line">Two words, one thing: a <span class="ex">sofa</span> is also a <span class="ex">couch</span>; a <span class="ex">refrigerator</span> is also a <span class="ex">fridge</span>. Both are correct and adult. We use <span class="ex">sofa</span> and <span class="ex">refrigerator</span> as the main words here.</p>
+  <p class="note-line">Natural U.S. choices include <span class="ex">couch</span> or <span class="ex">sofa</span>, <span class="ex">fridge</span> or <span class="ex">refrigerator</span>, and <span class="ex">TV</span> or <span class="ex">television</span>. The shorter forms are common in conversation. The longer forms remain normal.</p>
 
-  <h2>Meet the home</h2>
+  <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <p>Rooms and the things inside them.</p>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved singular and plural existence forms and a surface-contact place phrase.">
+    <h3>Three quick checks from earlier lessons</h3>
+    <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
+    <div class="choice-bank" aria-label="Earlier lesson choices">
+      <button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="are">are</button>
+      <button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="on">on</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The studio list introduces one desk: There <button class="choice-gap" data-choice-gap data-answer="is" data-hint="One singular desk takes there is." data-fix="There is one desk in the studio." data-placeholder="choose">choose</button> one desk in the studio.</span></div>
+    <div class="q"><span class="n">2</span><span>The list introduces two chairs: There <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Two chairs is plural, so use there are." data-fix="There are two chairs by the table." data-placeholder="choose">choose</button> two chairs by the table.</span></div>
+    <div class="q"><span class="n">3</span><span>The laptop touches the desk surface: It is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="On shows contact with a surface." data-fix="The laptop is on the desk." data-placeholder="choose">choose</button> the desk.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Meet the room vocabulary</h2>
+  <div class="lead-rule"></div>
+  <p>This visual bank mixes several useful categories. A bed and a chair are furniture. A refrigerator is an appliance. A bathtub is usually a fixture. A key is a small object. The categories explain the words; they do not tell anyone what a home must contain.</p>
   <div class="figure-grid">
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bed.svg" alt="" loading="lazy" /></span><span class="nm">bed</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/couch.svg" alt="" loading="lazy" /></span><span class="nm">couch</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chair.svg" alt="" loading="lazy" /></span><span class="nm">chair</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/door.svg" alt="" loading="lazy" /></span><span class="nm">door</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/window.svg" alt="" loading="lazy" /></span><span class="nm">window</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/television.svg" alt="" loading="lazy" /></span><span class="nm">television</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mirror.svg" alt="" loading="lazy" /></span><span class="nm">mirror</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/plant.svg" alt="" loading="lazy" /></span><span class="nm">plant</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/toilet.svg" alt="" loading="lazy" /></span><span class="nm">toilet</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bathtub.svg" alt="" loading="lazy" /></span><span class="nm">bathtub</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/shower.svg" alt="" loading="lazy" /></span><span class="nm">shower</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/key.svg" alt="" loading="lazy" /></span><span class="nm">key</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/light.svg" alt="" loading="lazy" /></span><span class="nm">light</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/candle.svg" alt="" loading="lazy" /></span><span class="nm">candle</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/picture.svg" alt="" loading="lazy" /></span><span class="nm">picture</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/clock.svg" alt="" loading="lazy" /></span><span class="nm">clock</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/broom.svg" alt="" loading="lazy" /></span><span class="nm">broom</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/soap.svg" alt="" loading="lazy" /></span><span class="nm">soap</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/basket.svg" alt="" loading="lazy" /></span><span class="nm">basket</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wastebasket.svg" alt="" loading="lazy" /></span><span class="nm">wastebasket</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/radio.svg" alt="" loading="lazy" /></span><span class="nm">radio</span></div>
-    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/phone.svg" alt="" loading="lazy" /></span><span class="nm">phone</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bed.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">bed</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/couch.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">couch</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/chair.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">chair</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/door.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">door</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/window.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">window</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/television.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">TV</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/mirror.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">mirror</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/plant.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">plant</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/toilet.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">toilet</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/bathtub.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">bathtub</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/shower.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">shower</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/key.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">key</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/light.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">light</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/candle.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">candle</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/picture.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">picture</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/clock.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">clock</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/broom.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">broom</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/soap.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">soap</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/basket.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">basket</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/wastebasket.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">wastebasket</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/radio.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">radio</span></div>
+    <div class="figure"><span class="fig"><img src="/assets/lessons/img/noto/phone.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></span><span class="nm">phone</span></div>
   </div>
 
   <h2>Notice before the rule</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A short tour of Mateo's apartment</h3>
-    <p><span class="ex">"This is my apartment. There is a sofa in the living room. There are two lamps next to the sofa. In the home office there is a desk, and there is a laptop on the desk. There are three chairs in the kitchen."</span></p>
+    <h3>A fictional studio for a visiting speaker</h3>
+    <p><span class="ex">“There is a lamp in the room. It is on the desk. There are two chairs by the table. They are between the window and the door. There is some comfortable furniture in the sitting area. The studio has a small kitchen.”</span></p>
     <ul>
-      <li>When Mateo names <strong>one</strong> thing, he says <span class="ex">there is</span>. When he names <strong>two or three</strong>, he says something different. What changes?</li>
-      <li>Look at <span class="ex">on the desk</span>, <span class="ex">in the kitchen</span>, <span class="ex">next to the sofa</span>. These small words tell you <strong>where</strong>. Which one means "touching the top"?</li>
-      <li>Which furniture word goes with the <strong>kitchen</strong>? Which goes with the <strong>home office</strong>?</li>
+      <li>Which sentence introduces the lamp? Which sentence refers to the same known lamp?</li>
+      <li>Which form follows one lamp, two chairs, and the uncountable noun <span class="ex">furniture</span>?</li>
+      <li>Which sentence views the kitchen as a feature of the studio rather than introducing it into a scene?</li>
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
-    <h3>Discovery check — one thing or many?</h3>
-    <p class="choice-hint">Count the noun. One thing takes <b>is</b>; two or more takes <b>are</b>.</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="is">is</button>
-      <button class="choice-option" data-choice-option="are">are</button>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You chose from number, countability, new information, known information, and room features.">
+    <h3>Discovery check: choose the viewpoint and form</h3>
+    <p class="choice-hint">First ask whether the sentence introduces something, locates a known thing, or describes a room feature.</p>
+    <div class="choice-bank" aria-label="Room description form choices">
+      <button class="choice-option" data-choice-option="is">is</button><button class="choice-option" data-choice-option="are">are</button>
+      <button class="choice-option" data-choice-option="It is">It is</button><button class="choice-option" data-choice-option="They are">They are</button><button class="choice-option" data-choice-option="has">has</button>
     </div>
-    <div class="q"><span class="n">1</span><span>There <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> a bed in the bedroom. &nbsp;<span class="contraction">(one bed)</span></span></div>
-    <div class="q"><span class="n">2</span><span>There <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> two lamps next to the sofa. &nbsp;<span class="contraction">(two lamps)</span></span></div>
-    <div class="q"><span class="n">3</span><span>There <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> a desk in the home office. &nbsp;<span class="contraction">(one desk)</span></span></div>
-    <div class="q"><span class="n">4</span><span>There <button class="choice-gap" data-choice-gap data-answer="are" data-placeholder="choose">choose</button> three chairs in the kitchen. &nbsp;<span class="contraction">(three chairs)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
+    <div class="q"><span class="n">1</span><span>The guide introduces one lamp: There <button class="choice-gap" data-choice-gap data-answer="is" data-hint="One singular lamp takes there is." data-fix="There is a lamp in the room." data-placeholder="choose">choose</button> a lamp in the room.</span></div>
+    <div class="q"><span class="n">2</span><span>The guide introduces two chairs: There <button class="choice-gap" data-choice-gap data-answer="are" data-hint="Two chairs is plural, so use there are." data-fix="There are two chairs by the table." data-placeholder="choose">choose</button> two chairs by the table.</span></div>
+    <div class="q"><span class="n">3</span><span>The guide presents an amount of the uncountable noun furniture: There <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Furniture is uncountable and takes the singular form is." data-fix="There is some comfortable furniture in the sitting area." data-placeholder="choose">choose</button> some comfortable furniture in the sitting area.</span></div>
+    <div class="q"><span class="n">4</span><span>The lamp is already known. Now give its exact location: <button class="choice-gap" data-choice-gap data-answer="It is" data-hint="Use it to refer back to the one known lamp." data-fix="It is on the desk." data-placeholder="choose">choose</button> on the desk.</span></div>
+    <div class="q"><span class="n">5</span><span>The two chairs are already known. Now locate them: <button class="choice-gap" data-choice-gap data-answer="They are" data-hint="Use they to refer back to the two known chairs." data-fix="They are between the window and the door." data-placeholder="choose">choose</button> between the window and the door.</span></div>
+    <div class="q"><span class="n">6</span><span>The sentence describes the kitchen as one feature of the studio: The studio <button class="choice-gap" data-choice-gap data-answer="has" data-hint="Has presents the kitchen as a feature belonging to the studio." data-fix="The studio has a small kitchen." data-placeholder="choose">choose</button> a small kitchen.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>The system: rooms, furniture, and where things are</h2>
+  <h2>Get to the root: four kinds of room information</h2>
   <div class="lead-rule"></div>
-  <p>First, the <strong>rooms</strong> in a home, and the furniture you usually find in each:</p>
+  <p>A clear description does more than list nouns. It tells the listener what kind of thing each word names, whether the thing is new or known, and how it relates to the room.</p>
   <table>
-    <thead><tr><th>room</th><th>furniture you usually find there</th></tr></thead>
+    <thead><tr><th>information job</th><th>useful language</th><th>example</th></tr></thead>
     <tbody>
-      <tr><td><b>kitchen</b></td><td><b>stove</b>, <b>refrigerator</b> &nbsp;<span class="contraction">fridge</span></td></tr>
-      <tr><td><b>living room</b></td><td><b>sofa</b> &nbsp;<span class="contraction">couch</span>, <b>rug</b>, <b>bookshelf</b></td></tr>
-      <tr><td><b>bedroom</b></td><td><b>bed</b>, <b>closet</b>, <b>mirror</b></td></tr>
-      <tr><td><b>bathroom</b></td><td><b>mirror</b>, <b>shelf</b></td></tr>
-      <tr><td><b>dining room</b></td><td><b>table</b>, <b>chairs</b></td></tr>
-      <tr><td><b>home office</b></td><td><b>desk</b>, <b>lamp</b>, <b>chair</b></td></tr>
-      <tr><td><b>hallway</b> / <b>balcony</b></td><td>often empty, or one small <b>shelf</b> / <b>chair</b></td></tr>
+      <tr><td><b>name a room or area</b></td><td><b>It is / This is + room</b></td><td><span class="ex">This is the sitting area.</span></td></tr>
+      <tr><td><b>introduce something new</b></td><td><b>There is / There are</b></td><td><span class="ex">There is a lamp by the bed.</span></td></tr>
+      <tr><td><b>locate a known thing</b></td><td><b>The lamp is / It is</b></td><td><span class="ex">It is on the table.</span></td></tr>
+      <tr><td><b>describe a feature</b></td><td><b>The room has</b></td><td><span class="ex">The room has a large window.</span></td></tr>
     </tbody>
   </table>
+  <p class="note-line">The viewpoints can describe the same scene. <span class="ex">There is a large window in the room</span> introduces the window. <span class="ex">The room has a large window</span> describes a feature of the room. Neither pattern is automatically more correct.</p>
 
-  <p>Next, the small <strong>place words</strong>. They tell you exactly where a thing is:</p>
+  <h3>Furniture is one category, not every thing in a room</h3>
   <table>
-    <thead><tr><th>place word</th><th>meaning</th><th>example</th></tr></thead>
+    <thead><tr><th>category</th><th>A1 meaning</th><th>examples</th></tr></thead>
     <tbody>
-      <tr><td><b>in</b></td><td>inside something</td><td><span class="ex">The towels are in the closet.</span></td></tr>
-      <tr><td><b>on</b></td><td>touching the top</td><td><span class="ex">The lamp is on the desk.</span></td></tr>
-      <tr><td><b>under</b></td><td>below it</td><td><span class="ex">The rug is under the table.</span></td></tr>
-      <tr><td><b>next to</b></td><td>beside it</td><td><span class="ex">The chair is next to the bed.</span></td></tr>
-      <tr><td><b>behind</b></td><td>at the back of it</td><td><span class="ex">The closet is behind the door.</span></td></tr>
-      <tr><td><b>between</b></td><td>in the middle of two</td><td><span class="ex">The lamp is between the bed and the wall.</span></td></tr>
-      <tr><td><b>in front of</b></td><td>facing the front of it</td><td><span class="ex">The sofa is in front of the bookshelf.</span></td></tr>
+      <tr><td><b>furniture</b></td><td>movable things that support living, working, or storage</td><td><span class="ex">bed · chair · sofa · table · desk</span></td></tr>
+      <tr><td><b>appliance</b></td><td>a machine used in a home or room</td><td><span class="ex">refrigerator · stove · TV</span></td></tr>
+      <tr><td><b>fixture</b></td><td>something usually installed as part of the room</td><td><span class="ex">bathtub · toilet · built-in light</span></td></tr>
+      <tr><td><b>small object</b></td><td>a separate item that can be held or moved easily</td><td><span class="ex">key · phone · candle · soap</span></td></tr>
+      <tr><td><b>room feature</b></td><td>part of the room or building</td><td><span class="ex">door · window · wall · closet</span></td></tr>
     </tbody>
   </table>
+  <p><strong>Furniture is uncountable.</strong> Say <span class="ex">some furniture</span>, <span class="ex">a lot of furniture</span>, or <span class="ex">a piece of furniture</span>. Do not say <span class="ex">a furniture</span> or <span class="ex">furnitures</span>. Individual names are countable: <span class="ex">one chair</span>, <span class="ex">two chairs</span>.</p>
 
-  <div class="note">
-    <h3>Meaning check</h3>
-    <ul>
-      <li>One thing or many? Use <span class="ex">There is a sofa</span> for one, <span class="ex">There are two chairs</span> for two or more. The verb follows the noun after it.</li>
-      <li><span class="ex">in</span> the desk or <span class="ex">on</span> the desk? A book that sits on top is <span class="ex">on the desk</span>. A drawer holds things <span class="ex">in the desk</span>. For a book on top, <span class="ex">on</span> is correct.</li>
-      <li>To ask, say <span class="ex">Where is the lamp?</span> for one thing and <span class="ex">Where are the keys?</span> for many. The short answer keeps the place word: <span class="ex">It's on the desk.</span></li>
-    </ul>
-  </div>
-
-  <h2>Match the furniture to its room</h2>
-  <div class="lead-rule"></div>
-  <p>Most furniture has a home of its own. Connect each thing to the room where you usually find it:</p>
-
-  <div class="tile-game" data-tile-game>
-    <h3>Drill 1 — furniture → its usual room</h3>
-    <p class="tile-target">Tap a piece of furniture, then tap the room it usually belongs in</p>
+  <div class="tile-game" data-tile-game data-success-message="Correct. Each item is classified by what it is, not simply by the room where it appears.">
+    <h3>Classify four room items</h3>
+    <p class="tile-target">Tap an item, then tap its exact category.</p>
     <div class="tile-bank">
-      <button class="tile" data-tile="stove">stove</button>
-      <button class="tile" data-tile="bed">bed</button>
-      <button class="tile" data-tile="sofa">sofa</button>
-      <button class="tile" data-tile="desk">desk</button>
+      <button class="tile" data-tile="sofa">sofa</button><button class="tile" data-tile="refrigerator">refrigerator</button><button class="tile" data-tile="bathtub">bathtub</button><button class="tile" data-tile="key">key</button>
     </div>
     <div class="slot-board">
-      <button class="slot" data-slot="stove" data-placeholder="kitchen">kitchen</button>
-      <button class="slot" data-slot="bed" data-placeholder="bedroom">bedroom</button>
-      <button class="slot" data-slot="sofa" data-placeholder="living room">living room</button>
-      <button class="slot" data-slot="desk" data-placeholder="home office">home office</button>
+      <button class="slot" data-slot="sofa" data-hint="A sofa is a movable item used for sitting." data-fix="Movable seating: sofa is furniture." data-placeholder="furniture">furniture</button>
+      <button class="slot" data-slot="refrigerator" data-hint="A refrigerator is a machine that keeps food cold." data-fix="A food-cooling machine: refrigerator is an appliance." data-placeholder="appliance">appliance</button>
+      <button class="slot" data-slot="bathtub" data-hint="A bathtub is normally installed as part of a bathroom." data-fix="An installed room item: bathtub is a fixture." data-placeholder="fixture">fixture</button>
+      <button class="slot" data-slot="key" data-hint="A key is a small separate item that a person can carry." data-fix="A small carryable item: key is a small object." data-placeholder="small object">small object</button>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-tiles>Check</button>
-      <button class="lesson-btn" data-reset-tiles>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-tiles>Check</button><button class="lesson-btn" data-reset-tiles>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Choose the right place word</h2>
+  <h3>Useful U.S. room words and boundaries</h3>
+  <table>
+    <thead><tr><th>word or pair</th><th>useful boundary</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><b>living room</b></td><td>a shared sitting area in a home</td><td><span class="ex">The living room has a sofa.</span></td></tr>
+      <tr><td><b>bedroom</b></td><td>a room used for sleeping</td><td><span class="ex">There is a bed in the bedroom.</span></td></tr>
+      <tr><td><b>kitchen</b></td><td>an area used to prepare food</td><td><span class="ex">The kitchen has a refrigerator.</span></td></tr>
+      <tr><td><b>bathroom / restroom</b></td><td>In U.S. English, <em>bathroom</em> can mean a toilet room even with no bathtub. <em>Restroom</em> is common in public places.</td><td><span class="ex">Where is the restroom?</span></td></tr>
+      <tr><td><b>closet / wardrobe</b></td><td>A closet is storage space built into a room. A wardrobe is a freestanding piece of furniture.</td><td><span class="ex">The coats are in the closet.</span></td></tr>
+      <tr><td><b>home office</b></td><td>a work area in a home; it may be a full room or part of another room</td><td><span class="ex">The desk is in the home office.</span></td></tr>
+      <tr><td><b>hallway / balcony</b></td><td>a passage inside a building / a raised outdoor platform connected to a building</td><td><span class="ex">The elevator is at the end of the hallway.</span></td></tr>
+    </tbody>
+  </table>
+  <p>These names describe function, not one required design. A studio may combine sleeping, working, cooking, and sitting areas in one room. A home office may be one desk in a shared space.</p>
+
+  <h2>New information and known location</h2>
   <div class="lead-rule"></div>
-  <p>Read the picture in your head, then pick the place word that matches the cue:</p>
-
-  <div class="practice" data-choice-gap-drill>
-    <h3>Drill 2 — in / on / under / next to</h3>
-    <p class="choice-hint">The cue in brackets tells you exactly where the thing is</p>
-    <div class="choice-bank" aria-label="Answer choices">
-      <button class="choice-option" data-choice-option="in">in</button>
-      <button class="choice-option" data-choice-option="on">on</button>
-      <button class="choice-option" data-choice-option="under">under</button>
-      <button class="choice-option" data-choice-option="next to">next to</button>
-    </div>
-    <div class="q"><span class="n">1</span><span>The lamp is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> the desk. &nbsp;<span class="contraction">(touching the top)</span></span></div>
-    <div class="q"><span class="n">2</span><span>The towels are <button class="choice-gap" data-choice-gap data-answer="in" data-placeholder="choose">choose</button> the closet. &nbsp;<span class="contraction">(inside it)</span></span></div>
-    <div class="q"><span class="n">3</span><span>The rug is <button class="choice-gap" data-choice-gap data-answer="under" data-placeholder="choose">choose</button> the table. &nbsp;<span class="contraction">(below it)</span></span></div>
-    <div class="q"><span class="n">4</span><span>The chair is <button class="choice-gap" data-choice-gap data-answer="next to" data-placeholder="choose">choose</button> the bed. &nbsp;<span class="contraction">(right beside it)</span></span></div>
-    <div class="q"><span class="n">5</span><span>The mirror is <button class="choice-gap" data-choice-gap data-answer="on" data-placeholder="choose">choose</button> the wall. &nbsp;<span class="contraction">(hanging on its surface)</span></span></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-choices>Check</button>
-      <button class="lesson-btn" data-reset-choices>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
+  <p><span class="ex">There is / There are</span> puts a new person or thing into the listener’s mental scene. After the listener knows it, name it or use a pronoun when its exact location is the message.</p>
+  <div class="thinking-card">
+    <h3>Follow the information chain</h3>
+    <p><span class="ex"><strong>There is a lamp in the room.</strong> It is on the desk.</span></p>
+    <p>The first sentence answers <em>What is in the room?</em> The second answers <em>Where is the lamp?</em> Repeating <span class="ex">There is on the desk</span> does not work because <span class="ex">there is</span> needs a following noun phrase.</p>
+    <p><span class="ex"><strong>There are two chairs by the table.</strong> They are between the window and the door.</span></p>
+    <p>Plural new information takes <span class="ex">there are</span>. The known plural reference takes <span class="ex">they are</span>.</p>
   </div>
+  <table>
+    <thead><tr><th>noun after there</th><th>affirmative</th><th>negative reminder</th></tr></thead>
+    <tbody>
+      <tr><td><b>one singular countable thing</b></td><td><span class="ex">There is a chair.</span></td><td><span class="ex">There isn’t a chair.</span></td></tr>
+      <tr><td><b>an uncountable amount</b></td><td><span class="ex">There is some furniture.</span></td><td><span class="ex">There isn’t any furniture.</span></td></tr>
+      <tr><td><b>two or more countable things</b></td><td><span class="ex">There are two chairs.</span></td><td><span class="ex">There aren’t any chairs.</span></td></tr>
+    </tbody>
+  </table>
+  <p>In speech, <span class="ex">there is</span> commonly contracts to <span class="ex">there’s</span>. In careful A1 writing, keep plural <span class="ex">there are</span> in its full form. You may hear informal speakers use <span class="ex">there’s</span> before a plural list, but the reliable learning form is <span class="ex">There are two chairs</span>.</p>
 
-  <h2>Build the sentence</h2>
+  <h2>Choose a precise place relationship</h2>
   <div class="lead-rule"></div>
+  <p>The reference object creates the map. Ask how the first thing relates to that object.</p>
+  <table>
+    <thead><tr><th>place phrase</th><th>exact picture</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td><b>in</b></td><td>inside an area or enclosed space</td><td><span class="ex">The towels are in the closet.</span></td></tr>
+      <tr><td><b>on</b></td><td>in contact with a surface</td><td><span class="ex">The laptop is on the desk.</span></td></tr>
+      <tr><td><b>under</b></td><td>lower than and in a direct vertical relationship</td><td><span class="ex">The rug is under the table.</span></td></tr>
+      <tr><td><b>above</b></td><td>higher than, with no surface contact</td><td><span class="ex">The picture is above the sofa.</span></td></tr>
+      <tr><td><b>next to / beside</b></td><td>immediately at the side</td><td><span class="ex">The lamp is next to the bed.</span></td></tr>
+      <tr><td><b>near</b></td><td>close, but not necessarily immediately beside</td><td><span class="ex">The desk is near the window.</span></td></tr>
+      <tr><td><b>between</b></td><td>in the middle of two named reference points</td><td><span class="ex">The chair is between the desk and the door.</span></td></tr>
+      <tr><td><b>in front of</b></td><td>on the front side of another thing</td><td><span class="ex">The sofa is in front of the bookshelf.</span></td></tr>
+      <tr><td><b>behind</b></td><td>on the back side of another thing</td><td><span class="ex">The closet is behind the door.</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line"><span class="ex">On the wall</span> means attached to or touching the wall surface. <span class="ex">Above the sofa</span> means higher than the sofa, not touching it. <span class="ex">In front of the building</span> means outside or relative to the building. <span class="ex">In the front of the room</span> means inside the room’s front area.</p>
 
-  <div class="tile-game" data-tile-builder data-answer="there is a lamp on the desk">
-    <h3>Drill 3 — one thing, with a place word</h3>
-    <p class="tile-target">One lamp, sitting on the desk in the home office. Build the sentence, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="lamp">lamp</button>
-      <button class="tile" data-build-tile="there">There</button>
-      <button class="tile" data-build-tile="the">the</button>
-      <button class="tile" data-build-tile="is">is</button>
-      <button class="tile" data-build-tile="on">on</button>
-      <button class="tile" data-build-tile="desk">desk</button>
-      <button class="tile" data-build-tile="a">a</button>
+  <div class="note">
+    <h3>Sound natural: room words, linking, and plural endings</h3>
+    <p>Stress the first part of common room compounds: <span class="ex"><strong>LIV</strong>ing room · <strong>BED</strong>room</span>. In conversational U.S. English, <span class="ex">furniture</span> sounds approximately <span class="ex"><strong>FUR</strong>-nuh-cher</span>, <span class="ex">comfortable</span> often sounds like <span class="ex"><strong>KUMF</strong>-ter-buhl</span>, and <span class="ex">refrigerator</span> sounds like <span class="ex">ri-<strong>FRIJ</strong>-uh-ray-ter</span>.</p>
+    <p>Link <span class="ex">there’s a</span> as one light opening, then stress the new object: <span class="ex">there’s-a <strong>LAMP</strong></span>. Keep <span class="ex">there are</span> light before a plural noun: <span class="ex">there-are two <strong>CHAIRS</strong></span>. In <span class="ex">next to</span>, <em>to</em> is often reduced: <span class="ex">next-tuh the <strong>BED</strong></span>. In <span class="ex">in front of</span>, <em>of</em> is light and the reference noun carries the last clear beat.</p>
+    <p>Keep plural endings audible: <span class="ex">lamps</span> ends /s/, <span class="ex">chairs</span> ends /z/, and <span class="ex">couches</span> adds a final syllable /ɪz/. These endings help the listener predict <span class="ex">there is</span> or <span class="ex">there are</span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read room category, new-information, known-location, and place-relation listening check">
+    <h2>Listen: what information does the speaker give?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once with natural U.S. rhythm and once more slowly. Listen for new versus known information and the exact place relationship. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished introductions, known locations, and precise vertical and horizontal relationships.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Room description listening meanings">
+        <button class="choice-option" data-choice-option="introduces one new object">introduces one new object</button><button class="choice-option" data-choice-option="locates one known object">locates one known object</button>
+        <button class="choice-option" data-choice-option="introduces two new objects">introduces two new objects</button><button class="choice-option" data-choice-option="locates two known objects">locates two known objects</button>
+        <button class="choice-option" data-choice-option="higher with no contact">higher with no contact</button><button class="choice-option" data-choice-option="lower in a direct relation">lower in a direct relation</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 <button class="choice-gap" data-choice-gap data-answer="introduces one new object" data-hint="There’s a introduces one singular object into the scene." data-fix="There’s a lamp in the room: introduces one new object." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 <button class="choice-gap" data-choice-gap data-answer="locates one known object" data-hint="The lamp uses the definite article because the listener already knows it." data-fix="The lamp is on the desk: locates one known object." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 <button class="choice-gap" data-choice-gap data-answer="introduces two new objects" data-hint="There are plus two chairs introduces a plural set." data-fix="There are two chairs by the table: introduces two new objects." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 <button class="choice-gap" data-choice-gap data-answer="locates two known objects" data-hint="The chairs refers back to an already introduced plural set." data-fix="The chairs are between the window and the door: locates two known objects." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 places the picture <button class="choice-gap" data-choice-gap data-answer="higher with no contact" data-hint="Above means higher than the sofa without touching it." data-fix="The picture is above the sofa: higher with no contact." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 places the rug <button class="choice-gap" data-choice-gap data-answer="lower in a direct relation" data-hint="Under gives a direct lower relationship to the table." data-fix="The rug is under the table: lower in a direct relation." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
     </div>
-    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">There’s a lamp in the room.</span></li>
+        <li><span class="ex">The lamp is on the desk.</span></li>
+        <li><span class="ex">There are two chairs by the table.</span></li>
+        <li><span class="ex">The chairs are between the window and the door.</span></li>
+        <li><span class="ex">The picture is above the sofa.</span></li>
+        <li><span class="ex">The rug is under the table.</span></li>
+      </ol>
+      <p>Keep the opening grammar light and stress the newly introduced object or the location phrase that carries the message.</p>
+    </details>
+  </section>
+
+  <h2>Read a fictional floor plan</h2>
+  <div class="lead-rule"></div>
+  <p>This plan assigns each item to one area for this exercise only. It does not claim that every home uses the same layout.</p>
+  <div class="thinking-card">
+    <h3>Community guest studio plan</h3>
+    <p><span class="ex">The kitchen has a stove. The sleeping area has a bed. The lounge area has a sofa. The work area has a desk. The bathroom has a shower.</span></p>
+  </div>
+  <div class="tile-game" data-tile-game data-success-message="Correct. You matched each object to the area explicitly named in this fictional plan.">
+    <h3>Drill 1: match the plan, not a stereotype</h3>
+    <p class="tile-target">Tap an item, then tap the exact area named for it in the plan.</p>
+    <div class="tile-bank">
+      <button class="tile" data-tile="stove">stove</button><button class="tile" data-tile="bed">bed</button><button class="tile" data-tile="sofa">sofa</button><button class="tile" data-tile="desk">desk</button><button class="tile" data-tile="shower">shower</button>
     </div>
+    <div class="slot-board">
+      <button class="slot" data-slot="stove" data-hint="The plan explicitly puts the stove in the kitchen." data-fix="Kitchen in this plan: stove." data-placeholder="kitchen">kitchen</button>
+      <button class="slot" data-slot="bed" data-hint="The plan explicitly puts the bed in the sleeping area." data-fix="Sleeping area in this plan: bed." data-placeholder="sleeping area">sleeping area</button>
+      <button class="slot" data-slot="sofa" data-hint="The plan explicitly puts the sofa in the lounge area." data-fix="Lounge area in this plan: sofa." data-placeholder="lounge area">lounge area</button>
+      <button class="slot" data-slot="desk" data-hint="The plan explicitly puts the desk in the work area." data-fix="Work area in this plan: desk." data-placeholder="work area">work area</button>
+      <button class="slot" data-slot="shower" data-hint="The plan explicitly puts the shower in the bathroom." data-fix="Bathroom in this plan: shower." data-placeholder="bathroom">bathroom</button>
+    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-tiles>Check</button><button class="lesson-btn" data-reset-tiles>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="there are two chairs in the kitchen">
-    <h3>Drill 4 — many things, with a room</h3>
-    <p class="tile-target">Two chairs, standing in the kitchen. Use <span class="ex">There are</span> for more than one. Build it, then say it.</p>
-    <div class="tile-bank" data-build-bank>
-      <button class="tile" data-build-tile="chairs">chairs</button>
-      <button class="tile" data-build-tile="there">There</button>
-      <button class="tile" data-build-tile="kitchen">kitchen</button>
-      <button class="tile" data-build-tile="are">are</button>
-      <button class="tile" data-build-tile="two">two</button>
-      <button class="tile" data-build-tile="in">in</button>
-      <button class="tile" data-build-tile="the">the</button>
+  <h2>Choose the exact place phrase</h2>
+  <div class="lead-rule"></div>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You mapped enclosure, contact, vertical position, adjacency, and two-point position precisely.">
+    <h3>Drill 2: build the picture from the cue</h3>
+    <div class="choice-bank" aria-label="Place phrase choices">
+      <button class="choice-option" data-choice-option="in">in</button><button class="choice-option" data-choice-option="on">on</button><button class="choice-option" data-choice-option="under">under</button>
+      <button class="choice-option" data-choice-option="above">above</button><button class="choice-option" data-choice-option="next to">next to</button><button class="choice-option" data-choice-option="between">between</button>
     </div>
+    <div class="q"><span class="n">1</span><span>The towels are inside the closed closet: They are <button class="choice-gap" data-choice-gap data-answer="in" data-hint="In shows that the towels are inside the closet." data-fix="The towels are in the closet." data-placeholder="choose">choose</button> the closet.</span></div>
+    <div class="q"><span class="n">2</span><span>The laptop touches the desk surface: It is <button class="choice-gap" data-choice-gap data-answer="on" data-hint="On means the laptop touches the desk surface." data-fix="The laptop is on the desk." data-placeholder="choose">choose</button> the desk.</span></div>
+    <div class="q"><span class="n">3</span><span>The rug is directly lower than the table: It is <button class="choice-gap" data-choice-gap data-answer="under" data-hint="Under gives a direct lower relationship to the table." data-fix="The rug is under the table." data-placeholder="choose">choose</button> the table.</span></div>
+    <div class="q"><span class="n">4</span><span>The picture is higher than the sofa and does not touch it: It is <button class="choice-gap" data-choice-gap data-answer="above" data-hint="Above means higher than without contact." data-fix="The picture is above the sofa." data-placeholder="choose">choose</button> the sofa.</span></div>
+    <div class="q"><span class="n">5</span><span>The lamp is immediately beside the bed: It is <button class="choice-gap" data-choice-gap data-answer="next to" data-hint="Next to means immediately at the side." data-fix="The lamp is next to the bed." data-placeholder="choose">choose</button> the bed.</span></div>
+    <div class="q"><span class="n">6</span><span>The chair is in the middle of the desk and the door: It is <button class="choice-gap" data-choice-gap data-answer="between" data-hint="Between uses two named reference points." data-fix="The chair is between the desk and the door." data-placeholder="choose">choose</button> the desk and the door.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Build the information chain</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="there is a lamp in the room" data-hint="Use there is to introduce one lamp, then finish with the broad room location." data-fix="There is a lamp in the room." data-success-message="Correct. There is introduces one new lamp into the room scene.">
+    <h3>Drill 3: introduce the object</h3>
+    <p class="tile-target">The listener does not know about the lamp yet. Build the introduction.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="lamp">lamp</button><button class="tile" data-build-tile="there">There</button><button class="tile" data-build-tile="room">room</button><button class="tile" data-build-tile="is">is</button><button class="tile" data-build-tile="in">in</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="a">a</button></div>
     <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-build>Check</button>
-      <button class="lesson-btn" data-reset-build>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer="it is on the desk" data-hint="Refer back to the known lamp with it, then give its exact surface location." data-fix="It is on the desk." data-success-message="Correct. It refers to the known lamp, and on gives its exact location.">
+    <h3>Drill 4: locate the known object</h3>
+    <p class="tile-target">The lamp is now known. Build the next sentence that gives its exact location.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="desk">desk</button><button class="tile" data-build-tile="it">It</button><button class="tile" data-build-tile="on">on</button><button class="tile" data-build-tile="the">the</button><button class="tile" data-build-tile="is">is</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="is" data-fix="There are two chairs." data-why="Two chairs is more than one, so the verb is are, not is.">
-    <h3>Drill 5 — does the verb match the number?</h3>
-    <p>Tap the word that is wrong. There are two chairs, not one.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="there">There</button>
-      <button class="error-choice" data-error-choice="is">is</button>
-      <button class="error-choice" data-error-choice="two">two</button>
-      <button class="error-choice" data-error-choice="chairs">chairs.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="are" data-hint="Furniture is uncountable, so it takes the singular existence form is." data-fix="There is some furniture in the sitting area." data-why="Furniture is an uncountable category noun. Use there is with some furniture; count individual chairs or pieces of furniture." data-success-message="Correct. You repaired agreement with the uncountable noun furniture.">
+    <h3>Drill 5: countable items or uncountable category?</h3>
+    <p>The guide describes an amount of furniture: “There are some furniture in the sitting area.” Tap the verb to replace.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="there">There</button><button class="error-choice" data-error-choice="are">are</button><button class="error-choice" data-error-choice="some">some</button><button class="error-choice" data-error-choice="furniture">furniture in the sitting area.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="in" data-fix="The book is on the desk." data-why="The book sits on top of the desk, so the place word is on, not in.">
-    <h3>Drill 6 — does the place word match?</h3>
-    <p>Tap the word that is wrong. The book sits on top of the desk.</p>
-    <div class="spot-options">
-      <button class="error-choice" data-error-choice="book">The book</button>
-      <button class="error-choice" data-error-choice="is">is</button>
-      <button class="error-choice" data-error-choice="in">in</button>
-      <button class="error-choice" data-error-choice="desk">the desk.</button>
-    </div>
+  <div class="micro-drill" data-spot-error data-answer="there-is-second" data-hint="The second sentence refers back to the known lamp, so use it as the subject." data-fix="There is a lamp in the room. It is on the desk." data-why="There is introduces the lamp. After that, it refers to the same known lamp and on the desk gives its exact location." data-success-message="Correct. You changed a repeated introduction into a known-object location.">
+    <h3>Drill 6: new thing or known thing?</h3>
+    <p>The guide first introduces a lamp, then locates the same lamp: “There is a lamp in the room. There is on the desk.” Tap the second opening to replace.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="there-is-first">There is</button><button class="error-choice" data-error-choice="lamp">a lamp in the room.</button><button class="error-choice" data-error-choice="there-is-second">There is</button><button class="error-choice" data-error-choice="desk">on the desk.</button></div>
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
   <div class="micro-drill" data-transform>
-    <h3>Drill 7 — say where it is, then reveal</h3>
-    <p>Read the object and its place. Say the full <span class="ex">There is / There are</span> sentence aloud first. Reveal only after you answer.</p>
+    <h3>Oral transform: introduce, then locate</h3>
+    <p>Say each complete response aloud first. Reveal only after you answer.</p>
     <div class="transform-list">
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>1</b> a sofa · in the living room &nbsp;→&nbsp; full sentence</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>There is a sofa in the living room.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>2</b> two lamps · next to the bed &nbsp;→&nbsp; full sentence</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>There are two lamps next to the bed.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>3</b> a mirror · on the wall &nbsp;→&nbsp; full sentence</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>There is a mirror on the wall.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>4</b> a rug · under the table &nbsp;→&nbsp; full sentence</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>There is a rug under the table.</strong></p>
-      </div>
-      <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>5</b> three chairs · in the kitchen &nbsp;→&nbsp; full sentence</p>
-        <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
-        <p class="transform-answer" data-transform-answer><strong>There are three chairs in the kitchen.</strong></p>
-      </div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>1</b> one sofa · introduce it in the lounge area</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>There is a sofa in the lounge area.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>2</b> the same sofa · locate it in front of the bookshelf</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>It is in front of the bookshelf.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>3</b> two chairs · introduce them by the table</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>There are two chairs by the table.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>4</b> the same chairs · locate them between the door and window</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>They are between the door and the window.</strong></p></div>
+      <div class="transform-item" data-transform-item><p class="transform-cue"><b>5</b> one room feature · use has</p><button class="lesson-btn" data-reveal-transform>Reveal after you answer</button><p class="transform-answer" data-transform-answer><strong>The room has a large closet.</strong></p></div>
     </div>
   </div>
 
-  <h2>Read and choose</h2>
+  <h2>Read a fictional guest-room card</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A hotel room</h3>
-    <p><span class="ex">“The hotel room is small but nice. There is a big bed and a comfortable couch. The bathroom has a bathtub and a large mirror. There is no television, but the window has a beautiful view.”</span></p>
+    <h3>Room 204</h3>
+    <p><span class="ex">Room 204 has one bed and a wide, clear path from the door to the bathroom. There is a small desk near the window. The chair is under the desk. A reading light is on the wall above the bed. The bathroom has a shower, not a bathtub.</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You understood a real room description.">
-    <h3>Read, then choose</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You found the path, the chair’s exact location, and the bathroom fixture in the guest-room card.">
+    <h3>Read, then choose the exact information</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="a bathtub and a mirror">
-        <p class="quiz-question">1. What is in the bathroom?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a bathtub and a mirror">a bathtub and a mirror</button><button class="quiz-option" data-quiz-option="a bed and a couch">a bed and a couch</button><button class="quiz-option" data-quiz-option="a television">a television</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="from the door to the bathroom" data-hint="The first sentence states both ends of the wide, clear path." data-fix="The wide, clear path goes from the door to the bathroom.">
+        <p class="quiz-question">1. Where does the wide, clear path go?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="from the door to the bathroom">from the door to the bathroom</button><button class="quiz-option" data-quiz-option="from the bed to the window">from the bed to the window</button><button class="quiz-option" data-quiz-option="from the desk to the chair">from the desk to the chair</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="a television">
-        <p class="quiz-question">2. What is not in the room?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="a television">a television</button><button class="quiz-option" data-quiz-option="a bed">a bed</button><button class="quiz-option" data-quiz-option="a window">a window</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="under the desk" data-hint="The card directly says where the chair is in relation to the desk." data-fix="The chair is under the desk.">
+        <p class="quiz-question">2. Where is the chair?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="under the desk">under the desk</button><button class="quiz-option" data-quiz-option="above the bed">above the bed</button><button class="quiz-option" data-quiz-option="behind the bathroom door">behind the bathroom door</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="the window">
-        <p class="quiz-question">3. What has a beautiful view?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="the window">the window</button><button class="quiz-option" data-quiz-option="the mirror">the mirror</button><button class="quiz-option" data-quiz-option="the couch">the couch</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="a shower" data-hint="The last sentence contrasts the installed bathroom item with a bathtub." data-fix="The bathroom has a shower, not a bathtub.">
+        <p class="quiz-question">3. Which fixture is in the bathroom?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="a shower">a shower</button><button class="quiz-option" data-quiz-option="a bathtub">a bathtub</button><button class="quiz-option" data-quiz-option="a refrigerator">a refrigerator</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check</button>
-      <button class="lesson-btn" data-reset-quiz>Reset</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check</button><button class="lesson-btn" data-reset-quiz>Reset</button></div>
     <p class="feedback" data-feedback></p>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it safely and flexibly</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Your living room:</b> Name four things in your real living room. Say a full sentence for each. <span class="ex">There is a sofa. There is a rug under the table. There are two lamps.</span></div>
-  <div class="prompt-card"><b>Your home office:</b> Describe where you work. <span class="ex">There is a desk next to the window. There is a lamp on the desk. There are three books on the shelf.</span></div>
-  <div class="prompt-card"><b>Where is it?</b> The teacher asks <span class="ex">Where is the lamp? Where are the chairs?</span> Answer with a place word. <span class="ex">It's on the desk. They're in the kitchen.</span></div>
-  <div class="prompt-card"><b>Your apartment tour:</b> Give a short tour, room by room. <span class="ex">This is the kitchen. There is a stove and a refrigerator. This is the bedroom. There is a bed and a closet.</span></div>
-  <div class="prompt-card"><b>Spot the difference:</b> The teacher describes a room with one wrong detail. The student listens and corrects it. <span class="ex">No, the rug is under the table, not on the table.</span></div>
+  <p class="note-line">You never need to disclose your real home, address, bedroom, possessions, finances, family, neighborhood, work setup, location, or photos. Use the fictional room cards, invent a complete layout, or discuss personal details only when you freely choose.</p>
+  <div class="prompt-card"><b>Classify the inventory:</b> The fictional studio contains a sofa, refrigerator, bathtub, key, window, desk, lamp, and two chairs. Group them as furniture, appliance, fixture, small object, or room feature.</div>
+  <div class="prompt-card"><b>Introduce the scene:</b> Use <span class="ex">There is</span> with one singular item, <span class="ex">There is</span> with some uncountable furniture, and <span class="ex">There are</span> with two plural items.</div>
+  <div class="prompt-card"><b>Track known information:</b> After introducing the lamp and chairs, continue with <span class="ex">It is</span> and <span class="ex">They are</span>. Give each a precise location.</div>
+  <div class="prompt-card"><b>Check an accessible route:</b> Describe a fictional clear path from the entrance to the bed, desk, and bathroom. Place a rug, chair, and small table so that the path stays clear. This is a language-planning task, not a medical assessment.</div>
+  <div class="prompt-card"><b>Final production: present a fictional guest studio for 45–60 seconds.</b> Name its areas, classify at least two items, introduce one singular item and one plural set, locate those known items with pronouns, describe one room feature with <span class="ex">has</span>, and use at least four precise place phrases.</div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
-    <p>Complete this aloud: “For one thing I say <strong>There ______ a…</strong>. For two or more I say <strong>There ______ two…</strong>. Inside something is ______; touching the top is ______; below it is ______; beside it is ______.”</p>
-    <p>Then say two true sentences about your own home: one with <strong>There is</strong> and one with <strong>There are</strong>, each with a place word.</p>
+    <p>Complete this aloud: “Furniture is a(n) ______ noun. <span class="ex">There is / There are</span> introduces something ______. <span class="ex">It is / They are</span> can locate that thing after it becomes ______. <span class="ex">The room has</span> presents something as a room ______.”</p>
+    <p>Then explain the difference between <span class="ex">on the wall</span> and <span class="ex">above the sofa</span>, and between <span class="ex">next to</span> and <span class="ex">near</span>.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Great. You can name rooms and furniture and say where things are with there is / there are and place words.">
-    <h3>Final quiz — rooms, furniture, and where things are</h3>
+  <div class="quiz" data-quiz data-success-message="Correct. You classified room items, chose forms from number and information status, and mapped exact place relationships.">
+    <h3>Final quiz: build the room from meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="is">
-        <p class="quiz-question">1. There ___ a bed in the bedroom. (one bed)</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="There is some furniture in the room." data-hint="Furniture is uncountable, so use some and the singular existence form is." data-fix="There is some furniture in the room.">
+        <p class="quiz-question">1. The guide presents an unspecified amount of furniture. Which sentence is accurate?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="There is some furniture in the room.">There is some furniture in the room.</button><button class="quiz-option" data-quiz-option="There are some furnitures in the room.">There are some furnitures in the room.</button><button class="quiz-option" data-quiz-option="There is a furniture in the room.">There is a furniture in the room.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="are">
-        <p class="quiz-question">2. There ___ two lamps in the living room. (two lamps)</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="is">is</button><button class="quiz-option" data-quiz-option="are">are</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="There are two chairs by the table." data-hint="Two chairs is a plural set, so use there are and the plural noun chairs." data-fix="There are two chairs by the table.">
+        <p class="quiz-question">2. The guide introduces two new chairs. Which sentence fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="There are two chairs by the table.">There are two chairs by the table.</button><button class="quiz-option" data-quiz-option="There is two chairs by the table.">There is two chairs by the table.</button><button class="quiz-option" data-quiz-option="They are two chairs by the table.">They are two chairs by the table.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="on">
-        <p class="quiz-question">3. The laptop sits on top of the desk. The laptop is ___ the desk.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button><button class="quiz-option" data-quiz-option="under">under</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="It is on the desk." data-hint="The one lamp is already known, so refer back with it and give its location." data-fix="It is on the desk.">
+        <p class="quiz-question">3. The previous sentence introduced one lamp. Now locate the same lamp. Which sentence fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="It is on the desk.">It is on the desk.</button><button class="quiz-option" data-quiz-option="There is on the desk.">There is on the desk.</button><button class="quiz-option" data-quiz-option="They are on the desk.">They are on the desk.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="under">
-        <p class="quiz-question">4. The rug is below the table. The rug is ___ the table.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="under">under</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="next to">next to</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="The room has a large window." data-hint="Has presents the window as a feature of the room." data-fix="The room has a large window.">
+        <p class="quiz-question">4. The writer wants to present the window as a room feature. Which sentence fits that viewpoint?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="The room has a large window.">The room has a large window.</button><button class="quiz-option" data-quiz-option="The room is a large window.">The room is a large window.</button><button class="quiz-option" data-quiz-option="The room have a large window.">The room have a large window.</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="kitchen">
-        <p class="quiz-question">5. Which room usually has a stove and a refrigerator?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="kitchen">kitchen</button><button class="quiz-option" data-quiz-option="bedroom">bedroom</button><button class="quiz-option" data-quiz-option="bathroom">bathroom</button><button class="quiz-option" data-quiz-option="hallway">hallway</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="above" data-hint="The picture is higher than the sofa and does not touch it." data-fix="The picture is above the sofa.">
+        <p class="quiz-question">5. The picture is higher than the sofa and does not touch it. It is ___ the sofa.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="above">above</button><button class="quiz-option" data-quiz-option="on">on</button><button class="quiz-option" data-quiz-option="in">in</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="bedroom">
-        <p class="quiz-question">6. You usually find a bed and a closet in the ___.</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="bedroom">bedroom</button><button class="quiz-option" data-quiz-option="kitchen">kitchen</button><button class="quiz-option" data-quiz-option="dining room">dining room</button><button class="quiz-option" data-quiz-option="balcony">balcony</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="between" data-hint="Between places something in the middle of two named reference points." data-fix="The chair is between the desk and the door.">
+        <p class="quiz-question">6. The chair is in the middle of the desk and the door. It is ___ them.</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="between">between</button><button class="quiz-option" data-quiz-option="next to">next to</button><button class="quiz-option" data-quiz-option="above">above</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="There are three chairs in the kitchen.">
-        <p class="quiz-question">7. Which sentence is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="There are three chairs in the kitchen.">There are three chairs in the kitchen.</button><button class="quiz-option" data-quiz-option="There is three chairs in the kitchen.">There is three chairs in the kitchen.</button><button class="quiz-option" data-quiz-option="There are a chair in the kitchen.">There are a chair in the kitchen.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="closet" data-hint="In common U.S. usage, built-in storage space is a closet." data-fix="The coats are in the built-in closet.">
+        <p class="quiz-question">7. A room has built-in storage space for coats. Which U.S. room word fits?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="closet">closet</button><button class="quiz-option" data-quiz-option="wardrobe">wardrobe</button><button class="quiz-option" data-quiz-option="restroom">restroom</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="It's on the desk.">
-        <p class="quiz-question">8. "Where is the lamp?" The lamp sits on the desk. Which answer is correct?</p>
-        <div class="quiz-options"><button class="quiz-option" data-quiz-option="It's on the desk.">It's on the desk.</button><button class="quiz-option" data-quiz-option="They're on the desk.">They're on the desk.</button><button class="quiz-option" data-quiz-option="It's the desk on.">It's the desk on.</button></div>
+      <div class="quiz-item" data-quiz-item data-answer="restroom" data-hint="Restroom is a common U.S. word for a public toilet room." data-fix="Excuse me, where is the restroom?">
+        <p class="quiz-question">8. A visitor is asking for the public toilet room in a museum. Which word is especially natural in U.S. English?</p><div class="quiz-options"><button class="quiz-option" data-quiz-option="restroom">restroom</button><button class="quiz-option" data-quiz-option="bedroom">bedroom</button><button class="quiz-option" data-quiz-option="closet">closet</button></div>
       </div>
     </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" data-check-quiz>Check quiz</button>
-      <button class="lesson-btn" data-reset-quiz>Reset quiz</button>
-    </div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-quiz>Check quiz</button><button class="lesson-btn" data-reset-quiz>Reset quiz</button></div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the category, information chain, or place contrast that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day room category, information, and location retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved uncountable furniture, known-object reference, and the no-contact meaning of above.">
+      <h3>Choose the missing room-description language</h3>
+      <div class="choice-bank" aria-label="Next-day room description choices">
+        <button class="choice-option" data-choice-option="some">some</button><button class="choice-option" data-choice-option="a">a</button>
+        <button class="choice-option" data-choice-option="It is">It is</button><button class="choice-option" data-choice-option="There is">There is</button>
+        <button class="choice-option" data-choice-option="above">above</button><button class="choice-option" data-choice-option="on">on</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The studio contains an unspecified amount of furniture: There is <button class="choice-gap" data-choice-gap data-answer="some" data-hint="Furniture is uncountable, so use some rather than a." data-fix="There is some furniture in the studio." data-placeholder="choose">choose</button> furniture in the studio.</span></div>
+      <div class="q"><span class="n">2</span><span>The previous sentence introduced one lamp. Now locate the same lamp: <button class="choice-gap" data-choice-gap data-answer="It is" data-hint="The singular lamp is already known, so refer back with it." data-fix="It is next to the bed." data-placeholder="choose">choose</button> next to the bed.</span></div>
+      <div class="q"><span class="n">3</span><span>The picture is higher than the sofa with no contact: It is <button class="choice-gap" data-choice-gap data-answer="above" data-hint="Above means higher than without touching." data-fix="The picture is above the sofa." data-placeholder="choose">choose</button> the sofa.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="are" data-hint="Furniture is uncountable, so the existence verb must be singular." data-fix="There is some furniture in the studio." data-why="Use there is with the uncountable noun furniture. To use there are, name plural countable items such as two chairs." data-success-message="Correct. You restored singular agreement with uncountable furniture.">
+      <h3>Repair the uncountable category noun</h3>
+      <p>The guide presents an amount, not separate countable items: “There are some furniture in the studio.” Tap the verb to replace.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="there">There</button><button class="error-choice" data-error-choice="are">are</button><button class="error-choice" data-error-choice="some">some</button><button class="error-choice" data-error-choice="furniture">furniture in the studio.</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, introduce one object and two plural objects in a fictional room. Then refer back to both with pronouns, give exact locations, and describe one room feature with <span class="ex">has</span>.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>There is a lamp in the room. It is on the desk. There are two chairs by the table. They are between the window and the door. The room has a large closet.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

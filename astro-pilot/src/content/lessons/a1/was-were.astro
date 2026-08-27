@@ -2,46 +2,54 @@
 import LessonPage from "../../../components/lesson/LessonPage.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
 export const page = defineLesson({
-  "title": "was / were · A1 Grammar · Curriculum Map",
+  "title": "Was / were · A1 Grammar",
   "slug": "was-were",
   "level": "A1",
   "topic": "was / were (past of to be)",
   "category": "Grammar",
   "contentType": "grammar",
   "status": "ready",
-  "description": "Use the past of be to locate and describe earlier situations: I was at home , They were tired , and Were you busy?",
+  "description": "Use was and were to locate and describe people, things, feelings, and situations in the past and to form clear questions.",
   "sequence": 11,
-  "prerequisites": [],
-  "related": [],
+  "prerequisites": ["a0/the-verb-to-be", "a0/subject-pronouns"],
+  "related": ["a1/there-is-there-are", "a2/past-time-expressions", "a2/past-simple"],
   "assessments": [
     "a1-exit"
-  ]
+  ],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 49,
+    "revisionSummary": "Past-state meaning, agreement, noun subjects, negatives, questions, short answers, there was/were, born, U.S. reductions, listening, feedback, privacy, production, and retrieval were audited; three learner pilots remain."
+  }
 });
 ---
 <LessonPage page={page}>
-<main class="wrap">
+<main class="wrap" data-core-duration="45–55 minutes" data-extension-duration="15–20 minutes">
   <p class="kicker"><span class="dot"></span> Grammar · Lesson 11</p>
   <h1>Past states with <em>was</em> and <em>were</em></h1>
   <p class="standfirst">Use the past of <span class="ex">be</span> to locate and describe earlier situations: <span class="ex">I was at home</span>, <span class="ex">They were tired</span>, and <span class="ex">Were you busy?</span></p>
   <div class="meta-row">
-    <span class="tag">≈ 55–65 min</span>
-    <span class="tag">past of be</span>
-    <span class="tag">yesterday and before</span>
-    <span class="tag">11 interactive tasks</span>
+    <span class="tag">45–55 min core</span>
+    <span class="tag">past states and situations</span>
+    <span class="tag">questions and short answers</span>
+    <span class="tag">15–20 min optional listening and retrieval</span>
   </div>
 
   <div class="lesson-flow" aria-label="Lesson flow">
     <div class="flow-step"><b>Notice</b><span>Compare now and yesterday.</span></div>
     <div class="flow-step"><b>Discover</b><span>Choose was or were.</span></div>
     <div class="flow-step"><b>Build</b><span>Ask, answer, and repair.</span></div>
-    <div class="flow-step"><b>Use</b><span>Describe a real past day.</span></div>
+    <div class="flow-step"><b>Use</b><span>Report a fictional past event.</span></div>
   </div>
 
   <p class="note-line"><span class="ex">Was</span> and <span class="ex">were</span> are not new grammar. They are the same verb <span class="ex">be</span> you learned first, moved onto yesterday’s timeline.</p>
 
   <h2>Two-minute retrieval</h2>
   <div class="lead-rule"></div>
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved present be, plural there are, and adverb placement before moving each system into past time.">
     <h3>Three quick checks from earlier lessons</h3>
     <p class="choice-hint">Answer from memory, then check. Say each complete sentence aloud.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -51,9 +59,9 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="There are">There are</button>
       <button class="choice-option" data-choice-option="always">always</button>
     </div>
-    <div class="q"><span class="n">1</span><span>My manager <button class="choice-gap" data-choice-gap data-answer="is" data-placeholder="choose">choose</button> from Chicago. &nbsp;<span class="contraction">(the verb to be, A0)</span></span></div>
-    <div class="q"><span class="n">2</span><span><button class="choice-gap" data-choice-gap data-answer="There are" data-placeholder="choose">choose</button> two meetings on my calendar today. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
-    <div class="q"><span class="n">3</span><span>I am <button class="choice-gap" data-choice-gap data-answer="always" data-placeholder="choose">choose</button> at my desk by nine. &nbsp;<span class="contraction">(adverbs of frequency)</span></span></div>
+    <div class="q"><span class="n">1</span><span>The staff profile identifies one manager from Chicago: My manager <button class="choice-gap" data-choice-gap data-answer="is" data-hint="One present subject, my manager, takes is." data-fix="My manager is from Chicago." data-placeholder="choose">choose</button> from Chicago. &nbsp;<span class="contraction">(the verb be, A0)</span></span></div>
+    <div class="q"><span class="n">2</span><span>Today’s calendar displays two separate meetings: <button class="choice-gap" data-choice-gap data-answer="There are" data-hint="Two meetings is plural, so the present introduction is There are." data-fix="There are two meetings on the calendar today." data-placeholder="choose">choose</button> two meetings on the calendar today. &nbsp;<span class="contraction">(there is / there are)</span></span></div>
+    <div class="q"><span class="n">3</span><span>The attendance record shows the same result every workday: I am <button class="choice-gap" data-choice-gap data-answer="always" data-hint="With be, the frequency adverb comes after am: am always." data-fix="I am always at my desk by nine." data-placeholder="choose">choose</button> at my desk by nine. &nbsp;<span class="contraction">(adverbs of frequency)</span></span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -73,7 +81,7 @@ export const page = defineLesson({
     </ul>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Subject agreement and the stated evidence identified was, were, wasn’t, or weren’t in every past situation.">
     <h3>Discovery check: choose the past form</h3>
     <p class="choice-hint">Read the subject first. <b>I, he, she,</b> and <b>it</b> take was; <b>you, we,</b> and <b>they</b> take were.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -82,12 +90,12 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="wasn’t">wasn’t</button>
       <button class="choice-option" data-choice-option="weren’t">weren’t</button>
     </div>
-    <div class="q"><span class="n">1</span><span>I <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> tired last night.</span></div>
-    <div class="q"><span class="n">2</span><span>We <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> at the station at six.</span></div>
-    <div class="q"><span class="n">3</span><span>It <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-placeholder="choose">choose</button> cold yesterday, so we sat outside.</span></div>
-    <div class="q"><span class="n">4</span><span>They <button class="choice-gap" data-choice-gap data-answer="weren’t" data-placeholder="choose">choose</button> at the meeting, so I sent them the notes.</span></div>
-    <div class="q"><span class="n">5</span><span>The train <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> full this morning, so I stood the whole way.</span></div>
-    <div class="q"><span class="n">6</span><span>Where <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> you two hours ago?</span></div>
+    <div class="q"><span class="n">1</span><span>I went to bed early because I <button class="choice-gap" data-choice-gap data-answer="was" data-hint="The positive reason uses was with I." data-fix="I went to bed early because I was tired last night." data-placeholder="choose">choose</button> tired last night.</span></div>
+    <div class="q"><span class="n">2</span><span>Our train left at 6:15, and we caught it because we <button class="choice-gap" data-choice-gap data-answer="were" data-hint="The positive location takes were with we." data-fix="We were at the station at six, so we caught the 6:15 train." data-placeholder="choose">choose</button> at the station at six.</span></div>
+    <div class="q"><span class="n">3</span><span>It <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-hint="Sitting outside comfortably supports a negative description: it wasn’t cold." data-fix="It wasn’t cold yesterday, so we sat outside." data-placeholder="choose">choose</button> cold yesterday, so we sat outside comfortably.</span></div>
+    <div class="q"><span class="n">4</span><span>They missed every presentation because they <button class="choice-gap" data-choice-gap data-answer="weren’t" data-hint="Missing every presentation supports the negative location weren’t at the meeting." data-fix="They weren’t at the meeting, so I sent them the notes." data-placeholder="choose">choose</button> at the meeting, so I sent them the notes.</span></div>
+    <div class="q"><span class="n">5</span><span>I had to stand for the entire trip because the train <button class="choice-gap" data-choice-gap data-answer="was" data-hint="Having no seat because the train was full requires positive was." data-fix="The train was full this morning, so I stood for the entire trip." data-placeholder="choose">choose</button> full this morning.</span></div>
+    <div class="q"><span class="n">6</span><span>The caller asks about one listener’s past location: Where <button class="choice-gap" data-choice-gap data-answer="were" data-hint="In a past question with you, were moves before the subject." data-fix="Where were you two hours ago?" data-placeholder="choose">choose</button> you two hours ago?</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -97,7 +105,7 @@ export const page = defineLesson({
 
   <h2>The system: was and were</h2>
   <div class="lead-rule"></div>
-  <p>You already know this verb. In the present it is <span class="ex">am, is, are</span>. To move it to the past, <strong>am</strong> and <strong>is</strong> become <span class="ex">was</span>, and <strong>are</strong> becomes <span class="ex">were</span>. Nothing else in the sentence changes; only the time moves.</p>
+  <p>You already know this verb. In the present it is <span class="ex">am, is, are</span>. To move a state or situation to the past, <strong>am</strong> and <strong>is</strong> become <span class="ex">was</span>, and <strong>are</strong> becomes <span class="ex">were</span>. In a direct comparison, keep the description or location and change the form of <span class="ex">be</span> plus any time expression.</p>
   <table>
     <thead><tr><th>present (today)</th><th>past (yesterday)</th></tr></thead>
     <tbody>
@@ -109,15 +117,33 @@ export const page = defineLesson({
     <thead><tr><th></th><th>I / he / she / it</th><th>you / we / they</th></tr></thead>
     <tbody>
       <tr><td><b>positive</b></td><td>I was at home.</td><td>They were at home.</td></tr>
-      <tr><td><b>negative</b></td><td>She wasn’t at home.</td><td>We weren’t at home.</td></tr>
+      <tr><td><b>negative</b></td><td>She was not / wasn’t at home.</td><td>We were not / weren’t at home.</td></tr>
       <tr><td><b>question</b></td><td>Was he at home?</td><td>Were you at home?</td></tr>
     </tbody>
   </table>
-  <p class="note-line">Short answers: <span class="ex">Yes, I was. / No, they weren’t.</span> Do not repeat the place or adjective in a short answer.</p>
+  <p class="note-line">Short answers repeat the matching past form but not the description or location: <span class="ex">Was Maya at home? Yes, she was.</span> <span class="ex">Were the neighbors there? No, they weren’t.</span> Use a full positive form after <span class="ex">yes</span>: <span class="ex">Yes, I was</span>.</p>
+
+  <h3>Pronouns and noun subjects</h3>
+  <p>Choose the form from the subject, not from the word after it. <span class="ex">You</span> always takes <span class="ex">were</span>, whether it means one listener or several. A singular name or noun takes <span class="ex">was</span>; a plural noun takes <span class="ex">were</span>.</p>
+  <table>
+    <thead><tr><th>subject</th><th>past form</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>I / Maya / the meeting / it</td><td><b>was</b></td><td>The meeting was useful.</td></tr>
+      <tr><td>you / we / Maya and Luis / the meetings</td><td><b>were</b></td><td>Maya and Luis were early.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Questions: move was or were before the subject</h3>
+  <p><span class="ex">Was</span> and <span class="ex">were</span> make their own questions. For a yes/no question, use <span class="ex">Was/Were + subject + information?</span> For an information question, add a question word first: <span class="ex">Where were you?</span> or <span class="ex">Why was the office closed?</span></p>
+  <div class="thinking-card">
+    <h3>Statement, question, answer</h3>
+    <p><span class="ex">The appointment was on Tuesday. → Was the appointment on Tuesday? → Yes, it was.</span></p>
+    <p><span class="ex">The participants were in Room 4. → Where were the participants? → They were in Room 4.</span></p>
+  </div>
 
   <h2>Get to the root: move a state onto a past timeline</h2>
   <div class="lead-rule"></div>
-  <p><span class="ex">Was/were</span> is the past form of <span class="ex">be</span>. It connects a person or thing to a description, identity, age, condition, or location at an earlier time. It does not normally describe an action; it tells us what the situation <strong>was</strong>.</p>
+  <p><span class="ex">Was/were</span> is the past form of <span class="ex">be</span>. It connects a person or thing to a description, identity, age, condition, or location at an earlier time. It describes the past situation. An ordinary action usually needs a past action verb instead.</p>
   <table>
     <thead><tr><th>past connection</th><th>example</th><th>information</th></tr></thead>
     <tbody>
@@ -130,7 +156,7 @@ export const page = defineLesson({
   </table>
 
   <h3>Time expressions that point to the past</h3>
-  <p>A past-time expression tells the listener where to place the situation. When you hear or use one of these, present <span class="ex">am, is, are</span> switches to <span class="ex">was, were</span>. Once the past time is clear from context, you do not need to repeat it in every sentence.</p>
+  <p>A past-time expression tells the listener where to place the situation. When the sentence uses <span class="ex">be</span> for that past situation, choose <span class="ex">was</span> or <span class="ex">were</span>. Once the past time is clear from context, you do not need to repeat it in every sentence.</p>
   <table>
     <thead><tr><th>expression</th><th>example</th></tr></thead>
     <tbody>
@@ -151,17 +177,65 @@ export const page = defineLesson({
   <div class="thinking-card">
     <h3>Follow the moving part</h3>
     <p><span class="ex">The meeting was long. → Was the meeting long? → The meeting wasn’t long.</span></p>
-    <p>Only <span class="ex">was</span> moves or becomes negative. This is why <span class="ex">Did the meeting was long?</span> mixes two different systems and is not the target form. Compare an action verb: <span class="ex">Did she work?</span> But with <span class="ex">be</span>: <span class="ex">Was she at work?</span></p>
+    <p>Only <span class="ex">was</span> moves or combines with <span class="ex">not</span>. This is why <span class="ex">Did the meeting was long?</span> mixes two different systems. Compare an action: <span class="ex">Did she work yesterday?</span> Compare her past location or situation: <span class="ex">Was she at work yesterday?</span></p>
   </div>
 
   <h3><em>There was / there were</em>: the past of <em>there is / there are</em></h3>
-  <p>You can move <span class="ex">there is / there are</span> onto the same past timeline. Say <span class="ex">There was a problem</span> for one thing and <span class="ex">There were two empty seats</span> for plural things. Questions follow the same movement: <span class="ex">Was there a problem? Were there any seats?</span></p>
+  <p>You can move <span class="ex">there is / there are</span> onto the same past timeline. Say <span class="ex">There was a problem</span> for one thing and <span class="ex">There were two empty seats</span> for plural things. Use <span class="ex">There wasn’t</span> and <span class="ex">There weren’t</span> for negatives. Questions follow the same movement: <span class="ex">Was there a problem? Were there any seats?</span></p>
   <div class="note">
     <h3>Born uses was / were</h3>
-    <p>English says <span class="ex">I was born in 1990</span> and <span class="ex">They were born in Brazil</span>. Treat <span class="ex">was/were born</span> as a useful fixed chunk. Ask <span class="ex">Where were you born?</span>, not <span class="ex">Where did you born?</span></p>
+    <p>English says <span class="ex">I was born in 1990</span> and <span class="ex">They were born in Brazil</span>. At A1, treat <span class="ex">was/were born</span> as a useful fixed chunk. Ask <span class="ex">Where were you born?</span>, not <span class="ex">Where did you born?</span>. Use an invented profile if you prefer not to share personal information.</p>
   </div>
 
-  <div class="practice" data-choice-gap-drill>
+  <div class="note">
+    <h3>Sound natural: light forms and clear focus in U.S. English</h3>
+    <p>When the past situation is simple information, <span class="ex">was</span> and <span class="ex">were</span> are usually light and link to the words around them. Unstressed <span class="ex">was</span> often sounds like /wəz/, and unstressed <span class="ex">were</span> often sounds like /wɚ/. The important description receives the strongest beat: <span class="ex">I was at <strong>HOME</strong></span> and <span class="ex">They were <strong>TIRED</strong></span>.</p>
+    <table>
+      <thead><tr><th>neutral message</th><th>natural focus</th><th>contrastive message</th></tr></thead>
+      <tbody>
+        <tr><td>I was at home.</td><td>I was at <b>HOME</b>.</td><td>I <b>WAS</b> at home. I wasn’t at work.</td></tr>
+        <tr><td>They were tired.</td><td>They were <b>TIRED</b>.</td><td><b>THEY</b> were tired, not us.</td></tr>
+        <tr><td>Were you busy?</td><td>Were-you <b>BUSY</b>?</td><td>Were you busy <b>YESTERDAY</b>?</td></tr>
+      </tbody>
+    </table>
+    <p>When <span class="ex">was</span> or <span class="ex">were</span> is contrasted, it becomes strong: <span class="ex">I <strong>WAS</strong> there</span> and <span class="ex">They <strong>WERE</strong> ready</span>. The negative contractions stay clearer because they carry the negative meaning. In common U.S. speech, <span class="ex">wasn’t</span> is usually /wʌzənt/ and <span class="ex">weren’t</span> is /wɝnt/. Link question openings smoothly: <span class="ex">Was-he…?</span>, <span class="ex">Was-there…?</span>, and <span class="ex">Were-you…?</span>.</p>
+  </div>
+
+  <section data-lesson-extension="Tutor-read was and were agreement, polarity, and reduction check">
+    <h2>Listen: what past pattern did you hear?</h2>
+    <div class="lead-rule"></div>
+    <p>Your teacher reads each fictional line once with natural U.S. rhythm and once more slowly. Identify the subject number, positive or negative meaning, or question pattern. Open the script only after checking.</p>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You distinguished singular and plural statements, negative contractions, and questions despite natural U.S. reductions.">
+      <h3>Tutor-read listening check</h3>
+      <div class="choice-bank" aria-label="Was and were listening patterns">
+        <button class="choice-option" data-choice-option="one positive situation">one positive situation</button><button class="choice-option" data-choice-option="several positive situations">several positive situations</button>
+        <button class="choice-option" data-choice-option="one negative situation">one negative situation</button><button class="choice-option" data-choice-option="several negative situations">several negative situations</button>
+        <button class="choice-option" data-choice-option="question about one person">question about one person</button><button class="choice-option" data-choice-option="question about two people">question about two people</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>Clip 1 describes <button class="choice-gap" data-choice-gap data-answer="one positive situation" data-hint="The singular noun workshop takes the positive form was." data-fix="The workshop was useful: one positive situation." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">2</span><span>Clip 2 describes <button class="choice-gap" data-choice-gap data-answer="several positive situations" data-hint="The plural noun workshops takes the positive form were." data-fix="The workshops were useful: several positive situations." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">3</span><span>Clip 3 describes <button class="choice-gap" data-choice-gap data-answer="one negative situation" data-hint="The singular room and the contraction wasn’t make one negative situation." data-fix="The room wasn’t ready: one negative situation." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">4</span><span>Clip 4 describes <button class="choice-gap" data-choice-gap data-answer="several negative situations" data-hint="The plural rooms and the contraction weren’t make several negative situations." data-fix="The rooms weren’t ready: several negative situations." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">5</span><span>Clip 5 asks a <button class="choice-gap" data-choice-gap data-answer="question about one person" data-hint="Was comes before the one-person subject Maya." data-fix="Was Maya at reception: question about one person." data-placeholder="listen">listen</button>.</span></div>
+      <div class="q"><span class="n">6</span><span>Clip 6 asks a <button class="choice-gap" data-choice-gap data-answer="question about two people" data-hint="Were comes before the two-person subject Maya and Luis." data-fix="Were Maya and Luis at reception: question about two people." data-placeholder="listen">listen</button>.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <details class="thinking-card">
+      <summary>Open the teacher script after checking</summary>
+      <ol>
+        <li><span class="ex">The workshop was useful.</span></li>
+        <li><span class="ex">The workshops were useful.</span></li>
+        <li><span class="ex">The room wasn’t ready.</span></li>
+        <li><span class="ex">The rooms weren’t ready.</span></li>
+        <li><span class="ex">Was Maya at reception?</span></li>
+        <li><span class="ex">Were Maya and Luis at reception?</span></li>
+      </ol>
+      <p>Keep neutral <span class="ex">was</span> and <span class="ex">were</span> light, keep the negative contractions audible, and link each question form smoothly to its subject. Do not exaggerate the reduced vowel.</p>
+    </details>
+  </section>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. Each consequence established the subject, past time, and positive or negative state needed in the gap.">
     <h3>Drill 1: choose the past form in context</h3>
     <p class="choice-hint">Read the whole sentence first. The second half tells you if the idea is positive or negative.</p>
     <div class="choice-bank" aria-label="Answer choices">
@@ -170,14 +244,14 @@ export const page = defineLesson({
       <button class="choice-option" data-choice-option="wasn’t">wasn’t</button>
       <button class="choice-option" data-choice-option="weren’t">weren’t</button>
     </div>
-    <div class="q"><span class="n">1</span><span>The meeting <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> short yesterday, so I left the office early.</span></div>
-    <div class="q"><span class="n">2</span><span>My keys <button class="choice-gap" data-choice-gap data-answer="weren’t" data-placeholder="choose">choose</button> in my bag, so I checked the car.</span></div>
-    <div class="q"><span class="n">3</span><span>We <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> at a conference in Denver last week.</span></div>
-    <div class="q"><span class="n">4</span><span>The tickets <button class="choice-gap" data-choice-gap data-answer="weren’t" data-placeholder="choose">choose</button> expensive, so we bought four.</span></div>
-    <div class="q"><span class="n">5</span><span>I <button class="choice-gap" data-choice-gap data-answer="was" data-placeholder="choose">choose</button> at the office until eight last night.</span></div>
-    <div class="q"><span class="n">6</span><span>The clients <button class="choice-gap" data-choice-gap data-answer="were" data-placeholder="choose">choose</button> happy with the new design, so we signed the contract.</span></div>
-    <div class="q"><span class="n">7</span><span>It <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-placeholder="choose">choose</button> warm on Saturday, so we stayed inside.</span></div>
-    <div class="q"><span class="n">8</span><span>The bakery <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-placeholder="choose">choose</button> open on Monday, so we went to the café next door.</span></div>
+    <div class="q"><span class="n">1</span><span>The meeting <button class="choice-gap" data-choice-gap data-answer="was" data-hint="Leaving early because the meeting ended quickly supports the positive singular form was." data-fix="The meeting was short yesterday, so I left the office early." data-placeholder="choose">choose</button> short yesterday, so I left the office early.</span></div>
+    <div class="q"><span class="n">2</span><span>My keys <button class="choice-gap" data-choice-gap data-answer="weren’t" data-hint="Checking another place means the plural keys were not in the bag." data-fix="My keys weren’t in my bag, so I checked the car." data-placeholder="choose">choose</button> in my bag, so I checked the car.</span></div>
+    <div class="q"><span class="n">3</span><span>The conference badge photo shows our whole group in Denver: We <button class="choice-gap" data-choice-gap data-answer="were" data-hint="The photo confirms the positive location, and we takes were." data-fix="We were at a conference in Denver last week." data-placeholder="choose">choose</button> at a conference in Denver last week.</span></div>
+    <div class="q"><span class="n">4</span><span>The tickets <button class="choice-gap" data-choice-gap data-answer="weren’t" data-hint="Buying four because the price was low supports the negative plural form weren’t expensive." data-fix="The tickets weren’t expensive, so we bought four." data-placeholder="choose">choose</button> expensive, so we bought four.</span></div>
+    <div class="q"><span class="n">5</span><span>The security record shows that I left at 8:05: I <button class="choice-gap" data-choice-gap data-answer="was" data-hint="The record confirms a positive location, and I takes was." data-fix="I was at the office until eight last night." data-placeholder="choose">choose</button> at the office until eight last night.</span></div>
+    <div class="q"><span class="n">6</span><span>The clients <button class="choice-gap" data-choice-gap data-answer="were" data-hint="Signing the contract because they liked the design supports the positive plural form were happy." data-fix="The clients were happy with the new design, so we signed the contract." data-placeholder="choose">choose</button> happy with the new design, so we signed the contract.</span></div>
+    <div class="q"><span class="n">7</span><span>It <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-hint="Staying inside because of the low temperature supports the negative singular form wasn’t warm." data-fix="It wasn’t warm on Saturday, so we stayed inside." data-placeholder="choose">choose</button> warm on Saturday, so we stayed inside.</span></div>
+    <div class="q"><span class="n">8</span><span>The bakery <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-hint="Going to another café means the singular bakery was not open." data-fix="The bakery wasn’t open on Monday, so we went to the café next door." data-placeholder="choose">choose</button> open on Monday, so we went to the café next door.</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-choices>Check</button>
       <button class="lesson-btn" data-reset-choices>Reset</button>
@@ -185,15 +259,15 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="practice" data-answer-drill>
-    <h3>Drill 2: type the question word or short answer</h3>
-    <p class="choice-hint">Start questions with <b>Was</b> or <b>Were</b>. Short answers use <b>was, wasn’t, were,</b> or <b>weren’t</b>.</p>
-    <div class="q"><span class="n">1</span><span><input class="answer-input" data-answer="Were" aria-label="answer 1" /> you at the office yesterday?</span></div>
-    <div class="q"><span class="n">2</span><span><input class="answer-input" data-answer="Was" aria-label="answer 2" /> the flight on time?</span></div>
-    <div class="q"><span class="n">3</span><span>No, it <input class="answer-input" data-answer="wasn’t" aria-label="answer 3" />.</span></div>
-    <div class="q"><span class="n">4</span><span>Yes, I <input class="answer-input" data-answer="was" aria-label="answer 4" />.</span></div>
-    <div class="q"><span class="n">5</span><span><input class="answer-input" data-answer="Were" aria-label="answer 5" /> your coworkers at the training?</span></div>
-    <div class="q"><span class="n">6</span><span>No, they <input class="answer-input" data-answer="weren’t" aria-label="answer 6" />.</span></div>
+  <div class="practice" data-answer-drill data-success-message="Correct. You moved was or were before each subject and matched every short answer to its question and stated evidence.">
+    <h3>Drill 2: type one question form or short-answer form</h3>
+    <p class="choice-hint">Type one word in each gap. Start a past <b>be</b> question with <b>Was</b> or <b>Were</b>. In a short answer, match the subject and the positive or negative evidence.</p>
+    <div class="q"><span class="n">1</span><span>The office log confirms the listener was there yesterday. A coworker asks: <input class="answer-input" data-answer="Were" data-hint="A past question with you begins with Were." data-fix="Were you at the office yesterday?" aria-label="Opening word in a past question asking one listener about the office" /> you at the office yesterday?</span></div>
+    <div class="q"><span class="n">2</span><span>The travel assistant asks about one flight: <input class="answer-input" data-answer="Was" data-hint="The singular subject the flight takes Was at the front of the question." data-fix="Was the flight on time?" aria-label="Opening word in a past question about one flight" /> the flight on time?</span></div>
+    <div class="q"><span class="n">3</span><span>The tracker shows a forty-minute delay. “Was the flight on time?” “No, it <input class="answer-input" data-answer="wasn’t" data-hint="The stated delay requires a negative short answer with it: wasn’t." data-fix="No, it wasn’t." aria-label="Negative short-answer form after a question about a delayed flight" />.”</span></div>
+    <div class="q"><span class="n">4</span><span>The event log confirms Jordan attended. Jordan answers, “Were you at the event?” “Yes, I <input class="answer-input" data-answer="was" data-hint="A positive short answer with I uses the full form was." data-fix="Yes, I was." aria-label="Positive short-answer form for Jordan confirming attendance" />.”</span></div>
+    <div class="q"><span class="n">5</span><span>The attendance sheet lists both of the speaker’s coworkers. The trainer asks: <input class="answer-input" data-answer="Were" data-hint="The plural subject your coworkers takes Were at the front of the question." data-fix="Were your coworkers at the training?" aria-label="Opening word in a past question about two coworkers at training" /> your coworkers at the training?</span></div>
+    <div class="q"><span class="n">6</span><span>The attendance sheet has neither coworker’s name. “Were your coworkers at the training?” “No, they <input class="answer-input" data-answer="weren’t" data-hint="The negative evidence and plural pronoun they require weren’t." data-fix="No, they weren’t." aria-label="Negative short-answer form for two absent coworkers" />.”</span></div>
     <div class="drill-actions">
       <button class="lesson-btn" data-check-answers>Check</button>
       <button class="lesson-btn" data-reset-answers>Reset</button>
@@ -204,21 +278,21 @@ export const page = defineLesson({
   <h2>Read and choose</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
-    <h3>A message from a coworker</h3>
+    <h3>A fictional message from a coworker</h3>
     <p><span class="ex">"Sorry I missed your call. I was in a meeting until six. It was a long day. Marco and Lena were there too. The traffic was terrible afterward. Where were you last night?"</span></p>
   </div>
-  <div class="quiz" data-quiz data-success-message="Good reading. You followed was and were through a real message.">
+  <div class="quiz" data-quiz data-success-message="Correct. You located the writer, two other attendees, and the traffic description in one coherent past message.">
     <h3>Drill 3: read, then choose</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="in a meeting">
+      <div class="quiz-item" data-quiz-item data-answer="in a meeting" data-hint="The writer directly says I was in a meeting until six." data-fix="The writer was in a meeting until six.">
         <p class="quiz-question">1. Where was the writer until six?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="in a meeting">in a meeting</button><button class="quiz-option" data-quiz-option="in traffic">in traffic</button><button class="quiz-option" data-quiz-option="at the dentist">at the dentist</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Marco and Lena">
-        <p class="quiz-question">2. Who was at the meeting too?</p>
+      <div class="quiz-item" data-quiz-item data-answer="Marco and Lena" data-hint="The message names Marco and Lena immediately before were there too." data-fix="Marco and Lena were at the meeting too.">
+        <p class="quiz-question">2. Who else was at the meeting?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Marco and Lena">Marco and Lena</button><button class="quiz-option" data-quiz-option="nobody">nobody</button><button class="quiz-option" data-quiz-option="the writer’s manager">the writer’s manager</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="terrible">
+      <div class="quiz-item" data-quiz-item data-answer="terrible" data-hint="The sentence The traffic was terrible afterward gives the description directly." data-fix="The traffic was terrible afterward.">
         <p class="quiz-question">3. How was the traffic afterward?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="terrible">terrible</button><button class="quiz-option" data-quiz-option="fine">fine</button><button class="quiz-option" data-quiz-option="quiet">quiet</button></div>
       </div>
@@ -230,9 +304,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="were you at the office yesterday">
+  <div class="tile-game" data-tile-builder data-answer="were you at the office yesterday" data-hint="A yes/no question with you begins Were you, followed by the location and past time." data-fix="Were you at the office yesterday?" data-success-message="Correct. Were moved before the subject you, and the place and past-time expressions followed in natural order.">
     <h3>Drill 4: build the question</h3>
-    <p class="tile-target">Build the question. Remember: were moves in front of the subject.</p>
+    <p class="tile-target">The fictional office log has a gap. Build the complete question. Remember: <b>were</b> moves in front of the subject.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="yesterday">yesterday</button>
       <button class="tile" data-build-tile="were">Were</button>
@@ -249,9 +323,9 @@ export const page = defineLesson({
     <p class="feedback" data-feedback></p>
   </div>
 
-  <div class="tile-game" data-tile-builder data-answer="the restaurant wasn’t open on monday">
+  <div class="tile-game" data-tile-builder data-answer="the restaurant wasn’t open on monday" data-hint="Begin with the singular subject, add wasn’t, then add the description and time." data-fix="The restaurant wasn’t open on Monday." data-success-message="Correct. The singular subject took wasn’t, followed by the description open and the past-time expression on Monday.">
     <h3>Drill 5: build the negative</h3>
-    <p class="tile-target">Build the sentence. Only wasn’t carries the negative.</p>
+    <p class="tile-target">A closure notice explains why the group went somewhere else. Build the sentence. Only <b>wasn’t</b> carries the negative.</p>
     <div class="tile-bank" data-build-bank>
       <button class="tile" data-build-tile="open">open</button>
       <button class="tile" data-build-tile="wasn’t">wasn’t</button>
@@ -270,7 +344,7 @@ export const page = defineLesson({
 
   <h2>Notice and repair errors</h2>
   <div class="lead-rule"></div>
-  <div class="micro-drill" data-spot-error data-answer="was" data-fix="They were at home last night." data-why="Use were with you, we, and they.">
+  <div class="micro-drill" data-spot-error data-answer="was" data-hint="The subject They is plural, so compare the past forms was and were." data-fix="They were at home last night." data-why="Use were with you, we, and they.">
     <h3>Drill 6: plural subject, plural form</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
@@ -282,8 +356,8 @@ export const page = defineLesson({
     <p class="hidden-answer" data-error-feedback></p>
   </div>
 
-  <div class="micro-drill" data-spot-error data-answer="were" data-fix="I was tired after the trip." data-why="Use was with I, he, she, and it.">
-    <h3>Drill 7: I goes with was</h3>
+  <div class="micro-drill" data-spot-error data-answer="were" data-hint="The subject I takes the same past form as he, she, and it." data-fix="I was tired after the trip." data-why="Use was with I, he, she, and it.">
+    <h3>Drill 7: I takes was</h3>
     <p>Tap the word that is wrong.</p>
     <div class="spot-options">
       <button class="error-choice" data-error-choice="i">I</button>
@@ -324,62 +398,73 @@ export const page = defineLesson({
         <p class="transform-answer" data-transform-answer><strong>Yes, it was.</strong></p>
       </div>
       <div class="transform-item" data-transform-item>
-        <p class="transform-cue"><b>6</b> Were your friends at the game? Answer no.</p>
+        <p class="transform-cue"><b>6</b> Were Maya and Luis at the game? Answer no.</p>
         <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
         <p class="transform-answer" data-transform-answer><strong>No, they weren’t.</strong></p>
       </div>
     </div>
   </div>
 
-  <h2>Use it in real life</h2>
+  <h2>Use it in a realistic past scene</h2>
   <div class="lead-rule"></div>
-  <div class="prompt-card"><b>Yesterday, three times:</b> Say where you were yesterday at nine in the morning, at three in the afternoon, and at nine at night. <span class="ex">At nine I was at my desk.</span></div>
-  <div class="prompt-card"><b>Last weekend:</b> Describe your last weekend with was and were. Where were you? Who was with you? How was the weather?</div>
-  <div class="prompt-card"><b>Ask the teacher:</b> Ask five questions that begin <span class="ex">Where were you…?</span> and listen for the short answers. <span class="ex">Where were you last Friday at eight?</span></div>
-  <div class="prompt-card"><b>A place you visited:</b> Think of a place from a past trip and describe how it was. <span class="ex">The streets were crowded. The food was excellent.</span></div>
-  <div class="prompt-card"><b>Childhood:</b> Say three true sentences that begin <span class="ex">When I was a child…</span> <span class="ex">When I was a child, our apartment was small.</span></div>
+  <p class="note-line">You never need to disclose your real location, schedule, workplace, travel, age, or childhood. Use the fictional event below, invent a profile, or choose to share a non-sensitive experience.</p>
+  <div class="thinking-card">
+    <h3>Riverside Skills Fair: fictional event record</h3>
+    <ul>
+      <li><b>When:</b> Saturday, 10:00 a.m. to 4:00 p.m.</li>
+      <li><b>Where:</b> Riverside Community Center</li>
+      <li><b>People:</b> Maya at the information desk; Luis absent</li>
+      <li><b>Conditions:</b> rainy outside; main hall crowded; training rooms quiet</li>
+      <li><b>Resources:</b> one projector problem; two spare rooms</li>
+    </ul>
+  </div>
+  <div class="prompt-card"><b>Build the scene:</b> Make four statements from the record. Include one singular subject with <span class="ex">was</span>, one plural subject with <span class="ex">were</span>, and one negative. <span class="ex">The main hall was crowded. Luis wasn’t there.</span></div>
+  <div class="prompt-card"><b>Interview a witness:</b> Ask two yes/no questions and one information question about the event. Your partner answers from the record with a short answer and then a complete answer. <span class="ex">Was Maya at the information desk? Yes, she was. She was at the information desk.</span></div>
+  <div class="prompt-card"><b>Introduce what existed:</b> Use <span class="ex">there was</span> for the projector problem and <span class="ex">there were</span> for the spare rooms. Then make one of the sentences negative.</div>
+  <div class="prompt-card"><b>Invented profile:</b> Create an adult fictional profile with a birthplace, a past age, and a past role. <span class="ex">Nora was born in Chicago. In 2020, she was thirty. She was a hotel manager.</span></div>
+  <div class="prompt-card"><b>Final production: report the fictional skills fair for 45–60 seconds.</b> Include two positive past states, one negative, one question with a short answer, one information question with its answer, and one <span class="ex">there was / there were</span> sentence. Keep <span class="ex">was</span> and <span class="ex">were</span> light in neutral statements, but make the negative clear.</div>
 
   <h2>Reflect</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
     <h3>Say the system back</h3>
-    <p>Complete this aloud: “Am and is become ______. Are becomes ______. For a question, ______ or ______ moves in front of the subject. With not, I say ______ and ______.”</p>
-    <p>Then say one positive sentence, one negative sentence, and one question about yesterday.</p>
+    <p>Complete this aloud: “Am and is become ______. Are becomes ______. A singular noun takes ______; a plural noun takes ______. For a question, ______ or ______ moves in front of the subject. With not, I say ______ and ______.”</p>
+    <p>Then explain why <span class="ex">Was she at work?</span> does not use <span class="ex">did</span>, and give a positive and negative short answer.</p>
   </div>
 
-  <div class="quiz" data-quiz data-success-message="Excellent. You can describe past states, places, and feelings with was and were.">
+  <div class="quiz" data-quiz data-success-message="Correct. You used past evidence, subject agreement, question order, short answers, there were, and a past-time expression accurately.">
     <h3>Final quiz: was and were forms and meaning</h3>
     <div class="quiz-list">
-      <div class="quiz-item" data-quiz-item data-answer="was">
-        <p class="quiz-question">1. I ___ at home last night.</p>
+      <div class="quiz-item" data-quiz-item data-answer="was" data-hint="The location record is positive, and I takes was in the past." data-fix="The fictional speaker says: I was at home last night.">
+        <p class="quiz-question">1. A fictional location record confirms the speaker was home: I ___ at home last night.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="am">am</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="were">
-        <p class="quiz-question">2. The stores ___ closed on Sunday.</p>
+      <div class="quiz-item" data-quiz-item data-answer="were" data-hint="The posted hours confirm the positive description, and the plural stores takes were." data-fix="The stores were closed on Sunday, so no customers could enter.">
+        <p class="quiz-question">2. The posted hours show a Sunday closure: The stores ___ closed on Sunday, so no customers could enter.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="is">is</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="Were you busy?">
-        <p class="quiz-question">3. Choose the correct question.</p>
+      <div class="quiz-item" data-quiz-item data-answer="Were you busy?" data-hint="A past be question with you begins Were you and does not use did." data-fix="Were you busy?">
+        <p class="quiz-question">3. A coworker asks one listener about yesterday. Choose the correct past question.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="Were you busy?">Were you busy?</button><button class="quiz-option" data-quiz-option="Did you were busy?">Did you were busy?</button><button class="quiz-option" data-quiz-option="You was busy?">You was busy?</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="wasn’t">
-        <p class="quiz-question">4. Was the hotel nice? No, it ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="wasn’t" data-hint="The negative review and pronoun it require the short answer wasn’t." data-fix="Was the hotel nice? No, it wasn’t.">
+        <p class="quiz-question">4. The fictional review says the hotel was noisy and dirty. Was the hotel nice? No, it ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="wasn’t">wasn’t</button><button class="quiz-option" data-quiz-option="weren’t">weren’t</button><button class="quiz-option" data-quiz-option="isn’t">isn’t</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="There were">
-        <p class="quiz-question">5. ___ two messages from the client yesterday.</p>
+      <div class="quiz-item" data-quiz-item data-answer="There were" data-hint="The inbox shows two past items, so use plural There were." data-fix="There were two messages from the client yesterday.">
+        <p class="quiz-question">5. The inbox shows exactly two client messages from yesterday: ___ two messages from the client yesterday.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="There were">There were</button><button class="quiz-option" data-quiz-option="There was">There was</button><button class="quiz-option" data-quiz-option="There are">There are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="last week">
-        <p class="quiz-question">6. We were in Lisbon ___.</p>
+      <div class="quiz-item" data-quiz-item data-answer="last week" data-hint="The diary date is seven days before today, so last week places the state in past time." data-fix="We were in Lisbon last week.">
+        <p class="quiz-question">6. The fictional diary is dated May 10, and today is May 17: We were in Lisbon ___.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="last week">last week</button><button class="quiz-option" data-quiz-option="next week">next week</button><button class="quiz-option" data-quiz-option="every week">every week</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="were">
-        <p class="quiz-question">7. Where ___ you two hours ago?</p>
+      <div class="quiz-item" data-quiz-item data-answer="were" data-hint="A past information question with you uses Where were you." data-fix="Where were you two hours ago?">
+        <p class="quiz-question">7. A caller asks one listener about a past location: Where ___ you two hours ago?</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="were">were</button><button class="quiz-option" data-quiz-option="was">was</button><button class="quiz-option" data-quiz-option="are">are</button></div>
       </div>
-      <div class="quiz-item" data-quiz-item data-answer="weren’t">
-        <p class="quiz-question">8. They ___ at the office, so I sent an email.</p>
+      <div class="quiz-item" data-quiz-item data-answer="weren’t" data-hint="The access log shows neither person entered, so the plural negative is weren’t." data-fix="They weren’t at the office, so I sent an email instead of visiting.">
+        <p class="quiz-question">8. The access log shows neither person entered the building: They ___ at the office, so I sent an email instead of visiting.</p>
         <div class="quiz-options"><button class="quiz-option" data-quiz-option="weren’t">weren’t</button><button class="quiz-option" data-quiz-option="wasn’t">wasn’t</button><button class="quiz-option" data-quiz-option="aren’t">aren’t</button></div>
       </div>
     </div>
@@ -389,6 +474,37 @@ export const page = defineLesson({
     </div>
     <p class="feedback" data-feedback></p>
   </div>
+
+  <p class="note-line">Return tomorrow before rereading the lesson. Complete the <a href="#next-day-retrieval">five-minute next-day retrieval</a>, then revisit only the agreement, negative, question, or spoken form that still feels slow.</p>
+
+  <section id="next-day-retrieval" data-lesson-extension="Five-minute next-day was and were retrieval">
+    <h2>Next-day retrieval</h2>
+    <div class="lead-rule"></div>
+    <div class="practice" data-choice-gap-drill data-success-message="Correct. You retrieved singular and plural positive forms and both negative contractions from explicit event evidence.">
+      <h3>Choose the past form from the event update</h3>
+      <div class="choice-bank" aria-label="Next-day was and were choices">
+        <button class="choice-option" data-choice-option="was">was</button><button class="choice-option" data-choice-option="were">were</button>
+        <button class="choice-option" data-choice-option="wasn’t">wasn’t</button><button class="choice-option" data-choice-option="weren’t">weren’t</button>
+      </div>
+      <div class="q"><span class="n">1</span><span>The photo shows every seat occupied: The main hall <button class="choice-gap" data-choice-gap data-answer="was" data-hint="The photo confirms a positive state, and the singular main hall takes was." data-fix="The main hall was crowded." data-placeholder="choose">choose</button> crowded.</span></div>
+      <div class="q"><span class="n">2</span><span>The room list shows two unused rooms: Two rooms <button class="choice-gap" data-choice-gap data-answer="were" data-hint="The list confirms a positive state, and two rooms takes were." data-fix="Two rooms were available." data-placeholder="choose">choose</button> available.</span></div>
+      <div class="q"><span class="n">3</span><span>The technician replaced the broken projector: The projector <button class="choice-gap" data-choice-gap data-answer="wasn’t" data-hint="Replacing the broken device supports a negative singular state: wasn’t ready." data-fix="The projector wasn’t ready." data-placeholder="choose">choose</button> ready.</span></div>
+      <div class="q"><span class="n">4</span><span>The attendance log shows every volunteer arrived before nine: The volunteers <button class="choice-gap" data-choice-gap data-answer="weren’t" data-hint="Every early arrival supports the negative plural state weren’t late." data-fix="The volunteers weren’t late." data-placeholder="choose">choose</button> late.</span></div>
+      <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+      <p class="feedback" data-feedback></p>
+    </div>
+    <div class="micro-drill" data-spot-error data-answer="Did" data-hint="A past question with be begins directly with Was or Were; it does not need did." data-fix="Was the room quiet?" data-why="Was and were make their own past questions by moving before the subject.">
+      <h3>Repair the past question</h3>
+      <p>The report asks about one room: “Did the room quiet?” Tap the one question word that must change.</p>
+      <div class="spot-options"><button class="error-choice" data-error-choice="Did">Did</button><button class="error-choice" data-error-choice="room">the room</button><button class="error-choice" data-error-choice="quiet">quiet?</button></div>
+      <p class="hidden-answer" data-error-feedback></p>
+    </div>
+    <div class="micro-drill" data-transform>
+      <h3>Thirty-second retrieval</h3>
+      <p>Without looking back, report one fictional singular past state, one plural past state, one negative, one yes/no question with a short answer, and one information question with its answer.</p>
+      <button class="lesson-btn" data-reveal-transform>Reveal after you answer</button>
+      <p class="transform-answer" data-transform-answer><strong>The workshop was useful. The rooms were quiet. The projector wasn’t ready. Was Maya at reception? Yes, she was. Where were the visitors? They were in the main hall.</strong></p>
+    </div>
+  </section>
 </main>
 </LessonPage>
-

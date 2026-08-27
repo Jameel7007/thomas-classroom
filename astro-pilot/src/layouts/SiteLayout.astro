@@ -1,25 +1,49 @@
 ---
 import "../styles/site.css";
+import FontStyles from "../components/FontStyles.astro";
+import SocialMetadata from "../components/SocialMetadata.astro";
+import SkipLink from "../components/SkipLink.astro";
+import StructuredData from "../components/StructuredData.astro";
 import { lessonCounts } from "../data/lesson-catalog.mjs";
+import { siteIdentityNodes, webPageNode } from "../lib/structured-data.mjs";
 
 interface Props {
   title: string;
   description: string;
-  current?: "home" | "curriculum" | "about" | "languages" | "blog" | "dictionary";
+  current?: "home" | "curriculum" | "diagnostics" | "about" | "languages" | "blog" | "dictionary";
   heading?: string;
   lede?: string;
-  showLevelJumps?: boolean;
+  noindex?: boolean;
+  schemaType?: "WebPage" | "CollectionPage" | "ProfilePage";
+  mainEntityId?: string;
+  additionalStructuredData?: Record<string, unknown>[];
+  socialType?: "website" | "article";
+  publishedTime?: string;
+  pageClass?: string;
 }
 
-const { title, description, current, heading = "The English Curriculum Map", lede = description, showLevelJumps = false } = Astro.props;
+const {
+  title,
+  description,
+  current,
+  heading = "The English Curriculum Map",
+  lede = description,
+  noindex = false,
+  schemaType = current === "curriculum" || current === "diagnostics" || current === "blog" || current === "languages"
+    ? "CollectionPage"
+    : current === "about" ? "ProfilePage" : "WebPage",
+  mainEntityId,
+  additionalStructuredData = [],
+  socialType = "website",
+  publishedTime,
+  pageClass,
+} = Astro.props;
 const counts = lessonCounts();
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const levels = [
-  { code: "A0", hue: 28 },
-  { code: "A1", hue: 70 },
-  { code: "A2", hue: 150 },
-  { code: "B1", hue: 245 },
-  { code: "B2", hue: 305 },
+const structuredData = [
+  ...siteIdentityNodes(Astro.site),
+  webPageNode({ canonical, title, description, site: Astro.site, type: schemaType, mainEntityId }),
+  ...additionalStructuredData,
 ];
 ---
 <!doctype html>
@@ -27,26 +51,30 @@ const levels = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <FontStyles />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <SocialMetadata title={title} description={description} canonical={canonical} type={socialType} publishedTime={publishedTime} />
+    {!noindex && <StructuredData nodes={structuredData} />}
   </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+  <body class={pageClass}>
+    <SkipLink target="main-content" label="Skip to content" className="skip-link" />
     <header class="masthead">
       <div class="mast-inner">
         <p class="welcome">Welcome to <em>Thomas’s Classroom</em></p>
         <h1 class="title">{heading}</h1>
         <p class="lede">{lede}</p>
         <div class="mast-stats" aria-label="Curriculum overview">
-          <span class="stat"><b>5</b> CEFR stages</span><span class="stat-div"></span>
-          <span class="stat"><b>{counts.total}</b> curriculum topics · {counts.ready} open</span><span class="stat-div"></span>
-          <span class="stat"><b>A0–B2</b> one coherent path</span>
+          {current === "curriculum" ? <>
+            <span class="stat"><b>{counts.total}</b> curriculum topics · {counts.ready} available now</span><span class="stat-div"></span>
+            <span class="stat"><b>A0–C1</b> complete learning path</span>
+            <span class="stat-div"></span><a class="stat stat-link" href="/tutor/">Tutor planning guide <b aria-hidden="true">→</b></a>
+          </> : <>
+            <span class="stat"><b>6</b> curriculum stages</span><span class="stat-div"></span>
+            <span class="stat"><b>{counts.total}</b> curriculum topics · {counts.ready} available now</span><span class="stat-div"></span>
+            <span class="stat"><b>A0–C1</b> one coherent path</span>
+          </>}
         </div>
       </div>
     </header>
@@ -55,19 +83,15 @@ const levels = [
         <nav class="site-tabs" aria-label="Site sections">
           <a class="site-tab" href="/" aria-current={current === "home" ? "page" : undefined}>Home</a>
           <a class="site-tab" href="/curriculum/" aria-current={current === "curriculum" ? "page" : undefined}>Curriculum</a>
-          <a class="site-tab" href="/assessments/placement-exam/">Placement Exam</a>
-          <a class="site-tab" href="/assessments/quick-level-check/">Quick Check</a>
+          <a class="site-tab" href="/assessments/" aria-current={current === "diagnostics" ? "page" : undefined}>Diagnostics</a>
           <a class="site-tab" href="/about/" aria-current={current === "about" ? "page" : undefined}>Bio</a>
           <a class="site-tab" href="/languages/" aria-current={current === "languages" ? "page" : undefined}>Languages</a>
           <a class="site-tab" href="/blog/" aria-current={current === "blog" ? "page" : undefined}>Blog</a>
           <a class="site-tab" href="/dictionary/" aria-current={current === "dictionary" ? "page" : undefined}>Dictionary</a>
         </nav>
-        {showLevelJumps && <nav class="level-jumps" aria-label="Jump to level">
-          {levels.map((level) => <a class="level-jump" href={`/curriculum/#lvl-${level.code}`} style={`--level-accent:oklch(.58 .13 ${level.hue})`}><span class="level-jump-dot"></span>{level.code}</a>)}
-        </nav>}
       </div>
     </div>
     <main id="main-content" tabindex="-1"><slot /></main>
-    <footer class="foot"><p>Aligned to the Common European Framework of Reference for Languages (CEFR). Hour estimates and GSE ranges are indicative guides, not guarantees.</p><p class="foot-mark">Thomas’s Classroom · A0 → B2</p></footer>
+    <footer class="foot"><p>Aligned to the Common European Framework of Reference for Languages (CEFR). Hour estimates and GSE ranges are indicative guides, not guarantees.</p><div class="foot-actions"><a class="foot-link" href="/tutor/">Tutor planning guide</a><p class="foot-mark">Thomas’s Classroom · A0 → C1</p></div></footer>
   </body>
 </html>

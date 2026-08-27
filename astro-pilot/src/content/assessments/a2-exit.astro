@@ -1,5 +1,6 @@
 ---
 import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+import AudioControl from "../../components/assessment/AudioControl.astro";
 export const page = {
   "original": "outputs/assessments/a2-exit.html",
   "source": "src/content/assessments/a2-exit.astro",
@@ -7,15 +8,48 @@ export const page = {
   "slug": "a2-exit",
   "title": "A2 End-of-Level Diagnostic",
   "description": "Use this after all A2 lessons to identify anything the learner missed and confirm whether they are ready to begin B1.",
-  "engine": "none",
+  "engine": "assessment",
   "bodyClass": "",
   "features": [
     "AssessmentPage",
-    "AssessmentNavigation"
+    "AssessmentNavigation",
+    "AssessmentEngine",
+    "ProgressIndicator",
+    "FeedbackPanel",
+    "MultipleChoiceExercise",
+    "AudioControls"
   ],
-  "contentTextHash": "e4a90a843c84e9c687e5bbe28fc429e72ed4d325d782ddb894efce1fd13f8536",
-  "interactionCounts": {},
-  "audioClips": []
+  "contentTextHash": "daed49a21e2d6f0c2aaebc8d3abac9851b4694bb4d90f0740d7474f221500dbe",
+  "interactionCounts": {
+    "data-assessment": 1,
+    "data-pass": 1,
+    "data-strong": 1,
+    "data-review-label": 1,
+    "data-pass-label": 1,
+    "data-strong-label": 1,
+    "data-review-feedback": 1,
+    "data-pass-feedback": 1,
+    "data-score-text": 1,
+    "data-score-bar": 1,
+    "data-score-label": 1,
+    "data-skill-summary": 1,
+    "data-assessment-item": 22,
+    "data-skill": 22,
+    "data-points": 22,
+    "data-answer": 20,
+    "data-option": 60,
+    "data-voice-clip": 2,
+    "data-speak": 2,
+    "data-credit": 10,
+    "data-check-assessment": 1,
+    "data-reset-assessment": 1,
+    "data-print-assessment": 1,
+    "data-feedback": 1
+  },
+  "audioClips": [
+    "a2-train-delay",
+    "a2-doctor-appointment"
+  ]
 };
 ---
 <AssessmentPage page={page}>
@@ -24,10 +58,214 @@ export const page = {
 <p class="overline">Complete A2 before advancing</p>
 <h1>A2 End-of-Level Diagnostic</h1>
 <p class="lede">Use this after all A2 lessons to identify anything the learner missed and confirm whether they are ready to begin B1.</p>
+
 <div class="grid">
-<section class="panel"><h2>Quiz Sections</h2><ul class="sections"><li><b>Grammar</b>Past simple, future forms, comparatives, present perfect, and conditionals.</li><li><b>Tasks</b>Travel, directions, health, study, and technology situations.</li><li><b>Story</b>Tell a simple past event with sequence and reasons.</li></ul></section>
-<section class="panel"><h2>Score Evidence</h2><ul class="rubric"><li>Can tell a simple story.</li><li>Can handle routine practical exchanges.</li><li>Can connect short sentences with simple linkers.</li></ul></section>
+<section class="panel"><h2>Benchmark goal</h2><p>The learner should connect sentences to handle routine problems, describe experiences, and explain simple plans. The final result combines controlled language with receptive and productive evidence.</p></section>
+<section class="panel"><h2>Advance when ready</h2><ul class="rubric"><li>Distinguishes past events, experiences, and future plans.</li><li>Understands connected practical messages and short texts.</li><li>Speaks and writes in a sequence with reasons and useful detail.</li></ul></section>
 </div>
-<p class="placeholder">Next build: create interactive grammar, listening, reading, writing, and speaking sections with visible score bands.</p>
+
+<section class="assessment" data-assessment data-pass="70" data-strong="88" data-require-live-evidence data-production-min="60" data-listening-min="50" data-evidence-label="More live evidence needed" data-evidence-feedback="The score is high enough, but confirm at least 60% in both speaking and writing and 50% in listening before advancing." data-review-label="A2 still developing" data-pass-label="Ready to begin B1" data-strong-label="A2 secure" data-review-feedback="The skill profile identifies which A2 abilities need another focused lesson cycle before the learner begins B1." data-pass-feedback="The learner has demonstrated the connected A2 language needed to begin B1. Review any weaker receptive or productive score before advancing.">
+<div class="score-card">
+<div class="score-big"><span>Score</span><b data-score-text>0 / 0</b></div>
+<div>
+<div class="score-meter"><span class="score-fill" data-score-bar></span></div>
+<div class="score-label" data-score-label>Not checked yet</div>
+<p class="score-help">A B1 starting point should be supported by both language control and independent communication.</p>
+<div class="skill-summary" data-skill-summary></div>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>1. Connect time, choice, and consequence</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="She went to the pharmacy after work.">
+<p class="item-kicker">Past simple</p>
+<div class="reading-text"><p>Yesterday Elena finished work at five. Then she bought some medicine at the pharmacy.</p></div>
+<p class="question">Choose the correct summary.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="She goed to the pharmacy after work.">She goed to the pharmacy after work.</button><button class="choice-btn" data-option="She went to the pharmacy after work.">She went to the pharmacy after work.</button><button class="choice-btn" data-option="She goes to the pharmacy after work yesterday.">She goes to the pharmacy after work yesterday.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="I was cooking when the lights went out.">
+<p class="item-kicker">Past continuous and past simple</p>
+<div class="reading-text"><p>You were making dinner. During that activity, the apartment suddenly became dark.</p></div>
+<p class="question">Which sentence shows the background activity and the interrupting event?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="I cooked when the lights were going out.">I cooked when the lights were going out.</button><button class="choice-btn" data-option="I was cooking when the lights went out.">I was cooking when the lights went out.</button><button class="choice-btn" data-option="I am cooking when the lights went out.">I am cooking when the lights went out.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="We are going to visit the new office next week.">
+<p class="item-kicker">Going to for plans</p>
+<div class="reading-text"><p>The tickets are booked and the appointment is in the team calendar for next Wednesday.</p></div>
+<p class="question">How does the team describe its plan?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="We are going visit the new office next week.">We are going visit the new office next week.</button><button class="choice-btn" data-option="We are going to visit the new office next week.">We are going to visit the new office next week.</button><button class="choice-btn" data-option="We going to visited the new office next week.">We going to visited the new office next week.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="I'll carry that box for you.">
+<p class="item-kicker">Will for an immediate offer</p>
+<div class="reading-text"><p>Your coworker is struggling with a heavy box. You decide to help at that moment.</p></div>
+<p class="question">What do you say?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="I'll carry that box for you.">I’ll carry that box for you.</button><button class="choice-btn" data-option="I carry that box yesterday.">I carry that box yesterday.</button><button class="choice-btn" data-option="I am carry that box for you.">I am carry that box for you.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="This route is faster than the highway.">
+<p class="item-kicker">Comparatives</p>
+<div class="reading-text"><p>The city route takes 25 minutes. The highway route takes 40 minutes.</p></div>
+<p class="question">Choose the accurate comparison.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="This route is more fast than the highway.">This route is more fast than the highway.</button><button class="choice-btn" data-option="This route is the fastest than the highway.">This route is the fastest than the highway.</button><button class="choice-btn" data-option="This route is faster than the highway.">This route is faster than the highway.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Have you ever traveled alone?">
+<p class="item-kicker">Present perfect for experience</p>
+<div class="reading-text"><p><strong>Answer:</strong> “Yes, I have. I traveled alone for the first time last year.”</p></div>
+<p class="question">Which question asks about the life experience?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Did you ever traveled alone?">Did you ever traveled alone?</button><button class="choice-btn" data-option="Have you ever traveled alone?">Have you ever traveled alone?</button><button class="choice-btn" data-option="Are you ever travel alone?">Are you ever travel alone?</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The train hasn't arrived yet.">
+<p class="item-kicker">Present perfect with yet</p>
+<div class="reading-text"><p>You are still waiting on the platform. The train was expected ten minutes ago.</p></div>
+<p class="question">What do you tell a friend?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The train hasn't arrived yet.">The train hasn’t arrived yet.</button><button class="choice-btn" data-option="The train didn't arrived already.">The train didn’t arrived already.</button><button class="choice-btn" data-option="The train hasn't arrive just.">The train hasn’t arrive just.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="You have to show your passport at the border.">
+<p class="item-kicker">Obligation</p>
+<div class="reading-text"><p>Border rule: Every traveler must present a valid passport.</p></div>
+<p class="question">How do you explain the rule to a friend?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="You have to show your passport at the border.">You have to show your passport at the border.</button><button class="choice-btn" data-option="You should to show your passport at the border.">You should to show your passport at the border.</button><button class="choice-btn" data-option="You don't have show your passport at the border.">You don’t have show your passport at the border.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="There aren't many buses after midnight.">
+<p class="item-kicker">Quantifiers</p>
+<div class="reading-text"><p>Only two night buses leave the city center after 12:00.</p></div>
+<p class="question">Choose the sentence that matches the schedule.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="There isn't much buses after midnight.">There isn’t much buses after midnight.</button><button class="choice-btn" data-option="There aren't many buses after midnight.">There aren’t many buses after midnight.</button><button class="choice-btn" data-option="There aren't a lot bus after midnight.">There aren’t a lot bus after midnight.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="If it rains, we'll take the subway.">
+<p class="item-kicker">First conditional</p>
+<div class="reading-text"><p>The plan depends on tomorrow’s weather: walk if it is dry; use public transportation if it is wet.</p></div>
+<p class="question">Which sentence explains the wet-weather plan?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="If it will rain, we take the subway.">If it will rain, we take the subway.</button><button class="choice-btn" data-option="If it rains, we'll take the subway.">If it rains, we’ll take the subway.</button><button class="choice-btn" data-option="If it rained, we'll taking the subway.">If it rained, we’ll taking the subway.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Please speak slowly because the connection is bad.">
+<p class="item-kicker">Adverbs of manner</p>
+<div class="reading-text"><p>You can hear the caller, but some words are unclear because the internet connection is poor.</p></div>
+<p class="question">What is the useful request?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Please speak slow because the connection is bad.">Please speak slow because the connection is bad.</button><button class="choice-btn" data-option="Please slowly speakly because the connection is bad.">Please slowly speakly because the connection is bad.</button><button class="choice-btn" data-option="Please speak slowly because the connection is bad.">Please speak slowly because the connection is bad.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="I enjoy learning new languages.">
+<p class="item-kicker">Verb plus -ing</p>
+<p class="question">Choose the natural sentence about an activity you like.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="I enjoy to learn new languages.">I enjoy to learn new languages.</button><button class="choice-btn" data-option="I enjoy learning new languages.">I enjoy learning new languages.</button><button class="choice-btn" data-option="I enjoy learn new languages.">I enjoy learn new languages.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>2. Read for sequence, purpose, and change</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The bus did not come, so Daniel used another form of transportation.">
+<p class="item-kicker">Read a travel problem</p>
+<div class="reading-text"><p>Daniel left home early for an important interview. He waited for the number 14 bus for twenty minutes, but it never arrived. He called a taxi and reached the office five minutes before the interview started.</p></div>
+<p class="question">What solved Daniel’s problem?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The bus did not come, so Daniel used another form of transportation.">The bus did not come, so Daniel used another form of transportation.</button><button class="choice-btn" data-option="Daniel missed the interview because he left home late.">Daniel missed the interview because he left home late.</button><button class="choice-btn" data-option="The interviewer drove Daniel to the office.">The interviewer drove Daniel to the office.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The class has moved, and students need a device for the activity.">
+<p class="item-kicker">Read a course update</p>
+<div class="reading-text"><p><strong>Course message</strong><br />Tomorrow’s technology class will meet in Room 305 instead of the computer lab. Please bring a laptop or tablet. We’re going to practice creating a short presentation. If you do not have a device, email me tonight.</p></div>
+<p class="question">Which summary includes both important changes?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The class has moved, and students need a device for the activity.">The class has moved, and students need a device for the activity.</button><button class="choice-btn" data-option="The class is canceled because the teacher has no laptop.">The class is canceled because the teacher has no laptop.</button><button class="choice-btn" data-option="Students will meet in the computer lab without their devices.">Students will meet in the computer lab without their devices.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Mina became more confident after receiving support at work.">
+<p class="item-kicker">Read about feelings and change</p>
+<div class="reading-text"><p>Mina started a new job six weeks ago. At first, she felt nervous because the software was unfamiliar and the office was much larger than her old workplace. Her colleagues answered her questions patiently, and she has already completed her first project. Now she feels more confident.</p></div>
+<p class="question">What is the main change in Mina’s experience?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Mina became more confident after receiving support at work.">Mina became more confident after receiving support at work.</button><button class="choice-btn" data-option="Mina left the new job because the software was difficult.">Mina left the new job because the software was difficult.</button><button class="choice-btn" data-option="Mina has not started her first project yet.">Mina has not started her first project yet.</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>3. Listen and solve practical problems</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="The train leaves forty minutes late from platform six.">
+<p class="item-kicker">Listen: a station announcement</p>
+<p class="question">Play the announcement. What has changed?</p>
+<AudioControl clip="a2-train-delay" src="/audio/assessments/a2-exit/train-delay.mp3" text="Attention passengers. The train to Boston is delayed by forty minutes. It will now leave from platform six at eleven twenty." label="Play announcement" ariaLabel="Play the train delay announcement" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="The train leaves forty minutes late from platform six.">The train leaves forty minutes late from platform six.</button><button class="choice-btn" data-option="The train leaves twenty minutes early from platform four.">The train leaves twenty minutes early from platform four.</button><button class="choice-btn" data-option="The Boston train is canceled for the day.">The Boston train is canceled for the day.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="Arrive at 3:05 on Thursday with an insurance card.">
+<p class="item-kicker">Listen: a medical appointment</p>
+<p class="question">Play the message. What should Nina do?</p>
+<AudioControl clip="a2-doctor-appointment" src="/audio/assessments/a2-exit/doctor-appointment.mp3" text="Hi, Nina. The doctor can see you on Thursday at three fifteen. Please arrive ten minutes early and bring your insurance card." label="Play message" ariaLabel="Play Nina’s appointment message" />
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Arrive at 3:05 on Thursday with an insurance card.">Arrive at 3:05 on Thursday with an insurance card.</button><button class="choice-btn" data-option="Arrive at 3:15 on Tuesday without any documents.">Arrive at 3:15 on Tuesday without any documents.</button><button class="choice-btn" data-option="Call the doctor at 3:05 to cancel Thursday.">Call the doctor at 3:05 to cancel Thursday.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="Go straight for two blocks, then turn left at the bank.">
+<p class="item-kicker">Give directions</p>
+<div class="reading-text"><p>A visitor is at the station. The library is two blocks ahead and one block to the left, beside the bank.</p></div>
+<p class="question">Choose the clearest first part of the directions.</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Go straight for two blocks, then turn left at the bank.">Go straight for two blocks, then turn left at the bank.</button><button class="choice-btn" data-option="Go left two banks and straight the library.">Go left two banks and straight the library.</button><button class="choice-btn" data-option="Turn right before the station and go back two blocks.">Turn right before the station and go back two blocks.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="Turn off the projector when the presentation finishes.">
+<p class="item-kicker">Technology and phrasal verbs</p>
+<div class="reading-text"><p>The presentation is over. The projector is still running, and nobody needs it now.</p></div>
+<p class="question">What instruction is appropriate?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="Turn off the projector when the presentation finishes.">Turn off the projector when the presentation finishes.</button><button class="choice-btn" data-option="Look up the projector after the presentation.">Look up the projector after the presentation.</button><button class="choice-btn" data-option="Put on the projector because nobody needs it.">Put on the projector because nobody needs it.</button></div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="I'd like a return ticket to Brighton, please.">
+<p class="item-kicker">Buy a ticket</p>
+<div class="reading-text"><p>You are traveling to Brighton this morning and coming home tonight.</p></div>
+<p class="question">What do you say at the ticket counter?</p>
+<div class="choice-row choice-grid"><button class="choice-btn" data-option="I'd like a return ticket to Brighton, please.">I’d like a return ticket to Brighton, please.</button><button class="choice-btn" data-option="I have returned Brighton yesterday.">I have returned Brighton yesterday.</button><button class="choice-btn" data-option="Can Brighton return me tonight?">Can Brighton return me tonight?</button></div>
+</article>
+</div>
+</div>
+
+<div class="assessment-section">
+<h2>4. Teacher-scored connected communication</h2>
+<div class="item-list">
+<article class="check-item" data-assessment-item data-skill="Speaking" data-points="5">
+<p class="item-kicker">Speaking task · 5 points</p>
+<div class="reading-text"><p><strong>Travel problem role play:</strong> The learner missed a train while traveling to an important appointment. Ask what happened, what they did next, and what they are going to do now. Then offer an alternative and ask the learner to respond.</p></div>
+<p class="question">Award one point for each ability demonstrated independently or after one light prompt.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Explains the past problem with a clear sequence of at least three events.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses past simple and past continuous sufficiently to separate events from background.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Explains a future plan or consequence with going to, will, or a first conditional.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Responds to the teacher’s suggestion and asks at least one relevant follow-up question.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Connects ideas for about two minutes using linkers such as then, because, but, so, or if.</label>
+</div>
+</article>
+
+<article class="check-item" data-assessment-item data-skill="Writing" data-points="5">
+<p class="item-kicker">Writing task · 5 points</p>
+<div class="reading-text"><p><strong>Write an email about a recent learning or travel experience.</strong> Explain what happened, describe one problem and its solution, say what you have learned, and give one future plan. Aim for 80–110 words.</p></div>
+<p class="question">Award one point for each observable quality.</p>
+<div class="credit-list">
+<label class="credit-check"><input type="checkbox" data-credit /> Covers the event, problem, solution, learning, and future-plan requirements.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses past forms to organize a comprehensible sequence of events.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses present perfect appropriately for an experience or current result.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Uses a workable future form and connects ideas with several simple linkers.</label>
+<label class="credit-check"><input type="checkbox" data-credit /> Produces connected text whose errors do not block the main meaning.</label>
+</div>
+</article>
+</div>
+</div>
+
+<div class="actions">
+<button class="assessment-btn primary" data-check-assessment>Check assessment</button>
+<button class="assessment-btn" data-reset-assessment>Reset</button>
+<button class="assessment-btn" data-print-assessment>Print summary</button>
+</div>
+<p class="feedback" data-feedback>Complete the sections, then check the assessment.</p>
+</section>
 </main>
 </AssessmentPage>

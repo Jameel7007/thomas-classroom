@@ -128,18 +128,34 @@
     let answers = Array(QUESTIONS.length).fill(null);
     let multipleChoiceLevel = "";
 
-    function renderQuestion(){
+    function selectChoice(button, moveFocus){
+      answers[current] = Number(button.dataset.choice);
+      stage.querySelectorAll("[data-choice]").forEach(function(choice){
+        const selected = choice === button;
+        choice.classList.toggle("is-selected", selected);
+        choice.setAttribute("aria-checked", String(selected));
+        choice.tabIndex = selected ? 0 : -1;
+      });
+      reminder.textContent = "";
+      if (moveFocus) button.focus();
+    }
+
+    function renderQuestion(focusHeading){
       const question = QUESTIONS[current];
       const letters = ["A", "B", "C"];
+      const questionId = "quick-question-" + (current + 1);
       stage.innerHTML =
         '<article class="question-card">' +
           '<div class="question-meta"><span>Question ' + (current + 1) + '</span><span class="level-tag">' + question.level + '</span></div>' +
           (question.passage ? '<div class="reading-message"><p>' + question.passage + '</p></div>' : '') +
-          '<h2>' + question.prompt + '</h2>' +
-          '<div class="choice-list">' +
+          '<h2 id="' + questionId + '" tabindex="-1">' + question.prompt + '</h2>' +
+          '<div class="choice-list" role="radiogroup" aria-labelledby="' + questionId + '">' +
             question.choices.map(function(choice, index){
+              const selected = answers[current] === index;
+              const tabbable = selected || (answers[current] === null && index === 0);
               return '<button class="answer-choice' + (answers[current] === index ? ' is-selected' : '') +
-                '" type="button" data-choice="' + index + '"><span class="choice-letter">' +
+                '" type="button" role="radio" aria-checked="' + String(selected) + '" tabindex="' + (tabbable ? '0' : '-1') +
+                '" data-choice="' + index + '"><span class="choice-letter">' +
                 letters[index] + '.</span>' + choice + '</button>';
             }).join("") +
           '</div>' +
@@ -147,11 +163,19 @@
 
       stage.querySelectorAll("[data-choice]").forEach(function(button){
         button.addEventListener("click", function(){
-          answers[current] = Number(button.dataset.choice);
-          stage.querySelectorAll("[data-choice]").forEach(function(choice){
-            choice.classList.toggle("is-selected", choice === button);
-          });
-          reminder.textContent = "";
+          selectChoice(button, false);
+        });
+        button.addEventListener("keydown", function(event){
+          const choices = Array.from(stage.querySelectorAll("[data-choice]"));
+          const index = choices.indexOf(button);
+          let targetIndex = index;
+          if (event.key === "ArrowRight" || event.key === "ArrowDown") targetIndex = (index + 1) % choices.length;
+          else if (event.key === "ArrowLeft" || event.key === "ArrowUp") targetIndex = (index - 1 + choices.length) % choices.length;
+          else if (event.key === "Home") targetIndex = 0;
+          else if (event.key === "End") targetIndex = choices.length - 1;
+          else return;
+          event.preventDefault();
+          selectChoice(choices[targetIndex], true);
         });
       });
 
@@ -160,6 +184,7 @@
       previous.disabled = current === 0;
       next.textContent = current === QUESTIONS.length - 1 ? "See my result" : "Next question";
       reminder.textContent = "";
+      if (focusHeading) stage.querySelector("h2").focus();
     }
 
     function renderReview(){
@@ -192,7 +217,9 @@
       root.querySelector("[data-part-label]").textContent = "Result and speaking confirmation";
       progressText.textContent = "Multiple choice complete";
       progressBar.style.width = "100%";
-      resultView.scrollIntoView({ behavior: "smooth", block: "start" });
+      resultLevel.tabIndex = -1;
+      resultLevel.focus();
+      resultView.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
     }
 
     function resetCheck(){
@@ -205,14 +232,14 @@
       stage.hidden = false;
       actions.hidden = false;
       root.querySelector("[data-part-label]").textContent = "Part 1 · Multiple Choice";
-      renderQuestion();
-      root.scrollIntoView({ behavior: "smooth", block: "start" });
+      renderQuestion(false);
+      root.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
     }
 
     previous.addEventListener("click", function(){
       if (current === 0) return;
       current -= 1;
-      renderQuestion();
+      renderQuestion(true);
     });
 
     next.addEventListener("click", function(){
@@ -225,7 +252,7 @@
         return;
       }
       current += 1;
-      renderQuestion();
+      renderQuestion(true);
     });
 
     speakingLevel.addEventListener("change", function(){
@@ -242,7 +269,11 @@
     });
 
     reset.addEventListener("click", resetCheck);
-    renderQuestion();
+    function reducedMotion(){
+      return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+
+    renderQuestion(false);
   }
 
   document.addEventListener("DOMContentLoaded", function(){

@@ -3,6 +3,7 @@ import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { lessonCatalog, readyLessons } from "../src/data/lesson-catalog.mjs";
+import { readyAssessmentRoutes } from "../src/data/assessment-routes.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const fingerprints = JSON.parse(await readFile(path.join(projectRoot, "src/data/migration-fingerprints.json"), "utf8"));
@@ -14,7 +15,9 @@ const assessmentPages = fingerprints.assessments;
 const lessonSources = await sourceFiles(path.join(projectRoot, "src/content/lessons"));
 const assessmentSources = await sourceFiles(path.join(projectRoot, "src/content/assessments"));
 if (lessonSources.length !== lessonCatalog.length) errors.push(`Expected ${lessonCatalog.length} native lesson records; found ${lessonSources.length}.`);
-if (assessmentSources.length !== 7) errors.push(`Expected 7 native assessment sources; found ${assessmentSources.length}.`);
+if (assessmentSources.length !== readyAssessmentRoutes.length) {
+  errors.push(`Expected ${readyAssessmentRoutes.length} native assessment sources; found ${assessmentSources.length}.`);
+}
 
 for (const page of [...lessonPages, ...assessmentPages]) {
   if (!page.contentTextHash || !page.interactionCounts || !page.audioClips) {
@@ -70,7 +73,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Native migration verified: ${lessonCatalog.length} canonical lesson records (${readyLessons.length} ready), 7 assessment sources, ${lessonPages.reduce((sum, page) => sum + page.audioClips.length, 0) + assessmentPages.reduce((sum, page) => sum + page.audioClips.length, 0)} audio references, exact content fingerprints, interaction counts, clean routes, redirects, and no compatibility layer.`);
+console.log(`Native migration verified: ${lessonCatalog.length} canonical lesson records (${readyLessons.length} ready), ${readyAssessmentRoutes.length} assessment sources, ${lessonPages.reduce((sum, page) => sum + page.audioClips.length, 0) + assessmentPages.reduce((sum, page) => sum + page.audioClips.length, 0)} audio references, exact content fingerprints, interaction counts, clean routes, redirects, and no compatibility layer.`);
 
 function routeOutput(route) {
   const clean = route.replace(/^\//, "").replace(/\/$/, "");
@@ -104,7 +107,10 @@ function textContent(value) {
 }
 
 function textHash(value) {
-  const visible = textContent(String(value).replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "").replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ""));
+  const visible = textContent(String(value)
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<a\b[^>]*class="[^"]*\b(?:page-skip|skip-link|home-skip)\b[^"]*"[^>]*>[\s\S]*?<\/a>/gi, ""));
   return createHash("sha256").update(visible).digest("hex");
 }
 
