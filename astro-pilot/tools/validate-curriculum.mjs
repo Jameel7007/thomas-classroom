@@ -62,10 +62,10 @@ if (!/What is CEFR\?/.test(html) || !/Common European Framework of Reference for
 }
 const finderIndex = html.indexOf("data-curriculum-finder");
 const firstLevelIndex = html.indexOf('data-curriculum-level="A0"');
-const firstTopicIndex = html.indexOf("data-curriculum-topic", firstLevelIndex);
-const guideIndex = html.indexOf("curriculum-guide", firstLevelIndex);
 if (finderIndex < 0 || finderIndex > firstLevelIndex) errors.push("curriculum finder does not precede the first level");
-if (guideIndex < firstTopicIndex) errors.push("curriculum explanation appears before the first actual lesson topics");
+if (/curriculum-guide|How this curriculum works|<article class="card" data-curriculum-detail>/.test(html)) {
+  errors.push("curriculum still renders static skill cards or the redundant curriculum guide");
+}
 
 for (const level of LESSON_LEVELS) {
   const section = html.match(new RegExp(`<section\\b[^>]*data-curriculum-level="${level}"[\\s\\S]*?<\\/section>`))?.[0] || "";
