@@ -1,0 +1,239 @@
+---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
+import { defineLesson } from "../../../data/lesson-schema.mjs";
+
+export const page = defineLesson({
+  "title": "Possessive noun ’s · A1 Grammar",
+  "slug": "possessive-noun-s",
+  "level": "A1",
+  "topic": "Possessive noun ’s",
+  "category": "Grammar",
+  "contentType": "grammar",
+  "status": "ready",
+  "description": "Use noun + ’s to connect people, organizations, places, and things, and distinguish possession from the contraction of is.",
+  "sequence": 11,
+  "prerequisites": ["a0/possessive-adjectives", "a0/family-members", "a1/definite-and-zero-article"],
+  "related": ["a1/have-got", "a1/jobs-and-workplaces", "a1/rooms-and-furniture"],
+  "assessments": ["a1-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 22,
+    "revisionSummary": "Singular and plural possessive forms, relationship meaning, possessive-adjective contrast, is-contraction diagnosis, pronunciation, repairs, production, and retrieval were authored; three learner pilots remain."
+  }
+});
+---
+<LessonPage page={page}>
+<main class="wrap" data-core-duration="40–50 minutes" data-extension-duration="10–15 minutes">
+  <p class="kicker"><span class="dot"></span> Grammar · Lesson {page.sequence}</p>
+  <h1>Possessive noun <em>’s</em></h1>
+  <p class="standfirst">Connect one noun to another: <span class="ex">Maria’s desk, the company’s website, my parents’ house</span>. The apostrophe helps the listener understand whose person, place, thing, or responsibility you mean.</p>
+  <div class="meta-row">
+    <span class="tag">40–50 min core</span>
+    <span class="tag">noun + ’s + noun</span>
+    <span class="tag">whose? · relationships</span>
+    <span class="tag">pronunciation + error repair</span>
+  </div>
+
+  <div class="lesson-flow" aria-label="Lesson flow">
+    <div class="flow-step"><b>Notice</b><span>Follow the connection between two nouns.</span></div>
+    <div class="flow-step"><b>Discover</b><span>Choose ’s or an apostrophe after plural s.</span></div>
+    <div class="flow-step"><b>Build</b><span>Keep possession, is, and possessive adjectives separate.</span></div>
+    <div class="flow-step"><b>Use</b><span>Explain a workplace or family network.</span></div>
+  </div>
+
+  <p class="note-line"><b>Can-do:</b> By the end, you can identify people’s relationships and things, form common singular and plural possessives, and hear whether <span class="ex">’s</span> means possession or <span class="ex">is</span>.</p>
+
+  <h2>Retrieve the idea before the new form</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>Three familiar connections</h3>
+    <p>Say each answer before reading the model.</p>
+    <ul>
+      <li>I have a sister. <span class="ex">She is ___ sister.</span> Model: <span class="ex">She is my sister.</span></li>
+      <li>Rosa has a phone. <span class="ex">It is ___ phone.</span> Model: <span class="ex">It is her phone.</span></li>
+      <li>The office has two meeting rooms. Model with <span class="ex">have</span>: <span class="ex">The office has two meeting rooms.</span></li>
+    </ul>
+  </div>
+
+  <h2>Notice the noun connection</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>First day at Harbor Design</h3>
+    <p><span class="ex">This is Maya’s desk. The manager’s office is next to it. The designers’ meeting starts at ten.</span></p>
+    <ul>
+      <li>Which desk belongs to or is connected with Maya?</li>
+      <li>Does <span class="ex">the manager’s office</span> describe the manager or identify the office?</li>
+      <li>Why is the apostrophe after the final <span class="ex">s</span> in <span class="ex">designers’ meeting</span>?</li>
+    </ul>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. The possessive expression comes before the person, place, or thing it identifies.">
+    <h3>Discovery check: who or what is connected?</h3>
+    <p class="choice-hint">Read the first sentence, then identify the same connection in the second.</p>
+    <div class="choice-bank" aria-label="Possessive expression choices">
+      <button class="choice-option" data-choice-option="Maya’s">Maya’s</button>
+      <button class="choice-option" data-choice-option="the manager’s">the manager’s</button>
+      <button class="choice-option" data-choice-option="the designers’">the designers’</button>
+      <button class="choice-option" data-choice-option="the children’s">the children’s</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>The desk is connected with Maya. It is <button class="choice-gap" data-choice-gap data-answer="Maya’s" data-hint="Put Maya plus ’s before the noun desk." data-fix="It is Maya’s desk." data-placeholder="choose">choose</button> desk.</span></div>
+    <div class="q"><span class="n">2</span><span>One manager uses this office. It is <button class="choice-gap" data-choice-gap data-answer="the manager’s" data-hint="Manager is singular, so add ’s." data-fix="It is the manager’s office." data-placeholder="choose">choose</button> office.</span></div>
+    <div class="q"><span class="n">3</span><span>Several designers attend this meeting. It is <button class="choice-gap" data-choice-gap data-answer="the designers’" data-hint="Designers is already a regular plural ending in s, so add only the apostrophe." data-fix="It is the designers’ meeting." data-placeholder="choose">choose</button> meeting.</span></div>
+    <div class="q"><span class="n">4</span><span>The room is for several children. It is <button class="choice-gap" data-choice-gap data-answer="the children’s" data-hint="Children is an irregular plural without final s, so add ’s." data-fix="It is the children’s room." data-placeholder="choose">choose</button> room.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Get to the root: identify one noun through another</h2>
+  <div class="lead-rule"></div>
+  <p>A possessive noun answers <span class="ex">whose?</span> or shows a close connection. It can describe ownership, but its job is wider than ownership. <span class="ex">Lena’s brother</span> is a relationship. <span class="ex">today’s meeting</span> is a time connection. <span class="ex">the company’s policy</span> connects a policy with an organization.</p>
+  <table>
+    <thead><tr><th>noun type</th><th>form</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>one person, animal, organization, or thing</td><td>noun + <b>’s</b></td><td><span class="ex">Thomas’s class · the dog’s bowl · the bank’s website</span></td></tr>
+      <tr><td>regular plural ending in <b>s</b></td><td>plural noun + <b>’</b></td><td><span class="ex">the students’ questions · my parents’ house</span></td></tr>
+      <tr><td>irregular plural without final <b>s</b></td><td>plural noun + <b>’s</b></td><td><span class="ex">the children’s room · the people’s choice</span></td></tr>
+      <tr><td>two names sharing one thing</td><td>add <b>’s</b> to the final name</td><td><span class="ex">Maya and Leo’s project</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">The spelling <span class="ex">Thomas’s</span> is standard in American English for a singular name ending in <span class="ex">s</span>. Say the extra syllable: <span class="ex">Thomas-iz</span>.</p>
+
+  <div class="note">
+    <h3>Do not add an apostrophe to possessive adjectives</h3>
+    <p><span class="ex">my, your, his, her, its, our, their</span> already show the connection: <span class="ex">her desk, their office</span>. Do not write <span class="cross">her’s desk</span> or <span class="cross">their’s office</span>.</p>
+    <p>Compare: <span class="ex">Maya’s desk</span> uses a noun plus <span class="ex">’s</span>. <span class="ex">Her desk</span> uses a possessive adjective instead of Maya’s name.</p>
+  </div>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You selected singular ’s, plural s plus apostrophe, or irregular plural ’s from the noun itself.">
+    <h3>Drill 1: build the written form</h3>
+    <p class="choice-hint">First decide whether the connecting noun is singular, a regular plural, or an irregular plural.</p>
+    <div class="choice-bank" aria-label="Possessive form choices">
+      <button class="choice-option" data-choice-option="client’s">client’s</button>
+      <button class="choice-option" data-choice-option="clients’">clients’</button>
+      <button class="choice-option" data-choice-option="women’s">women’s</button>
+      <button class="choice-option" data-choice-option="Thomas’s">Thomas’s</button>
+      <button class="choice-option" data-choice-option="parents’">parents’</button>
+      <button class="choice-option" data-choice-option="company’s">company’s</button>
+    </div>
+    <div class="q"><span class="n">1</span><span>One client sent a request: the <button class="choice-gap" data-choice-gap data-answer="client’s" data-hint="Client is singular." data-fix="the client’s request" data-placeholder="choose">choose</button> request.</span></div>
+    <div class="q"><span class="n">2</span><span>Several clients answered a survey: the <button class="choice-gap" data-choice-gap data-answer="clients’" data-hint="Clients is a regular plural already ending in s." data-fix="the clients’ answers" data-placeholder="choose">choose</button> answers.</span></div>
+    <div class="q"><span class="n">3</span><span>Several women formed a team: the <button class="choice-gap" data-choice-gap data-answer="women’s" data-hint="Women is an irregular plural without final s." data-fix="the women’s team" data-placeholder="choose">choose</button> team.</span></div>
+    <div class="q"><span class="n">4</span><span>Thomas teaches this class: <button class="choice-gap" data-choice-gap data-answer="Thomas’s" data-hint="A singular name ending in s normally takes ’s in American English." data-fix="Thomas’s class" data-placeholder="choose">choose</button> class.</span></div>
+    <div class="q"><span class="n">5</span><span>Both parents live there: my <button class="choice-gap" data-choice-gap data-answer="parents’" data-hint="Parents is a regular plural ending in s." data-fix="my parents’ house" data-placeholder="choose">choose</button> house.</span></div>
+    <div class="q"><span class="n">6</span><span>One company published a policy: the <button class="choice-gap" data-choice-gap data-answer="company’s" data-hint="Company is singular. The y spelling does not change before possessive ’s." data-fix="the company’s policy" data-placeholder="choose">choose</button> policy.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Possessive <em>’s</em> or the contraction of <em>is</em>?</h2>
+  <div class="lead-rule"></div>
+  <p>The same spelling can do two jobs. Look at what follows it. A possessive <span class="ex">’s</span> normally connects to a noun: <span class="ex">Maya’s office</span>. Contracted <span class="ex">is</span> connects the subject to an adjective, place, identity, or an <span class="ex">-ing</span> action: <span class="ex">Maya’s busy. Maya’s at work. Maya’s calling.</span></p>
+  <table>
+    <thead><tr><th>what follows?</th><th>likely job</th><th>expand or explain</th></tr></thead>
+    <tbody>
+      <tr><td>a noun</td><td>possessive connection</td><td><span class="ex">Leo’s phone</span> means the phone connected with Leo</td></tr>
+      <tr><td>an adjective</td><td><span class="ex">is</span></td><td><span class="ex">Leo’s ready</span> = <span class="ex">Leo is ready</span></td></tr>
+      <tr><td>a place phrase</td><td><span class="ex">is</span></td><td><span class="ex">Leo’s at home</span> = <span class="ex">Leo is at home</span></td></tr>
+      <tr><td>verb + <span class="ex">-ing</span></td><td><span class="ex">is</span></td><td><span class="ex">Leo’s working</span> = <span class="ex">Leo is working</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="practice" data-choice-gap-drill data-success-message="Correct. You used the following word to distinguish a noun connection from contracted is.">
+    <h3>Drill 2: diagnose the job of <em>’s</em></h3>
+    <p class="choice-hint">Choose possession when a following noun is being identified. Choose is when the sentence describes the person or situation.</p>
+    <div class="choice-bank" aria-label="Apostrophe s meaning choices">
+      <button class="choice-option" data-choice-option="possession">possession</button>
+      <button class="choice-option" data-choice-option="is">is</button>
+    </div>
+    <div class="q"><span class="n">1</span><span><span class="ex">Nina’s laptop is new.</span> Here <span class="ex">’s</span> means <button class="choice-gap" data-choice-gap data-answer="possession" data-hint="Laptop is the noun identified through Nina." data-fix="Nina’s laptop = the laptop connected with Nina." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">2</span><span><span class="ex">Nina’s tired today.</span> Here <span class="ex">’s</span> means <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Tired is an adjective describing Nina." data-fix="Nina’s tired = Nina is tired." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">3</span><span><span class="ex">The doctor’s office opens at eight.</span> Here <span class="ex">’s</span> means <button class="choice-gap" data-choice-gap data-answer="possession" data-hint="Office is a noun connected with the doctor." data-fix="the doctor’s office" data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">4</span><span><span class="ex">The doctor’s at the hospital.</span> Here <span class="ex">’s</span> means <button class="choice-gap" data-choice-gap data-answer="is" data-hint="At the hospital is a place phrase." data-fix="The doctor’s at the hospital = The doctor is at the hospital." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">5</span><span><span class="ex">My brother’s calling now.</span> Here <span class="ex">’s</span> means <button class="choice-gap" data-choice-gap data-answer="is" data-hint="Calling is the current action." data-fix="My brother’s calling = My brother is calling." data-placeholder="choose">choose</button>.</span></div>
+    <div class="q"><span class="n">6</span><span><span class="ex">My brother’s manager is Ana.</span> Here <span class="ex">’s</span> means <button class="choice-gap" data-choice-gap data-answer="possession" data-hint="Manager is the person identified through your brother." data-fix="my brother’s manager" data-placeholder="choose">choose</button>.</span></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-choices>Check</button><button class="lesson-btn" data-reset-choices>Reset</button></div>
+    <p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Sound natural: three possessive endings</h2>
+  <div class="lead-rule"></div>
+  <p>The possessive ending uses the same three sounds as a regular plural or third-person verb. The sound depends on the final sound of the noun.</p>
+  <table>
+    <thead><tr><th>final sound</th><th>possessive ending</th><th>example</th></tr></thead>
+    <tbody>
+      <tr><td>quiet sound such as <span class="ex">/p/, /t/, /k/, /f/</span></td><td><span class="ex">/s/</span></td><td><span class="ex">Jack’s</span></td></tr>
+      <tr><td>vowel or voiced sound</td><td><span class="ex">/z/</span></td><td><span class="ex">Maya’s · John’s</span></td></tr>
+      <tr><td>hissing or buzzing sound</td><td><span class="ex">/ɪz/</span>, an extra syllable</td><td><span class="ex">Thomas’s · Rosa’s</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note-line">In speech, possession and contracted <span class="ex">is</span> can sound identical. Context and the following word reveal the job: <span class="ex">Maya’s phone</span> versus <span class="ex">Maya’s busy</span>.</p>
+
+  <h2>Build complete connections</h2>
+  <div class="lead-rule"></div>
+  <div class="tile-game" data-tile-builder data-answer="this is my parents' house" data-hint="Parents is a regular plural ending in s, so its possessive spelling adds only an apostrophe." data-fix="This is my parents’ house." data-success-message="Correct. Parents is plural, and the apostrophe follows its final s.">
+    <h3>Drill 3: identify a family home</h3>
+    <p class="tile-target">Build the sentence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="house">house</button><button class="tile" data-build-tile="parents'">parents’</button><button class="tile" data-build-tile="this">This</button><button class="tile" data-build-tile="my">my</button><button class="tile" data-build-tile="is">is</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <div class="tile-game" data-tile-builder data-answer="the children's room is upstairs" data-hint="Children is an irregular plural without final s, so add ’s." data-fix="The children’s room is upstairs." data-success-message="Correct. The irregular plural children takes ’s.">
+    <h3>Drill 4: locate a shared room</h3>
+    <p class="tile-target">Build the sentence.</p>
+    <div class="tile-bank" data-build-bank><button class="tile" data-build-tile="upstairs">upstairs</button><button class="tile" data-build-tile="children's">children’s</button><button class="tile" data-build-tile="the">The</button><button class="tile" data-build-tile="is">is</button><button class="tile" data-build-tile="room">room</button></div>
+    <div class="build-area" data-build-area data-placeholder="Tap words in order"></div>
+    <div class="drill-actions"><button class="lesson-btn" data-check-build>Check</button><button class="lesson-btn" data-reset-build>Reset</button></div><p class="feedback" data-feedback></p>
+  </div>
+
+  <h2>Notice and repair</h2>
+  <div class="lead-rule"></div>
+  <div class="micro-drill" data-spot-error data-answer="Marias" data-hint="A singular name needs an apostrophe before s." data-fix="Maria’s phone is on the table." data-why="The possessive of singular Maria is Maria’s.">
+    <h3>Repair the missing apostrophe</h3><p class="ex">Marias phone is on the table.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="Marias">Marias</button><button class="error-choice" data-error-choice="phone">phone</button><button class="error-choice" data-error-choice="table">table</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="student’s" data-hint="The sentence describes several students, not one student." data-fix="The students’ projects are ready." data-why="Students is a regular plural ending in s, so the possessive apostrophe follows that s.">
+    <h3>Repair plural possession</h3><p class="ex">The student’s projects are ready. The projects belong to all six students.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="student’s">student’s</button><button class="error-choice" data-error-choice="projects">projects</button><button class="error-choice" data-error-choice="ready">ready</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="childrens’" data-hint="Children does not end in s, so treat it like an irregular plural." data-fix="The children’s coats are here." data-why="Children takes ’s because its plural form does not end in s.">
+    <h3>Repair an irregular plural</h3><p class="ex">The childrens’ coats are here.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="childrens’">childrens’</button><button class="error-choice" data-error-choice="coats">coats</button><button class="error-choice" data-error-choice="here">here</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+  <div class="micro-drill" data-spot-error data-answer="her’s" data-hint="Her already marks possession before a noun." data-fix="Her manager is friendly." data-why="Possessive adjectives such as her never take an apostrophe.">
+    <h3>Repair the possessive adjective</h3><p class="ex">Her’s manager is friendly.</p>
+    <div class="spot-options"><button class="error-choice" data-error-choice="her’s">Her’s</button><button class="error-choice" data-error-choice="manager">manager</button><button class="error-choice" data-error-choice="friendly">friendly</button></div><p class="hidden-answer" data-error-feedback></p>
+  </div>
+
+  <h2>Communicate: explain a connection map</h2>
+  <div class="lead-rule"></div>
+  <div class="thinking-card">
+    <h3>A fictional workplace or family network</h3>
+    <div class="prompt-card"><b>Final production:</b> Draw five fictional people, places, or objects and connect them with arrows. Give a 45 to 60 second explanation using at least six possessive expressions.</div>
+    <ul>
+      <li>Identify one person’s role: <span class="ex">Nora is the company’s director.</span></li>
+      <li>Identify two singular connections: <span class="ex">Nora’s office, the client’s request.</span></li>
+      <li>Identify one regular plural connection: <span class="ex">the designers’ meeting.</span></li>
+      <li>Identify one irregular plural connection: <span class="ex">the children’s program.</span></li>
+      <li>Use <span class="ex">Whose…?</span> to ask your tutor for one missing connection.</li>
+    </ul>
+    <p class="note-line">You may invent every detail. You never need to share real family, work, or ownership information.</p>
+  </div>
+
+  <h2>Reflect and retrieve tomorrow</h2>
+  <div class="lead-rule"></div>
+  <div class="note" id="next-day-retrieval" data-lesson-extension="Five-minute next-day retrieval">
+    <h3>Can you do this without the page?</h3>
+    <ul>
+      <li>Explain the difference between <span class="ex">the student’s book</span> and <span class="ex">the students’ books</span>.</li>
+      <li>Write the possessive forms of <span class="ex">Maya, Thomas, parents, children</span>.</li>
+      <li>Explain why <span class="ex">Maya’s office</span> and <span class="ex">Maya’s busy</span> use the same spelling for different jobs.</li>
+    </ul>
+    <p><b>Next use:</b> At the beginning of the next lesson, describe three visible or fictional connections without looking at this page.</p>
+    <p><a href="#next-day-retrieval">Return to this retrieval task tomorrow.</a></p>
+  </div>
+</main>
+</LessonPage>

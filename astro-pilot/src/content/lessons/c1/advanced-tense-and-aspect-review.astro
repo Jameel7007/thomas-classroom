@@ -16,7 +16,14 @@ export const page = defineLesson({
   "prerequisites": ["b2/future-perfect-and-future-continuous", "b2/past-perfect-continuous", "b2/reported-speech"],
   "related": ["c1/narrative-tenses-and-viewpoint", "c1/advanced-modal-meaning-and-stance"],
   "assessments": ["c1-exit"],
-  "tutorReviewRequired": true
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 18,
+    "revisionSummary": "Reference time, aspect viewpoint, tense contrast, spoken reductions, sustained reading, controlled choice, repair, briefing, and written production were expanded; three learner pilots remain."
+  }
 });
 
 export const lesson = {
@@ -196,6 +203,24 @@ export const lesson = {
       ],
       hint: "View an activity’s duration from a future anniversary.",
     },
+    {
+      question: "A consultant normally works in Boston but is spending six weeks in Denver. Which sentence frames the Denver role as temporary?",
+      answer: "She is working in Denver for six weeks.",
+      options: [{ value: "She is working in Denver for six weeks." }, { value: "She works in Denver permanently for six weeks." }, { value: "She has worked in Denver next month." }],
+      hint: "Use the progressive to frame a limited current arrangement.",
+    },
+    {
+      question: "The team finished four reports, and the exact completed quantity matters now. Which update is most precise?",
+      answer: "The team has completed four reports.",
+      options: [{ value: "The team has completed four reports." }, { value: "The team has been completing four reports." }, { value: "The team completed four reports tomorrow." }],
+      hint: "A completed quantity favors the present perfect simple.",
+    },
+    {
+      question: "At the time of the merger, negotiations had continued for eight months. Which form foregrounds that earlier duration?",
+      answer: "The companies had been negotiating for eight months.",
+      options: [{ value: "The companies had been negotiating for eight months." }, { value: "The companies negotiate for eight months tomorrow." }, { value: "The companies have negotiated after the merger ended." }],
+      hint: "Look backward from a past reference point and show ongoing duration.",
+    },
   ],
   context: {
     title: "A delayed research partnership",
@@ -235,6 +260,12 @@ export const lesson = {
           { value: "The February meeting" },
         ],
         hint: "Distinguish the completed future result from the continuing collaboration.",
+      },
+      {
+        question: "Why does the account use “will have been working” for the researchers?",
+        answer: "It measures their continuing collaboration up to the September viewpoint.",
+        options: [{ value: "It measures their continuing collaboration up to the September viewpoint." }, { value: "It presents one finished action last fall." }, { value: "It denies that the researchers work together." }],
+        hint: "The phrase combines a future viewpoint with duration.",
       },
     ],
   },
@@ -285,6 +316,14 @@ export const lesson = {
         { value: "weeks", label: "for three weeks" },
       ],
     },
+    {
+      title: "Separate a finished result from an unfinished process",
+      sentence: "We have been completing all twelve interviews, so the task is finished.",
+      answer: "been",
+      fix: "We have completed all twelve interviews, so the task is finished.",
+      why: "A completed total is foregrounded with the present perfect simple.",
+      tokens: [{ value: "we", label: "We have" }, { value: "been", label: "been completing" }, { value: "twelve", label: "all twelve interviews" }, { value: "finished", label: "so the task is finished" }],
+    },
   ],
   fluency: [
     {
@@ -298,6 +337,10 @@ export const lesson = {
     {
       prompt: "Look forward to a deadline. State one completed result and one measured duration.",
       answer: "By December, we will have opened three offices and will have been operating in the region for five years.",
+    },
+    {
+      prompt: "Correct yourself aloud after choosing an aspect that hides the meaning you need.",
+      answer: "We have been finishing six reports. More precisely, we have finished six reports, so the completed quantity is the point.",
     },
   ],
   communicate: {
@@ -318,6 +361,12 @@ export const lesson = {
       "Simple forms foreground facts or results, while progressive forms foreground activity, duration, or temporary limits.",
       "The account remains coherent across past, present, and future viewpoints.",
     ],
+  },
+  writing: {
+    title: "Write a three-viewpoint project update",
+    task: "Write 170 to 220 words that moves from an earlier origin through a current result and process to one future milestone.",
+    requirements: ["Establish every reference point clearly.", "Contrast at least one completed result with an activity in progress.", "Use one past perfect or past perfect progressive and one future perfect form."],
+    model: "Our team began redesigning the service last September. By the time the board approved the budget in January, we had interviewed forty users and had been testing two early prototypes for three months. Since approval, we have completed the core design, and we have been refining the booking process with a smaller user group. The evidence is becoming more reliable, although we have not resolved every accessibility issue. By October, we will have launched the new service in three regions, and the research team will have been tracking user behavior for a full year."
   },
   reflect: {
     canDo: [

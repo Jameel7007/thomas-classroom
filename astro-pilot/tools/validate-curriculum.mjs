@@ -99,8 +99,8 @@ const cases = [
   { name: "present perfect search", filters: { query: "present perfect", level: "all", type: "all", availability: "all" }, expected: 2 },
   { name: "A1 ready lessons", filters: { query: "", level: "A1", type: "all", availability: "ready" }, expected: lessonCatalog.filter((lesson) => lesson.level === "A1" && lesson.status === "ready").length },
   { name: "B1 ready grammar", filters: { query: "", level: "B1", type: "grammar", availability: "ready" }, expected: lessonCatalog.filter((lesson) => lesson.level === "B1" && lesson.contentType === "grammar" && lesson.status === "ready").length },
-  { name: "C1 planned lessons", filters: { query: "", level: "C1", type: "all", availability: "planned" }, expected: 16 },
-  { name: "C1 ready grammar", filters: { query: "", level: "C1", type: "grammar", availability: "ready" }, expected: 3 },
+  { name: "C1 planned lessons", filters: { query: "", level: "C1", type: "all", availability: "planned" }, expected: lessonCatalog.filter((lesson) => lesson.level === "C1" && lesson.status === "planned").length },
+  { name: "C1 ready grammar", filters: { query: "", level: "C1", type: "grammar", availability: "ready" }, expected: lessonCatalog.filter((lesson) => lesson.level === "C1" && lesson.contentType === "grammar" && lesson.status === "ready").length },
   { name: "combined zero result", filters: { query: "travel", level: "A1", type: "all", availability: "ready" }, expected: 0 },
 ];
 

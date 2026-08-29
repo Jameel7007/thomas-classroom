@@ -1,0 +1,163 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+const verbs = [
+  ["be", "was / were", "been", "She was here. / She has been here."],
+  ["become", "became", "become", "The process became easier."],
+  ["begin", "began", "begun", "The meeting has begun."],
+  ["break", "broke", "broken", "The screen is broken."],
+  ["bring", "brought", "brought", "I brought the documents."],
+  ["build", "built", "built", "They built a new office."],
+  ["buy", "bought", "bought", "We bought the tickets online."],
+  ["catch", "caught", "caught", "She caught the early train."],
+  ["choose", "chose", "chosen", "They have chosen a supplier."],
+  ["come", "came", "come", "He came home late."],
+  ["cost", "cost", "cost", "The repair cost $80."],
+  ["cut", "cut", "cut", "I cut the paper in half."],
+  ["do", "did", "done", "Have you done the report?"],
+  ["draw", "drew", "drawn", "She drew a simple map."],
+  ["drink", "drank", "drunk", "I have drunk enough water."],
+  ["drive", "drove", "driven", "We drove to the airport."],
+  ["eat", "ate", "eaten", "They have already eaten."],
+  ["fall", "fell", "fallen", "Prices have fallen this month."],
+  ["feel", "felt", "felt", "I felt better yesterday."],
+  ["find", "found", "found", "Did you find your keys?"],
+  ["fly", "flew", "flown", "She has flown to Chicago twice."],
+  ["forget", "forgot", "forgotten", "I forgot the appointment."],
+  ["get", "got", "gotten / got", "He got home at six. / It has gotten better."],
+  ["give", "gave", "given", "They have given us more time."],
+  ["go", "went", "gone", "Maya went to work early."],
+  ["grow", "grew", "grown", "The company has grown quickly."],
+  ["have", "had", "had", "We had a useful conversation."],
+  ["hear", "heard", "heard", "I heard the announcement."],
+  ["hold", "held", "held", "The team held a short meeting."],
+  ["keep", "kept", "kept", "She has kept every receipt."],
+  ["know", "knew", "known", "I have known him for years."],
+  ["lead", "led", "led", "Ana led the discussion."],
+  ["leave", "left", "left", "The bus left at nine."],
+  ["lend", "lent", "lent", "Could you lend me a charger?"],
+  ["let", "let", "let", "They let us enter early."],
+  ["lose", "lost", "lost", "I have lost my card."],
+  ["make", "made", "made", "We made a decision."],
+  ["mean", "meant", "meant", "What did that message mean?"],
+  ["meet", "met", "met", "I met the new manager."],
+  ["pay", "paid", "paid", "She paid by card."],
+  ["put", "put", "put", "He put the file on the desk."],
+  ["read", "read /red/", "read /red/", "I read the email yesterday."],
+  ["ride", "rode", "ridden", "Have you ever ridden a motorcycle?"],
+  ["rise", "rose", "risen", "Costs have risen again."],
+  ["run", "ran", "run", "They ran a successful campaign."],
+  ["say", "said", "said", "She said the room was ready."],
+  ["see", "saw", "seen", "Have you seen this report?"],
+  ["sell", "sold", "sold", "The store sold every ticket."],
+  ["send", "sent", "sent", "I sent the form yesterday."],
+  ["set", "set", "set", "We set a new deadline."],
+  ["show", "showed", "shown", "He has shown us the results."],
+  ["sit", "sat", "sat", "We sat near the window."],
+  ["sleep", "slept", "slept", "I slept well last night."],
+  ["speak", "spoke", "spoken", "Have you spoken to Maya?"],
+  ["spend", "spent", "spent", "We spent two hours there."],
+  ["stand", "stood", "stood", "She stood by the entrance."],
+  ["take", "took", "taken", "They have taken the earlier train."],
+  ["teach", "taught", "taught", "He taught English online."],
+  ["tell", "told", "told", "I told her the truth."],
+  ["think", "thought", "thought", "We thought the office was closed."],
+  ["understand", "understood", "understood", "I understood the main point."],
+  ["wear", "wore", "worn", "She has worn that jacket before."],
+  ["win", "won", "won", "Their team won the contract."],
+  ["write", "wrote", "written", "I have written three emails."],
+];
+---
+<SiteLayout
+  title="Irregular Verb Reference · Thomas’s Classroom"
+  description="A searchable American English reference for common irregular base forms, past-simple forms, past participles, and natural examples."
+  heading="Irregular Verb Reference"
+  lede="Find the form quickly, then put it back into a complete sentence."
+  current="curriculum"
+>
+  <section class="verb-reference" data-verb-reference>
+    <p class="tab-overline">Live lesson reference</p>
+    <h2 class="tab-title">The forms that carry English timelines</h2>
+    <p class="tab-lede">Use the past form for a positive past-simple sentence. Use the past participle after <em>have</em> in perfect forms and after <em>be</em> in passive forms.</p>
+
+    <div class="verb-rules" aria-label="Irregular verb form guide">
+      <article><b>Positive past</b><span>I <em>wrote</em> yesterday.</span></article>
+      <article><b>After did</b><span>Did you <em>write</em>? Use the base form.</span></article>
+      <article><b>Perfect</b><span>I have <em>written</em> three emails.</span></article>
+      <article><b>Passive</b><span>The email was <em>written</em> yesterday.</span></article>
+    </div>
+
+    <label class="verb-search-label" for="verb-search">Search by any form or example</label>
+    <input id="verb-search" class="verb-search" type="search" placeholder="Try bring, brought, written, or train" autocomplete="off" data-verb-search />
+    <p class="verb-count" aria-live="polite" data-verb-count>{verbs.length} common verbs shown</p>
+
+    <div class="verb-table-wrap">
+      <table class="verb-table">
+        <thead><tr><th>Base form</th><th>Past simple</th><th>Past participle</th><th>Natural example</th></tr></thead>
+        <tbody>
+          {verbs.map(([base, past, participle, example]) => (
+            <tr data-verb-row data-search={`${base} ${past} ${participle} ${example}`.toLocaleLowerCase()}>
+              <td><b>{base}</b></td><td>{past}</td><td>{participle}</td><td>{example}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="reference-notes">
+      <article>
+        <h3>American English note</h3>
+        <p>The usual American past participle of <em>get</em> is <em>gotten</em> when the meaning is become or obtain: <em>It has gotten easier. She has gotten a new job.</em> Use <em>got</em> in <em>have got</em> for present possession.</p>
+      </article>
+      <article>
+        <h3>How to learn a form</h3>
+        <p>Say three connected chunks, not three isolated spellings: <em>take, took, have taken</em>. Then create one true or fictional example with a clear time reference.</p>
+      </article>
+    </div>
+
+    <p class="back-link"><a href="/lessons/a2/past-simple/">Practice these forms in the past-simple lesson →</a></p>
+  </section>
+
+  <script>
+    const root = document.querySelector("[data-verb-reference]");
+    if (root instanceof HTMLElement) {
+      const input = root.querySelector("[data-verb-search]");
+      const rows = [...root.querySelectorAll("[data-verb-row]")];
+      const count = root.querySelector("[data-verb-count]");
+      const update = () => {
+        const query = input instanceof HTMLInputElement ? input.value.trim().toLocaleLowerCase() : "";
+        let visible = 0;
+        rows.forEach((row) => {
+          const match = !query || (row.getAttribute("data-search") || "").includes(query);
+          row.toggleAttribute("hidden", !match);
+          if (match) visible += 1;
+        });
+        if (count) count.textContent = `${visible} common verb${visible === 1 ? "" : "s"} shown`;
+      };
+      input?.addEventListener("input", update);
+    }
+  </script>
+</SiteLayout>
+
+<style>
+  .verb-reference{max-width:1180px;margin:0 auto;padding:clamp(1rem,3vw,2.5rem)}
+  .verb-rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;margin:1.5rem 0 2rem}
+  .verb-rules article{display:grid;gap:.4rem;padding:1rem;border:1px solid var(--line);border-radius:1rem;background:var(--paper)}
+  .verb-rules b,.verb-search-label{font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase}
+  .verb-search-label{display:block;margin-bottom:.55rem;font-size:.8rem}
+  .verb-search{width:100%;min-height:3.25rem;padding:.8rem 1rem;border:2px solid var(--ink);border-radius:.8rem;background:#fff;color:var(--ink);font:inherit}
+  .verb-search:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .verb-count{margin:.6rem 0 1rem;color:var(--muted)}
+  .verb-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:1rem;background:#fff}
+  .verb-table{width:100%;min-width:720px;border-collapse:collapse}
+  .verb-table th,.verb-table td{padding:.85rem 1rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  .verb-table th{position:sticky;top:0;background:var(--paper);font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;text-transform:uppercase}
+  .verb-table tr:last-child td{border-bottom:0}
+  .verb-table tr[hidden]{display:none}
+  .reference-notes{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+  .reference-notes article{padding:1.1rem 1.2rem;border-left:4px solid var(--red);background:var(--paper)}
+  .reference-notes h3{margin-top:0}
+  .back-link a{font-weight:700;color:var(--red)}
+  @media(max-width:760px){.verb-rules{grid-template-columns:1fr 1fr}.reference-notes{grid-template-columns:1fr}.verb-reference{padding-inline:.9rem}}
+  @media(max-width:420px){.verb-rules{grid-template-columns:1fr}.verb-rules article{min-height:4.75rem}.verb-search{font-size:1rem}}
+</style>

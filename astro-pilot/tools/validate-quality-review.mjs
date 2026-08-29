@@ -14,7 +14,8 @@ if (!reviewedLessons.length) errors.push("no canonical lesson quality-review rec
 for (const lesson of reviewedLessons) {
   const source = readFileSync(path.join(root, lesson.source), "utf8");
   validateMetadata(lesson);
-  validateNativeLesson(lesson, source);
+  if (/^export const lesson\s*=/m.test(source)) validateStructuredLesson(lesson, source);
+  else validateNativeLesson(lesson, source);
   if (!sourceOnly) validateOutput(lesson, source);
 }
 
@@ -107,6 +108,32 @@ function validateNativeLesson(lesson, source) {
   }
 }
 
+function validateStructuredLesson(lesson, source) {
+  if (!/<LessonPage\b/.test(source) || !/<StructuredLesson\b/.test(source)) {
+    errors.push(`${lesson.id}: structured audited lesson must render LessonPage and StructuredLesson`);
+  }
+  for (const block of ["retrieval", "notice", "discover", "build", "context", "builder", "repairs", "fluency", "communicate", "writing", "reflect"]) {
+    if (!new RegExp(`\\b${block}:`).test(source)) errors.push(`${lesson.id}: structured lesson block ${block} is missing`);
+  }
+  if (lesson.qualityReview.scoredItemCount !== 18) {
+    errors.push(`${lesson.id}: structured qualityReview must record the shared 18-item assessment contract`);
+  }
+  const component = readFileSync(path.join(root, "src/components/lesson/StructuredLesson.astro"), "utf8");
+  for (const contract of [
+    "data-core-duration",
+    "data-extension-duration",
+    "data-lesson-extension",
+    'id="retrieval-bridge"',
+    'href="#retrieval-bridge"',
+    "data-hint={lesson.builder.prompt}",
+    "data-fix={lesson.builder.answer}",
+    "data-hint={repair.why}",
+    "data-fix={repair.fix}",
+  ]) {
+    if (!component.includes(contract)) errors.push(`StructuredLesson: shared quality contract is missing ${contract}`);
+  }
+}
+
 function validateOutput(lesson, source) {
   const learnerPath = path.join(root, "dist", lesson.route.replace(/^\//, ""), "index.html");
   const tutorPath = path.join(root, "dist/tutor/plans", lesson.id, "index.html");
@@ -114,7 +141,9 @@ function validateOutput(lesson, source) {
     errors.push(`${lesson.id}: generated learner route is missing`);
   } else {
     const html = readFileSync(learnerPath, "utf8");
-    const retrievalId = source.match(/\bhref="#([^"]*retrieval[^"]*)"/i)?.[1];
+    const retrievalId = /^export const lesson\s*=/m.test(source)
+      ? "retrieval-bridge"
+      : source.match(/\bhref="#([^"]*retrieval[^"]*)"/i)?.[1];
     if (retrievalId && !html.includes(`id="${retrievalId}"`)) errors.push(`${lesson.id}: rendered retrieval anchor is missing`);
     if (!html.includes(`data-core-duration=`) || !html.includes(`data-extension-duration=`)) {
       errors.push(`${lesson.id}: rendered core/extension timing is missing`);

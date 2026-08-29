@@ -14,7 +14,15 @@ export const page = defineLesson({
   "sequence": 19,
   "prerequisites": ["a2/phrasal-verbs", "b2/register-and-formality", "b2/idioms-and-fixed-expressions"],
   "related": ["b1/work-and-careers", "b1/relationships", "b2/connotation-and-shades-of-meaning"],
-  "assessments": ["b2-exit"]
+  "assessments": ["b2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 18,
+    "revisionSummary": "Meaning, particle pattern, object placement, polysemy, register shift, contextual reading, controlled choice, repairs, spoken production, and writing were expanded; three learner pilots remain."
+  }
 });
 export const lesson = {
   duration: "70–80 min",
@@ -22,7 +30,7 @@ export const lesson = {
   focus: "verb + particle patterns",
   tags: ["object placement", "polysemy, particle meaning and register"],
   retrieval: [
-    { prompt: "Place the pronoun: turn off + it.", answer: "Turn it off—not turn off it." },
+    { prompt: "Place the pronoun: turn off + it.", answer: "Turn it off, not turn off it." },
     { prompt: "Explain one meaning of look after, give up, and find out.", answer: "Look after = care for; give up = stop trying/doing; find out = discover." },
     { prompt: "Shift register: We need to look into the complaint.", answer: "We need to investigate the complaint." }
   ],
@@ -38,7 +46,7 @@ export const lesson = {
     check: { question: "What does “fall back on a smaller company” mean?", answer: "Use it as an alternative when the first plan fails.", options: [{ value: "Use it as an alternative when the first plan fails." }, { value: "Physically fall behind the company." }, { value: "Reject every possible supplier." }], hint: "The original supplier withdrew, so another resource became necessary." }
   },
   discover: {
-    principle: "Learn a multiword verb as meaning + grammar + object pattern + register. Particles offer useful clues—out often suggests completion or emergence; up can suggest completion or increase—but the complete chunk, not the particle alone, determines meaning.",
+    principle: "Learn a multiword verb as meaning + grammar + object pattern + register. Particles offer useful clues: out often suggests completion or emergence, and up can suggest completion or increase. The complete chunk, not the particle alone, determines meaning.",
     formRows: [
       { label: "separable transitive", form: "verb + object + particle / verb + particle + noun", example: "draw the plan up / draw up the plan; draw it up" },
       { label: "inseparable transitive", form: "verb + particle/preposition + object", example: "look into the issue; come across an article" },
@@ -77,7 +85,9 @@ export const lesson = {
     { question: "Replace the noun with a pronoun: We ruled out the cheapest option.", answer: "We ruled it out.", options: [{ value: "We ruled it out." }, { value: "We ruled out it." }, { value: "We it ruled out." }], hint: "Rule out is separable, and a pronoun goes in the middle." },
     { question: "I found an unexpected document by chance. I ___ it.", answer: "came across", options: [{ value: "came across" }, { value: "came it across" }, { value: "carried out" }], hint: "Come across is inseparable." },
     { question: "The effects of the medication gradually disappeared. They ___.", answer: "wore off", options: [{ value: "wore off" }, { value: "drew up" }, { value: "stood up for" }], hint: "This intransitive verb describes a fading effect." },
-    { question: "Choose the formal equivalent of “carry out an investigation.”", answer: "conduct an investigation", options: [{ value: "conduct an investigation" }, { value: "cancel an investigation" }, { value: "encounter an investigation" }], hint: "The meaning stays the same while register shifts." }
+    { question: "Choose the formal equivalent of “carry out an investigation.”", answer: "conduct an investigation", options: [{ value: "conduct an investigation" }, { value: "cancel an investigation" }, { value: "encounter an investigation" }], hint: "The meaning stays the same while register shifts." },
+    { question: "The organization will gradually stop using the old platform. It will ___ the platform.", answer: "phase out", options: [{ value: "phase out" }, { value: "come across" }, { value: "put up with" }], hint: "Choose the separable verb for gradual discontinuation." },
+    { question: "Which sentence places the pronoun correctly?", answer: "Please hand it over before noon.", options: [{ value: "Please hand it over before noon." }, { value: "Please hand over it before noon." }, { value: "Please it hand over before noon." }], hint: "A pronoun object goes between hand and over." }
   ],
   context: {
     title: "A delayed community research project",
@@ -90,14 +100,16 @@ export const lesson = {
     questions: [
       { question: "Why did the original plan fail?", answer: "The sponsor withdrew and the partnership collapsed.", options: [{ value: "The sponsor withdrew and the partnership collapsed." }, { value: "Participation immediately exceeded expectations." }, { value: "The team completed every stage in March." }], hint: "Interpret backed out and fell through together." },
       { question: "How did the team adapt to less funding?", answer: "It reduced the scope to two neighborhoods.", options: [{ value: "It reduced the scope to two neighborhoods." }, { value: "It abandoned all investigation." }, { value: "It expanded to every neighborhood." }], hint: "Narrow down means reduce the number or range." },
-      { question: "What does “followed through on its promise” show?", answer: "The team completed the action it had committed to.", options: [{ value: "The team completed the action it had committed to." }, { value: "The promise gradually disappeared." }, { value: "The team discovered the promise by chance." }], hint: "Follow-through connects commitment to completion." }
+      { question: "What does “followed through on its promise” show?", answer: "The team completed the action it had committed to.", options: [{ value: "The team completed the action it had committed to." }, { value: "The promise gradually disappeared." }, { value: "The team discovered the promise by chance." }], hint: "Follow-through connects commitment to completion." },
+      { question: "Which two chunks describe research rather than project failure or recovery?", answer: "looked into and came across", options: [{ value: "looked into and came across" }, { value: "fell through and backed out" }, { value: "picked up and caught up" }], hint: "Find one deliberate investigation and one unexpected discovery." }
     ]
   },
   builder: { title: "Build the contingency response", prompt: "Explain that the original arrangement failed, so an alternative resource was used.", answer: "the deal fell through so we fell back on reserves", tiles: ["fell", "we", "reserves", "so", "The", "through", "deal", "on", "back", "fell"] },
   repairs: [
     { title: "Repair pronoun placement", sentence: "We need to draw up it before Friday.", answer: "up", fix: "We need to draw it up before Friday.", why: "The pronoun object goes between draw and up.", tokens: [{ value: "we", label: "We need" }, { value: "draw", label: "to draw" }, { value: "up", label: "up" }, { value: "it", label: "it" }, { value: "friday", label: "before Friday" }] },
     { title: "Repair an inseparable verb", sentence: "I came an important detail across in the archive.", answer: "detail", fix: "I came across an important detail in the archive.", why: "The object follows the complete inseparable verb come across.", tokens: [{ value: "i", label: "I came" }, { value: "detail", label: "an important detail" }, { value: "across", label: "across" }, { value: "archive", label: "in the archive" }] },
-    { title: "Repair the three-part verb", sentence: "She cannot keep the current workload up with.", answer: "workload", fix: "She cannot keep up with the current workload.", why: "Keep up with is an inseparable three-part verb followed by its object.", tokens: [{ value: "she", label: "She cannot" }, { value: "keep", label: "keep" }, { value: "workload", label: "the current workload" }, { value: "up", label: "up with" }] }
+    { title: "Repair the three-part verb", sentence: "She cannot keep the current workload up with.", answer: "workload", fix: "She cannot keep up with the current workload.", why: "Keep up with is an inseparable three-part verb followed by its object.", tokens: [{ value: "she", label: "She cannot" }, { value: "keep", label: "keep" }, { value: "workload", label: "the current workload" }, { value: "up", label: "up with" }] },
+    { title: "Repair an unnecessary object", sentence: "The arrangement fell through it after the supplier withdrew.", answer: "it", fix: "The arrangement fell through after the supplier withdrew.", why: "Fall through is intransitive when it means fail to happen, so it takes no object.", tokens: [{ value: "arrangement", label: "The arrangement" }, { value: "fell", label: "fell through" }, { value: "it", label: "it" }, { value: "after", label: "after the supplier withdrew" }] }
   ],
   fluency: [
     { prompt: "Describe a plan that failed and the alternative you used.", answer: "The original plan fell through, so we fell back on…" },
@@ -112,7 +124,13 @@ export const lesson = {
     prompts: ["We drew up…", "… backed out / fell through.", "We fell back on…", "We looked into…", "We made up for…", "We followed through on…"],
     success: ["Use separable, inseparable, intransitive, and three-part patterns accurately.", "Make the meaning clear enough to infer from context.", "Shift register without assuming the phrasal verb is always less correct or less precise."]
   },
-  reflect: { canDo: ["Classify multiword verbs by object pattern.", "Use pronoun objects in the correct position.", "Learn related meanings and formal alternatives without word-for-word translation."], nextUse: "Create four personal example cards—one separable, one inseparable, one intransitive, and one three-part verb—with the object pattern visibly marked." }
+  writing: {
+    title: "Write a setback-and-recovery update",
+    task: "Write a 150-word project update for colleagues. Explain what failed, what the team investigated, what alternative it used, and how it recovered.",
+    requirements: ["Use at least six multiword verbs from three different grammar patterns.", "Place every noun or pronoun object correctly.", "Replace two phrasal verbs with formal lexical verbs in a final edited sentence."],
+    model: "Our original supplier backed out, so the launch plan fell through. We looked into three alternatives and came across a local provider with enough capacity. The team drew up a revised schedule and narrowed the first release down to two regions. Demand picked up faster than expected, but the provider kept up with the orders and helped us catch up on delayed deliveries. We have now followed through on every customer commitment. In a formal report, we could say that we investigated alternatives and prepared a revised schedule."
+  },
+  reflect: { canDo: ["Classify multiword verbs by object pattern.", "Use pronoun objects in the correct position.", "Learn related meanings and formal alternatives without word-for-word translation."], nextUse: "Create four personal example cards: one separable, one inseparable, one intransitive, and one three-part verb, with the object pattern visibly marked." }
 };
 ---
 <LessonPage page={page}><StructuredLesson page={page} lesson={lesson} /></LessonPage>

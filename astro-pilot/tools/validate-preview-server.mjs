@@ -53,9 +53,13 @@ await expect("/lessons/c1/advanced-tense-and-aspect-review.html", {
   location: "/lessons/c1/advanced-tense-and-aspect-review/",
 });
 await expect("/assessments/c1-exit/", {
-  status: 404,
+  status: 200,
   contentType: "text/html",
-  bodyIncludes: "Page not found",
+  bodyIncludes: "C1 End-of-Level Diagnostic",
+});
+await expect("/assessments/c1-exit.html", {
+  status: 301,
+  location: "/assessments/c1-exit/",
 });
 await expect("/English%20Curriculum%20Map.html", {
   status: 301,

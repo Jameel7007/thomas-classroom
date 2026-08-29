@@ -92,8 +92,9 @@ await validatePlacementExam();
 
 for (const level of completeLevels) {
   const assessmentPath = getLevelAssessmentPath(level);
-  if (assessmentPath.entry.slug !== "placement-exam" || assessmentPath.entry.kind !== "placement") {
-    errors.push(`${level}: the curriculum entry check must resolve to the comprehensive placement exam`);
+  const expectedEntry = level === "C1" ? "b2-exit" : "placement-exam";
+  if (assessmentPath.entry.slug !== expectedEntry) {
+    errors.push(`${level}: the curriculum entry check must resolve to ${expectedEntry}`);
   }
   if (assessmentPath.exit.slug !== `${level.toLowerCase()}-exit` || assessmentPath.exit.kind !== "exit") {
     errors.push(`${level}: the curriculum exit check does not resolve to its level diagnostic`);

@@ -16,7 +16,14 @@ export const page = defineLesson({
   "prerequisites": ["c1/advanced-tense-and-aspect-review", "b2/past-perfect-continuous"],
   "related": ["c1/mixed-and-implied-conditionals", "c1/participle-clauses"],
   "assessments": ["c1-exit"],
-  "tutorReviewRequired": true
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 18,
+    "revisionSummary": "Foreground, background, earlier cause, narrative distance, historic present, spoken pacing, contextual reading, repair, retelling, and written production were expanded; three learner pilots remain."
+  }
 });
 
 export const lesson = {
@@ -199,6 +206,24 @@ export const lesson = {
       ],
       hint: "Step back from the interview to the earlier warning while preserving the journalist’s viewpoint.",
     },
+    {
+      question: "Which sentence establishes an ongoing scene before a sudden event?",
+      answer: "People were waiting quietly when the lights went out.",
+      options: [{ value: "People were waiting quietly when the lights went out." }, { value: "People had waited tomorrow when the lights go out." }, { value: "People wait after the lights had gone out next week." }],
+      hint: "Use the progressive for the background and simple past for the boundary event.",
+    },
+    {
+      question: "A formal report should avoid a dramatic historic-present close-up. Which version fits?",
+      answer: "The passenger looked up and noticed that the display had gone blank.",
+      options: [{ value: "The passenger looked up and noticed that the display had gone blank." }, { value: "The passenger looks up and the display goes blank right now!" }, { value: "The passenger will have looked up yesterday." }],
+      hint: "Keep the completed incident in a stable past frame.",
+    },
+    {
+      question: "Which sentence makes a long earlier effort relevant to a later discovery?",
+      answer: "Engineers had been reporting the fault for months before investigators found the records.",
+      options: [{ value: "Engineers had been reporting the fault for months before investigators found the records." }, { value: "Engineers report the fault after investigators will find it." }, { value: "Engineers were reported the fault tomorrow." }],
+      hint: "Use the past perfect progressive for earlier repeated activity and duration.",
+    },
   ],
   context: {
     title: "The missed warning",
@@ -238,6 +263,12 @@ export const lesson = {
           { value: "It moves every event into the future." },
         ],
         hint: "Compare the report-like distance of the first paragraphs with the close-up passenger scene.",
+      },
+      {
+        question: "Which sentence in the account represents a later interpretation rather than what controllers knew at 6:42?",
+        answer: "Investigators later learned that the signal had failed twice.",
+        options: [{ value: "Investigators later learned that the signal had failed twice." }, { value: "Controllers believed the line could remain open." }, { value: "The first train stopped at 6:42." }],
+        hint: "Find information added after the original event by a later inquiry.",
       },
     ],
   },
@@ -289,6 +320,14 @@ export const lesson = {
         { value: "manager", label: "and my manager called me over" },
       ],
     },
+    {
+      title: "Keep the background behind the foreground",
+      sentence: "The alarm was sounding three times, and then everyone was leaving the building.",
+      answer: "sounding",
+      fix: "The alarm sounded three times, and then everyone left the building.",
+      why: "Counted completed events advance the main sequence and normally take the simple past.",
+      tokens: [{ value: "alarm", label: "The alarm" }, { value: "sounding", label: "was sounding three times" }, { value: "then", label: "and then" }, { value: "leaving", label: "everyone was leaving" }, { value: "building", label: "the building" }],
+    },
   ],
   fluency: [
     {
@@ -302,6 +341,10 @@ export const lesson = {
     {
       prompt: "Reformulate a dramatic close-up as a formal incident report.",
       answer: "I opened the message and realized that the entire schedule had changed.",
+    },
+    {
+      prompt: "Add an earlier cause to a two-event past sequence without confusing the main timeline.",
+      answer: "The train stopped and staff opened the doors. A signal had failed several minutes earlier.",
     },
   ],
   communicate: {
@@ -322,6 +365,12 @@ export const lesson = {
       "Any shift to the historic present is clearly framed and serves a narrative purpose.",
       "The formal and vivid versions preserve the same factual sequence.",
     ],
+  },
+  writing: {
+    title: "Write the same incident from two distances",
+    task: "Write a 180 to 230 word incident account. Use one short formal paragraph and one close participant paragraph while keeping the factual timeline identical.",
+    requirements: ["Separate foreground events, background activity, and one earlier cause.", "Use a historic-present close-up only if it is clearly framed.", "End with one sentence of later interpretation that the participant did not know at the time."],
+    model: "The train stopped outside the station at 6:42 while technicians were monitoring an unstable signal. Staff opened the doors at 6:55 and moved passengers toward the rear exit. Investigators later confirmed that the signal had failed twice during overnight tests. From one passenger’s viewpoint, the moment feels different: I look up, and every display is blank. People are checking their phones, but no announcement comes. Then a staff member raises her voice and tells us to move. At that moment, none of us knows that engineers had been requesting a replacement for several weeks."
   },
   reflect: {
     canDo: [

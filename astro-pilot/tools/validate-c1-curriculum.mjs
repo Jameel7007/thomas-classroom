@@ -49,18 +49,16 @@ for (const [index, topic] of expectedTopics.entries()) {
     errors.push(`${lesson.id}: expected one c1-exit assessment relationship`);
   }
 }
-if (ready.length !== 3) errors.push(`C1 has ${ready.length} ready lessons; expected 3`);
-if (planned.length !== 16) errors.push(`C1 has ${planned.length} planned lessons; expected 16`);
-if (ready.some((lesson) => lesson.sequence > 3)) errors.push("Only the first three C1 lessons may be ready in this batch");
-if (planned.some((lesson) => lesson.sequence < 4)) errors.push("One of the first three C1 lessons is still planned");
+if (ready.length !== 19) errors.push(`C1 has ${ready.length} ready lessons; expected 19`);
+if (planned.length !== 0) errors.push(`C1 has ${planned.length} planned lessons; expected 0`);
 if (ready.some((lesson) => lesson.tutorReviewRequired !== true)) {
   errors.push("Every authored C1 pilot lesson must require tutor review");
 }
 if (assessmentPath.entry.slug !== "b2-exit" || assessmentPath.entry.status !== "ready") {
   errors.push("C1 entry evidence must use the ready B2 exit diagnostic");
 }
-if (assessmentPath.exit.slug !== "c1-exit" || assessmentPath.exit.status !== "planned") {
-  errors.push("C1 exit evidence must resolve to the planned c1-exit diagnostic");
+if (assessmentPath.exit.slug !== "c1-exit" || assessmentPath.exit.status !== "ready") {
+  errors.push("C1 exit evidence must resolve to the ready c1-exit diagnostic");
 }
 
 for (const lesson of ready) {
@@ -75,13 +73,16 @@ for (const lesson of planned) {
   if (/<LessonPage\b/.test(source)) errors.push(`${lesson.id}: planned lesson renders a learner page`);
 }
 
-const firstNavigation = getLessonNavigation(ready[0]?.id);
-const secondNavigation = getLessonNavigation(ready[1]?.id);
-const thirdNavigation = getLessonNavigation(ready[2]?.id);
-if (firstNavigation.previous || firstNavigation.next?.id !== ready[1]?.id) errors.push("C1 lesson 1 navigation is incorrect");
-if (secondNavigation.previous?.id !== ready[0]?.id || secondNavigation.next?.id !== ready[2]?.id) errors.push("C1 lesson 2 navigation is incorrect");
-if (thirdNavigation.previous?.id !== ready[1]?.id || thirdNavigation.next || thirdNavigation.isCourseEnd) {
-  errors.push("C1 lesson 3 must stop before the planned fourth lesson without marking C1 complete");
+for (const [index, lesson] of ready.entries()) {
+  const navigation = getLessonNavigation(lesson.id);
+  const expectedPrevious = ready[index - 1];
+  const expectedNext = ready[index + 1];
+  if (navigation.previous?.id !== expectedPrevious?.id || navigation.next?.id !== expectedNext?.id) {
+    errors.push(`${lesson.id}: generated previous/next navigation is incorrect`);
+  }
+  if (index === ready.length - 1 && !navigation.isCourseEnd) {
+    errors.push(`${lesson.id}: final C1 lesson must mark the course end`);
+  }
 }
 
 if (validateOutput) validateBuiltOutput();
@@ -92,8 +93,8 @@ if (errors.length) {
 }
 
 console.log(validateOutput
-  ? "C1 curriculum verified: 19 sequenced records, 3 reviewed-pilot routes, 16 planned topics, B2 entry evidence, planned C1 exit evidence, direct outputs, search controls, print coverage, tutor flags, sitemap status, and generated navigation."
-  : "C1 source architecture verified: canonical level definition, 19 sequenced records, 3 tutor-review pilots, 16 planned topics, assessment relationships, and generated navigation.");
+  ? "C1 curriculum verified: 19 sequenced ready lessons, B2 entry evidence, ready C1 exit evidence, direct outputs, search controls, print coverage, tutor flags, sitemap status, and generated navigation."
+  : "C1 source architecture verified: canonical level definition, 19 sequenced ready lessons, tutor-review flags, ready exit assessment relationship, and generated navigation.");
 
 function validateBuiltOutput() {
   const dist = path.join(root, "dist");
@@ -104,9 +105,8 @@ function validateBuiltOutput() {
 
   if (!curriculumHtml.includes('value="C1" data-finder-level')) errors.push("curriculum: C1 level filter is missing");
   if (!curriculumHtml.includes('data-curriculum-level="C1"')) errors.push("curriculum: C1 level section is missing");
-  if (!diagnosticsHtml.includes('data-diagnostic-route="c1-exit"') || !diagnosticsHtml.includes('data-diagnostic-status="planned"')) errors.push("diagnostics: planned C1 exit diagnostic is not labeled");
-  if (curriculumHtml.includes('href="/assessments/c1-exit/"')) errors.push("curriculum: planned C1 exit diagnostic is linked as available");
-  if (diagnosticsHtml.includes('href="/assessments/c1-exit/"')) errors.push("diagnostics: planned C1 exit diagnostic is linked as available");
+  if (!diagnosticsHtml.includes('data-diagnostic-route="c1-exit"') || !diagnosticsHtml.includes('data-diagnostic-status="ready"')) errors.push("diagnostics: ready C1 exit diagnostic is not labeled");
+  if (!diagnosticsHtml.includes('href="/assessments/c1-exit/"')) errors.push("diagnostics: ready C1 exit diagnostic is not linked");
   if (!printHtml.includes(">C1<") || !printHtml.includes("Effective Operational Proficiency")) {
     errors.push("print curriculum: C1 section is missing");
   }
@@ -127,8 +127,8 @@ function validateBuiltOutput() {
     if (existsSync(output)) errors.push(`${lesson.route}: planned lesson unexpectedly has a public route`);
     if (sitemap.includes(lesson.route)) errors.push(`${lesson.route}: planned lesson unexpectedly appears in the sitemap`);
   }
-  if (existsSync(path.join(dist, "assessments/c1-exit/index.html"))) errors.push("/assessments/c1-exit/: planned diagnostic unexpectedly has a public route");
-  if (sitemap.includes("/assessments/c1-exit/")) errors.push("/assessments/c1-exit/: planned diagnostic unexpectedly appears in the sitemap");
+  if (!existsSync(path.join(dist, "assessments/c1-exit/index.html"))) errors.push("/assessments/c1-exit/: ready diagnostic output is missing");
+  if (!sitemap.includes("/assessments/c1-exit/")) errors.push("/assessments/c1-exit/: ready diagnostic is missing from the sitemap");
 
   function read(relative) {
     const target = path.join(dist, relative);

@@ -6,7 +6,7 @@ const records = [
   { slug: "a2-exit", title: "A2 End-of-Level Diagnostic", route: "/assessments/a2-exit/", kind: "exit", level: "A2", status: "ready" },
   { slug: "b1-exit", title: "B1 End-of-Level Diagnostic", route: "/assessments/b1-exit/", kind: "exit", level: "B1", status: "ready" },
   { slug: "b2-exit", title: "B2 End-of-Level Diagnostic", route: "/assessments/b2-exit/", kind: "exit", level: "B2", status: "ready" },
-  { slug: "c1-exit", title: "C1 End-of-Level Diagnostic", route: "/assessments/c1-exit/", kind: "exit", level: "C1", status: "planned" },
+  { slug: "c1-exit", title: "C1 End-of-Level Diagnostic", route: "/assessments/c1-exit/", kind: "exit", level: "C1", status: "ready" },
   {
     slug: "placement-exam",
     title: "English Placement Diagnostic — A0 to B2",

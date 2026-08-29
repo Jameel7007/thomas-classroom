@@ -16,7 +16,14 @@ export const page = defineLesson({
   "prerequisites": ["c1/advanced-tense-and-aspect-review", "b2/third-and-mixed-conditionals"],
   "related": ["c1/advanced-modal-meaning-and-stance", "c1/inversion-after-negative-expressions"],
   "assessments": ["c1-exit"],
-  "tutorReviewRequired": true
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 18,
+    "revisionSummary": "Cross-time counterfactuals, implied conditions, modal certainty, compressed thresholds, contextual reading, controlled choice, repair, argument, and writing were expanded; three learner pilots remain."
+  }
 });
 
 export const lesson = {
@@ -200,6 +207,24 @@ export const lesson = {
       ],
       hint: "The noun phrase “one more delay” carries the unreal past condition.",
     },
+    {
+      question: "A present lack of technical expertise caused a failed decision last month. Which sentence connects those times?",
+      answer: "If the team had more technical expertise, it would not have approved that design last month.",
+      options: [{ value: "If the team had more technical expertise, it would not have approved that design last month." }, { value: "If the team will have expertise, it did not approve yesterday." }, { value: "If the team would know more, it had approved the design now." }],
+      hint: "The unreal condition is a present limitation; the imagined result belongs to last month.",
+    },
+    {
+      question: "Which version cautiously expresses an unreal possible consequence rather than a certain one?",
+      answer: "Without the backup, we might have lost the archive.",
+      options: [{ value: "Without the backup, we might have lost the archive." }, { value: "Without the backup, we definitely lose the archive yesterday." }, { value: "Without the backup, we will had lost it." }],
+      hint: "Might have marks a possible imagined past result.",
+    },
+    {
+      question: "The instruction is real and present: check the address. Which implied-condition continuation fits?",
+      answer: "Check the address; otherwise, the package may go to the wrong office.",
+      options: [{ value: "Check the address; otherwise, the package may go to the wrong office." }, { value: "Check the address; without it, the package went tomorrow." }, { value: "Check the address; if you would, it had arrived yesterday." }],
+      hint: "Otherwise introduces the possible result if the instruction is not followed.",
+    },
   ],
   context: {
     title: "The launch that nearly failed",
@@ -239,6 +264,12 @@ export const lesson = {
           { value: "If the launch had never taken place in the future" },
         ],
         hint: "Otherwise means “if the policy described just before this does not happen.”",
+      },
+      {
+        question: "Why does the director say clients “might have canceled” rather than “would have canceled”?",
+        answer: "The cancellation is presented as a plausible possibility, not a certain result.",
+        options: [{ value: "The cancellation is presented as a plausible possibility, not a certain result." }, { value: "The clients definitely canceled before the launch." }, { value: "Might have places the cancellation in the future." }],
+        hint: "Compare the certainty carried by might with would.",
       },
     ],
   },
@@ -291,6 +322,14 @@ export const lesson = {
         { value: "appointment", label: "the appointment yesterday" },
       ],
     },
+    {
+      title: "Keep would out of the ordinary if-clause",
+      sentence: "If the reviewer would not have tested the build, we would be facing a breach now.",
+      answer: "would",
+      fix: "If the reviewer had not tested the build, we would be facing a breach now.",
+      why: "The unreal past condition uses past perfect; would belongs in the result clause.",
+      tokens: [{ value: "if", label: "If the reviewer" }, { value: "would", label: "would not have tested" }, { value: "build", label: "the build" }, { value: "we", label: "we would be facing" }, { value: "breach", label: "a breach now" }],
+    },
   ],
   fluency: [
     {
@@ -304,6 +343,10 @@ export const lesson = {
     {
       prompt: "Replace a full if-clause with without, but for, or otherwise.",
       answer: "But for her careful review, we would have missed the error. Check the figures again; otherwise, we could publish the wrong total.",
+    },
+    {
+      prompt: "Downgrade an overconfident counterfactual result from certainty to possibility.",
+      answer: "Without the intervention, the project would have failed becomes Without the intervention, the project might have failed.",
     },
   ],
   communicate: {
@@ -324,6 +367,12 @@ export const lesson = {
       "Modal choices distinguish a strong prediction from a cautious possibility.",
       "Implied conditions remain recoverable from the surrounding context.",
     ],
+  },
+  writing: {
+    title: "Write a counterfactual decision review",
+    task: "Write 170 to 220 words about a fictional or public decision. State the facts first, then analyze two alternative outcomes without presenting them as facts.",
+    requirements: ["Use one past-to-present and one present-to-past mixed conditional.", "Compress one condition with without, but for, or otherwise.", "Use could or might where the imagined consequence is uncertain."],
+    model: "The organization accepted a short deadline and launched before the final security review. A consultant found the problem one day before release, so no user data was exposed. If the team had delayed the launch by a week, its current procedures would be more reliable. At the same time, if the lead engineer were less methodical, the organization might have approved an unsafe repair that evening. But for the consultant’s review, the flaw could have reached production. The organization now requires an independent test before release; otherwise, a similar pattern may recur. These alternatives show plausible relationships, not facts about what certainly would have happened."
   },
   reflect: {
     canDo: [

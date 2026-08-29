@@ -9,8 +9,8 @@ const sourceOnly = process.argv.includes("--source");
 const errors = [];
 const reviewedA1 = readyLessons.filter((lesson) => lesson.level === "A1" && lesson.qualityReview);
 
-if (reviewedA1.length !== 20) {
-  errors.push(`expected 20 A1 lessons with canonical review evidence, found ${reviewedA1.length}`);
+if (reviewedA1.length !== 21) {
+  errors.push(`expected 21 A1 lessons with canonical review evidence, found ${reviewedA1.length}`);
 }
 
 for (const lesson of reviewedA1) {
@@ -129,6 +129,11 @@ validateSourceContract(
   "a1/definite-and-zero-article",
   /data-core-duration="45–55 minutes"[\s\S]*Can my listener identify[\s\S]*general plural or uncountable noun[\s\S]*have breakfast \/ lunch \/ dinner[\s\S]*by bus \/ train \/ car \/ plane[\s\S]*go to work \/ school \/ bed[\s\S]*Sound natural: keep <em>the<\/em> light and linked[\s\S]*data-lesson-extension="Tutor-read identifiable, general, and fixed-chunk listening check"[\s\S]*Final production: give Leila’s first-day update[\s\S]*never need to disclose your real workplace[\s\S]*id="next-day-retrieval"/i,
   "known reference, general plurals and uncountables, fixed daily chunks, transfer repair, spoken form, tutor-read listening, privacy, production, and retrieval should remain explicit",
+);
+validateSourceContract(
+  "a1/possessive-noun-s",
+  /data-core-duration="40–50 minutes"[\s\S]*whose\?[\s\S]*regular plural ending in[\s\S]*irregular plural without final[\s\S]*Possessive <em>’s<\/em> or the contraction of <em>is<\/em>[\s\S]*Sound natural[\s\S]*Communicate: explain a connection map[\s\S]*never need to share real family[\s\S]*id="next-day-retrieval"/i,
+  "singular and plural possessive forms, relationship meaning, is-contraction contrast, spoken form, privacy, production, and retrieval should remain explicit",
 );
 
 if (errors.length) {

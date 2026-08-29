@@ -1,18 +1,79 @@
 ---
+import LessonPage from "../../../components/lesson/LessonPage.astro";
+import StructuredLesson from "../../../components/lesson/StructuredLesson.astro";
 import { defineLesson } from "../../../data/lesson-schema.mjs";
-
 export const page = defineLesson({
-  "title": "Advanced modal meaning and stance · C1 Grammar",
-  "slug": "advanced-modal-meaning-and-stance",
-  "level": "C1",
-  "topic": "Advanced modal meaning and stance",
-  "category": "Grammar",
-  "contentType": "grammar",
-  "status": "planned",
-  "description": "Calibrate certainty, obligation, willingness, criticism and interpersonal stance through precise modal and semi-modal choices.",
-  "sequence": 4,
-  "prerequisites": ["c1/advanced-tense-and-aspect-review", "b2/modals-of-past-speculation"],
-  "related": ["c1/hedging-and-cautious-language", "c1/register-tone-and-formality"],
-  "assessments": ["c1-exit"]
+  "title": "Advanced modal meaning and stance · C1 Grammar", "slug": "advanced-modal-meaning-and-stance", "level": "C1", "topic": "Advanced modal meaning and stance", "category": "Grammar", "contentType": "grammar", "status": "ready",
+  "description": "Calibrate certainty, obligation, willingness, criticism and interpersonal stance through precise modal and semi-modal choices.", "sequence": 4,
+  "prerequisites": ["c1/advanced-tense-and-aspect-review", "b2/modals-of-past-speculation"], "related": ["c1/hedging-and-cautious-language", "c1/register-tone-and-formality"], "assessments": ["c1-exit"], "tutorReviewRequired": true,
+  "qualityReview": { "status": "editorial-review", "generatedPedagogy": true, "learnerPilotCount": 0, "scoredItemCount": 18, "revisionSummary": "Epistemic, deontic, dynamic and interpersonal modal meanings, modal perfects, spoken stress, contextual inference, repair, discussion, and writing were authored; three learner pilots remain." }
 });
+export const lesson = {
+  duration: "75–90 min", outcome: "Choose modal and semi-modal forms that match evidence, authority, willingness, social distance, and the time of the judgment, then explain the stance each choice creates.", focus: "certainty, obligation, willingness and criticism", tags: ["modal perfects", "interpersonal stance", "evidence strength"],
+  retrieval: [
+    { prompt: "Rank these by certainty: might, should, must in The train ___ arrive by six.", answer: "Might marks possibility, should marks a reasonable expectation, and must can mark a strong conclusion when it is based on evidence." },
+    { prompt: "Look back at an unreal past possibility: perhaps she missed the message.", answer: "She might have missed the message." },
+    { prompt: "Contrast external requirement and personal recommendation.", answer: "Staff have to show identification states a requirement. Staff should arrive early presents advice or expectation." }
+  ],
+  notice: { title: "The same situation, four different relationships", setup: "A project director responds to a delayed report. Notice how grammar changes certainty and interpersonal pressure.", samples: ["The figures may be incomplete, so we should check the source.", "The figures must be incomplete; the totals do not match.", "You might want to check the source before sending this.", "You should have checked the source before sending this."], questions: ["Which modal expresses the strongest evidence-based conclusion?", "Which sentence softens advice by presenting it as an option for the listener?", "Which form looks back critically at an action that did not happen?"], check: { question: "What does “You might want to check” usually do in this context?", answer: "It gives a suggestion while reducing direct interpersonal pressure.", options: [{ value: "It gives a suggestion while reducing direct interpersonal pressure." }, { value: "It proves the source is correct." }, { value: "It describes a completed past obligation." }], hint: "Consider the relationship between speaker and listener, not only logical possibility." } },
+  discover: {
+    principle: "A modal does more than locate possibility or obligation. It positions the speaker toward evidence, authority, action, and the listener. Interpret the source of the judgment, its strength, its time, and its social effect.",
+    formRows: [
+      { label: "present/future stance", form: "modal + base verb", example: "The delay may affect tomorrow’s launch." },
+      { label: "past stance", form: "modal + have + past participle", example: "The delay may have affected yesterday’s test." },
+      { label: "continuing inference", form: "modal + be + -ing", example: "They must be working on a solution." },
+      { label: "past continuing inference", form: "modal + have been + -ing", example: "They must have been working overnight." }
+    ],
+    meaningRows: [
+      { choice: "epistemic", use: "you judge likelihood from evidence", example: "The server must be down; nobody can connect." },
+      { choice: "deontic", use: "you express permission, rules, or obligation", example: "Visitors must sign in." },
+      { choice: "dynamic", use: "you describe ability, willingness, or characteristic behavior", example: "The system can process large files." },
+      { choice: "interpersonal", use: "you adjust directness, distance, or criticism", example: "You might want to revise the opening." }
+    ],
+    pronunciation: "Modal auxiliaries are normally light and unstressed. Stress the modal when correcting stance: It MAY be late, but it MUST not be sent without approval. In modal perfects, have is usually reduced: might’ve missed, should’ve checked.",
+    errors: [
+      { wrong: "She must have left tomorrow.", correct: "She must leave tomorrow / She must have left already.", why: "Modal perfects look backward; a future reference needs modal plus base verb." },
+      { wrong: "You must to submit the form.", correct: "You must submit the form.", why: "Core modals take the base verb without to." },
+      { wrong: "The data must be correct, but I have no evidence.", correct: "The data may be correct, but I have not verified it.", why: "Must overstates an evidence-based conclusion when no evidence is available." }
+    ]
+  },
+  reference: { title: "A stance decision path", intro: "Before choosing a modal, identify the source and strength of the judgment.", groups: [
+    { heading: "Evidence", items: ["may/might: open possibility", "should: reasonable expectation", "must: strong conclusion", "cannot: strong negative conclusion"] },
+    { heading: "Authority", items: ["must: speaker or rule imposes", "have to: external requirement", "should: advice or norm", "be supposed to: expected arrangement"] },
+    { heading: "Past evaluation", items: ["should have: criticism or missed best action", "could have: unrealized option", "might have: possible explanation", "need not have: action happened but was unnecessary"] }
+  ] },
+  build: [
+    { question: "The office is dark, the door is locked, and no one answers. What is the strongest evidence-based conclusion?", answer: "They must have gone home.", options: [{ value: "They must have gone home." }, { value: "They may go home next year." }, { value: "They have to be going home by law." }], hint: "The evidence supports a strong conclusion about an earlier departure." },
+    { question: "You have not checked whether the figures are final. Which statement matches the evidence?", answer: "The figures might still change.", options: [{ value: "The figures might still change." }, { value: "The figures must be final." }, { value: "The figures cannot ever change." }], hint: "Keep an unverified possibility open." },
+    { question: "A regulation requires all visitors to sign in. Which sentence presents the external rule?", answer: "All visitors have to sign in.", options: [{ value: "All visitors have to sign in." }, { value: "All visitors might have signed in yesterday." }, { value: "All visitors would rather sign in." }], hint: "The necessity comes from a regulation." },
+    { question: "A colleague sent an inaccurate report yesterday. Which sentence gives retrospective criticism?", answer: "You should have checked the totals.", options: [{ value: "You should have checked the totals." }, { value: "You should check them next year yesterday." }, { value: "You must have checking them." }], hint: "The better action did not happen in the past." },
+    { question: "A manager wants to suggest a revision without issuing a command. Which wording is most tactful?", answer: "You might want to clarify the second paragraph.", options: [{ value: "You might want to clarify the second paragraph." }, { value: "Clarify it immediately because I said so." }, { value: "You cannot have clarified it tomorrow." }], hint: "Frame the suggestion as an option." },
+    { question: "The team had the ability and opportunity to apply, but did not. Which form fits?", answer: "They could have applied.", options: [{ value: "They could have applied." }, { value: "They can applied yesterday." }, { value: "They must to apply yesterday." }], hint: "Express an unrealized past option." },
+    { question: "You bought a ticket, but entry was free. Which sentence marks unnecessary completed action?", answer: "You need not have bought a ticket.", options: [{ value: "You need not have bought a ticket." }, { value: "You did not need buy a ticket and bought none." }, { value: "You must have buy a ticket." }], hint: "The action happened, but it was unnecessary." },
+    { question: "A machine often becomes noisy in cold weather. Which modal can describe characteristic behavior?", answer: "The machine can become noisy in cold weather.", options: [{ value: "The machine can become noisy in cold weather." }, { value: "The machine must have become noisy tomorrow." }, { value: "The machine should to become noisy." }], hint: "Can may describe a general characteristic, not only ability." }
+  ],
+  context: { title: "A cautious incident review", intro: "Read how an operations lead separates evidence, rules, possibilities, and criticism.", lines: ["The fault may have begun during Monday’s update, but the logs are incomplete. It cannot have started before Sunday because the system passed every overnight test.", "Engineers must preserve the original logs, and they have to notify the regulator within forty-eight hours. They should also record any assumptions that have not been verified.", "The first response team could have isolated the affected server sooner. However, they could not have known the full scale of the problem from the initial alert alone."], questions: [
+    { question: "Why does the lead use “may have begun” for Monday?", answer: "Monday is a plausible but unconfirmed explanation.", options: [{ value: "Monday is a plausible but unconfirmed explanation." }, { value: "The lead has proof that Monday is impossible." }, { value: "The sentence imposes a legal duty." }], hint: "The logs are incomplete." },
+    { question: "What supports “cannot have started before Sunday”?", answer: "The successful overnight tests provide contrary evidence.", options: [{ value: "The successful overnight tests provide contrary evidence." }, { value: "A manager prefers Sunday." }, { value: "The regulator issued a future rule." }], hint: "Find the evidence that excludes the earlier time." },
+    { question: "Which obligation comes from an external deadline?", answer: "The engineers have to notify the regulator within forty-eight hours.", options: [{ value: "The engineers have to notify the regulator within forty-eight hours." }, { value: "The fault may have begun on Monday." }, { value: "The team could not know the scale." }], hint: "Look for a regulatory requirement." },
+    { question: "How does the final sentence limit criticism of the first response team?", answer: "It states that the initial evidence did not make full knowledge possible.", options: [{ value: "It states that the initial evidence did not make full knowledge possible." }, { value: "It proves the team ignored complete evidence." }, { value: "It says the team had no responsibilities." }], hint: "Distinguish earlier opportunity from earlier knowledge." }
+  ] },
+  builder: { title: "Build the cautious past inference", prompt: "State a possible explanation without presenting it as fact.", answer: "The fault might have begun during the software update", tiles: ["The", "fault", "might", "have", "begun", "during", "the", "software", "update"] },
+  repairs: [
+    { title: "Remove to after a core modal", sentence: "Visitors must to show identification.", answer: "to", fix: "Visitors must show identification.", why: "Must takes the base verb directly.", tokens: [{ value: "visitors", label: "Visitors" }, { value: "must", label: "must" }, { value: "to", label: "to" }, { value: "show", label: "show identification" }] },
+    { title: "Match the modal perfect to past time", sentence: "She might missed the message yesterday.", answer: "missed", fix: "She might have missed the message yesterday.", why: "A past possibility uses modal plus have plus past participle.", tokens: [{ value: "she", label: "She" }, { value: "might", label: "might" }, { value: "missed", label: "missed" }, { value: "message", label: "the message yesterday" }] },
+    { title: "Calibrate unsupported certainty", sentence: "The change must solve the problem, although it has not been tested.", answer: "must", fix: "The change may solve the problem, although it has not been tested.", why: "May matches an untested possibility; must would imply strong evidence.", tokens: [{ value: "change", label: "The change" }, { value: "must", label: "must" }, { value: "solve", label: "solve the problem" }, { value: "although", label: "although it has not been tested" }] },
+    { title: "Put past criticism in the past", sentence: "You should check the source before you sent the report yesterday.", answer: "check", fix: "You should have checked the source before you sent the report yesterday.", why: "The missed better action belongs to a completed past situation.", tokens: [{ value: "you", label: "You should" }, { value: "check", label: "check" }, { value: "source", label: "the source" }, { value: "before", label: "before you sent the report yesterday" }] }
+  ],
+  fluency: [
+    { prompt: "Give a weak, medium, and strong inference from the same evidence.", answer: "It might be a network problem. It should be temporary. It must be affecting several offices because every regional alert is active." },
+    { prompt: "Turn a direct command into tactful advice, then into a formal requirement.", answer: "You might want to revise the summary. You should revise the summary. The policy requires you to revise the summary." },
+    { prompt: "Contrast an unrealized option with retrospective criticism.", answer: "We could have delayed the launch, and perhaps we should have done so." },
+    { prompt: "Correct an overconfident claim after checking the evidence.", answer: "The update must have caused the fault. More accurately, it may have contributed to the fault; the evidence is incomplete." }
+  ],
+  communicate: { title: "The evidence and responsibility meeting", setup: "Discuss a fictional service failure. Separate what is certain, probable, possible, required, advisable, and open to criticism.", roles: ["Incident lead: present the evidence, assign proportionate duties, and identify two past alternatives.", "Reviewer: challenge every modal, ask what supports it, and request a softer or stronger version where appropriate."], prompts: ["What must be true from the evidence?", "What might have happened?", "What did the team have to do?", "What could or should it have done differently?"], success: ["Modal strength matches stated evidence.", "Past, present, and future judgments use the correct modal form.", "Advice and criticism remain proportionate to authority and knowledge."] },
+  writing: { title: "Write a calibrated incident note", task: "Write 180 to 220 words that separates verified facts, possible explanations, required actions, and retrospective evaluation.", requirements: ["Use at least four different modal meanings.", "Include two accurate modal perfect forms.", "Name the evidence or authority behind every strong modal."], model: "The fault may have begun during Monday’s update, although the incomplete logs do not establish a direct cause. It cannot have started before Sunday because all earlier tests passed. Engineers must preserve the original records and have to notify the regulator within forty-eight hours. The response team could have isolated the affected server sooner, and it should have documented its assumptions more clearly. However, staff could not have known the full scale of the problem from the first alert. Further testing should clarify whether the update contributed to the failure." },
+  reflect: { canDo: ["Distinguish evidence, authority, ability, willingness, and interpersonal stance.", "Use modal perfects to judge past situations.", "Strengthen or soften a modal while explaining the change in commitment."], nextUse: "Record a one-minute recommendation, then underline every modal and name its source, strength, time, and social effect." }
+};
 ---
+<LessonPage page={page}><StructuredLesson page={page} lesson={lesson} /></LessonPage>

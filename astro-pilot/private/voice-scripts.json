@@ -68,5 +68,19 @@
     "language": "en",
     "speed": 0.98,
     "voice": "teacher"
+  },
+  "c1-program-review": {
+    "text": "At first glance, the mentoring program appears remarkably successful: participants were promoted more often and reported stronger professional networks. I should qualify that. Employees volunteered for the program, so they may already have been especially motivated. What the findings justify is not permanent expansion, but a larger comparison that includes employees with different levels of prior engagement.",
+    "path": "audio/assessments/c1-exit/program-review.mp3",
+    "language": "en",
+    "speed": 0.98,
+    "voice": "teacher"
+  },
+  "c1-policy-response": {
+    "text": "I understand the concern that a late-night transit service may initially carry too few passengers to justify its cost. That is a fair point. Even so, the current absence of service prevents us from measuring potential demand. I would support a six-month pilot, provided that the city publishes monthly usage and safety data and can revise the route if the evidence remains weak.",
+    "path": "audio/assessments/c1-exit/policy-response.mp3",
+    "language": "en",
+    "speed": 0.98,
+    "voice": "teacher"
   }
 }

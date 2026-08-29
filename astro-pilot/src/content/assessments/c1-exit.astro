@@ -1,0 +1,241 @@
+---
+import AssessmentPage from "../../components/assessment/AssessmentPage.astro";
+import AudioControl from "../../components/assessment/AudioControl.astro";
+
+export const page = {
+  original: "outputs/assessments/c1-exit.html",
+  source: "src/content/assessments/c1-exit.astro",
+  route: "/assessments/c1-exit/",
+  slug: "c1-exit",
+  title: "C1 End-of-Level Diagnostic",
+  description: "Use this after all C1 lessons to confirm precise, flexible, and sustained advanced English across demanding contexts.",
+  "engine": "assessment",
+  bodyClass: "",
+  features: ["AssessmentPage", "AssessmentNavigation", "AssessmentEngine", "ProgressIndicator", "FeedbackPanel", "MultipleChoiceExercise", "AudioControls"],
+  contentTextHash: "pending",
+  interactionCounts: {
+    "data-assessment-item": 20,
+    "data-option": 54,
+    "data-credit": 10,
+    "data-voice-clip": 2,
+  },
+  audioClips: ["c1-program-review", "c1-policy-response"],
+};
+---
+
+<AssessmentPage page={page}>
+  <main class="wrap">
+    <a class="back" href="/curriculum/#lvl-C1">Back to curriculum</a>
+    <p class="overline">Demonstrate flexible C1 communication</p>
+    <h1>C1 End-of-Level Diagnostic</h1>
+    <p class="lede">Use this after all C1 lessons. The check combines precise language choices with interpretation, listening, argument, reformulation, and independent production.</p>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Benchmark goal</h2>
+        <p>The learner should understand demanding extended input, recognize implied meaning, express ideas fluently and flexibly, and produce clear, well-structured language with controlled register and cohesion.</p>
+      </section>
+      <section class="panel">
+        <h2>Confirm C1 when ready</h2>
+        <ul class="rubric">
+          <li>Controls aspect, stance, emphasis, reduction, and information structure for meaning.</li>
+          <li>Interprets qualification, connotation, implication, and relationships across extended discourse.</li>
+          <li>Sustains nuanced speech and writing while reformulating and responding to challenge.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="assessment" data-assessment data-pass="76" data-strong="90" data-require-live-evidence data-production-min="60" data-listening-min="50" data-evidence-label="More live evidence needed" data-evidence-feedback="The score is high enough, but confirm at least 60% in both speaking and writing and 50% in listening before confirming C1." data-review-label="C1 still developing" data-pass-label="C1 achieved" data-strong-label="C1 secure" data-review-feedback="Use the skill profile to choose a focused review cycle before the learner relies on C1 English in demanding academic, professional, or public contexts." data-pass-feedback="The learner has demonstrated flexible C1 communication. Use the skill profile to choose consolidation, specialization, or continued work toward near-native precision.">
+      <div class="score-card">
+        <div class="score-big"><span>Score</span><b data-score-text>0 / 0</b></div>
+        <div>
+          <div class="score-meter"><span class="score-fill" data-score-bar></span></div>
+          <div class="score-label" data-score-label>Not checked yet</div>
+          <p class="score-help">C1 requires converging evidence: precise choices, inference in extended input, and independent speaking and writing.</p>
+          <div class="skill-summary" data-skill-summary></div>
+        </div>
+      </div>
+
+      <div class="assessment-section">
+        <h2>1. Control viewpoint, stance, and information structure</h2>
+        <div class="item-list">
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="had been expecting">
+            <p class="item-kicker">Narrative viewpoint</p>
+            <div class="reading-text"><p>Before the call began, Maya expected a routine update. The unexpected resignation changed how she understood the meeting.</p></div>
+            <p class="question">Until the director spoke, Maya ___ a routine update.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="had been expecting">had been expecting</button><button class="choice-btn" data-option="has expected">has expected</button><button class="choice-btn" data-option="would expect yesterday">would expect yesterday</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Had the evidence been conclusive, the panel would not be requesting another trial.">
+            <p class="item-kicker">Implied mixed conditional</p>
+            <div class="reading-text"><p>The evidence was not conclusive. That is why the panel is requesting another trial now.</p></div>
+            <p class="question">Which sentence makes the unreal relationship explicit?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="Had the evidence been conclusive, the panel would not be requesting another trial.">Had the evidence been conclusive, the panel would not be requesting another trial.</button><button class="choice-btn" data-option="Was the evidence conclusive, the panel did not request another trial.">Was the evidence conclusive, the panel did not request another trial.</button><button class="choice-btn" data-option="If the evidence will be conclusive, the panel had not requested a trial.">If the evidence will be conclusive, the panel had not requested a trial.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Only after the second review did the error become apparent.">
+            <p class="item-kicker">Negative and restrictive inversion</p>
+            <div class="reading-text"><p>The error did not become apparent during the first review. It became apparent after the second review.</p></div>
+            <p class="question">Choose the accurate emphatic version.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="Only after the second review did the error become apparent.">Only after the second review did the error become apparent.</button><button class="choice-btn" data-option="Only after the second review the error became apparent.">Only after the second review the error became apparent.</button><button class="choice-btn" data-option="Only did after the second review the error became apparent.">Only did after the second review the error became apparent.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The discrepancy may well reflect a change in reporting practice.">
+            <p class="item-kicker">Advanced modal stance</p>
+            <div class="reading-text"><p>A reporting change is a credible explanation, but the available evidence does not prove it.</p></div>
+            <p class="question">Which sentence expresses a strong possibility without claiming certainty?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The discrepancy may well reflect a change in reporting practice.">The discrepancy may well reflect a change in reporting practice.</button><button class="choice-btn" data-option="The discrepancy must definitely reflect only that change.">The discrepancy must definitely reflect only that change.</button><button class="choice-btn" data-option="The discrepancy cannot reflect any reporting change.">The discrepancy cannot reflect any reporting change.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Having reviewed the full dataset, the analyst revised her conclusion.">
+            <p class="item-kicker">Participle clause</p>
+            <div class="reading-text"><p>The analyst reviewed the full dataset first. She then revised her own conclusion.</p></div>
+            <p class="question">Choose the concise sentence with a clear understood subject.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="Having reviewed the full dataset, the analyst revised her conclusion.">Having reviewed the full dataset, the analyst revised her conclusion.</button><button class="choice-btn" data-option="Having reviewed the full dataset, the conclusion was revised.">Having reviewed the full dataset, the conclusion was revised.</button><button class="choice-btn" data-option="Reviewed the full dataset, it revised the analyst.">Reviewed the full dataset, it revised the analyst.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="Applications received after Friday will be considered next month.">
+            <p class="item-kicker">Reduced relative clause</p>
+            <div class="reading-text"><p>The rule applies to applications that are received after Friday.</p></div>
+            <p class="question">Choose the accurate reduced form.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="Applications received after Friday will be considered next month.">Applications received after Friday will be considered next month.</button><button class="choice-btn" data-option="Applications receiving after Friday will consider next month.">Applications receiving after Friday will consider next month.</button><button class="choice-btn" data-option="Applications were received after Friday considering next month.">Applications were received after Friday considering next month.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="The committee's rejection of the proposal surprised the researchers.">
+            <p class="item-kicker">Nominalization</p>
+            <div class="reading-text"><p>The committee rejected the proposal. The researchers were surprised. The actor must remain visible.</p></div>
+            <p class="question">Which nominalized version preserves responsibility?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The committee's rejection of the proposal surprised the researchers.">The committee’s rejection of the proposal surprised the researchers.</button><button class="choice-btn" data-option="The rejection happened and surprise occurred.">The rejection happened and surprise occurred.</button><button class="choice-btn" data-option="The proposal's committee rejected the researchers.">The proposal’s committee rejected the researchers.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Grammar" data-points="1" data-answer="What the report fails to explain is why the regional results differ.">
+            <p class="item-kicker">Cleft structure</p>
+            <div class="reading-text"><p>The missing explanation, not the reported figures, is the writer’s focus.</p></div>
+            <p class="question">Choose the sentence that places that gap in focus.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="What the report fails to explain is why the regional results differ.">What the report fails to explain is why the regional results differ.</button><button class="choice-btn" data-option="What does the report fail is explaining the regional results differ.">What does the report fail is explaining the regional results differ.</button><button class="choice-btn" data-option="It is why regional differs what the report.">It is why regional differs what the report.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="The evidence is limited. Even so, it warrants a carefully monitored trial.">
+            <p class="item-kicker">Concession and counterargument</p>
+            <div class="reading-text"><p>You want to acknowledge a serious limitation and then defend a proportionate next step.</p></div>
+            <p class="question">Which pair makes that relationship clear?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The evidence is limited. Even so, it warrants a carefully monitored trial.">The evidence is limited. Even so, it warrants a carefully monitored trial.</button><button class="choice-btn" data-option="The evidence is limited. In other words, it proves the policy works.">The evidence is limited. In other words, it proves the policy works.</button><button class="choice-btn" data-option="The evidence is limited. Similarly, no trial can be monitored.">The evidence is limited. Similarly, no trial can be monitored.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="The findings provide compelling evidence for a broader trial.">
+            <p class="item-kicker">Collocation and lexical precision</p>
+            <div class="reading-text"><p>The evidence is strong and persuasive, but it supports another trial rather than immediate permanent adoption.</p></div>
+            <p class="question">Choose the most precise natural sentence.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The findings provide compelling evidence for a broader trial.">The findings provide compelling evidence for a broader trial.</button><button class="choice-btn" data-option="The findings make gigantic proof for permanent success.">The findings make gigantic proof for permanent success.</button><button class="choice-btn" data-option="The findings do a powerful evidence to all policy.">The findings do a powerful evidence to all policy.</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="assessment-section">
+        <h2>2. Read for stance, implication, and cohesion</h2>
+        <div class="reading-text long-reading">
+          <p><strong>What can a four-day trial actually tell us?</strong></p>
+          <p>A software company recently reported that productivity rose during a six-month four-day-workweek trial. Employees completed roughly the same number of projects while taking fewer sick days, and most described their concentration as better. The result appears encouraging, particularly because customer satisfaction did not decline.</p>
+          <p>It would be premature, however, to treat the trial as proof that a shorter week suits every organization. The company postponed two major launches during the study, and its teams already had considerable control over their schedules. Those conditions may have made the transition unusually manageable. Nor does stable project output show whether employees compressed the same pressure into fewer days.</p>
+          <p>The strongest conclusion is therefore narrower than either supporters or critics may prefer. The trial demonstrates that reduced working time can be compatible with stable output under some conditions. A larger comparison should examine workload, retention, service quality, and employee well-being across different sectors before policymakers infer a universal effect.</p>
+        </div>
+        <div class="item-list">
+          <article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The result is promising but conditional, so broader evidence is needed before generalizing.">
+            <p class="item-kicker">Overall stance</p>
+            <p class="question">Which statement best represents the writer’s position?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The result is promising but conditional, so broader evidence is needed before generalizing.">The result is promising but conditional, so broader evidence is needed before generalizing.</button><button class="choice-btn" data-option="The trial proves that every organization should adopt a four-day week immediately.">The trial proves that every organization should adopt a four-day week immediately.</button><button class="choice-btn" data-option="The trial provides no useful evidence because two launches were postponed.">The trial provides no useful evidence because two launches were postponed.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Existing schedule control and postponed launches may limit how widely the result applies.">
+            <p class="item-kicker">Qualification</p>
+            <p class="question">Why does the writer mention schedule control and postponed launches?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="Existing schedule control and postponed launches may limit how widely the result applies.">Existing schedule control and postponed launches may limit how widely the result applies.</button><button class="choice-btn" data-option="They prove that the employees completed no projects.">They prove that the employees completed no projects.</button><button class="choice-btn" data-option="They explain why customer satisfaction collapsed.">They explain why customer satisfaction collapsed.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="Stable output may conceal greater pressure within each working day.">
+            <p class="item-kicker">Implied meaning</p>
+            <p class="question">What concern is implied by “compressed the same pressure into fewer days”?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="Stable output may conceal greater pressure within each working day.">Stable output may conceal greater pressure within each working day.</button><button class="choice-btn" data-option="Employees certainly worked fewer hours with no pressure.">Employees certainly worked fewer hours with no pressure.</button><button class="choice-btn" data-option="The company reduced every project deadline by four days.">The company reduced every project deadline by four days.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Reading" data-points="1" data-answer="The compatibility of reduced working time with stable output under some conditions">
+            <p class="item-kicker">Reference across discourse</p>
+            <p class="question">What does “The strongest conclusion” refer to?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The compatibility of reduced working time with stable output under some conditions">The compatibility of reduced working time with stable output under some conditions</button><button class="choice-btn" data-option="A universal guarantee of higher productivity">A universal guarantee of higher productivity</button><button class="choice-btn" data-option="The cancellation of all future product launches">The cancellation of all future product launches</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="assessment-section">
+        <h2>3. Listen for qualification, reformulation, and recommendation</h2>
+        <div class="item-list">
+          <article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="The first result justifies a broader comparison, not a permanent decision.">
+            <p class="item-kicker">Listen: program review</p>
+            <p class="question">Play the review. Which summary preserves the speaker’s final position?</p>
+            <AudioControl clip="c1-program-review" src="/audio/assessments/c1-exit/program-review.mp3" text="At first glance, the mentoring program appears remarkably successful: participants were promoted more often and reported stronger professional networks. I should qualify that. Employees volunteered for the program, so they may already have been especially motivated. What the findings justify is not permanent expansion, but a larger comparison that includes employees with different levels of prior engagement." label="Play program review" ariaLabel="Play the C1 program review" />
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The first result justifies a broader comparison, not a permanent decision.">The first result justifies a broader comparison, not a permanent decision.</button><button class="choice-btn" data-option="The program has proved that mentoring causes every promotion.">The program has proved that mentoring causes every promotion.</button><button class="choice-btn" data-option="The speaker withdraws every positive observation about the program.">The speaker withdraws every positive observation about the program.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Listening" data-points="1" data-answer="She supports a reversible pilot with safeguards and evidence-based review.">
+            <p class="item-kicker">Listen: policy response</p>
+            <p class="question">Play the response. What position does the speaker ultimately take?</p>
+            <AudioControl clip="c1-policy-response" src="/audio/assessments/c1-exit/policy-response.mp3" text="I understand the concern that a late-night transit service may initially carry too few passengers to justify its cost. That is a fair point. Even so, the current absence of service prevents us from measuring potential demand. I would support a six-month pilot, provided that the city publishes monthly usage and safety data and can revise the route if the evidence remains weak." label="Play policy response" ariaLabel="Play the C1 policy response" />
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="She supports a reversible pilot with safeguards and evidence-based review.">She supports a reversible pilot with safeguards and evidence-based review.</button><button class="choice-btn" data-option="She demands a permanent service regardless of cost or evidence.">She demands a permanent service regardless of cost or evidence.</button><button class="choice-btn" data-option="She accepts that measuring demand is impossible and rejects any trial.">She accepts that measuring demand is impossible and rejects any trial.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Functional language" data-points="1" data-answer="To put it another way, the policy changes the risk rather than removing it.">
+            <p class="item-kicker">Reformulation</p>
+            <div class="reading-text"><p>A listener has misunderstood your abstract claim. You need to restate it more clearly without changing the claim.</p></div>
+            <p class="question">Which response performs that discourse job?</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="To put it another way, the policy changes the risk rather than removing it.">To put it another way, the policy changes the risk rather than removing it.</button><button class="choice-btn" data-option="By contrast, I will introduce an unrelated advantage.">By contrast, I will introduce an unrelated advantage.</button><button class="choice-btn" data-option="As a result, the first sentence was grammatically impossible.">As a result, the first sentence was grammatically impossible.</button></div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Vocabulary" data-points="1" data-answer="The committee will gradually phase out the temporary measure.">
+            <p class="item-kicker">Phrasal verb and register</p>
+            <div class="reading-text"><p>The measure will be discontinued in stages, and the sentence belongs in a professional update.</p></div>
+            <p class="question">Choose the natural accurate wording.</p>
+            <div class="choice-row choice-grid"><button class="choice-btn" data-option="The committee will gradually phase out the temporary measure.">The committee will gradually phase out the temporary measure.</button><button class="choice-btn" data-option="The committee will phase the temporary measure out it.">The committee will phase the temporary measure out it.</button><button class="choice-btn" data-option="The committee will instantly phase out the measure over no period.">The committee will instantly phase out the measure over no period.</button></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="assessment-section">
+        <h2>4. Teacher-scored independent communication</h2>
+        <div class="item-list">
+          <article class="check-item" data-assessment-item data-skill="Speaking" data-points="5">
+            <p class="item-kicker">Speaking task · 5 points</p>
+            <div class="reading-text"><p><strong>Policy review meeting:</strong> Choose a complex change relevant to work, education, technology, housing, transportation, or public health. Present a recommendation, acknowledge a serious objection, respond to two challenges, and reformulate one point after the tutor deliberately misunderstands it.</p></div>
+            <p class="question">Award one point for each ability demonstrated independently or after one light prompt.</p>
+            <div class="credit-list">
+              <label class="credit-check"><input type="checkbox" data-credit /> Sustains a clear four-to-five-minute argument with a focused claim, relevant support, concession, response, and proportionate conclusion.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Responds flexibly to two challenges by qualifying, reformulating, correcting, or revising a position without losing coherence.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Uses a broad C1 range of stance, emphasis, clause reduction, reference, and discourse organization where meaningful.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Chooses precise collocations, controlled connotation, and audience-appropriate idiomatic or phrasal language.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Uses discourse-level stress, rhythm, pausing, and intonation to make structure and stance easy to follow.</label>
+            </div>
+          </article>
+
+          <article class="check-item" data-assessment-item data-skill="Writing" data-points="5">
+            <p class="item-kicker">Writing task · 5 points</p>
+            <div class="reading-text"><p><strong>Write a nuanced recommendation of 280–340 words.</strong> Address a complex professional, academic, or public issue. Establish the question, distinguish evidence from inference, compare two responses, acknowledge a substantial counterargument, and recommend a revisable course of action.</p></div>
+            <p class="question">Award one point for each observable quality.</p>
+            <div class="credit-list">
+              <label class="credit-check"><input type="checkbox" data-credit /> Fulfills the complete task with a precise position, developed support, counterargument, qualification, and realistic recommendation.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Organizes well-shaped paragraphs through clear reference chains, controlled information density, and varied cohesive relations.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Uses a broad C1 grammatical range accurately and makes form choices that sharpen viewpoint, stance, emphasis, and focus.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Controls register, lexical precision, collocation, connotation, and formulaic language for the specified audience.</label>
+              <label class="credit-check"><input type="checkbox" data-credit /> Produces clear independent prose in which occasional errors do not obscure nuance, argument, or reader guidance.</label>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="assessment-btn primary" data-check-assessment>Check assessment</button>
+        <button class="assessment-btn" data-reset-assessment>Reset</button>
+        <button class="assessment-btn" data-print-assessment>Print summary</button>
+      </div>
+      <p class="feedback" data-feedback>Complete the sections, then check the assessment.</p>
+    </section>
+  </main>
+</AssessmentPage>

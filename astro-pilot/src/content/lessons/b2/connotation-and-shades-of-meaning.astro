@@ -14,16 +14,24 @@ export const page = defineLesson({
   "sequence": 18,
   "prerequisites": ["b2/nuanced-adjectives-and-intensifiers", "b2/register-and-formality", "b2/abstract-and-academic-topics"],
   "related": ["b1/media-and-news", "b2/politics-and-global-issues", "b2/idioms-and-fixed-expressions"],
-  "assessments": ["b2-exit"]
+  "assessments": ["b2-exit"],
+  "tutorReviewRequired": true,
+  "qualityReview": {
+    "status": "editorial-review",
+    "generatedPedagogy": true,
+    "learnerPilotCount": 0,
+    "scoredItemCount": 18,
+    "revisionSummary": "Denotation, evaluation, degree, agency, register, framing, contextual reading, controlled selection, repair, speaking, and writing were expanded; three learner pilots remain."
+  }
 });
 export const lesson = {
   duration: "75–85 min",
-  outcome: "Choose among near-synonyms by attitude, strength, typical context, and implied viewpoint—and identify how apparently factual wording can frame a person, event, or proposal.",
+  outcome: "Choose among near-synonyms by attitude, strength, typical context, and implied viewpoint, and identify how apparently factual wording can frame a person, event, or proposal.",
   focus: "denotation, connotation and framing",
   tags: ["lexical precision", "critical reading and stance"],
   retrieval: [
-    { prompt: "Place these on a degree scale: concerned, worried, alarmed.", answer: "Concerned is measured, worried is more personal, and alarmed suggests a strong urgent reaction—though context can shift the degree." },
-    { prompt: "Shift register: The company got rid of the old system.", answer: "The company removed, replaced, discontinued, or phased out the old system—depending on the exact process." },
+    { prompt: "Place these on a degree scale: concerned, worried, alarmed.", answer: "Concerned is measured, worried is more personal, and alarmed suggests a strong urgent reaction, though context can shift the degree." },
+    { prompt: "Shift register: The company got rid of the old system.", answer: "The company removed, replaced, discontinued, or phased out the old system, depending on the exact process." },
     { prompt: "Frame a public disagreement neutrally.", answer: "Supporters argue that…, whereas critics contend/question…" }
   ],
   notice: {
@@ -52,11 +60,11 @@ export const lesson = {
       { choice: "framing", use: "word choice selects one interpretation of an event", example: "investment highlights future benefit; expenditure highlights money spent." },
       { choice: "euphemism and dysphemism", use: "language softens or harshens an uncomfortable reality", example: "let staff go softens dismiss; dump staff harshens it." }
     ],
-    pronunciation: "Contrastive stress can expose framing: Was the leader DETERMINED—or STUBBORN? Pause before a revised, more precise word when self-correcting.",
+    pronunciation: "Contrastive stress can expose framing: Was the leader DETERMINED or STUBBORN? Pause before a revised, more precise word when self-correcting.",
     errors: [
       { wrong: "Slim and skinny are exact synonyms.", correct: "Both can mean thin, but slim is often approving and skinny can sound critical or concerned.", why: "Shared denotation does not guarantee shared attitude." },
       { wrong: "The policy caused an improvement.", correct: "The policy contributed to / brought about an improvement.", why: "Cause is grammatical, but other choices may better fit positive outcome, partial agency, or register." },
-      { wrong: "The newspaper used a neutral word, so the whole report is neutral.", correct: "Neutrality depends on accumulated choices, selection, emphasis, sources, and context—not one word.", why: "Framing operates across a message." },
+      { wrong: "The newspaper used a neutral word, so the whole report is neutral.", correct: "Neutrality depends on accumulated choices, selection, emphasis, sources, and context, not one word.", why: "Framing operates across a message." },
       { wrong: "Formal words have no connotation.", correct: "Formal and technical words can still signal distance, authority, caution, approval, or criticism.", why: "Register itself can shape stance." }
     ]
   },
@@ -77,7 +85,9 @@ export const lesson = {
     { question: "Which reporting verb distances the writer from the truth of the statement?", answer: "claims", options: [{ value: "claims" }, { value: "proves" }, { value: "knows" }], hint: "The statement is attributed but not endorsed." },
     { question: "The city presents spending on parks as producing future benefits. It calls it an ___.", answer: "investment", options: [{ value: "investment" }, { value: "expense only" }, { value: "admission" }], hint: "This frame highlights expected future return." },
     { question: "Which verb suggests close, systematic examination?", answer: "scrutinize", options: [{ value: "scrutinize" }, { value: "notice" }, { value: "glance at" }], hint: "Choose the strongest analytical attention." },
-    { question: "Which sentence is the most neutral description?", answer: "The group remained outside the office for two hours and requested a meeting.", options: [{ value: "The group remained outside the office for two hours and requested a meeting." }, { value: "The heroic group defended justice for two hours." }, { value: "The troublesome crowd occupied the office entrance." }], hint: "Prefer observable actions before evaluation." }
+    { question: "Which sentence is the most neutral description?", answer: "The group remained outside the office for two hours and requested a meeting.", options: [{ value: "The group remained outside the office for two hours and requested a meeting." }, { value: "The heroic group defended justice for two hours." }, { value: "The troublesome crowd occupied the office entrance." }], hint: "Prefer observable actions before evaluation." },
+    { question: "A report says a change may have helped, but it cannot prove direct causation. Which verb is most cautious?", answer: "contributed to", options: [{ value: "contributed to" }, { value: "guaranteed" }, { value: "single-handedly caused" }], hint: "Choose language that allows partial influence without claiming sole agency." },
+    { question: "Which phrase frames a reduction as purposeful improvement rather than damage?", answer: "a streamlined process", options: [{ value: "a streamlined process" }, { value: "a gutted process" }, { value: "a ruined process" }], hint: "The context asks for favorable efficiency framing." }
   ],
   context: {
     title: "One redevelopment, two frames",
@@ -90,14 +100,16 @@ export const lesson = {
     questions: [
       { question: "Which official words encourage a positive future-oriented interpretation?", answer: "invest, revitalized, efficient, and public facilities", options: [{ value: "invest, revitalized, efficient, and public facilities" }, { value: "expensive, demolish, and inadequate" }, { value: "twelve, 480, and two" }], hint: "Find language of improvement and future benefit." },
       { question: "Which resident words foreground loss or insufficient process?", answer: "expensive, demolish, familiar, and without adequate consultation", options: [{ value: "expensive, demolish, familiar, and without adequate consultation" }, { value: "revitalized and efficient" }, { value: "health center and homes only" }], hint: "Find cost, destruction, attachment, and criticism." },
-      { question: "Why does the shared-facts paragraph not settle the debate?", answer: "Key impacts and value judgments still require evidence and evaluation.", options: [{ value: "Key impacts and value judgments still require evidence and evaluation." }, { value: "Facts can never inform a public decision." }, { value: "Both statements use exactly the same framing." }], hint: "Several decisive questions remain under review." }
+      { question: "Why does the shared-facts paragraph not settle the debate?", answer: "Key impacts and value judgments still require evidence and evaluation.", options: [{ value: "Key impacts and value judgments still require evidence and evaluation." }, { value: "Facts can never inform a public decision." }, { value: "Both statements use exactly the same framing." }], hint: "Several decisive questions remain under review." },
+      { question: "Which revision would make the official opening more observational?", answer: "The city plans to replace twelve waterfront buildings with housing and public facilities.", options: [{ value: "The city plans to replace twelve waterfront buildings with housing and public facilities." }, { value: "The city will heroically rescue the neglected waterfront." }, { value: "The city will destroy the community for profit." }], hint: "Retain the stated action while removing praise and blame." }
     ]
   },
   builder: { title: "Build the critical-reading question", prompt: "Ask how a writer’s vocabulary guides the reader toward a viewpoint.", answer: "how does this word choice frame the proposed change", tiles: ["frame", "this", "How", "choice", "change", "the", "word", "does", "proposed"] },
   repairs: [
     { title: "Repair false synonymy", sentence: "She is slim, so a critical writer could use the exact synonym elegant.", answer: "elegant", fix: "She is slim; a critical writer might choose skinny, while elegant describes style or graceful appearance rather than thinness itself.", why: "Near-synonyms must share the relevant denotation before connotation can be compared.", tokens: [{ value: "she", label: "She is slim" }, { value: "so", label: "so" }, { value: "critical", label: "a critical writer" }, { value: "exact", label: "could use the exact synonym" }, { value: "elegant", label: "elegant" }] },
     { title: "Repair reporting stance", sentence: "The spokesperson proved that costs would fall, but no evidence was provided.", answer: "proved", fix: "The spokesperson claimed that costs would fall, but no evidence was provided.", why: "Claim attributes the statement without endorsing its truth; prove would contradict the lack of evidence.", tokens: [{ value: "spokesperson", label: "The spokesperson" }, { value: "proved", label: "proved" }, { value: "costs", label: "that costs would fall" }, { value: "but", label: "but" }, { value: "evidence", label: "no evidence was provided" }] },
-    { title: "Repair hidden judgment", sentence: "The neutral report says the council wasted five million dollars on transit.", answer: "neutral", fix: "The report says the council spent five million dollars on transit; calling it waste would add a negative evaluation.", why: "Waste presupposes that the spending produced insufficient value and is not neutral description.", tokens: [{ value: "the", label: "The" }, { value: "neutral", label: "neutral report" }, { value: "council", label: "says the council" }, { value: "wasted", label: "wasted five million dollars" }, { value: "transit", label: "on transit" }] }
+    { title: "Repair hidden judgment", sentence: "The neutral report says the council wasted five million dollars on transit.", answer: "neutral", fix: "The report says the council spent five million dollars on transit; calling it waste would add a negative evaluation.", why: "Waste presupposes that the spending produced insufficient value and is not neutral description.", tokens: [{ value: "the", label: "The" }, { value: "neutral", label: "neutral report" }, { value: "council", label: "says the council" }, { value: "wasted", label: "wasted five million dollars" }, { value: "transit", label: "on transit" }] },
+    { title: "Repair an unsupported cause", sentence: "The new schedule guaranteed the rise in attendance, although several factors changed.", answer: "guaranteed", fix: "The new schedule may have contributed to the rise in attendance, although several factors changed.", why: "Contributed to matches evidence of partial influence; guaranteed overstates certainty and sole causation.", tokens: [{ value: "schedule", label: "The new schedule" }, { value: "guaranteed", label: "guaranteed" }, { value: "rise", label: "the rise in attendance" }, { value: "although", label: "although" }, { value: "factors", label: "several factors changed" }] }
   ],
   fluency: [
     { prompt: "Compare determined, persistent, stubborn, and obstinate in one situation.", answer: "The behavior may be persistent or determined when useful, but stubborn or obstinate when the person ignores good reasons to change." },
@@ -111,6 +123,12 @@ export const lesson = {
     roles: ["Framing editor: write one factual core, then a supportive and a critical version by changing only defensible lexical choices.", "Critical reader: underline evaluation, identify connotation and presupposition, request missing evidence, and rewrite one loaded phrase neutrally."],
     prompts: ["The basic fact is…", "This word suggests…", "A more neutral alternative would be…", "Calling it … frames the change as…", "What evidence would justify that evaluation?"],
     success: ["Distinguish central reference from added attitude.", "Explain differences in degree, agency, register, and semantic preference.", "Analyze framing critically without assuming that every evaluative choice is dishonest."]
+  },
+  writing: {
+    title: "Write a three-frame briefing",
+    task: "Write 140 to 180 words about one non-personal policy or workplace change. Begin with an observable factual core, then present a supportive frame and a critical frame before naming the evidence still needed.",
+    requirements: ["Use at least four deliberate near-synonym choices.", "Label evaluation rather than presenting it as uncontested fact.", "End with one neutral question that would improve the evidence."],
+    model: "The company plans to replace two weekly office days with a monthly team day. Supporters describe the change as a flexible use of time that may improve concentration. Critics call it an isolating arrangement that could weaken informal collaboration. Flexible highlights autonomy, while isolating foregrounds social loss. Current attendance and productivity figures do not settle the issue because staff roles differ. A useful next question is whether the effect varies by team, experience level, and type of task."
   },
   reflect: { canDo: ["Distinguish denotation from connotation.", "Choose among near-synonyms by stance, strength, collocation, and register.", "Identify and question framing while preserving a fair factual core."], nextUse: "Take one headline or professional message, highlight three evaluative words, and rewrite it once neutrally and once from a clearly labeled alternative perspective." }
 };

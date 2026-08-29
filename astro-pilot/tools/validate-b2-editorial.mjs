@@ -9,8 +9,8 @@ const sourceOnly = process.argv.includes("--source");
 const errors = [];
 const reviewedB2 = readyLessons.filter((lesson) => lesson.level === "B2" && lesson.qualityReview);
 
-if (reviewedB2.length !== 17) {
-  errors.push(`expected 17 B2 lessons with canonical review evidence, found ${reviewedB2.length}`);
+if (reviewedB2.length !== 19) {
+  errors.push(`expected 19 B2 lessons with canonical review evidence, found ${reviewedB2.length}`);
 }
 
 for (const lesson of reviewedB2) {

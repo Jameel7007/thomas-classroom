@@ -148,10 +148,7 @@ function validateOutput() {
     }
 
     const assessment = lesson.assessments[0];
-    if (assessment === "c1-exit") {
-      if (!html.includes("data-plan-assessment-planned")) errors.push(`${planRoute}: planned C1 diagnostic relationship is missing`);
-      if (html.includes('href="/assessments/c1-exit/"')) errors.push(`${planRoute}: planned C1 diagnostic must not be linked as available`);
-    } else if (assessment && !html.includes(`href="/assessments/${assessment}/" data-plan-assessment`)) {
+    if (assessment && !html.includes(`href="/assessments/${assessment}/" data-plan-assessment`)) {
       errors.push(`${planRoute}: linked level diagnostic is missing`);
     }
     if (lesson.tutorReviewRequired && !html.includes("data-tutor-review-required")) {
