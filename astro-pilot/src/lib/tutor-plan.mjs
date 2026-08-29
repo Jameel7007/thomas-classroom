@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { extractTutorListeningScripts } from "./listening-scripts.mjs";
 
 const projectRoot = path.resolve(process.cwd());
 const interactionPattern = "answer-drill|choice-gap-drill|tile-game|tile-builder|spot-error|transform|quiz";
@@ -38,6 +39,7 @@ function fromStructuredLesson(content) {
     },
     nextUse: content.reflect.nextUse,
     sectionHeadings: ["Retrieve", "Notice", "Discover", "Build", "Drill", "Communicate", "Reflect"],
+    listeningScripts: [],
   };
 }
 
@@ -108,6 +110,7 @@ function fromNativeSource(lesson) {
     },
     nextUse: nextUse?.replace(/^next use:\s*/i, "") || `Retrieve ${lesson.topic} in one true sentence at the next lesson.`,
     sectionHeadings: unique(sectionHeadings),
+    listeningScripts: extractTutorListeningScripts(source),
   };
 }
 

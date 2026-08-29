@@ -129,7 +129,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "b46cac83e861ae72bac8ba643ad570ac3e9d052badc68895327e76de1e245423",
+      "contentTextHash": "e7b5ad1ed964b442cb5bfb2abe4650d75884fd8984de29e526d5028c3ef360f5",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -180,7 +180,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c00076b4e74b133c01e5178ff19a665d97615190bd6578c2e167d294d20a6b33",
+      "contentTextHash": "a2b52b7c70f4bdad5fe4b095befc530b3fa0400e769101314ccdb8330195a567",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -235,7 +235,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "1c5bfeca496b3d174f227beee721c39c0d848222c48837687c19b4a02eefed25",
+      "contentTextHash": "5b48ce387c98f2d27c8f31b5982253b04e2aa87bfa53ad63f62f96f6b51578f1",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -291,7 +291,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "73cfa826106e7d52b0fe6806bb00a8646b6d8d1b899ade35b541b8449e8ab6c7",
+      "contentTextHash": "0bf11bcd33088a3d33669aac18de81d1ebdbf7b31f0dc083571da5cc8d0326c9",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -346,7 +346,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "71cfc49059ab8ddf222d394bed549fc36e11aac82b920c0efdc8f43e280b46b3",
+      "contentTextHash": "b627fdffc744f3e9dea16f53049f7a3600f67b8b8c96ce895c609bc16ebb6435",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -401,7 +401,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "62598715b177b800988003bae76b1b989831686338dec6af2dcf9659ecf04f73",
+      "contentTextHash": "ccd6cd1c2d06c9ef6e4b39b514f20eaa89fa8d0a332b7d0bd26bf4852047d124",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -457,7 +457,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "9e8386c93af8fb46a15fef8ea5f69d84fcfb6b653d5a53524e0a66b37c996728",
+      "contentTextHash": "c41e27c1efa63b3e350bba01364baf03dc742ea5cc01d0739aca9fb956e449b1",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -513,7 +513,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "5fd13202bedd8aa5893825cbce57081a6398e6dbc79a6a5326a28d8a58864b9c",
+      "contentTextHash": "66f979a7023dc044823e68874690301780ec6cc90af010ccc019657021ec4c8c",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -568,7 +568,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "3d408b49ec82b7ebf30d0827a2d536f59a4a223c5269a3d0b9e28da7e45103a8",
+      "contentTextHash": "2f549705ee28fd5c6279266e84266ca6969861717936debd697bd827db9d0384",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -623,7 +623,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "17b8f37d43dba93675b14b8ddb0527061d0e0d69c660ec59cc6203e7e7ed578e",
+      "contentTextHash": "9ad88c8f1080ea3e3b79a0a89ba2a6625406857cccc5af10081dfa9accf47c0a",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -678,7 +678,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "7ae3e922277b8e390e462212ee5d6e6fe747b0be0d320304db0cf995a45b6eed",
+      "contentTextHash": "8d829f422eaacef5fa7a9987fde849bd0d3e6d10a09b08ff53b24e161a8f3ac8",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -733,7 +733,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "697b285f4e9b231e67b3b15138bb29e744b81ef76b759982a64d6712596b4918",
+      "contentTextHash": "fab5a1b25622c6edbc614389e5a188172a837c29b98e04bc2b3e48e538c1fea3",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -788,7 +788,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "ed0bbcc5bae4b057c526b99802f5e7e011ee3086264422e68f12c42f7e2dd9f9",
+      "contentTextHash": "0edb23c166a8effd4ecd8597bcdc58b3517b92e675ce7231c9fc9be5fe704077",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -843,7 +843,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "8dbf36377f3f69fa14d777e7cc9e670d80e3936dc6a913638815289b64d86a1c",
+      "contentTextHash": "448bff0ca78625dd824dcaf94141d966c94d1870b7dfe0e885a165f3d238b1d8",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -956,7 +956,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "a782ec827e7e55a15a94c82255a6ba71f9e66f108bcdb2169335d325fee6c21e",
+      "contentTextHash": "349bb40a3a1e747363ad3229f747017af6af3a1168cba1f17b888ce115824ee5",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1009,7 +1009,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c63051d31f6d0dbd9ee2e663df1a6a30ed5b4c5aba13053c9d811101dffdbf5a",
+      "contentTextHash": "64150ec10047625f820a6ec0d43c35bfe8ce1c97a5341b78d77858b07c6e1df6",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1062,7 +1062,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "a0a7cb024401be7b3e90df1835f8d9ab6ff1d263bbe29700e4eb0b1196a573c4",
+      "contentTextHash": "703113599aef32c852bbf5739103521f2623c471a2cd2521afb0820c5fe8dd36",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1115,7 +1115,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "4e9f208a90a3895c7c51771ff38c9130aeba49982eee2647cf6f98aac4915b64",
+      "contentTextHash": "dacab6d63f1742a72ac7c8eaf15413f43dee68ce0cb1e8e5110b80ea0daefb3f",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1168,7 +1168,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "b23f1e71bf093e9682d77f100fa9ef973c74cd1ff9b828eedf47956d35cfe938",
+      "contentTextHash": "9efc0966685ddbe3b091a76c17091f97de6b56ff329064975c10f51c13111062",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1221,7 +1221,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "1f5d95c1834a7fe78f6dafcb1f824e5e0b187d8ed9f196b1f591ce852e9b26b1",
+      "contentTextHash": "f6177816c74cdb44cd3f63923c78394a3021b0df01cb9010f9bd180d57cf359c",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1274,7 +1274,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "2df05976c9c36406763d58e44ebf786242469ddb5eeb0eb5d80df4eacfe46f3c",
+      "contentTextHash": "0dab14dce573f5bb4ac93c468aa9b4fa3b7d43f8decc861affa3e71fde410adb",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1327,7 +1327,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "24484465063042bc169c637aa9117c06c6f58c16168d21ad900f95a3b53d8163",
+      "contentTextHash": "f5a04d22459b6002b183f52be44c488f3a6fad1ae8293fb82f9e7e6734696149",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1380,7 +1380,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "d0a02ca27bf46e71475cd76cad12a769830ba230d0449fb09ac9da0fc2064a69",
+      "contentTextHash": "da582f8b52be91a33d114495a2c3092d7ce12091ab4a89d1e8d72353d49d8dc5",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1433,7 +1433,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "4cf9d38f548641895de2e599c09dc9907b39c51b97e5e7b517bba4819c43d726",
+      "contentTextHash": "83c6b639c36f38ef8c6604712daf4e99f75ba193d237f807e652babcf5b8783b",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1486,7 +1486,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "92278b05eae29d0781882bc6abc16f1d1cee3903cf1ef0b8e1c7216d8c56701b",
+      "contentTextHash": "1bdff74b0e1616b8499d0e4bc2e5ffe5e028cdc14fd14091aa2bc73370f0cb42",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1541,7 +1541,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "893c62a205831de3320eb3c5fe4744487fd230ff74a2ccf3449fa95fd6ef736d",
+      "contentTextHash": "b6023ee5bb8e6e589123eed62a4b37fa429894cf71d448a96291d2beaeac3289",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1596,7 +1596,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "b84b88956a85dc1f856daf91fa947a0064bbc2a014bf6744dce619fc97422f51",
+      "contentTextHash": "54ab55d4a840b22ba599bfc0a72625baac654b9c7869ee3435977d85d3a36fce",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1651,7 +1651,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c0450871c97c5c7a65c33b81549ff8c4b2284aced1e990af71341ad2eb089d24",
+      "contentTextHash": "389a5b382cd1b758b673df7d8bf9c1e58ec39a32df70793c7d5a68ecea738108",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1706,7 +1706,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "184352fd289ecbab5593bd17f3881e2a3f849bfdada256dffe229e3d7c4ab5ed",
+      "contentTextHash": "078b9f6bf9fa8391a252e6b1f9985177ab82f1411a1d2594ee6b6cdd359004ea",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1761,7 +1761,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "7bb02fffce309c9c60ecaa7a3c41ded2909c8f441f9fd79f41712af98455980c",
+      "contentTextHash": "332d8eda71126641a7f60993b77fff9a5c18776e6b3735ea7ff4818bdaaf8858",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1816,7 +1816,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "23f345945d61929c08fa12de10ffbeb966fab5b81d37b2a84c551bfa9c96030d",
+      "contentTextHash": "7bc30c0a3c236be0de92d2b132f3a7a83bfa56e3b503cfe3232112c860c6776e",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1871,7 +1871,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c4732d47dd6980cbd90d57d2381b53505d820f136924e505496ee8127c501480",
+      "contentTextHash": "1c1238a9e2443f0c8662008d84a30515ecd62b224e0e6306e16aff633c51bea8",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1919,13 +1919,14 @@
         "LessonPage",
         "LessonNavigation",
         "LessonExerciseEngine",
+        "StructuredLesson",
         "MultipleChoiceExercise",
         "RevealCard",
-        "SentenceCorrection",
         "FeedbackPanel",
-        "SentenceBuilder"
+        "SentenceBuilder",
+        "SentenceCorrection"
       ],
-      "contentTextHash": "adf6f5a22fa6690454435deb623800e4fd3a1d494ecde6238d127972c5933d56",
+      "contentTextHash": "35957d19c6694e7a10a8c481702574ddc935025c7b63dbc2d2c862533a266dec",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -1975,7 +1976,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "682fdf38c4f404b24fba801a20f7b71193d78c7892d45125cbd2819299823fb4",
+      "contentTextHash": "69cca1f99290d6949ae66b8763b1afba0cd60ae4ed4065a618d93ee6a5934acb",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2025,7 +2026,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "2384b6fbd21ff027d91d04457db96c203c1dc13d61fad79571472267eb4e1475",
+      "contentTextHash": "694c8e8b6178b7ca1e37275a56186af0236214fd283bf3c8af92c35185671475",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2075,7 +2076,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "994a0fd6df493fb79640b26259ddf485c2265b1cbeb395c7a8c227ffe75a05a0",
+      "contentTextHash": "2db041b107ded51e8572708b8d61b05f12c01d34537a3a725f07274c0e058cc7",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2125,7 +2126,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "3feedc6993b21af76a44363a30773048bf6fe96c602d9ee82b0dc7d398d94f14",
+      "contentTextHash": "f0e2c7ebdaea97153a080c60fc006950be4b61427f80849f5c682be55cf64a27",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2175,7 +2176,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "efc16ab86b1d203bafe1b20f614260cf2bb54f46b6d6ccb6c34fbd371ebd1949",
+      "contentTextHash": "cf24fab874ae130c2ee3ef45bc3b9e1e24b639c1c5a22d00a8046fe99a1b7b5e",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2225,7 +2226,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "502203707a6ba48dae25ffc8ba0aad0ae951c3537a314f22187ac33297cd24bc",
+      "contentTextHash": "28f1d9e2f0965220550f277024192cad18cf56c710b0c5ca6e826ae16a1f4f0e",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2275,7 +2276,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "b61d3f004c68ecf90cd5b781bfebfaaccb3e741f32255995c9b99769a3610298",
+      "contentTextHash": "0adabdbab4b59a009a26208bafffcc1914e5bb8bcf00382213220e9e90839c2d",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2325,7 +2326,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "7c63d4fb102d7f96ca5a5bd982634a703e54e1dd611f392a6c08a5e91815d7fd",
+      "contentTextHash": "feb4c85418bbcb512571b0a6e000b8b9feb490a5f5c3b487f050d4679edb519a",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2375,7 +2376,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "7360fe8befada9a10f06664051ed978e8c710bd3c007f50fe7c9dde1b73764d1",
+      "contentTextHash": "56001f737b07c368244a146a3372387dc4206c3a610814b9b63f214eade30b59",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2425,7 +2426,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "ef3d7f74fb1b338ebdb1ea0c4b6c7b80b72de3a5b84223a62557a7635fef8b43",
+      "contentTextHash": "fa8df46be0dc302cea76b5fea3b5a767d18c8ccc939fd7cd0d52f10b6568d970",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2475,7 +2476,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "fb99b121ce045d3685cf98466a9f119af351617216d9fec87470ac6bb18306cf",
+      "contentTextHash": "c9e25866447abe71c8f255bfec44c64e7e49e4968775430149d96774c6447908",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2525,7 +2526,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "6902c95091156e7abfaedfaefc40c2533292abc20a8fc5b3f349c9109ca44c57",
+      "contentTextHash": "7fed33e442ceca560ea8fc33d150ac6d265b661ea49f12a497e2fe87c3add798",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2575,7 +2576,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "ef37681b20b5b4bf6e7f2500dbdc9cf0922f2245c855aa43a4a3249394dab9d4",
+      "contentTextHash": "9e40e976236a41746d942ccc6e62f4afef8078c49f71b6150249ecf6bff3af05",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2625,7 +2626,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "4953c768f326670a7cdd264204e1ace53030a7dc6c6096c8201d336522dc53b4",
+      "contentTextHash": "7c269d55c19055384f78ab6740ab131ee93edde229274ec48c383163c6ca6a43",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2671,7 +2672,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "18cd762a7529e2125e332247cf65b3509bb446dd80d2b4ce1ee2d1d4eb69aae1",
+      "contentTextHash": "c398389863c7458f0082917dd0c21f35a973aa6d58abb02a49c307ffe344aeae",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2717,7 +2718,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "27109fe88c3503840aac3a40bf16d21255be1288160fe9bf9c7ce6887e237a82",
+      "contentTextHash": "ecf0fdb68381e12198cac3af725f0b5b049c3af4a737023ba10afb1ef912bc97",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2763,7 +2764,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "0cbefc31fac6fdbe280ea9da2fc361df3b5998c0594c56f5ece906ba8b8b14ac",
+      "contentTextHash": "bb4aba8179700d4dba2e75cd3cbab5a0808305f9957aa6b136e9c166f83abb14",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2809,7 +2810,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "450e2549b07e2abddb993e3c89f48f004d383f797fdb4a589d31112eac3ae8b7",
+      "contentTextHash": "cdd0206c1a88a5e91598c395fc5776eda8dee779db779ea22d5297308282e724",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2855,7 +2856,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c0eb4eed48d9c8c5e67269ccb9c95a6e97faed74f748f24b54ec03d38152a4c6",
+      "contentTextHash": "561aeacda6f21af7babf0b0da4055d6816c49c65f8a5c6b71ed4a2dc2bea93c7",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2901,7 +2902,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "5cb37c4cf4aef24eaf6b80d9ec4b97ec24afe8cf105d3205a96bf207bad19605",
+      "contentTextHash": "5739cc9fff93d3ae2676b2fed751bd94418241a382160939435177feb7997876",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2947,7 +2948,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "3da976270a9fdd62d2022984c4195cac44f0dcf536bf959c5533a1baceba7410",
+      "contentTextHash": "6598247cdfca43cf0400b0c1483478e21a0f2129b281f91e43b5b515fb0efc9f",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2993,7 +2994,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c9713a51e6a6a1b722db4acb94888f211970a971a260b5277778b4da7a5bd349",
+      "contentTextHash": "0eafab1034f946b38a3ea26877783663b49b6d6f9d1f3b3d113c7d72991720b2",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3039,7 +3040,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "9f948bb714e5e44160a5f3eca6e5f7c93c7099b9050f57e93a4e6c347dc27ba6",
+      "contentTextHash": "07c9b4037a91451cb01ebe75cf2df82d32829a97fbbee4cb0b52e8595c77d97a",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3085,7 +3086,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "bd35aa490bebf325cdd1778edcdf1613f4b26c574d1c4b4f8f607e68a8fe1301",
+      "contentTextHash": "8a48dc95967a0dae4c96d5dd1378b5cdd1de47e9f5a2b178a38bb24670075b21",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3131,7 +3132,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "d03dbb3e63cb3c9bf6d288ba91e16ec730f09059090123f279a8a4eebef82374",
+      "contentTextHash": "960e29b501702342e9e45eed8b24705c10e5a4dc71a1de1292f7f7e4d0fede04",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3177,7 +3178,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "79811dc5de9ae0c8e2afdc44c8a73e25655633f90f233cd912234cf627b250fd",
+      "contentTextHash": "c07779d27c2218ff790d970305e5706ed5dfd7849e587ead2550b9d137a35e5c",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3223,7 +3224,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "e219ee9d6dfa06cb479c6b20cd2045d43ace2fcd9db60e3f23c33b93c9bf90c7",
+      "contentTextHash": "064ad74553947209fe4ba21304fdfc052f70892deea6010fbd7f5af08fa67a04",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3269,7 +3270,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "a0daf6efbbe4e5b6802a88306d07954db52b9c436dde42987bf5d57d1cd8fc0a",
+      "contentTextHash": "3d8de838fb6e4e15883f53ab2e4d32bfa3bf4fa331a640b79542af401ebbc286",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3315,7 +3316,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "ccfd91a24a5bfe84e37b7178c50bfc5c47e68ffae19dc1591d68be7eec151f63",
+      "contentTextHash": "2b5c7cddf377b627056951361476e2b2bc8a38cb7b0e6aeb05f965fb349d2eb0",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3361,7 +3362,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "8fcb0ac106b13ef792995912b912a377d2c10e0e931b069dc8d04a6fbd8ef00a",
+      "contentTextHash": "1f94c4f628b3695d9e431d7db781f9d016738aa3f12c6b458b3ea337a8406af1",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3591,7 +3592,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "264c44fed5327c42972c91e3bdd0bc393324d3c1060a6ca1d048c87e93564040",
+      "contentTextHash": "559f5d02222494b744157c78520cc244a01548e1d7d6912aea26795a56bdf575",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3637,7 +3638,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "b40cf61fae2dca9df803f09b23dbe5604a4e836431d0dcd2104fe01aaf72f8c1",
+      "contentTextHash": "e40df0176aa63ec9751f70be54aa04ec5cc114c85f03c90e9c33e1cd645efe1f",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3683,7 +3684,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "50ef3349c9620ea07b22071cf7c6f3c2f974d6f366744bf9b628e483a6b214d2",
+      "contentTextHash": "364dc39d198b9a877fadd161704be1b11fc581829396754fa47c97e043a8f9ab",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3729,7 +3730,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "eaa344b98eb9b6fb472f7f51c67edae7f1885fdfcf2bb4e1b84f1e6e9b6cdc15",
+      "contentTextHash": "6d5a223c926a4d8f3b13f06b16dec2beb595d038348d8d047ab554ade79a3c45",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3775,7 +3776,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "a2e2cc753434f0d09d0515aa99fe6fab39afa4947c4d30ba28253f08e1d6f202",
+      "contentTextHash": "1cb5f21ead7aa27d288b2b0ffe8b75bff79b13180f0aeb9b47f69286368b00f8",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3821,7 +3822,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "c073c4b90b11606dfb6ba4cb1617302c94eb87c8c8d50cd9449ab5cf6bd58dab",
+      "contentTextHash": "9a506abc691b939db86a87d2ab47f0cfc5a6254769760685d58803cffeb4f27c",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3867,7 +3868,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "d4231f97764de4b428d88a7b8ef35ff652185281c549ce34a662eb9acfceb6cf",
+      "contentTextHash": "fa13aaa379bc8afbfdd4da659792a96bd4179dba4fb00b89c8a1c3899fc590c4",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3917,7 +3918,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "f6ba361879f9ee1d986411e0dbebe410873f8ba409634b65ab88890128cbacde",
+      "contentTextHash": "27190e8e4817c92f4eb7fddfb1be536c54ec0c21aed04cfc117d516380f933bd",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -3967,7 +3968,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "ae095d61ca806c67a344279e7b629d776b5314fb6ac4a9c78ee5c86db3c01453",
+      "contentTextHash": "fbd54c5bd02d9d93ef25b53a1981f3fadbce42b2553308e3e6311c8cb4bda349",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4017,7 +4018,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "7344789efb395a19955379f5b21cb77ab0c37bc529e99e0f8cf2b039c7636582",
+      "contentTextHash": "834bfc9db147f1c1cab98ed839f59ee8ec24b5490699dc84a78cd370946382dc",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4067,7 +4068,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "e2af6d2e4e62e513384bd090041a0470f2d1e1893f0da8aedb82be5dd123fccc",
+      "contentTextHash": "148ae94445bbe8723a8380172434c088e01ce6187a8b80dc1cfc0b0ca5f7a70b",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4117,7 +4118,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "a76cf8af1bbcbef8b55b4e0825057c0afbf8f74325e8f0156306d4748fc11804",
+      "contentTextHash": "2e838239832dea2c8c470972c8ce8c14a0f21567cbcf767aa12ce039fb58ae1b",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4167,7 +4168,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "02440a8b33f850f55d3c2a00b2ca053e1467885f0fc000b6a5328ebb6e86c89f",
+      "contentTextHash": "b33bd1c88261e3219e36ddb59fd9bed125a54cfb33b521c42671f923ee0ee40f",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4217,7 +4218,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "7bfc64674c490cadce5d4f3a45196bafc5e51bc128d3aa4e0d2736d8528e2074",
+      "contentTextHash": "64e82acdea37fe6de83a01521af178250343a142cd4d380b8938116b811860c3",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4267,7 +4268,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "52bfc83c2aee489ed7da0cbce51580e106cdce9905d926ac6f98740066436f0c",
+      "contentTextHash": "6017c72521a8e362c41b8e3626e29162b25befdb48b8e7e69d9234f7ee862d50",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4317,7 +4318,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "085bdc883117bfa428dee6ff953a8ed98f9468f22a1b4216885133c546cd7fe5",
+      "contentTextHash": "737dcf9acc56a05721f7a1a5be10032bdf0c9be6f2c3ff6d9d6479eb087607d9",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4367,7 +4368,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "f4ead379aa22b1ffee08002e4af518ab58637d92e0b07ea19d6ede7480d330c4",
+      "contentTextHash": "67168df250f2168dfc40ed166155f2c4430aec9fa8c0f4b4f482b40c7a4d4e51",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4417,7 +4418,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "cb8cc549657499b4a949e398dccb4ffad296521133c2514fa4ed2e20435a7abf",
+      "contentTextHash": "caa7706fb4709f8a8d989be5d1e5c955d9e0948f06cdeebcf8b130129574bc71",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4467,7 +4468,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "e1981389f07537f4f59eb0be7c49d88b3703e1658ce098846ad2f2a56f1c380f",
+      "contentTextHash": "3dd33e0e53cffb6a68fef64706c43dc06a2891abed718fb99bc3c88bbf4d5b68",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4517,7 +4518,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "9f8681d6d5658c5e63be762714415e452d6496d5c6dd4d6e142007caa379066f",
+      "contentTextHash": "9fcd51a4d66f81d9297dc632be75f999aadb2e38e190f0859b6901ca28cbad9e",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -4764,6 +4765,61 @@
         "data-error-feedback": 3
       },
       "audioClips": []
+    },
+    "a1/definite-and-zero-article": {
+      "features": [
+        "LessonPage",
+        "LessonNavigation",
+        "LessonExerciseEngine",
+        "StructuredLesson",
+        "MultipleChoiceExercise",
+        "RevealCard",
+        "FeedbackPanel",
+        "SentenceBuilder",
+        "SentenceCorrection"
+      ],
+      "contentTextHash": "0828293f1638097b8a5a418fd59b7a5be7043e10758b8b8e31b9dff66c22ac88",
+      "interactionCounts": {
+        "data-core-duration": 1,
+        "data-extension-duration": 1,
+        "data-choice-gap-drill": 6,
+        "data-success-message": 10,
+        "data-choice-option": 14,
+        "data-choice-gap": 34,
+        "data-answer": 48,
+        "data-hint": 52,
+        "data-fix": 52,
+        "data-placeholder": 40,
+        "data-check-choices": 6,
+        "data-reset-choices": 6,
+        "data-feedback": 10,
+        "data-tile-game": 1,
+        "data-tile": 4,
+        "data-slot": 4,
+        "data-check-tiles": 1,
+        "data-reset-tiles": 1,
+        "data-tile-builder": 2,
+        "data-build-bank": 2,
+        "data-build-tile": 11,
+        "data-build-area": 2,
+        "data-check-build": 2,
+        "data-reset-build": 2,
+        "data-spot-error": 4,
+        "data-why": 4,
+        "data-error-choice": 20,
+        "data-error-feedback": 4,
+        "data-lesson-extension": 2,
+        "data-transform": 2,
+        "data-transform-item": 5,
+        "data-reveal-transform": 6,
+        "data-transform-answer": 6,
+        "data-quiz": 1,
+        "data-quiz-item": 8,
+        "data-quiz-option": 24,
+        "data-check-quiz": 1,
+        "data-reset-quiz": 1
+      },
+      "audioClips": []
     }
   },
   "assessments": [
@@ -4846,6 +4902,11 @@
         "data-assessment": 1,
         "data-pass": 1,
         "data-strong": 1,
+        "data-require-live-evidence": 1,
+        "data-production-min": 1,
+        "data-listening-min": 1,
+        "data-evidence-label": 1,
+        "data-evidence-feedback": 1,
         "data-review-label": 1,
         "data-pass-label": 1,
         "data-strong-label": 1,
@@ -4861,6 +4922,7 @@
         "data-answer": 20,
         "data-option": 60,
         "data-voice-clip": 2,
+        "data-audio-src": 2,
         "data-speak": 2,
         "data-credit": 9,
         "data-check-assessment": 1,
@@ -4896,6 +4958,11 @@
         "data-assessment": 1,
         "data-pass": 1,
         "data-strong": 1,
+        "data-require-live-evidence": 1,
+        "data-production-min": 1,
+        "data-listening-min": 1,
+        "data-evidence-label": 1,
+        "data-evidence-feedback": 1,
         "data-review-label": 1,
         "data-pass-label": 1,
         "data-strong-label": 1,
@@ -4911,6 +4978,7 @@
         "data-answer": 20,
         "data-option": 60,
         "data-voice-clip": 2,
+        "data-audio-src": 2,
         "data-speak": 2,
         "data-credit": 10,
         "data-check-assessment": 1,
@@ -4946,6 +5014,11 @@
         "data-assessment": 1,
         "data-pass": 1,
         "data-strong": 1,
+        "data-require-live-evidence": 1,
+        "data-production-min": 1,
+        "data-listening-min": 1,
+        "data-evidence-label": 1,
+        "data-evidence-feedback": 1,
         "data-review-label": 1,
         "data-pass-label": 1,
         "data-strong-label": 1,
@@ -4961,6 +5034,7 @@
         "data-answer": 20,
         "data-option": 60,
         "data-voice-clip": 2,
+        "data-audio-src": 2,
         "data-speak": 2,
         "data-credit": 10,
         "data-check-assessment": 1,
@@ -4996,6 +5070,11 @@
         "data-assessment": 1,
         "data-pass": 1,
         "data-strong": 1,
+        "data-require-live-evidence": 1,
+        "data-production-min": 1,
+        "data-listening-min": 1,
+        "data-evidence-label": 1,
+        "data-evidence-feedback": 1,
         "data-review-label": 1,
         "data-pass-label": 1,
         "data-strong-label": 1,
@@ -5011,6 +5090,7 @@
         "data-answer": 20,
         "data-option": 60,
         "data-voice-clip": 2,
+        "data-audio-src": 2,
         "data-speak": 2,
         "data-credit": 10,
         "data-check-assessment": 1,

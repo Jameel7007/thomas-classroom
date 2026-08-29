@@ -10,6 +10,7 @@ import LessonSequenceNavigation from "./LessonSequenceNavigation.astro";
 import LessonExerciseEngine from "./LessonExerciseEngine.astro";
 import { getLesson, getLessonNavigation, getLessonsForLevel } from "../../data/lesson-catalog.mjs";
 import { curriculum } from "../../lib/curriculum";
+import { removeTutorListeningScriptsFromLesson } from "../../lib/listening-scripts.mjs";
 import { formatPageTitle } from "../../lib/page-title.mjs";
 import { schemaIds, siteIdentityNodes, webPageNode } from "../../lib/structured-data.mjs";
 
@@ -82,6 +83,8 @@ const structuredData = [
     isPartOf: { "@id": courseSchemaId },
   },
 ];
+const renderedLesson = await Astro.slots.render("default");
+const learnerLesson = removeTutorListeningScriptsFromLesson(renderedLesson);
 ---
 <!doctype html>
 <html lang="en">
@@ -97,9 +100,7 @@ const structuredData = [
   <body data-tutor-review-required={lesson.tutorReviewRequired ? "true" : undefined}>
     <SkipLink target="lesson-content" />
     <LessonNavigation level={lesson.level} category={lesson.category} sequence={lesson.sequence} total={levelTotal} />
-    <div id="lesson-content" tabindex="-1">
-      <slot />
-    </div>
+    <div id="lesson-content" tabindex="-1" set:html={learnerLesson.html}></div>
     <LessonSequenceNavigation lesson={lesson} previous={previous} next={next} isCourseEnd={isCourseEnd} />
     <LessonExerciseEngine />
   </body>

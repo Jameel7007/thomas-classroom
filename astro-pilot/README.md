@@ -1,7 +1,7 @@
 # Thomas’s Classroom
 
 This is the active, fully native Astro 7 site for Thomas’s Classroom. The
-landing page, curriculum, print curriculum, 111 lesson records (95 published
+landing page, curriculum, print curriculum, 112 lesson records (96 published
 and 16 planned), seven published assessments, one planned C1 exit relationship,
 About, Languages, Blog, and Dictionary are all authored inside this project.
 There is no static-HTML compatibility layer.
@@ -9,7 +9,7 @@ There is no static-HTML compatibility layer.
 ## Source map
 
 - `src/pages/` — homepage, curriculum, supporting sections, and generated route entries
-- `src/content/lessons/{level}/{slug}.astro` — canonical metadata and native lesson bodies or planned records for all 111 topics
+- `src/content/lessons/{level}/{slug}.astro` — canonical metadata and native lesson bodies or planned records for all 112 topics
 - `src/content/assessments/{slug}.astro` — seven directly editable assessments
 - `src/data/assessment-routes.mjs` — validated assessment roles, routes, level relationships, and entry/exit paths
 - `src/content/blog/{slug}.mdx` — complete field notes registered by the validated Blog collection

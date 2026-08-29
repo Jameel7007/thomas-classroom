@@ -9,8 +9,8 @@ const sourceOnly = process.argv.includes("--source");
 const errors = [];
 const reviewedA1 = readyLessons.filter((lesson) => lesson.level === "A1" && lesson.qualityReview);
 
-if (reviewedA1.length !== 19) {
-  errors.push(`expected 19 A1 lessons with canonical review evidence, found ${reviewedA1.length}`);
+if (reviewedA1.length !== 20) {
+  errors.push(`expected 20 A1 lessons with canonical review evidence, found ${reviewedA1.length}`);
 }
 
 for (const lesson of reviewedA1) {
@@ -124,6 +124,11 @@ validateSourceContract(
   "a1/common-verbs-and-adjectives",
   /data-core-duration="45–55 minutes"[\s\S]*A common word is not automatically an easy word[\s\S]*Notice the whole light-verb chunk[\s\S]*Get to the root: light verbs carry the grammar[\s\S]*rough tendency, not a law[\s\S]*Take the bus[\s\S]*ride the bus[\s\S]*Go by bus[\s\S]*Take a shower[\s\S]*do some exercises[\s\S]*Ordinary verbs need the right complement[\s\S]*listen to an update[\s\S]*speak English[\s\S]*speak to the coordinator[\s\S]*buy a ticket[\s\S]*pay for the ticket[\s\S]*Keep the present-simple form around the chunk[\s\S]*doesn’t make[\s\S]*Adjectives need a position and a viewpoint[\s\S]*two expensive tickets[\s\S]*Common adjective meanings are not automatic labels[\s\S]*Cheap[\s\S]*Inexpensive[\s\S]*The workshop is free[\s\S]*Thing or person: boring \/ bored[\s\S]*Very and too are not the same[\s\S]*DUZ[\s\S]*data-lesson-extension="Tutor-read light-verb viewpoint, free meaning, and thing-person adjective listening check"[\s\S]*Maya is free at three[\s\S]*never need to disclose your real routine[\s\S]*Final production: give a fictional community-center shift briefing for 45–60 seconds[\s\S]*id="next-day-retrieval"/i,
   "whole verb chunks, light-verb tendency boundaries, U.S. usage, ordinary complement patterns, present-simple form, adjective grammar and nuance, spoken form, listening, privacy, production, and retrieval should remain explicit",
+);
+validateSourceContract(
+  "a1/definite-and-zero-article",
+  /data-core-duration="45–55 minutes"[\s\S]*Can my listener identify[\s\S]*general plural or uncountable noun[\s\S]*have breakfast \/ lunch \/ dinner[\s\S]*by bus \/ train \/ car \/ plane[\s\S]*go to work \/ school \/ bed[\s\S]*Sound natural: keep <em>the<\/em> light and linked[\s\S]*data-lesson-extension="Tutor-read identifiable, general, and fixed-chunk listening check"[\s\S]*Final production: give Leila’s first-day update[\s\S]*never need to disclose your real workplace[\s\S]*id="next-day-retrieval"/i,
+  "known reference, general plurals and uncountables, fixed daily chunks, transfer repair, spoken form, tutor-read listening, privacy, production, and retrieval should remain explicit",
 );
 
 if (errors.length) {

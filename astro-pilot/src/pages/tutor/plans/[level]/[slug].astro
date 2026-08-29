@@ -26,6 +26,12 @@ interface TutorBrief {
   production: { title: string; setup: string; prompts: string[]; success: string[] };
   nextUse: string;
   sectionHeadings: string[];
+  listeningScripts: Array<{
+    title: string;
+    clips: Array<{ text: string; supports: string[] }>;
+    notes: string[];
+    disclosureCount: number;
+  }>;
 }
 const lessonModules = import.meta.glob<StructuredLessonModule>("../../../../content/lessons/{b1,b2,c1}/*.astro", { eager: true });
 
@@ -206,6 +212,40 @@ const stages = [
         {stages.map((stage) => <li><span class="tutor-stage-time">{stage.time}</span><div><h3>{stage.name}</h3><p>{stage.purpose}</p><p class="tutor-move"><b>Teacher move:</b> {stage.move}</p></div></li>)}
       </ol>
     </section>
+
+    {brief.listeningScripts.length > 0 && (
+      <section class="tutor-session-section" aria-labelledby="listening-scripts-title" data-tutor-listening-scripts>
+        <div class="tutor-section-heading">
+          <p class="tutor-card-label">Tutor-only source</p>
+          <h2 id="listening-scripts-title">Listening scripts</h2>
+          <p>Read these lines from the tutor plan while the learner lesson remains on screen. Each clip names the learner item it supports.</p>
+        </div>
+        <div>
+          {brief.listeningScripts.map((group) => (
+            <section data-tutor-listening-group>
+              <h3>{group.title}</h3>
+              <ol class="tutor-stage-list">
+                {group.clips.map((clip, index) => (
+                  <li data-tutor-listening-clip={String(index + 1)}>
+                    <span class="tutor-stage-time">Clip {index + 1}</span>
+                    <div>
+                      <p><b>Read:</b> {clip.text}</p>
+                      <p class="tutor-move"><b>Supports:</b> {clip.supports.join(" · ")}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              {group.notes.length > 0 && (
+                <div data-tutor-listening-notes>
+                  <h3>Delivery and evidence notes</h3>
+                  <ul>{group.notes.map((note) => <li>{note}</li>)}</ul>
+                </div>
+              )}
+            </section>
+          ))}
+        </div>
+      </section>
+    )}
 
     <section class="tutor-session-section tutor-evidence" aria-labelledby="evidence-title">
       <div class="tutor-section-heading"><p class="tutor-card-label">Keep only useful evidence</p><h2 id="evidence-title">After-lesson notes</h2><p>These notes are for deliberate tutor records or printing. Nothing is stored in the learner’s browser.</p></div>
