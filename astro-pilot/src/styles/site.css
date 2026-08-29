@@ -155,7 +155,8 @@ a{color:inherit}
 .content-panel h2,.content-panel h3{margin:0 0 10px;font-family:var(--display);font-size:25px;font-weight:500;line-height:1.1}
 .content-panel p{margin:0;color:var(--ink-2);line-height:1.55}
 .bio-grid{display:grid;grid-template-columns:240px 1fr;gap:30px;align-items:start}
-.bio-mark{display:grid;place-items:center;aspect-ratio:1;border:2px solid var(--ink);background:var(--accent-tint);box-shadow:6px 6px 0 var(--ink);font-family:var(--display);font-size:72px;font-weight:600}
+.bio-mark{display:grid;place-items:center;aspect-ratio:1;overflow:hidden;border:2px solid var(--ink);background:var(--accent-tint);box-shadow:6px 6px 0 var(--ink);font-family:var(--display);font-size:72px;font-weight:600}
+.bio-mark img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .bio-copy{padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
 .bio-copy p{margin:0 0 16px;color:var(--ink-2);font-size:17px}.bio-copy p:last-child{margin-bottom:0}
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.fact{padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font:500 11px/1.4 var(--mono)}
