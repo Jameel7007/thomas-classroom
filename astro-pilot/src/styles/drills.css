@@ -179,6 +179,39 @@
 .choice-hint,.tile-target{font-family:var(--d-sans);font-size:16px;line-height:1.5;letter-spacing:0;
   text-transform:none;color:var(--d-ink-2);font-weight:500;}
 
+/* ============ 11 · Mobile touch layout =====================================
+   Keep the choice tray beside the sentence work instead of making learners
+   scroll back to the top of a long drill. Desktop keeps the wrapped bank; on
+   a phone the tray uses two generous rows and scrolls horizontally. */
+@media(max-width:600px){
+  [data-choice-gap-drill]{overflow:visible;}
+  .choice-bank{
+    top:58px;z-index:8;display:grid;grid-template-rows:repeat(2,minmax(56px,auto));
+    grid-auto-flow:column;grid-auto-columns:minmax(116px,max-content);gap:10px;
+    max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;
+    scroll-snap-type:inline proximity;scrollbar-width:thin;-webkit-overflow-scrolling:touch;
+    padding:10px 12px 13px;box-shadow:0 10px 24px -20px var(--d-ink);}
+  .choice-option{
+    min-width:116px;min-height:56px;padding:12px 16px;font-size:18px;line-height:1.25;
+    white-space:normal;scroll-snap-align:start;}
+  .q{
+    display:grid;grid-template-columns:24px minmax(0,1fr);align-items:start;gap:10px;
+    padding:20px 0;font-size:18px;line-height:1.6;}
+  .q>.n{padding-top:.45em;}
+  .q>span:last-child{min-width:0;}
+  .choice-gap{
+    min-width:96px;min-height:52px;margin:6px 4px;padding:10px 14px;
+    font-size:18px;line-height:1.25;}
+  .drill-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .drill-actions .lesson-btn{
+    width:100%;min-width:0;min-height:56px;padding:12px;font-size:14px;}
+}
+
+@media(max-width:360px){
+  .choice-bank{grid-auto-columns:minmax(104px,max-content);}
+  .choice-option{min-width:104px;padding-inline:12px;}
+}
+
 /* ============ Motion ======================================================== */
 @keyframes d-pop{0%{transform:scale(.9)}45%{transform:scale(1.08)}100%{transform:scale(1)}}
 @keyframes d-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}

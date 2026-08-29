@@ -48,13 +48,13 @@ for (const lesson of a0Lessons) {
 
 validateSourceContract(
   "a0/animals",
-  /Vocabulary · Lesson 15/,
-  "lesson sequence label should be 15",
+  /Vocabulary · Lesson \{page\.sequence\}/,
+  "lesson sequence label should derive from canonical metadata",
 );
 validateSourceContract(
   "a0/countries-and-nationalities",
-  /Vocabulary · Lesson 16/,
-  "lesson sequence label should be 16",
+  /Vocabulary · Lesson \{page\.sequence\}/,
+  "lesson sequence label should derive from canonical metadata",
 );
 validateSourceContract(
   "a0/the-alphabet-and-spelling",
