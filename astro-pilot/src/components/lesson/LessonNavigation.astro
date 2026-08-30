@@ -16,9 +16,28 @@ const names: Record<string, string> = {
   C1: "Effective Operational Proficiency",
 };
 ---
-<nav class="bar" aria-label="Lesson context">
+<nav class="bar" aria-label="Lesson context" data-lesson-bar>
   <div class="bar-in">
     <a class="back" href={`/curriculum/#lvl-${level}`}>← Curriculum Map</a>
     <span class="crumb"><b>{level} · {names[level] || "English"}</b> &nbsp;/&nbsp; {category} &nbsp;·&nbsp; {sequence} of {total}</span>
   </div>
 </nav>
+
+<script>
+  const lessonBar = document.querySelector<HTMLElement>("[data-lesson-bar]");
+
+  if (lessonBar) {
+    const syncLessonBarHeight = () => {
+      const height = Math.ceil(lessonBar.getBoundingClientRect().height);
+      document.documentElement.style.setProperty("--lesson-bar-height", `${height}px`);
+    };
+
+    syncLessonBarHeight();
+
+    if (typeof ResizeObserver === "function") {
+      new ResizeObserver(syncLessonBarHeight).observe(lessonBar);
+    } else {
+      window.addEventListener("resize", syncLessonBarHeight, { passive: true });
+    }
+  }
+</script>

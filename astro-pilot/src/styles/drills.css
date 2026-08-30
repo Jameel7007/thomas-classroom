@@ -179,18 +179,19 @@
 .choice-hint,.tile-target{font-family:var(--d-sans);font-size:16px;line-height:1.5;letter-spacing:0;
   text-transform:none;color:var(--d-ink-2);font-weight:500;}
 
-/* ============ 11 · Mobile touch layout =====================================
-   Keep the choice tray beside the sentence work instead of making learners
-   scroll back to the top of a long drill. Desktop keeps the wrapped bank; on
-   a phone the tray uses two generous rows and scrolls horizontally. */
+/* ============ 11 · Responsive sticky choice tray ===========================
+   Practice cards normally clip decorative effects. Choice-gap drills must let
+   their bank stick beneath the measured lesson bar until the drill ends. */
+[data-choice-gap-drill]{overflow:visible;}
+
+/* On a phone the tray uses two generous rows and scrolls horizontally. */
 @media(max-width:600px){
-  [data-choice-gap-drill]{overflow:visible;}
   .choice-bank{
-    top:58px;z-index:8;display:grid;grid-template-rows:repeat(2,minmax(56px,auto));
+    display:grid;grid-template-rows:repeat(2,minmax(56px,auto));
     grid-auto-flow:column;grid-auto-columns:minmax(116px,max-content);gap:10px;
     max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;
     scroll-snap-type:inline proximity;scrollbar-width:thin;-webkit-overflow-scrolling:touch;
-    padding:10px 12px 13px;box-shadow:0 10px 24px -20px var(--d-ink);}
+    padding:10px 12px 13px;}
   .choice-option{
     min-width:116px;min-height:56px;padding:12px 16px;font-size:18px;line-height:1.25;
     white-space:normal;scroll-snap-align:start;}

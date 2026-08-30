@@ -2,6 +2,9 @@
 :root{
   /* lesson-width token remains local to the lesson layout */
   --maxw:940px;
+  /* Updated from the rendered lesson navigation by LessonNavigation.astro. */
+  --lesson-bar-height:56px;
+  --lesson-sticky-gap:8px;
 }
 *{box-sizing:border-box;}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
@@ -32,7 +35,8 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.2vw,40px);let
 .lead-rule{width:52px;height:4px;background:var(--accent);border-radius:999px;margin:0 0 28px;}
 p{margin:0 0 18px;}
 strong{font-weight:600;}
-.ex{font-family:var(--serif);font-style:italic;color:var(--accent-deep);}
+/* Learner language keeps the editorial serif but uses upright letterforms. */
+.ex{font-family:var(--serif);font-style:normal;font-weight:500;color:var(--accent-deep);}
 table{width:100%;border-collapse:collapse;margin:12px 0 32px;font-size:18px;line-height:1.55;}
 th,td{text-align:left;padding:15px 17px;border-bottom:1px solid var(--line);vertical-align:top;}
 thead th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
@@ -129,9 +133,10 @@ tbody td b{color:var(--accent-deep);font-weight:600;}
 .feedback{font-family:var(--mono);font-size:15px;line-height:1.55;color:var(--muted);margin:16px 0 0;}
 .choice-hint{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
   color:var(--muted);margin:-4px 0 14px;}
-.choice-bank{position:sticky;top:52px;z-index:2;display:flex;flex-wrap:wrap;gap:9px;
+.choice-bank{position:sticky;top:calc(var(--lesson-bar-height) + var(--lesson-sticky-gap));z-index:8;display:flex;flex-wrap:wrap;gap:9px;
   background:color-mix(in oklab,var(--surface) 86%,transparent);backdrop-filter:blur(10px);
-  border:1px solid var(--line-2);border-radius:13px;padding:10px;margin:0 0 18px;}
+  border:1px solid var(--line-2);border-radius:13px;padding:10px;margin:0 0 18px;
+  box-shadow:0 10px 24px -20px var(--ink);}
 .choice-option{min-height:50px;border:1px solid var(--line);background:var(--paper-2);border-radius:999px;
   padding:13px 20px;font:700 18px/1.15 var(--sans);color:var(--ink);cursor:pointer;
   transition:transform .13s ease,border-color .13s ease,background .13s ease,color .13s ease;}
