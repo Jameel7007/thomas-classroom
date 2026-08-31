@@ -1,0 +1,121 @@
+---
+import type { CollectionEntry } from "astro:content";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import LessonExerciseEngine from "../lesson/LessonExerciseEngine.astro";
+import ReadingQuiz from "./ReadingQuiz.astro";
+import ReadingResponseFramework from "./ReadingResponseFramework.astro";
+import ReadingStyles from "./ReadingStyles.astro";
+import { getLesson } from "../../data/lesson-catalog.mjs";
+
+interface Props {
+  reading: CollectionEntry<"readings">;
+  additionalStructuredData?: Record<string, unknown>[];
+}
+
+const { reading, additionalStructuredData = [] } = Astro.props;
+const data = reading.data;
+const relatedLessons = data.relatedLessonIds.map((id) => getLesson(id)).filter(Boolean);
+const tutorRoute = `/tutor/readings/${data.level.toLowerCase()}/${reading.id.split("/").at(-1)}/`;
+const mainEntityId = `${new URL(Astro.url.pathname, Astro.site).href}#reading`;
+---
+<SiteLayout
+  title={`${data.title} · ${data.level} Reading Lab · Thomas’s Classroom`}
+  description={data.description}
+  heading={data.title}
+  lede={data.description}
+  current="reading"
+  pageClass="reading-page"
+  schemaType="WebPage"
+  mainEntityId={mainEntityId}
+  additionalStructuredData={additionalStructuredData}
+>
+  <ReadingStyles />
+  <article
+    class="reading-shell"
+    data-reading-entry={reading.id}
+    data-reading-level={data.level}
+    data-reading-genre={data.genre}
+    data-reading-rights={data.rights.status.toLowerCase().replaceAll(" ", "-")}
+    data-reading-original={data.rights.status === "Original" ? "true" : undefined}
+    data-tutor-review-required={data.tutorReviewRequired ? "true" : undefined}
+  >
+    <nav class="reading-breadcrumb" aria-label="Breadcrumb">
+      <a href="/reading/">Reading Lab</a><span aria-hidden="true">/</span><span>{data.level}</span><span aria-hidden="true">/</span><span aria-current="page">{data.genre}</span>
+    </nav>
+
+    <section class="reading-intro-card" aria-label="Reading overview">
+      <div>
+        <p class="reading-overline">{data.level} · {data.genre}</p>
+        <h2>{data.focus}</h2>
+        <p>Read for meaning first. Then return to the text for vocabulary, language choices, and evidence.</p>
+        <div class="reading-meta">
+          <span>{data.minutes} minute lesson</span><span>About {data.wordCount} words</span>
+          {data.grammarFocus && <span>Grammar: {data.grammarFocus}</span>}
+        </div>
+      </div>
+      <a class="reading-tutor-link" href={tutorRoute}>Open tutor plan</a>
+    </section>
+
+    <section class="reading-before" data-reading-stage="before">
+      <p class="reading-overline">Before you read</p>
+      <h2>Build the context out loud.</h2>
+      <ol>{data.before.map((question) => <li>{question}</li>)}</ol>
+    </section>
+
+    <section class="reading-text-shell" data-reading-stage="text" aria-labelledby="reading-text-title">
+      <p class="reading-text-guide" id="reading-text-title"><b>First pass:</b> keep moving when one word is unfamiliar. Dotted words open optional help; every word also appears in the vocabulary bank below.</p>
+      <div class="reading-copy" data-reading-text data-reading-style={data.genre.toLowerCase().replaceAll(" ", "-")}>
+        <slot />
+      </div>
+      <div class="reading-rights">
+        <p>{data.rights.credit}</p>
+        {data.rights.sourceUrl && <p><a href={data.rights.sourceUrl}>Open the source record</a></p>}
+        {data.rights.territoryNote && <p>{data.rights.territoryNote}</p>}
+      </div>
+    </section>
+
+    <section class="reading-section" data-reading-stage="vocabulary" aria-labelledby="reading-vocabulary-title">
+      <header class="reading-section-head"><p class="reading-overline">Words in context</p><h2 id="reading-vocabulary-title">Useful vocabulary and chunks</h2><p>Learn the word with the partners it naturally keeps.</p></header>
+      <div class="reading-vocabulary-grid">
+        {data.vocabulary.map((item) => <article class="reading-vocabulary-card" id={`word-${item.slug}`}><h3>{item.term}</h3><p>{item.meaning}</p><small>{item.chunks.join(" · ")}</small></article>)}
+      </div>
+    </section>
+
+    <ReadingQuiz
+      title="Comprehension check"
+      description="Choose the answer best supported by the text. Check your choices when you finish the whole set."
+      questions={data.comprehension}
+      successMessage="Correct. Your answers are supported by the reading, not by guesswork alone."
+    />
+
+    <section class="reading-section" data-reading-stage="language" aria-labelledby="reading-language-title">
+      <header class="reading-section-head"><p class="reading-overline">Language in the text</p><h2 id="reading-language-title">{data.languageFocus.title}</h2><p>{data.languageFocus.explanation}</p></header>
+      <div class="reading-language-examples">{data.languageFocus.examples.map((example) => <article class="reading-language-example"><strong>{example.text}</strong><p>{example.note}</p></article>)}</div>
+    </section>
+
+    <ReadingQuiz
+      title="Language focus check"
+      description="Use the surrounding meaning, not only the shape of one sentence."
+      questions={data.languageFocus.check}
+      successMessage="Correct. You connected the language form to its purpose in the text."
+    />
+
+    <section class="reading-section" data-reading-stage="craft" aria-labelledby="reading-craft-title">
+      <header class="reading-section-head"><p class="reading-overline">Read like a writer</p><h2 id="reading-craft-title">{data.craft.title}</h2><p>{data.craft.introduction}</p></header>
+      <div class="reading-craft-grid">{data.craft.moves.map((move) => <article class="reading-craft-card"><h3>{move.label}</h3><p>{move.effect}</p><blockquote>{move.example}</blockquote></article>)}</div>
+    </section>
+
+    <ReadingResponseFramework stages={data.responseStages} />
+
+    <section class="reading-production" data-reading-stage="production" aria-label="Final production">
+      <article><p class="reading-overline">Speak</p><h2>Take a position</h2><p>{data.production.speaking}</p><div class="reading-chunks">{data.production.chunks.map((chunk) => <span>{chunk}</span>)}</div></article>
+      <article><p class="reading-overline">Write</p><h2>Make the reading useful</h2><p>{data.production.writing}</p></article>
+    </section>
+
+    <section class="reading-related" aria-labelledby="reading-related-title">
+      <p class="reading-overline">Continue in the curriculum</p><h2 id="reading-related-title">Related lessons</h2>
+      <div class="reading-related-grid">{relatedLessons.map((lesson) => lesson && <a href={lesson.route}><span>{lesson.level} · {lesson.category}</span><strong>{lesson.topic}</strong></a>)}</div>
+    </section>
+  </article>
+  <LessonExerciseEngine />
+</SiteLayout>

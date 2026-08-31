@@ -16,6 +16,14 @@ const sourceContracts = [
   ["src/pages/tutor/index.astro", /data-tutor-finder/],
   ["src/pages/tutor/index.astro", /data-tutor-review-queue/],
   ["src/pages/tutor/index.astro", /data-review-queue-item/],
+  ["src/pages/tutor/index.astro", /href="\/tutor\/review-builder\/"/],
+  ["src/pages/tutor/review-builder.astro", /buildQuickReviewItem/],
+  ["src/pages/tutor/review-builder.astro", /data-review-builder/],
+  ["src/pages/tutor/review-builder.astro", /data-review-present/],
+  ["src/pages/tutor/review-builder.astro", /data-review-remix/],
+  ["src/pages/tutor/review-builder.astro", /noindex=\{true\}/],
+  ["src/lib/quick-review.mjs", /buildTutorBrief/],
+  ["src/lib/quick-review.mjs", /buildQuickReviewItem/],
   ["src/pages/tutor/plans/[level]/[slug].astro", /getStaticPaths/],
   ["src/pages/tutor/plans/[level]/[slug].astro", /readyLessons\.map/],
   ["src/pages/tutor/plans/[level]/[slug].astro", /noindex=\{true\}/],
@@ -27,6 +35,12 @@ const sourceContracts = [
   ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-repairs/],
   ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-production/],
   ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-next-use/],
+  ["src/pages/tutor/plans/[level]/[slug].astro", /TransferLens/],
+  ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-guided-discovery/],
+  ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-correction-timing/],
+  ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-route-options/],
+  ["src/pages/tutor/plans/[level]/[slug].astro", /data-tutor-follow-up/],
+  ["src/components/tutor/TransferLens.astro", /getTransferPatternsForLesson/],
   ["src/pages/tutor/plans/[level]/[slug].astro", /PilotEvidenceWorksheet/],
   ["src/components/tutor/PilotEvidenceWorksheet.astro", /data-pilot-evidence-worksheet/],
   ["src/components/tutor/PilotEvidenceWorksheet.astro", /data-pilot-privacy/],
@@ -86,6 +100,7 @@ function validateOutput() {
   const index = readFileSync(indexPath, "utf8");
   if (!/\bdata-tutor-guide\b/.test(index)) errors.push("/tutor/: tutor guide marker is missing");
   if (/name="robots"[^>]*noindex/i.test(index)) errors.push("/tutor/: guide must remain indexable");
+  if (!index.includes('href="/tutor/review-builder/"')) errors.push("/tutor/: quick review builder is not discoverable");
   const listedIds = [...index.matchAll(/\bdata-tutor-lesson="([^"]+)"/g)].map((match) => match[1]);
   if (listedIds.length !== readyLessons.length || new Set(listedIds).size !== readyLessons.length) {
     errors.push(`/tutor/: expected ${readyLessons.length} unique lesson cards, found ${listedIds.length}`);
@@ -125,6 +140,7 @@ function validateOutput() {
     if (!html.includes(`data-tutor-plan="${lesson.id}"`)) errors.push(`${planRoute}: canonical lesson relationship is missing`);
     if (!/<meta\b[^>]*name="robots"[^>]*content="noindex, follow"/i.test(html)) errors.push(`${planRoute}: printable plan must be noindex, follow`);
     if (!html.includes(`href="${lesson.route}" data-learner-lesson`)) errors.push(`${planRoute}: learner lesson link is missing`);
+    if (!html.includes(`/tutor/review-builder/?lessons=${lesson.id}`)) errors.push(`${planRoute}: quick-review handoff is missing`);
     if (!/data-print-plan/.test(html) || !/window\.print/.test(html)) errors.push(`${planRoute}: print control or behavior is missing`);
     if (/localStorage|sessionStorage|indexedDB/.test(html)) errors.push(`${planRoute}: tutor notes must not be stored in the learner browser`);
     const lessonSource = readFileSync(path.join(root, lesson.source), "utf8");
@@ -134,6 +150,9 @@ function validateOutput() {
     }
     for (const marker of ["data-tutor-outcome", "data-tutor-principle", "data-tutor-repairs", "data-tutor-practice", "data-tutor-production", "data-tutor-next-use"]) {
       if (!html.includes(marker)) errors.push(`${planRoute}: ${marker} is missing`);
+    }
+    for (const marker of ["data-tutor-guided-discovery", "data-tutor-correction-timing", "data-tutor-route-options", "data-tutor-follow-up"]) {
+      if (!html.includes(marker)) errors.push(`${planRoute}: operational tutor marker ${marker} is missing`);
     }
     const brief = html.match(/<section\b[^>]*data-tutor-brief-source="[^"]+"[^>]*>([\s\S]*?)<\/section>/i)?.[1] || "";
     if (!brief) {
@@ -197,6 +216,8 @@ function validateOutput() {
     errors.push(`/tutor/plans/: expected ${readyLessons.length} distinct lesson-specific briefs, found ${briefFingerprints.size}`);
   }
 
+  validateQuickReviewOutput();
+
   const sitemapPath = path.join(dist, "sitemap-0.xml");
   if (!existsSync(sitemapPath)) {
     errors.push("sitemap-0.xml: tutor sitemap validation cannot run");
@@ -204,6 +225,56 @@ function validateOutput() {
     const sitemap = readFileSync(sitemapPath, "utf8");
     if (!/<loc>[^<]*\/tutor\/<\/loc>/.test(sitemap)) errors.push("sitemap: indexable tutor guide is missing");
     if (/\/tutor\/plans\//.test(sitemap)) errors.push("sitemap: noindex printable tutor plans must be excluded");
+    if (/\/tutor\/review-builder\//.test(sitemap)) errors.push("sitemap: noindex quick review builder must be excluded");
+  }
+}
+
+function validateQuickReviewOutput() {
+  const route = "/tutor/review-builder/";
+  const output = path.join(dist, "tutor/review-builder/index.html");
+  if (!existsSync(output)) {
+    errors.push(`${route}: direct-refresh output is missing`);
+    return;
+  }
+  const html = readFileSync(output, "utf8");
+  if (!html.includes(`data-review-item-count="${readyLessons.length}"`)) errors.push(`${route}: canonical lesson count is incorrect`);
+  if (!/<meta\b[^>]*name="robots"[^>]*content="noindex, follow"/i.test(html)) errors.push(`${route}: tutor-only builder must be noindex, follow`);
+  if ((html.match(/<select\b[^>]*\bdata-review-choice\b/g) || []).length !== 3) errors.push(`${route}: expected exactly three lesson selectors`);
+  for (const marker of ["data-review-form", "data-review-output", "data-review-remix", "data-review-present", "data-review-previous", "data-review-next", "data-review-copy"]) {
+    if (!html.includes(marker)) errors.push(`${route}: ${marker} is missing`);
+  }
+  if (/localStorage|sessionStorage|indexedDB/.test(html)) errors.push(`${route}: review state must remain temporary and URL-driven`);
+  const payload = html.match(/<script\b[^>]*id="quick-review-data"[^>]*>([\s\S]*?)<\/script>/i)?.[1];
+  if (!payload) {
+    errors.push(`${route}: lesson-derived review payload is missing`);
+    return;
+  }
+  let items = [];
+  try {
+    items = JSON.parse(payload);
+  } catch (error) {
+    errors.push(`${route}: review payload is not valid JSON (${error.message})`);
+    return;
+  }
+  const ids = new Set(items.map((item) => item.id));
+  if (items.length !== readyLessons.length || ids.size !== readyLessons.length) {
+    errors.push(`${route}: expected ${readyLessons.length} unique lesson-derived review items, found ${items.length}`);
+  }
+  for (const lesson of readyLessons) {
+    const item = items.find((candidate) => candidate.id === lesson.id);
+    if (!item) {
+      errors.push(`${route}: review data is missing ${lesson.id}`);
+      continue;
+    }
+    if (item.route !== lesson.route || item.planRoute !== `/tutor/plans/${lesson.id}/`) errors.push(`${lesson.id}: quick-review route relationship is incorrect`);
+    for (const [label, value, minimum] of [
+      ["retrieval prompt", item.retrieval?.prompt, 8], ["retrieval answer", item.retrieval?.answer, 2],
+      ["contrast prompt", item.contrast?.prompt, 12], ["contrast answer", item.contrast?.answer, 12],
+      ["repair prompt", item.repair?.prompt, 8], ["repair answer", item.repair?.answer, 2],
+      ["repair explanation", item.repair?.why, 12], ["production prompt", item.production?.prompt, 20],
+    ]) {
+      if (typeof value !== "string" || value.trim().length < minimum) errors.push(`${lesson.id}: quick-review ${label} is too thin`);
+    }
   }
 }
 

@@ -1,5 +1,7 @@
 ---
 import MultipleChoiceExercise from "./MultipleChoiceExercise.astro";
+import PracticeSetSwitcher from "./PracticeSetSwitcher.astro";
+import ProductionLadder from "./ProductionLadder.astro";
 import RevealCard from "./RevealCard.astro";
 
 interface QuizOption { value: string; label?: string }
@@ -208,20 +210,6 @@ if (qualityErrors.length) {
     </>
   )}
 
-  <h2>Build controlled accuracy</h2>
-  <div class="lead-rule"></div>
-  <div class="quiz" data-quiz data-success-message="Accurate work. Explain one answer in your own words before moving on.">
-    <h3>Choose the form that fits the meaning</h3>
-    <div class="quiz-list">
-      {lesson.build.map((item) => <MultipleChoiceExercise {...item} />)}
-    </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" type="button" data-check-quiz>Check</button>
-      <button class="lesson-btn" type="button" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
-
   <h2>Read language doing real work</h2>
   <div class="lead-rule"></div>
   <div class="thinking-card">
@@ -229,17 +217,36 @@ if (qualityErrors.length) {
     <p>{lesson.context.intro}</p>
     {lesson.context.lines.map((line) => <p class="ex">{line}</p>)}
   </div>
-  <div class="quiz" data-quiz data-success-message="Strong reading. You followed both the message and the target language.">
-    <h3>Meaning in context</h3>
-    <div class="quiz-list">
-      {lesson.context.questions.map((item) => <MultipleChoiceExercise {...item} />)}
-    </div>
-    <div class="drill-actions">
-      <button class="lesson-btn" type="button" data-check-quiz>Check</button>
-      <button class="lesson-btn" type="button" data-reset-quiz>Reset</button>
-    </div>
-    <p class="feedback" data-feedback></p>
-  </div>
+
+  <h2>Build controlled accuracy</h2>
+  <div class="lead-rule"></div>
+  <PracticeSetSwitcher
+    id={`practice-${page.level.toLowerCase()}-${page.sequence}`}
+    title="Choose today’s practice set"
+    sets={[
+      {
+        id: "core",
+        label: "Core",
+        description: "Secure the central form-and-meaning decisions before increasing the pressure.",
+        successMessage: "Core set complete. Explain one choice aloud before moving on.",
+        items: lesson.build.slice(0, 4),
+      },
+      {
+        id: "contrast",
+        label: "Contrast",
+        description: "Use the reading context to distinguish nearby meanings and prevent overgeneralization.",
+        successMessage: "Contrast set complete. You followed both the message and the target language.",
+        items: lesson.context.questions,
+      },
+      {
+        id: "challenge",
+        label: "Challenge",
+        description: "Apply the same system to less predictable contexts without repeating the Core examples.",
+        successMessage: "Challenge set complete. Justify the most difficult answer in your own words.",
+        items: lesson.build.slice(4),
+      },
+    ]}
+  />
 
   <div class="tile-game" data-tile-builder data-answer={lesson.builder.answer} data-hint={lesson.builder.prompt} data-fix={lesson.builder.answer}>
     <h3>{lesson.builder.title}</h3>
@@ -279,17 +286,19 @@ if (qualityErrors.length) {
     </div>
   </div>
 
-  <h2>Communicate</h2>
-  <div class="lead-rule"></div>
-  <div class="thinking-card">
-    <h3>{lesson.communicate.title}</h3>
-    <p>{lesson.communicate.setup}</p>
-    {lesson.communicate.roles.map((role, index) => <p class="prompt-card"><b>Role {index + 1}</b><br />{role}</p>)}
-    <p class="wl-head">Useful prompts</p>
-    <ul>{lesson.communicate.prompts.map((prompt) => <li>{prompt}</li>)}</ul>
-    <p class="wl-head">Success looks like</p>
-    <ul>{lesson.communicate.success.map((item) => <li>{item}</li>)}</ul>
-  </div>
+  <ProductionLadder
+    level={page.level}
+    topic={page.topic}
+    title={lesson.communicate.title}
+    setup={lesson.communicate.setup}
+    personalPrompt={lesson.communicate.prompts[0]}
+    roles={lesson.communicate.roles}
+    prompts={lesson.communicate.prompts}
+    success={lesson.communicate.success}
+    pronunciation={lesson.discover.pronunciation}
+    example={lesson.discover.formRows[0].example}
+    writing={lesson.writing}
+  />
 
   <h2>Write for a real reader</h2>
   <div class="lead-rule"></div>

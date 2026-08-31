@@ -1,0 +1,63 @@
+---
+interface Props {
+  level: string;
+  slug: string;
+}
+
+const { level, slug } = Astro.props;
+const tutorPlanRoute = `/tutor/plans/${level.toLowerCase()}/${slug}/`;
+---
+<aside
+  class="teaching-toolbar-shell"
+  id="live-teaching-controls"
+  data-teaching-toolbar
+  aria-label="Live teaching controls"
+  tabindex="-1"
+  hidden
+>
+  <div class="teaching-toolbar-inner">
+    <div class="teaching-stage-nav">
+      <button
+        class="teaching-control teaching-control-nav"
+        type="button"
+        data-teaching-previous
+        aria-label="Previous stage"
+        aria-keyshortcuts="Alt+ArrowLeft"
+        title="Previous stage (Alt + Left arrow)"
+      ><span aria-hidden="true">←</span> <span class="teaching-nav-label">Previous</span></button>
+      <div class="teaching-stage-status" aria-live="polite" aria-atomic="true">
+        <span data-teaching-progress>Stage 1 of 1</span>
+        <strong data-teaching-stage-title>Lesson introduction</strong>
+        <progress data-teaching-progress-bar value="1" max="1">1 of 1</progress>
+      </div>
+      <button
+        class="teaching-control teaching-control-nav"
+        type="button"
+        data-teaching-next
+        aria-label="Next stage"
+        aria-keyshortcuts="Alt+ArrowRight"
+        title="Next stage (Alt + Right arrow)"
+      ><span class="teaching-nav-label">Next</span> <span aria-hidden="true">→</span></button>
+    </div>
+
+    <div class="teaching-actions" aria-label="Current-stage actions">
+      <button class="teaching-control" type="button" data-teaching-shuffle aria-keyshortcuts="Alt+S" title="Shuffle this activity (Alt + S)">Shuffle</button>
+      <button class="teaching-control" type="button" data-teaching-reset aria-keyshortcuts="Alt+R" title="Reset this activity (Alt + R)">Reset</button>
+      <button class="teaching-control teaching-control-primary" type="button" data-teaching-check aria-keyshortcuts="Alt+C" title="Check this activity (Alt + C)">Check</button>
+      <button class="teaching-control" type="button" data-teaching-reveal aria-keyshortcuts="Alt+V" title="Reveal this activity (Alt + V)">Reveal</button>
+      <button class="teaching-control" type="button" data-teaching-copy aria-keyshortcuts="Alt+P" title="Copy the current prompt (Alt + P)">Copy prompt</button>
+    </div>
+
+    <div class="teaching-utilities">
+      <div class="teaching-timer" aria-label="Lesson timer">
+        <output data-teaching-timer aria-live="off">00:00</output>
+        <button class="teaching-control teaching-control-compact" type="button" data-teaching-timer-toggle aria-keyshortcuts="Alt+T" title="Start or pause timer (Alt + T)">Start timer</button>
+        <button class="teaching-control teaching-control-compact" type="button" data-teaching-timer-reset title="Reset timer">Reset timer</button>
+      </div>
+      <a class="teaching-control teaching-plan-link" href={tutorPlanRoute} target="_blank" rel="noopener">Tutor plan ↗</a>
+      <a class="teaching-control teaching-plan-link" href={`/tutor/review-builder/?lessons=${level.toLowerCase()}/${slug}`} target="_blank" rel="noopener">Review builder ↗</a>
+      <button class="teaching-control teaching-exit" type="button" data-teaching-exit>Exit teaching</button>
+    </div>
+    <p class="teaching-announcement" data-teaching-announcement role="status" aria-live="polite"></p>
+  </div>
+</aside>

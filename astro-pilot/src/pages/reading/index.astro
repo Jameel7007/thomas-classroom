@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import ReadingStyles from "../../components/reading/ReadingStyles.astro";
+
+const readings = (await getCollection("readings")).sort((a, b) => a.data.order - b.data.order);
+const canonical = new URL("/reading/", Astro.site);
+const readingListId = `${canonical.href}#reading-lab`;
+const readingList = {
+  "@type": "ItemList",
+  "@id": readingListId,
+  name: "Thomas’s Classroom Reading Lab",
+  numberOfItems: readings.length,
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  itemListElement: readings.map((reading, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: reading.data.title,
+    url: new URL(`/reading/${reading.id}/`, Astro.site).href,
+  })),
+};
+---
+<SiteLayout
+  title="Reading Lab · A0–C1 English Reading · Thomas’s Classroom"
+  description="Practice English reading from A0 to C1 through original and rights-cleared adult texts, contextual vocabulary, grammar, comprehension, analysis, speaking, and writing."
+  heading="The Reading Lab"
+  lede="Original and rights-cleared texts for reading closely, noticing useful English, and turning understanding into confident speaking and writing."
+  current="reading"
+  pageClass="reading-lab-page"
+  mainEntityId={readingListId}
+  additionalStructuredData={[readingList]}
+>
+  <ReadingStyles />
+  <div class="reading-library" data-reading-library>
+    <section class="reading-library-intro">
+      <div><p class="reading-overline">A0–C1 skill practice</p><h2>Read for meaning.<br />Return for language.</h2></div>
+      <p>Each lesson begins with a real reading purpose, then adds vocabulary, grammar or discourse analysis, self-checking questions, and a final response.</p>
+    </section>
+    <section class="reading-principles" aria-label="How Reading Lab works">
+      <div><b>First pass</b><span>Keep moving and understand the situation before clearing every word.</span></div>
+      <div><b>Second pass</b><span>Find evidence, useful chunks, grammar choices, and the writer’s method.</span></div>
+      <div><b>Your response</b><span>Summarize, analyze, speak, and write with support that gradually disappears.</span></div>
+    </section>
+    <div class="reading-grid">
+      {readings.map((reading) => <a class="reading-card" data-reading-card={reading.id} data-level={reading.data.level} href={`/reading/${reading.id}/`}>
+        <div class="reading-card-meta"><span class="reading-card-level">{reading.data.level}</span><span>{reading.data.genre} · {reading.data.minutes} min</span></div>
+        <h2>{reading.data.title}</h2><p>{reading.data.description}</p>
+        <div class="reading-card-tags"><span>{reading.data.focus}</span>{reading.data.grammarFocus && <span>{reading.data.grammarFocus}</span>}<span>{reading.data.wordCount} words</span></div>
+        <strong class="reading-card-action">Open reading <span aria-hidden="true">→</span></strong>
+      </a>)}
+    </div>
+  </div>
+</SiteLayout>

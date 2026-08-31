@@ -1,0 +1,31 @@
+---
+interface Option { value: string; label: string }
+interface Question { question: string; answer: string; hint: string; fix: string; options: Option[] }
+interface Props { title: string; description: string; questions: Question[]; successMessage: string }
+const { title, description, questions, successMessage } = Astro.props;
+---
+<section class="reading-quiz quiz" data-quiz data-success-message={successMessage}>
+  <header class="reading-section-head">
+    <p class="reading-overline">Check your reading</p>
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </header>
+  <div class="quiz-list">
+    {questions.map((item, index) => {
+      const answerLabel = item.options.find((option) => option.value === item.answer)?.label;
+      return (
+      <div class="quiz-item" data-quiz-item data-answer={answerLabel} data-hint={item.hint} data-fix={item.fix}>
+        <p class="quiz-question"><span>{String(index + 1).padStart(2, "0")}</span>{item.question}</p>
+        <div class="quiz-options">
+          {item.options.map((option) => <button class="quiz-option" type="button" data-quiz-option={option.label}>{option.label}</button>)}
+        </div>
+      </div>
+      );
+    })}
+  </div>
+  <div class="drill-actions">
+    <button class="lesson-btn" type="button" data-check-quiz>Check answers</button>
+    <button class="lesson-btn" type="button" data-reset-quiz>Reset</button>
+  </div>
+  <p class="feedback" data-feedback role="status" aria-live="polite"></p>
+</section>

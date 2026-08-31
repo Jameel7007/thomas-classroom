@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+import ReadingPage from "../../../components/reading/ReadingPage.astro";
+import { schemaIds } from "../../../lib/structured-data.mjs";
+
+export async function getStaticPaths() {
+  const readings = await getCollection("readings");
+  return readings.map((reading) => {
+    const [level, slug] = reading.id.split("/");
+    return { params: { level, slug }, props: { reading } };
+  });
+}
+
+interface Props { reading: CollectionEntry<"readings"> }
+const { reading } = Astro.props;
+const { Content } = await render(reading);
+const canonical = new URL(`/reading/${reading.id}/`, Astro.site);
+const ids = schemaIds(Astro.site);
+const resourceId = `${canonical.href}#reading`;
+const resource = {
+  "@type": "LearningResource",
+  "@id": resourceId,
+  url: canonical.href,
+  name: reading.data.title,
+  description: reading.data.description,
+  inLanguage: "en",
+  educationalLevel: reading.data.level,
+  learningResourceType: "Reading lesson",
+  educationalUse: ["reading practice", "language analysis", "discussion"],
+  interactivityType: "mixed",
+  isAccessibleForFree: true,
+  author: { "@id": ids.tutor },
+  isPartOf: { "@id": ids.website },
+  teaches: reading.data.focus,
+};
+---
+<ReadingPage reading={reading} additionalStructuredData={[resource]}><Content /></ReadingPage>

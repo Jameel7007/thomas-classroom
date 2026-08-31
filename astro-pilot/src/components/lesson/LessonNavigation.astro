@@ -20,6 +20,14 @@ const names: Record<string, string> = {
   <div class="bar-in">
     <a class="back" href={`/curriculum/#lvl-${level}`}>← Curriculum Map</a>
     <span class="crumb"><b>{level} · {names[level] || "English"}</b> &nbsp;/&nbsp; {category} &nbsp;·&nbsp; {sequence} of {total}</span>
+    <button
+      class="teaching-launch"
+      type="button"
+      data-teaching-launch
+      aria-controls="live-teaching-controls lesson-content"
+      aria-expanded="false"
+      hidden
+    >Teach this lesson</button>
   </div>
 </nav>
 

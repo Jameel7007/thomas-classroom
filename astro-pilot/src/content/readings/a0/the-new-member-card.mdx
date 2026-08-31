@@ -1,0 +1,147 @@
+---
+title: The New Member Card
+description: Read a community-center card and welcome message to find personal information, class details, opening times, and useful forms of be.
+level: A0
+order: 1
+genre: Practical document
+focus: Finding essential information in a form
+grammarFocus: Subject pronouns and the verb be
+minutes: 12
+wordCount: 70
+relatedLessonIds:
+  - a0/the-verb-to-be
+  - a0/subject-pronouns
+  - a0/countries-and-nationalities
+  - a0/days-months-dates
+before:
+  - What information do you usually write on a membership form?
+  - Where can an adult take a class in your town or city?
+vocabulary:
+  - term: member
+    slug: member
+    meaning: A person who belongs to a group, club, or organization.
+    chunks: [a new member, club member]
+  - term: class
+    slug: class
+    meaning: A scheduled lesson with a teacher and one or more learners.
+    chunks: [English class, class starts]
+  - term: room
+    slug: room
+    meaning: One part of a building, identified here by a number.
+    chunks: [Room 3, in the room]
+  - term: open
+    slug: open
+    meaning: Available for people to enter or use at that time.
+    chunks: [open today, open from nine]
+  - term: closed
+    slug: closed
+    meaning: Not available for people to enter or use at that time.
+    chunks: [closed Sunday, the office is closed]
+comprehension:
+  - question: Leila arrives for English at 6:00 p.m. on Tuesday. Where should she go?
+    answer: room-3
+    hint: Combine the class, day, time, and room information.
+    fix: English is on Tuesday at 6:00 p.m. in Room 3.
+    options:
+      - { value: room-3, label: Room 3 }
+      - { value: office, label: The office }
+      - { value: sunday, label: The Sunday room }
+  - question: Leila needs help on Sunday morning. Can she visit the office?
+    answer: no
+    hint: Look at the opening-days line, not the class schedule.
+    fix: No. The office is open Monday through Saturday and closed Sunday.
+    options:
+      - { value: yes, label: "Yes, it is open." }
+      - { value: no, label: "No, it is closed." }
+  - question: Which sentence correctly describes Leila now?
+    answer: lives-madison
+    hint: Her country and her current city are different pieces of information.
+    fix: Leila is from Egypt, and she lives in Madison now.
+    options:
+      - { value: lives-madison, label: She lives in Madison. }
+      - { value: lives-egypt, label: She lives in Egypt now. }
+      - { value: teaches, label: She teaches the class. }
+languageFocus:
+  title: Use be to identify and locate
+  explanation: The form of be changes with the subject. The document uses is for one person, class, or office, and are for plural classes.
+  examples:
+    - { text: "Leila is a new member.", note: "Leila is one person, so use is." }
+    - { text: "The class is in Room 3.", note: "The class is one thing, so use is." }
+    - { text: "Classes are on Tuesday and Thursday.", note: "Classes is plural, so use are." }
+  check:
+    - question: Choose the correct sentence about Leila.
+      answer: she-is
+      hint: Use she for one woman and is after she.
+      fix: Say She is from Egypt.
+      options:
+        - { value: she-is, label: She is from Egypt. }
+        - { value: she-are, label: She are from Egypt. }
+    - question: Complete the meaning about the two weekly classes.
+      answer: are
+      hint: Tuesday and Thursday classes means more than one class.
+      fix: Say The classes are at 6:00 p.m.
+      options:
+        - { value: is, label: The classes is at 6:00 p.m. }
+        - { value: are, label: The classes are at 6:00 p.m. }
+    - question: What is the natural question for the room information?
+      answer: where-is
+      hint: Ask for the location of one class.
+      fix: Ask Where is the English class?
+      options:
+        - { value: where-is, label: Where is the English class? }
+        - { value: where-are, label: Where are the English class? }
+craft:
+  title: How a form makes information easy to find
+  introduction: A practical document uses labels, short lines, and a predictable order so the reader can find one fact without reading every word.
+  moves:
+    - label: Clear labels
+      example: "Class: English Basics"
+      effect: The label tells the reader what kind of information comes next.
+    - label: Time in one line
+      example: "Tuesday and Thursday, 6:00–7:00 p.m."
+      effect: Days and times stay together so a learner can plan quickly.
+responseStages:
+  - name: Gist
+    prompt: What is this document for?
+    chunks: [It is a card for..., It gives information about...]
+    model: It is a membership card and welcome message for a new community-center student.
+  - name: React
+    prompt: Which information would you check first on your own class card?
+    chunks: [I would check..., The most important information is...]
+    model: I would check the day, time, and room first because I need them to arrive at the correct class.
+production:
+  speaking: Introduce Leila using four complete sentences. Then change the information and introduce yourself as a new member.
+  writing: Create a six-line membership card with a name, country, city, class, day, and room. Use is or are in one welcome sentence.
+  chunks: [She is from..., She is a member., The class is..., Classes are...]
+tutor:
+  aim: The learner locates combined information in a simple adult form and produces accurate sentences with subject pronouns plus be.
+  timing:
+    - { minutes: "2", stage: Discuss the two opening questions. }
+    - { minutes: "2–3", stage: Read the card once for its purpose and once for details. }
+    - { minutes: "3", stage: Complete the comprehension check with evidence. }
+    - { minutes: "3", stage: Notice and check is versus are. }
+    - { minutes: "2–4", stage: Introduce Leila and create a personal card. }
+  watchFor:
+    - The learner may copy labels without combining day, time, and location.
+    - The learner may omit be or use are after she because the subject is not yet automatic.
+  shorten: Read only the card, answer the first two questions, and finish with a four-sentence introduction of Leila.
+  extend: Change two details orally and ask the learner to correct a classmate who arrives on the wrong day or enters the wrong room.
+rights:
+  status: Original
+  credit: Original text written for Thomas’s Classroom Reading Lab.
+tutorReviewRequired: true
+---
+import ReadingWord from "../../../components/reading/ReadingWord.astro";
+
+<div class="reading-document">
+  <p><strong>Riverside Community Center</strong></p>
+  <p><strong>New member:</strong> Leila Hassan</p>
+  <p><strong>Country:</strong> Egypt</p>
+  <p><strong>City now:</strong> Madison</p>
+  <p><strong>Class:</strong> English Basics</p>
+  <p><strong>Schedule:</strong> Tuesday and Thursday, 6:00–7:00 p.m.</p>
+  <p><strong>Place:</strong> Room 3</p>
+  <p><strong>Office:</strong> Open Monday–Saturday · Closed Sunday</p>
+</div>
+
+Welcome, Leila! You are a new <ReadingWord term="member" slug="member" meaning="A person who belongs to a group, club, or organization." chunks={["a new member", "club member"]} /> at Riverside Community Center. Your English <ReadingWord term="class" slug="class" meaning="A scheduled lesson with a teacher and one or more learners." chunks={["English class", "class starts"]} /> is in <ReadingWord term="Room 3" slug="room" meaning="One part of a building, identified here by a number." chunks={["Room 3", "in the room"]} />. Classes are on Tuesday and Thursday. The office is <ReadingWord term="open" slug="open" meaning="Available for people to enter or use at that time." chunks={["open today", "open from nine"]} /> on Saturday, but it is <ReadingWord term="closed" slug="closed" meaning="Not available for people to enter or use at that time." chunks={["closed Sunday", "the office is closed"]} /> on Sunday.

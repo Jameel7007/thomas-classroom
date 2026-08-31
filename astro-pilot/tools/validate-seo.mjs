@@ -13,6 +13,12 @@ const blogPostIds = readdirSync(path.join(projectRoot, "src/content/blog"))
   .filter((file) => file.endsWith(".mdx"))
   .map((file) => file.replace(/\.mdx$/, ""))
   .sort();
+const readingIds = readdirSync(path.join(projectRoot, "src/content/readings"), { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .flatMap((entry) => readdirSync(path.join(projectRoot, "src/content/readings", entry.name))
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => `${entry.name}/${file.replace(/\.mdx$/, "")}`))
+  .sort();
 
 validateSourceContracts();
 
@@ -52,11 +58,15 @@ function validateSourceContracts() {
     ["src/pages/curriculum/index.astro", /"@type": "ItemList"/],
     ["src/pages/blog.astro", /"@type": "ItemList"/],
     ["src/pages/blog/[slug].astro", /"@type": "BlogPosting"/],
+    ["src/pages/reading/index.astro", /"@type": "ItemList"/],
+    ["src/pages/reading/[level]/[slug].astro", /"@type": "LearningResource"/],
     ["src/pages/dictionary.astro", /"@type": "DefinedTermSet"/],
     ["src/pages/languages.astro", /"@type": "ItemList"/],
     ["src/pages/curriculum/print.astro", /name="robots"\s+content="noindex, follow"/],
     ["astro.config.mjs", /endsWith\("\/curriculum\/print\/"\)/],
     ["astro.config.mjs", /includes\("\/tutor\/plans\/"\)/],
+    ["astro.config.mjs", /includes\("\/tutor\/readings\/"\)/],
+    ["astro.config.mjs", /endsWith\("\/tutor\/review-builder\/"\)/],
   ];
   for (const [relative, contract] of contracts) {
     const source = readFileSync(path.join(projectRoot, relative), "utf8");
@@ -97,7 +107,7 @@ function validateBuiltOutput() {
     }
 
     if (noindex) {
-      if (!["/404.html", "/curriculum/print/"].includes(route) && !route.startsWith("/tutor/plans/")) errors.push(`${route}: unexpected noindex directive`);
+      if (!["/404.html", "/curriculum/print/", "/tutor/review-builder/"].includes(route) && !route.startsWith("/tutor/plans/") && !route.startsWith("/tutor/readings/")) errors.push(`${route}: unexpected noindex directive`);
       if (route === "/curriculum/print/" && !canonical.endsWith("/curriculum/")) {
         errors.push(`${route}: print view must canonicalize to /curriculum/`);
       }
@@ -131,6 +141,8 @@ function validateBuiltOutput() {
     if (route === "/curriculum/") validateCurriculumSchema(canonical, nodes);
     if (route === "/blog/") validateBlogIndexSchema(canonical, nodes);
     if (route.startsWith("/blog/") && route !== "/blog/") validateBlogPostSchema(route, canonical, nodes);
+    if (route === "/reading/") validateReadingIndexSchema(canonical, nodes);
+    if (route.startsWith("/reading/") && route !== "/reading/") validateReadingSchema(route, canonical, nodes);
     if (route === "/dictionary/") validateDictionarySchema(canonical, nodes);
     if (route === "/languages/") validateLanguageTransferSchema(canonical, nodes);
   }
@@ -219,6 +231,35 @@ function validateBlogPostSchema(route, canonical, nodes) {
   if (!post.author?.["@id"]?.endsWith("#tutor")) errors.push(`${route}: BlogPosting author relationship is missing`);
   if (!post.publisher?.["@id"]?.endsWith("#website")) errors.push(`${route}: BlogPosting publisher relationship is missing`);
   if (post.mainEntityOfPage?.["@id"] !== `${canonical}#webpage`) errors.push(`${route}: BlogPosting main-page relationship is incorrect`);
+}
+
+function validateReadingIndexSchema(canonical, nodes) {
+  const list = nodeOfType(nodes, "ItemList");
+  if (!list) {
+    errors.push("/reading/: ItemList structured data is missing");
+    return;
+  }
+  if (list.numberOfItems !== readingIds.length || list.itemListElement?.length !== readingIds.length) {
+    errors.push(`/reading/: ItemList must contain all ${readingIds.length} reading lessons`);
+  }
+  const listed = new Set((list.itemListElement || []).map((item) => item.url));
+  for (const id of readingIds) {
+    const expected = new URL(`/reading/${id}/`, canonical).href;
+    if (!listed.has(expected)) errors.push(`/reading/: ItemList is missing ${expected}`);
+  }
+}
+
+function validateReadingSchema(route, canonical, nodes) {
+  const resource = nodeOfType(nodes, "LearningResource");
+  if (!resource) {
+    errors.push(`${route}: LearningResource structured data is missing`);
+    return;
+  }
+  if (resource.url !== canonical) errors.push(`${route}: LearningResource URL does not match the canonical URL`);
+  const expectedLevel = route.split("/")[2]?.toUpperCase();
+  if (resource.educationalLevel !== expectedLevel) errors.push(`${route}: reading level must be ${expectedLevel}`);
+  if (resource.learningResourceType !== "Reading lesson") errors.push(`${route}: reading resource type is incorrect`);
+  if (!resource.author?.["@id"]?.endsWith("#tutor")) errors.push(`${route}: reading author relationship is missing`);
 }
 
 function validateDictionarySchema(canonical, nodes) {

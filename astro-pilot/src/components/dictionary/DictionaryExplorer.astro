@@ -30,8 +30,9 @@ interface DictionaryEntry {
 
 const { entries, counts } = Astro.props;
 const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part.replace(/^./, (letter) => letter.toUpperCase())]));
+const displayEntries = [...entries].sort((left, right) => left.word.localeCompare(right.word));
 ---
-<section class="dictionary-explorer" data-dictionary-app>
+<section class="dictionary-explorer" data-dictionary-app data-valid-levels={DICTIONARY_LEVELS.join("|")} data-valid-parts={DICTIONARY_PARTS.join("|")}>
   <section class="dictionary-finder" data-dictionary-finder hidden aria-labelledby="dictionary-finder-title">
     <div class="dictionary-finder-heading">
       <div>
@@ -78,7 +79,7 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
     </div>
   </section>
 
-  <details class="dictionary-method" open>
+  <details class="dictionary-method">
     <summary>How to clear a meaning</summary>
     <ol>
       <li><b>Choose the sense</b><span>Find the definition that fits the sentence—not simply the first meaning.</span></li>
@@ -93,10 +94,17 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
     <h2 id="dictionary-empty-title">Try the headword, a simpler synonym, or a broader filter.</h2>
     <p>This is a curated classroom collection, so it focuses on high-value words that commonly block understanding.</p>
     <button type="button" class="home-link" data-dictionary-empty-reset>Show the complete collection</button>
+    <div class="dictionary-finder-lower" data-dictionary-external hidden>
+      <div class="dictionary-result-copy"><p>Need broader coverage for <b data-dictionary-external-word>this word</b>?</p></div>
+      <div class="dictionary-result-copy">
+        <a class="home-link" href="https://dictionary.cambridge.org/us/dictionary/english/" data-dictionary-external-link data-external-base="https://dictionary.cambridge.org/us/dictionary/english/" target="_blank" rel="noopener noreferrer">Search Cambridge <span aria-hidden="true">↗</span></a>
+        <a class="home-link" href="https://www.merriam-webster.com/dictionary/" data-dictionary-external-link data-external-base="https://www.merriam-webster.com/dictionary/" target="_blank" rel="noopener noreferrer">Search Merriam-Webster <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
   </section>
 
   <div class="dictionary-list" data-dictionary-list>
-    {entries.map((entry) => <article class="dictionary-entry" data-dictionary-entry data-headword={entry.word} data-entry-level={entry.level}>
+    {displayEntries.map((entry, entryIndex) => <article id={`term-${entry.word}`} class="dictionary-entry" data-dictionary-entry data-headword={entry.word} data-entry-level={entry.level} data-entry-forms={entry.forms.join("|")} data-entry-index={entryIndex}>
       <header class="dictionary-entry-header">
         <div>
           <div class="dictionary-word"><h2>{entry.word}</h2><span class="dictionary-pronunciation">{entry.pronunciation}</span></div>
@@ -120,12 +128,14 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
         {entry.senses.map((sense, index) => {
           const inputId = `meaning-${entry.word}-${sense.id}`;
           return <section
+            id={`term-${entry.word}-${sense.id}`}
             class="dictionary-sense"
             aria-labelledby={`${inputId}-title`}
             data-dictionary-sense
             data-sense-id={`${entry.word}/${sense.id}`}
             data-sense-level={sense.level}
             data-sense-part={sense.partOfSpeech}
+            data-search-text={[sense.label, sense.definition, ...sense.examples, ...sense.chunks, ...sense.synonyms, sense.contrast].join(" ")}
           >
             <div class="dictionary-sense-heading">
               <div class="dictionary-sense-index"><span>Meaning</span><b>{String(index + 1).padStart(2, "0")}</b></div>
@@ -173,13 +183,16 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
     const resetCleared = app.querySelector<HTMLButtonElement>("[data-dictionary-reset-cleared]");
     const emptyReset = app.querySelector<HTMLButtonElement>("[data-dictionary-empty-reset]");
     const empty = app.querySelector<HTMLElement>("[data-dictionary-empty]");
+    const externalFallback = app.querySelector<HTMLElement>("[data-dictionary-external]");
+    const externalWord = app.querySelector<HTMLElement>("[data-dictionary-external-word]");
+    const externalLinks = Array.from(app.querySelectorAll<HTMLAnchorElement>("[data-dictionary-external-link]"));
     const entries = Array.from(app.querySelectorAll<HTMLElement>("[data-dictionary-entry]"));
     const senses = Array.from(app.querySelectorAll<HTMLElement>("[data-dictionary-sense]"));
     const clearInputs = Array.from(app.querySelectorAll<HTMLInputElement>("[data-dictionary-cleared-input]"));
 
     if (finder && form && queryInput && levelSelect && partSelect && status && clearedStatus && resetFilters && resetCleared && emptyReset && empty) {
-      const validLevels = new Set(["all", "A0", "A1", "A2", "B1", "B2"]);
-      const validParts = new Set(["all", "adjective", "adverb", "conjunction", "determiner", "modal verb", "noun", "preposition", "verb"]);
+      const validLevels = new Set(["all", ...(app.dataset.validLevels ?? "").split("|").filter(Boolean)]);
+      const validParts = new Set(["all", ...(app.dataset.validParts ?? "").split("|").filter(Boolean)]);
       const params = new URLSearchParams(window.location.search);
       const requestedLevel = params.get("level") ?? "all";
       const requestedPart = params.get("part") ?? "all";
@@ -197,7 +210,25 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
           if (value && value !== "all") next.searchParams.set(key, value);
           else next.searchParams.delete(key);
         });
+        const query = normalize(queryInput.value);
+        const exactEntry = entries.find((entry) => normalize(entry.dataset.headword ?? "") === query || (entry.dataset.entryForms ?? "").split("|").map(normalize).includes(query));
+        if (exactEntry) {
+          const entryHash = `#${exactEntry.id}`;
+          if (!next.hash.startsWith(`${entryHash}-`)) next.hash = entryHash;
+        } else if (next.hash.startsWith("#term-")) {
+          next.hash = "";
+        }
         window.history.replaceState({}, "", `${next.pathname}${next.search}${next.hash}`);
+      };
+
+      const matchRank = (query: string, headword: string, forms: string[]) => {
+        if (!query) return 0;
+        if (headword === query) return 0;
+        if (forms.includes(query)) return 1;
+        if (query.length === 1) return Infinity;
+        if (headword.startsWith(query) || forms.some((form) => form.startsWith(query))) return 2;
+        if (headword.includes(query) || forms.some((form) => form.includes(query))) return 3;
+        return Infinity;
       };
 
       const updateCleared = () => {
@@ -216,22 +247,24 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
 
         entries.forEach((entry) => {
           const headword = normalize(entry.dataset.headword ?? "");
-          const entryHeader = normalize(entry.querySelector(".dictionary-entry-header")?.textContent ?? "");
-          const origin = normalize(entry.querySelector(".dictionary-origin")?.textContent ?? "");
-          const entryMatchesQuery = !query || headword.includes(query) || entryHeader.includes(query) || origin.includes(query);
+          const forms = (entry.dataset.entryForms ?? "").split("|").map(normalize).filter(Boolean);
+          const rank = matchRank(query, headword, forms);
+          const entryMatchesQuery = !query || Number.isFinite(rank);
           const entrySenses = Array.from(entry.querySelectorAll<HTMLElement>("[data-dictionary-sense]"));
           let entryMeaningCount = 0;
 
           entrySenses.forEach((sense) => {
             const levelMatches = selectedLevel === "all" || sense.dataset.senseLevel === selectedLevel;
             const partMatches = selectedPart === "all" || sense.dataset.sensePart === selectedPart;
-            const queryMatches = entryMatchesQuery || !query || normalize(sense.textContent ?? "").includes(query);
+            const queryMatches = entryMatchesQuery || !query || (query.length > 2 && normalize(sense.dataset.searchText ?? "").includes(query));
             const visible = levelMatches && partMatches && queryMatches;
             sense.hidden = !visible;
             if (visible) entryMeaningCount += 1;
           });
 
           entry.hidden = entryMeaningCount === 0;
+          const originalIndex = Number(entry.dataset.entryIndex ?? 0);
+          entry.style.order = String(query ? (Number.isFinite(rank) ? rank : 10) * entries.length + originalIndex : originalIndex);
           if (entryMeaningCount > 0) {
             visibleWords += 1;
             visibleMeanings += entryMeaningCount;
@@ -241,6 +274,11 @@ const partLabels = Object.fromEntries(DICTIONARY_PARTS.map((part) => [part, part
         const hasFilters = Boolean(query) || selectedLevel !== "all" || selectedPart !== "all";
         resetFilters.disabled = !hasFilters;
         empty.hidden = visibleMeanings !== 0;
+        if (externalFallback && externalWord) {
+          externalFallback.hidden = !query;
+          externalWord.textContent = `“${queryInput.value.trim()}”`;
+          externalLinks.forEach((link) => { link.href = `${link.dataset.externalBase ?? link.href}${encodeURIComponent(queryInput.value.trim())}`; });
+        }
         status.textContent = hasFilters
           ? `${visibleWords} ${visibleWords === 1 ? "word" : "words"} and ${visibleMeanings} ${visibleMeanings === 1 ? "meaning" : "meanings"} found`
           : `Showing ${entries.length} words and ${senses.length} meanings`;

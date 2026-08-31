@@ -10,7 +10,7 @@ import { siteIdentityNodes, webPageNode } from "../lib/structured-data.mjs";
 interface Props {
   title: string;
   description: string;
-  current?: "home" | "curriculum" | "diagnostics" | "about" | "languages" | "blog" | "dictionary";
+  current?: "home" | "curriculum" | "reading" | "diagnostics" | "about" | "languages" | "blog" | "dictionary";
   heading?: string;
   lede?: string;
   noindex?: boolean;
@@ -29,7 +29,7 @@ const {
   heading = "The English Curriculum Map",
   lede = description,
   noindex = false,
-  schemaType = current === "curriculum" || current === "diagnostics" || current === "blog" || current === "languages"
+  schemaType = current === "curriculum" || current === "reading" || current === "diagnostics" || current === "blog" || current === "languages"
     ? "CollectionPage"
     : current === "about" ? "ProfilePage" : "WebPage",
   mainEntityId,
@@ -83,15 +83,16 @@ const structuredData = [
         <nav class="site-tabs" aria-label="Site sections">
           <a class="site-tab" href="/" aria-current={current === "home" ? "page" : undefined}>Home</a>
           <a class="site-tab" href="/curriculum/" aria-current={current === "curriculum" ? "page" : undefined}>Curriculum</a>
+          <a class="site-tab" href="/reading/" aria-current={current === "reading" ? "page" : undefined}>Reading</a>
           <a class="site-tab" href="/assessments/" aria-current={current === "diagnostics" ? "page" : undefined}>Diagnostics</a>
           <a class="site-tab" href="/about/" aria-current={current === "about" ? "page" : undefined}>Bio</a>
           <a class="site-tab" href="/languages/" aria-current={current === "languages" ? "page" : undefined}>Languages</a>
           <a class="site-tab" href="/blog/" aria-current={current === "blog" ? "page" : undefined}>Blog</a>
-          <a class="site-tab" href="/dictionary/" aria-current={current === "dictionary" ? "page" : undefined}>Dictionary</a>
+          <a class="site-tab" href="/dictionary/" aria-current={current === "dictionary" ? "page" : undefined}>Word Lab</a>
         </nav>
       </div>
     </div>
     <main id="main-content" tabindex="-1"><slot /></main>
-    <footer class="foot"><p>Aligned to the Common European Framework of Reference for Languages (CEFR). Hour estimates and GSE ranges are indicative guides, not guarantees.</p><div class="foot-actions"><a class="foot-link" href="/tutor/">Tutor planning guide</a><p class="foot-mark">Thomas’s Classroom · A0 → C1</p></div></footer>
+    <footer class="foot"><p>Aligned to the Common European Framework of Reference for Languages (CEFR). Hour estimates and GSE ranges are indicative guides, not guarantees.</p><div class="foot-actions"><a class="foot-link" href="/reading/">Reading Lab</a><a class="foot-link" href="/tutor/">Tutor planning guide</a><p class="foot-mark">Thomas’s Classroom · A0 → C1</p></div></footer>
   </body>
 </html>

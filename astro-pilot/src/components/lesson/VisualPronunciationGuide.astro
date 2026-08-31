@@ -1,0 +1,50 @@
+---
+interface Props {
+  guidance?: string;
+  example?: string;
+}
+const { guidance = "", example = "Choose one complete sentence from your answer." } = Astro.props as Props;
+---
+<aside class="visual-pronunciation" data-pronunciation-guide>
+  <header>
+    <p class="pronunciation-label">Visual pronunciation support</p>
+    <h3>Say it clearly. Then shape it naturally.</h3>
+    <p class="pronunciation-target">{example}</p>
+  </header>
+  <div class="pronunciation-pass-grid">
+    <section>
+      <b>1 · Careful pass</b>
+      <p>Say the complete sentence once with every word clear. Keep the grammar accurate and the meaning easy to hear.</p>
+    </section>
+    <section>
+      <b>2 · Natural pass</b>
+      <p>Mark one main stress, connect one natural word boundary, and choose where the voice continues or finishes. Say the sentence again without rushing.</p>
+    </section>
+  </div>
+  <dl class="pronunciation-key" aria-label="Pronunciation notation key">
+    <div><dt><span>WORD</span></dt><dd>Main stress</dd></div>
+    <div><dt><span>word‿word</span></dt><dd>Link smoothly</dd></div>
+    <div><dt><span>/</span></dt><dd>Thought-group pause</dd></div>
+    <div><dt><span>↗</span></dt><dd>Voice continues or rises</dd></div>
+    <div><dt><span>↘</span></dt><dd>Voice finishes or falls</dd></div>
+  </dl>
+  {guidance && <p class="pronunciation-cue"><b>Lesson cue:</b> {guidance}</p>}
+</aside>
+
+<style is:inline>
+  .visual-pronunciation{margin:24px 0 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--paper-2);font-style:normal}
+  .visual-pronunciation h3{margin:0 0 8px;font-family:var(--serif);font-size:25px;font-style:normal;font-weight:500;line-height:1.2}
+  .pronunciation-label{margin:0 0 6px;color:var(--accent-deep);font:600 11px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+  .pronunciation-target{margin:0;color:var(--ink);font:600 19px/1.5 var(--sans);font-style:normal}
+  .pronunciation-pass-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}
+  .pronunciation-pass-grid section{padding:14px;border:1px solid var(--line-2);border-radius:10px;background:var(--surface)}
+  .pronunciation-pass-grid b{color:var(--accent-deep);font:600 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+  .pronunciation-pass-grid p{margin:6px 0 0;color:var(--ink-2);font-size:15px;line-height:1.5}
+  .pronunciation-key{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0 0}
+  .pronunciation-key div{min-width:0;padding:10px 8px;border:1px solid var(--line-2);border-radius:9px;background:var(--surface);text-align:center}
+  .pronunciation-key dt{margin:0;color:var(--ink);font:700 17px/1.2 var(--sans);font-style:normal}
+  .pronunciation-key dd{margin:5px 0 0;color:var(--muted);font:500 10px/1.3 var(--mono);text-transform:uppercase}
+  .pronunciation-cue{margin:14px 0 0;padding:13px 15px;border-left:3px solid var(--accent);background:var(--accent-tint);color:var(--ink-2);font-size:15px;line-height:1.55;font-style:normal}
+  @media(max-width:640px){.pronunciation-pass-grid{grid-template-columns:1fr}.pronunciation-key{grid-template-columns:repeat(2,minmax(0,1fr))}.pronunciation-key div:first-child{grid-column:1/-1}}
+  @media print{.visual-pronunciation{break-inside:avoid}}
+</style>

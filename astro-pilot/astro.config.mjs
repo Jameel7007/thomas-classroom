@@ -27,7 +27,9 @@ export default defineConfig({
     filter: (page) => !page.endsWith("/404/")
       && !page.endsWith("/404.html")
       && !page.endsWith("/curriculum/print/")
-      && !page.includes("/tutor/plans/"),
+      && !page.includes("/tutor/plans/")
+      && !page.includes("/tutor/readings/")
+      && !page.endsWith("/tutor/review-builder/"),
   })],
   redirects: legacyRedirects,
 });

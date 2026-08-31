@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+
+interface Props { lessonId: string }
+const { lessonId } = Astro.props;
+const readings = (await getCollection("readings"))
+  .filter((reading) => reading.data.relatedLessonIds.includes(lessonId))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+{readings.length > 0 && (
+  <aside class="lesson-reading-links" aria-labelledby="lesson-reading-title">
+    <div><p>Reading Lab</p><h2 id="lesson-reading-title">Use this language inside a complete text.</h2></div>
+    <div class="lesson-reading-list">
+      {readings.map((reading) => <a href={`/reading/${reading.id}/`}><span>{reading.data.level} · {reading.data.genre}</span><strong>{reading.data.title}</strong></a>)}
+    </div>
+  </aside>
+)}
+<style is:inline>
+  .lesson-reading-links{max-width:940px;margin:0 auto 60px;padding:25px 30px;display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1fr);gap:24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,var(--surface),var(--cobalt-tint))}
+  .lesson-reading-links p{margin:0 0 7px;color:var(--accent-deep);font:600 10px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase}.lesson-reading-links h2{margin:0;padding:0;font-size:27px}.lesson-reading-list{display:grid;gap:8px}.lesson-reading-list a{display:grid;gap:3px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);text-decoration:none}.lesson-reading-list a:hover{border-color:var(--cobalt)}.lesson-reading-list a:focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px}.lesson-reading-list span{color:var(--muted);font:600 9.5px/1.35 var(--mono);text-transform:uppercase}.lesson-reading-list strong{font-family:var(--serif);font-size:18px;font-weight:550}
+  @media(max-width:700px){.lesson-reading-links{grid-template-columns:1fr;margin-inline:18px;padding:20px}}
+  @media print{.lesson-reading-links{display:none}}
+</style>

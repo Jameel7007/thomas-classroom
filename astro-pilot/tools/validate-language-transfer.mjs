@@ -29,11 +29,16 @@ function validateSource() {
   const contracts = [
     ["src/data/language-transfer.mjs", /defineTransferLanguages/],
     ["src/data/language-transfer.mjs", /getLesson\(lessonId\)/],
+    ["src/data/language-transfer.mjs", /getTransferPatternsForLesson/],
     ["src/data/language-transfer.mjs", /at least eight patterns are required/],
     ["src/components/languages/LanguageTransferGuide.astro", /Test a pattern\. Do not label a learner\./],
     ["src/components/languages/LanguageTransferGuide.astro", /data-transfer-pattern/],
     ["src/components/languages/LanguageTransferGuide.astro", /transfer-tutor-move/],
     ["src/components/languages/LanguageTransferGuide.astro", /Practice the decision/],
+    ["src/components/tutor/TransferLens.astro", /getTransferPatternsForLesson/],
+    ["src/components/tutor/TransferLens.astro", /data-transfer-lens-select/],
+    ["src/components/tutor/TransferLens.astro", /Quick correction drill/],
+    ["src/components/tutor/TransferLens.astro", /Test a pattern\. Do not label a learner\./],
     ["src/pages/languages.astro", /"@type": "ItemList"/],
     ["src/styles/languages.css", /\.transfer-pattern>summary:focus-visible/],
     ["src/styles/languages.css", /prefers-reduced-motion:reduce/],
@@ -48,8 +53,8 @@ function validateSource() {
   }
 
   if (existsSync(path.join(root, "src/data/site-content.ts"))) errors.push("src/data/site-content.ts: obsolete transfer registry must remain removed");
-  if (counts.languages < 3) errors.push(`only ${counts.languages} first-language guides are available`);
-  if (counts.patterns < 27) errors.push(`only ${counts.patterns} contrastive patterns are available; expected at least 27`);
+  if (counts.languages < 7) errors.push(`only ${counts.languages} first-language guides are available; expected the seven priority languages`);
+  if (counts.patterns < 59) errors.push(`only ${counts.patterns} contrastive patterns are available; expected at least 59`);
   if (counts.lessons < 25) errors.push(`only ${counts.lessons} ready lesson destinations are represented; expected at least 25`);
   if (TRANSFER_CATEGORIES.length < 6) errors.push("transfer patterns do not cover enough decision types");
 
@@ -62,10 +67,15 @@ function validateSource() {
     if (!language.patterns.some((pattern) => pattern.level === "A0")) errors.push(`${language.name}: no foundation pattern`);
     if (!language.patterns.some((pattern) => ["B1", "B2"].includes(pattern.level))) errors.push(`${language.name}: no independent-user pattern`);
   }
+  for (const name of ["Russian", "Ukrainian", "Czech", "Turkish", "Mandarin Chinese", "Spanish", "Brazilian Portuguese"]) {
+    if (!transferLanguages.some((language) => language.name === name)) errors.push(`priority first-language guide is missing: ${name}`);
+  }
 
   const component = readFileSync(path.join(root, "src/components/languages/LanguageTransferGuide.astro"), "utf8");
   if (/<script\b|\b(?:localStorage|sessionStorage|indexedDB)\b/.test(component)) errors.push("Language-transfer guide must remain native, static, and free of stored learner state");
   if (/type=["']checkbox["']|data-credit|progress/i.test(component)) errors.push("Language-transfer guide must not become learner progress tracking");
+  const lens = readFileSync(path.join(root, "src/components/tutor/TransferLens.astro"), "utf8");
+  if (/\b(?:localStorage|sessionStorage|indexedDB)\b/.test(lens)) errors.push("Tutor transfer lens must not store or profile a learner’s first language");
 }
 
 function validateOutput() {

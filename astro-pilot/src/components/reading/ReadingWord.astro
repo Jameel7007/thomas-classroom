@@ -1,0 +1,27 @@
+---
+interface Props {
+  term: string;
+  slug: string;
+  meaning: string;
+  chunks: string[];
+}
+
+const { term, slug, meaning, chunks } = Astro.props;
+const popoverId = `word-help-${slug}`;
+---
+<span class="reading-word-wrap">
+  <button
+    class="reading-word"
+    type="button"
+    popovertarget={popoverId}
+    title={`${term}: ${meaning}`}
+  >{term}</button>
+  <span class="reading-word-help" id={popoverId} popover="auto" role="note">
+    <span class="reading-word-help-head">
+      <strong>{term}</strong>
+      <button type="button" popovertarget={popoverId} popovertargetaction="hide" aria-label={`Close definition of ${term}`}>×</button>
+    </span>
+    <span>{meaning}</span>
+    <small><b>Useful chunks:</b> {chunks.join(" · ")}</small>
+  </span>
+</span>

@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { DICTIONARY_LEVELS, dictionaryCounts, dictionaryEntries } from "../src/data/dictionary.mjs";
+import { DICTIONARY_LEVELS, DICTIONARY_PARTS, dictionaryCounts, dictionaryEntries } from "../src/data/dictionary.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const dist = path.join(root, "dist");
@@ -30,11 +30,18 @@ function validateSource() {
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-query/],
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-level/],
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-part/],
+    ["src/components/dictionary/DictionaryExplorer.astro", /data-entry-forms/],
+    ["src/components/dictionary/DictionaryExplorer.astro", /data-search-text/],
+    ["src/components/dictionary/DictionaryExplorer.astro", /matchRank/],
+    ["src/components/dictionary/DictionaryExplorer.astro", /dictionary\.cambridge\.org\/us\/dictionary\/english/],
+    ["src/components/dictionary/DictionaryExplorer.astro", /merriam-webster\.com\/dictionary/],
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-cleared-input/],
     ["src/components/dictionary/DictionaryExplorer.astro", /window\.history\.replaceState/],
     ["src/components/dictionary/DictionaryExplorer.astro", /event\.key === "Escape"/],
     ["src/pages/dictionary.astro", /"@type": "DefinedTermSet"/],
+    ["src/pages/dictionary.astro", /A0–C1 Word Lab/],
     ["src/styles/dictionary.css", /\.dictionary-sense\.is-cleared/],
+    ["src/styles/dictionary.css", /\.dictionary-examples li\{[^}]*font-style:normal/],
     ["src/styles/dictionary.css", /\.dictionary-clear-control input:focus-visible/],
   ];
   for (const [relative, contract] of contracts) {
@@ -46,23 +53,25 @@ function validateSource() {
     if (!contract.test(readFileSync(target, "utf8"))) errors.push(`${relative}: required Dictionary contract is missing`);
   }
 
-  if (counts.words < 25) errors.push(`dictionary registry is too small at ${counts.words} words; expected at least 25`);
-  if (counts.senses < 70) errors.push(`dictionary registry is too shallow at ${counts.senses} meanings; expected at least 70`);
-  if (counts.chunks < 200) errors.push(`dictionary registry has only ${counts.chunks} chunks; expected at least 200`);
+  if (counts.words < 50) errors.push(`Word Lab registry is too small at ${counts.words} words; expected at least 50`);
+  if (counts.senses < 120) errors.push(`Word Lab registry is too shallow at ${counts.senses} meanings; expected at least 120`);
+  if (counts.chunks < 350) errors.push(`Word Lab registry has only ${counts.chunks} chunks; expected at least 350`);
 
   const representedLevels = new Set(dictionaryEntries.flatMap((entry) => entry.senses.map((sense) => sense.level)));
+  if (!DICTIONARY_LEVELS.includes("C1")) errors.push("dictionary levels must support the site’s C1 curriculum");
   for (const level of DICTIONARY_LEVELS) {
     if (!representedLevels.has(level)) errors.push(`dictionary registry has no ${level} meaning`);
   }
   const representedParts = new Set(dictionaryEntries.flatMap((entry) => entry.senses.map((sense) => sense.partOfSpeech)));
-  for (const part of ["adjective", "adverb", "conjunction", "modal verb", "noun", "preposition", "verb"]) {
-    if (!representedParts.has(part)) errors.push(`dictionary registry has no ${part} meaning`);
+  for (const part of DICTIONARY_PARTS) {
+    if (!representedParts.has(part)) errors.push(`dictionary filter exposes ${part}, but the registry has no matching meaning`);
   }
 
   const component = readFileSync(path.join(root, "src/components/dictionary/DictionaryExplorer.astro"), "utf8");
   if (/\b(?:localStorage|sessionStorage|indexedDB)\b/.test(component)) errors.push("Dictionary clear marks must not store learner state in the browser");
   if (/\b(?:fetch|XMLHttpRequest|EventSource|WebSocket)\s*\(/.test(component)) errors.push("Dictionary must remain static and make no learner-time network requests");
   if (/elevenlabs/i.test(component)) errors.push("Dictionary must not call ElevenLabs");
+  if (/const origin\s*=/.test(component)) errors.push("Word origins must not broaden ordinary lookup results");
 }
 
 function validateOutput() {
@@ -75,16 +84,21 @@ function validateOutput() {
   const html = readFileSync(output, "utf8");
   const words = [...html.matchAll(/\bdata-dictionary-entry(?:\s|>)/g)].length;
   const senses = [...html.matchAll(/\bdata-dictionary-sense(?:\s|>)/g)].length;
+  const headwordIds = [...html.matchAll(/<article\b[^>]*\bid="term-[^"]+"[^>]*\bdata-dictionary-entry/g)].length;
+  const senseIdsInMarkup = [...html.matchAll(/<section\b[^>]*\bid="term-[^"]+-[^"]+"[^>]*\bdata-dictionary-sense/g)].length;
   const clearInputs = [...html.matchAll(/<input\b[^>]*data-dictionary-cleared-input[^>]*>/g)];
   const senseIds = [...html.matchAll(/\bdata-sense-id="([^"]+)"/g)].map((match) => match[1]);
 
   if (words !== counts.words) errors.push(`/dictionary/: expected ${counts.words} word entries, found ${words}`);
   if (senses !== counts.senses) errors.push(`/dictionary/: expected ${counts.senses} meanings, found ${senses}`);
+  if (headwordIds !== counts.words) errors.push(`/dictionary/: expected ${counts.words} stable headword links, found ${headwordIds}`);
+  if (senseIdsInMarkup !== counts.senses) errors.push(`/dictionary/: expected ${counts.senses} stable meaning links, found ${senseIdsInMarkup}`);
   if (clearInputs.length !== counts.senses) errors.push(`/dictionary/: expected ${counts.senses} clear controls, found ${clearInputs.length}`);
   if (new Set(senseIds).size !== counts.senses) errors.push("/dictionary/: meaning identifiers are missing or duplicated");
   if (!/data-dictionary-status[^>]*aria-live="polite"/.test(html)) errors.push("/dictionary/: result summary is not announced accessibly");
   if (!/data-dictionary-cleared[^>]*aria-live="polite"/.test(html)) errors.push("/dictionary/: clear-mark summary is not announced accessibly");
   if ((html.match(/<details\b[^>]*class="dictionary-origin"/g) || []).length !== counts.words) errors.push("/dictionary/: every headword must include a word story disclosure");
+  if (/<details\b[^>]*class="dictionary-method"[^>]*\sopen(?:\s|>)/.test(html)) errors.push("/dictionary/: the word-clearing guide must stay compact by default");
   if ((html.match(/<li><b>[^<]+<\/b><span>/g) || []).length < 4) errors.push("/dictionary/: four-step word-clearing method is incomplete");
   if (/\b(?:localStorage|sessionStorage|indexedDB)\b/.test(html)) errors.push("/dictionary/: rendered page must not persist learner clear marks");
 

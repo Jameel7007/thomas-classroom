@@ -8,7 +8,7 @@ function randomIndex(limit){
   return Math.floor(Math.random() * limit);
 }
 
-export function randomizeResponseGroups(root, selector){
+export function randomizeResponseGroups(root, selector, settings = {}){
   const groups = new Map();
   root.querySelectorAll(selector).forEach(function(option){
     const group = option.parentElement;
@@ -18,7 +18,7 @@ export function randomizeResponseGroups(root, selector){
   });
 
   groups.forEach(function(options, group){
-    if (group.dataset.responseOrder) return;
+    if (group.dataset.responseOrder && !settings.force) return;
     if (group.closest("[data-fixed-order]")) {
       group.dataset.responseOrder = "fixed";
       return;

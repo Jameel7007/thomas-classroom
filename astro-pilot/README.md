@@ -1,26 +1,27 @@
 # Thomas’s Classroom
 
 This is the active, fully native Astro 7 site for Thomas’s Classroom. The
-landing page, curriculum, print curriculum, 112 lesson records (96 published
-and 16 planned), seven published assessments, one planned C1 exit relationship,
-About, Languages, Blog, and Dictionary are all authored inside this project.
+landing page, curriculum, print curriculum, 113 published lesson records,
+eight published assessments, seven original or rights-cleared Reading Lab texts, About, Languages,
+Blog, and Word Lab are all authored inside this project.
 There is no static-HTML compatibility layer.
 
 ## Source map
 
 - `src/pages/` — homepage, curriculum, supporting sections, and generated route entries
-- `src/content/lessons/{level}/{slug}.astro` — canonical metadata and native lesson bodies or planned records for all 112 topics
-- `src/content/assessments/{slug}.astro` — seven directly editable assessments
+- `src/content/lessons/{level}/{slug}.astro` — canonical metadata and native lesson bodies or planned records for all 113 topics
+- `src/content/assessments/{slug}.astro` — eight directly editable assessments
 - `src/data/assessment-routes.mjs` — validated assessment roles, routes, level relationships, and entry/exit paths
 - `src/content/blog/{slug}.mdx` — complete field notes registered by the validated Blog collection
-- `src/content.config.ts` — schema for automatically registered Blog metadata and routes
+- `src/content/readings/{level}/{slug}.mdx` — original or rights-cleared Reading Lab texts and their complete teaching sequence
+- `src/content.config.ts` — schemas for automatically registered Blog and Reading Lab metadata and routes
 - `src/components/lesson/` — lesson shell, navigation, exercise engine, and authoring components
 - `src/components/assessment/` — assessment shells, scoring engines, audio, and progress components
 - `src/lib/assessment-readiness.mjs` — shared cross-skill readiness calculations for exit and placement results
 - `src/pages/tutor/` — searchable tutor index and printable plans generated from canonical lesson metadata
 - `src/data/dictionary.mjs` — validated multi-sense word registry, origins, examples, chunks, and lesson relationships
 - `src/components/dictionary/DictionaryExplorer.astro` — searchable, URL-aware, in-session word-clearing experience
-- `src/data/language-transfer.mjs` — validated Spanish, Portuguese, and Turkish contrastive patterns with canonical lesson relationships
+- `src/data/language-transfer.mjs` — validated contrastive patterns for the seven priority first languages, with canonical lesson relationships
 - `src/components/languages/LanguageTransferGuide.astro` — native disclosure guide with tutor moves and targeted practice links
 - `src/styles/` — native shared tokens and page-family styles
 - `src/scripts/` — native client-side lesson, assessment, homepage, and quick-check behavior
@@ -42,8 +43,8 @@ Each curriculum level presents one explicit assessment path. A0–B2 use the
 comprehensive placement diagnostic before study. C1 uses the ready B2 exit
 diagnostic as its entry evidence because the placement exam does not claim a C1
 result. Learner evidence continues throughout each lesson sequence, followed by
-the level’s own end diagnostic. The C1 end diagnostic remains planned and is not
-linked as available. These relationships come from `assessment-routes.mjs`;
+the level’s own end diagnostic. The C1 end diagnostic is published and linked
+as available. These relationships come from `assessment-routes.mjs`;
 curriculum cards and final-lesson navigation use the canonical records rather
 than rebuilding assessment URLs independently.
 
@@ -171,8 +172,8 @@ planned filter, but no learner route is generated.
 
 To publish that topic later, edit the existing file only: change `status` to
 `ready`, import `LessonPage`, and add the lesson body. No other registration is
-needed. A0–B2 are fully published. C1 uses this workflow now: the first three
-lessons are ready pilots and lessons 4–19 remain planned. See
+needed. A0–C1 are fully published. C1 follows the same tutor-review process as
+the earlier levels. See
 [`C1-AUTHORING.md`](C1-AUTHORING.md) for the batch and tutor-review process.
 
 ### Change lesson order
@@ -302,6 +303,107 @@ guide itself remains indexable. This keeps search results focused on learner
 lessons while still making every plan directly refreshable and shareable with a
 tutor who has its URL.
 
+## Live Teaching Mode
+
+Every native lesson receives Live Teaching Mode through `LessonPage.astro`; no
+lesson-level registration or copied toolbar markup is required. Choose **Teach
+this lesson** in the lesson header to show one automatically derived lesson
+stage or drill at a time. The shared toolbar provides previous/next navigation,
+current-lesson progress, context-aware shuffle/reset/check/reveal actions, a
+small session timer, prompt copying, and a direct link to the generated tutor
+plan and Quick Review Builder. Exiting restores the complete lesson at the
+current stage.
+
+Keyboard shortcuts work only while teaching mode is active: `Alt + Left` and
+`Alt + Right` move between stages, `Alt + S` shuffles, `Alt + R` resets,
+`Alt + C` checks, `Alt + V` reveals, `Alt + P` copies the current prompt, and
+`Alt + T` starts or pauses the timer. `Escape` exits and returns focus to the
+launcher. The mode stores no learner progress or timer data; all state belongs
+only to the open lesson session.
+
+### Curated practice variations
+
+`StructuredLesson.astro` uses `PracticeSetSwitcher.astro` to expose three
+distinct controlled-practice routes without copying a second lesson:
+
+- **Core** uses the first four central form-and-meaning decisions.
+- **Contrast** uses the lesson’s contextual reading questions.
+- **Challenge** uses four later, less predictable applications.
+
+The component rejects duplicate question text across the three sets, so “Try
+another set” cannot merely rearrange one inventory. Only the selected panel is
+active, its Check and Reset controls continue to use the shared lesson engine,
+and the switcher remains one stage inside Live Teaching Mode. Add new structured
+lessons through the existing `build` and `context.questions` fields; the three
+routes derive automatically.
+
+### Production ladder and visual pronunciation
+
+Every learner lesson ends with the same escalating production choice through
+`ProductionLadder.astro`: Personal answer, Guided role play, and Real-world
+challenge. Structured lessons pass their existing roles, prompts, success
+criteria, writing task, and spoken-form cue directly. Other native lessons use
+the production prompt already derived by `buildTutorBrief()`, so no second
+lesson registry is maintained. The learner may use true or invented details.
+
+`VisualPronunciationGuide.astro` adds an audio-free second pass to that final
+production: first say one sentence carefully, then mark main stress, linking,
+thought groups, and rising or falling intonation before saying it naturally.
+Learner language remains upright. The notation key uses `WORD`, `word‿word`,
+`/`, `↗`, and `↘`; lesson-specific structured guidance remains visible below
+the key.
+
+### Quick Review Builder
+
+`/tutor/review-builder/` assembles a five-to-ten-minute review from two or three
+ready lessons. `src/lib/quick-review.mjs` derives retrieval, contrast, repair,
+and production material from the same native lesson sources and structured
+lesson objects used by learner pages and tutor plans. It is not another lesson
+registry.
+
+The builder creates one retrieval prompt per selected lesson, one cross-lesson
+contrast, one error repair, and one speaking challenge. Models remain hidden
+until revealed. “Try another mix” rotates which selected lesson supplies the
+repair and production stages, while presentation view shows one activity at a
+time. Selected lesson IDs live only in the URL for refresh and sharing; no
+learner record or progress state is stored. The page is `noindex, follow`, is
+excluded from the sitemap, and is linked from the tutor guide, every tutor plan,
+and Live Teaching Mode.
+
+## Reading Lab authoring
+
+The Reading Lab is a native Astro content collection with at least one original
+or rights-cleared text for every level from A0 through C1. It deliberately mixes practical documents,
+messages, narratives, features, opinion writing, and fiction. Some texts target
+a grammar decision; others develop inference, cohesion, argument, or writer's
+craft. The learner hub is `/reading/`, individual texts use
+`/reading/{level}/{slug}/`, and a printable tutor plan is generated at
+`/tutor/readings/{level}/{slug}/` from the same MDX record.
+
+To add a reading, create `src/content/readings/{level}/{slug}.mdx` and follow an
+existing file. Frontmatter owns the level, genre, reading focus, optional
+grammar focus, vocabulary, self-checking comprehension and language questions,
+writer's-craft analysis, staged response prompts, final speaking and writing,
+tutor timing, curriculum relationships, and rights record. Import
+`ReadingWord.astro` only for genuinely useful words in the text; each word must
+remain understandable in context even when its popover is closed.
+
+Every new text must be original, clearly public domain in all intended markets,
+or used under an explicit license. Do not copy an attached lesson or online
+story into the public site merely because it is available in one country. Mark
+generated pedagogy with `tutorReviewRequired: true` until it has received a
+human editorial and live-teaching review. Then run:
+
+```bash
+npm run reading:validate
+npm run check
+npm run build
+```
+
+The validator rejects missing levels, duplicate collection IDs, invalid lesson
+relationships, thin or exposed answer activities, copied full-document HTML,
+and Reading Lab pages without an original or rights-cleared source record.
+
 ## Blog authoring
 
 The Blog is a native Astro content collection. The index and article routes are
@@ -328,10 +430,10 @@ related reading automatically. `npm run blog:validate` checks the current
 three-post editorial release, metadata, article depth, learning-path links,
 direct-refresh routes, schemas, and sitemap membership.
 
-## Dictionary authoring
+## Word Lab authoring
 
-`/dictionary/` is a curated, fully static word-clearing tool for screen-shared
-lessons. Its 26 headwords, 76 individual meanings, and 224 reusable chunks live
+`/dictionary/` is the Word Lab, a curated, fully static word-clearing tool for
+screen-shared lessons. Its 50 headwords, 125 individual meanings, and 371 reusable chunks live
 in `src/data/dictionary.mjs`. Each entry owns its pronunciation, forms, word
 story, optional lesson relationship, and two or more senses. Each sense includes
 a CEFR level, part of speech, simple definition, natural examples, useful
@@ -355,11 +457,25 @@ The build prevents duplicate words and meanings, thin entries, missing levels,
 unlabeled clear controls, persistent learner state, learner-time network calls,
 incomplete DefinedTermSet structured data, and missing direct-refresh output.
 
+The completed core collection adds articles and determiners, high-friction
+prepositions, reusable movement and state verbs, and interaction words such as
+`well`, `though`, `rather`, and `quite`. Entries display alphabetically, while
+search ranks an exact headword or inflected form before meaning-text matches.
+
+When a searched word is not curated, the empty state offers explicit links to
+Cambridge Dictionary and Merriam-Webster using that query. These are ordinary
+external links, not embedded content or API requests. The Word Lab therefore
+keeps working on a static host, exposes no key, and remains usable if either
+external service is unavailable. External definitions are reference material;
+add a locally reviewed entry before treating a meaning as part of the classroom
+collection.
+
 ## Language-transfer authoring
 
 `/languages/` turns cross-linguistic influence into a practical teaching path.
-The canonical registry in `src/data/language-transfer.mjs` contains 27 patterns
-across Spanish, Portuguese, and Turkish. Each pattern records the source-language
+The canonical registry in `src/data/language-transfer.mjs` contains 59 patterns
+across Spanish, Brazilian Portuguese, Turkish, Russian, Ukrainian, Czech, and
+Mandarin Chinese. Each pattern records the source-language
 logic, a clearly labeled possible transfer, a natural English rebuild, an
 explanation, two production examples, a tutor move, a CEFR level, a decision
 category, and one or two lesson IDs.
@@ -369,6 +485,12 @@ or removed lessons fail validation instead of leaving a dead “Target” label.
 The guide deliberately uses no learner profiling, checkboxes, progress state, or
 browser storage: patterns are hypotheses to test against a learner’s actual
 production.
+
+Relevant patterns also appear in the generated tutor plan as an optional L1
+Transfer Lens. The tutor selects a first language for that open plan only; the
+choice is not stored, and no learner profile is created. The lens shows the
+possible transfer, the English rebuild, why the transfer can be logical, natural
+examples, and one quick correction drill from the same canonical registry.
 
 To add a pattern, edit its language record once, choose an existing ready lesson
 ID such as `a1/present-simple`, and run:

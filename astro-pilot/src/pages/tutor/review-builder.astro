@@ -1,0 +1,302 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { readyLessons } from "../../data/lesson-catalog.mjs";
+import { LESSON_LEVELS } from "../../data/lesson-schema.mjs";
+import { buildQuickReviewItem } from "../../lib/quick-review.mjs";
+
+interface LessonModule {
+  page?: { level: string; slug: string };
+  lesson?: unknown;
+}
+
+const lessonModules = import.meta.glob<LessonModule>("../../content/lessons/**/*.astro", { eager: true });
+const structuredById = new Map(Object.values(lessonModules)
+  .filter((module) => module.page && module.lesson)
+  .map((module) => [`${module.page!.level.toLowerCase()}/${module.page!.slug}`, module.lesson]));
+const reviewItems = readyLessons.map((lesson) => buildQuickReviewItem(lesson, structuredById.get(lesson.id)));
+const reviewJson = JSON.stringify(reviewItems).replace(/</g, "\\u003c");
+const lessonsByLevel = LESSON_LEVELS.map((level) => ({
+  level,
+  lessons: readyLessons.filter((lesson) => lesson.level === level),
+}));
+---
+<SiteLayout
+  title="Quick Review Builder · Tutor Tool · Thomas’s Classroom"
+  description="Build a focused five-to-ten-minute English review from two or three existing Thomas’s Classroom lessons."
+  heading="Quick Review Builder"
+  lede="Choose two or three lessons. The builder pulls one retrieval task from each, then adds a contrast, an error repair, and a short speaking challenge."
+  noindex={true}
+  pageClass="quick-review-page"
+>
+  <section class="tab-page tutor-guide review-builder" data-review-builder data-review-item-count={String(reviewItems.length)}>
+    <nav class="tutor-breadcrumb" aria-label="Tutor tool breadcrumb"><a href="/tutor/">Tutor guide</a><span aria-hidden="true">/</span><span>Quick Review Builder</span></nav>
+
+    <div class="tutor-intro-grid review-intro">
+      <div>
+        <p class="tab-overline">Five-to-ten-minute retrieval</p>
+        <h2 class="tab-title">Reconnect the last lessons before teaching something new.</h2>
+        <p class="tab-lede">Every prompt is derived from the selected lesson sources. Nothing is saved, scored, or attached to a learner account.</p>
+      </div>
+      <aside class="tutor-start-card">
+        <span class="tutor-card-label">A useful review contains</span>
+        <p>One retrieval prompt per lesson, one deliberate contrast, one correction, and one short speaking task. Answers remain hidden until you reveal them.</p>
+      </aside>
+    </div>
+
+    <section class="tutor-finder review-picker" aria-labelledby="review-picker-title">
+      <div class="tutor-finder-heading">
+        <div><p class="tutor-card-label">Choose previous work</p><h2 id="review-picker-title">Build this session’s review.</h2></div>
+        <p data-review-status aria-live="polite">Select at least two different lessons.</p>
+      </div>
+      <form class="review-picker-form" data-review-form>
+        {[1, 2, 3].map((position) => (
+          <label>
+            <span>Lesson {position}{position === 3 ? " · optional" : ""}</span>
+            <select data-review-choice required={position < 3}>
+              <option value="">Choose a lesson</option>
+              {lessonsByLevel.map(({ level, lessons }) => (
+                <optgroup label={level}>
+                  {lessons.map((lesson) => <option value={lesson.id}>{level} {String(lesson.sequence).padStart(2, "0")} · {lesson.topic}</option>)}
+                </optgroup>
+              ))}
+            </select>
+          </label>
+        ))}
+        <button class="home-link primary review-build-button" type="submit">Build review</button>
+      </form>
+    </section>
+
+    <section class="review-output" data-review-output hidden aria-labelledby="review-title">
+      <header class="review-output-header">
+        <div><p class="tutor-card-label">Ready for the shared screen</p><h2 id="review-title">Today’s quick review</h2><p data-review-summary></p></div>
+        <div class="tutor-actions review-output-actions">
+          <button class="home-link" type="button" data-review-remix>Try another mix</button>
+          <button class="home-link" type="button" data-review-copy>Copy prompts</button>
+          <button class="home-link" type="button" data-review-print>Print</button>
+          <button class="home-link primary" type="button" data-review-present aria-expanded="false">Present review</button>
+          <button class="home-link" type="button" data-review-reset>Start over</button>
+        </div>
+      </header>
+
+      <div class="review-present-nav" data-review-present-nav hidden>
+        <button class="home-link" type="button" data-review-previous aria-label="Previous review activity">← Previous</button>
+        <strong data-review-progress>Activity 1 of 1</strong>
+        <button class="home-link" type="button" data-review-next aria-label="Next review activity">Next →</button>
+      </div>
+
+      <ol class="tutor-stage-list review-list" data-review-list></ol>
+      <p class="review-announcement" data-review-announcement role="status" aria-live="polite"></p>
+    </section>
+  </section>
+
+  <script is:inline id="quick-review-data" type="application/json" set:html={reviewJson}></script>
+</SiteLayout>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector("[data-review-builder]");
+    const dataNode = document.querySelector("#quick-review-data");
+    if (!root || !dataNode) return;
+    const items = JSON.parse(dataNode.textContent || "[]");
+    const byId = new Map(items.map((item) => [item.id, item]));
+    const form = root.querySelector("[data-review-form]");
+    const choices = Array.from(root.querySelectorAll("[data-review-choice]"));
+    const output = root.querySelector("[data-review-output]");
+    const list = root.querySelector("[data-review-list]");
+    const status = root.querySelector("[data-review-status]");
+    const summary = root.querySelector("[data-review-summary]");
+    const announcement = root.querySelector("[data-review-announcement]");
+    const remix = root.querySelector("[data-review-remix]");
+    const copy = root.querySelector("[data-review-copy]");
+    const print = root.querySelector("[data-review-print]");
+    const present = root.querySelector("[data-review-present]");
+    const reset = root.querySelector("[data-review-reset]");
+    const presentNav = root.querySelector("[data-review-present-nav]");
+    const previous = root.querySelector("[data-review-previous]");
+    const next = root.querySelector("[data-review-next]");
+    const progress = root.querySelector("[data-review-progress]");
+    let rotation = 0;
+    let tasks = [];
+    let presenting = false;
+    let current = 0;
+
+    const selectedItems = () => choices.map((choice) => byId.get(choice.value)).filter(Boolean);
+    const uniqueItems = () => {
+      const seen = new Set();
+      return selectedItems().filter((item) => !seen.has(item.id) && seen.add(item.id));
+    };
+
+    const updateUrl = (selected) => {
+      const url = new URL(window.location.href);
+      selected.length ? url.searchParams.set("lessons", selected.map((item) => item.id).join(",")) : url.searchParams.delete("lessons");
+      window.history.replaceState({}, "", `${url.pathname}${url.search}`);
+    };
+
+    const addText = (parent, tag, text, className) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      node.textContent = text;
+      parent.appendChild(node);
+      return node;
+    };
+
+    const revealBlock = (parent, answer, label = "Reveal model") => {
+      const button = document.createElement("button");
+      button.className = "home-link review-reveal";
+      button.type = "button";
+      button.textContent = label;
+      button.setAttribute("aria-expanded", "false");
+      const response = addText(parent, "p", answer, "tutor-move review-answer");
+      response.hidden = true;
+      button.addEventListener("click", () => {
+        const revealing = response.hidden;
+        response.hidden = !revealing;
+        button.setAttribute("aria-expanded", String(revealing));
+        button.textContent = revealing ? "Hide model" : label;
+      });
+      parent.insertBefore(button, response);
+    };
+
+    const createTask = (task, index) => {
+      const card = document.createElement("li");
+      card.dataset.reviewCard = String(index + 1);
+      card.tabIndex = -1;
+      addText(card, "span", String(index + 1).padStart(2, "0"), "tutor-stage-time");
+      const body = document.createElement("div");
+      addText(body, "span", task.source, "tutor-card-label");
+      addText(body, "h3", task.title);
+      addText(body, "p", task.prompt);
+      if (task.answer) revealBlock(body, task.answer, task.revealLabel);
+      if (task.monitor?.length) addText(body, "p", `Listen for: ${task.monitor.join(" · ")}`, "tutor-move");
+      card.appendChild(body);
+      return card;
+    };
+
+    const makeTasks = (selected) => {
+      const repairSource = selected[rotation % selected.length];
+      const productionSource = selected[(rotation + 1) % selected.length];
+      const first = selected[0];
+      const second = selected[1];
+      return [
+        ...selected.map((item) => ({
+          source: `${item.level} · ${item.topic}`,
+          title: "Retrieve before looking",
+          prompt: item.retrieval.prompt,
+          answer: item.retrieval.answer,
+          revealLabel: "Reveal expected language",
+        })),
+        {
+          source: `${first.topic} + ${second.topic}`,
+          title: "Make the contrast",
+          prompt: `Use both lesson targets in one explanation or situation. What changes in form, meaning, or use between ${first.topic} and ${second.topic}?`,
+          answer: `${first.topic}: ${first.contrast.answer}\n${second.topic}: ${second.contrast.answer}`,
+          revealLabel: "Reveal tutor notes",
+        },
+        {
+          source: `${repairSource.level} · ${repairSource.topic}`,
+          title: "Diagnose and repair",
+          prompt: repairSource.repair.prompt,
+          answer: `${repairSource.repair.answer}\nWhy: ${repairSource.repair.why}`,
+          revealLabel: "Reveal repair",
+        },
+        {
+          source: `${productionSource.level} · ${productionSource.topic}`,
+          title: productionSource.production.title,
+          prompt: productionSource.production.prompt,
+          answer: productionSource.production.support,
+          revealLabel: "Reveal support",
+          monitor: productionSource.production.monitor,
+        },
+      ];
+    };
+
+    const setPresentCard = (index, focus) => {
+      const cards = Array.from(list.querySelectorAll("[data-review-card]"));
+      current = Math.max(0, Math.min(index, cards.length - 1));
+      cards.forEach((card, cardIndex) => { card.hidden = presenting && cardIndex !== current; });
+      progress.textContent = `Activity ${current + 1} of ${cards.length}`;
+      previous.disabled = current === 0;
+      next.disabled = current === cards.length - 1;
+      if (focus && cards[current]) cards[current].focus({ preventScroll: true });
+    };
+
+    const stopPresenting = () => {
+      if (!presenting) return;
+      presenting = false;
+      output.classList.remove("is-presenting");
+      presentNav.hidden = true;
+      present.setAttribute("aria-expanded", "false");
+      present.textContent = "Present review";
+      setPresentCard(current, false);
+      present.focus();
+    };
+
+    const togglePresenting = () => {
+      if (presenting) return stopPresenting();
+      presenting = true;
+      output.classList.add("is-presenting");
+      presentNav.hidden = false;
+      present.setAttribute("aria-expanded", "true");
+      present.textContent = "Exit presentation";
+      current = 0;
+      setPresentCard(0, true);
+      announcement.textContent = "Presentation view started. Use Previous and Next to move through the review.";
+    };
+
+    const render = () => {
+      const selected = uniqueItems();
+      if (selected.length < 2) {
+        status.textContent = "Choose at least two different lessons.";
+        output.hidden = true;
+        return;
+      }
+      stopPresenting();
+      tasks = makeTasks(selected);
+      list.replaceChildren(...tasks.map(createTask));
+      output.hidden = false;
+      summary.textContent = `${tasks.length} activities from ${selected.map((item) => `${item.level} ${item.topic}`).join(" · ")}`;
+      status.textContent = `${selected.length} lessons selected · ${tasks.length} review activities`;
+      updateUrl(selected);
+      setPresentCard(0, false);
+      output.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    };
+
+    form.addEventListener("submit", (event) => { event.preventDefault(); rotation = 0; render(); });
+    remix.addEventListener("click", () => { rotation += 1; render(); announcement.textContent = "A different lesson now supplies the repair and speaking challenge."; });
+    present.addEventListener("click", togglePresenting);
+    previous.addEventListener("click", () => setPresentCard(current - 1, true));
+    next.addEventListener("click", () => setPresentCard(current + 1, true));
+    print.addEventListener("click", () => window.print());
+    copy.addEventListener("click", async () => {
+      const text = tasks.map((task, index) => `${index + 1}. ${task.title}\n${task.prompt}`).join("\n\n");
+      try {
+        await navigator.clipboard.writeText(text);
+        announcement.textContent = "Review prompts copied. Paste them into the lesson chat.";
+      } catch (error) {
+        announcement.textContent = "Copy was unavailable. Select the review prompts manually.";
+      }
+    });
+    reset.addEventListener("click", () => {
+      stopPresenting();
+      form.reset();
+      output.hidden = true;
+      status.textContent = "Select at least two different lessons.";
+      updateUrl([]);
+      choices[0].focus();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (!presenting) return;
+      if (event.key === "Escape") { event.preventDefault(); stopPresenting(); }
+      else if (event.altKey && event.key === "ArrowLeft") { event.preventDefault(); setPresentCard(current - 1, true); }
+      else if (event.altKey && event.key === "ArrowRight") { event.preventDefault(); setPresentCard(current + 1, true); }
+    });
+
+    const requested = new URL(window.location.href).searchParams.get("lessons")?.split(",").filter((id) => byId.has(id)).slice(0, 3) || [];
+    requested.forEach((id, index) => { choices[index].value = id; });
+    if (new Set(requested).size >= 2) render();
+  })();
+</script>
+
+<style is:inline>
+  .review-builder{padding-top:34px}.review-intro{margin-bottom:30px}.review-picker{margin-top:0}.review-picker-form{display:grid;grid-template-columns:repeat(3,minmax(190px,1fr)) auto;gap:10px;align-items:end;margin-top:18px}.review-picker-form label{display:grid;gap:6px;color:var(--muted);font:500 10.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}.review-picker-form select{width:100%;height:48px;padding:0 12px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:500 13px/1.4 var(--sans);letter-spacing:0;text-transform:none}.review-picker-form select:focus{border-color:var(--accent-deep);box-shadow:0 0 0 3px var(--accent-soft);outline:0}.review-build-button{min-height:48px}.review-output{scroll-margin-top:24px;margin-top:44px;padding-top:30px;border-top:1px solid var(--line)}.review-output-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:22px}.review-output-header h2{margin:0;font-family:var(--display);font-size:clamp(34px,5vw,48px);font-weight:500}.review-output-header p:not(.tutor-card-label){margin:8px 0 0;color:var(--ink-2)}.review-output-actions{max-width:620px}.review-output-actions button,.review-reveal{cursor:pointer}.review-list li{min-height:150px}.review-list li>div>p{font-size:18px;line-height:1.55}.review-list .review-reveal{display:inline-flex;margin-top:16px}.review-answer{white-space:pre-line}.review-announcement{min-height:1.5em;color:var(--accent-deep);font:600 12px/1.5 var(--mono)}.review-present-nav{position:sticky;z-index:8;top:0;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;margin-bottom:18px;padding:12px;border:1px solid var(--ink);border-radius:12px;background:var(--surface);box-shadow:4px 4px 0 var(--accent-soft)}.review-present-nav strong{text-align:center;font:600 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}.review-output.is-presenting{max-width:1180px;margin-inline:auto}.review-output.is-presenting .review-output-header>div:first-child,.review-output.is-presenting .review-output-actions>:not([data-review-present]){display:none}.review-output.is-presenting .review-output-header{grid-template-columns:1fr;justify-items:end}.review-output.is-presenting .review-list li{min-height:min(62vh,620px);align-content:center;padding:clamp(28px,6vw,70px)}.review-output.is-presenting .review-list li h3{font-size:clamp(34px,5vw,56px)}.review-output.is-presenting .review-list li>div>p{font-size:clamp(22px,3vw,34px)}@media(max-width:1000px){.review-picker-form{grid-template-columns:1fr 1fr}.review-build-button{justify-self:start}.review-output-header{grid-template-columns:1fr}.review-output-actions{max-width:none;justify-content:flex-start}}@media(max-width:620px){.review-picker-form{grid-template-columns:1fr}.review-present-nav{grid-template-columns:1fr 1fr}.review-present-nav strong{grid-column:1/-1;grid-row:1}.review-output-actions{display:grid;grid-template-columns:1fr 1fr}.review-output-actions button{justify-content:center}.review-output.is-presenting .review-list li{min-height:58vh;padding:24px 20px}}@media print{.review-picker,.review-output-actions,.review-present-nav,.review-announcement,.tutor-breadcrumb{display:none!important}.review-output{display:block!important;margin:0;padding:0;border:0}.review-list li{display:grid!important;break-inside:avoid}.review-answer[hidden]{display:block}.review-reveal{display:none!important}}
+</style>

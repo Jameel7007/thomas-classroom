@@ -1,4 +1,5 @@
 import { randomizeResponseGroups } from "./randomize-responses.js";
+import "./teaching-mode.js";
 
 (function(){
   let lessonControlId = 0;
@@ -539,10 +540,14 @@ import { randomizeResponseGroups } from "./randomize-responses.js";
       const answer = item.querySelector("[data-transform-answer]");
       if (!reveal || !answer) return;
       ensureId(answer, "transform-answer");
+      if (!reveal.dataset.teachingOriginalLabel) {
+        reveal.dataset.teachingOriginalLabel = reveal.textContent.trim();
+      }
       reveal.setAttribute("aria-controls", answer.id);
       reveal.setAttribute("aria-expanded", "false");
       answer.setAttribute("aria-hidden", "true");
       reveal.addEventListener("click", function(){
+        answer.hidden = false;
         answer.classList.add("is-visible");
         answer.setAttribute("aria-hidden", "false");
         reveal.setAttribute("aria-expanded", "true");

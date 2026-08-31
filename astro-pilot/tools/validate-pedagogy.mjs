@@ -25,8 +25,28 @@ const interactionAttributes = [
 ];
 
 const structuredLessonSource = readFileSync(path.join(projectRoot, "src/components/lesson/StructuredLesson.astro"), "utf8");
-if (interactionCount(structuredLessonSource) < 7 || !/\bdata-feedback\b/.test(structuredLessonSource)) {
+const practiceSetSource = readFileSync(path.join(projectRoot, "src/components/lesson/PracticeSetSwitcher.astro"), "utf8");
+const lessonPageSource = readFileSync(path.join(projectRoot, "src/components/lesson/LessonPage.astro"), "utf8");
+const productionLadderSource = readFileSync(path.join(projectRoot, "src/components/lesson/ProductionLadder.astro"), "utf8");
+const pronunciationGuideSource = readFileSync(path.join(projectRoot, "src/components/lesson/VisualPronunciationGuide.astro"), "utf8");
+const teachingModeSource = readFileSync(path.join(projectRoot, "src/scripts/teaching-mode.js"), "utf8");
+if (interactionCount(structuredLessonSource) + interactionCount(practiceSetSource) < 6 || !/\bdata-feedback\b/.test(structuredLessonSource + practiceSetSource)) {
   errors.push("src/components/lesson/StructuredLesson.astro: shared upper-level practice or feedback contract is incomplete");
+}
+for (const contract of [/data-practice-set-switcher/, /core\|contrast\|challenge/, /role="tablist"/, /Try another set/, /different examples/]) {
+  if (!contract.test(practiceSetSource)) errors.push("src/components/lesson/PracticeSetSwitcher.astro: curated practice-set contract is incomplete");
+}
+for (const contract of [/data-production-ladder/, /data-production-step="personal"/, /data-production-step="role-play"/, /data-production-step="challenge"/, /VisualPronunciationGuide/]) {
+  if (!contract.test(productionLadderSource)) errors.push("src/components/lesson/ProductionLadder.astro: three-step production contract is incomplete");
+}
+for (const contract of [/data-pronunciation-guide/, /Careful pass/, /Natural pass/, /word‿word/, /↗/, /↘/]) {
+  if (!contract.test(pronunciationGuideSource)) errors.push("src/components/lesson/VisualPronunciationGuide.astro: visual spoken-form contract is incomplete");
+}
+if (!/ProductionLadder/.test(structuredLessonSource) || !/ProductionLadder/.test(lessonPageSource) || !/buildTutorBrief/.test(lessonPageSource)) {
+  errors.push("learner production ladder is not derived across both structured and native lesson formats");
+}
+if (!/lesson-content-native > \.wrap/.test(teachingModeSource) || !/#lesson-content > \.wrap/.test(teachingModeSource) || !/flatMap\(buildStages\)/.test(teachingModeSource)) {
+  errors.push("src/scripts/teaching-mode.js: Live Teaching Mode does not include the shared final production stage");
 }
 
 for (const lesson of readyLessons) {
@@ -99,6 +119,8 @@ function validateRenderedLesson(lesson) {
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ""));
   const words = visibleText.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu)?.length || 0;
   const interactions = interactionCount(main);
+  const source = readFileSync(path.join(projectRoot, lesson.source), "utf8");
+  const usesStructuredLesson = /<StructuredLesson\b/.test(source);
   const reflectionIndex = headings.findIndex((heading) => reflectionPattern.test(heading));
 
   if (words < 700) errors.push(`${lesson.id}: rendered lesson is too thin at ${words} visible words; expected at least 700`);
@@ -109,6 +131,19 @@ function validateRenderedLesson(lesson) {
   if (!/class="[^"]*\bprompt-card\b/i.test(main)) errors.push(`${lesson.id}: personalized learner-production prompt is missing`);
   if (!/\bdata-feedback\b/i.test(main)) errors.push(`${lesson.id}: rendered feedback output is missing`);
   if (!spokenFormPattern.test(visibleText)) errors.push(`${lesson.id}: rendered spoken-form guidance is missing`);
+  const productionLadders = (html.match(/\bdata-production-ladder="[^"]+"/g) || []).length;
+  const pronunciationGuides = (html.match(/\bdata-pronunciation-guide(?=[\s=>])/g) || []).length;
+  const productionSteps = [...html.matchAll(/\bdata-production-step="(personal|role-play|challenge)"/g)].map((match) => match[1]);
+  if (productionLadders !== 1) errors.push(`${lesson.id}: expected one shared production ladder, found ${productionLadders}`);
+  if (pronunciationGuides !== 1) errors.push(`${lesson.id}: expected one visual pronunciation guide, found ${pronunciationGuides}`);
+  if (productionSteps.join("|") !== "personal|role-play|challenge") errors.push(`${lesson.id}: personal, role-play, and challenge production steps are incomplete`);
+  if (usesStructuredLesson) {
+    const panels = [...main.matchAll(/\bdata-practice-set-panel="(core|contrast|challenge)"/g)].map((match) => match[1]);
+    const tabs = [...main.matchAll(/\bdata-practice-set-tab="(core|contrast|challenge)"/g)].map((match) => match[1]);
+    if (panels.join("|") !== "core|contrast|challenge") errors.push(`${lesson.id}: rendered Core, Contrast, and Challenge practice panels are incomplete`);
+    if (tabs.join("|") !== "core|contrast|challenge") errors.push(`${lesson.id}: rendered practice-set controls are incomplete`);
+    if (!/\bdata-practice-set-count="3"/.test(main)) errors.push(`${lesson.id}: rendered practice-set count is missing`);
+  }
 
   metrics.push({ level: lesson.level, words, interactions });
 }

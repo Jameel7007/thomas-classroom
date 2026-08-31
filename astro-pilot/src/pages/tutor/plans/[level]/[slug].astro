@@ -1,6 +1,7 @@
 ---
 import SiteLayout from "../../../../layouts/SiteLayout.astro";
 import PilotEvidenceWorksheet from "../../../../components/tutor/PilotEvidenceWorksheet.astro";
+import TransferLens from "../../../../components/tutor/TransferLens.astro";
 import { assessmentRoutes } from "../../../../data/assessment-routes.mjs";
 import { getLesson, getLessonNavigation, getLessonsForLevel, readyLessons } from "../../../../data/lesson-catalog.mjs";
 import { getLessonQualityReview, LESSON_REVIEW_PILOT_TARGET } from "../../../../data/lesson-schema.mjs";
@@ -101,6 +102,13 @@ const stages = [
     move: brief.nextUse,
   },
 ];
+const guidedDiscoveryQuestions = brief.retrieval.length
+  ? brief.retrieval.slice(0, 3).map((item) => item.prompt)
+  : [
+      `Which examples in “${brief.practiceTitles[0]}” express the same core meaning?`,
+      `How would you explain this decision in your own words: ${brief.principle}`,
+      `What needs to change in this repair, and why: ${brief.errors[0].repair}`,
+    ];
 ---
 <SiteLayout
   title={documentTitle}
@@ -120,6 +128,7 @@ const stages = [
       </div>
       <div class="tutor-plan-actions">
         <a class="home-link primary" href={lesson.route} data-learner-lesson>Open learner lesson</a>
+        <a class="home-link" href={`/tutor/review-builder/?lessons=${lesson.id}`}>Add to quick review</a>
         <button class="home-link tutor-print-button" type="button" data-print-plan>Print this plan</button>
       </div>
     </header>
@@ -202,6 +211,65 @@ const stages = [
           <span class="tutor-card-label">Next retrieval</span>
           <h3>Carry this language into the next session</h3>
           <p>{brief.nextUse}</p>
+        </article>
+      </div>
+    </section>
+
+    <TransferLens lessonId={lesson.id} />
+
+    <section class="tutor-session-section" aria-labelledby="operational-notes-title">
+      <div class="tutor-section-heading">
+        <p class="tutor-card-label">Use while teaching</p>
+        <h2 id="operational-notes-title">Operational teaching notes</h2>
+        <p>Choose a route before class, but change it when the learner’s production gives you better evidence.</p>
+      </div>
+      <div class="tutor-evidence-grid">
+        <article data-tutor-guided-discovery>
+          <span class="tutor-card-label">Guided discovery</span>
+          <h3>Ask before explaining</h3>
+          <ol>{guidedDiscoveryQuestions.map((question) => <li>{question}</li>)}</ol>
+        </article>
+        <article data-tutor-correction-timing>
+          <span class="tutor-card-label">Correction timing</span>
+          <h3>Correct for the stage</h3>
+          <ul>
+            <li><b>Controlled work:</b> correct immediately, then require the complete repaired sentence.</li>
+            <li><b>Fluency building:</b> note repeated errors and reformulate after the learner finishes the thought.</li>
+            <li><b>Communication:</b> interrupt only when meaning breaks down or the target decision is the lesson’s main evidence.</li>
+          </ul>
+        </article>
+        <article data-tutor-follow-up>
+          <span class="tutor-card-label">Follow-up</span>
+          <h3>Retrieve, do not reteach</h3>
+          <p>{brief.nextUse}</p>
+          <p><a href={`/tutor/review-builder/?lessons=${lesson.id}`}>Build a 5–10 minute review from this lesson →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tutor-session-section" aria-labelledby="route-options-title" data-tutor-route-options>
+      <div class="tutor-section-heading">
+        <p class="tutor-card-label">Short, core, or extended</p>
+        <h2 id="route-options-title">Choose the route</h2>
+        <p>All three routes end in learner production. More time means more contrast and transfer, not a longer explanation.</p>
+      </div>
+      <div class="tutor-evidence-grid">
+        <article>
+          <span class="tutor-card-label">35 minutes</span>
+          <h3>Short route</h3>
+          <p>Retrieve for 3 minutes. Notice and discover for 8. Use the two most diagnostic tasks from {brief.practiceTitles.slice(0, 2).join(" and ")} for 12. Protect 9 minutes for {brief.production.title}, then reflect for 3.</p>
+        </article>
+        <article>
+          <span class="tutor-card-label">{brief.coreDuration}</span>
+          <h3>Core route</h3>
+          <p>Follow the six-stage sequence below. Reduce repeated controlled items when accuracy is already stable, but keep the nearest useful contrast and final production.</p>
+        </article>
+        <article>
+          <span class="tutor-card-label">Extended</span>
+          <h3>Stretch route</h3>
+          <p>{brief.extensionTitles.length
+            ? `Add ${brief.extensionTitles.join(" · ")}, then repeat the communication task with a new situation or stricter success criteria.`
+            : `Repeat ${brief.production.title} with a new real situation, require follow-up questions, and finish with one written or spoken reformulation.`}</p>
         </article>
       </div>
     </section>

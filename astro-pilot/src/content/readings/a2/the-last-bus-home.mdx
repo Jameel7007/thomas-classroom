@@ -1,0 +1,190 @@
+---
+title: The Last Bus Home
+description: Follow a late-night travel problem, distinguish background actions from completed events, and explain how a small choice changes the ending.
+level: A2
+order: 3
+genre: Narrative
+focus: Following events and background details in a story
+grammarFocus: Past simple versus past continuous
+minutes: 22
+wordCount: 333
+relatedLessonIds:
+  - a2/past-simple
+  - a2/past-continuous
+  - a2/travel-and-transport
+  - a2/past-time-expressions
+before:
+  - Have you ever missed the last bus or train? What happened?
+  - What information do you check before making a late journey?
+  - When is it reasonable to accept help from a stranger?
+vocabulary:
+  - term: platform
+    slug: platform
+    meaning: The raised area beside a train or bus where passengers wait.
+    chunks: [wait on the platform, Platform 4]
+  - term: announcement
+    slug: announcement
+    meaning: A public spoken or written message that gives information.
+    chunks: [make an announcement, station announcement]
+  - term: stranded
+    slug: stranded
+    meaning: Unable to leave a place because transportation or help is unavailable.
+    chunks: [stranded at the station, leave someone stranded]
+  - term: route
+    slug: route
+    meaning: The path followed by a bus, train, or traveler.
+    chunks: [bus route, take a different route]
+  - term: recognize
+    slug: recognize
+    meaning: To know someone or something because you have seen it before.
+    chunks: [recognize a face, immediately recognize]
+  - term: shift
+    slug: shift
+    meaning: A scheduled period when someone works.
+    chunks: [late shift, finish a shift]
+comprehension:
+  - question: Why did Daniel reach the station later than he expected?
+    answer: coworker
+    hint: The delay began before he arrived at the station.
+    fix: Daniel stayed late to help a coworker finish a report.
+    options:
+      - { value: coworker, label: He helped a coworker finish a report. }
+      - { value: rain, label: Heavy rain stopped his train. }
+      - { value: wallet, label: He returned home for his wallet. }
+  - question: What was happening when the station announcement began?
+    answer: checking
+    hint: Look for the action already in progress at that moment.
+    fix: Daniel was checking the departure board when the announcement began.
+    options:
+      - { value: checking, label: He was checking the departure board. }
+      - { value: calling, label: He was calling his sister. }
+      - { value: driving, label: He was driving home. }
+  - question: Why did Daniel trust the woman who offered him a ride?
+    answer: recognized
+    hint: She was not completely unknown to him.
+    fix: Daniel recognized her from the bakery near his apartment.
+    options:
+      - { value: uniform, label: She was wearing a bus uniform. }
+      - { value: recognized, label: He recognized her from a local bakery. }
+      - { value: sister, label: His sister knew her personally. }
+  - question: What changed Daniel’s opinion about asking for help?
+    answer: conversation
+    hint: Consider the final reflection, not only the travel result.
+    fix: Their conversation made Daniel realize that accepting help can create connection.
+    options:
+      - { value: conversation, label: The friendly conversation during the ride. }
+      - { value: announcement, label: The station announcement. }
+      - { value: route, label: The shorter bus route. }
+languageFocus:
+  title: Background in progress and completed events
+  explanation: Past continuous builds the scene or names an action already in progress. Past simple moves the story forward with a completed event that begins, changes, or interrupts the scene.
+  examples:
+    - { text: "Daniel was checking the board when an announcement began.", note: "Checking was already in progress; the announcement began at one moment." }
+    - { text: "Rain was hitting the windows while they were driving.", note: "Two background actions continued during the same period." }
+    - { text: "The woman stopped beside him and offered a ride.", note: "Stopped and offered are completed actions that move the story forward." }
+  check:
+    - question: Choose the sentence that sets the background before a new event.
+      answer: was-waiting
+      hint: One action was in progress when another began.
+      fix: Say Daniel was waiting when the woman stopped.
+      options:
+        - { value: was-waiting, label: Daniel was waiting when the woman stopped. }
+        - { value: waited, label: Daniel waited when the woman was stopping. }
+    - question: Complete the event that interrupted the board-checking action.
+      answer: began
+      hint: The announcement started at one identifiable moment.
+      fix: Say An announcement began.
+      options:
+        - { value: was-beginning, label: An announcement was beginning. }
+        - { value: began, label: An announcement began. }
+    - question: Which sentence describes two actions continuing together?
+      answer: while-driving
+      hint: Both actions form the scene during the ride.
+      fix: Say Rain was hitting the windows while they were driving.
+      options:
+        - { value: while-driving, label: Rain was hitting the windows while they were driving. }
+        - { value: while-drove, label: Rain hit the windows while they drove. }
+    - question: Which question asks about an activity in progress at that time?
+      answer: what-were-doing
+      hint: Use were plus an ing form for the continuing activity.
+      fix: Ask What were you doing when the announcement started?
+      options:
+        - { value: what-did-doing, label: What did you doing when it started? }
+        - { value: what-were-doing, label: What were you doing when it started? }
+craft:
+  title: How a small travel problem becomes a story
+  introduction: The narrative creates a clear problem, introduces a decision with some risk, and ends with a change in the character’s thinking.
+  moves:
+    - label: Concrete setting
+      example: "The departure board changed from DELAYED to CANCELED."
+      effect: One visible change gives the problem an exact moment and makes it easy to picture.
+    - label: Decision point
+      example: "Daniel looked at the rain, then at the familiar bakery logo on her bag."
+      effect: The pause shows why accepting the ride is a decision rather than an automatic action.
+    - label: Reflective ending
+      example: "Sometimes the safest route home was not the one he had planned."
+      effect: The final line connects the travel route to Daniel’s new attitude about other people.
+responseStages:
+  - name: Gist
+    prompt: What problem does Daniel face, and how is it solved?
+    chunks: [The main problem is..., It is solved when...]
+    model: Daniel misses his final connection after the train is canceled, and a woman he recognizes from his neighborhood drives him home.
+  - name: Main points
+    prompt: Which three events change the direction of the story?
+    chunks: [First..., The turning point comes when..., In the end...]
+    model: First, Daniel stays late and reaches the station at night. Then his train is canceled and the last bus is gone. The turning point comes when a familiar local woman offers him a ride.
+  - name: Analyze
+    prompt: How does the ending give the route a second meaning?
+    chunks: [The route is literal because..., It also represents..., The final line suggests...]
+    model: The route is literally Daniel’s journey home, but it also represents his habit of managing everything alone. The final line suggests that accepting help can lead to a safer and more human path.
+  - name: React
+    prompt: Was Daniel right to accept the ride? Explain your conditions.
+    chunks: [I think he was..., I would only..., The important detail is...]
+    model: I think he was reasonable because he recognized the woman and could verify where he knew her from. I would still share the car details with someone before leaving.
+production:
+  speaking: Retell the story in one minute. Use two background actions, three completed events, and one sentence explaining Daniel’s final realization.
+  writing: Write 120 words about a journey that did not go as planned. Set the scene with past continuous and move the story with past simple.
+  chunks: [I was... when..., While we were..., Suddenly..., In the end...]
+tutor:
+  aim: The learner follows a short adult narrative, distinguishes scene-setting from event sequence, and retells it using past simple and past continuous for meaning.
+  timing:
+    - { minutes: "3", stage: Discuss a missed-transport experience. }
+    - { minutes: "4", stage: Read once for the solution and once for the event sequence. }
+    - { minutes: "4", stage: Complete comprehension and point to evidence. }
+    - { minutes: "5", stage: Contrast background and completed events. }
+    - { minutes: "4", stage: Analyze the decision and ending. }
+    - { minutes: "4–6", stage: Retell or write a new travel story. }
+  watchFor:
+    - The learner may overuse past continuous for every event because the whole story happened in the past.
+    - The learner may list events accurately but omit the reason Daniel changes his attitude.
+    - The safety discussion can drift away from language work, so return to evidence and conditional limits.
+  shorten: Read for gist, answer questions one and three, contrast two key tense examples, and finish with a six-sentence retelling.
+  extend: Tell the story from the woman’s viewpoint or replace the canceled train with a different interruption while preserving the tense contrast.
+rights:
+  status: Original
+  credit: Original text written for Thomas’s Classroom Reading Lab.
+tutorReviewRequired: true
+---
+import ReadingWord from "../../../components/reading/ReadingWord.astro";
+
+Daniel left the office at 9:15 on Friday night. He had planned to leave at seven, but a coworker needed help with a report. By the time he reached Central Station, most of the shops were closing and only a few people were waiting on the <ReadingWord term="platform" slug="platform" meaning="The raised area beside a train or bus where passengers wait." chunks={["wait on the platform", "Platform 4"]} />.
+
+He was checking the departure board when an <ReadingWord term="announcement" slug="announcement" meaning="A public spoken or written message that gives information." chunks={["make an announcement", "station announcement"]} /> began. His train was canceled because a tree had fallen across the track. The next train would leave at 5:40 the following morning.
+
+Daniel opened a travel app. The final bus on another <ReadingWord term="route" slug="route" meaning="The path followed by a bus, train, or traveler." chunks={["bus route", "take a different route"]} /> had left six minutes earlier. He was <ReadingWord term="stranded" slug="stranded" meaning="Unable to leave a place because transportation or help is unavailable." chunks={["stranded at the station", "leave someone stranded"]} /> at the station until morning. A taxi home would cost almost as much as he had earned that evening. He called his sister, but she was sleeping and did not answer.
+
+As Daniel was standing outside the station, rain began to fall. A small blue car stopped beside him. The driver lowered the window.
+
+“You live near Park Street, don’t you?” she asked.
+
+Daniel did not know her name, but he <ReadingWord term="recognized" slug="recognize" meaning="Knew someone or something because he had seen it before." chunks={["recognize a face", "immediately recognize"]} /> her face. She worked at the bakery near his apartment. A paper bag with the bakery’s orange logo was sitting on the back seat.
+
+“I’m going that way,” she said. “I can take you if you want.”
+
+Daniel looked at the rain, then at the familiar logo. He sent his sister the car’s license number and accepted the ride.
+
+While they were driving, rain was hitting the windows and the streets were almost empty. The woman introduced herself as Rosa. She explained that she was returning from her own late <ReadingWord term="shift" slug="shift" meaning="A scheduled period when someone works." chunks={["late shift", "finish a shift"]} />. They talked about the bakery, rising rent in the neighborhood, and the best place to buy coffee before seven.
+
+Rosa dropped Daniel outside his building twenty minutes later. He thanked her and promised to visit the bakery on Saturday.
+
+Daniel had always believed that asking for help made a person look unprepared. That night, he understood something different. Sometimes the safest route home was not the one he had planned.

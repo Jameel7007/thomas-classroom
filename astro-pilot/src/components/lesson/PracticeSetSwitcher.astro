@@ -1,0 +1,120 @@
+---
+import MultipleChoiceExercise from "./MultipleChoiceExercise.astro";
+
+interface QuizOption { value: string; label?: string }
+interface QuizItem { question: string; answer: string; options: QuizOption[]; hint?: string }
+interface PracticeSet {
+  id: "core" | "contrast" | "challenge";
+  label: "Core" | "Contrast" | "Challenge";
+  description: string;
+  successMessage: string;
+  items: QuizItem[];
+}
+interface Props { id: string; title: string; sets: PracticeSet[] }
+
+const { id, title, sets } = Astro.props;
+if (sets.length !== 3 || sets.map((set) => set.id).join("|") !== "core|contrast|challenge") {
+  throw new Error(`${id}: practice variations must define Core, Contrast, and Challenge in that order`);
+}
+const questions = sets.flatMap((set) => set.items.map((item) => item.question.trim().toLocaleLowerCase()));
+if (new Set(questions).size !== questions.length) {
+  throw new Error(`${id}: practice variations must use different examples rather than repeat or rearrange one set`);
+}
+---
+<section class="practice-set-switcher" data-practice-set-switcher={id} data-practice-set-count="3" aria-labelledby={`${id}-title`}>
+  <header class="practice-set-heading">
+    <div>
+      <p class="practice-set-kicker">Reusable practice routes</p>
+      <h3 id={`${id}-title`}>{title}</h3>
+      <p>Choose the set that fits today’s learner. Each set contains different examples.</p>
+    </div>
+    <div class="practice-set-tabs" role="tablist" aria-label="Practice set">
+      {sets.map((set, index) => (
+        <button
+          class="lesson-btn practice-set-tab"
+          type="button"
+          id={`${id}-tab-${set.id}`}
+          role="tab"
+          aria-selected={index === 0 ? "true" : "false"}
+          aria-controls={`${id}-panel-${set.id}`}
+          tabindex={index === 0 ? 0 : -1}
+          data-practice-set-tab={set.id}
+        >{set.label}</button>
+      ))}
+    </div>
+  </header>
+
+  {sets.map((set, index) => (
+    <div
+      class="quiz practice-set-panel"
+      id={`${id}-panel-${set.id}`}
+      role="tabpanel"
+      aria-labelledby={`${id}-tab-${set.id}`}
+      data-practice-set-panel={set.id}
+      data-quiz
+      data-success-message={set.successMessage}
+      hidden={index !== 0}
+    >
+      <p class="practice-set-description"><b>{set.label}:</b> {set.description}</p>
+      <div class="quiz-list">{set.items.map((item) => <MultipleChoiceExercise {...item} />)}</div>
+      <div class="drill-actions">
+        <button class="lesson-btn" type="button" data-check-quiz disabled={index !== 0}>Check {set.label.toLocaleLowerCase()}</button>
+        <button class="lesson-btn" type="button" data-reset-quiz disabled={index !== 0}>Reset</button>
+      </div>
+      <p class="feedback" data-feedback></p>
+    </div>
+  ))}
+
+  <button class="lesson-btn practice-set-next" type="button" data-practice-set-next>Try another set <span aria-hidden="true">→</span></button>
+  <p class="practice-set-status" data-practice-set-status role="status" aria-live="polite">Core set selected.</p>
+</section>
+
+<script is:inline>
+  (() => {
+    const roots = Array.from(document.querySelectorAll("[data-practice-set-switcher]")).filter((root) => !root.dataset.practiceSetReady);
+    roots.forEach((root) => {
+      root.dataset.practiceSetReady = "true";
+      const tabs = Array.from(root.querySelectorAll("[data-practice-set-tab]"));
+      const panels = Array.from(root.querySelectorAll("[data-practice-set-panel]"));
+      const next = root.querySelector("[data-practice-set-next]");
+      const status = root.querySelector("[data-practice-set-status]");
+      let current = 0;
+
+      const select = (index, focus) => {
+        current = (index + tabs.length) % tabs.length;
+        tabs.forEach((tab, tabIndex) => {
+          const active = tabIndex === current;
+          tab.setAttribute("aria-selected", String(active));
+          tab.tabIndex = active ? 0 : -1;
+        });
+        panels.forEach((panel, panelIndex) => {
+          const active = panelIndex === current;
+          panel.hidden = !active;
+          panel.querySelectorAll("[data-check-quiz], [data-reset-quiz]").forEach((button) => { button.disabled = !active; });
+        });
+        const label = tabs[current].textContent.trim();
+        status.textContent = `${label} set selected.`;
+        if (focus) tabs[current].focus();
+      };
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => select(index, false));
+        tab.addEventListener("keydown", (event) => {
+          let target = null;
+          if (event.key === "ArrowRight" || event.key === "ArrowDown") target = index + 1;
+          else if (event.key === "ArrowLeft" || event.key === "ArrowUp") target = index - 1;
+          else if (event.key === "Home") target = 0;
+          else if (event.key === "End") target = tabs.length - 1;
+          if (target === null) return;
+          event.preventDefault();
+          select(target, true);
+        });
+      });
+      next.addEventListener("click", () => select(current + 1, true));
+    });
+  })();
+</script>
+
+<style is:inline>
+  .practice-set-switcher{margin:28px 0;padding:22px;border:1px solid var(--ink);border-radius:15px;background:var(--surface);box-shadow:5px 5px 0 var(--accent-soft)}.practice-set-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end;margin-bottom:16px}.practice-set-heading h3{margin:0;font-family:var(--display);font-size:clamp(27px,4vw,38px);font-weight:500}.practice-set-heading>div>p:last-child{margin:7px 0 0;color:var(--ink-2)}.practice-set-kicker{margin:0 0 7px;color:var(--accent-deep);font:600 10.5px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase}.practice-set-tabs{display:flex;flex-wrap:wrap;gap:7px}.practice-set-tab[aria-selected="true"]{background:var(--ink);color:#fff}.practice-set-panel{margin:0;box-shadow:none}.practice-set-description{margin:0 0 18px;color:var(--ink-2)}.practice-set-next{margin-top:14px}.practice-set-status{min-height:1.4em;margin:10px 0 0;color:var(--accent-deep);font:600 11px/1.4 var(--mono)}@media(max-width:700px){.practice-set-switcher{padding:17px 14px}.practice-set-heading{grid-template-columns:1fr}.practice-set-tabs{display:grid;grid-template-columns:repeat(3,1fr)}.practice-set-tab{justify-content:center;padding-inline:8px}}
+</style>

@@ -1,0 +1,31 @@
+---
+interface Stage { name: "Gist" | "Main points" | "Analyze" | "React"; prompt: string; chunks: string[]; model: string }
+interface Props { stages: Stage[] }
+const { stages } = Astro.props;
+---
+<section class="reading-response" data-reading-response>
+  <header class="reading-section-head">
+    <p class="reading-overline">From reading to speaking</p>
+    <h2>Build your response</h2>
+    <p>Work through the stages in order. Answer before opening the model.</p>
+  </header>
+  <div class="reading-response-list">
+    {stages.map((stage, index) => (
+      <details class="reading-response-stage">
+        <summary>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <strong>{stage.name}</strong>
+          <small>{stage.prompt}</small>
+        </summary>
+        <div class="reading-response-body">
+          <p class="reading-chunk-label">Useful ways to begin</p>
+          <div class="reading-chunks">{stage.chunks.map((chunk) => <span>{chunk}</span>)}</div>
+          <details class="reading-model">
+            <summary>Compare with a model response</summary>
+            <p>{stage.model}</p>
+          </details>
+        </div>
+      </details>
+    ))}
+  </div>
+</section>

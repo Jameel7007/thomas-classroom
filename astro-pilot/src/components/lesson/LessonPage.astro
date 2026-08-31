@@ -6,12 +6,16 @@ import SocialMetadata from "../SocialMetadata.astro";
 import SkipLink from "../SkipLink.astro";
 import StructuredData from "../StructuredData.astro";
 import LessonNavigation from "./LessonNavigation.astro";
+import LiveTeachingMode from "./LiveTeachingMode.astro";
+import ProductionLadder from "./ProductionLadder.astro";
+import LessonReadingLinks from "./LessonReadingLinks.astro";
 import LessonSequenceNavigation from "./LessonSequenceNavigation.astro";
 import LessonExerciseEngine from "./LessonExerciseEngine.astro";
 import { getLesson, getLessonNavigation, getLessonsForLevel } from "../../data/lesson-catalog.mjs";
 import { curriculum } from "../../lib/curriculum";
 import { removeTutorListeningScriptsFromLesson } from "../../lib/listening-scripts.mjs";
 import { formatPageTitle } from "../../lib/page-title.mjs";
+import { buildTutorBrief } from "../../lib/tutor-plan.mjs";
 import { schemaIds, siteIdentityNodes, webPageNode } from "../../lib/structured-data.mjs";
 
 interface PageMetadata {
@@ -85,6 +89,8 @@ const structuredData = [
 ];
 const renderedLesson = await Astro.slots.render("default");
 const learnerLesson = removeTutorListeningScriptsFromLesson(renderedLesson);
+const hasProductionLadder = /\bdata-production-ladder\b/.test(learnerLesson.html);
+const productionBrief = hasProductionLadder ? null : buildTutorBrief(lesson);
 ---
 <!doctype html>
 <html lang="en">
@@ -100,7 +106,24 @@ const learnerLesson = removeTutorListeningScriptsFromLesson(renderedLesson);
   <body data-tutor-review-required={lesson.tutorReviewRequired ? "true" : undefined}>
     <SkipLink target="lesson-content" />
     <LessonNavigation level={lesson.level} category={lesson.category} sequence={lesson.sequence} total={levelTotal} />
-    <div id="lesson-content" tabindex="-1" set:html={learnerLesson.html}></div>
+    <LiveTeachingMode level={lesson.level} slug={lesson.slug} />
+    <div id="lesson-content" tabindex="-1">
+      <div class="lesson-content-native" set:html={learnerLesson.html}></div>
+      {!hasProductionLadder && productionBrief && (
+        <section class="wrap production-ladder-wrap" aria-label="Final learner production">
+          <ProductionLadder
+            level={lesson.level}
+            topic={lesson.topic}
+            title={productionBrief.production.title}
+            setup={productionBrief.production.setup}
+            personalPrompt={productionBrief.production.setup}
+            prompts={productionBrief.production.prompts}
+            success={productionBrief.production.success}
+          />
+        </section>
+      )}
+    </div>
+    <LessonReadingLinks lessonId={lesson.id} />
     <LessonSequenceNavigation lesson={lesson} previous={previous} next={next} isCourseEnd={isCourseEnd} />
     <LessonExerciseEngine />
   </body>

@@ -7,12 +7,14 @@ import "../styles/languages.css";
 const counts = transferCounts();
 const canonical = new URL("/languages/", Astro.site);
 const guideId = `${canonical.href}#language-transfer-guide`;
+const languageNames = transferLanguages.map((language: { name: string }) => language.name);
+const languageList = `${languageNames.slice(0, -1).join(", ")}, and ${languageNames.at(-1)}`;
 interface TransferSchemaLanguage { slug: string; name: string; note: string }
 const guideSchema = {
   "@type": "ItemList",
   "@id": guideId,
   name: "First-language transfer guides for English learners",
-  description: "Contrastive Spanish, Portuguese, and Turkish guidance linked to targeted A0–B2 English lessons.",
+  description: `Contrastive guidance for ${languageList}, linked to targeted A0–B2 English lessons.`,
   numberOfItems: transferLanguages.length,
   itemListElement: transferLanguages.map((language: TransferSchemaLanguage, index: number) => ({
     "@type": "ListItem",
@@ -23,7 +25,7 @@ const guideSchema = {
   })),
 };
 ---
-<SiteLayout title="Language Transfer · Thomas’s Classroom" description="Compare 27 high-value Spanish, Portuguese, and Turkish transfer patterns with clear English decisions, tutor prompts, examples, and targeted A0–B2 lessons." heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, rebuild the intended meaning, and practice the exact decision." current="languages" mainEntityId={guideId} additionalStructuredData={[guideSchema]}>
+<SiteLayout title="Language Transfer · Thomas’s Classroom" description={`Compare ${counts.patterns} high-value transfer patterns across ${counts.languages} first languages, with clear English decisions, tutor prompts, examples, and targeted A0–B2 lessons.`} heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, rebuild the intended meaning, and practice the exact decision." current="languages" mainEntityId={guideId} additionalStructuredData={[guideSchema]}>
   <section class="tab-page">
     <p class="tab-overline">L1 → English</p><h2 class="tab-title">Your first language is evidence.</h2>
     <p class="tab-lede">Transfer errors are not random failures. They often reveal a logical pattern from another language—and therefore point directly toward a useful English decision. This guide turns that evidence into explanation, production, and targeted lesson practice.</p>

@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import SiteLayout from "../../../../layouts/SiteLayout.astro";
+import ReadingStyles from "../../../../components/reading/ReadingStyles.astro";
+
+export async function getStaticPaths() {
+  const readings = await getCollection("readings");
+  return readings.map((reading) => {
+    const [level, slug] = reading.id.split("/");
+    return { params: { level, slug }, props: { reading } };
+  });
+}
+
+interface Props { reading: CollectionEntry<"readings"> }
+const { reading } = Astro.props;
+const data = reading.data;
+const learnerRoute = `/reading/${reading.id}/`;
+const allQuestions = [...data.comprehension, ...data.languageFocus.check];
+---
+<SiteLayout
+  title={`${data.title} · Reading Tutor Plan · Thomas’s Classroom`}
+  description={`A practical tutor plan for the ${data.level} Reading Lab lesson ${data.title}, including timing, answer evidence, anticipated problems, and extension options.`}
+  heading={`${data.title} · Tutor Plan`}
+  lede={data.tutor.aim}
+  current="reading"
+  noindex={true}
+  pageClass="reading-tutor-page"
+>
+  <ReadingStyles />
+  <article class="tab-page reading-tutor-plan" data-reading-tutor-plan={reading.id}>
+    <nav class="reading-breadcrumb" aria-label="Breadcrumb"><a href="/reading/">Reading Lab</a><span>/</span><a href={learnerRoute}>Learner page</a><span>/</span><span aria-current="page">Tutor plan</span></nav>
+    <div class="home-actions"><a class="home-link primary" href={learnerRoute}>Open learner reading</a><button class="home-link" type="button" onclick="window.print()">Print plan</button></div>
+    <section class="reading-tutor-grid">
+      <article class="reading-tutor-card"><p class="reading-overline">Lesson aim</p><h2>Evidence to collect</h2><p>{data.tutor.aim}</p></article>
+      <article class="reading-tutor-card"><p class="reading-overline">Language lens</p><h2>{data.languageFocus.title}</h2><p>{data.languageFocus.explanation}</p></article>
+      <article class="reading-tutor-card"><p class="reading-overline">Suggested sequence</p><h2>Timing</h2><ol>{data.tutor.timing.map((item) => <li><b>{item.minutes} min</b> · {item.stage}</li>)}</ol></article>
+      <article class="reading-tutor-card"><p class="reading-overline">Anticipated problems</p><h2>Watch and respond</h2><ul>{data.tutor.watchFor.map((item) => <li>{item}</li>)}</ul></article>
+      <article class="reading-tutor-card"><p class="reading-overline">Short lesson</p><h2>If time is limited</h2><p>{data.tutor.shorten}</p></article>
+      <article class="reading-tutor-card"><p class="reading-overline">Extended lesson</p><h2>If the learner needs more</h2><p>{data.tutor.extend}</p></article>
+    </section>
+    <section class="reading-tutor-card reading-answer-key"><p class="reading-overline">Controlled practice</p><h2>Answer key and teaching evidence</h2><ol>{allQuestions.map((item) => <li><b>{item.answer}</b> · {item.fix}</li>)}</ol></section>
+    <section class="reading-tutor-card"><p class="reading-overline">Review status</p><h2>Tutor review required</h2><p>{data.rights.status === "Original" ? "This original reading and its generated pedagogy require tutor review and learner piloting before they can be described as formally reviewed." : "The source text is registered separately from the generated pedagogy. The questions, language analysis, production work, and tutor guidance require tutor review and learner piloting before they can be described as formally reviewed."}</p></section>
+  </article>
+</SiteLayout>
