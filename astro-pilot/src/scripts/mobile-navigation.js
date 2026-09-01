@@ -27,7 +27,7 @@ export function setupMobileNavigation(root = document, view = window) {
     }
   });
 
-  const desktopNavQuery = view.matchMedia('(min-width: 821px)');
+  const desktopNavQuery = view.matchMedia('(min-width: 981px)');
   desktopNavQuery.addEventListener('change', (event) => {
     if (event.matches) closeMobileNav(false);
   });

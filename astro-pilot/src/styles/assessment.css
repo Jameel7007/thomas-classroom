@@ -93,12 +93,12 @@ h1{font-family:var(--serif);font-size:clamp(42px,7vw,76px);font-weight:500;lette
 .skill-score{display:inline-flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);
   border-radius:999px;padding:6px 10px;font-size:13px;color:var(--ink-2);}
 .skill-score b{font-family:var(--mono);font-size:11px;color:var(--accent-deep);}
-.placement-result{display:grid;grid-template-columns:240px minmax(0,1fr);gap:18px;margin-bottom:22px;}
+.placement-result{display:grid;grid-template-columns:320px minmax(0,1fr);gap:18px;margin-bottom:22px;}
 .placement-level{background:var(--ink);color:var(--paper);border-radius:16px;padding:22px;}
 .placement-level span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   color:color-mix(in oklab,var(--paper) 72%,transparent);margin-bottom:10px;}
-.placement-level b{display:block;font-family:var(--serif);font-size:clamp(36px,5vw,56px);line-height:.98;font-weight:500;
-  overflow-wrap:anywhere;}
+.placement-level b{display:block;font-family:var(--serif);font-size:clamp(36px,3vw,42px);line-height:.98;font-weight:500;
+  overflow-wrap:normal;}
 .placement-analysis{background:var(--accent-tint);border:1px solid var(--accent-soft);border-radius:16px;padding:22px;}
 .placement-analysis h2{font-family:var(--serif);font-size:28px;line-height:1.05;font-weight:500;margin:0 0 10px;}
 .placement-analysis p{color:var(--ink-2);margin:0;}

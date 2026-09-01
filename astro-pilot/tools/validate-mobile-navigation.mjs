@@ -38,7 +38,7 @@ media.matches = false;
 const root = new FakeTarget();
 root.querySelector = (selector) => selector === '[data-mobile-nav]' ? details : selector === '[data-mobile-nav-toggle]' ? toggle : null;
 const view = { matchMedia: (query) => {
-  if (query !== '(min-width: 821px)') throw new Error(`Unexpected media query: ${query}`);
+  if (query !== '(min-width: 981px)') throw new Error(`Unexpected media query: ${query}`);
   return media;
 } };
 const errors = [];
@@ -76,7 +76,7 @@ const [css, pageSource, homeScript] = await Promise.all([
   readFile(new URL('../src/pages/index.astro', import.meta.url), 'utf8'),
   readFile(new URL('../src/scripts/home.js', import.meta.url), 'utf8'),
 ]);
-expect(/@media\(max-width:820px\)/.test(css), '820px mobile breakpoint is missing');
+expect(/@media\(max-width:980px\)/.test(css), '980px mobile breakpoint is missing');
 expect(/@media\(max-width:430px\)/.test(css), 'narrow wordmark protection is missing');
 expect(/prefers-reduced-motion:reduce/.test(css), 'reduced-motion handling is missing');
 expect(/\.menu-toggle:focus-visible/.test(css), 'visible menu focus styling is missing');
@@ -88,12 +88,12 @@ for (const [name, source] of [['homepage markup', pageSource], ['homepage styles
   expect(!/(?:data-theme|themeBtn|theme-wipe|blackout|localStorage)/.test(source), `${name} still contains obsolete theme-toggle code`);
 }
 
-for (const width of [320, 375, 768, 819]) expect(width <= 820, `${width}px is not covered by the mobile breakpoint`);
-for (const width of [821, 1024, 1440]) expect(width > 820, `${width}px is not covered by the desktop layout`);
+for (const width of [320, 375, 768, 979, 980]) expect(width <= 980, `${width}px is not covered by the mobile breakpoint`);
+for (const width of [981, 1024, 1440]) expect(width > 980, `${width}px is not covered by the desktop layout`);
 
 if (errors.length) {
   console.error(`Mobile navigation validation failed:\n- ${errors.join('\n- ')}`);
   process.exit(1);
 }
 
-console.log('Mobile navigation verified: state, Escape, link close, focus return, desktop cleanup, no theme-control spacing, reduced motion, and 320/375/768/819/821/1024/1440px breakpoint coverage.');
+console.log('Mobile navigation verified: state, Escape, link close, focus return, desktop cleanup, no theme-control spacing, reduced motion, and 320/375/768/979/980/981/1024/1440px breakpoint coverage.');
