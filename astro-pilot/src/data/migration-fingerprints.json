@@ -2126,7 +2126,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "d9bf160b13e6aa609c1a2b57b516e7b36acfe3b34a0078a2b6ba62fb183b12e3",
+      "contentTextHash": "00f11e19d554f18ec174959d53923e21c78df179f69136c788da6d1e8e4ca8ad",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2226,7 +2226,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "06e627be00fde6f6d3e94364d529adccbe3a9e9b623d1ec32019da7c6f6f1281",
+      "contentTextHash": "7260dbccdd7cf302dbbba2e18f60b5700a57cda7162006984666167a295344a2",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2276,7 +2276,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "4e8a1c33d405fa945dc2ab8173070488170a904b6939d1289c2e769e874d3e4c",
+      "contentTextHash": "6d91539c33aa1f24b23aac54a491772d8085fe290a77322b2206f8286461dd6c",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2326,7 +2326,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "72b304ce9d53c274f0d67e200d06793d46c02c66834f756d8c1df0bc3b1eaf99",
+      "contentTextHash": "ca5fe2a2345105509627c847984df3b9ee1d7ce91858fd3a8759fe4a979bcd21",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2376,7 +2376,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "b15361dcec356cc2e0aa7e0e6195582c427c035211da4777a53c1887b2977517",
+      "contentTextHash": "a3227b3e008f722ee247c439461670c84d5a7d74ea87d7414b5dcd2ff768d81a",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2426,7 +2426,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "dc8538e5baabb273f513e5f2f5492f831a27b76a0fee908f326e69b5123552b9",
+      "contentTextHash": "ceef7b8d2d2337c51590cb4dbff90e4e32e92bd3cdf9bab0af00a37b92628010",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2526,7 +2526,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "2c4dc27510eb3e9a1d3c26dbea8b5e77aa5a493b3d41bc940c14a77261a6f3f7",
+      "contentTextHash": "f0ffccacbe45fd31afa3629a8297a3e1981b7edd814e89701ed37f99f2347366",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2672,7 +2672,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "295edea623213ddea3c9ddcca78b9b1be021387fdcbdbc6c1bb3341ec65a3baa",
+      "contentTextHash": "50226ba90c16653ab9de495401c479fe8a00e8e68b4ad21fe30b9b4629178293",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2764,7 +2764,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "ac106f203111a6c5133360bbe6ed18d128edc0a7fab69592583af216226eee14",
+      "contentTextHash": "bb4aba8179700d4dba2e75cd3cbab5a0808305f9957aa6b136e9c166f83abb14",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -2810,7 +2810,7 @@
         "SentenceBuilder",
         "SentenceCorrection"
       ],
-      "contentTextHash": "cdd0206c1a88a5e91598c395fc5776eda8dee779db779ea22d5297308282e724",
+      "contentTextHash": "04e8e31b0da9e8911ebd6f31f7d5adb75214836777237caa10fdfa940957290f",
       "interactionCounts": {
         "data-core-duration": 1,
         "data-extension-duration": 1,
@@ -5782,6 +5782,57 @@
         "data-production-ladder": 1,
         "data-production-step": 3,
         "data-pronunciation-guide": 1,
+        "data-lesson-extension": 1
+      },
+      "audioClips": []
+    },
+    "a2/zero-conditional": {
+      "features": [
+        "LessonPage",
+        "LessonNavigation",
+        "LessonExerciseEngine",
+        "StructuredLesson",
+        "MultipleChoiceExercise",
+        "RevealCard",
+        "FeedbackPanel",
+        "SentenceBuilder",
+        "SentenceCorrection"
+      ],
+      "contentTextHash": "c2bbbfe19350ca108f1e4b159e252db6ed4fd878d593e1799c37a2bc12ebf1ce",
+      "interactionCounts": {
+        "data-core-duration": 1,
+        "data-extension-duration": 1,
+        "data-choice-gap-drill": 5,
+        "data-success-message": 14,
+        "data-choice-option": 38,
+        "data-choice-gap": 27,
+        "data-answer": 53,
+        "data-hint": 53,
+        "data-fix": 53,
+        "data-placeholder": 29,
+        "data-check-choices": 5,
+        "data-reset-choices": 5,
+        "data-feedback": 11,
+        "data-quiz": 4,
+        "data-quiz-item": 21,
+        "data-quiz-option": 63,
+        "data-check-quiz": 4,
+        "data-reset-quiz": 4,
+        "data-tile-builder": 2,
+        "data-build-bank": 2,
+        "data-build-tile": 17,
+        "data-build-area": 2,
+        "data-check-build": 2,
+        "data-reset-build": 2,
+        "data-spot-error": 3,
+        "data-why": 3,
+        "data-error-choice": 17,
+        "data-error-feedback": 3,
+        "data-transform": 1,
+        "data-transform-item": 6,
+        "data-reveal-transform": 6,
+        "data-transform-answer": 6,
+        "data-listening-lab": 1,
         "data-lesson-extension": 1
       },
       "audioClips": []
