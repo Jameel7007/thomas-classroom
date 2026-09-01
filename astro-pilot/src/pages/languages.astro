@@ -14,7 +14,7 @@ const guideSchema = {
   "@type": "ItemList",
   "@id": guideId,
   name: "First-language transfer guides for English learners",
-  description: `Contrastive guidance for ${languageList}, linked to targeted A0–B2 English lessons.`,
+  description: `Contrastive guidance, cognates, loanwords, and false friends for ${languageList}, linked to targeted A0–B2 English lessons.`,
   numberOfItems: transferLanguages.length,
   itemListElement: transferLanguages.map((language: TransferSchemaLanguage, index: number) => ({
     "@type": "ListItem",
@@ -25,10 +25,10 @@ const guideSchema = {
   })),
 };
 ---
-<SiteLayout title="Language Transfer · Thomas’s Classroom" description={`Compare ${counts.patterns} high-value transfer patterns across ${counts.languages} first languages, with clear English decisions, tutor prompts, examples, and targeted A0–B2 lessons.`} heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, rebuild the intended meaning, and practice the exact decision." current="languages" mainEntityId={guideId} additionalStructuredData={[guideSchema]}>
+<SiteLayout title="Language Transfer · Thomas’s Classroom" description={`Compare ${counts.patterns} high-value transfer patterns, ${counts.helpfulWords} helpful cognates or loanwords, and ${counts.wordTraps} false friends or translation traps across ${counts.languages} first languages.`} heading="Language Transfer" lede="Use the learner’s first language as a map: notice the transfer pattern, understand the English contrast, rebuild the intended meaning, and practice the exact decision." current="languages" mainEntityId={guideId} additionalStructuredData={[guideSchema]}>
   <section class="tab-page">
     <p class="tab-overline">L1 → English</p><h2 class="tab-title">Your first language is evidence.</h2>
-    <p class="tab-lede">Transfer errors are not random failures. They often reveal a logical pattern from another language—and therefore point directly toward a useful English decision. This guide turns that evidence into explanation, production, and targeted lesson practice.</p>
+    <p class="tab-lede">Transfer errors are not random failures. They often reveal a logical pattern from another language and point directly toward a useful English decision. Use the grammar contrasts alongside carefully separated cognates, loanwords, false friends, and translation traps.</p>
     <LanguageTransferGuide languages={transferLanguages} counts={counts} />
   </section>
 </SiteLayout>

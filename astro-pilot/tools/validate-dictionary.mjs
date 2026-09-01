@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { DICTIONARY_LEVELS, DICTIONARY_PARTS, dictionaryCounts, dictionaryEntries } from "../src/data/dictionary.mjs";
+import { DICTIONARY_LEVELS, DICTIONARY_PARTS, commonVerbs, dictionaryCounts, dictionaryEntries, phrasalVerbSections, wordFamilySections } from "../src/data/dictionary.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const dist = path.join(root, "dist");
@@ -20,13 +20,16 @@ if (errors.length) {
 }
 
 console.log(sourceOnly
-  ? `Dictionary source contracts passed: ${counts.words} validated headwords, ${counts.senses} individual meanings, ${counts.chunks} chunks, multi-sense search, URL state, and private in-session clear marks.`
-  : `Dictionary validated: ${counts.words} searchable headwords, ${counts.senses} labeled meanings, ${counts.chunks} chunks, ${DICTIONARY_LEVELS.length} levels, progressive filtering, resettable clear marks, DefinedTermSet schema, and direct-refresh output.`);
+  ? `Dictionary source contracts passed: ${counts.words} validated headwords, ${counts.senses} individual meanings, ${counts.chunks} chunks, ${counts.commonVerbs} common verbs, ${counts.phrasalVerbs} phrasal verbs, ${counts.wordFamilies} word families, multi-sense search, URL state, and private in-session clear marks.`
+  : `Dictionary validated: ${counts.words} searchable headwords, ${counts.senses} labeled meanings, ${counts.chunks} chunks, ${counts.commonVerbs} common verbs, ${counts.phrasalVerbs} phrasal verbs, ${counts.wordFamilies} word families, ${DICTIONARY_LEVELS.length} levels, progressive filtering, resettable clear marks, DefinedTermSet schema, and direct-refresh output.`);
 
 function validateSource() {
   const contracts = [
     ["src/data/dictionary.mjs", /defineDictionary/],
     ["src/data/dictionary.mjs", /Duplicate dictionary sense/],
+    ["src/data/dictionary.mjs", /defineCommonVerbGuide/],
+    ["src/data/dictionary.mjs", /definePhrasalVerbGroups/],
+    ["src/data/dictionary.mjs", /defineWordFamilies/],
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-query/],
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-level/],
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-part/],
@@ -38,6 +41,12 @@ function validateSource() {
     ["src/components/dictionary/DictionaryExplorer.astro", /data-dictionary-cleared-input/],
     ["src/components/dictionary/DictionaryExplorer.astro", /window\.history\.replaceState/],
     ["src/components/dictionary/DictionaryExplorer.astro", /event\.key === "Escape"/],
+    ["src/components/dictionary/WordLabCollection.astro", /kind === "common-verbs"/],
+    ["src/components/dictionary/WordLabCollection.astro", /kind === "phrasal-verbs"/],
+    ["src/components/dictionary/WordLabCollection.astro", /kind === "word-families"/],
+    ["src/pages/dictionary/common-verbs.astro", /WordLabCollection/],
+    ["src/pages/dictionary/phrasal-verbs.astro", /WordLabCollection/],
+    ["src/pages/dictionary/word-families.astro", /WordLabCollection/],
     ["src/pages/dictionary.astro", /"@type": "DefinedTermSet"/],
     ["src/pages/dictionary.astro", /A0–C1 Word Lab/],
     ["src/styles/dictionary.css", /\.dictionary-sense\.is-cleared/],
@@ -56,6 +65,9 @@ function validateSource() {
   if (counts.words < 50) errors.push(`Word Lab registry is too small at ${counts.words} words; expected at least 50`);
   if (counts.senses < 120) errors.push(`Word Lab registry is too shallow at ${counts.senses} meanings; expected at least 120`);
   if (counts.chunks < 350) errors.push(`Word Lab registry has only ${counts.chunks} chunks; expected at least 350`);
+  if (counts.commonVerbs < 10 || commonVerbs.length !== counts.commonVerbs) errors.push(`Word Lab needs at least ten validated common verbs; found ${counts.commonVerbs}`);
+  if (counts.phrasalVerbs < 20 || phrasalVerbSections.flatMap((section) => section.items).length !== counts.phrasalVerbs) errors.push(`Word Lab needs at least twenty validated phrasal verbs; found ${counts.phrasalVerbs}`);
+  if (counts.wordFamilies < 10 || wordFamilySections.length !== counts.wordFamilies) errors.push(`Word Lab needs at least ten validated word families; found ${counts.wordFamilies}`);
 
   const representedLevels = new Set(dictionaryEntries.flatMap((entry) => entry.senses.map((sense) => sense.level)));
   if (!DICTIONARY_LEVELS.includes("C1")) errors.push("dictionary levels must support the site’s C1 curriculum");
@@ -95,6 +107,21 @@ function validateOutput() {
   if (senseIdsInMarkup !== counts.senses) errors.push(`/dictionary/: expected ${counts.senses} stable meaning links, found ${senseIdsInMarkup}`);
   if (clearInputs.length !== counts.senses) errors.push(`/dictionary/: expected ${counts.senses} clear controls, found ${clearInputs.length}`);
   if (new Set(senseIds).size !== counts.senses) errors.push("/dictionary/: meaning identifiers are missing or duplicated");
+  const collectionChecks = [
+    ["dictionary/common-verbs/index.html", /class="common-verb-heading"/g, counts.commonVerbs, "common verb cards"],
+    ["dictionary/phrasal-verbs/index.html", /class="phrasal-verb-name"/g, counts.phrasalVerbs, "phrasal verb cards"],
+    ["dictionary/word-families/index.html", /<details\b[^>]*class="word-family"/g, counts.wordFamilies, "word-family disclosures"],
+  ];
+  for (const [relative, pattern, expected, label] of collectionChecks) {
+    const collectionPath = path.join(dist, relative);
+    if (!existsSync(collectionPath)) {
+      errors.push(`/${relative.replace("index.html", "")}: direct-refresh output is missing`);
+      continue;
+    }
+    const collectionHtml = readFileSync(collectionPath, "utf8");
+    const found = [...collectionHtml.matchAll(pattern)].length;
+    if (found !== expected) errors.push(`/${relative.replace("index.html", "")}: expected ${expected} ${label}, found ${found}`);
+  }
   if (!/data-dictionary-status[^>]*aria-live="polite"/.test(html)) errors.push("/dictionary/: result summary is not announced accessibly");
   if (!/data-dictionary-cleared[^>]*aria-live="polite"/.test(html)) errors.push("/dictionary/: clear-mark summary is not announced accessibly");
   if ((html.match(/<details\b[^>]*class="dictionary-origin"/g) || []).length !== counts.words) errors.push("/dictionary/: every headword must include a word story disclosure");
@@ -113,6 +140,12 @@ function validateOutput() {
   const sitemapPath = path.join(dist, "sitemap-0.xml");
   if (!existsSync(sitemapPath) || !/<loc>[^<]*\/dictionary\/<\/loc>/.test(readFileSync(sitemapPath, "utf8"))) {
     errors.push("sitemap: /dictionary/ is missing");
+  }
+  else {
+    const sitemap = readFileSync(sitemapPath, "utf8");
+    for (const route of ["/dictionary/common-verbs/", "/dictionary/phrasal-verbs/", "/dictionary/word-families/"]) {
+      if (!sitemap.includes(route)) errors.push(`sitemap: ${route} is missing`);
+    }
   }
 }
 

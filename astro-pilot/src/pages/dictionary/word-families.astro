@@ -1,0 +1,11 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import WordLabCollection from "../../components/dictionary/WordLabCollection.astro";
+import { wordFamilySections } from "../../data/dictionary.mjs";
+import "../../styles/dictionary.css";
+---
+<SiteLayout title="English Word Families · Word Lab" description="Build flexible English vocabulary with twelve explained word families, parts of speech, form changes, usage contrasts, and natural examples." heading="Word Families" lede="Change the form carefully so the word performs the right job in the sentence." current="dictionary">
+  <section class="tab-page word-lab-collection-page">
+    <WordLabCollection kind="word-families" wordFamilySections={wordFamilySections} />
+  </section>
+</SiteLayout>

@@ -16,6 +16,25 @@ const records = [
     name: "Spanish",
     note: "Spanish and English share a large amount of vocabulary, but they package subjects, auxiliaries, time, and common meanings differently. Use the similarities for speed and the contrasts for precision.",
     principle: "Do not translate the Spanish word alone. First identify its job in the complete message, then choose the English structure that performs that job.",
+    lexicalBridge: {
+      helpfulLabel: "Helpful cognates",
+      trapLabel: "False friends",
+      note: "Shared Latin roots make many formal English words easier to recognize. Confirm pronunciation, exact meaning, grammar, and common partners before treating a familiar-looking word as fully known.",
+      helpful: [
+        { source: "hospital", english: "hospital", note: "Same central meaning; English stress begins on hos-." },
+        { source: "importante", english: "important", note: "A reliable meaning connection; notice the English ending and stress." },
+        { source: "natural", english: "natural", note: "The central adjective meaning transfers well, but pronunciation changes." },
+        { source: "central", english: "central", note: "Useful in physical and abstract meanings such as a central location or idea." },
+        { source: "posible", english: "possible", note: "A high-value academic cognate with different spelling and pronunciation." },
+      ],
+      traps: [
+        { source: "actual", tempting: "actual", actual: "current / present", example: "My current job is in customer support." },
+        { source: "asistir", tempting: "assist", actual: "attend", example: "I attended the meeting; I did not help organize it." },
+        { source: "embarazada", tempting: "embarrassed", actual: "pregnant", example: "She is pregnant. She was embarrassed by the confusion." },
+        { source: "sensible", tempting: "sensible", actual: "sensitive", example: "This is a sensitive topic, so use sensible language." },
+        { source: "realizar", tempting: "realize", actual: "carry out / accomplish", example: "The team carried out the study; later, they realized why it mattered." },
+      ],
+    },
     patterns: [
       {
         id: "age-with-be",
@@ -128,6 +147,25 @@ const records = [
     name: "Brazilian Portuguese",
     note: "Portuguese offers many helpful cognates and familiar tense ideas, yet English divides several high-frequency verbs, prepositions, and question patterns more explicitly.",
     principle: "When one Portuguese word has several natural English outcomes, build a meaning map rather than memorizing one permanent translation.",
+    lexicalBridge: {
+      helpfulLabel: "Helpful cognates",
+      trapLabel: "False friends",
+      note: "Portuguese and English share many international and Latin-based words. Use them to accelerate reading, then verify the English sound, register, countability, and collocation.",
+      helpful: [
+        { source: "importante", english: "important", note: "The central meaning is dependable; English stress and final sounds differ." },
+        { source: "natural", english: "natural", note: "A useful adjective connection with different pronunciation." },
+        { source: "hospital", english: "hospital", note: "The place meaning transfers directly; notice English word stress." },
+        { source: "diferente", english: "different", note: "Meaning is close; English normally uses different from." },
+        { source: "problema", english: "problem", note: "A strong everyday cognate; English has no final vowel." },
+      ],
+      traps: [
+        { source: "pretender", tempting: "pretend", actual: "intend / plan", example: "I intend to apply. I am not pretending that I already applied." },
+        { source: "assistir", tempting: "assist", actual: "watch / attend", example: "We watched the presentation and attended the discussion." },
+        { source: "atualmente", tempting: "actually", actual: "currently", example: "I currently live in Mexico. Actually, I moved here two years ago." },
+        { source: "sensível", tempting: "sensible", actual: "sensitive", example: "The figures are sensitive, so use a sensible security process." },
+        { source: "parentes", tempting: "parents", actual: "relatives", example: "Several relatives visited, including my parents." },
+      ],
+    },
     patterns: [
       {
         id: "age-with-be",
@@ -253,6 +291,25 @@ const records = [
     name: "Turkish",
     note: "Turkish builds meaning through regular suffixes, flexible information order, and structures that can leave subjects or copulas implicit. English relies more heavily on separate helper words and a stable sentence frame.",
     principle: "First unpack the Turkish suffix or compressed structure into its meaning jobs; then rebuild those jobs with English subjects, auxiliaries, word order, and prepositions.",
+    lexicalBridge: {
+      helpfulLabel: "International words",
+      trapLabel: "Misleading look-alikes",
+      note: "Modern Turkish includes many international loanwords that can support quick recognition. Their English pronunciation, range, and register still need checking, and familiar spelling can sometimes hide a different meaning.",
+      helpful: [
+        { source: "problem", english: "problem", note: "A direct international connection used in everyday and formal contexts." },
+        { source: "plan", english: "plan", note: "The noun meaning is close; English also commonly uses plan as a verb." },
+        { source: "sistem", english: "system", note: "A reliable academic and workplace word with different spelling." },
+        { source: "program", english: "program", note: "Useful for schedules, software, and organized activities; check the intended sense." },
+        { source: "telefon", english: "telephone / phone", note: "The object is familiar; phone is far more common in everyday English." },
+      ],
+      traps: [
+        { source: "aktüel", tempting: "actual", actual: "current / topical", example: "The article discusses a current issue and includes actual figures." },
+        { source: "sempatik", tempting: "sympathetic", actual: "likable / pleasant", example: "He is very likable, and he was sympathetic when I explained the problem." },
+        { source: "şef", tempting: "chef", actual: "boss / supervisor", example: "My boss manages the team; the chef manages the kitchen." },
+        { source: "artist", tempting: "artist", actual: "performer / actor in many contexts", example: "The performer appeared on stage; the artist designed the poster." },
+        { source: "fabrika", tempting: "fabric", actual: "factory", example: "The fabric is produced in a factory outside the city." },
+      ],
+    },
     patterns: [
       {
         id: "article-signals",
@@ -391,6 +448,25 @@ const records = [
     name: "Russian",
     note: "Russian marks meaning through case, aspect, agreement, and flexible information order, but it has no article system and normally omits a present-tense copula. English makes many of those relationships visible with separate words and a more stable clause frame.",
     principle: "Treat a possible Russian transfer as a clue, not a diagnosis. Recover the intended meaning first, then rebuild only the English signal that the message actually needs.",
+    lexicalBridge: {
+      helpfulLabel: "International cognates",
+      trapLabel: "False friends",
+      note: "International vocabulary can make formal English recognizable even when the alphabets differ. Transliteration is not enough: confirm the English meaning, stress, and normal collocations.",
+      helpful: [
+        { source: "проблема (problema)", english: "problem", note: "A reliable international word once English pronunciation is established." },
+        { source: "система (sistema)", english: "system", note: "A useful academic and workplace cognate." },
+        { source: "программа (programma)", english: "program", note: "Close in software and organized-course meanings; check context." },
+        { source: "информация (informatsiya)", english: "information", note: "Meaning is close, but information is uncountable in English." },
+        { source: "документ (dokument)", english: "document", note: "A strong formal cognate used as both an English noun and verb." },
+      ],
+      traps: [
+        { source: "магазин (magazin)", tempting: "magazine", actual: "store / shop", example: "I bought it at a store and read about it in a magazine." },
+        { source: "фамилия (familiya)", tempting: "family", actual: "last name / surname", example: "Write your last name here and list your family members below." },
+        { source: "аккуратный (akkuratny)", tempting: "accurate", actual: "neat / careful", example: "Her desk is neat, and her calculations are accurate." },
+        { source: "артист (artist)", tempting: "artist", actual: "performer / actor", example: "The performer was on stage while the artist sketched the audience." },
+        { source: "симпатичный (simpatichny)", tempting: "sympathetic", actual: "likable / attractive", example: "He seems likable and was sympathetic about the delay." },
+      ],
+    },
     patterns: [
       {
         id: "article-reference",
@@ -503,6 +579,25 @@ const records = [
     name: "Ukrainian",
     note: "Ukrainian uses case, verbal aspect, agreement, and flexible information structure to carry relationships that English often expresses with articles, auxiliaries, and fixed positions. Similar meanings can therefore require a visibly different English frame.",
     principle: "Use Ukrainian structure to explain why a transfer is reasonable, then return immediately to the learner’s intended message and one precise English rebuild.",
+    lexicalBridge: {
+      helpfulLabel: "International cognates",
+      trapLabel: "False friends",
+      note: "Shared international vocabulary can reduce the burden of formal reading. Keep the advantage while checking English countability, pronunciation, and the exact meaning used in context.",
+      helpful: [
+        { source: "проблема (problema)", english: "problem", note: "A dependable international connection in everyday and formal use." },
+        { source: "система (systema)", english: "system", note: "A useful academic and professional cognate." },
+        { source: "інформація (informatsiia)", english: "information", note: "Meaning is close; English information does not normally take a plural." },
+        { source: "документ (dokument)", english: "document", note: "The core noun meaning transfers well." },
+        { source: "культура (kultura)", english: "culture", note: "A strong cognate, though individual collocations still need checking." },
+      ],
+      traps: [
+        { source: "магазин (mahazyn)", tempting: "magazine", actual: "store / shop", example: "The store sells newspapers and several magazines." },
+        { source: "фабрика (fabryka)", tempting: "fabric", actual: "factory", example: "This fabric comes from a factory near Lviv." },
+        { source: "артист (artyst)", tempting: "artist", actual: "performer / actor", example: "The performer spoke to an artist after the show." },
+        { source: "акуратний (akuratnyi)", tempting: "accurate", actual: "neat / careful", example: "The notes are neat, and the dates are accurate." },
+        { source: "симпатичний (sympatychnyi)", tempting: "sympathetic", actual: "likable / attractive", example: "The new colleague is likable and sympathetic to our concerns." },
+      ],
+    },
     patterns: [
       {
         id: "article-reference",
@@ -615,6 +710,25 @@ const records = [
     name: "Czech",
     note: "Czech carries person, case, number, and information focus through inflection and flexible order. English uses fewer endings, requires more explicit subjects and auxiliaries, and asks articles and word order to carry information Czech marks elsewhere.",
     principle: "Do not treat flexible Czech form as careless English. Identify the grammatical signal Czech already supplies, then make its English equivalent explicit in the correct position.",
+    lexicalBridge: {
+      helpfulLabel: "International cognates",
+      trapLabel: "False friends",
+      note: "Czech and English share useful international vocabulary, especially in academic and professional settings. Similarity supports recognition, but it does not guarantee identical meaning or use.",
+      helpful: [
+        { source: "problém", english: "problem", note: "A reliable everyday and formal cognate." },
+        { source: "systém", english: "system", note: "A strong professional and academic connection." },
+        { source: "informace", english: "information", note: "Meaning is close; English information is normally uncountable." },
+        { source: "kultura", english: "culture", note: "A useful cognate with different spelling and pronunciation." },
+        { source: "normální", english: "normal", note: "The central meaning is close, though tone can vary by context." },
+      ],
+      traps: [
+        { source: "aktuální", tempting: "actual", actual: "current", example: "The current schedule contains the actual departure times." },
+        { source: "eventuálně", tempting: "eventually", actual: "possibly / if necessary", example: "We may possibly change it, but eventually we need a final decision." },
+        { source: "sympatický", tempting: "sympathetic", actual: "likable / pleasant", example: "She is likable and sympathetic when someone needs help." },
+        { source: "kontrolovat", tempting: "control", actual: "check / inspect in many contexts", example: "Please check the figures; the manager controls the final budget." },
+        { source: "šéf", tempting: "chef", actual: "boss", example: "My boss met the chef after dinner service." },
+      ],
+    },
     patterns: [
       {
         id: "article-reference",
@@ -727,6 +841,25 @@ const records = [
     name: "Mandarin Chinese",
     note: "Mandarin Chinese relies on particles, aspect markers, classifiers, time expressions, and topic structure rather than English-style verb inflection, articles, and auxiliary movement. English therefore asks the learner to make several grammatical signals newly visible.",
     principle: "Do not translate one Mandarin particle into one English word. Identify time, reference, grammatical role, and information focus, then build the complete English clause those meanings require.",
+    lexicalBridge: {
+      helpfulLabel: "International loanwords",
+      trapLabel: "Translation traps",
+      note: "Mandarin and English are not closely related, so these are mostly borrowed international words rather than historical cognates. Use them as memory bridges, while treating one-to-one translation as a hypothesis to test.",
+      helpful: [
+        { source: "咖啡 (kāfēi)", english: "coffee", note: "A familiar sound-based loanword for a common object." },
+        { source: "沙发 (shāfā)", english: "sofa", note: "A useful loanword with adapted Mandarin sounds." },
+        { source: "巧克力 (qiǎokèlì)", english: "chocolate", note: "The sound connection helps memory even though pronunciation differs greatly." },
+        { source: "迷你 (mínǐ)", english: "mini", note: "A productive borrowed form used for small versions of things." },
+        { source: "酷 (kù)", english: "cool", note: "A borrowed informal evaluation; register matters in both languages." },
+      ],
+      traps: [
+        { source: "方便 (fāngbiàn)", tempting: "comfortable", actual: "convenient", example: "The location is convenient, but the small chair is not comfortable." },
+        { source: "参加 (cānjiā)", tempting: "assist", actual: "attend / participate", example: "I attended the workshop and assisted the presenter afterward." },
+        { source: "开 (kāi)", tempting: "one fixed English verb", actual: "open / turn on / drive / start, depending on the object", example: "Open the window, turn on the computer, and start the meeting." },
+        { source: "认识 (rènshi)", tempting: "one fixed form of know", actual: "know / be acquainted with / meet, depending on time", example: "I know Mei now; I met her last year." },
+        { source: "意思 (yìsi)", tempting: "one fixed meaning", actual: "meaning / idea / intention, depending on context", example: "I understand the meaning, but I am not sure about his intention." },
+      ],
+    },
     patterns: [
       {
         id: "articles-and-classifiers",
@@ -851,6 +984,8 @@ export function transferCounts() {
     languages: transferLanguages.length,
     patterns: patterns.length,
     lessons: new Set(patterns.flatMap((pattern) => pattern.lessons.map((lesson) => lesson.id))).size,
+    helpfulWords: transferLanguages.reduce((total, language) => total + language.lexicalBridge.helpful.length, 0),
+    wordTraps: transferLanguages.reduce((total, language) => total + language.lexicalBridge.traps.length, 0),
   });
 }
 
@@ -858,8 +993,11 @@ function defineTransferLanguages(languages) {
   const errors = [];
   const languageSlugs = new Set();
   const patternKeys = new Set();
-  const exactLanguageKeys = new Set(["slug", "name", "note", "principle", "patterns"]);
+  const exactLanguageKeys = new Set(["slug", "name", "note", "principle", "lexicalBridge", "patterns"]);
   const exactPatternKeys = new Set(["id", "level", "category", "sourcePattern", "title", "listenFor", "rebuild", "explanation", "examples", "tutorMove", "lessonIds"]);
+  const exactBridgeKeys = new Set(["helpfulLabel", "trapLabel", "note", "helpful", "traps"]);
+  const exactHelpfulKeys = new Set(["source", "english", "note"]);
+  const exactTrapKeys = new Set(["source", "tempting", "actual", "example"]);
 
   if (!Array.isArray(languages) || languages.length < 3) errors.push("at least three transfer languages are required");
 
@@ -874,6 +1012,29 @@ function defineTransferLanguages(languages) {
         errors.push(`${source}: ${field} is missing or too thin`);
       }
     }
+    const bridge = language.lexicalBridge || {};
+    for (const key of Object.keys(bridge)) if (!exactBridgeKeys.has(key)) errors.push(`${source}: unknown lexicalBridge field ${key}`);
+    for (const field of ["helpfulLabel", "trapLabel", "note"]) {
+      if (typeof bridge[field] !== "string" || bridge[field].trim().length < (field === "note" ? 80 : 5)) errors.push(`${source}: lexicalBridge.${field} is missing or too thin`);
+    }
+    if (!Array.isArray(bridge.helpful) || bridge.helpful.length < 5) errors.push(`${source}: at least five helpful cognates or loanwords are required`);
+    if (!Array.isArray(bridge.traps) || bridge.traps.length < 5) errors.push(`${source}: at least five false friends or translation traps are required`);
+    const helpful = (bridge.helpful || []).map((item, itemIndex) => {
+      for (const key of Object.keys(item)) if (!exactHelpfulKeys.has(key)) errors.push(`${source} helpful word ${itemIndex + 1}: unknown field ${key}`);
+      for (const [field, minimum] of [["source", 2], ["english", 2], ["note", 20]]) {
+        if (typeof item[field] !== "string" || item[field].trim().length < minimum) errors.push(`${source} helpful word ${itemIndex + 1}: ${field} is missing or too thin`);
+      }
+      return Object.freeze({ ...item });
+    });
+    const traps = (bridge.traps || []).map((item, itemIndex) => {
+      for (const key of Object.keys(item)) if (!exactTrapKeys.has(key)) errors.push(`${source} word trap ${itemIndex + 1}: unknown field ${key}`);
+      for (const [field, minimum] of [["source", 2], ["tempting", 2], ["actual", 2], ["example", 20]]) {
+        if (typeof item[field] !== "string" || item[field].trim().length < minimum) errors.push(`${source} word trap ${itemIndex + 1}: ${field} is missing or too thin`);
+      }
+      if (item.tempting === item.actual) errors.push(`${source} word trap ${itemIndex + 1}: tempting and actual meanings must contrast`);
+      return Object.freeze({ ...item });
+    });
+    const lexicalBridge = Object.freeze({ ...bridge, helpful: Object.freeze(helpful), traps: Object.freeze(traps) });
     if (!Array.isArray(language.patterns) || language.patterns.length < 8) errors.push(`${source}: at least eight patterns are required`);
 
     const patterns = (language.patterns || []).map((pattern, patternIndex) => {
@@ -909,7 +1070,7 @@ function defineTransferLanguages(languages) {
       return Object.freeze({ ...pattern, examples: Object.freeze([...pattern.examples]), lessonIds: Object.freeze([...pattern.lessonIds]), lessons: Object.freeze(lessons) });
     });
 
-    return Object.freeze({ ...language, patterns: Object.freeze(patterns) });
+    return Object.freeze({ ...language, lexicalBridge, patterns: Object.freeze(patterns) });
   });
 
   const representedLevels = new Set(resolved.flatMap((language) => language.patterns.map((pattern) => pattern.level)));

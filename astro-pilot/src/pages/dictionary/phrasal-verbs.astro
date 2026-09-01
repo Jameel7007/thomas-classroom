@@ -1,0 +1,11 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import WordLabCollection from "../../components/dictionary/WordLabCollection.astro";
+import { phrasalVerbSections } from "../../data/dictionary.mjs";
+import "../../styles/dictionary.css";
+---
+<SiteLayout title="Common English Phrasal Verbs · Word Lab" description="Learn twenty common English phrasal verbs by situation, meaning, CEFR level, natural example, and separable or inseparable grammar pattern." heading="Phrasal Verbs" lede="Learn the verb and particle as one meaning, then notice exactly where its object can go." current="dictionary">
+  <section class="tab-page word-lab-collection-page">
+    <WordLabCollection kind="phrasal-verbs" phrasalVerbSections={phrasalVerbSections} />
+  </section>
+</SiteLayout>

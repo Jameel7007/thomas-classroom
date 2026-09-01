@@ -1,0 +1,83 @@
+---
+interface DictionaryEntry { word: string; pronunciation: string; forms: string[]; senses: { id: string }[] }
+interface CommonVerb { word: string; coreIdea: string; learningNote: string; entry: DictionaryEntry }
+interface PhrasalVerb { phrase: string; level: string; pattern: string; meaning: string; example: string }
+interface PhrasalVerbSection { id: string; title: string; explanation: string; items: readonly PhrasalVerb[] }
+interface WordFamilyMember { word: string; part: string }
+interface WordFamily { root: string; centralMeaning: string; explanation: string; example: string; members: readonly WordFamilyMember[] }
+interface Props {
+  kind: "common-verbs" | "phrasal-verbs" | "word-families";
+  commonVerbs?: readonly CommonVerb[];
+  phrasalVerbSections?: readonly PhrasalVerbSection[];
+  wordFamilySections?: readonly WordFamily[];
+}
+const { kind, commonVerbs = [], phrasalVerbSections = [], wordFamilySections = [] } = Astro.props;
+---
+<nav class="word-lab-subnav" aria-label="Word Lab collections">
+  <a href="/dictionary/">Full dictionary</a>
+  <a href="/dictionary/common-verbs/" aria-current={kind === "common-verbs" ? "page" : undefined}>Common verbs</a>
+  <a href="/dictionary/phrasal-verbs/" aria-current={kind === "phrasal-verbs" ? "page" : undefined}>Phrasal verbs</a>
+  <a href="/dictionary/word-families/" aria-current={kind === "word-families" ? "page" : undefined}>Word families</a>
+</nav>
+
+{kind === "common-verbs" && <section class="word-lab-section" aria-labelledby="common-verbs-title">
+  <header class="word-lab-section-heading">
+    <div><p class="finder-kicker">High-frequency foundation</p><h2 id="common-verbs-title">Common verbs with more than one job.</h2></div>
+    <p>Start with the central idea, then use the surrounding words to select the exact sense. Open any verb in the full dictionary for definitions, natural examples, chunks, contrasts, and word history.</p>
+  </header>
+  <div class="common-verb-grid">
+    {commonVerbs.map((item, index) => <article>
+      <div class="common-verb-heading"><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.word}</h3><small>{item.entry.pronunciation}</small></div>
+      <p class="common-verb-idea">{item.coreIdea}</p>
+      <p>{item.learningNote}</p>
+      <p class="common-verb-forms"><b>Forms</b> {item.entry.forms.join(" · ")}</p>
+      <a href={`/dictionary/?q=${encodeURIComponent(item.word)}#term-${item.word}`}>Explore {item.entry.senses.length} meanings <span aria-hidden="true">→</span></a>
+    </article>)}
+  </div>
+</section>}
+
+{kind === "phrasal-verbs" && <section class="word-lab-section" aria-labelledby="phrasal-verbs-title">
+  <header class="word-lab-section-heading">
+    <div><p class="finder-kicker">Verb plus particle</p><h2 id="phrasal-verbs-title">Common phrasal verbs, organized by use.</h2></div>
+    <p>A phrasal verb is one vocabulary unit, but its object can follow different grammar. With a separable verb, a pronoun goes in the middle: <b>turn it down</b>, not <b>turn down it</b>.</p>
+  </header>
+  <aside class="phrasal-pattern-key" aria-label="Phrasal verb grammar key">
+    <div><b>Separable</b><span>put the meeting off · put it off</span></div>
+    <div><b>Inseparable</b><span>look into the problem · look into it</span></div>
+    <div><b>No object</b><span>The plane took off.</span></div>
+  </aside>
+  <div class="phrasal-verb-groups">
+    {phrasalVerbSections.map((group) => <section class="phrasal-verb-group" aria-labelledby={`phrasal-${group.id}`}>
+      <header><h3 id={`phrasal-${group.id}`}>{group.title}</h3><p>{group.explanation}</p></header>
+      <div class="phrasal-verb-list">
+        {group.items.map((item) => <article>
+          <div class="phrasal-verb-name"><h4>{item.phrase}</h4><span>{item.level}</span></div>
+          <p>{item.meaning}</p>
+          <p class="phrasal-verb-example">{item.example}</p>
+          <small>{item.pattern}</small>
+        </article>)}
+      </div>
+    </section>)}
+  </div>
+</section>}
+
+{kind === "word-families" && <section class="word-lab-section" aria-labelledby="word-families-title">
+  <header class="word-lab-section-heading">
+    <div><p class="finder-kicker">Form and sentence role</p><h2 id="word-families-title">Word families that build flexible vocabulary.</h2></div>
+    <p>A related form is not automatically interchangeable. Check its part of speech, position, preposition, and common partners before using it.</p>
+  </header>
+  <div class="word-family-list">
+    {wordFamilySections.map((family) => <details class="word-family" name="word-family">
+      <summary>
+        <div><h3>{family.root}</h3><p>{family.centralMeaning}</p></div>
+        <div class="word-family-members" aria-label={`${family.root} family forms`}>{family.members.map((member) => <span><b>{member.word}</b><small>{member.part}</small></span>)}</div>
+        <i aria-hidden="true"></i>
+      </summary>
+      <div class="word-family-body"><p>{family.explanation}</p><p><b>In context</b>{family.example}</p></div>
+    </details>)}
+  </div>
+</section>}
+
+<style is:inline>
+  .word-lab-subnav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}.word-lab-subnav a{min-height:44px;padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);font-size:11px;font-weight:600;text-decoration:none}.word-lab-subnav a:hover,.word-lab-subnav a[aria-current=page]{border-color:var(--accent);background:var(--accent-tint);color:var(--accent-deep)}.word-lab-subnav a:focus-visible,.common-verb-grid a:focus-visible,.word-family>summary:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px}.word-lab-section{margin-bottom:45px}.word-lab-section-heading{display:grid;grid-template-columns:minmax(220px,.7fr) 1fr;gap:24px;align-items:end;margin-bottom:18px;padding-bottom:16px;border-bottom:2px solid var(--ink)}.word-lab-section-heading h2{margin:0;font:500 clamp(30px,4vw,42px)/1 var(--display)}.word-lab-section-heading>p{margin:0;color:var(--ink-2);font-size:13px;line-height:1.6}.common-verb-grid,.phrasal-verb-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.common-verb-grid article,.phrasal-verb-group,.word-family{padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}.common-verb-heading{display:flex;align-items:baseline;gap:8px}.common-verb-heading h3,.phrasal-verb-group h3,.word-family h3{margin:0;font:500 25px/1 var(--display)}.common-verb-heading>span{color:var(--accent-deep);font:600 9px/1.3 var(--mono)}.common-verb-heading small{margin-left:auto;color:var(--muted);font:500 9px/1.3 var(--mono)}.common-verb-idea{color:var(--accent-deep);font-weight:600}.common-verb-grid p,.phrasal-verb-group p,.word-family p{color:var(--ink-2);font-size:11.5px;line-height:1.5}.common-verb-forms{padding-top:9px;border-top:1px solid var(--line)}.common-verb-grid a{color:var(--accent-deep);font:600 9px/1.4 var(--mono)}.phrasal-verb-group{padding:0;overflow:hidden}.phrasal-verb-group>header,.phrasal-verb-list article{padding:14px 16px;border-bottom:1px solid var(--line)}.phrasal-verb-list article:last-child{border-bottom:0}.phrasal-verb-name{display:flex;align-items:baseline;gap:7px}.phrasal-verb-name h4{margin:0}.phrasal-verb-name span,.phrasal-verb-list small{color:var(--accent-deep);font:600 8px/1.3 var(--mono);text-transform:uppercase}.phrasal-verb-example{color:var(--ink)!important}.phrasal-pattern-key{display:flex;gap:1px;margin-bottom:12px;border:1px solid var(--line);background:var(--line)}.phrasal-pattern-key div{flex:1;padding:10px;background:var(--paper)}.phrasal-pattern-key b{display:block;color:var(--accent-deep);font-size:10px}.phrasal-pattern-key span{color:var(--ink-2);font-size:10px}.word-family-list{display:grid;gap:8px}.word-family{padding:0}.word-family>summary{display:grid;grid-template-columns:150px 1fr 20px;gap:12px;align-items:center;padding:14px;cursor:pointer;list-style:none}.word-family>summary::-webkit-details-marker{display:none}.word-family-members{display:flex;gap:5px;flex-wrap:wrap}.word-family-members span{padding:5px 7px;border:1px solid var(--line);border-radius:6px}.word-family-members small{display:block;color:var(--muted);font:500 8px/1.2 var(--mono)}.word-family>summary>i::before{content:"+";color:var(--accent-deep)}.word-family[open]>summary>i::before{content:"−"}.word-family-body{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:14px;border-top:1px solid var(--line);background:var(--paper)}.word-family-body p{margin:0}.word-family-body b{display:block;color:var(--accent-deep)}@media(max-width:900px){.word-lab-section-heading{grid-template-columns:1fr}}@media(max-width:620px){.common-verb-grid,.phrasal-verb-groups{grid-template-columns:1fr}.phrasal-pattern-key{display:grid}.word-family>summary{grid-template-columns:1fr 20px}.word-family-members{grid-column:1/-1}.word-family-body{grid-template-columns:1fr}}
+</style>

@@ -2,6 +2,7 @@
 import homeStyles from "../styles/home.css?raw";
 import FontStyles from "../components/FontStyles.astro";
 import HomeInteractions from "../components/home/HomeInteractions.astro";
+import LevelCheckPreview from "../components/home/LevelCheckPreview.astro";
 import SocialMetadata from "../components/SocialMetadata.astro";
 import SkipLink from "../components/SkipLink.astro";
 import StructuredData from "../components/StructuredData.astro";
@@ -132,6 +133,7 @@ const structuredData = [
         <a class="hero-secondary-link" href="/assessments/" data-cursor>
           Not sure where to start? Open diagnostics <span aria-hidden="true">→</span>
         </a>
+        <LevelCheckPreview />
         <a class="hero-tertiary-link" href={bookingUrl} data-booking-link data-booking-position="hero" data-cursor>
           Learn with Thomas in a one-on-one lesson <span aria-hidden="true">→</span>
         </a>

@@ -1,0 +1,11 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import WordLabCollection from "../../components/dictionary/WordLabCollection.astro";
+import { commonVerbs } from "../../data/dictionary.mjs";
+import "../../styles/dictionary.css";
+---
+<SiteLayout title="Common English Verbs · Word Lab" description="Explore twelve high-frequency English verbs through their central ideas, changing forms, multiple meanings, grammar patterns, and useful chunks." heading="Common Verbs" lede="Build a flexible core vocabulary by understanding what each high-frequency verb does across several everyday meanings." current="dictionary">
+  <section class="tab-page word-lab-collection-page">
+    <WordLabCollection kind="common-verbs" commonVerbs={commonVerbs} />
+  </section>
+</SiteLayout>

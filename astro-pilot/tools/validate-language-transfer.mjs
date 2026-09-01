@@ -22,8 +22,8 @@ if (errors.length) {
 }
 
 console.log(sourceOnly
-  ? `Language-transfer source contracts passed: ${counts.languages} first-language guides, ${counts.patterns} validated patterns, ${counts.lessons} ready lesson destinations, tutor prompts, and no learner profiling or stored progress.`
-  : `Language-transfer guide validated: ${counts.languages} languages, ${counts.patterns} contrastive patterns, ${relationshipCount} targeted practice links, native disclosures, A0–B2 coverage, ItemList schema, and direct-refresh output.`);
+  ? `Language-transfer source contracts passed: ${counts.languages} first-language guides, ${counts.patterns} validated patterns, ${counts.helpfulWords} helpful cognates or loanwords, ${counts.wordTraps} false friends or translation traps, ${counts.lessons} ready lesson destinations, tutor prompts, and no learner profiling or stored progress.`
+  : `Language-transfer guide validated: ${counts.languages} languages, ${counts.patterns} contrastive patterns, ${counts.helpfulWords} helpful cognates or loanwords, ${counts.wordTraps} word traps, ${relationshipCount} targeted practice links, native disclosures, A0–B2 coverage, ItemList schema, and direct-refresh output.`);
 
 function validateSource() {
   const contracts = [
@@ -31,10 +31,14 @@ function validateSource() {
     ["src/data/language-transfer.mjs", /getLesson\(lessonId\)/],
     ["src/data/language-transfer.mjs", /getTransferPatternsForLesson/],
     ["src/data/language-transfer.mjs", /at least eight patterns are required/],
+    ["src/data/language-transfer.mjs", /at least five helpful cognates or loanwords are required/],
+    ["src/data/language-transfer.mjs", /at least five false friends or translation traps are required/],
     ["src/components/languages/LanguageTransferGuide.astro", /Test a pattern\. Do not label a learner\./],
     ["src/components/languages/LanguageTransferGuide.astro", /data-transfer-pattern/],
     ["src/components/languages/LanguageTransferGuide.astro", /transfer-tutor-move/],
     ["src/components/languages/LanguageTransferGuide.astro", /Practice the decision/],
+    ["src/components/languages/LanguageTransferGuide.astro", /data-lexical-bridge/],
+    ["src/components/languages/LanguageTransferGuide.astro", /Cognates, loanwords, and false friends/],
     ["src/components/tutor/TransferLens.astro", /getTransferPatternsForLesson/],
     ["src/components/tutor/TransferLens.astro", /data-transfer-lens-select/],
     ["src/components/tutor/TransferLens.astro", /Quick correction drill/],
@@ -56,6 +60,8 @@ function validateSource() {
   if (counts.languages < 7) errors.push(`only ${counts.languages} first-language guides are available; expected the seven priority languages`);
   if (counts.patterns < 59) errors.push(`only ${counts.patterns} contrastive patterns are available; expected at least 59`);
   if (counts.lessons < 25) errors.push(`only ${counts.lessons} ready lesson destinations are represented; expected at least 25`);
+  if (counts.helpfulWords < counts.languages * 5) errors.push(`only ${counts.helpfulWords} helpful cognates or loanwords are available; expected at least five per language`);
+  if (counts.wordTraps < counts.languages * 5) errors.push(`only ${counts.wordTraps} false friends or translation traps are available; expected at least five per language`);
   if (TRANSFER_CATEGORIES.length < 6) errors.push("transfer patterns do not cover enough decision types");
 
   const representedLevels = new Set(patterns.map(({ pattern }) => pattern.level));
@@ -66,6 +72,8 @@ function validateSource() {
     if (language.patterns.length < 8) errors.push(`${language.name}: fewer than eight transfer patterns`);
     if (!language.patterns.some((pattern) => pattern.level === "A0")) errors.push(`${language.name}: no foundation pattern`);
     if (!language.patterns.some((pattern) => ["B1", "B2"].includes(pattern.level))) errors.push(`${language.name}: no independent-user pattern`);
+    if (language.lexicalBridge.helpful.length < 5) errors.push(`${language.name}: fewer than five helpful cognates or loanwords`);
+    if (language.lexicalBridge.traps.length < 5) errors.push(`${language.name}: fewer than five false friends or translation traps`);
   }
   for (const name of ["Russian", "Ukrainian", "Czech", "Turkish", "Mandarin Chinese", "Spanish", "Brazilian Portuguese"]) {
     if (!transferLanguages.some((language) => language.name === name)) errors.push(`priority first-language guide is missing: ${name}`);
@@ -89,6 +97,9 @@ function validateOutput() {
   const patternIds = [...html.matchAll(/\bdata-transfer-pattern="([^"]+)"/g)].map((match) => match[1]);
   const details = [...html.matchAll(/<details\b[^>]*class="transfer-pattern"[^>]*>/g)].map((match) => match[0]);
   const practiceLinks = [...html.matchAll(/<a\b[^>]*href="(\/lessons\/[^"]+\/)"[^>]*>/g)].map((match) => match[1]);
+  const lexicalBridges = [...html.matchAll(/\bdata-lexical-bridge="([^"]+)"/g)].map((match) => match[1]);
+  const helpfulWords = [...html.matchAll(/class="helpful-word-list"/g)].length;
+  const wordTrapLists = [...html.matchAll(/class="word-trap-list"/g)].length;
 
   if (languageSections.length !== counts.languages) errors.push(`/languages/: expected ${counts.languages} language sections, found ${languageSections.length}`);
   if (new Set(languageSections).size !== counts.languages) errors.push("/languages/: language section identifiers are missing or duplicated");
@@ -97,6 +108,9 @@ function validateOutput() {
   if (details.length !== counts.patterns) errors.push(`/languages/: expected ${counts.patterns} native disclosures, found ${details.length}`);
   if (details.filter((detail) => /\sopen(?:\s|>)/.test(detail)).length !== counts.languages) errors.push("/languages/: each language should open one representative pattern by default");
   if (practiceLinks.length !== relationshipCount) errors.push(`/languages/: expected ${relationshipCount} practice links, found ${practiceLinks.length}`);
+  if (lexicalBridges.length !== counts.languages || new Set(lexicalBridges).size !== counts.languages) errors.push(`/languages/: expected one stable lexical bridge per language`);
+  if (helpfulWords !== counts.languages) errors.push(`/languages/: expected ${counts.languages} helpful-word lists, found ${helpfulWords}`);
+  if (wordTrapLists !== counts.languages) errors.push(`/languages/: expected ${counts.languages} word-trap lists, found ${wordTrapLists}`);
   if (!html.includes("Test a pattern. Do not label a learner.")) errors.push("/languages/: responsible-use framing is missing");
   if ((html.match(/class="transfer-tutor-move"/g) || []).length !== counts.patterns) errors.push("/languages/: every pattern must include a tutor move");
 

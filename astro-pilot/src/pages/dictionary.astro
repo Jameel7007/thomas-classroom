@@ -12,7 +12,7 @@ const dictionarySchema = {
   "@id": dictionaryId,
   url: canonical.href,
   name: "Thomas’s Classroom Word Lab",
-  description: "A curated multi-sense English word-clearing collection for adult learners from A0 to C1.",
+  description: "A curated English Word Lab with multi-sense definitions, common verbs, phrasal verbs, word families, chunks, and classroom word clearing for adult learners from A0 to C1.",
   inLanguage: "en",
   hasDefinedTerm: dictionaryEntries.map((entry) => ({
     "@type": "DefinedTerm",
@@ -23,10 +23,10 @@ const dictionarySchema = {
   })),
 };
 ---
-<SiteLayout title="English Word Lab · Thomas’s Classroom" description="Search a curated A0–C1 Word Lab with clear meanings, natural examples, useful chunks, close words, word origins, and in-session word clearing." heading="Word Lab" lede="Clear the meaning that is blocking the lesson, use it in your own sentence, and return to the conversation." current="dictionary" mainEntityId={dictionaryId} additionalStructuredData={[dictionarySchema]}>
+<SiteLayout title="English Word Lab · Thomas’s Classroom" description="Explore a curated A0–C1 Word Lab with common verbs, phrasal verbs, word families, clear meanings, natural examples, useful chunks, and in-session word clearing." heading="Word Lab" lede="Understand how useful words behave, build their families and chunks, then clear the exact meaning that is blocking the lesson." current="dictionary" mainEntityId={dictionaryId} additionalStructuredData={[dictionarySchema]}>
   <section class="tab-page">
     <p class="tab-overline">Built-in word clearing</p><h2 class="tab-title">One word. The right meaning.</h2>
-    <p class="tab-lede">High-frequency English words often carry several jobs. Search {counts.words} carefully chosen headwords, compare {counts.senses} learner-friendly meanings, and mark only the sense you can now explain and use.</p>
+    <p class="tab-lede">High-frequency English words often carry several jobs. Build a foundation with {counts.commonVerbs} common verbs, {counts.phrasalVerbs} phrasal verbs, and {counts.wordFamilies} word families, then search {counts.words} carefully chosen headwords and clear the exact sense you need.</p>
     <DictionaryExplorer entries={dictionaryEntries} counts={counts} />
   </section>
 </SiteLayout>

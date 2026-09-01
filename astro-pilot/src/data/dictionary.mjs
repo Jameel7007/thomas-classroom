@@ -1879,6 +1879,166 @@ const entries = [
   },
 ];
 
+export const PHRASAL_VERB_PATTERNS = Object.freeze([
+  "separable",
+  "inseparable",
+  "no object",
+  "separable or no object",
+]);
+
+const commonVerbGuide = [
+  { word: "be", coreIdea: "identity, state, and location", learningNote: "Be changes more than any other English verb. Learn am, is, are, was, and were with the subject, not as isolated forms." },
+  { word: "have", coreIdea: "possession, experience, and connection", learningNote: "Have often works inside a complete chunk: have lunch, have a meeting, have a problem, and have finished." },
+  { word: "get", coreIdea: "receiving, changing, arriving, or understanding", learningNote: "Get is broad and conversational. The words after it usually reveal the exact meaning: get ready, get home, get an email, or get the joke." },
+  { word: "make", coreIdea: "creating a result", learningNote: "Make focuses on a result or change: make a plan, make a decision, make someone laugh, and make the room quieter." },
+  { word: "do", coreIdea: "performing an activity or carrying grammar", learningNote: "Do can be a main verb in do the work and a helper in Do you work? Keep those two jobs separate." },
+  { word: "take", coreIdea: "moving, choosing, accepting, or requiring", learningNote: "Learn take through useful combinations: take a bus, take a break, take responsibility, and it takes time." },
+  { word: "go", coreIdea: "movement away or change into a state", learningNote: "Go often appears without an object. Notice the complete route or pattern: go home, go to work, go by train, and go wrong." },
+  { word: "come", coreIdea: "movement toward a person, place, or viewpoint", learningNote: "The speaker’s viewpoint matters. Come moves toward here or a shared destination; go usually moves away from here." },
+  { word: "put", coreIdea: "placing something in a position or form", learningNote: "Put normally needs both the thing and its destination: put the file in the folder. Many abstract meanings need a particle." },
+  { word: "keep", coreIdea: "continuing, retaining, or preventing change", learningNote: "The next form changes the pattern: keep the receipt, keep working, keep someone informed, and keep out." },
+  { word: "work", coreIdea: "doing a job, making an effort, or functioning", learningNote: "Work is often uncountable as a noun. A job is one position; work is the activity or responsibility." },
+  { word: "mean", coreIdea: "signifying, intending, or having importance", learningNote: "Compare What does it mean?, I meant to call, and This means a lot to me. The grammar after mean signals the sense." },
+];
+
+const phrasalVerbGroups = [
+  {
+    id: "daily-routines",
+    title: "Daily life and movement",
+    explanation: "These combinations describe ordinary movement and routines. Learn the particle with the verb because it changes both meaning and grammar.",
+    items: [
+      { phrase: "get up", level: "A1", pattern: "no object", meaning: "leave bed and begin the day", example: "I usually get up at 6:30." },
+      { phrase: "go out", level: "A1", pattern: "no object", meaning: "leave home for a social activity", example: "We went out for dinner on Friday." },
+      { phrase: "come back", level: "A1", pattern: "no object", meaning: "return toward this place or situation", example: "What time will you come back?" },
+      { phrase: "put on", level: "A1", pattern: "separable", meaning: "place clothing, glasses, or a device on the body", example: "Put your jacket on before you leave." },
+      { phrase: "take off", level: "A1", pattern: "separable or no object", meaning: "remove clothing, or leave the ground in an aircraft", example: "You can take your coat off here." },
+    ],
+  },
+  {
+    id: "work-and-tasks",
+    title: "Work and tasks",
+    explanation: "These verbs organize action at work. The object position matters, especially when the object is a short pronoun such as it or them.",
+    items: [
+      { phrase: "set up", level: "A2", pattern: "separable", meaning: "prepare, arrange, or establish something", example: "We set up the meeting for Thursday." },
+      { phrase: "carry out", level: "B1", pattern: "separable", meaning: "perform and complete a planned action", example: "The team carried out three safety checks." },
+      { phrase: "look into", level: "B1", pattern: "inseparable", meaning: "investigate a question or problem", example: "I’ll look into the billing issue today." },
+      { phrase: "follow up", level: "B1", pattern: "no object", meaning: "take another action after an earlier contact or task", example: "I’ll follow up with the client tomorrow." },
+      { phrase: "put off", level: "B1", pattern: "separable", meaning: "delay an event or action", example: "They put the launch off until September." },
+    ],
+  },
+  {
+    id: "communication",
+    title: "Communication and understanding",
+    explanation: "The base verb may look familiar, but the complete combination carries a more precise communicative job.",
+    items: [
+      { phrase: "find out", level: "A2", pattern: "inseparable", meaning: "discover information", example: "I need to find out when the office closes." },
+      { phrase: "point out", level: "B1", pattern: "separable", meaning: "direct attention to an important fact", example: "She pointed out a mistake in the schedule." },
+      { phrase: "bring up", level: "B1", pattern: "separable", meaning: "introduce a topic into a conversation", example: "He brought the budget up near the end." },
+      { phrase: "spell out", level: "B2", pattern: "separable", meaning: "explain something explicitly and in detail", example: "The contract spells out each person’s responsibilities." },
+      { phrase: "get across", level: "B2", pattern: "separable", meaning: "communicate an idea successfully", example: "The diagram gets the main idea across quickly." },
+    ],
+  },
+  {
+    id: "problems-and-change",
+    title: "Problems, decisions, and change",
+    explanation: "These combinations are common when people discuss plans and problems. Compare the whole situation, not only the base verb.",
+    items: [
+      { phrase: "work out", level: "A2", pattern: "separable or no object", meaning: "find a solution, calculate, or end successfully", example: "We worked out a simpler solution." },
+      { phrase: "deal with", level: "B1", pattern: "inseparable", meaning: "take action about a person, task, or problem", example: "I’ll deal with the urgent requests first." },
+      { phrase: "turn down", level: "B1", pattern: "separable", meaning: "refuse an offer or reduce a level", example: "She turned the job offer down." },
+      { phrase: "end up", level: "B1", pattern: "no object", meaning: "reach a final, often unexpected, situation", example: "We ended up taking a later train." },
+      { phrase: "come up with", level: "B2", pattern: "inseparable", meaning: "produce an idea, answer, or plan", example: "The group came up with two practical options." },
+    ],
+  },
+];
+
+const wordFamilies = [
+  {
+    root: "act",
+    centralMeaning: "doing or causing something",
+    members: [{ word: "act", part: "verb / noun" }, { word: "action", part: "noun" }, { word: "active", part: "adjective" }, { word: "actively", part: "adverb" }, { word: "activity", part: "noun" }],
+    explanation: "Action usually names a specific act or process. Activity often names something people do over time. Active describes participation or operation.",
+    example: "The team took action and actively tested the new system.",
+  },
+  {
+    root: "decide",
+    centralMeaning: "choosing after considering options",
+    members: [{ word: "decide", part: "verb" }, { word: "decision", part: "noun" }, { word: "decisive", part: "adjective" }, { word: "decisively", part: "adverb" }],
+    explanation: "Decide is the action; make a decision names its result. Decisive describes a person, action, or result that settles the question clearly.",
+    example: "We decided quickly because one piece of evidence was decisive.",
+  },
+  {
+    root: "apply",
+    centralMeaning: "requesting formally or putting something into use",
+    members: [{ word: "apply", part: "verb" }, { word: "application", part: "noun" }, { word: "applicant", part: "noun" }, { word: "applicable", part: "adjective" }],
+    explanation: "An applicant submits an application. Applicable means relevant or able to be used in a particular situation.",
+    example: "Each applicant must apply online and include all applicable documents.",
+  },
+  {
+    root: "communicate",
+    centralMeaning: "sharing meaning with another person",
+    members: [{ word: "communicate", part: "verb" }, { word: "communication", part: "noun" }, { word: "communicative", part: "adjective" }, { word: "communicator", part: "noun" }],
+    explanation: "Communication names the process or message. Communicative describes someone willing and able to communicate, or an activity built around real meaning.",
+    example: "Clear communication helped the new manager communicate the change.",
+  },
+  {
+    root: "employ",
+    centralMeaning: "giving work to someone or making use of something",
+    members: [{ word: "employ", part: "verb" }, { word: "employment", part: "noun" }, { word: "employer", part: "noun" }, { word: "employee", part: "noun" }, { word: "unemployed", part: "adjective" }],
+    explanation: "The employer provides the job; the employee does it. Employment is the condition or system of paid work.",
+    example: "The employer plans to employ five new employees this year.",
+  },
+  {
+    root: "educate",
+    centralMeaning: "helping someone develop knowledge or skill",
+    members: [{ word: "educate", part: "verb" }, { word: "education", part: "noun" }, { word: "educational", part: "adjective" }, { word: "educator", part: "noun" }],
+    explanation: "Education is the process or system. Educational describes something designed to teach or connected with education.",
+    example: "The educator created an educational program for working adults.",
+  },
+  {
+    root: "inform",
+    centralMeaning: "giving or shaping knowledge",
+    members: [{ word: "inform", part: "verb" }, { word: "information", part: "noun" }, { word: "informative", part: "adjective" }, { word: "informed", part: "adjective" }],
+    explanation: "Information is uncountable in English. Informative means useful because it gives information; informed means having enough knowledge.",
+    example: "The guide informed our decision and helped us make an informed choice.",
+  },
+  {
+    root: "succeed",
+    centralMeaning: "achieving the intended result",
+    members: [{ word: "succeed", part: "verb" }, { word: "success", part: "noun" }, { word: "successful", part: "adjective" }, { word: "successfully", part: "adverb" }],
+    explanation: "Succeed is normally followed by in plus an -ing form. Successful describes the person, attempt, or result.",
+    example: "She succeeded in building a successful consulting business.",
+  },
+  {
+    root: "create",
+    centralMeaning: "bringing a new result into existence",
+    members: [{ word: "create", part: "verb" }, { word: "creation", part: "noun" }, { word: "creative", part: "adjective" }, { word: "creatively", part: "adverb" }, { word: "creator", part: "noun" }],
+    explanation: "Creation is the process or result. Creative describes original and useful thinking, while creator names the person or organization responsible.",
+    example: "The creator found a creative way to create a clearer explanation.",
+  },
+  {
+    root: "respond",
+    centralMeaning: "answering or reacting",
+    members: [{ word: "respond", part: "verb" }, { word: "response", part: "noun" }, { word: "responsive", part: "adjective" }, { word: "responsiveness", part: "noun" }],
+    explanation: "Respond is followed by to. A response is the answer or reaction; responsive describes someone or something that reacts quickly and appropriately.",
+    example: "The support team responded with a clear and helpful response.",
+  },
+  {
+    root: "describe",
+    centralMeaning: "showing what someone or something is like",
+    members: [{ word: "describe", part: "verb" }, { word: "description", part: "noun" }, { word: "descriptive", part: "adjective" }],
+    explanation: "Describe takes a direct object: describe the problem. Description is the noun; descriptive language supplies useful detail.",
+    example: "Please describe the role and give a short description of a typical day.",
+  },
+  {
+    root: "improve",
+    centralMeaning: "becoming or making something better",
+    members: [{ word: "improve", part: "verb" }, { word: "improvement", part: "noun" }, { word: "improved", part: "adjective" }],
+    explanation: "Improve can be transitive or intransitive: improve the process or the process improved. Improvement names the positive change.",
+    example: "The improved schedule was a clear improvement for the whole team.",
+  },
+];
+
 export function defineDictionary(value) {
   if (!Array.isArray(value) || value.length < 1) throw new Error("Dictionary must contain at least one entry.");
   const words = new Set();
@@ -1913,12 +2073,80 @@ export function defineDictionary(value) {
 
 export const dictionaryEntries = defineDictionary(entries);
 
+export const commonVerbs = defineCommonVerbGuide(commonVerbGuide, dictionaryEntries);
+export const phrasalVerbSections = definePhrasalVerbGroups(phrasalVerbGroups);
+export const wordFamilySections = defineWordFamilies(wordFamilies);
+
 export function dictionaryCounts() {
   return Object.freeze({
     words: dictionaryEntries.length,
     senses: dictionaryEntries.reduce((total, entry) => total + entry.senses.length, 0),
     chunks: dictionaryEntries.reduce((total, entry) => total + entry.senses.reduce((sum, sense) => sum + sense.chunks.length, 0), 0),
+    commonVerbs: commonVerbs.length,
+    phrasalVerbs: phrasalVerbSections.reduce((total, group) => total + group.items.length, 0),
+    wordFamilies: wordFamilySections.length,
   });
+}
+
+function defineCommonVerbGuide(value, dictionary) {
+  const byWord = new Map(dictionary.map((entry) => [entry.word, entry]));
+  const seen = new Set();
+  const resolved = value.map((item) => {
+    requireText(item.word, "commonVerb.word");
+    requireText(item.coreIdea, `${item.word}.coreIdea`);
+    requireText(item.learningNote, `${item.word}.learningNote`);
+    if (seen.has(item.word)) throw new Error(`Duplicate common verb: ${item.word}`);
+    seen.add(item.word);
+    const entry = byWord.get(item.word);
+    if (!entry) throw new Error(`Common verb ${item.word} is missing from the dictionary.`);
+    if (!entry.senses.some((sense) => sense.partOfSpeech === "verb")) throw new Error(`Common verb ${item.word} has no verb sense.`);
+    return Object.freeze({ ...item, entry });
+  });
+  if (resolved.length < 10) throw new Error("Common verb guide requires at least ten verbs.");
+  return Object.freeze(resolved);
+}
+
+function definePhrasalVerbGroups(value) {
+  const ids = new Set();
+  const phrases = new Set();
+  const resolved = value.map((group) => {
+    requireText(group.id, "phrasalVerbGroup.id");
+    requireText(group.title, `${group.id}.title`);
+    requireText(group.explanation, `${group.id}.explanation`);
+    if (ids.has(group.id)) throw new Error(`Duplicate phrasal verb group: ${group.id}`);
+    ids.add(group.id);
+    if (!Array.isArray(group.items) || group.items.length < 4) throw new Error(`${group.id} needs at least four phrasal verbs.`);
+    const items = group.items.map((item) => {
+      requireText(item.phrase, `${group.id}.phrase`);
+      requireLevel(item.level, `${item.phrase}.level`);
+      requireText(item.meaning, `${item.phrase}.meaning`);
+      requireText(item.example, `${item.phrase}.example`);
+      if (!PHRASAL_VERB_PATTERNS.includes(item.pattern)) throw new Error(`${item.phrase}: invalid phrasal verb pattern.`);
+      if (phrases.has(item.phrase)) throw new Error(`Duplicate phrasal verb: ${item.phrase}`);
+      phrases.add(item.phrase);
+      return Object.freeze({ ...item });
+    });
+    return Object.freeze({ ...group, items: Object.freeze(items) });
+  });
+  return Object.freeze(resolved);
+}
+
+function defineWordFamilies(value) {
+  const roots = new Set();
+  const resolved = value.map((family) => {
+    for (const field of ["root", "centralMeaning", "explanation", "example"]) requireText(family[field], `wordFamily.${field}`);
+    if (roots.has(family.root)) throw new Error(`Duplicate word family: ${family.root}`);
+    roots.add(family.root);
+    if (!Array.isArray(family.members) || family.members.length < 3) throw new Error(`${family.root}: at least three family members are required.`);
+    const members = family.members.map((member) => {
+      requireText(member.word, `${family.root}.member.word`);
+      requireText(member.part, `${family.root}/${member.word}.part`);
+      return Object.freeze({ ...member });
+    });
+    return Object.freeze({ ...family, members: Object.freeze(members) });
+  });
+  if (resolved.length < 10) throw new Error("Word Lab requires at least ten word families.");
+  return Object.freeze(resolved);
 }
 
 function requireText(value, field) {
