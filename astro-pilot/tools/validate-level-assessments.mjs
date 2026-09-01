@@ -6,6 +6,8 @@ import { LESSON_LEVELS } from "../src/data/lesson-schema.mjs";
 import { getLevelAssessmentPath } from "../src/data/assessment-routes.mjs";
 import { productionStatus } from "../src/lib/assessment-readiness.mjs";
 
+await import("./validate-quick-level-check.mjs");
+
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const voiceScripts = JSON.parse(await readFile(path.join(root, "private/voice-scripts.json"), "utf8"));
 const assessmentScript = await readFile(path.join(root, "src/scripts/assessment.js"), "utf8");

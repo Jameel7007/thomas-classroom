@@ -6231,8 +6231,8 @@
       "source": "src/content/assessments/quick-level-check.astro",
       "route": "/assessments/quick-level-check/",
       "slug": "quick-level-check",
-      "title": "10-Minute English Diagnostic",
-      "description": "A short check that gives a rough placement from Pre-A1 to B2. It is not a full CEFR exam. Complete the language questions, then use the speaking sample to confirm the result.",
+      "title": "10-Minute English Starting-Point Check",
+      "description": "A short teacher-guided screen that suggests an A0–B2 curriculum starting point from level-sensitive language-use evidence and an adaptive speaking confirmation.",
       "engine": "quick-check",
       "bodyClass": "",
       "features": [
@@ -6241,11 +6241,12 @@
         "QuickCheckEngine",
         "ProgressIndicator",
         "FeedbackPanel",
-        "AudioControls"
+        "SpeakingRubric"
       ],
-      "contentTextHash": "6606dd9ffac05a4f6aaccc748dba0bd3361b3a827a0bf7cb4af30bad1bdc1946",
+      "contentTextHash": "6930f2ef959cb8dd8ed6d1039e3da5e7f15c3f530c3335f2ef595d701d3b8250",
       "interactionCounts": {
         "data-quick-check": 1,
+        "data-quick-check-config": 1,
         "data-part-label": 1,
         "data-progress-text": 1,
         "data-progress-bar": 1,
@@ -6258,6 +6259,8 @@
         "data-result-level": 1,
         "data-result-score": 1,
         "data-result-explanation": 1,
+        "data-result-profile": 1,
+        "data-speaking-task": 5,
         "data-speaking-level": 1,
         "data-speaking-outcome": 1,
         "data-answer-review": 1,

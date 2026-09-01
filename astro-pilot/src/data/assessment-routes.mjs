@@ -17,7 +17,7 @@ const records = [
   },
   {
     slug: "quick-level-check",
-    title: "10-Minute English Diagnostic",
+    title: "10-Minute English Starting-Point Check",
     route: "/assessments/quick-level-check/",
     kind: "screening",
     levels: ["A0", "A1", "A2", "B1", "B2"],

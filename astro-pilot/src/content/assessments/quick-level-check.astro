@@ -1,12 +1,14 @@
 ---
 import QuickCheckPage from "../../components/assessment/QuickCheckPage.astro";
+import { quickCheckData, quickCheckSpeakingTasks } from "../../data/quick-level-check.mjs";
+const quickCheckJson = JSON.stringify(quickCheckData).replace(/</g, "\\u003c");
 export const page = {
   "original": "outputs/assessments/quick-level-check.html",
   "source": "src/content/assessments/quick-level-check.astro",
   "route": "/assessments/quick-level-check/",
   "slug": "quick-level-check",
-  "title": "10-Minute English Diagnostic",
-  "description": "A short check that gives a rough placement from Pre-A1 to B2. It is not a full CEFR exam. Complete the language questions, then use the speaking sample to confirm the result.",
+  "title": "10-Minute English Starting-Point Check",
+  "description": "A short teacher-guided screen that suggests an A0–B2 curriculum starting point from level-sensitive language-use evidence and an adaptive speaking confirmation.",
   "engine": "quick-check",
   "bodyClass": "",
   "features": [
@@ -15,11 +17,12 @@ export const page = {
     "QuickCheckEngine",
     "ProgressIndicator",
     "FeedbackPanel",
-    "AudioControls"
+    "SpeakingRubric"
   ],
-  "contentTextHash": "6606dd9ffac05a4f6aaccc748dba0bd3361b3a827a0bf7cb4af30bad1bdc1946",
+  "contentTextHash": "6930f2ef959cb8dd8ed6d1039e3da5e7f15c3f530c3335f2ef595d701d3b8250",
   "interactionCounts": {
     "data-quick-check": 1,
+    "data-quick-check-config": 1,
     "data-part-label": 1,
     "data-progress-text": 1,
     "data-progress-bar": 1,
@@ -32,6 +35,8 @@ export const page = {
     "data-result-level": 1,
     "data-result-score": 1,
     "data-result-explanation": 1,
+    "data-result-profile": 1,
+    "data-speaking-task": 5,
     "data-speaking-level": 1,
     "data-speaking-outcome": 1,
     "data-answer-review": 1,
@@ -44,18 +49,19 @@ export const page = {
 <QuickCheckPage page={page}>
 <main class="quick-wrap">
   <header class="quick-header">
-    <a class="back-link" href="/curriculum/">Back to curriculum</a>
-    <p class="overline">Quick Level Check</p>
-    <h1>10-Minute English Diagnostic</h1>
-    <p class="lede">A short check that gives a rough placement from Pre-A1 to B2. It is not a full CEFR exam. Complete the language questions, then use the speaking sample to confirm the result.</p>
+    <a class="back-link" href="/assessments/">Back to diagnostics</a>
+    <p class="overline">Quick starting-point screen</p>
+    <h1>10-Minute English Starting-Point Check</h1>
+    <p class="lede">Use ten level-sensitive language questions for an initial signal, then confirm it with the suggested speaking prompt. This chooses a sensible curriculum starting point; it does not certify a CEFR level.</p>
     <div class="quick-facts" aria-label="Assessment information">
       <span><b>8 minutes</b> multiple choice</span>
-      <span><b>2 minutes</b> speaking</span>
+      <span><b>2 minutes</b> adaptive speaking</span>
       <span><b>10</b> questions</span>
     </div>
   </header>
 
   <section class="quick-assessment" data-quick-check>
+    <script is:inline type="application/json" data-quick-check-config set:html={quickCheckJson}></script>
     <div class="progress-block">
       <div class="progress-copy">
         <span data-part-label>Part 1 · Multiple Choice</span>
@@ -75,43 +81,59 @@ export const page = {
     <section class="result-view" data-result-view hidden>
       <div class="result-heading">
         <div>
-          <p class="overline">Multiple-choice result</p>
+      <p class="overline">Multiple-choice result</p>
           <h2 data-result-level>Not estimated</h2>
         </div>
         <div class="result-score"><span>Total score</span><b data-result-score>0 / 10</b></div>
       </div>
       <p class="result-explanation" data-result-explanation></p>
-      <p class="result-warning">This is a quick estimate. Speaking ability should confirm the final level.</p>
+      <div class="quick-facts result-profile" data-result-profile aria-label="Correct answers by evidence band"></div>
+      <p class="result-warning">This is a starting-point screen, not a CEFR certificate or final placement. A B2 checkpoint still requires sustained speaking evidence or the full placement diagnostic.</p>
 
       <section class="speaking-section">
         <div class="section-heading">
           <div>
-            <p class="overline">Part 2 · Speaking Sample</p>
-            <h2>Two-minute confirmation</h2>
+            <p class="overline">Part 2 · Adaptive Speaking Sample</p>
+            <h2>Confirm the starting point</h2>
           </div>
           <span>Teacher scored</span>
         </div>
-        <article class="speaking-card">
-          <p class="task-number">Speaking Task 1</p>
-          <p>Tell me about your normal day. What do you do in the morning, afternoon, and evening?</p>
-        </article>
-        <article class="speaking-card">
-          <p class="task-number">Speaking Task 2</p>
-          <p>Tell me about something you did last weekend. Give details.</p>
-        </article>
-        <p class="teacher-note"><b>Teacher note:</b> Use the speaking sample to confirm or adjust the level. Multiple choice alone is not enough.</p>
+        <p class="teacher-note"><b>Teacher move:</b> Use the prompt selected by the language-use result. Ask at least one follow-up and score the sustained response, not one perfect sentence.</p>
+
+        {quickCheckSpeakingTasks.map((task) => (
+          <article class="speaking-card" data-speaking-task={task.id} hidden>
+            <p class="task-number">{task.label}</p>
+            <p class="speaking-prompt"><b>{task.prompt}</b></p>
+            <div class="speaking-follow-ups">
+              <p class="task-number">Follow up</p>
+              <ul>{task.followUps.map((followUp) => <li>{followUp}</li>)}</ul>
+            </div>
+          </article>
+        ))}
+
+        <details class="answer-review speaking-rubric">
+          <summary>Open the speaking rubric</summary>
+          <p class="teacher-note">Listen across task completion, language range, accuracy, flow, and response to follow-up questions.</p>
+          <div class="review-list">
+            <article class="review-item"><p>A0 / Pre-A1</p><span>Uses familiar words or memorized chunks and needs substantial support to answer.</span></article>
+            <article class="review-item"><p>A1</p><span>Builds simple personal sentences with frequent pauses and can answer predictable follow-ups.</span></article>
+            <article class="review-item"><p>A2</p><span>Gives a short connected account with basic linking; errors are frequent but meaning remains clear.</span></article>
+            <article class="review-item"><p>B1</p><span>Sustains an explanation with reasons and details, responds to follow-ups, and can repair some errors.</span></article>
+            <article class="review-item"><p>B2 evidence</p><span>Develops and supports a clear position, handles a counterpoint, and interacts flexibly; errors rarely interfere.</span></article>
+          </div>
+        </details>
 
         <div class="speaking-score">
           <label for="speaking-level">Speaking level observed</label>
           <select id="speaking-level" data-speaking-level>
             <option value="">Not scored yet</option>
-            <option value="Pre-A1">Pre-A1</option>
-            <option value="A1">A1</option>
-            <option value="A2">A2</option>
-            <option value="B1">B1</option>
-            <option value="B2 range">B2 range</option>
+            <option value="a0">A0 / Pre-A1</option>
+            <option value="a1">A1</option>
+            <option value="a2">A2</option>
+            <option value="b1">B1</option>
+            <option value="b2">B2 evidence</option>
           </select>
-          <p data-speaking-outcome>Choose a level after listening to the student. The multiple-choice estimate remains visible for comparison.</p>
+          <p data-speaking-outcome>Choose the strongest level sustained across the complete response. The language-use evidence remains visible for comparison.</p>
         </div>
       </section>
 

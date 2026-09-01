@@ -6,6 +6,9 @@ import { getLessonNavigation, readyLessons } from "../src/data/lesson-catalog.mj
 import { readyAssessmentRoutes as assessmentRouteInventory } from "../src/data/assessment-routes.mjs";
 import { siteSettings } from "../src/data/site-settings.mjs";
 
+process.env.QUICK_CHECK_VALIDATE_OUTPUT = "true";
+await import("./validate-quick-level-check.mjs");
+
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
 const root = fileURLToPath(new URL("../dist", import.meta.url));
 const configuredAudioPaths = new Set(Object.values(

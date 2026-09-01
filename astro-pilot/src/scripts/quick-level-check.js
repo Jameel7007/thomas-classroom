@@ -1,114 +1,13 @@
+import { QUICK_CHECK_BANDS, estimateQuickCheckBand, scoreQuickCheck } from "../lib/quick-check-scoring.mjs";
+
 (function(){
-  const QUESTIONS = [
-    {
-      level: "Pre-A1 / A1",
-      prompt: "You meet a new person. What do you ask?",
-      choices: ["What is your name?", "What is her name?", "What is its name?"],
-      answer: 0
-    },
-    {
-      level: "A1",
-      prompt: "Choose the correct sentence.",
-      choices: ["I from Mexico.", "I am from Mexico.", "I be from Mexico."],
-      answer: 1
-    },
-    {
-      level: "A1",
-      prompt: "Choose the correct sentence.",
-      choices: ["She work in a hotel.", "She works in a hotel.", "She working in a hotel."],
-      answer: 1
-    },
-    {
-      level: "A2",
-      prompt: "Yesterday, I ____ to the store.",
-      choices: ["go", "went", "going"],
-      answer: 1
-    },
-    {
-      level: "A2",
-      prompt: "I usually drink coffee in the morning, but today I ____ tea.",
-      choices: ["drink", "am drinking", "drank"],
-      answer: 1
-    },
-    {
-      level: "A2",
-      prompt: "Why is the person writing?",
-      passage: "Hi Ana, I can't come to class today because I'm sick. Can you send me the homework after class?",
-      choices: ["To ask for help", "To invite Ana to class", "To cancel the homework"],
-      answer: 0
-    },
-    {
-      level: "B1",
-      prompt: "I have lived here ____ 2020.",
-      choices: ["for", "since", "during"],
-      answer: 1
-    },
-    {
-      level: "B1",
-      prompt: "Choose the correct sentence.",
-      choices: [
-        "I want to improve my English because I need it for work.",
-        "I want improve my English because I need for work.",
-        "I want improving my English because I need it work."
-      ],
-      answer: 0
-    },
-    {
-      level: "B1 / B2",
-      prompt: "Choose the best sentence.",
-      choices: [
-        "Although it was raining, we decided to go out.",
-        "Because it was raining, but we decided to go out.",
-        "Although it was raining, but we decided to go out."
-      ],
-      answer: 0
-    },
-    {
-      level: "B2",
-      prompt: "Choose the most natural sentence.",
-      choices: [
-        "If I would have more time, I will study every day.",
-        "If I had more time, I would study every day.",
-        "If I have more time, I would studied every day."
-      ],
-      answer: 1
-    }
-  ];
-
-  const RESULT_BANDS = [
-    {
-      min: 0,
-      max: 2,
-      level: "Pre-A1",
-      explanation: "The student recognizes some basic English but may need help forming full sentences."
-    },
-    {
-      min: 3,
-      max: 4,
-      level: "A1",
-      explanation: "The student can understand and produce very simple personal English, but grammar is still limited."
-    },
-    {
-      min: 5,
-      max: 6,
-      level: "A2",
-      explanation: "The student can handle daily topics and simple past/present sentences, but longer speaking may break down."
-    },
-    {
-      min: 7,
-      max: 8,
-      level: "B1",
-      explanation: "The student can explain daily life, past events, reasons, and plans with some mistakes."
-    },
-    {
-      min: 9,
-      max: 10,
-      level: "B2 range",
-      explanation: "The student can handle more complex grammar and meaning, but speaking should confirm fluency and accuracy."
-    }
-  ];
-
   function init(root){
+    const configNode = root.querySelector("[data-quick-check-config]");
+    const config = JSON.parse(configNode?.textContent || "{}");
+    const questions = config.questions || [];
+    const results = config.results || {};
+    if (!questions.length) return;
+
     const stage = root.querySelector("[data-question-stage]");
     const actions = root.querySelector("[data-question-actions]");
     const previous = root.querySelector("[data-previous]");
@@ -120,13 +19,15 @@
     const resultLevel = root.querySelector("[data-result-level]");
     const resultScore = root.querySelector("[data-result-score]");
     const resultExplanation = root.querySelector("[data-result-explanation]");
+    const resultProfile = root.querySelector("[data-result-profile]");
     const reviewList = root.querySelector("[data-review-list]");
     const reset = root.querySelector("[data-reset]");
     const speakingLevel = root.querySelector("[data-speaking-level]");
     const speakingOutcome = root.querySelector("[data-speaking-outcome]");
+    const speakingTasks = Array.from(root.querySelectorAll("[data-speaking-task]"));
     let current = 0;
-    let answers = Array(QUESTIONS.length).fill(null);
-    let multipleChoiceLevel = "";
+    let answers = Array(questions.length).fill(null);
+    let multipleChoiceBand = "";
 
     function selectChoice(button, moveFocus){
       answers[current] = Number(button.dataset.choice);
@@ -141,19 +42,19 @@
     }
 
     function renderQuestion(focusHeading){
-      const question = QUESTIONS[current];
+      const question = questions[current];
       const letters = ["A", "B", "C"];
       const questionId = "quick-question-" + (current + 1);
       stage.innerHTML =
         '<article class="question-card">' +
-          '<div class="question-meta"><span>Question ' + (current + 1) + '</span><span class="level-tag">' + question.level + '</span></div>' +
+          '<div class="question-meta"><span>Question ' + (current + 1) + '</span></div>' +
           (question.passage ? '<div class="reading-message"><p>' + question.passage + '</p></div>' : '') +
           '<h2 id="' + questionId + '" tabindex="-1">' + question.prompt + '</h2>' +
           '<div class="choice-list" role="radiogroup" aria-labelledby="' + questionId + '">' +
             question.choices.map(function(choice, index){
               const selected = answers[current] === index;
               const tabbable = selected || (answers[current] === null && index === 0);
-              return '<button class="answer-choice' + (answers[current] === index ? ' is-selected' : '') +
+              return '<button class="answer-choice' + (selected ? ' is-selected' : '') +
                 '" type="button" role="radio" aria-checked="' + String(selected) + '" tabindex="' + (tabbable ? '0' : '-1') +
                 '" data-choice="' + index + '"><span class="choice-letter">' +
                 letters[index] + '.</span>' + choice + '</button>';
@@ -179,43 +80,58 @@
         });
       });
 
-      progressText.textContent = "Question " + (current + 1) + " of " + QUESTIONS.length;
-      progressBar.style.width = ((current + 1) / QUESTIONS.length * 100) + "%";
+      progressText.textContent = "Question " + (current + 1) + " of " + questions.length;
+      progressBar.style.width = ((current + 1) / questions.length * 100) + "%";
       previous.disabled = current === 0;
-      next.textContent = current === QUESTIONS.length - 1 ? "See my result" : "Next question";
+      next.textContent = current === questions.length - 1 ? "See my result" : "Next question";
       reminder.textContent = "";
       if (focusHeading) stage.querySelector("h2").focus();
     }
 
     function renderReview(){
-      reviewList.innerHTML = QUESTIONS.map(function(question, index){
+      reviewList.innerHTML = questions.map(function(question, index){
         const selected = answers[index];
         const correct = selected === question.answer;
         const selectedText = selected === null ? "No answer" : question.choices[selected];
         return '<article class="review-item ' + (correct ? 'is-correct' : 'is-wrong') + '">' +
+          '<span>' + question.band.toUpperCase() + ' evidence</span>' +
           '<p>' + (index + 1) + '. ' + question.prompt + '</p>' +
+          (question.passage ? '<span>Context: ' + question.passage + '</span>' : '') +
           '<span>Your answer: <b>' + selectedText + '</b></span>' +
           (!correct ? '<span>Correct answer: <b>' + question.choices[question.answer] + '</b></span>' : '') +
+          '<span><b>Why:</b> ' + question.why + '</span>' +
         '</article>';
       }).join("");
     }
 
+    function renderEvidenceProfile(evidence){
+      resultProfile.innerHTML = QUICK_CHECK_BANDS.map(function(band){
+        return '<span><b>' + band.toUpperCase() + '</b> ' + evidence[band].correct + ' / ' + evidence[band].total + '</span>';
+      }).join("");
+    }
+
+    function showSpeakingTask(band){
+      speakingTasks.forEach(function(task){
+        task.hidden = task.dataset.speakingTask !== band;
+      });
+    }
+
     function showResult(){
-      const score = QUESTIONS.reduce(function(total, question, index){
-        return total + (answers[index] === question.answer ? 1 : 0);
-      }, 0);
-      const band = RESULT_BANDS.find(function(item){ return score >= item.min && score <= item.max; });
-      multipleChoiceLevel = band.level;
-      resultLevel.textContent = band.level;
-      resultScore.textContent = score + " / " + QUESTIONS.length;
-      resultExplanation.textContent = band.explanation;
+      const summary = scoreQuickCheck(questions, answers);
+      multipleChoiceBand = estimateQuickCheckBand(summary);
+      const result = results[multipleChoiceBand];
+      resultLevel.textContent = result.level;
+      resultScore.textContent = summary.score + " / " + questions.length;
+      resultExplanation.textContent = result.explanation;
+      renderEvidenceProfile(summary.evidence);
       renderReview();
+      showSpeakingTask(multipleChoiceBand);
       stage.hidden = true;
       actions.hidden = true;
       reminder.textContent = "";
       resultView.hidden = false;
       root.querySelector("[data-part-label]").textContent = "Result and speaking confirmation";
-      progressText.textContent = "Multiple choice complete";
+      progressText.textContent = "Language-use questions complete";
       progressBar.style.width = "100%";
       resultLevel.tabIndex = -1;
       resultLevel.focus();
@@ -224,10 +140,12 @@
 
     function resetCheck(){
       current = 0;
-      answers = Array(QUESTIONS.length).fill(null);
-      multipleChoiceLevel = "";
+      answers = Array(questions.length).fill(null);
+      multipleChoiceBand = "";
       speakingLevel.value = "";
-      speakingOutcome.textContent = "Choose a level after listening to the student. The multiple-choice estimate remains visible for comparison.";
+      speakingOutcome.textContent = "Choose the strongest level sustained across the complete response. The language-use evidence remains visible for comparison.";
+      speakingTasks.forEach(function(task){ task.hidden = true; });
+      resultProfile.innerHTML = "";
       resultView.hidden = true;
       stage.hidden = false;
       actions.hidden = false;
@@ -247,7 +165,7 @@
         reminder.textContent = "Choose an answer before continuing.";
         return;
       }
-      if (current === QUESTIONS.length - 1) {
+      if (current === questions.length - 1) {
         showResult();
         return;
       }
@@ -257,14 +175,16 @@
 
     speakingLevel.addEventListener("change", function(){
       if (!speakingLevel.value) {
-        speakingOutcome.textContent = "Choose a level after listening to the student. The multiple-choice estimate remains visible for comparison.";
+        speakingOutcome.textContent = "Choose the strongest level sustained across the complete response. The language-use evidence remains visible for comparison.";
         return;
       }
-      if (speakingLevel.value === multipleChoiceLevel) {
-        speakingOutcome.textContent = "Speaking confirms the " + multipleChoiceLevel + " quick estimate.";
+      const languageUseLabel = results[multipleChoiceBand].level;
+      const speakingLabel = results[speakingLevel.value].level.replace(" checkpoint", " evidence");
+      if (speakingLevel.value === multipleChoiceBand) {
+        speakingOutcome.textContent = "Speaking supports the " + languageUseLabel + " starting point.";
       } else {
-        speakingOutcome.textContent = "Multiple choice suggested " + multipleChoiceLevel +
-          ". Speaking suggests " + speakingLevel.value + ". Use the speaking evidence to choose the teaching starting point.";
+        speakingOutcome.textContent = "Language-use evidence suggests " + languageUseLabel +
+          ". Speaking suggests " + speakingLabel + ". Use the weaker area to choose the first lesson, then reassess after one session.";
       }
     });
 
