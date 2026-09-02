@@ -38,7 +38,7 @@ media.matches = false;
 const root = new FakeTarget();
 root.querySelector = (selector) => selector === '[data-mobile-nav]' ? details : selector === '[data-mobile-nav-toggle]' ? toggle : null;
 const view = { matchMedia: (query) => {
-  if (query !== '(min-width: 981px)') throw new Error(`Unexpected media query: ${query}`);
+  if (query !== '(min-width: 1121px)') throw new Error(`Unexpected media query: ${query}`);
   return media;
 } };
 const errors = [];
@@ -76,7 +76,7 @@ const [css, pageSource, homeScript] = await Promise.all([
   readFile(new URL('../src/pages/index.astro', import.meta.url), 'utf8'),
   readFile(new URL('../src/scripts/home.js', import.meta.url), 'utf8'),
 ]);
-expect(/@media\(max-width:980px\)/.test(css), '980px mobile breakpoint is missing');
+expect(/@media\(max-width:1120px\)/.test(css), '1120px mobile breakpoint is missing');
 expect(/@media\(max-width:430px\)/.test(css), 'narrow wordmark protection is missing');
 expect(/prefers-reduced-motion:reduce/.test(css), 'reduced-motion handling is missing');
 expect(/\.menu-toggle:focus-visible/.test(css), 'visible menu focus styling is missing');
@@ -84,6 +84,12 @@ expect(/<span>Thomas's Classroom<\/span>/.test(pageSource),
   'homepage header must render the complete Thomas\'s Classroom wordmark');
 expect(!/logo-(?:full|short)/.test(pageSource + css),
   'homepage header must not swap the complete wordmark for a shortened mobile version');
+expect((pageSource.match(/href="\/blog\/"/g) ?? []).length >= 2,
+  'Blog must be available in both desktop and mobile homepage navigation');
+expect(!/(?:cursor-dot|cursor-ring|cursor-hover)/.test(pageSource + css + homeScript),
+  'obsolete custom-cursor markup, styles, or behavior remain on the homepage');
+expect(!/cursor\s*:\s*none/.test(css),
+  'homepage controls must keep the native pointer after custom-cursor removal');
 expect(/and it\{' '\}\s*<span class="err">change<\/span>/.test(pageSource),
   'Present Perfect noticing sentence must keep an explicit source whitespace node between “it” and “change”');
 expect(/document\.body\.dataset\.publicReviewCount/.test(homeScript),
@@ -92,12 +98,12 @@ for (const [name, source] of [['homepage markup', pageSource], ['homepage styles
   expect(!/(?:data-theme|themeBtn|theme-wipe|blackout|localStorage)/.test(source), `${name} still contains obsolete theme-toggle code`);
 }
 
-for (const width of [320, 375, 768, 979, 980]) expect(width <= 980, `${width}px is not covered by the mobile breakpoint`);
-for (const width of [981, 1024, 1440]) expect(width > 980, `${width}px is not covered by the desktop layout`);
+for (const width of [320, 375, 768, 1024, 1119, 1120]) expect(width <= 1120, `${width}px is not covered by the mobile breakpoint`);
+for (const width of [1121, 1280, 1440]) expect(width > 1120, `${width}px is not covered by the desktop layout`);
 
 if (errors.length) {
   console.error(`Mobile navigation validation failed:\n- ${errors.join('\n- ')}`);
   process.exit(1);
 }
 
-console.log('Mobile navigation verified: state, Escape, link close, focus return, desktop cleanup, no theme-control spacing, reduced motion, and 320/375/768/979/980/981/1024/1440px breakpoint coverage.');
+console.log('Mobile navigation verified: Blog access, state, Escape, link close, focus return, desktop cleanup, full wordmark, native cursor, reduced motion, and 320/375/768/1024/1119/1120/1121/1280/1440px breakpoint coverage.');

@@ -13,24 +13,6 @@ import { setupMobileNavigation } from './mobile-navigation.js';
   });
   setTimeout(dismissLoader, 2600); // JavaScript failsafe; CSS supplies an independent fallback.
 
-  /* custom cursor */
-  if (finePointer && !reduced){
-    var dot = document.querySelector('.cursor-dot');
-    var ring = document.querySelector('.cursor-ring');
-    var mx = -100, my = -100, rx = -100, ry = -100;
-    document.addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; }, {passive:true});
-    (function loop(){
-      rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
-      dot.style.transform = 'translate(' + mx + 'px,' + my + 'px) translate(-50%,-50%)';
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
-      requestAnimationFrame(loop);
-    })();
-    document.querySelectorAll('[data-cursor]').forEach(function(el){
-      el.addEventListener('mouseenter', function(){ document.body.classList.add('cursor-hover'); });
-      el.addEventListener('mouseleave', function(){ document.body.classList.remove('cursor-hover'); });
-    });
-  }
-
   /* nav scrolled state */
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function(){
