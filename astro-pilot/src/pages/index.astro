@@ -30,6 +30,14 @@ const curriculumLevels = curriculum.map((level) => {
     hue: levelHues[level.code],
   };
 });
+const heroLevelLabels: Record<string, string> = {
+  A0: "First words",
+  A1: "Daily English",
+  A2: "Connected basics",
+  B1: "Independent",
+  B2: "Flexible",
+  C1: "Precise",
+};
 const presentPerfectNoticingSentence = "Yesterday I go to my first lesson, and it change everything.";
 const ids = schemaIds(Astro.site);
 const structuredData = [
@@ -115,13 +123,27 @@ const structuredData = [
   <div class="hero-ipa">A complete learning path &nbsp;·&nbsp; one useful pattern at a time</div>
 
   <div class="hero-row">
-    <div>
+    <div class="hero-intro">
       <div class="greeting-line"><span id="greeting">Start here —</span></div>
       <p class="hero-copy">
         Thomas’s Classroom is a complete curriculum for adult learners, from first words
         to advanced, precise English. <strong>See the whole path, choose your level, and open
         a lesson built to make you notice, understand, practice, and speak.</strong>
       </p>
+      <nav class="hero-level-path" aria-label="Choose a curriculum level">
+        {curriculumLevels.map((level) => (
+          <a href={`/curriculum/?level=${level.code}#lvl-${level.code}`} data-cursor>
+            <b>{level.code}</b><span>{heroLevelLabels[level.code]}</span>
+          </a>
+        ))}
+      </nav>
+      <div class="stats">
+        <div><b>{curriculumCounts.total}</b> topics</div>
+        <div><b>{curriculumCounts.ready}</b> full lessons</div>
+        <div data-public-proof="lessons-taught-hero"><b id="statLessons">{siteSettings.lessonsTaughtClaim}</b></div>
+        <div data-public-proof="rating-hero"><b>{ratingValue} ★ rating</b></div>
+        <div data-public-proof="reviews-hero"><b>{reviewCount} reviews</b></div>
+      </div>
       <div class="tutor-note" style="margin-top:.8rem;position:relative;">
         real talk: most students are one level higher than they think
       </div>
@@ -139,13 +161,6 @@ const structuredData = [
           Learn with Thomas in a one-on-one lesson <span aria-hidden="true">→</span>
         </a>
       </div>
-    </div>
-    <div class="stats">
-      <div><b>{curriculumCounts.total}</b> topics</div>
-      <div><b>{curriculumCounts.ready}</b> full lessons</div>
-      <div data-public-proof="lessons-taught-hero"><b id="statLessons">{siteSettings.lessonsTaughtClaim}</b></div>
-      <div data-public-proof="rating-hero"><b>{ratingValue} ★ rating</b></div>
-      <div data-public-proof="reviews-hero"><b>{reviewCount} reviews</b></div>
     </div>
   </div>
   <div class="scroll-cue">SCROLL ↓</div>

@@ -111,10 +111,11 @@ function firstChoiceQuestion(source) {
   const questions = [...source.matchAll(/<div\b[^>]*class="[^"]*\bq\b[^"]*"[^>]*>([\s\S]*?)<\/div>/gi)];
   for (const match of questions) {
     if (!/\bdata-answer=/.test(match[1])) continue;
-    const button = match[1].match(/<button\b([^>]*)\bdata-answer="([^"]+)"([^>]*)>[\s\S]*?<\/button>/i);
+    const question = match[1].replace(/<span\b[^>]*class="[^"]*\bn\b[^"]*"[^>]*>[\s\S]*?<\/span>/i, "");
+    const button = question.match(/<button\b([^>]*)\bdata-answer="([^"]+)"([^>]*)>[\s\S]*?<\/button>/i);
     if (!button) continue;
     const attributes = `${button[1]} ${button[3]}`;
-    const prompt = cleanText(match[1].replace(button[0], " ___ "));
+    const prompt = cleanText(question.replace(button[0], " ___ "));
     const answer = decode(button[2]).split("|")[0].trim();
     const cue = attribute(attributes, "data-fix") || attribute(attributes, "data-hint");
     if (prompt && answer) return { prompt, answer: cue || answer };
@@ -138,8 +139,8 @@ function cleanText(value = "") {
   return decode(String(value)
     .replace(/<button\b[^>]*>[\s\S]*?<\/button>/gi, " ___ ")
     .replace(/<[^>]+>/g, " ")
-    .replace(/\{[^{}]*\}/g, " ")
-    .replace(/\s+/g, " "))
+    .replace(/\{[^{}]*\}/g, " "))
+    .replace(/\s+/g, " ")
     .trim();
 }
 

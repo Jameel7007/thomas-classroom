@@ -260,6 +260,10 @@ function validateQuickReviewOutput() {
   if (items.length !== readyLessons.length || ids.size !== readyLessons.length) {
     errors.push(`${route}: expected ${readyLessons.length} unique lesson-derived review items, found ${items.length}`);
   }
+  const thisThatPrompt = items.find((item) => item.id === "a0/this-that-these-those")?.retrieval?.prompt;
+  if (thisThatPrompt !== "___ cup (one · near)") errors.push(`${route}: this/that retrieval prompt leaked its lesson item number`);
+  const classroomPrompt = items.find((item) => item.id === "a0/classroom-objects")?.retrieval?.prompt;
+  if (classroomPrompt !== "I need ___ eraser.") errors.push(`${route}: classroom-object retrieval prompt leaked its lesson item number`);
   for (const lesson of readyLessons) {
     const item = items.find((candidate) => candidate.id === lesson.id);
     if (!item) {
