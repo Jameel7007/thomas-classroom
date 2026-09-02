@@ -184,17 +184,15 @@
    their bank stick beneath the measured lesson bar until the drill ends. */
 [data-choice-gap-drill]{overflow:visible;}
 
-/* On a phone the tray uses two generous rows and scrolls horizontally. */
+/* On a phone the tray wraps into two columns so every answer stays visible. */
 @media(max-width:600px){
   .choice-bank{
-    display:grid;grid-template-rows:repeat(2,minmax(56px,auto));
-    grid-auto-flow:column;grid-auto-columns:minmax(116px,max-content);gap:10px;
-    max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;
-    scroll-snap-type:inline proximity;scrollbar-width:thin;-webkit-overflow-scrolling:touch;
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;
+    max-width:100%;overflow:visible;
     padding:10px 12px 13px;}
   .choice-option{
-    min-width:116px;min-height:56px;padding:12px 16px;font-size:18px;line-height:1.25;
-    white-space:normal;scroll-snap-align:start;}
+    width:100%;min-width:0;min-height:56px;padding:12px 10px;font-size:18px;line-height:1.25;
+    white-space:normal;}
   .q{
     display:grid;grid-template-columns:24px minmax(0,1fr);align-items:start;gap:10px;
     padding:20px 0;font-size:18px;line-height:1.6;}
@@ -209,8 +207,7 @@
 }
 
 @media(max-width:360px){
-  .choice-bank{grid-auto-columns:minmax(104px,max-content);}
-  .choice-option{min-width:104px;padding-inline:12px;}
+  .choice-option{padding-inline:8px;font-size:16px;}
 }
 
 /* ============ Motion ======================================================== */

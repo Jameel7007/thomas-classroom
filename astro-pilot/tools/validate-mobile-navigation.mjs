@@ -80,6 +80,10 @@ expect(/@media\(max-width:980px\)/.test(css), '980px mobile breakpoint is missin
 expect(/@media\(max-width:430px\)/.test(css), 'narrow wordmark protection is missing');
 expect(/prefers-reduced-motion:reduce/.test(css), 'reduced-motion handling is missing');
 expect(/\.menu-toggle:focus-visible/.test(css), 'visible menu focus styling is missing');
+expect(/<span>Thomas's Classroom<\/span>/.test(pageSource),
+  'homepage header must render the complete Thomas\'s Classroom wordmark');
+expect(!/logo-(?:full|short)/.test(pageSource + css),
+  'homepage header must not swap the complete wordmark for a shortened mobile version');
 expect(/and it\{' '\}\s*<span class="err">change<\/span>/.test(pageSource),
   'Present Perfect noticing sentence must keep an explicit source whitespace node between “it” and “change”');
 expect(/document\.body\.dataset\.publicReviewCount/.test(homeScript),
